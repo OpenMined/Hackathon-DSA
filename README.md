@@ -40,13 +40,13 @@ git -C ./data clone https://code.peren.fr/hackathon-2024/retrieval-modules/platf
 
 # Done
 - Generation with Mistral (v1 done)
+- send SSH keys
 
 # TODO
 - Re-cleaning the data snapshots (Thiago)
     - Langchain has some good document readers
     - PostLight might be an option
-    - unstructured?
-- send SSH keys (Eelco)
+    - [unstructured](https://unstructured-io.github.io/unstructured/)?
 - Evaluation metrics (Teo)
 - Synthetic dataset (Teo)
 - Semantic search  with DPR (Eelco)
