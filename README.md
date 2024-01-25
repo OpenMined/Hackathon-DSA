@@ -14,11 +14,11 @@ git -C ./data clone https://code.peren.fr/hackathon-2024/retrieval-modules/platf
     - normal DPR (chromaDB)
     - manual/oldschool methods
 - Generation
-    - original paper is encoder/decoder (BART)
+    - [original paper](https://proceedings.neurips.cc/paper/2020/file/6b493230205f780e1bc26945df7481e5-Paper.pdf) is encoder/decoder (BART)
         - encode all documents + query
         - decode from encoder state 
     - all best models now are decoder-only (GPT/LLama/Mistral/...)
-        - put everything in a prompt
+        - put everything in a prompt, and ensemble the outputs: https://arxiv.org/pdf/2301.12652.pdf
 - Evaluation
     - metrics
         - faithfulness
