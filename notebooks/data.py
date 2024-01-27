@@ -1,10 +1,11 @@
 from pathlib import Path
 
-DATA_DIR = Path(__file__).parent / "data"
+DATA_DIR = Path(__file__).parent.parent / "data"
 SNAPSHOTS_DIR = DATA_DIR / "platform-docs-snapshots"
 VERSIONS_DIR = DATA_DIR / "platform-docs-versions"
+TRAIN_DIR = DATA_DIR / "challenge-2-dataset-and-documentation" / "dataset" / "train"
 
-SAMPLE_QA = [
+SAMPLES_FROM_SLIDES = [
     ("How is content moderation carried out on X?", 
      "Content moderation on X combines automatic approaches and human evaluators. According to their transparency report, X uses heuristic and automatic models (automatic language processing, computer vision, etc.) to detect potentially prohibited content. Human moderators are then responsible for verifying that the detected content is indeed prohibited. The combination of human moderators and algorithms is also used to evaluate and improve moderation models."),
     
@@ -20,3 +21,29 @@ SAMPLE_QA = [
 
 def get_version_files():
     return VERSIONS_DIR.glob("[!.]*/[!.]*.md")
+
+def get_training_data():
+    questions_file = TRAIN_DIR / "input" / "questions.csv"
+
+    with open(questions_file, "r") as f:
+        questions = [line.strip().split(";") for line in f.readlines()[1:]]
+    questions = {int(q[0]): q[1] for q in questions}
+
+    answers_dir = TRAIN_DIR / "output" / "answers"
+    answers = {}
+    for p in answers_dir.glob("**/*.txt"):
+        idx = int(p.stem[:3])             
+        with open(p, "r") as f:
+            answer = f.read()
+        if idx not in answers:
+            answers[idx] = []
+        answers[idx].append(answer)
+            
+
+    sources_dir = TRAIN_DIR / "output" / "sources"
+    sources = {}
+    for p in sources_dir.glob("*.txt"):
+        with open(p, "r") as f:
+            sources[int(p.stem)] = f.read().strip()
+
+    return questions, answers, sources
