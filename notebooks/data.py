@@ -3,6 +3,7 @@ from pathlib import Path
 DATA_DIR = Path(__file__).parent.parent / "data"
 SNAPSHOTS_DIR = DATA_DIR / "platform-docs-snapshots"
 VERSIONS_DIR = DATA_DIR / "platform-docs-versions"
+DECLARATIONS_DIR = DATA_DIR / "platforms-doc-declarations"
 TRAIN_DIR = DATA_DIR / "challenge-2-dataset-and-documentation" / "dataset" / "train"
 
 SAMPLES_FROM_SLIDES = [
