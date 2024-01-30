@@ -4,3 +4,4 @@ transformers
 sentence_transformers
 ctransformers
 ragatouille
+langdetect
