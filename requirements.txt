@@ -1,0 +1,6 @@
+langchain
+chromadb
+transformers
+sentence_transformers
+ctransformers
+ragatouille
