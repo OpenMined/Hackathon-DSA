@@ -2,41 +2,49 @@
     "0": {
         "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Games iap product Endpoint.md\nParagraph location: \n\tGames IAPProduct\n\tReading\n\nContent: \n# Games IAPProduct  \n## Reading  \nAn in-app-purchaseable product\n",
         "line_start": 0,
-        "line_end": 3
+        "line_end": 3,
+        "url": "https://developers.facebook.com/tools/explorer/?method=GET&path=%7Bgames-iap-product-id%7D&version=v19.0)"
     },
     "1": {
         "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Games iap product Endpoint.md\nParagraph location: \n\tGames IAPProduct\n\tReading\n\tExample\n\nContent: \n### Example  \nHTTPPHP SDKJavaScript SDKAndroid SDKiOS SDK[Graph API Explorer](https://developers.facebook.com/tools/explorer/?method=GET&path=%7Bgames-iap-product-id%7D&version=v19.0)  \nGET /v19.0/{games-iap-product-id} HTTP/1.1\nHost: graph.facebook.com  \n/* PHP SDK v5.0.0 */\n/* make the API call */\ntry {\n// Returns a `Facebook\\FacebookResponse` object\n$response = $fb->get(\n'/{games-iap-product-id}',\n'{access-token}'\n);\n} catch(Facebook\\Exceptions\\FacebookResponseException $e) {\necho 'Graph returned an error: ' . $e->getMessage();\nexit;\n} catch(Facebook\\Exceptions\\FacebookSDKException $e) {\necho 'Facebook SDK returned an error: ' . $e->getMessage();\nexit;\n}\n$graphNode = $response->getGraphNode();\n/* handle the result */  \n/* make the API call */\nFB.api(\n\"/{games-iap-product-id}\",\nfunction (response) {\nif (response && !response.error) {\n/* handle the result */\n}\n}\n);  \n/* make the API call */\nnew GraphRequest(\nAccessToken.getCurrentAccessToken(),\n\"/{games-iap-product-id}\",\nnull,\nHttpMethod.GET,\nnew GraphRequest.Callback() {\npublic void onCompleted(GraphResponse response) {\n/* handle the result */\n}\n}\n).executeAsync();  \n/* make the API call */\nFBSDKGraphRequest *request = [[FBSDKGraphRequest alloc]\ninitWithGraphPath:@\"/{games-iap-product-id}\"\nparameters:params\nHTTPMethod:@\"GET\"];\n[request startWithCompletionHandler:^(FBSDKGraphRequestConnection *connection,\nid result,\nNSError *error) {\n// Handle the result\n}];  \nIf you want to learn how to use the Graph API, read our [Using Graph API guide](https://developers.facebook.com/docs/graph-api/using-graph-api/).\n",
         "line_start": 6,
-        "line_end": 59
+        "line_end": 59,
+        "url": "https://developers.facebook.com/tools/explorer/?method=GET&path=%7Bgames-iap-product-id%7D&version=v19.0)"
     },
     "2": {
         "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Games iap product Endpoint.md\nParagraph location: \n\tGames IAPProduct\n\tReading\n\tParameters\n\nContent: \n### Parameters  \nThis endpoint doesn't have any parameters.\n",
         "line_start": 67,
-        "line_end": 69
+        "line_end": 69,
+        "url": "https://developers.facebook.com/tools/explorer/?method=GET&path=%7Bgames-iap-product-id%7D&version=v19.0)"
     },
     "3": {
         "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Games iap product Endpoint.md\nParagraph location: \n\tGames IAPProduct\n\tReading\n\tFields\n\nContent: \n### Fields  \n| Field | Description |\n| --- | --- |\n| `id`<br><br>numeric string | The id of the object |\n| `description`<br><br>string | Description of the product (e.g. \"Used as in-app currency\")<br><br>[Default](https://developers.facebook.com/docs/graph-api/using-graph-api/#fields) |\n| `image_uri`<br><br>string | The associated image of the product for the Facebook Pay dialog<br><br>[Default](https://developers.facebook.com/docs/graph-api/using-graph-api/#fields) |\n| `local_price_amount_cents`<br><br>integer | Local price of the product in 1/100ths of the major unit of currency (e.g. 1 JPY -> 100, 1.23 USD -> 123)<br><br>[Default](https://developers.facebook.com/docs/graph-api/using-graph-api/#fields) |\n| `local_price_formatted`<br><br>string | Human-readable local price of the product (e.g. \"$1.23\")<br><br>[Default](https://developers.facebook.com/docs/graph-api/using-graph-api/#fields) |\n| `price`<br><br>string | Human-readable price of the product (e.g. \"$1.23\")<br><br>[Default](https://developers.facebook.com/docs/graph-api/using-graph-api/#fields) |\n| `price_amount_cents`<br><br>unsigned int32 | Price of the product in 1/100ths of the major unit of currency (e.g. 1 JPY -> 100, 1.23 USD -> 123)<br><br>[Default](https://developers.facebook.com/docs/graph-api/using-graph-api/#fields) |\n| `price_currency_code`<br><br>string | Currency code of price (e.g. \"JPY\", \"USD\")<br><br>[Default](https://developers.facebook.com/docs/graph-api/using-graph-api/#fields) |\n| `product_id`<br><br>string | Identifier for the product (e.g. \"gold\\_bar\")<br><br>[Default](https://developers.facebook.com/docs/graph-api/using-graph-api/#fields) |\n| `product_type`<br><br>enum | Type of the product (e.g. managed)<br><br>[Default](https://developers.facebook.com/docs/graph-api/using-graph-api/#fields) |\n| `subscription_term`<br><br>enum | The subscription renewal length of time if ProductType is SUBSCRIPTION<br><br>[Default](https://developers.facebook.com/docs/graph-api/using-graph-api/#fields) |\n| `title`<br><br>string | Title of the product displayed to the user (e.g. \"Gold Bar\")<br><br>[Default](https://developers.facebook.com/docs/graph-api/using-graph-api/#fields) |\n",
         "line_start": 71,
-        "line_end": 86
+        "line_end": 86,
+        "url": "https://developers.facebook.com/tools/explorer/?method=GET&path=%7Bgames-iap-product-id%7D&version=v19.0)"
     },
     "4": {
         "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Games iap product Endpoint.md\nParagraph location: \n\tGames IAPProduct\n\tReading\n\tError Codes\n\nContent: \n### Error Codes  \n| Error | Description |\n| --- | --- |\n| 100 | Invalid parameter |\n",
         "line_start": 88,
-        "line_end": 92
+        "line_end": 92,
+        "url": "https://developers.facebook.com/tools/explorer/?method=GET&path=%7Bgames-iap-product-id%7D&version=v19.0)"
     },
     "5": {
         "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Games iap product Endpoint.md\nParagraph location: \n\tGames IAPProduct\n\tCreating\n\nContent: \n## Creating  \nYou can't perform this operation on this endpoint.\n",
         "line_start": 94,
-        "line_end": 96
+        "line_end": 96,
+        "url": "https://developers.facebook.com/tools/explorer/?method=GET&path=%7Bgames-iap-product-id%7D&version=v19.0)"
     },
     "6": {
         "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Games iap product Endpoint.md\nParagraph location: \n\tGames IAPProduct\n\tUpdating\n\nContent: \n## Updating  \nYou can't perform this operation on this endpoint.\n",
         "line_start": 98,
-        "line_end": 100
+        "line_end": 100,
+        "url": "https://developers.facebook.com/tools/explorer/?method=GET&path=%7Bgames-iap-product-id%7D&version=v19.0)"
     },
     "7": {
         "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Games iap product Endpoint.md\nParagraph location: \n\tGames IAPProduct\n\tDeleting\n\nContent: \n## Deleting  \nYou can't perform this operation on this endpoint.  \n![](https://www.facebook.com/tr?id=675141479195042&ev=PageView&noscript=1)  \n![](https://www.facebook.com/tr?id=574561515946252&ev=PageView&noscript=1)  \n![](https://www.facebook.com/tr?id=1754628768090156&ev=PageView&noscript=1)\n",
         "line_start": 102,
-        "line_end": 107
+        "line_end": 107,
+        "url": "https://developers.facebook.com/tools/explorer/?method=GET&path=%7Bgames-iap-product-id%7D&version=v19.0)"
     }
 }

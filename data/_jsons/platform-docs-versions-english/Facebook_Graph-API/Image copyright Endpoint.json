@@ -2,66 +2,79 @@
     "0": {
         "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Image copyright Endpoint.md\nParagraph location: \n\tImage Copyright\n\tReading\n\nContent: \n# Image Copyright  \n## Reading  \nRepresents a copyright on an image asset.\n",
         "line_start": 0,
-        "line_end": 3
+        "line_end": 3,
+        "url": "https://developers.facebook.com/tools/explorer/?method=GET&path=%7Bimage-copyright-id%7D&version=v19.0)"
     },
     "1": {
         "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Image copyright Endpoint.md\nParagraph location: \n\tImage Copyright\n\tReading\n\tExample\n\nContent: \n### Example  \nHTTPPHP SDKJavaScript SDKAndroid SDKiOS SDK[Graph API Explorer](https://developers.facebook.com/tools/explorer/?method=GET&path=%7Bimage-copyright-id%7D&version=v19.0)  \nGET /v19.0/{image-copyright-id} HTTP/1.1\nHost: graph.facebook.com  \n/* PHP SDK v5.0.0 */\n/* make the API call */\ntry {\n// Returns a `Facebook\\FacebookResponse` object\n$response = $fb->get(\n'/{image-copyright-id}',\n'{access-token}'\n);\n} catch(Facebook\\Exceptions\\FacebookResponseException $e) {\necho 'Graph returned an error: ' . $e->getMessage();\nexit;\n} catch(Facebook\\Exceptions\\FacebookSDKException $e) {\necho 'Facebook SDK returned an error: ' . $e->getMessage();\nexit;\n}\n$graphNode = $response->getGraphNode();\n/* handle the result */  \n/* make the API call */\nFB.api(\n\"/{image-copyright-id}\",\nfunction (response) {\nif (response && !response.error) {\n/* handle the result */\n}\n}\n);  \n/* make the API call */\nnew GraphRequest(\nAccessToken.getCurrentAccessToken(),\n\"/{image-copyright-id}\",\nnull,\nHttpMethod.GET,\nnew GraphRequest.Callback() {\npublic void onCompleted(GraphResponse response) {\n/* handle the result */\n}\n}\n).executeAsync();  \n/* make the API call */\nFBSDKGraphRequest *request = [[FBSDKGraphRequest alloc]\ninitWithGraphPath:@\"/{image-copyright-id}\"\nparameters:params\nHTTPMethod:@\"GET\"];\n[request startWithCompletionHandler:^(FBSDKGraphRequestConnection *connection,\nid result,\nNSError *error) {\n// Handle the result\n}];  \nIf you want to learn how to use the Graph API, read our [Using Graph API guide](https://developers.facebook.com/docs/graph-api/using-graph-api/).\n",
         "line_start": 6,
-        "line_end": 59
+        "line_end": 59,
+        "url": "https://developers.facebook.com/tools/explorer/?method=GET&path=%7Bimage-copyright-id%7D&version=v19.0)"
     },
     "2": {
         "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Image copyright Endpoint.md\nParagraph location: \n\tImage Copyright\n\tReading\n\tParameters\n\nContent: \n### Parameters  \nThis endpoint doesn't have any parameters.\n",
         "line_start": 67,
-        "line_end": 69
+        "line_end": 69,
+        "url": "https://developers.facebook.com/tools/explorer/?method=GET&path=%7Bimage-copyright-id%7D&version=v19.0)"
     },
     "3": {
         "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Image copyright Endpoint.md\nParagraph location: \n\tImage Copyright\n\tReading\n\tFields\n\nContent: \n### Fields  \n| Field | Description |\n| --- | --- |\n| `id`<br><br>numeric string | The id of the object |\n| `artist`<br><br>string | Artist/Photographer related the reference asset, user providedNote that the \"Creator\" field is used for image agencies or partners. |\n| `copyright_monitoring_status`<br><br>enum | The status of the copyright reference file. It is used to determine if the match should be skipped. |\n| `creation_time`<br><br>datetime | Creation time provided by TAO Server |\n| `creator`<br><br>string | Creator of the reference asset, user provided |\n| `custom_id`<br><br>string | Custom Id for reference asset, user provided |\n| `description`<br><br>string | Description for reference asset, user provided |\n| `filename`<br><br>string | Filename for reference asset, user provided |\n| `image`<br><br>[Photo](https://developers.facebook.com/docs/graph-api/reference/photo/) | The underlying image asset for the copyright |\n| `matches_count`<br><br>unsigned integer | The number of matches for this copyright that are displayed in Rights Manager |\n| `original_content_creation_date`<br><br>datetime | Date the reference asset was created, user provided |\n| `ownership_countries`<br><br>VideoCopyrightGeoGate | Countries of included or excluded ownership for the given image copyright |\n| `tags`<br><br>list<string> | Tags for the reference asset |\n| `title`<br><br>string | The title of the copyright, generated from the reference asset |\n| `update_time`<br><br>datetime | Update time provided by TAO Server |\n",
         "line_start": 71,
-        "line_end": 89
+        "line_end": 89,
+        "url": "https://developers.facebook.com/tools/explorer/?method=GET&path=%7Bimage-copyright-id%7D&version=v19.0)"
     },
     "4": {
         "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Image copyright Endpoint.md\nParagraph location: \n\tImage Copyright\n\tReading\n\tError Codes\n\nContent: \n### Error Codes  \n| Error | Description |\n| --- | --- |\n| 100 | Invalid parameter |\n",
         "line_start": 91,
-        "line_end": 95
+        "line_end": 95,
+        "url": "https://developers.facebook.com/tools/explorer/?method=GET&path=%7Bimage-copyright-id%7D&version=v19.0)"
     },
     "5": {
         "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Image copyright Endpoint.md\nParagraph location: \n\tImage Copyright\n\tCreating\n\nContent: \n## Creating  \nYou can make a POST request to `image_copyrights` edge from the following paths:  \n* [`/{page_id}/image_copyrights`](https://developers.facebook.com/docs/graph-api/reference/page/image_copyrights/)  \nWhen posting to this edge, an\u00a0[ImageCopyright](https://developers.facebook.com/docs/graph-api/reference/image-copyright/) will be created.\n",
         "line_start": 97,
-        "line_end": 101
+        "line_end": 101,
+        "url": "https://developers.facebook.com/tools/explorer/?method=GET&path=%7Bimage-copyright-id%7D&version=v19.0)"
     },
     "6": {
         "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Image copyright Endpoint.md\nParagraph location: \n\tImage Copyright\n\tCreating\n\tParameters\n\nContent: \n### Parameters  \n| Parameter | Description |\n| --- | --- |\n| `artist`<br><br>string | Artist/Photographer related to the copyright |\n| `attribution_link`<br><br>string | The link to the rights holder where viewer can license the images. |\n| `creator`<br><br>string | For agencies |\n| `custom_id`<br><br>string | Any ID used internally by the copyright holder |\n| `description`<br><br>string | Description of the copyrighted image |\n| `filename`<br><br>string | Filename of the copyrighted image<br><br>Required |\n| `geo_ownership`<br><br>list<enum {AD, AE, AF, AG, AI, AL, AM, AN, AO, AQ, AR, AS, AT, AU, AW, AX, AZ, BA, BB, BD, BE, BF, BG, BH, BI, BJ, BL, BM, BN, BO, BQ, BR, BS, BT, BV, BW, BY, BZ, CA, CC, CD, CF, CG, CH, CI, CK, CL, CM, CN, CO, CR, CU, CV, CW, CX, CY, CZ, DE, DJ, DK, DM, DO, DZ, EC, EE, EG, EH, ER, ES, ET, FI, FJ, FK, FM, FO, FR, GA, GB, GD, GE, GF, GG, GH, GI, GL, GM, GN, GP, GQ, GR, GS, GT, GU, GW, GY, HK, HM, HN, HR, HT, HU, ID, IE, IL, IM, IN, IO, IQ, IR, IS, IT, JE, JM, JO, JP, KE, KG, KH, KI, KM, KN, KP, KR, KW, KY, KZ, LA, LB, LC, LI, LK, LR, LS, LT, LU, LV, LY, MA, MC, MD, ME, MF, MG, MH, MK, ML, MM, MN, MO, MP, MQ, MR, MS, MT, MU, MV, MW, MX, MY, MZ, NA, NC, NE, NF, NG, NI, NL, NO, NP, NR, NU, NZ, OM, PA, PE, PF, PG, PH, PK, PL, PM, PN, PR, PS, PT, PW, PY, QA, RE, RO, RS, RU, RW, SA, SB, SC, SD, SE, SG, SH, SI, SJ, SK, SL, SM, SN, SO, SR, SS, ST, SV, SX, SY, SZ, TC, TD, TF, TG, TH, TJ, TK, TL, TM, TN, TO, TP, TR, TT, TV, TW, TZ, UA, UG, UM, US, UY, UZ, VA, VC, VE, VG, VI, VN, VU, WF, WS, XK, YE, YT, ZA, ZM, ZW}> | In which territories the copyright on the image is held<br><br>Required |\n| `original_content_creation_date`<br><br>int64 | When the copyrighted image was created |\n| `reference_photo`<br><br>numeric string or integer | ID of the uploaded image to be protected. This must be an unpublished, temporary photo. Please refer to the [photo documentation](https://developers.facebook.com/docs/graph-api/reference/page/photos) on how to create unpublished, temporary photos.<br><br>Required |\n| `title`<br><br>string | Title of the copyrighted image |\n",
         "line_start": 67,
-        "line_end": 80
+        "line_end": 80,
+        "url": "https://developers.facebook.com/tools/explorer/?method=GET&path=%7Bimage-copyright-id%7D&version=v19.0)"
     },
     "7": {
         "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Image copyright Endpoint.md\nParagraph location: \n\tImage Copyright\n\tCreating\n\tReturn Type\n\nContent: \n### Return Type  \nThis endpoint supports [read-after-write](https://developers.facebook.com/docs/graph-api/advanced/#read-after-write) and will read the node represented by `id` in the return type.  \nStruct {  \n`id`: numeric string,  \n}\n",
         "line_start": 120,
-        "line_end": 125
+        "line_end": 125,
+        "url": "https://developers.facebook.com/tools/explorer/?method=GET&path=%7Bimage-copyright-id%7D&version=v19.0)"
     },
     "8": {
         "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Image copyright Endpoint.md\nParagraph location: \n\tImage Copyright\n\tCreating\n\tError Codes\n\nContent: \n### Error Codes  \n| Error | Description |\n| --- | --- |\n| 100 | Invalid parameter |\n",
         "line_start": 91,
-        "line_end": 95
+        "line_end": 95,
+        "url": "https://developers.facebook.com/tools/explorer/?method=GET&path=%7Bimage-copyright-id%7D&version=v19.0)"
     },
     "9": {
         "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Image copyright Endpoint.md\nParagraph location: \n\tImage Copyright\n\tUpdating\n\nContent: \n## Updating  \nYou can update an\u00a0[ImageCopyright](https://developers.facebook.com/docs/graph-api/reference/image-copyright/) by making a POST request to [`/{image_copyright_id}`](https://developers.facebook.com/docs/graph-api/reference/image-copyright/).\n",
         "line_start": 136,
-        "line_end": 138
+        "line_end": 138,
+        "url": "https://developers.facebook.com/tools/explorer/?method=GET&path=%7Bimage-copyright-id%7D&version=v19.0)"
     },
     "10": {
         "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Image copyright Endpoint.md\nParagraph location: \n\tImage Copyright\n\tUpdating\n\tParameters\n\nContent: \n### Parameters  \n| Parameter | Description |\n| --- | --- |\n| `artist`<br><br>string | Artist/Photographer related to the copyright |\n| `creator`<br><br>string | For agencies |\n| `description`<br><br>string | Description of the copyrighted image |\n| `geo_ownership`<br><br>list<enum {AD, AE, AF, AG, AI, AL, AM, AN, AO, AQ, AR, AS, AT, AU, AW, AX, AZ, BA, BB, BD, BE, BF, BG, BH, BI, BJ, BL, BM, BN, BO, BQ, BR, BS, BT, BV, BW, BY, BZ, CA, CC, CD, CF, CG, CH, CI, CK, CL, CM, CN, CO, CR, CU, CV, CW, CX, CY, CZ, DE, DJ, DK, DM, DO, DZ, EC, EE, EG, EH, ER, ES, ET, FI, FJ, FK, FM, FO, FR, GA, GB, GD, GE, GF, GG, GH, GI, GL, GM, GN, GP, GQ, GR, GS, GT, GU, GW, GY, HK, HM, HN, HR, HT, HU, ID, IE, IL, IM, IN, IO, IQ, IR, IS, IT, JE, JM, JO, JP, KE, KG, KH, KI, KM, KN, KP, KR, KW, KY, KZ, LA, LB, LC, LI, LK, LR, LS, LT, LU, LV, LY, MA, MC, MD, ME, MF, MG, MH, MK, ML, MM, MN, MO, MP, MQ, MR, MS, MT, MU, MV, MW, MX, MY, MZ, NA, NC, NE, NF, NG, NI, NL, NO, NP, NR, NU, NZ, OM, PA, PE, PF, PG, PH, PK, PL, PM, PN, PR, PS, PT, PW, PY, QA, RE, RO, RS, RU, RW, SA, SB, SC, SD, SE, SG, SH, SI, SJ, SK, SL, SM, SN, SO, SR, SS, ST, SV, SX, SY, SZ, TC, TD, TF, TG, TH, TJ, TK, TL, TM, TN, TO, TP, TR, TT, TV, TW, TZ, UA, UG, UM, US, UY, UZ, VA, VC, VE, VG, VI, VN, VU, WF, WS, XK, YE, YT, ZA, ZM, ZW}> | In which territories the copyright on the image is held |\n| `original_content_creation_date`<br><br>int64 | When the copyrighted image was created |\n| `title`<br><br>string | Title of the copyrighted image |\n",
         "line_start": 67,
-        "line_end": 76
+        "line_end": 76,
+        "url": "https://developers.facebook.com/tools/explorer/?method=GET&path=%7Bimage-copyright-id%7D&version=v19.0)"
     },
     "11": {
         "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Image copyright Endpoint.md\nParagraph location: \n\tImage Copyright\n\tUpdating\n\tReturn Type\n\nContent: \n### Return Type  \nThis endpoint supports [read-after-write](https://developers.facebook.com/docs/graph-api/advanced/#read-after-write) and will read the node to which you POSTed.  \nStruct {  \n`success`: bool,  \n}\n",
         "line_start": 120,
-        "line_end": 125
+        "line_end": 125,
+        "url": "https://developers.facebook.com/tools/explorer/?method=GET&path=%7Bimage-copyright-id%7D&version=v19.0)"
     },
     "12": {
         "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Image copyright Endpoint.md\nParagraph location: \n\tImage Copyright\n\tDeleting\n\nContent: \n## Deleting  \nYou can't perform this operation on this endpoint.  \n![](https://www.facebook.com/tr?id=675141479195042&ev=PageView&noscript=1)  \n![](https://www.facebook.com/tr?id=574561515946252&ev=PageView&noscript=1)  \n![](https://www.facebook.com/tr?id=1754628768090156&ev=PageView&noscript=1)\n",
         "line_start": 161,
-        "line_end": 166
+        "line_end": 166,
+        "url": "https://developers.facebook.com/tools/explorer/?method=GET&path=%7Bimage-copyright-id%7D&version=v19.0)"
     }
 }

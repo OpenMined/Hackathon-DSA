@@ -2,66 +2,79 @@
     "0": {
         "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/App Link Host Endpoint.md\nParagraph location: \n\nContent: \nThis document refers to an outdated version of Graph API.\u00a0Please [use the latest version.](https://developers.facebook.com/docs/graph-api/reference/v19.0/app-link-host)\n",
         "line_start": 0,
-        "line_end": 1
+        "line_end": 1,
+        "url": "https://developers.facebook.com/docs/graph-api/reference/v19.0/app-link-host)"
     },
     "1": {
         "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/App Link Host Endpoint.md\nParagraph location: \n\tApp Link Host `/app-link-host`\n\nContent: \n# App Link Host `/app-link-host`  \nAn individual app link host object created by an app. An app link host is a wrapper for a group of different app links.  \nPlease see our main [App Links](https://developers.facebook.com/docs/applinks) documentation to learn more.\n",
         "line_start": 2,
-        "line_end": 5
+        "line_end": 5,
+        "url": "https://developers.facebook.com/docs/graph-api/reference/v19.0/app-link-host)"
     },
     "2": {
         "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/App Link Host Endpoint.md\nParagraph location: \n\tApp Link Host `/app-link-host`\n\tReading\n\nContent: \n## Reading  \nHTTPPHP SDKJavaScript SDKAndroid SDKiOS SDK  \nGET /v19.0/{app-link-host-id} HTTP/1.1\nHost: graph.facebook.com  \n/* PHP SDK v5.0.0 */\n/* make the API call */\ntry {\n// Returns a `Facebook\\FacebookResponse` object\n$response = $fb->get(\n'/{app-link-host-id}',\n'{access-token}'\n);\n} catch(Facebook\\Exceptions\\FacebookResponseException $e) {\necho 'Graph returned an error: ' . $e->getMessage();\nexit;\n} catch(Facebook\\Exceptions\\FacebookSDKException $e) {\necho 'Facebook SDK returned an error: ' . $e->getMessage();\nexit;\n}\n$graphNode = $response->getGraphNode();\n/* handle the result */  \n/* make the API call */\nFB.api(\n\"/{app-link-host-id}\",\nfunction (response) {\nif (response && !response.error) {\n/* handle the result */\n}\n}\n);  \n/* make the API call */\nnew GraphRequest(\nAccessToken.getCurrentAccessToken(),\n\"/{app-link-host-id}\",\nnull,\nHttpMethod.GET,\nnew GraphRequest.Callback() {\npublic void onCompleted(GraphResponse response) {\n/* handle the result */\n}\n}\n).executeAsync();  \n/* make the API call */\nFBSDKGraphRequest *request = [[FBSDKGraphRequest alloc]\ninitWithGraphPath:@\"/{app-link-host-id}\"\nparameters:params\nHTTPMethod:@\"GET\"];\n[request startWithCompletionHandler:^(FBSDKGraphRequestConnection *connection,\nid result,\nNSError *error) {\n// Handle the result\n}];\n",
         "line_start": 8,
-        "line_end": 60
+        "line_end": 60,
+        "url": "https://developers.facebook.com/docs/graph-api/reference/v19.0/app-link-host)"
     },
     "3": {
         "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/App Link Host Endpoint.md\nParagraph location: \n\tApp Link Host `/app-link-host`\n\tReading\n\tPermissions\n\nContent: \n### Permissions  \n* Any valid access token is required.\n",
         "line_start": 67,
-        "line_end": 69
+        "line_end": 69,
+        "url": "https://developers.facebook.com/docs/graph-api/reference/v19.0/app-link-host)"
     },
     "4": {
         "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/App Link Host Endpoint.md\nParagraph location: \n\tApp Link Host `/app-link-host`\n\tReading\n\tResponse\n\nContent: \n### Response  \n| Name | Description | Type |\n| --- | --- | --- |\n| `name` | A custom name for this app link host. | `string` |\n| `canonical_url` | The App Link URL. | `string` |\n",
         "line_start": 72,
-        "line_end": 77
+        "line_end": 77,
+        "url": "https://developers.facebook.com/docs/graph-api/reference/v19.0/app-link-host)"
     },
     "5": {
         "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/App Link Host Endpoint.md\nParagraph location: \n\tApp Link Host `/app-link-host`\n\tPublishing\n\nContent: \n## Publishing  \nApps can create app link hosts using the [`/app/app_link_hosts` edge](https://developers.facebook.com/docs/graph-api/reference/app/app_link_hosts).\n",
         "line_start": 79,
-        "line_end": 81
+        "line_end": 81,
+        "url": "https://developers.facebook.com/docs/graph-api/reference/v19.0/app-link-host)"
     },
     "6": {
         "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/App Link Host Endpoint.md\nParagraph location: \n\tApp Link Host `/app-link-host`\n\tDeleting\n\nContent: \n## Deleting  \nFacebook apps can delete app links using this edge:  \nHTTPPHP SDKAndroid SDKiOS SDK  \nDELETE /v19.0/{app-link-host-id} HTTP/1.1\nHost: graph.facebook.com  \n/* PHP SDK v5.0.0 */\n/* make the API call */\ntry {\n// Returns a `Facebook\\FacebookResponse` object\n$response = $fb->delete(\n'/{app-link-host-id}',\narray (),\n'{access-token}'\n);\n} catch(Facebook\\Exceptions\\FacebookResponseException $e) {\necho 'Graph returned an error: ' . $e->getMessage();\nexit;\n} catch(Facebook\\Exceptions\\FacebookSDKException $e) {\necho 'Facebook SDK returned an error: ' . $e->getMessage();\nexit;\n}\n$graphNode = $response->getGraphNode();\n/* handle the result */  \n/* make the API call */\nnew GraphRequest(\nAccessToken.getCurrentAccessToken(),\n\"/{app-link-host-id}\",\nnull,\nHttpMethod.DELETE,\nnew GraphRequest.Callback() {\npublic void onCompleted(GraphResponse response) {\n/* handle the result */\n}\n}\n).executeAsync();  \n/* make the API call */\nFBSDKGraphRequest *request = [[FBSDKGraphRequest alloc]\ninitWithGraphPath:@\"/{app-link-host-id}\"\nparameters:params\nHTTPMethod:@\"DELETE\"];\n[request startWithCompletionHandler:^(FBSDKGraphRequestConnection *connection,\nid result,\nNSError *error) {\n// Handle the result\n}];\n",
         "line_start": 83,
-        "line_end": 128
+        "line_end": 128,
+        "url": "https://developers.facebook.com/docs/graph-api/reference/v19.0/app-link-host)"
     },
     "7": {
         "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/App Link Host Endpoint.md\nParagraph location: \n\tApp Link Host `/app-link-host`\n\tDeleting\n\tPermissions\n\nContent: \n### Permissions  \n* An app access token is required to delete app link hosts belonging to that app.\n",
         "line_start": 67,
-        "line_end": 69
+        "line_end": 69,
+        "url": "https://developers.facebook.com/docs/graph-api/reference/v19.0/app-link-host)"
     },
     "8": {
         "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/App Link Host Endpoint.md\nParagraph location: \n\tApp Link Host `/app-link-host`\n\tDeleting\n\tResponse\n\nContent: \n### Response  \nReturns `true` successful, otherwise an error message.\n",
         "line_start": 72,
-        "line_end": 74
+        "line_end": 74,
+        "url": "https://developers.facebook.com/docs/graph-api/reference/v19.0/app-link-host)"
     },
     "9": {
         "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/App Link Host Endpoint.md\nParagraph location: \n\tApp Link Host `/app-link-host`\n\tUpdating\n\nContent: \n## Updating  \nFacebook apps can update app links using this edge:  \nPHP SDKHTTPAndroid SDKiOS SDK  \n/* PHP SDK v5.0.0 */\n/* make the API call */\ntry {\n// Returns a `Facebook\\FacebookResponse` object\n$response = $fb->post(\n'/{app-link-host-id}',\narray (\n'name' => 'Updated Name',\n'android' => '[]',\n'web' => '{\"should_fallback\": true}',\n),\n'{access-token}'\n);\n} catch(Facebook\\Exceptions\\FacebookResponseException $e) {\necho 'Graph returned an error: ' . $e->getMessage();\nexit;\n} catch(Facebook\\Exceptions\\FacebookSDKException $e) {\necho 'Facebook SDK returned an error: ' . $e->getMessage();\nexit;\n}\n$graphNode = $response->getGraphNode();\n/* handle the result */  \nPOST /v19.0/{app-link-host-id} HTTP/1.1\nHost: graph.facebook.com  \nname=Updated+Name&android=%5B%5D&web=%7B%22should_fallback%22%3A+true%7D  \nBundle params = new Bundle();\nparams.putString(\"name\", \"Updated Name\");\nparams.putString(\"android\", \"[]\");\nparams.putString(\"web\", \"{\\\"should_fallback\\\": true}\");\n/* make the API call */\nnew GraphRequest(\nAccessToken.getCurrentAccessToken(),\n\"/{app-link-host-id}\",\nparams,\nHttpMethod.POST,\nnew GraphRequest.Callback() {\npublic void onCompleted(GraphResponse response) {\n/* handle the result */\n}\n}\n).executeAsync();  \nNSDictionary *params = @{\n@\"name\": @\"Updated Name\",\n@\"android\": @\"[]\",\n@\"web\": @\"{\\\"should_fallback\\\": true}\",\n};\n/* make the API call */\nFBSDKGraphRequest *request = [[FBSDKGraphRequest alloc]\ninitWithGraphPath:@\"/{app-link-host-id}\"\nparameters:params\nHTTPMethod:@\"POST\"];\n[request startWithCompletionHandler:^(FBSDKGraphRequestConnection *connection,\nid result,\nNSError *error) {\n// Handle the result\n}];\n",
         "line_start": 144,
-        "line_end": 203
+        "line_end": 203,
+        "url": "https://developers.facebook.com/docs/graph-api/reference/v19.0/app-link-host)"
     },
     "10": {
         "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/App Link Host Endpoint.md\nParagraph location: \n\tApp Link Host `/app-link-host`\n\tUpdating\n\tPermissions\n\nContent: \n### Permissions  \n* An app access token is required to update app link hosts belonging to that app.\n",
         "line_start": 67,
-        "line_end": 69
+        "line_end": 69,
+        "url": "https://developers.facebook.com/docs/graph-api/reference/v19.0/app-link-host)"
     },
     "11": {
         "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/App Link Host Endpoint.md\nParagraph location: \n\tApp Link Host `/app-link-host`\n\tUpdating\n\tFields\n\nContent: \n### Fields  \n| Name | Description | Type |\n| --- | --- | --- |\n| `name` | A custom name for this app link host. | `string` |\n",
         "line_start": 216,
-        "line_end": 220
+        "line_end": 220,
+        "url": "https://developers.facebook.com/docs/graph-api/reference/v19.0/app-link-host)"
     },
     "12": {
         "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/App Link Host Endpoint.md\nParagraph location: \n\tApp Link Host `/app-link-host`\n\tUpdating\n\tResponse\n\nContent: \n### Response  \nReturns `true` successful, otherwise an error message.  \n![](https://www.facebook.com/tr?id=675141479195042&ev=PageView&noscript=1)  \n![](https://www.facebook.com/tr?id=574561515946252&ev=PageView&noscript=1)  \n![](https://www.facebook.com/tr?id=1754628768090156&ev=PageView&noscript=1)\n",
         "line_start": 72,
-        "line_end": 77
+        "line_end": 77,
+        "url": "https://developers.facebook.com/docs/graph-api/reference/v19.0/app-link-host)"
     }
 }

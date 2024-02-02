@@ -2,51 +2,61 @@
     "0": {
         "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Thread Endpoint.md\nParagraph location: \n\nContent: \nThis document refers to an outdated version of Graph API.\u00a0Please [use the latest version.](https://developers.facebook.com/docs/graph-api/reference/v19.0/thread)\n",
         "line_start": 0,
-        "line_end": 1
+        "line_end": 1,
+        "url": "https://developers.facebook.com/docs/graph-api/reference/v19.0/thread)"
     },
     "1": {
         "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Thread Endpoint.md\nParagraph location: \n\tThread `/{thread-id}`\n\nContent: \n# Thread `/{thread-id}`  \nA Facebook Messages conversation thread. This endpoint is only accessible for users that are developers of the app making the request.  \nPages should use the [Conversation endpoint](https://developers.facebook.com/docs/graph-api/reference/conversation/).\n",
         "line_start": 2,
-        "line_end": 5
+        "line_end": 5,
+        "url": "https://developers.facebook.com/docs/graph-api/reference/v19.0/thread)"
     },
     "2": {
         "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Thread Endpoint.md\nParagraph location: \n\tThread `/{thread-id}`\n\tReading\n\tPermissions\n\nContent: \n### Permissions  \n* A Page access token requested by a person who can perform the [`MODERATE` task](https://developers.facebook.com/docs/pages/overview/permissions-features#tasks) on the Page.  \n* The [`pages_messaging` permission](https://developers.facebook.com/docs/permissions/reference/pages_messaging)  \n* The [`pages_manage_metadata` permission](https://developers.facebook.com/docs/permissions/reference/pages_manage_metadata)  \n* The [`pages_show_list` permission](https://developers.facebook.com/docs/permissions/reference/pages_show_list)\n",
         "line_start": 12,
-        "line_end": 17
+        "line_end": 17,
+        "url": "https://developers.facebook.com/docs/graph-api/reference/v19.0/thread)"
     },
     "3": {
         "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Thread Endpoint.md\nParagraph location: \n\tThread `/{thread-id}`\n\tReading\n\tExample\n\nContent: \n### Example  \nHTTPPHP SDKJavaScript SDKAndroid SDKiOS SDK[Graph API Explorer](https://developers.facebook.com/tools/explorer/?method=GET&path=%7Bthread-id%7D&version=v19.0)  \nGET /v19.0/{thread-id} HTTP/1.1\nHost: graph.facebook.com  \n/* PHP SDK v5.0.0 */\n/* make the API call */\ntry {\n// Returns a `Facebook\\FacebookResponse` object\n$response = $fb->get(\n'/{thread-id}',\n'{access-token}'\n);\n} catch(Facebook\\Exceptions\\FacebookResponseException $e) {\necho 'Graph returned an error: ' . $e->getMessage();\nexit;\n} catch(Facebook\\Exceptions\\FacebookSDKException $e) {\necho 'Facebook SDK returned an error: ' . $e->getMessage();\nexit;\n}\n$graphNode = $response->getGraphNode();\n/* handle the result */  \n/* make the API call */\nFB.api(\n\"/{thread-id}\",\nfunction (response) {\nif (response && !response.error) {\n/* handle the result */\n}\n}\n);  \n/* make the API call */\nnew GraphRequest(\nAccessToken.getCurrentAccessToken(),\n\"/{thread-id}\",\nnull,\nHttpMethod.GET,\nnew GraphRequest.Callback() {\npublic void onCompleted(GraphResponse response) {\n/* handle the result */\n}\n}\n).executeAsync();  \n/* make the API call */\nFBSDKGraphRequest *request = [[FBSDKGraphRequest alloc]\ninitWithGraphPath:@\"/{thread-id}\"\nparameters:params\nHTTPMethod:@\"GET\"];\n[request startWithCompletionHandler:^(FBSDKGraphRequestConnection *connection,\nid result,\nNSError *error) {\n// Handle the result\n}];\n",
         "line_start": 23,
-        "line_end": 75
+        "line_end": 75,
+        "url": "https://developers.facebook.com/docs/graph-api/reference/v19.0/thread)"
     },
     "4": {
         "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Thread Endpoint.md\nParagraph location: \n\tThread `/{thread-id}`\n\tReading\n\tFields\n\nContent: \n### Fields  \n| Name | Description | Type |\n| --- | --- | --- |\n| `id` | The unique ID for this message thread. | `string` |\n| `comments` | The messages in this thread. | [`Message[]`](https://developers.facebook.com/docs/graph-api/reference/message/) |\n| `to` | Profiles that are subscribed to the thread. | [`Profile[]`](https://developers.facebook.com/docs/graph-api/reference/profile/) |\n| `unread` | The amount of messages that are unread by the session profile. | `integer` |\n| `unseen` | The amount of messages that are unseen by the session profile. | `integer` |\n| `updated_time` | When the thread was last updated. | `datetime` |\n| `can_reply` | Can the page reply in the thread. | `boolean` |\n| `linked_group` | ID of the Workplace group that the thread is linked to (Workplace only) | `string` |\n",
         "line_start": 82,
-        "line_end": 93
+        "line_end": 93,
+        "url": "https://developers.facebook.com/docs/graph-api/reference/v19.0/thread)"
     },
     "5": {
         "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Thread Endpoint.md\nParagraph location: \n\tThread `/{thread-id}`\n\tReading\n\tEdges\n\nContent: \n### Edges  \n| Name | Description |\n| --- | --- |\n| `messages` | List of individual messages in the thread. See [Messages](https://developers.facebook.com/docs/graph-api/reference/message) |\n",
         "line_start": 95,
-        "line_end": 99
+        "line_end": 99,
+        "url": "https://developers.facebook.com/docs/graph-api/reference/v19.0/thread)"
     },
     "6": {
         "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Thread Endpoint.md\nParagraph location: \n\tThread `/{thread-id}`\n\tReading\n\tFiltering Messages\n\nContent: \n### Filtering Messages  \nThe `messages` connection can be filtered to avoid pulling text that is part of thread warnings by the Messenger Apps. This is done via the `source` filter there only participants might be selected.  \nIf this filter is not apply _admin text_ (gray text appears in the thread by Messenger) will be retrieved as well.  \n#### Example  \nThis call will retrieve the last 3 messages made only by the participants.  \ncurl -i -X GET \\\\\n\"https://graph.facebook.com/v4.0/t\\_10155839492600149?fields=id,messages.source(PARTICIPANTS).limit(3)&access\\_token=<Access Token>\"\n",
         "line_start": 101,
-        "line_end": 108
+        "line_end": 108,
+        "url": "https://developers.facebook.com/docs/graph-api/reference/v19.0/thread)"
     },
     "7": {
         "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Thread Endpoint.md\nParagraph location: \n\tThread `/{thread-id}`\n\tPublishing\n\nContent: \n## Publishing  \nYou can't perform this operation on this endpoint.\n",
         "line_start": 114,
-        "line_end": 116
+        "line_end": 116,
+        "url": "https://developers.facebook.com/docs/graph-api/reference/v19.0/thread)"
     },
     "8": {
         "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Thread Endpoint.md\nParagraph location: \n\tThread `/{thread-id}`\n\tDeleting\n\nContent: \n## Deleting  \nYou can't perform this operation on this endpoint.\n",
         "line_start": 118,
-        "line_end": 120
+        "line_end": 120,
+        "url": "https://developers.facebook.com/docs/graph-api/reference/v19.0/thread)"
     },
     "9": {
         "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Thread Endpoint.md\nParagraph location: \n\tThread `/{thread-id}`\n\tUpdating\n\nContent: \n## Updating  \nYou can't perform this operation on this endpoint.  \n![](https://www.facebook.com/tr?id=675141479195042&ev=PageView&noscript=1)  \n![](https://www.facebook.com/tr?id=574561515946252&ev=PageView&noscript=1)  \n![](https://www.facebook.com/tr?id=1754628768090156&ev=PageView&noscript=1)\n",
         "line_start": 122,
-        "line_end": 127
+        "line_end": 127,
+        "url": "https://developers.facebook.com/docs/graph-api/reference/v19.0/thread)"
     }
 }
