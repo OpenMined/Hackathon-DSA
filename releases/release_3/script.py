@@ -2,6 +2,7 @@ import sys
 import csv
 import os
 from retrievers.chroma_dpr import ChromaRetriever
+# from retrievers.colbert import ColbertRetriever
 
 import langdetect
 from collections import Counter
@@ -17,9 +18,9 @@ from langchain.text_splitter import RecursiveCharacterTextSplitter
 
 def answer_query(query, retriever, rag_generator):
     k = 5
-    results = retriever.query(query['content'], k)
-    context = results["documents"]
-    chat_logs = rag_generator.generate_batch(context, query['content'])
+    results = retriever.query(query['question'], k)
+    context = [r['content'] for r in results]
+    chat_logs = rag_generator.generate_batch(context, query['question'])
     answer = [c[-1]["content"] for c in chat_logs]
     prompt = [c[-1]["prompt"] for c in chat_logs]
     top_result = results[0]
@@ -46,35 +47,24 @@ def write_output(output_dir, output, type):
         f.write(output['content'])
 
 def prep_retrieval():
-    import os
-    import json
+    docs = DirectoryLoader(VERSIONS_DIR, glob="[!.]*/[!.]*.md", loader_cls=TextLoader).load()
+    docs = [d for d in docs if Path(d.metadata['source']) != VERSIONS_DIR / "README.md"]
 
-    from langchain.docstore.document import Document
+    languages = [langdetect.detect(d.page_content) for d in docs]
 
-    documents = []
-    for root, dirs, files in os.walk('../../data/_jsons'):
-        for name in files:
-            if name.endswith((".json")):
-                full_path = os.path.join(root, name)
-                with open(full_path, "r") as f:
-                    data = json.load(f)
-                    for value in data.values():
-                        doc = value['content']
-                        doc =  Document(page_content=value['content'], metadata={"source": full_path, "line_start": value['line_start'], "line_end": value['line_end']})
-                        documents.append(doc)
-
-    languages = [langdetect.detect(d.page_content) for d in documents]
-
-    for doc, language in zip(documents, languages):
+    for doc, language in zip(docs, languages):
         doc.metadata["language"] = language
 
     print(Counter(languages))
 
-    retriever = ChromaRetriever()
-    # from retrievers.colbert import ColbertRetriever
-    # retriever = ColbertRetriever()
+    # from retrievers.chroma_dpr import ChromaRetriever
+    # import re
+
+    # retriever = ChromaRetriever()
+    from retrievers.colbert import ColbertRetriever
+    retriever = ColbertRetriever()
     collection_name = "DSA"
-    retriever.build(documents, collection_name)
+    retriever.build(docs, collection_name)
     return retriever
 
 def prep_generator():
@@ -87,6 +77,7 @@ def prep_generator():
 if __name__ == "__main__":
     print("STARTING PREPARATION...")
     retriever = prep_retrieval()
+    print("RETRIEVAL LOADED!")
     rag_generator = prep_generator()
     print("PREPARATION FINISHED!")
 

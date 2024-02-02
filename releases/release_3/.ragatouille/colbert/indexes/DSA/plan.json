@@ -36,11 +36,11 @@
         "checkpoint": "colbert-ir\/colbertv2.0",
         "triples": "\/future\/u\/okhattab\/root\/unit\/experiments\/2021.10\/downstream.distillation.round2.2_score\/round2.nway6.cosine.ib\/examples.64.json",
         "collection": [
-            "list with 11818 elements starting with...",
+            "list with 16801 elements starting with...",
             [
-                "Pinterest has a longstanding commitment to creating a safe and positive place online. \u00a0We continually invest in our policies, products and partnerships to support the safety and wellbeing of our community because it\u2019s the right thing for the people on our platform, and we view the Digital Services Act (DSA) as a continuation of our commitment to making Pinterest an inspiring and welcoming place for everyone.\n\nThe DSA is a uniform legal framework for providers of digital services in the European Union (EU). \u00a0In order to create a safe, predictable, and trustworthy online environment, the DSA aims to create a single set of rules across the EU\u2019s Member States governing the transparency and accountability obligations of online platforms.\n\nIf there is content on Pinterest you think may be illegal under EU law, you can report it by using our in-product reporting features or by using the following form: https:\/\/pinterest.com\/about\/dsa\/.\n\nInformation on Users in the EU\n\nUnder Article 24(2) of the DSA, online platforms are required to publish information on the average monthly active recipients of their service in the EU every six months.",
-                "Information on Users in the EU\n\nUnder Article 24(2) of the DSA, online platforms are required to publish information on the average monthly active recipients of their service in the EU every six months. This requirement is for the purpose of determining whether an online platform is a \u201cVery Large Online Platform\u201d (VLOP), which the DSA defines as having at least 45 million monthly active users in the EU. We have calculated that in the period of January through June 2023, Pinterest was over the 45 million monthly active user threshold for being considered a VLOP. We define a monthly active user as an authenticated Pinterest user who visits our website, opens our mobile application or interacts with Pinterest through one of our browser or site extensions, such as the Save button, at least once during this period.\n\nConsistent with Article 24(2), we will publish updated information in February 2024.\n\nSingle Point of Contact\n\nArticles 11 and 12 of the DSA require online platforms to designate a single point of contact to enable direct communication with users in the EU, the European Commission, EU Member States\u2019 authorities, and the European Board for Digital Services regarding the application of the DSA.",
-                "Single Point of Contact\n\nArticles 11 and 12 of the DSA require online platforms to designate a single point of contact to enable direct communication with users in the EU, the European Commission, EU Member States\u2019 authorities, and the European Board for Digital Services regarding the application of the DSA.\n\nThese parties may contact Pinterest regarding the DSA at dsa-poc \\[at\\] pinterest.com (dsa-poc\\[at\\]pinterest\\[dot\\]com).\u00a0 Communications with this email address can be in the English language, but if necessary, we will work with you to accommodate communication in another language.\n\nIf you believe that content on Pinterest is illegal in the European Union or in violation of Pinterest's Community Guidelines, reporting directly through the Pinterest platform is the most efficient way for Pinterest to quickly review the material. And if you have an inquiry that is not related to the DSA, please look for the right point of contact in our Help Center.\n\nDisputes About User Content and Accounts\n\nThe DSA provides opportunities to dispute the decisions that online platforms make about content and user accounts."
+                "Source document: ..\/data\/platform-docs-versions\/X_Twitter-API-V2\/Spaces.md\nParagraph location: \n\tResource URL: https:\/\/developer.twitter.com\/en\/docs\/twitter-api\/spaces\/overview\n\nContent: \n# Resource URL: https:\/\/developer.twitter.com\/en\/docs\/twitter-api\/spaces\/overview\nSpaces overview",
+                "Source document: ..\/data\/platform-docs-versions\/X_Twitter-API-V2\/Spaces.md\nParagraph location: \n\tResource URL: https:\/\/developer.twitter.com\/en\/docs\/twitter-api\/spaces\/overview\n\tIntroduction\n\nContent: \n## Introduction  \nThe following page describes the Spaces endpoints included in the Twitter API. To learn more about Spaces in general, please visit [help.twitter.com](https:\/\/help.twitter.com\/en\/using-twitter\/spaces).  \nSpaces allow expression and interaction via live audio conversation. The Spaces endpoints provide the tools to create new functionality around Spaces. You can use these endpoints to lookup live or scheduled Spaces, or to build discovery experiences to give your users ways to find Spaces they may be interested in.  \nWe encourage you to use your creativity to extend Spaces beyond the way we built it. With these endpoints you can build experiences to suggest Spaces to listeners based on keywords present in the title, or by surfacing accounts who host live or upcoming Spaces and are followed by a user; you can also help Hosts better understand how their Spaces are performing and get more insights on their audience.",
+                "Source document: ..\/data\/platform-docs-versions\/X_Twitter-API-V2\/Spaces.md\nParagraph location: \n\tResource URL: https:\/\/developer.twitter.com\/en\/docs\/twitter-api\/spaces\/overview\n\tIntroduction\n\tImportant resources\n\nContent: \n### Important resources  \nThe following resources will help you get started and integrate with the Spaces endpoints:  \n* [Getting access to Twitter API v2](https:\/\/developer.twitter.com\/en\/docs\/twitter-api\/getting-started\/getting-access-to-the-twitter-api)\n* [Spaces data dictionary](https:\/\/developer.twitter.com\/en\/docs\/twitter-api\/data-dictionary\/object-model\/spaces)\n* [Make your first request to a Spaces endpoint](https:\/\/developer.twitter.com\/en\/docs\/twitter-api\/spaces\/lookup\/quick-start)"
             ]
         ],
         "queries": "\/future\/u\/okhattab\/data\/MSMARCO\/queries.train.tsv",
@@ -49,15 +49,15 @@
         "root": ".ragatouille\/",
         "experiment": "colbert",
         "index_root": null,
-        "name": "2024-01\/30\/23.21.52",
+        "name": "2024-02\/02\/11.57.17",
         "rank": 0,
         "nranks": 1,
         "amp": true,
-        "gpus": 0,
+        "gpus": 1,
         "avoid_fork_if_possible": false
     },
     "num_chunks": 1,
     "num_partitions": 16384,
-    "num_embeddings_est": 1661233.084197998,
-    "avg_doclen_est": 140.5680389404297
+    "num_embeddings_est": 1973742.953781128,
+    "avg_doclen_est": 117.47770690917969
 }
