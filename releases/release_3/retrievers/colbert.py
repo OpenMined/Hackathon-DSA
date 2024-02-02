@@ -24,7 +24,7 @@ class ColbertRetriever:
     def build(self, docs: List[Document], collection_name: str):
         self.index_path = f".ragatouille/colbert/indexes/{collection_name}"
         if not Path(self.index_path).exists():
-            indexer = RAGPretrainedModel.from_pretrained("/gpfsdswork/dataset/HuggingFace_Models/colbert-ir/colbertv2.0/")
+            indexer = RAGPretrainedModel.from_pretrained("colbert-ir/colbertv2.0/")
             self.index_path = indexer.index(
                 index_name=collection_name,
                 collection=[d.page_content for d in docs],

@@ -1,0 +1,55 @@
+<|im_start|>system
+
+You are a QA assistant that answers questions based only on the context you are given.
+
+Examples:
+Q: I am a coding expert. How could I get more info about a Facebook post whose url slug ends with 123456789_123456789? I have a crowdtangle API token (TOKEN). Your output is a bash code snippet.
+A: ```bash
+curl -L https://api.crowdtangle.com/post/123456789_123456789?token=<CROWDTANGLE_API_TOKEN>
+```
+
+Next section will contain the context. You can use it to formulate the answer to the user question.
+------------------
+CONTEXT 0
+An example query and responseTo retrieve data on ads about social issues, elections or politics that contain the term "**california**" and that reached an audience in the United States, you could enter this query:  
+`curl -G \`  
+`-d "search_terms='california'" \`  
+`-d "ad_type=POLITICAL_AND_ISSUE_ADS" \`  
+`-d "ad_reached_countries=['US']" \`  
+`-d "access_token=<ACCESS_TOKEN>" \`  
+`"https://graph.facebook.com/<API_VERSION>/ads_archive"`  
+Which would return a response like this:  
+{ "data": \[ { "page\_id": "123", "page\_name": "123", "ad\_snapshot\_url": "https://www.facebook.com/ads/archive/render\_ad/?id=123&amp;access\_token=&lt;ACCESS\_TOKEN&gt;" } \], "paging": { "cursors": { "before": "MAZDZD", "after": "MAZDZD" }, "next": "https://graph.facebook.com/v3.1/ads\_archive?access\_token=&lt;ACCESS\_TOKEN&gt;
+
+CONTEXT 1
+This request will return a full list of all the rules that have been added to your stream.  
+`curl -X GET 'https://api.twitter.com/2/tweets/search/stream/rules' \ -H "Authorization: Bearer $APP_ACCESS_TOKEN"`  
+If your cURL request was successful, you should receive the following:  
+`{ 	"data": [{ 		"id": "1273028376882589696", 		"value": "cat has:images", 		"tag": "cats with images" 	}], 	"meta": { 		"sent": "2020-06-16T23:14:06.498Z" 	} }`  
+####
+Step six: Identify and specify which fields you would like to retrieve  
+If you connect to the stream after step five, you will receive the default [Tweet object](https://developer.twitter.com/en/docs/twitter-api/data-dictionary/object-model/tweet) fields in your response: id , text, and edit\_history\_tweet\_ids.
+
+CONTEXT 2
+Source document: ../data/platform-docs-versions/X_Twitter-API-V2/Trends.md
+Paragraph location: 
+	Resource URL: https://developer.twitter.com/en/docs/twitter-api/trends/introduction
+	Introduction
+	Getting started
+
+Content: 
+### Getting started  
+To use this endpoint, you need a [bearer token](https://developer.twitter.com/en/docs/authentication/oauth-2-0/application-only) from the [developer portal](https://developer.twitter.com/en/portal/dashboard). Once you have the bearer token,  you can call the usage API as shown below:  
+`curl 'https://api.twitter.com/2/trends/by/woeid/26062' --header 'Authorization: Bearer XXXXX'`  
+If the request is successful, you should see the JSON response as shown below:  
+`{     "data": [         {             "trend_name": "Europe",             "tweet_count": 232408         },         {             "trend_name": "Isak",             "tweet_count": 2956         },         {             "trend_name": "RNLI",             "tweet_count": 2484         },
+------------------
+
+RULES
+- Give an answer ONLY based on the above context and with no prior knowledge.
+- If you cannot come up with an answer to the user question, you can answer  like "I do not know the answer to this question".
+- Your answers are short, complete and easy to follow. Include code examples if neccessary.
+<|im_end|>
+<|im_start|>user
+Write me a curl request. This request should allow me to obtain, from Facebook, political advertisements containing the word "europe" and which reached France and Belgium. The response should only contain the curl request code.<|im_end|>
+<|im_start|>assistant

@@ -1,0 +1,9 @@
+To obtain political ads containing the word "europe" that reached France and Belgium, you can use the following cURL request:
+```bash
+curl -G \
+-d "search_terms='europe'" \
+-d "ad_type=POLITICAL_AND_ISSUE_ADS" \
+-d "ad_reached_countries=['FR','BE']" \
+-d "access_token=<ACCESS_TOKEN>" \
+"https://graph.facebook.com/v12.0/ads_archive"
+```

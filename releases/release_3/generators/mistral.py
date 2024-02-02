@@ -73,7 +73,7 @@ class MistralRAGGenerator:
         chat_log.append({"role": "assistant", "content": output})
         return chat_log
 
-    def generate_answer(self, context: str, query: str) -> List[Dict[str, str]]:
+    def generate_answer(self, context: List[str], query: str) -> List[Dict[str, str]]:
         chat_log = self.init_chat_log(context)
         return self.chat(chat_log, query=query)
 
