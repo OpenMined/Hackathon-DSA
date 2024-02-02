@@ -1,0 +1,134 @@
+{
+	"data": [
+		{
+			"idx": 0,
+			"sections": [
+				{
+					"path": "Facebook_API-Ad/API Meta Ad Library.md",
+					"lines": [0,116]
+				},
+				{
+					"path": "Facebook_Graph-API/Ads Archive Endpoint.md",
+					"lines": [5, 89]
+				}
+			]
+		},
+		{
+			"idx": 1,
+			"sections": [
+				{
+					"path": "Facebook_api-Ad/API Meta Ad Library.md",
+					"lines": [48, 116]
+				}
+			]
+		},
+		{
+			"idx": 2,
+			"sections": [
+				{
+					"path": "platforms/platforms.md",
+					"lines": [50, 55]
+				}
+			]
+		},
+		{
+			"idx": 3,
+			"sections": [
+				{
+					"path": "Linkedin_Government-Requests/Government Requests Report.md",
+					"lines": [82, 157]
+				}
+			]
+		},
+		{
+			"idx": 4,
+			"sections": [
+				{
+					"path": "Pinterest_DSA-Report/DSA Report.md",
+					"lines": [256, 273]
+				}
+			]
+		},
+		{
+			"idx": 5,
+			"sections": [
+				{
+					"path": "CrowdTangle_API/API Documentation.md",
+					"lines": [233, 354]
+				}
+			]
+		},
+		{
+			"idx": 6,
+			"sections": [
+				{
+					"path": "X_Twitter-API-V2/Compliance.md",
+					"lines": [4, 31]
+				}
+			]
+		},
+		{
+			"idx": 7,
+			"sections": [
+				{
+					"path": "TikTok_Example/Developer Terms.md",
+					"lines": [5, 44]
+				},
+				{
+					"path": "TikTok_Example/Developer Terms.md",
+					"lines": [78, 112]
+				},
+				{
+					"path": "TikTok_Research-API/Research API Documentation.md",
+					"lines": [35, 99]
+				},
+				{
+					"path": "TikTok_Research-API/Research API Documentation.md",
+					"lines": [111, 147]
+				},
+				{
+					"path": "TikTok_Research-API/Research API Documentation.md",
+					"lines": [150, 171]
+				},
+				{
+					"path": "TikTok_Research-API/Research API Reference.md",
+					"lines": [5, 78]
+				},
+				{
+					"path": "TikTok_Research-API/Research API Reference.md",
+					"lines": [155, 188]
+				}
+			]
+		},
+		{
+			"idx": 8,
+			"sections": [
+				{
+					"path": "Snapchat_Transparency/Transparency Report.md",
+					"lines": [15, 23]
+				}
+			]
+		},
+		{
+			"idx": 9,
+			"sections": [
+				{
+					"path": "X_DSA-Transparency-Report/DSA Transparency Report.md",
+					"lines": [53, 55]
+				},
+				{
+					"path": "X_DSA-Transparency-Report/DSA Transparency Report.md",
+					"lines": [83, 85]
+				},
+				{
+					"path": "X_DSA-Transparency-Report/DSA Transparency Report.md",
+					"lines": [87,90]
+				},
+				{
+					"path": "X_DSA-Transparency-Report/DSA Transparency Report.md",
+					"lines": [91,94]
+				}
+			]
+		}
+	]
+}
