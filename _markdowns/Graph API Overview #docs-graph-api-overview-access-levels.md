@@ -1,0 +1,233 @@
+Access Levels - Graph API
+
+
+
+
+
+
+
+
+
+
+DocsToolsSupportLog InGraph API* Overview
+	+ Access Levels
+	+ Facebook SDKs
+	+ Paginated Results
+	+ Rate Limits
+	+ Versioning
+* Get Started
+* Batch Requests
+* Debug Requests
+* Handle Errors
+* Field Expansion
+* Secure Requests
+* Resumable Upload API
+* Changelog
+* Features Reference
+* Permissions Reference
+* Reference
+On This PageAccess LevelsStandard AccessAdvanced AccessAutomatic ApprovalData Use CheckupRemove AccessChanging Access LevelsAccess Levels
+=============
+
+
+This document is only applicable to apps created using an App Type.
+
+
+**Advanced Access now requires Business Verification**
+
+
+As of February 1, 2023 apps requesting advanced access for permissions may have to be connected to a verified business. See this blog post for more information.
+
+
+Access levels are an additional layer of Graph API authorization that apply to permissions and features for Business, Consumer, and Gaming apps.
+
+
+There are two access levels: Standard and Advanced. Apps can request permissions with Advanced Access from any app user, and features with Advanced Access are active for all app users. Permissions with Standard Access, however, can only be requested from app users who have a role on the requesting app, and features with Standard Access are only active for app users who have a role on the app.
+
+
+If your app will only be used by people who have a role on it, the permissions and features your app requires will only need Standard Access. If your app will be used by people who do not have a role on it, the permissions and features that your app requires will need Advanced Access.
+
+
+All Business, Consumer, and Gaming apps are automatically approved for Standard Access for all permissions and features. Advanced Access, however, must be approved on an individual permission and feature basis through the App Review process.
+
+
+Standard Access
+---------------
+
+
+Permissions with Standard Access can only be requested from app users who have a role on the requesting app. Similarly, features with Standard Access are only active for app users who have a role on the app.
+
+
+Business, Consumer, and Gaming apps are automatically approved for Standard Access for all permissions and features available to their app type.
+
+
+Standard Access is intended for apps that will only be used by people who have roles on them, or used during app development, when testing API endpoints that the calling app has not been approved for.
+
+
+Advanced Access
+---------------
+
+
+Permissions with Advanced Access can be requested from any app user, and features with Advanced Access are active for all app users. However, Business Verification is required to get Advanced Access. In some cases additional App Review on an individual permission and feature basis might be required.
+
+
+### Automatic Approval
+
+
+Business and Gaming apps created before February 16, 2021 were automatically approved for Advanced Access for the email and public\_profile permissions, as well as any permissions or features that were already approved through App Review, if they were using them.
+
+
+All newly created Consumer apps are automatically approved for Advanced Access for the email and public\_profile permissions. However, both permissions are set to Standard Access by default and must be manually switched to Advanced Access. In addition, consumer apps must be in Live mode before they can request permissions with Advanced Access from non-role app users, and before features with Advanced Access will be active for non-role users.
+
+
+Data Use Checkup
+----------------
+
+
+Apps that have Advanced Access for a permission or feature must complete Data Use Checkup, which is an annual process to certify that the app accesses Facebook APIs, products, and data in compliance with our Platform Terms and Developer Policies.
+
+
+Remove Access
+-------------
+
+
+If you want to signify that your app does not need a specific permission or feature, you can remove it by clicking the trash can icon alongside the permission or feature in the **App Review** > **Permissions and Features** panel. You can restore access to a removed permission or feature by searching for it again in the same panel and clicking its **Get Standard Access** button or **Get Advanced Access** button. Restoring Advanced Access to previously approved permissions or features does not require re-review.
+
+
+All permissions and features can be removed except for public\_profile.
+
+
+Changing Access Levels
+----------------------
+
+
+App administrators can change access levels for individual permissions and features. Restoring Advanced Access to permissions and features does not require re-review, but changing from Advanced to Standard will invalidate/deactivate any permission/feature for any app users who do not have a role on your app.
+
+
+On This PageAccess LevelsStandard AccessAdvanced AccessAutomatic ApprovalData Use CheckupRemove AccessChanging Access LevelsFollow Us* 
+#### Products
+
+* Artificial Intelligence
+* AR/VR
+* Business Tools
+* Gaming
+* Open Source
+* Publishing
+* Social Integrations
+* Social Presence
+#### Programs
+
+* ThreatExchange
+#### Support
+
+* Developer Support
+* Bugs
+* Platform Status
+* Report a Platform Data Incident
+* Facebook for Developers Community Group
+* Sitemap
+#### News
+
+* Blog
+* Success Stories
+* Videos
+* Meta for Developers Page
+#### Terms and Policies
+
+* Platform Initiatives Hub
+* Platform Terms
+* Developer Policies
+* European Commission Commitments
+Follow Us* 
+ © 2024 Meta * About
+* Create Ad
+* Careers
+* Privacy Policy
+* Cookies
+* Terms
+English (US)Bahasa IndonesiaDeutschEspañolEspañol (España)Français (France)ItalianoPortuguês (Brasil)Tiếng ViệtРусскийالعربيةภาษาไทย한국어中文(香港)中文(台灣)中文(简体)日本語English (US)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+Allow the use of cookies from Facebook on this browser?We use cookies and similar technologies to help:Provide and improve content on Meta ProductsProvide a safer experience by using information we receive from cookies on and off FacebookProvide and improve Meta Products for people who have an accountFor advertising and measurement services off of Meta Products, analytics, and to provide certain features and improve our services for you, we use tools from other companies on Facebook. These companies also use cookies.You can allow the use of all cookies, just essential cookies or you can choose more options below. You can learn more about cookies and how we use them, and review or change your choice at any time in our Cookie Policy.Essential cookiesThese cookies are required to use Meta Products. They’re necessary for these sites to work as intended.Optional cookies
+
+Cookies from other companiesWe use tools from other companies for advertising and measurement services off of Meta Products, analytics, and to provide certain features and improve our services for you. These companies also use cookies.More informationIf you allow these cookies:
+
+* We’ll be able to better personalize ads for you off of Meta Products, and measure their performance
+* Features on our products will not be affected
+* Other companies will receive information about you by using cookies
+
+If you don’t allow these cookies:
+
+* We won’t use cookies from other companies to help personalize ads for you off of Meta Products, or to measure their performance
+* Some features on our products may not work
+
+Other ways you can control your information
+
+Manage your ad experience in Accounts CenterIf you have a Facebook account, you can manage how different data is used to personalize ads with these tools.
+
+Ad settings
+
+To show you better ads, we use data that advertisers and other partners provide us about your activity off Meta Company Products, including websites and apps. You can control whether we use this data to show you ads in your ad settings.
+
+The Meta Audience Network is a way for advertisers to show you ads in apps and websites off the Meta Company Products. One of the ways Audience Network shows relevant ads is by using your ad preferences to determine which ads you may be interested in seeing. You can control this in your ad settings.
+
+Ad preferences
+
+In Ad preferences, you can choose whether we show you ads and make choices about the information used to show you ads.
+
+Off-Facebook activity
+
+You can review your off-Facebook activity, which is a summary of activity that businesses and organizations share with us about your interactions with them, such as visiting their apps or websites. They use our Business Tools, such as Facebook Login or Meta Pixel, to share this information with us. This helps us do things such as give you a more personalized experience on Meta Products. Learn more about off-Facebook activity, how we use it, and how you can manage it.
+
+More information about online advertisingYou can opt out of seeing online interest-based ads from Meta and other participating companies through the Digital Advertising Alliance in the US, the Digital Advertising Alliance of Canada in Canada or the European Interactive Digital Advertising Alliance in Europe, or through your mobile device settings, if you are using Android, iOS 13 or an earlier version of iOS. Please note that ad blockers and tools that restrict our cookie use may interfere with these controls.
+
+The advertising companies we work with generally use cookies and similar technologies as part of their services. To learn more about how advertisers generally use cookies and the choices they offer, you can review the following resources:
+
+* Digital Advertising Alliance
+* Digital Advertising Alliance of Canada
+* European Interactive Digital Advertising Alliance
+Controlling cookies with browser settingsYour browser or device may offer settings that allow you to choose whether browser cookies are set and to delete them. These controls vary by browser, and manufacturers may change both the settings they make available and how they work at any time. As of 5 October 2020, you may find additional information about the controls offered by popular browsers at the links below. Certain parts of Meta Products may not work properly if you have disabled browser cookies. Please be aware that these controls are distinct from the controls that Facebook offers.
+
+* Google Chrome
+* Internet Explorer
+* Firefox
+* Safari
+* Safari Mobile
+* Opera
+Only allow essential cookiesAllow essential and optional cookies
