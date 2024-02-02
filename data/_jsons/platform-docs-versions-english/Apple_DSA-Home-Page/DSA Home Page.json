@@ -1,0 +1,17 @@
+{
+    "0": {
+        "content": "Source document: data/platform-docs-versions-english/Apple_DSA-Home-Page/DSA Home Page.md\nParagraph location: \n\tEuropean Digital Services Act (DSA)\n\nContent: \n# European Digital Services Act (DSA)  \nThis page includes information relevant to the EU Digital Services Act (Regulation (EU) 2022/2065 of the European Parliament and of the Council of 19 October 2022 on a Single Market For Digital Services and amending Directive 2000/31/EC) (the DSA).\n",
+        "line_start": 0,
+        "line_end": 2
+    },
+    "1": {
+        "content": "Source document: data/platform-docs-versions-english/Apple_DSA-Home-Page/DSA Home Page.md\nParagraph location: \n\tEuropean Digital Services Act (DSA)\n\tDesignated Point of Contact\n\nContent: \n## Designated Point of Contact  \nPursuant to Articles 11 and 12 of the DSA, the\u00a0[Head of DSA Compliance](mailto:dsacompliance@apple.com)\u00a0has been designated as Apple\u2019s point of contact for communications with Member State authorities, the European Commission, the European Board for Digital Services, and recipients of the service. Such communications should be in English.\n",
+        "line_start": 4,
+        "line_end": 6
+    },
+    "2": {
+        "content": "Source document: data/platform-docs-versions-english/Apple_DSA-Home-Page/DSA Home Page.md\nParagraph location: \n\tEuropean Digital Services Act (DSA)\n\tRedress Options\n\nContent: \n## Redress Options  \nUnder the DSA, developers and users are entitled to receive information about available redress options in connection with certain decisions taken by Apple.  \n[Learn more about redress options](https://www.apple.com/legal/dsa/redress-options)\n",
+        "line_start": 8,
+        "line_end": 11
+    }
+}

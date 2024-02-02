@@ -1,0 +1,122 @@
+{
+    "0": {
+        "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Offline conversion data set upload Endpoint.md\nParagraph location: \n\tOffline Conversion Data Set Upload\n\tReading\n\nContent: \n# Offline Conversion Data Set Upload  \n## Reading  \nA subset of Offline Event Data Set\n",
+        "line_start": 0,
+        "line_end": 3
+    },
+    "1": {
+        "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Offline conversion data set upload Endpoint.md\nParagraph location: \n\tOffline Conversion Data Set Upload\n\tReading\n\tExample\n\nContent: \n### Example  \nHTTPPHP SDKJavaScript SDKAndroid SDKiOS SDK[Graph API Explorer](https://developers.facebook.com/tools/explorer/?method=GET&path=%7Boffline-conversion-data-set-upload-id%7D&version=v19.0)  \nGET /v19.0/{offline-conversion-data-set-upload-id} HTTP/1.1\nHost: graph.facebook.com  \n/* PHP SDK v5.0.0 */\n/* make the API call */\ntry {\n// Returns a `Facebook\\FacebookResponse` object\n$response = $fb->get(\n'/{offline-conversion-data-set-upload-id}',\n'{access-token}'\n);\n} catch(Facebook\\Exceptions\\FacebookResponseException $e) {\necho 'Graph returned an error: ' . $e->getMessage();\nexit;\n} catch(Facebook\\Exceptions\\FacebookSDKException $e) {\necho 'Facebook SDK returned an error: ' . $e->getMessage();\nexit;\n}\n$graphNode = $response->getGraphNode();\n/* handle the result */  \n/* make the API call */\nFB.api(\n\"/{offline-conversion-data-set-upload-id}\",\nfunction (response) {\nif (response && !response.error) {\n/* handle the result */\n}\n}\n);  \n/* make the API call */\nnew GraphRequest(\nAccessToken.getCurrentAccessToken(),\n\"/{offline-conversion-data-set-upload-id}\",\nnull,\nHttpMethod.GET,\nnew GraphRequest.Callback() {\npublic void onCompleted(GraphResponse response) {\n/* handle the result */\n}\n}\n).executeAsync();  \n/* make the API call */\nFBSDKGraphRequest *request = [[FBSDKGraphRequest alloc]\ninitWithGraphPath:@\"/{offline-conversion-data-set-upload-id}\"\nparameters:params\nHTTPMethod:@\"GET\"];\n[request startWithCompletionHandler:^(FBSDKGraphRequestConnection *connection,\nid result,\nNSError *error) {\n// Handle the result\n}];  \nIf you want to learn how to use the Graph API, read our [Using Graph API guide](https://developers.facebook.com/docs/graph-api/using-graph-api/).\n",
+        "line_start": 6,
+        "line_end": 59
+    },
+    "2": {
+        "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Offline conversion data set upload Endpoint.md\nParagraph location: \n\tOffline Conversion Data Set Upload\n\tReading\n\tParameters\n\nContent: \n### Parameters  \nThis endpoint doesn't have any parameters.\n",
+        "line_start": 67,
+        "line_end": 69
+    },
+    "3": {
+        "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Offline conversion data set upload Endpoint.md\nParagraph location: \n\tOffline Conversion Data Set Upload\n\tReading\n\tFields\n\nContent: \n### Fields  \n| Field | Description |\n| --- | --- |\n| `id`<br><br>numeric string | ID of the data set upload<br><br>[Default](https://developers.facebook.com/docs/graph-api/using-graph-api/#fields) |\n| `api_calls`<br><br>int32 | Api calls stat from RTCS |\n| `creation_time`<br><br>int32 | Time of the creation of this upload tag |\n| `duplicate_entries`<br><br>int32 | Duplicate entries stat |\n| `event_stats`<br><br>string | Event stats |\n| `event_time_max`<br><br>integer | Latest entry timestamp |\n| `event_time_min`<br><br>integer | First entry timestamp |\n| `first_upload_time`<br><br>int32 | Time of the first upload to this upload tag |\n| `is_excluded_for_lift`<br><br>bool | The flag to determine if the upload data should be excluded from Lift<br><br>[Default](https://developers.facebook.com/docs/graph-api/using-graph-api/#fields) |\n| `last_upload_time`<br><br>int32 | Time of the most recent upload to this upload tag |\n| `match_rate_approx`<br><br>int32 | Approximate match rate percentage for the entries in this upload |\n| `matched_entries`<br><br>int32 | Matched entries stat |\n| `upload_tag`<br><br>string | The name by which uploads are grouped in this data set<br><br>[Default](https://developers.facebook.com/docs/graph-api/using-graph-api/#fields) |\n| `valid_entries`<br><br>int32 | Valid entries stat |\n",
+        "line_start": 71,
+        "line_end": 88
+    },
+    "4": {
+        "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Offline conversion data set upload Endpoint.md\nParagraph location: \n\tOffline Conversion Data Set Upload\n\tReading\n\tEdges\n\nContent: \n### Edges  \n| Edge | Description |\n| --- | --- |\n| [`progress`](https://developers.facebook.com/docs/graph-api/reference/offline-conversion-data-set-upload/progress/) | Upload progress, returns a list of progress ranges that were previously uploaded |\n| [`pull_sessions`](https://developers.facebook.com/docs/graph-api/reference/offline-conversion-data-set-upload/pull_sessions/) | pull\\_sessions |\n",
+        "line_start": 90,
+        "line_end": 95
+    },
+    "5": {
+        "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Offline conversion data set upload Endpoint.md\nParagraph location: \n\tOffline Conversion Data Set Upload\n\tReading\n\tError Codes\n\nContent: \n### Error Codes  \n| Error | Description |\n| --- | --- |\n| 100 | Invalid parameter |\n",
+        "line_start": 97,
+        "line_end": 101
+    },
+    "6": {
+        "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Offline conversion data set upload Endpoint.md\nParagraph location: \n\tOffline Conversion Data Set Upload\n\tCreating\n\nContent: \n## Creating  \nYou can't perform this operation on this endpoint.\n",
+        "line_start": 103,
+        "line_end": 105
+    },
+    "7": {
+        "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Offline conversion data set upload Endpoint.md\nParagraph location: \n\tOffline Conversion Data Set Upload\n\tUpdating\n\nContent: \n## Updating  \nYou can't perform this operation on this endpoint.\n",
+        "line_start": 107,
+        "line_end": 109
+    },
+    "8": {
+        "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Offline conversion data set upload Endpoint.md\nParagraph location: \n\tOffline Conversion Data Set Upload\n\tDeleting\n\nContent: \n## Deleting  \nYou can't perform this operation on this endpoint.  \n![](https://www.facebook.com/tr?id=675141479195042&ev=PageView&noscript=1)  \n![](https://www.facebook.com/tr?id=574561515946252&ev=PageView&noscript=1)  \n![](https://www.facebook.com/tr?id=1754628768090156&ev=PageView&noscript=1)\n",
+        "line_start": 111,
+        "line_end": 116
+    },
+    "9": {
+        "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Offline conversion data set upload Endpoint.md\nParagraph location: \n\tOffline Conversion Data Set Upload Progress\n\tReading\n\nContent: \n# Offline Conversion Data Set Upload Progress  \n## Reading  \nOfflineConversionDataSetUploadProgress\n",
+        "line_start": 121,
+        "line_end": 124
+    },
+    "10": {
+        "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Offline conversion data set upload Endpoint.md\nParagraph location: \n\tOffline Conversion Data Set Upload Progress\n\tReading\n\tExample\n\nContent: \n### Example  \nHTTPPHP SDKJavaScript SDKAndroid SDKiOS SDK[Graph API Explorer](https://developers.facebook.com/tools/explorer/?method=GET&path=%7Boffline-conversion-data-set-upload-id%7D%2Fprogress&version=v19.0)  \nGET /v19.0/{offline-conversion-data-set-upload-id}/progress HTTP/1.1\nHost: graph.facebook.com  \n/* PHP SDK v5.0.0 */\n/* make the API call */\ntry {\n// Returns a `Facebook\\FacebookResponse` object\n$response = $fb->get(\n'/{offline-conversion-data-set-upload-id}/progress',\n'{access-token}'\n);\n} catch(Facebook\\Exceptions\\FacebookResponseException $e) {\necho 'Graph returned an error: ' . $e->getMessage();\nexit;\n} catch(Facebook\\Exceptions\\FacebookSDKException $e) {\necho 'Facebook SDK returned an error: ' . $e->getMessage();\nexit;\n}\n$graphNode = $response->getGraphNode();\n/* handle the result */  \n/* make the API call */\nFB.api(\n\"/{offline-conversion-data-set-upload-id}/progress\",\nfunction (response) {\nif (response && !response.error) {\n/* handle the result */\n}\n}\n);  \n/* make the API call */\nnew GraphRequest(\nAccessToken.getCurrentAccessToken(),\n\"/{offline-conversion-data-set-upload-id}/progress\",\nnull,\nHttpMethod.GET,\nnew GraphRequest.Callback() {\npublic void onCompleted(GraphResponse response) {\n/* handle the result */\n}\n}\n).executeAsync();  \n/* make the API call */\nFBSDKGraphRequest *request = [[FBSDKGraphRequest alloc]\ninitWithGraphPath:@\"/{offline-conversion-data-set-upload-id}/progress\"\nparameters:params\nHTTPMethod:@\"GET\"];\n[request startWithCompletionHandler:^(FBSDKGraphRequestConnection *connection,\nid result,\nNSError *error) {\n// Handle the result\n}];  \nIf you want to learn how to use the Graph API, read our [Using Graph API guide](https://developers.facebook.com/docs/graph-api/using-graph-api/).\n",
+        "line_start": 6,
+        "line_end": 59
+    },
+    "11": {
+        "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Offline conversion data set upload Endpoint.md\nParagraph location: \n\tOffline Conversion Data Set Upload Progress\n\tReading\n\tParameters\n\nContent: \n### Parameters  \nThis endpoint doesn't have any parameters.\n",
+        "line_start": 67,
+        "line_end": 69
+    },
+    "12": {
+        "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Offline conversion data set upload Endpoint.md\nParagraph location: \n\tOffline Conversion Data Set Upload Progress\n\tReading\n\tFields\n\nContent: \n### Fields  \nReading from this edge will return a JSON formatted result:  \n{\n\"`data`\": \\[\\],\n\"`paging`\": {}\n}  \n#### `data`  \nA list of SignalsUploadProgress nodes.  \n#### `paging`  \nFor more details about pagination, see the [Graph API guide](https://developers.facebook.com/docs/graph-api/using-graph-api/#paging).\n",
+        "line_start": 71,
+        "line_end": 81
+    },
+    "13": {
+        "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Offline conversion data set upload Endpoint.md\nParagraph location: \n\tOffline Conversion Data Set Upload Progress\n\tReading\n\tError Codes\n\nContent: \n### Error Codes  \n| Error | Description |\n| --- | --- |\n| 275 | Cannot determine the target object for this request. Currently supported objects include ad account, business account and associated objects. |\n",
+        "line_start": 97,
+        "line_end": 101
+    },
+    "14": {
+        "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Offline conversion data set upload Endpoint.md\nParagraph location: \n\tOffline Conversion Data Set Upload Progress\n\tCreating\n\nContent: \n## Creating  \nYou can't perform this operation on this endpoint.\n",
+        "line_start": 103,
+        "line_end": 105
+    },
+    "15": {
+        "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Offline conversion data set upload Endpoint.md\nParagraph location: \n\tOffline Conversion Data Set Upload Progress\n\tUpdating\n\nContent: \n## Updating  \nYou can't perform this operation on this endpoint.\n",
+        "line_start": 107,
+        "line_end": 109
+    },
+    "16": {
+        "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Offline conversion data set upload Endpoint.md\nParagraph location: \n\tOffline Conversion Data Set Upload Progress\n\tDeleting\n\nContent: \n## Deleting  \nYou can't perform this operation on this endpoint.  \n![](https://www.facebook.com/tr?id=675141479195042&ev=PageView&noscript=1)  \n![](https://www.facebook.com/tr?id=574561515946252&ev=PageView&noscript=1)  \n![](https://www.facebook.com/tr?id=1754628768090156&ev=PageView&noscript=1)\n",
+        "line_start": 111,
+        "line_end": 116
+    },
+    "17": {
+        "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Offline conversion data set upload Endpoint.md\nParagraph location: \n\tOffline Conversion Data Set Upload Pull Sessions\n\tReading\n\nContent: \n# Offline Conversion Data Set Upload Pull Sessions  \n## Reading  \nOfflineConversionDataSetUploadPullSessions  \nStarting September 14, 2021, this endpoint will throw an error for version 12.0+ calls made by apps that lack the endpoint's required permissions. This change will apply to all versions on December 13, 2021.\n",
+        "line_start": 233,
+        "line_end": 237
+    },
+    "18": {
+        "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Offline conversion data set upload Endpoint.md\nParagraph location: \n\tOffline Conversion Data Set Upload Pull Sessions\n\tReading\n\tExample\n\nContent: \n### Example  \nHTTPPHP SDKJavaScript SDKAndroid SDKiOS SDK[Graph API Explorer](https://developers.facebook.com/tools/explorer/?method=GET&path=%7Boffline-conversion-data-set-upload-id%7D%2Fpull_sessions&version=v19.0)  \nGET /v19.0/{offline-conversion-data-set-upload-id}/pull_sessions HTTP/1.1\nHost: graph.facebook.com  \n/* PHP SDK v5.0.0 */\n/* make the API call */\ntry {\n// Returns a `Facebook\\FacebookResponse` object\n$response = $fb->get(\n'/{offline-conversion-data-set-upload-id}/pull_sessions',\n'{access-token}'\n);\n} catch(Facebook\\Exceptions\\FacebookResponseException $e) {\necho 'Graph returned an error: ' . $e->getMessage();\nexit;\n} catch(Facebook\\Exceptions\\FacebookSDKException $e) {\necho 'Facebook SDK returned an error: ' . $e->getMessage();\nexit;\n}\n$graphNode = $response->getGraphNode();\n/* handle the result */  \n/* make the API call */\nFB.api(\n\"/{offline-conversion-data-set-upload-id}/pull_sessions\",\nfunction (response) {\nif (response && !response.error) {\n/* handle the result */\n}\n}\n);  \n/* make the API call */\nnew GraphRequest(\nAccessToken.getCurrentAccessToken(),\n\"/{offline-conversion-data-set-upload-id}/pull_sessions\",\nnull,\nHttpMethod.GET,\nnew GraphRequest.Callback() {\npublic void onCompleted(GraphResponse response) {\n/* handle the result */\n}\n}\n).executeAsync();  \n/* make the API call */\nFBSDKGraphRequest *request = [[FBSDKGraphRequest alloc]\ninitWithGraphPath:@\"/{offline-conversion-data-set-upload-id}/pull_sessions\"\nparameters:params\nHTTPMethod:@\"GET\"];\n[request startWithCompletionHandler:^(FBSDKGraphRequestConnection *connection,\nid result,\nNSError *error) {\n// Handle the result\n}];  \nIf you want to learn how to use the Graph API, read our [Using Graph API guide](https://developers.facebook.com/docs/graph-api/using-graph-api/).\n",
+        "line_start": 6,
+        "line_end": 59
+    },
+    "19": {
+        "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Offline conversion data set upload Endpoint.md\nParagraph location: \n\tOffline Conversion Data Set Upload Pull Sessions\n\tReading\n\tParameters\n\nContent: \n### Parameters  \nThis endpoint doesn't have any parameters.\n",
+        "line_start": 67,
+        "line_end": 69
+    },
+    "20": {
+        "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Offline conversion data set upload Endpoint.md\nParagraph location: \n\tOffline Conversion Data Set Upload Pull Sessions\n\tReading\n\tFields\n\nContent: \n### Fields  \nReading from this edge will return a JSON formatted result:  \n{\n\"`data`\": \\[\\],\n\"`paging`\": {}\n}  \n#### `data`  \nA list of PartnerIntegrationPullSession nodes.  \n#### `paging`  \nFor more details about pagination, see the [Graph API guide](https://developers.facebook.com/docs/graph-api/using-graph-api/#paging).\n",
+        "line_start": 71,
+        "line_end": 81
+    },
+    "21": {
+        "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Offline conversion data set upload Endpoint.md\nParagraph location: \n\tOffline Conversion Data Set Upload Pull Sessions\n\tCreating\n\nContent: \n## Creating  \nYou can't perform this operation on this endpoint.\n",
+        "line_start": 103,
+        "line_end": 105
+    },
+    "22": {
+        "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Offline conversion data set upload Endpoint.md\nParagraph location: \n\tOffline Conversion Data Set Upload Pull Sessions\n\tUpdating\n\nContent: \n## Updating  \nYou can't perform this operation on this endpoint.\n",
+        "line_start": 107,
+        "line_end": 109
+    },
+    "23": {
+        "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Offline conversion data set upload Endpoint.md\nParagraph location: \n\tOffline Conversion Data Set Upload Pull Sessions\n\tDeleting\n\nContent: \n## Deleting  \nYou can't perform this operation on this endpoint.  \n![](https://www.facebook.com/tr?id=675141479195042&ev=PageView&noscript=1)  \n![](https://www.facebook.com/tr?id=574561515946252&ev=PageView&noscript=1)  \n![](https://www.facebook.com/tr?id=1754628768090156&ev=PageView&noscript=1)\n",
+        "line_start": 111,
+        "line_end": 116
+    }
+}

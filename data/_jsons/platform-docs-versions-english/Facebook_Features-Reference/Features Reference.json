@@ -1,0 +1,247 @@
+{
+    "0": {
+        "content": "Source document: data/platform-docs-versions-english/Facebook_Features-Reference/Features Reference.md\nParagraph location: \n\tFeatures Reference\n\nContent: \n# Features Reference  \nFeatures are authorization mechanisms that allow apps to access specific types of data through our various APIs. In this way they are similar to Permissions, however Features cannot be granted to an app by an app user. Instead, Features are active or inactive depending on the app user's relationship to the app and the app's mode when it is being used.  \nFor apps in Development Mode, all Features except for Page Public Content Access and Page Public Metadata Access are active for any app user who has a Role on the app or a Role in a Business that has claimed the app.  \nFor apps in Live Mode, only Features approved through App Review are active for app users. This also applies to app users who have a Role on the app or Business.  \nFor Business app types (which have access levels instead of modes), Features are active for any app users who have a Role on the app or in a Business that has claimed the app, unless access has been removed. In order for a Feature to be active for app users without a Role on the app or Business, it must first be approved through App Review.  \nAccess to any Feature that is granted by default or through App Review can be used to request analytics insights to improve your app and for marketing or advertising purposes, through the use of aggregated and de-identified or anonymized information (provided such data cannot be re-identified).  \nUnlike Permissions, Features do not expire, their approval will not be revoked, if they are unused.  \n| Feature | Description |\n| --- | --- |\n| [Ad Targeting Data Access](https://developers.facebook.com/docs/features-reference/ad-targeting-data-access) | The **Ad Targeting Data Access** feature allows access to ad targeting data within the Facebook Open Research and Transparency tool for election, political, and social issue ads that are run on Facebook from Meta and Instagram from Meta.  <br>  <br><br>**Allowed Usage**<br><br>* To conduct research about Meta's role in society |\n| [Business Asset User Profile Access](https://developers.facebook.com/docs/features-reference/business-asset-user-profile-access) | The **Business Asset User Profile Access** feature allows your app to read the [User Fields](https://developers.facebook.com/docs/graph-api/reference/user#fields) for users engaging with your business assets such as id, ids\\_for\\_business, name, and picture.  <br>  <br><br>**Allowed Usage**<br><br>You can use this feature if your app uses one or more of the User Fields in its business app experience. |\n| [Ads Management Standard Access](https://developers.facebook.com/docs/features-reference/ads-management-standard-access) | The **Ads Management Standard Access** feature allows your app to access the Marketing API.  <br>  <br><br>**Allowed Usage**<br><br>* Enable an unlimited number of ad accounts and lower rate limiting.<br>    <br>* To read ads reports for ad accounts you own or have been granted access to by the ad account owner, request **Ads Management Standard Access**, along with the **ads\\_read** permission.<br>    <br>* To read and manage ads for ad accounts you own or have been granted access to by the ad account owner, request **Ads Management Standard Access**, along with the **ads\\_management** permission.<br>    <br>* To pull ads reports from a set of clients, and to read and manage ads from another set of clients, request **Ads Management Standard Access**, along with both **ads\\_read** and **ads\\_management** permissions. |\n| [Business Asset User Profile Access](https://developers.facebook.com/docs/features-reference/business-asset-user-profile-access) | The **Business Asset User Profile Access** feature allows your app to read the [User Fields](https://developers.facebook.com/docs/graph-api/reference/user#fields) for users engaging with your business assets such as id, ids\\_for\\_business, name, and picture.  <br>  <br><br>**Allowed Usage**<br><br>You can use this feature if your app uses one or more of the User Fields in its business app experience. |\n| [Groups API](https://developers.facebook.com/docs/features-reference/groups-api) | The **Groups API** feature allows your app to access content in a Facebook Group.  <br>  <br><br>**Allowed Usage**<br><br>* Help people manage the posts and content published to their Group.<br>    <br>* Help people get information about content posted to their Group.<br>    <br>* Let people publish content from your app to their Facebook Group.<br>    <br>* Help people get aggregated insights about activity happening in their Group. |\n| [Human Agent](https://developers.facebook.com/docs/features-reference/human-agent) | The **Human Agent** feature allows your app to have a human agent respond to user messages using the **human\\_agent** tag within 7 days of a user's message.  <br>  <br><br>**Allowed Usage**<br><br>* Provide human agent support in cases where a user\u2019s issue cannot be resolved in the standard messaging window. |\n| [Instagram Public Content Access](https://developers.facebook.com/docs/features-reference/instagram-public-content-access) | The **Instagram Public Content Access** feature allows your app to access Instagram Graph API's Hashtag Search endpoints.  <br>  <br><br>**Allowed Usage**<br><br>* Discover content associated with its current campaign.<br>    <br>* Provide customer support.<br>    <br>* Identify entrants to its contests, competitions, or sweepstakes.<br>    <br>* Understand public sentiment around brand.<br>    <br>* Understand and manage their audience, develop their content strategy and obtain digital rights. |\n| [Live Video API](https://developers.facebook.com/docs/features-reference/live-video-api) | The **Live Video API** feature allows an app to manage live videos to Pages, Groups and User timelines when combined with the correct matching permission.  <br>  <br><br>**Allowed Usage**<br><br>* App users can publish live video content from your app to Facebook. |\n| [oEmbed Read](https://developers.facebook.com/docs/features-reference/oembed_read) | The **oEmbed Read** feature allows your app to get embed HTML and basic metadata for public Facebook and Instagram pages, posts, and videos.  <br>  <br><br>**Allowed Usage**<br><br>* Provide front-end views of Facebook and Instagram pages, posts, and videos. |\n| [Page Mentioning](https://developers.facebook.com/docs/features-reference/page-mentioning) | The **Page Mentioning** feature allows your app mention any Facebook Page when publishing posts on the Pages managed by your app.  <br>  <br><br>**Allowed Usage**<br><br>* Allow people to use your app to publish Page posts that mention other Pages.<br>    <br>* Mention Pages relevant to the content in your page post. |\n| [Page Public Content Access](https://developers.facebook.com/docs/features-reference/page-public-content-access) | The **Page Public Content Access** feature allows your app access to the Pages Search API and to read public data for Pages for which you lack the [pages\\_read\\_engagement permission](https://developers.facebook.com/docs/permissions/reference/pages_read_engagement) and the [pages\\_read\\_user\\_content permission](https://developers.facebook.com/docs/permissions/reference/pages_read_user_content). Readable data includes business metadata, public comments and posts.  <br>  <br><br>**Allowed Usage**<br><br>* Analyze and/or display posts and engagement on Pages. |\n| [Page Public Metadata Access](https://developers.facebook.com/docs/features-reference/page-public-metadata-access) | The **Page Public Metadata Access** feature allows your app access to the Pages Search API and to read public data for Pages for which you lack the [public Page fields](https://developers.facebook.com/docs/graph-api/reference/page#public-page-data) and the [Pages Search API](https://developers.facebook.com/docs/pages/searching).  <br>  <br><br>**Allowed Usage**<br><br>* Analyze engagement with public Pages by viewing Like and follower counts.<br>    <br>* Aggregate public-facing \"about\" Page information from multiple, disparate pages. |\n| [Threat Exchange](https://developers.facebook.com/docs/features-reference/threat-exchange) | The **ThreatExchange** feature allows your app to share threat data among a select group of vetted industry partners.  <br>  <br><br>**Allowed Usage**<br><br>* Share threat data with a specific group of partners to achieve their security goals. |\n",
+        "line_start": 0,
+        "line_end": 22
+    },
+    "1": {
+        "content": "Source document: data/platform-docs-versions-english/Facebook_Features-Reference/Features Reference.md\nParagraph location: \n\tFeatures Reference\n\tDeprecated Features\n\nContent: \n## Deprecated Features  \n| Feature | Deprecation Date |\n| --- | --- |\n| All Mutual Friends API | October 24th, 2018 |\n| Profile Expression Kit | September 30th, 2018 |\n| Optimized Sharing to Messenger | August 1st, 2018 |\n| Taggable Friends | April 4th, 2018 |\n",
+        "line_start": 30,
+        "line_end": 37
+    },
+    "2": {
+        "content": "Source document: data/platform-docs-versions-english/Facebook_Features-Reference/Features Reference.md\nParagraph location: \n\tFeatures Reference\n\tLearn More\n\nContent: \n## Learn More  \nLearn more about developing with Meta with the following guides:  \n|     |     |     |\n| --- | --- | --- |\n| * [Access Levels](https://developers.facebook.com/docs/graph-api/overview/access-levels/#development-mode-and-live-mode)<br>* [App Review](https://developers.facebook.com/docs/app-review)<br>* [App Roles](https://developers.facebook.com/docs/development/build-and-test/app-roles) | * [App Types](https://developers.facebook.com/docs/development/create-an-app#app-type)<br>* [Business Roles](https://www.facebook.com/business/help/442345745885606?id=180505742745347)<br>* [Development Mode](https://developers.facebook.com/docs/development/build-and-test/app-modes) | * [Live Mode](https://developers.facebook.com/docs/development/build-and-test/app-modes)<br>* [Permissions Reference](https://developers.facebook.com/docs/permissions/reference) |  \n![](https://www.facebook.com/tr?id=675141479195042&ev=PageView&noscript=1)  \n![](https://www.facebook.com/tr?id=574561515946252&ev=PageView&noscript=1)  \n![](https://www.facebook.com/tr?id=1754628768090156&ev=PageView&noscript=1)\n",
+        "line_start": 39,
+        "line_end": 47
+    },
+    "3": {
+        "content": "Source document: data/platform-docs-versions-english/Facebook_Features-Reference/Features Reference.md\nParagraph location: \n\tAd Targeting Data Access\n\nContent: \n# Ad Targeting Data Access  \n_Requires [App Review](https://developers.facebook.com/docs/app-review)._  \nThe **Ad Targeting Data Access** feature allows access to ad targeting data within the Facebook Open Research and Transparency tool for election, political, and social issue ads that are run on Facebook from Meta and Instagram from Meta. The allowed usage of this functionality is to conduct research about Meta's role in society. You may also use this permission to request analytics insights to improve your app and for marketing or advertising purposes, through the use of aggregated and de-identified or anonymized information (provided such data cannot be re-identified).\n",
+        "line_start": 53,
+        "line_end": 56
+    },
+    "4": {
+        "content": "Source document: data/platform-docs-versions-english/Facebook_Features-Reference/Features Reference.md\nParagraph location: \n\tAd Targeting Data Access\n\tAllowed Usage\n\nContent: \n## Allowed Usage  \n* To conduct research about Meta's role in society\n",
+        "line_start": 59,
+        "line_end": 61
+    },
+    "5": {
+        "content": "Source document: data/platform-docs-versions-english/Facebook_Features-Reference/Features Reference.md\nParagraph location: \n\tAd Targeting Data Access\n\tAdditional Details\n\nContent: \n## Additional Details  \n* This permission or feature requires successful completion of the App Review process before your app can access live data. [Learn More](https://developers.facebook.com/docs/app-review)  \n* This permission or feature requires that you complete [business verification](https://developers.facebook.com/docs/development/release/business-verification) in addition to App Review.  \n![](https://www.facebook.com/tr?id=675141479195042&ev=PageView&noscript=1)  \n![](https://www.facebook.com/tr?id=574561515946252&ev=PageView&noscript=1)  \n![](https://www.facebook.com/tr?id=1754628768090156&ev=PageView&noscript=1)\n",
+        "line_start": 64,
+        "line_end": 70
+    },
+    "6": {
+        "content": "Source document: data/platform-docs-versions-english/Facebook_Features-Reference/Features Reference.md\nParagraph location: \n\tAds Management Standard Access\n\nContent: \n# Ads Management Standard Access  \n_Requires [App Review](https://developers.facebook.com/docs/app-review)._  \nThe **Ads Management Standard Access** feature allows your app to access the Marketing API. The allowed usage for this feature is to enable an unlimited number of ad accounts and lower rate limiting. At a minimum, ads\\_read or ads\\_management permission is required to use Ads Management Standard Access. You may also use this permission to request analytics insights to improve your app and for marketing or advertising purposes, through the use of aggregated and de-identified or anonymized information (provided such data cannot be re-identified).\n",
+        "line_start": 77,
+        "line_end": 80
+    },
+    "7": {
+        "content": "Source document: data/platform-docs-versions-english/Facebook_Features-Reference/Features Reference.md\nParagraph location: \n\tAds Management Standard Access\n\tAllowed Usage\n\nContent: \n## Allowed Usage  \n* Enable an unlimited number of ad accounts and lower rate limiting.  \n* To read ads reports for ad accounts you own or have been granted access to by the ad account owner, request **Ads Management Standard Access**, along with the **ads\\_read** permission.  \n* To read and manage ads for ad accounts you own or have been granted access to by the ad account owner, request **Ads Management Standard Access**, along with the **ads\\_management** permission.  \n* To pull ads reports from a set of clients, and to read and manage ads from another set of clients, request **Ads Management Standard Access**, along with both **ads\\_read** and **ads\\_management** permissions.\n",
+        "line_start": 59,
+        "line_end": 64
+    },
+    "8": {
+        "content": "Source document: data/platform-docs-versions-english/Facebook_Features-Reference/Features Reference.md\nParagraph location: \n\tAds Management Standard Access\n\tCommon Endpoints\n\nContent: \n## Common Endpoints  \n[/adaccount](https://developers.facebook.com/docs/graph-api/reference/adaccount)\n[/adaccount/adcreatives/](https://developers.facebook.com/docs/graph-api/reference/adaccount/adcreatives/)\n[/adaccount/ads](https://developers.facebook.com/docs/graph-api/reference/adaccount/ads)\n",
+        "line_start": 94,
+        "line_end": 98
+    },
+    "9": {
+        "content": "Source document: data/platform-docs-versions-english/Facebook_Features-Reference/Features Reference.md\nParagraph location: \n\tAds Management Standard Access\n\tAdditional Details\n\nContent: \n## Additional Details  \n* This permission or feature requires successful completion of the App Review process before your app can access live data. [Learn More](https://developers.facebook.com/docs/app-review)  \n* This permission or feature is only available with business verification. You may also need to sign additional contracts before your app can access data. [Learn More Here](https://developers.facebook.com/docs/development/release/business-verification)  \n![](https://www.facebook.com/tr?id=675141479195042&ev=PageView&noscript=1)  \n![](https://www.facebook.com/tr?id=574561515946252&ev=PageView&noscript=1)  \n![](https://www.facebook.com/tr?id=1754628768090156&ev=PageView&noscript=1)\n",
+        "line_start": 64,
+        "line_end": 70
+    },
+    "10": {
+        "content": "Source document: data/platform-docs-versions-english/Facebook_Features-Reference/Features Reference.md\nParagraph location: \n\tBusiness Asset User Profile Access\n\nContent: \n# Business Asset User Profile Access  \n_Requires [App Review](https://developers.facebook.com/docs/app-review)._  \nThe **Business Asset User Profile Access** feature allows your app to read the User Fields for users engaging with your business assets such as id, ids\\_for\\_business, name, and picture. The allowed usage for this feature is to read one or more of the User Fields in a business app experience. You may also use this feature to request analytics insights to improve your app and for marketing or advertising purposes, through the use of aggregated and de-identified or anonymized information (provided such data cannot be re-identified).\n",
+        "line_start": 113,
+        "line_end": 116
+    },
+    "11": {
+        "content": "Source document: data/platform-docs-versions-english/Facebook_Features-Reference/Features Reference.md\nParagraph location: \n\tBusiness Asset User Profile Access\n\tCommon Endpoints\n\nContent: \n## Common Endpoints  \n[/User](https://developers.facebook.com/docs/graph-api/reference/user#fields)\n",
+        "line_start": 94,
+        "line_end": 96
+    },
+    "12": {
+        "content": "Source document: data/platform-docs-versions-english/Facebook_Features-Reference/Features Reference.md\nParagraph location: \n\tBusiness Asset User Profile Access\n\tAllowed Usage\n\nContent: \n## Allowed Usage  \nYou can use this feature if your app uses one or more of the User Fields in its business app experience.\n",
+        "line_start": 59,
+        "line_end": 61
+    },
+    "13": {
+        "content": "Source document: data/platform-docs-versions-english/Facebook_Features-Reference/Features Reference.md\nParagraph location: \n\tBusiness Asset User Profile Access\n\tAdditional Details\n\nContent: \n## Additional Details  \n* This permission or feature requires successful completion of the App Review process before your app can access live data. [Learn More](https://developers.facebook.com/docs/app-review)  \n* This permission or feature is only available with business verification. You may also need to sign additional contracts before your app can access data. [Learn More Here](https://developers.facebook.com/docs/development/release/business-verification)  \n![](https://www.facebook.com/tr?id=675141479195042&ev=PageView&noscript=1)  \n![](https://www.facebook.com/tr?id=574561515946252&ev=PageView&noscript=1)  \n![](https://www.facebook.com/tr?id=1754628768090156&ev=PageView&noscript=1)\n",
+        "line_start": 64,
+        "line_end": 70
+    },
+    "14": {
+        "content": "Source document: data/platform-docs-versions-english/Facebook_Features-Reference/Features Reference.md\nParagraph location: \n\tGroups API\n\nContent: \n# Groups API  \n_Requires [App Review](https://developers.facebook.com/docs/app-review)._  \nThe **Groups API** feature allows your app to access content in a Facebook Group. The allowed usage for this feature is to help people manage the posts and content published to their group or to get information about content posted to their Group. It can also be used to let people publish content from your app to their Facebook Group. This feature is often used with the **publish\\_to\\_group** and **groups\\_access\\_member\\_info** permissions. You may also use this permission to request analytics insights to improve your app and for marketing or advertising purposes, through the use of aggregated and de-identified or anonymized information (provided such data cannot be re-identified).\n",
+        "line_start": 140,
+        "line_end": 143
+    },
+    "15": {
+        "content": "Source document: data/platform-docs-versions-english/Facebook_Features-Reference/Features Reference.md\nParagraph location: \n\tGroups API\n\tAllowed Usage\n\nContent: \n## Allowed Usage  \n* Help people manage the posts and content published to their Group.  \n* Help people get information about content posted to their Group.  \n* Let people publish content from your app to their Facebook Group.  \n* Help people get aggregated insights about activity happening in their Group.\n",
+        "line_start": 59,
+        "line_end": 64
+    },
+    "16": {
+        "content": "Source document: data/platform-docs-versions-english/Facebook_Features-Reference/Features Reference.md\nParagraph location: \n\tGroups API\n\tCommon Endpoints\n\nContent: \n## Common Endpoints  \n[/group](https://developers.facebook.com/docs/graph-api/reference/group)\n",
+        "line_start": 94,
+        "line_end": 96
+    },
+    "17": {
+        "content": "Source document: data/platform-docs-versions-english/Facebook_Features-Reference/Features Reference.md\nParagraph location: \n\tGroups API\n\tAdditional Details\n\nContent: \n## Additional Details  \n* This permission or feature is only available with business verification. You may also need to sign additional contracts before your app can access data. [Learn More Here](https://developers.facebook.com/docs/development/release/business-verification)  \n* This permission or feature requires successful completion of the App Review process before your app can access live data. [Learn More](https://developers.facebook.com/docs/app-review)  \n![](https://www.facebook.com/tr?id=675141479195042&ev=PageView&noscript=1)  \n![](https://www.facebook.com/tr?id=574561515946252&ev=PageView&noscript=1)  \n![](https://www.facebook.com/tr?id=1754628768090156&ev=PageView&noscript=1)\n",
+        "line_start": 64,
+        "line_end": 70
+    },
+    "18": {
+        "content": "Source document: data/platform-docs-versions-english/Facebook_Features-Reference/Features Reference.md\nParagraph location: \n\tHuman Agent\n\nContent: \n# Human Agent  \nThe **Human Agent** feature allows your app to have a human agent respond to user messages using the **human\\_agent** tag within 7 days of a user's message. The allowed usage for this feature is to provide human agent support in cases where a user\u2019s issue cannot be resolved in the standard messaging window. Examples include when the business is closed for the weekend, or if the issue requires more than 24 hours to resolve.\n",
+        "line_start": 174,
+        "line_end": 176
+    },
+    "19": {
+        "content": "Source document: data/platform-docs-versions-english/Facebook_Features-Reference/Features Reference.md\nParagraph location: \n\tHuman Agent\n\tAllowed Usage\n\nContent: \n## Allowed Usage  \n* Provide human agent support in cases where a user\u2019s issue cannot be resolved in the standard messaging window.\n",
+        "line_start": 59,
+        "line_end": 61
+    },
+    "20": {
+        "content": "Source document: data/platform-docs-versions-english/Facebook_Features-Reference/Features Reference.md\nParagraph location: \n\tHuman Agent\n\tCommon Endpoints\n\nContent: \n## Common Endpoints  \n[/page/messages](https://developers.facebook.com/docs/graph-api/reference/page/messages)\n",
+        "line_start": 94,
+        "line_end": 96
+    },
+    "21": {
+        "content": "Source document: data/platform-docs-versions-english/Facebook_Features-Reference/Features Reference.md\nParagraph location: \n\tHuman Agent\n\tAdditional Details\n\nContent: \n## Additional Details  \n* This permission or feature requires successful completion of the App Review process before your app can access live data. [Learn More](https://developers.facebook.com/docs/app-review)  \n* This permission or feature is only available with business verification. You may also need to sign additional contracts before your app can access data. [Learn More Here](https://developers.facebook.com/docs/development/release/business-verification)  \n![](https://www.facebook.com/tr?id=675141479195042&ev=PageView&noscript=1)  \n![](https://www.facebook.com/tr?id=574561515946252&ev=PageView&noscript=1)  \n![](https://www.facebook.com/tr?id=1754628768090156&ev=PageView&noscript=1)\n",
+        "line_start": 64,
+        "line_end": 70
+    },
+    "22": {
+        "content": "Source document: data/platform-docs-versions-english/Facebook_Features-Reference/Features Reference.md\nParagraph location: \n\tInstagram Public Content Access\n\nContent: \n# Instagram Public Content Access  \n_Requires [App Review](https://developers.facebook.com/docs/app-review)._  \nThe Instagram Public Content Access feature allows your app to access Instagram Graph API's Hashtag Search endpoints. The allowed usages for this feature is to discover content associated with your hashtag campaigns, understand public sentiment around your brand or identify contest, competition and sweepstakes entrants. It can also be used to provide customer support and better understand and manage your audience. You may also use this permission to request analytics insights to improve your app and for marketing or advertising purposes, through the use of aggregated and de-identified or anonymized information (provided such data cannot be re-identified).\n",
+        "line_start": 200,
+        "line_end": 203
+    },
+    "23": {
+        "content": "Source document: data/platform-docs-versions-english/Facebook_Features-Reference/Features Reference.md\nParagraph location: \n\tInstagram Public Content Access\n\tAllowed Usage\n\nContent: \n## Allowed Usage  \n* Discover content associated with its current campaign.  \n* Provide customer support.  \n* Identify entrants to its contests, competitions, or sweepstakes.  \n* Understand public sentiment around brand.  \n* Understand and manage their audience, develop their content strategy and obtain digital rights.\n",
+        "line_start": 59,
+        "line_end": 65
+    },
+    "24": {
+        "content": "Source document: data/platform-docs-versions-english/Facebook_Features-Reference/Features Reference.md\nParagraph location: \n\tInstagram Public Content Access\n\tCommon Endpoints\n\nContent: \n## Common Endpoints  \n* [/ig-hashtag-search](https://developers.facebook.com/docs/instagram-api/reference/ig-hashtag-search)  \n* [/ig-hashtag](https://developers.facebook.com/docs/instagram-api/reference/ig-hashtag)  \n* [/ig-hashtag/recent-media](https://developers.facebook.com/docs/instagram-api/reference/ig-hashtag/recent-media)  \n* [/ig-hashtag/top-media](https://developers.facebook.com/docs/instagram-api/reference/ig-hashtag/top-media)\n",
+        "line_start": 94,
+        "line_end": 99
+    },
+    "25": {
+        "content": "Source document: data/platform-docs-versions-english/Facebook_Features-Reference/Features Reference.md\nParagraph location: \n\tInstagram Public Content Access\n\tAdditional Details\n\nContent: \n## Additional Details  \n* This permission or feature requires successful completion of the App Review process before your app can access live data. [Learn More](https://developers.facebook.com/docs/app-review)  \n* This permission or feature is only available with business verification. You may also need to sign additional contracts before your app can access data. [Learn More Here](https://developers.facebook.com/docs/development/release/business-verification)  \n![](https://www.facebook.com/tr?id=675141479195042&ev=PageView&noscript=1)  \n![](https://www.facebook.com/tr?id=574561515946252&ev=PageView&noscript=1)  \n![](https://www.facebook.com/tr?id=1754628768090156&ev=PageView&noscript=1)\n",
+        "line_start": 64,
+        "line_end": 70
+    },
+    "26": {
+        "content": "Source document: data/platform-docs-versions-english/Facebook_Features-Reference/Features Reference.md\nParagraph location: \n\tLive Video API\n\nContent: \n# Live Video API  \n_Requires [App Review](https://developers.facebook.com/docs/app-review)._  \nThe **Live Video API** feature allows an app to manage live videos to Pages, Groups and User timelines when combined with the correct matching permission.\n",
+        "line_start": 243,
+        "line_end": 246
+    },
+    "27": {
+        "content": "Source document: data/platform-docs-versions-english/Facebook_Features-Reference/Features Reference.md\nParagraph location: \n\tLive Video API\n\tAllowed Usage\n\nContent: \n## Allowed Usage  \n* App users can publish live video content from your app to Facebook.\n",
+        "line_start": 59,
+        "line_end": 61
+    },
+    "28": {
+        "content": "Source document: data/platform-docs-versions-english/Facebook_Features-Reference/Features Reference.md\nParagraph location: \n\tLive Video API\n\tCommon Endpoints\n\nContent: \n## Common Endpoints  \n[/group/live\\_videos](https://developers.facebook.com/docs/graph-api/reference/group/live_videos)\n[/live-video](https://developers.facebook.com/docs/graph-api/reference/live-video)\n[/page/live\\_videos](https://developers.facebook.com/docs/graph-api/reference/page/live_videos)\n[/user/live\\_videos](https://developers.facebook.com/docs/graph-api/reference/user/live_videos)\n",
+        "line_start": 94,
+        "line_end": 99
+    },
+    "29": {
+        "content": "Source document: data/platform-docs-versions-english/Facebook_Features-Reference/Features Reference.md\nParagraph location: \n\tLive Video API\n\tAdditional Details\n\nContent: \n## Additional Details  \n* This permission or feature requires successful completion of the App Review process before your app can access live data. [Learn More](https://developers.facebook.com/docs/app-review)  \n* This permission or feature is only available with business verification. You may also need to sign additional contracts before your app can access data. [Learn More Here](https://developers.facebook.com/docs/development/release/business-verification)  \n![](https://www.facebook.com/tr?id=675141479195042&ev=PageView&noscript=1)  \n![](https://www.facebook.com/tr?id=574561515946252&ev=PageView&noscript=1)  \n![](https://www.facebook.com/tr?id=1754628768090156&ev=PageView&noscript=1)\n",
+        "line_start": 64,
+        "line_end": 70
+    },
+    "30": {
+        "content": "Source document: data/platform-docs-versions-english/Facebook_Features-Reference/Features Reference.md\nParagraph location: \n\toEmbed Read\n\nContent: \n# oEmbed Read  \n_Requires [App Review](https://developers.facebook.com/docs/app-review)._  \nThe **oEmbed Read** feature allows your app to get embed HTML and basic metadata for public Facebook and Instagram pages, posts, and videos. The allowed usage for this feature is to provide front-end views of Facebook and Instagram pages, posts, and videos. You may also use this permission to request analytics insights to improve your app and for marketing or advertising purposes, through the use of aggregated and de-identified or anonymized information (provided such data cannot be re-identified).\n",
+        "line_start": 274,
+        "line_end": 277
+    },
+    "31": {
+        "content": "Source document: data/platform-docs-versions-english/Facebook_Features-Reference/Features Reference.md\nParagraph location: \n\toEmbed Read\n\tAllowed Usage\n\nContent: \n## Allowed Usage  \n* Provide front-end views of Facebook and Instagram pages, posts, and videos.\n",
+        "line_start": 59,
+        "line_end": 61
+    },
+    "32": {
+        "content": "Source document: data/platform-docs-versions-english/Facebook_Features-Reference/Features Reference.md\nParagraph location: \n\toEmbed Read\n\tCommon Endpoints\n\nContent: \n## Common Endpoints  \n* [/oembed\\_page](https://developers.facebook.com/docs/graph-api/reference/oembed-page/)  \n* [/oembed\\_post](https://developers.facebook.com/docs/graph-api/reference/oembed-post/)  \n* [/oembed\\_video](https://developers.facebook.com/docs/graph-api/reference/oembed-video/)  \n* [/instagram\\_oembed](https://developers.facebook.com/docs/graph-api/reference/instagram-oembed/)\n",
+        "line_start": 94,
+        "line_end": 99
+    },
+    "33": {
+        "content": "Source document: data/platform-docs-versions-english/Facebook_Features-Reference/Features Reference.md\nParagraph location: \n\toEmbed Read\n\tAdditional Details\n\nContent: \n## Additional Details  \n* This permission or feature requires successful completion of the App Review process before your app can access live data. [Learn More](https://developers.facebook.com/docs/app-review)  \n* This permission or feature is only available with business verification. You may also need to sign additional contracts before your app can access data. [Learn More Here](https://developers.facebook.com/docs/development/release/business-verification)  \n![](https://www.facebook.com/tr?id=675141479195042&ev=PageView&noscript=1)  \n![](https://www.facebook.com/tr?id=574561515946252&ev=PageView&noscript=1)  \n![](https://www.facebook.com/tr?id=1754628768090156&ev=PageView&noscript=1)\n",
+        "line_start": 64,
+        "line_end": 70
+    },
+    "34": {
+        "content": "Source document: data/platform-docs-versions-english/Facebook_Features-Reference/Features Reference.md\nParagraph location: \n\tPage Mentioning\n\nContent: \n# Page Mentioning  \nThe **Page Mentioning** feature allows your app mention any Facebook Page when publishing posts on the Pages managed by your app. To use Page Mentioning, your app needs to have been granted the **manage\\_pages** and **publish\\_pages** permissions. The allowed usage for this feature is to to let people use your app to publish Page posts that mention other Pages or to mention Pages relevant to the content in your page post. You may also use this permission to request analytics insights to improve your app and for marketing or advertising purposes, through the use of aggregated and de-identified or anonymized information (provided such data cannot be re-identified).\n",
+        "line_start": 310,
+        "line_end": 312
+    },
+    "35": {
+        "content": "Source document: data/platform-docs-versions-english/Facebook_Features-Reference/Features Reference.md\nParagraph location: \n\tPage Mentioning\n\tAllowed Usage\n\nContent: \n## Allowed Usage  \n* Allow people to use your app to publish Page posts that mention other Pages.  \n* Mention Pages relevant to the content in your page post.\n",
+        "line_start": 59,
+        "line_end": 62
+    },
+    "36": {
+        "content": "Source document: data/platform-docs-versions-english/Facebook_Features-Reference/Features Reference.md\nParagraph location: \n\tPage Mentioning\n\tCommon Endpoints\n\nContent: \n## Common Endpoints  \n[/page/feed](https://developers.facebook.com/docs/graph-api/reference/page/feed)\n[/page-post](https://developers.facebook.com/docs/graph-api/reference/page-post)\n[/page-post/comments](https://developers.facebook.com/docs/graph-api/reference/object/comments)\n",
+        "line_start": 94,
+        "line_end": 98
+    },
+    "37": {
+        "content": "Source document: data/platform-docs-versions-english/Facebook_Features-Reference/Features Reference.md\nParagraph location: \n\tPage Mentioning\n\tAdditional Details\n\nContent: \n## Additional Details  \n* This permission or feature requires successful completion of the App Review process before your app can access live data. [Learn More](https://developers.facebook.com/docs/app-review)  \n* This permission or feature is only available with business verification. You may also need to sign additional contracts before your app can access data. [Learn More Here](https://developers.facebook.com/docs/development/release/business-verification)  \n* To use Page Mentioning, your app needs to have been granted the [`pages_read_engagement`](https://developers.facebook.com/docs/permissions/reference/pages_read_engagement) and [`pages_manage_posts`](https://developers.facebook.com/docs/permissions/reference/pages_manage_posts) permissions.  \n* If your app has its own user authentication system, please include a working username and password in your review instructions so our team can easily reproduce your page mentioning functionality.  \n![](https://www.facebook.com/tr?id=675141479195042&ev=PageView&noscript=1)  \n![](https://www.facebook.com/tr?id=574561515946252&ev=PageView&noscript=1)  \n![](https://www.facebook.com/tr?id=1754628768090156&ev=PageView&noscript=1)\n",
+        "line_start": 64,
+        "line_end": 72
+    },
+    "38": {
+        "content": "Source document: data/platform-docs-versions-english/Facebook_Features-Reference/Features Reference.md\nParagraph location: \n\tPage Public Content Access\n\nContent: \n# Page Public Content Access  \nThe **Page Public Content Access** feature allows an app access to the Pages Search API and to read public data for Pages for which you lack the **pages\\_read\\_engagement** permission and the **pages\\_read\\_user\\_content** permission. Readable data includes business metadata, public comments and posts. The allowed usage for this feature is to analyze and/or display posts and engagement on Pages.\n",
+        "line_start": 344,
+        "line_end": 346
+    },
+    "39": {
+        "content": "Source document: data/platform-docs-versions-english/Facebook_Features-Reference/Features Reference.md\nParagraph location: \n\tPage Public Content Access\n\tAllowed Usage\n\nContent: \n## Allowed Usage  \n* Analyze and/or display posts and engagement on Pages.\n",
+        "line_start": 59,
+        "line_end": 61
+    },
+    "40": {
+        "content": "Source document: data/platform-docs-versions-english/Facebook_Features-Reference/Features Reference.md\nParagraph location: \n\tPage Public Content Access\n\tCommon Endpoints\n\nContent: \n## Common Endpoints  \n[/page/feed](https://developers.facebook.com/docs/graph-api/reference/page/feed)\n[/page-post](https://developers.facebook.com/docs/graph-api/reference/page-post)\n[/page-post/comments](https://developers.facebook.com/docs/graph-api/reference/object/comments)\n",
+        "line_start": 94,
+        "line_end": 98
+    },
+    "41": {
+        "content": "Source document: data/platform-docs-versions-english/Facebook_Features-Reference/Features Reference.md\nParagraph location: \n\tPage Public Content Access\n\tAdditional Details\n\nContent: \n## Additional Details  \n* This permission or feature requires successful completion of the App Review process before your app can access live data. [Learn More](https://developers.facebook.com/docs/app-review)  \n* This permission or feature is only available with business verification. You may also need to sign additional contracts before your app can access data. [Learn More Here](https://developers.facebook.com/docs/development/release/business-verification)  \n* While you are testing your app and before you submit it for review, your app can only access content on a Page for which the following is true: The person who holds the admin role for the Page also holds an admin, developer, or tester role on the app. If you want the app to be able to access public content on other Pages, you must submit this feature for review. Once you set your app to live mode, it will not be able to see any Page public content without this feature.  \n![](https://www.facebook.com/tr?id=675141479195042&ev=PageView&noscript=1)  \n![](https://www.facebook.com/tr?id=574561515946252&ev=PageView&noscript=1)  \n![](https://www.facebook.com/tr?id=1754628768090156&ev=PageView&noscript=1)\n",
+        "line_start": 64,
+        "line_end": 71
+    },
+    "42": {
+        "content": "Source document: data/platform-docs-versions-english/Facebook_Features-Reference/Features Reference.md\nParagraph location: \n\tPage Public Metadata Access\n\nContent: \n# Page Public Metadata Access  \n_Requires [App Review](https://developers.facebook.com/docs/app-review)._  \nThe **Page Public Metadata Access** allows your app access to the [Pages Search API](https://developers.facebook.com/docs/pages/searching) and to read public data for Pages for which you lack the [pages\\_read\\_engagement permission](https://developers.facebook.com/docs/permissions/reference/pages_read_engagement) and the [pages\\_read\\_user\\_content permission](https://developers.facebook.com/docs/permissions/reference/pages_read_user_content). The allowed usage for this feature is to analyze engagement with public Pages by viewing Like and follower counts, or aggregate public-facing **About** Page information from multiple, disparate pages. You may also use this permission to request analytics insights to improve your app and for marketing or advertising purposes, through the use of aggregated and de-identified or anonymized information (provided such data cannot be re-identified).\n",
+        "line_start": 374,
+        "line_end": 377
+    },
+    "43": {
+        "content": "Source document: data/platform-docs-versions-english/Facebook_Features-Reference/Features Reference.md\nParagraph location: \n\tPage Public Metadata Access\n\tAllowed Usage\n\nContent: \n## Allowed Usage  \n* Analyze engagement with public Pages by viewing Like and follower counts.  \n* Aggregate public-facing \"about\" Page information from multiple, disparate pages.\n",
+        "line_start": 59,
+        "line_end": 62
+    },
+    "44": {
+        "content": "Source document: data/platform-docs-versions-english/Facebook_Features-Reference/Features Reference.md\nParagraph location: \n\tPage Public Metadata Access\n\tCommon Endpoints\n\nContent: \n## Common Endpoints  \n[/page](https://developers.facebook.com/docs/graph-api/reference/page)\n",
+        "line_start": 94,
+        "line_end": 96
+    },
+    "45": {
+        "content": "Source document: data/platform-docs-versions-english/Facebook_Features-Reference/Features Reference.md\nParagraph location: \n\tPage Public Metadata Access\n\tAdditional Details\n\nContent: \n## Additional Details  \n* This permission or feature requires successful completion of the App Review process before your app can access live data. [Learn More](https://developers.facebook.com/docs/app-review)  \n* This permission or feature is only available with business verification. You may also need to sign additional contracts before your app can access data. [Learn More Here](https://developers.facebook.com/docs/development/release/business-verification)  \n* If your app also needs to read the [Page Feed](https://developers.facebook.com/docs/graph-api/reference/page/feed) edge, or [Comments](https://developers.facebook.com/docs/graph-api/reference/comment) on a Page's [Posts](https://developers.facebook.com/docs/graph-api/reference/post), request the [Page Public Content Access](#page-public-content-access) feature instead.  \n* This feature is superseded by the Page Public Content Access (PPCA) feature. If your App Review submission includes PPCA, or your app has already been approved for PPCA, you cannot request this permission.  \n* If your app also needs to create, update, or delete data on a Page, request the [`pages_read_engagement`](https://developers.facebook.com/docs/permission/reference/pages_read_engagement) permission instead.  \n![](https://www.facebook.com/tr?id=675141479195042&ev=PageView&noscript=1)  \n![](https://www.facebook.com/tr?id=574561515946252&ev=PageView&noscript=1)  \n![](https://www.facebook.com/tr?id=1754628768090156&ev=PageView&noscript=1)\n",
+        "line_start": 64,
+        "line_end": 73
+    },
+    "46": {
+        "content": "Source document: data/platform-docs-versions-english/Facebook_Features-Reference/Features Reference.md\nParagraph location: \n\tThreat Exchange\n\nContent: \n# Threat Exchange  \n_Requires [App Review](https://developers.facebook.com/docs/app-review)._  \nThe **ThreatExchange** feature allows your app to share threat data among a select group of vetted industry partners. The allowed usage for this feature is to share threat data with a specific group of partners to achieve their security goals. You may also use this feature to request analytics insights to improve your app and for marketing or advertising purposes, through the use of aggregated and de-identified or anonymized information (provided such data cannot be re-identified).\n",
+        "line_start": 410,
+        "line_end": 413
+    },
+    "47": {
+        "content": "Source document: data/platform-docs-versions-english/Facebook_Features-Reference/Features Reference.md\nParagraph location: \n\tThreat Exchange\n\tAllowed Usage\n\nContent: \n## Allowed Usage  \n* Share threat data with a specific group of partners to achieve their security goals.\n",
+        "line_start": 59,
+        "line_end": 61
+    },
+    "48": {
+        "content": "Source document: data/platform-docs-versions-english/Facebook_Features-Reference/Features Reference.md\nParagraph location: \n\tThreat Exchange\n\tAdditional Details\n\nContent: \n## Additional Details  \n* This permission or feature requires successful completion of the App Review process before your app can access live data. [Learn More](https://developers.facebook.com/docs/app-review)  \n* This permission or feature is only available with business verification. You may also need to sign additional contracts before your app can access data. [Learn More Here](https://developers.facebook.com/docs/development/release/business-verification)  \n![](https://www.facebook.com/tr?id=675141479195042&ev=PageView&noscript=1)  \n![](https://www.facebook.com/tr?id=574561515946252&ev=PageView&noscript=1)  \n![](https://www.facebook.com/tr?id=1754628768090156&ev=PageView&noscript=1)\n",
+        "line_start": 64,
+        "line_end": 70
+    }
+}

@@ -7,3 +7,6 @@ python ocr-pdf.py
 # Generate retriever inputs
 pip install langchain
 python gen_retriever_inputs.py
+
+# Train retriever
+python train_colbert.py 

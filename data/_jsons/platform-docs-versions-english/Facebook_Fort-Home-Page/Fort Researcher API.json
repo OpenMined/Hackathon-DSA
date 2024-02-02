@@ -1,0 +1,22 @@
+{
+    "0": {
+        "content": "Source document: data/platform-docs-versions-english/Facebook_Fort-Home-Page/Fort Researcher API.md\nParagraph location: \n\tResearcher API\n\nContent: \n# Researcher API  \n#### RESEARCHER API  \n#### **One of the first Meta APIs designed for academics**  \nQualifying academics can use the Researcher API to access near real-time data as well as billions of historical data points, which equips researchers to study topics of interest and gain a window into evolving or emerging topics on Facebook.  \n###### Product Roadmap  \nWe know we have a lot of work to do and our tools are a work in progress. That\u2019s why these products are informed by feedback from researchers all over the world, and we\u2019re always looking for more. The input we\u2019ve already received has helped us iterate and ensure the tools we\u2019re building work for you - and we\u2019ll be launching more soon.\n",
+        "line_start": 0,
+        "line_end": 6
+    },
+    "1": {
+        "content": "Source document: data/platform-docs-versions-english/Facebook_Fort-Home-Page/Fort Researcher API.md\nParagraph location: \n\tResearcher API\n\tNow Live: Researcher API Early Access Program\n\nContent: \n### Now Live: Researcher API Early Access Program  \nThe Researcher API was specifically designed for academic needs. It equips qualified academics to conduct longitudinal research across all public Facebook Pages, Groups, Posts and Events in the US and select EU countries. Researchers can use this product to understand how public discussions on Facebook influence the social issues of the day. We offer this product via the Researcher Platform, which allows us to share privacy-protected data in a secure way.  \nWe have invited a small group of qualified academics to test this product and provide feedback so we can iterate and improve it, before launching to a broader group of researchers.\n",
+        "line_start": 12,
+        "line_end": 15
+    },
+    "2": {
+        "content": "Source document: data/platform-docs-versions-english/Facebook_Fort-Home-Page/Fort Researcher API.md\nParagraph location: \n\tResearcher API\n\tFeatures\n\nContent: \n## Features  \n##### **Analytics**  \nA collection of API endpoints that provides researchers with aggregated insights on public forums like Groups & Pages  \n##### **Near real-time + historical data**  \nA collection of API endpoints that provides researchers access to raw, anonymized data from public forums on Facebook including Groups, Events & Pages  \n##### **Search**  \nA collection of API endpoints that gives researchers the ability to search across Facebook\u2019s public forums in order to retrieve data that matches their search queries  \n###### Sign up to learn more\n",
+        "line_start": 18,
+        "line_end": 26
+    },
+    "3": {
+        "content": "Source document: data/platform-docs-versions-english/Facebook_Fort-Home-Page/Fort Researcher API.md\nParagraph location: \n\tResearcher API\n\tInformation about Facebook Open Research & Transparency, including access and eligibility\n\nContent: \n## Information about Facebook Open Research & Transparency, including access and eligibility  \n[Sign up](https://fort.fb.com/intake)\n",
+        "line_start": 34,
+        "line_end": 36
+    }
+}
