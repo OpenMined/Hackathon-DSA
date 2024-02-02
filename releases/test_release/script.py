@@ -18,9 +18,9 @@ from langchain.text_splitter import RecursiveCharacterTextSplitter
 
 def answer_query(query, retriever, rag_generator):
     k = 5
-    results = retriever.query(query['content'], k)
+    results = retriever.query(query['question'], k)
     context = [r['content'] for r in results]
-    chat_logs = rag_generator.generate_batch(context, query['content'])
+    chat_logs = rag_generator.generate_batch(context, query['question'])
     answer = [c[-1]["content"] for c in chat_logs]
     prompt = [c[-1]["prompt"] for c in chat_logs]
     source = ''
@@ -76,6 +76,7 @@ def prep_generator():
 if __name__ == "__main__":
     print("STARTING PREPARATION...")
     retriever = prep_retrieval()
+    print("RETRIEVAL LOADED!")
     rag_generator = prep_generator()
     print("PREPARATION FINISHED!")
 
