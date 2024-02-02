@@ -2,6 +2,7 @@ import sys
 import csv
 import os
 from retrievers.chroma_dpr import ChromaRetriever
+from translation import Translator
 # from retrievers.colbert import ColbertRetriever
 
 import langdetect
@@ -27,6 +28,24 @@ def answer_query(query, retriever, rag_generator):
     source = top_result["document_metadata"].get("url", '')
 
     return answer, prompt, source
+
+def translate_questions(questions):
+    translator = Translator()
+
+    src_langs = []
+    for question in questions:
+        translated, src_lang = translator.translate(question['question'], "en")
+        question['question'] = translated
+        src_langs.append(src_lang)
+    return questions, src_langs
+
+def translate_answers(answers, src_langs):
+    translator = Translator()
+
+    for answer, src_lang in zip(answers, src_langs):
+        translated, _ = translator.translate(answer, src_lang)
+        answer = translated
+    return answers
 
 def generate_answers(queries, retriever, rag_generator):
     answers = []
@@ -92,6 +111,9 @@ if __name__ == "__main__":
         for row in question_reader:
             questions.append(row)
     print("READING FINISHED!")
+
+    print("TRANSLATING QUESTIONS")
+    questions, source_languages = translate_questions(questions)
     
     print("GENERATING ANSWERS...")
     answers, prompts, sources = generate_answers(
@@ -99,6 +121,9 @@ if __name__ == "__main__":
         retriever, 
         rag_generator)
     print("GENERATION FINISHED!")
+
+    print("TRANSLATING ANSWERS...")
+    answers = translate_answers(answers, source_languages)
 
     print("WRITING ANSWERS...")
     if not os.path.exists(f"{output_dir_path}/prompts"):
