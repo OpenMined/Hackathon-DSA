@@ -2,41 +2,49 @@
     "0": {
         "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Page upcoming change Endpoint.md\nParagraph location: \n\tPage Upcoming Change\n\tReading\n\nContent: \n# Page Upcoming Change  \n## Reading  \nNotification of page upcoming changes.\n",
         "line_start": 0,
-        "line_end": 3
+        "line_end": 3,
+        "url": "https://developers.facebook.com/tools/explorer/?method=GET&path=%7Bpage-upcoming-change-id%7D&version=v19.0)"
     },
     "1": {
         "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Page upcoming change Endpoint.md\nParagraph location: \n\tPage Upcoming Change\n\tReading\n\tExample\n\nContent: \n### Example  \nHTTPPHP SDKJavaScript SDKAndroid SDKiOS SDK[Graph API Explorer](https://developers.facebook.com/tools/explorer/?method=GET&path=%7Bpage-upcoming-change-id%7D&version=v19.0)  \nGET /v19.0/{page-upcoming-change-id} HTTP/1.1\nHost: graph.facebook.com  \n/* PHP SDK v5.0.0 */\n/* make the API call */\ntry {\n// Returns a `Facebook\\FacebookResponse` object\n$response = $fb->get(\n'/{page-upcoming-change-id}',\n'{access-token}'\n);\n} catch(Facebook\\Exceptions\\FacebookResponseException $e) {\necho 'Graph returned an error: ' . $e->getMessage();\nexit;\n} catch(Facebook\\Exceptions\\FacebookSDKException $e) {\necho 'Facebook SDK returned an error: ' . $e->getMessage();\nexit;\n}\n$graphNode = $response->getGraphNode();\n/* handle the result */  \n/* make the API call */\nFB.api(\n\"/{page-upcoming-change-id}\",\nfunction (response) {\nif (response && !response.error) {\n/* handle the result */\n}\n}\n);  \n/* make the API call */\nnew GraphRequest(\nAccessToken.getCurrentAccessToken(),\n\"/{page-upcoming-change-id}\",\nnull,\nHttpMethod.GET,\nnew GraphRequest.Callback() {\npublic void onCompleted(GraphResponse response) {\n/* handle the result */\n}\n}\n).executeAsync();  \n/* make the API call */\nFBSDKGraphRequest *request = [[FBSDKGraphRequest alloc]\ninitWithGraphPath:@\"/{page-upcoming-change-id}\"\nparameters:params\nHTTPMethod:@\"GET\"];\n[request startWithCompletionHandler:^(FBSDKGraphRequestConnection *connection,\nid result,\nNSError *error) {\n// Handle the result\n}];  \nIf you want to learn how to use the Graph API, read our [Using Graph API guide](https://developers.facebook.com/docs/graph-api/using-graph-api/).\n",
         "line_start": 6,
-        "line_end": 59
+        "line_end": 59,
+        "url": "https://developers.facebook.com/tools/explorer/?method=GET&path=%7Bpage-upcoming-change-id%7D&version=v19.0)"
     },
     "2": {
         "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Page upcoming change Endpoint.md\nParagraph location: \n\tPage Upcoming Change\n\tReading\n\tParameters\n\nContent: \n### Parameters  \nThis endpoint doesn't have any parameters.\n",
         "line_start": 67,
-        "line_end": 69
+        "line_end": 69,
+        "url": "https://developers.facebook.com/tools/explorer/?method=GET&path=%7Bpage-upcoming-change-id%7D&version=v19.0)"
     },
     "3": {
         "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Page upcoming change Endpoint.md\nParagraph location: \n\tPage Upcoming Change\n\tReading\n\tFields\n\nContent: \n### Fields  \n| Field | Description |\n| --- | --- |\n| `id`<br><br>numeric string | The ID of the upcoming change |\n| `change_type`<br><br>enum | The type of the upcoming change<br><br>[Default](https://developers.facebook.com/docs/graph-api/using-graph-api/#fields) |\n| `effective_time`<br><br>datetime | The time when the upcoming change will become effective<br><br>[Default](https://developers.facebook.com/docs/graph-api/using-graph-api/#fields) |\n| `page`<br><br>[Page](https://developers.facebook.com/docs/graph-api/reference/page/) | The associated page of this upcoming change<br><br>[Default](https://developers.facebook.com/docs/graph-api/using-graph-api/#fields) |\n| `proposal`<br><br>[PageChangeProposal](https://developers.facebook.com/docs/graph-api/reference/page-change-proposal/) | The proposal associated with the change, only valid when change\\_type is knowledge\\_proposal<br><br>[Default](https://developers.facebook.com/docs/graph-api/using-graph-api/#fields) |\n| `timer_status`<br><br>enum | The status of the timer associated with this change<br><br>[Default](https://developers.facebook.com/docs/graph-api/using-graph-api/#fields) |\n",
         "line_start": 71,
-        "line_end": 80
+        "line_end": 80,
+        "url": "https://developers.facebook.com/tools/explorer/?method=GET&path=%7Bpage-upcoming-change-id%7D&version=v19.0)"
     },
     "4": {
         "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Page upcoming change Endpoint.md\nParagraph location: \n\tPage Upcoming Change\n\tReading\n\tError Codes\n\nContent: \n### Error Codes  \n| Error | Description |\n| --- | --- |\n| 100 | Invalid parameter |\n",
         "line_start": 82,
-        "line_end": 86
+        "line_end": 86,
+        "url": "https://developers.facebook.com/tools/explorer/?method=GET&path=%7Bpage-upcoming-change-id%7D&version=v19.0)"
     },
     "5": {
         "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Page upcoming change Endpoint.md\nParagraph location: \n\tPage Upcoming Change\n\tCreating\n\nContent: \n## Creating  \nYou can't perform this operation on this endpoint.\n",
         "line_start": 88,
-        "line_end": 90
+        "line_end": 90,
+        "url": "https://developers.facebook.com/tools/explorer/?method=GET&path=%7Bpage-upcoming-change-id%7D&version=v19.0)"
     },
     "6": {
         "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Page upcoming change Endpoint.md\nParagraph location: \n\tPage Upcoming Change\n\tUpdating\n\nContent: \n## Updating  \nYou can't perform this operation on this endpoint.\n",
         "line_start": 92,
-        "line_end": 94
+        "line_end": 94,
+        "url": "https://developers.facebook.com/tools/explorer/?method=GET&path=%7Bpage-upcoming-change-id%7D&version=v19.0)"
     },
     "7": {
         "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Page upcoming change Endpoint.md\nParagraph location: \n\tPage Upcoming Change\n\tDeleting\n\nContent: \n## Deleting  \nYou can't perform this operation on this endpoint.  \n![](https://www.facebook.com/tr?id=675141479195042&ev=PageView&noscript=1)  \n![](https://www.facebook.com/tr?id=574561515946252&ev=PageView&noscript=1)  \n![](https://www.facebook.com/tr?id=1754628768090156&ev=PageView&noscript=1)\n",
         "line_start": 96,
-        "line_end": 101
+        "line_end": 101,
+        "url": "https://developers.facebook.com/tools/explorer/?method=GET&path=%7Bpage-upcoming-change-id%7D&version=v19.0)"
     }
 }

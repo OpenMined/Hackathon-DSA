@@ -2,21 +2,25 @@
     "0": {
         "content": "Source document: data/platform-docs-versions-english/Bing_DSA-Home-Page/DSA Home Page.md\nParagraph location: \n\tEU Monthly Active Users\n\nContent: \n## EU Monthly Active Users  \nIn accordance with the\u00a0Digital Services Act (DSA),\u00a0Microsoft Ireland Operations Limited\u00a0publishes information\u00a0semi-annually on its average monthly active users in the European Union, calculated over a six-month period. For the six-month period ending June 30, 2023,\u00a0Microsoft Bing\u00a0had approximately 119 million\u00a0average monthly active users. This information was compiled pursuant to the DSA and thus may differ from other user metrics published by Microsoft Bing.\n",
         "line_start": 0,
-        "line_end": 2
+        "line_end": 2,
+        "url": "https://go.microsoft.com/fwlink?LinkId=850876)."
     },
     "1": {
         "content": "Source document: data/platform-docs-versions-english/Bing_DSA-Home-Page/DSA Home Page.md\nParagraph location: \n\tDSA Point of Contact \u2013 European Commission and Member State Authorities\n\nContent: \n## DSA Point of Contact \u2013 European Commission and Member State Authorities  \nPursuant to Article 11 of the DSA, Microsoft Ireland Operations Limited has designated\u00a0[DigitalServicesAct@microsoft.com](mailto:DigitalServicesAct@microsoft.com) as the single point of\u202fcontact\u202ffor direct communications with the\u202fEuropean Commission, Member States\u2019 Authorities, and the European Board for Digital Services in connection with the application of the\u202fDSA. English is the preferred language for communication with this point of\u202fcontact.  \nWhen sending messages to\u00a0[DigitalServicesAct@microsoft.com](mailto:DigitalServicesAct@microsoft.com)\u00a0please be sure to include your full name and the name of the EU-based authority on whose behalf you are\u202fcontacting us. We\u2019ll also need an email address to\u202fcontact\u202fyou, which should be associated with the relevant EU-based authority.  \nThis point of\u202fcontact\u202fis reserved for engagement with the authorities listed above.\u202fFor other types of inquiries, please use the mechanisms described below.\n",
         "line_start": 4,
-        "line_end": 8
+        "line_end": 8,
+        "url": "https://go.microsoft.com/fwlink?LinkId=850876)."
     },
     "2": {
         "content": "Source document: data/platform-docs-versions-english/Bing_DSA-Home-Page/DSA Home Page.md\nParagraph location: \n\tPoint of Contact for Bing Users\n\nContent: \n## Point of Contact for Bing Users  \nBing offers a variety of ways for users to contact us.\u00a0 If you have a concern about particular URLs or other information you encounter on Bing, you may report these to Bing using our\u00a0[Report a Concern tool](https://go.microsoft.com/fwlink?LinkId=850876). Feedback about Bing can also be submitted directly using the \"Feedback\u201d link located at the bottom of most Bing search pages. Additional information is available at our \u201c[How to report a concern or Contact Bing](https://support.microsoft.com/en-gb/topic/how-to-report-a-concern-or-contact-bing-1831f0fe-3c4d-46ae-8e57-16c487715729)\u201d help page.\n",
         "line_start": 12,
-        "line_end": 14
+        "line_end": 14,
+        "url": "https://go.microsoft.com/fwlink?LinkId=850876)."
     },
     "3": {
         "content": "Source document: data/platform-docs-versions-english/Bing_DSA-Home-Page/DSA Home Page.md\nParagraph location: \n\tEU Advertising Repository\n\nContent: \n## EU Advertising Repository  \nPlease visit the [Microsoft Ad Library](https://adlibrary.ads.microsoft.com/) for a repository of advertisements served by the Microsoft Advertising Network to Bing users located in the European Union.\n",
         "line_start": 16,
-        "line_end": 18
+        "line_end": 18,
+        "url": "https://go.microsoft.com/fwlink?LinkId=850876)."
     }
 }

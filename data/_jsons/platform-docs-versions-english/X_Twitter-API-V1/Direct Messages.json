@@ -2,921 +2,1105 @@
     "0": {
         "content": "Source document: data/platform-docs-versions-english/X_Twitter-API-V1/Direct Messages.md\nParagraph location: \n\nContent: \nDirect Message API features  \nPlease note:  \nWe've recently released the following endpoints within the\u00a0[Twitter API v2](https://developer.twitter.com/en/docs/twitter-api/getting-started/about-twitter-api).  \n| v1.1 endpoints | Corresponding v2 endpoints |     |\n| --- | --- | --- |\n| [GET direct\\_messages/events/list](https://developer.twitter.com/en/docs/twitter-api/v1/direct-messages/sending-and-receiving/api-reference/list-events) | Direct Messages\u00a0[lookup](https://developer.twitter.com/en/docs/twitter-api/direct-messages/lookup/introduction) | [Migration guide](https://developer.twitter.com/en/docs/twitter-api/direct-messages/lookup/migrate) |\n| [POST direct\\_mesages/events/new](https://developer.twitter.com/en/docs/twitter-api/v1/direct-messages/sending-and-receiving/api-reference/new-event) | [Manage](https://developer.twitter.com/en/docs/twitter-api/direct-messages/manage/introduction)\u00a0Direct Messages | [Migration guide](https://developer.twitter.com/en/docs/twitter-api/direct-messages/manage/migrate) |  \nPlease use the migration guides to see what has changed between the standard v1.1 and v2 versions.  \nThese API features enable developers to build better-personalized customer experiences at scale as well as other innovative interactions. To help create more engaging customer service, marketing, and user engagement experiences in Direct Messages we\u2019re providing developers access to endpoints to start conversations with a welcome message, publish messages with quick replies and media, and more.  \n* [Sending and receiving events](https://developer.twitter.com/content/developer-twitter/en/docs/direct-messages/sending-and-receiving \"Sending and receiving events\")Send and receive Direct Messages.\n* [Welcome Messages](https://developer.twitter.com/content/developer-twitter/en/docs/direct-messages/welcome-messages \"Welcome Messages\")Create messages that display for specific scenarios.\n* [Message Attachments](https://developer.twitter.com/content/developer-twitter/en/docs/direct-messages/message-attachments \"Message Attachments\")Attach videos, images and GIFs.\n* [Quick Replies](https://developer.twitter.com/content/developer-twitter/en/docs/direct-messages/quick-replies \"Quick Replies\")Prompt users for structured replies with a menu of options.\n* [Buttons](https://developer.twitter.com/content/developer-twitter/en/docs/direct-messages/buttons \"Buttons\")Add buttons to link to websites, deep link to apps or other parts of Twitter.\n* [Conversation management](https://developer.twitter.com/content/developer-twitter/en/docs/direct-messages/conversation-management \"Conversation management\")Properties to help manage the conversation between multiple applications.\n* [Custom profiles](https://developer.twitter.com/content/developer-twitter/en/docs/direct-messages/custom-profiles \"Custom profiles\")Display a custom profile image and name in a Direct Message.\n* [Customer feedback cards](https://developer.twitter.com/content/developer-twitter/en/docs/direct-messages/customer-feedback \"Customer feedback cards\")Prompt users for NPS and CSAT feedback.  \nOverview  \nPlease note:  \nWe've recently released the following endpoints within the\u00a0[Twitter API v2](https://developer.twitter.com/en/docs/twitter-api/getting-started/about-twitter-api).  \n| v1.1 endpoints | Corresponding v2 endpoints |     |\n| --- | --- | --- |\n| [GET direct\\_messages/events/list](https://developer.twitter.com/en/docs/twitter-api/v1/direct-messages/sending-and-receiving/api-reference/list-events) | Direct Messages\u00a0[lookup](https://developer.twitter.com/en/docs/twitter-api/direct-messages/lookup/introduction) | [Migration guide](https://developer.twitter.com/en/docs/twitter-api/direct-messages/lookup/migrate) |\n| [POST direct\\_mesages/events/new](https://developer.twitter.com/en/docs/twitter-api/v1/direct-messages/sending-and-receiving/api-reference/new-event) | [Manage](https://developer.twitter.com/en/docs/twitter-api/direct-messages/manage/introduction)\u00a0Direct Messages | [Migration guide](https://developer.twitter.com/en/docs/twitter-api/direct-messages/manage/migrate) |  \nPlease use the migration guides to see what has changed between the standard v1.1 and v2 versions.  \nSending message events  \n-------------------------  \nTo send a new Direct Message use\u00a0[POST direct\\_messages/events/new (message\\_create)](https://developer.twitter.com/en/docs/direct-messages/sending-and-receiving/api-reference/new-event). Optionally, you may also attach\u00a0[Quick Replies](https://developer.twitter.com/en/docs/direct-messages/quick-replies)\u00a0or\u00a0[media](https://developer.twitter.com/en/docs/direct-messages/message-attachments/guides/attaching-media)\u00a0(image, GIF or video).\n",
         "line_start": 0,
-        "line_end": 28
+        "line_end": 28,
+        "url": "https://developer.twitter.com/en/docs/twitter-api/getting-started/about-twitter-api)."
     },
     "1": {
         "content": "Source document: data/platform-docs-versions-english/X_Twitter-API-V1/Direct Messages.md\nParagraph location: \n\tReceiving messages events\n\nContent: \n## Receiving messages events  \n* You can retrieve Direct Messages from up to the past 30 days with\u00a0[GET direct\\_messages/events/list](https://developer.twitter.com/en/docs/direct-messages/sending-and-receiving/api-reference/list-events).\n* Consuming Direct Messages in real-time can be accomplished via webhooks with the\u00a0[Account Activity API](https://developer.twitter.com/en/docs/accounts-and-users/subscribe-account-activity/overview).  \nMessage Create Object\n",
         "line_start": 43,
-        "line_end": 47
+        "line_end": 47,
+        "url": "https://developer.twitter.com/en/docs/twitter-api/getting-started/about-twitter-api)."
     },
     "2": {
         "content": "Source document: data/platform-docs-versions-english/X_Twitter-API-V1/Direct Messages.md\nParagraph location: \n\tMessage Create Object\n\nContent: \n# Message Create Object  \nDirect Message Event objects are returned by\u00a0[GET direct\\_messages/events/list](https://developer.twitter.com/en/docs/direct-messages/sending-and-receiving/api-reference/list-events),\u00a0[GET direct\\_messages/events/show](https://developer.twitter.com/en/docs/direct-messages/sending-and-receiving/api-reference/get-event)\u00a0and can be consumed in real-time using the\u00a0[Account Activity API](https://developer.twitter.com/en/docs/accounts-and-users/subscribe-account-activity/overview). Direct Messages have the type of\u00a0message\\_create.  \n`{   \"type\": \"message_create\",   \"id\": \"1234858592\",   \"created_timestamp\": \"1392078023603\",   \"initiated_via\": {     \"tweet_id\": \"123456\",     \"welcome_message_id\": \"456789\"   },   \"message_create\": {     \"target\": {       \"recipient_id\": \"1234858592\"     },     \"sender_id\": \"3805104374\",     \"source_app_id\": \"268278\",     \"message_data\": {       \"text\": \"Blue Bird\",       \"entities\": {         \"hashtags\": [],         \"symbols\": [],         \"urls\": [],         \"user_mentions\": [],       },       \"quick_reply_response\": {         \"type\": \"options\",         \"metadata\": \"external_id_2\"       },       \"attachment\": {         \"type\": \"media\",         \"media\": {          ...         }       }     }   } }`\n",
         "line_start": 50,
-        "line_end": 53
+        "line_end": 53,
+        "url": "https://developer.twitter.com/en/docs/twitter-api/getting-started/about-twitter-api)."
     },
     "3": {
         "content": "Source document: data/platform-docs-versions-english/X_Twitter-API-V1/Direct Messages.md\nParagraph location: \n\tMessage Create Object\n\tTop level event object\n\nContent: \n## Top level event object  \n|     |     |\n| --- | --- |\n| Property | Description |\n| type | The type of event. For Direct Messages type will be message\\_create. |\n| id  | The ID of the direct message event. |\n| created\\_timestamp | Epoch timestamp of when the Direct Message event was created. |\n| initiated\\_via.tweet\\_id | The ID of the Tweet with Direct Message Prompt the conversation was initiated from if one was used. |\n| initiated\\_via.welcome\\_message\\_id | The ID of the Welcome Message immediatley preceding the conversation if one was used. |\n",
         "line_start": 57,
-        "line_end": 66
+        "line_end": 66,
+        "url": "https://developer.twitter.com/en/docs/twitter-api/getting-started/about-twitter-api)."
     },
     "4": {
         "content": "Source document: data/platform-docs-versions-english/X_Twitter-API-V1/Direct Messages.md\nParagraph location: \n\tMessage Create Object\n\tmessage\\_create object\n\nContent: \n## message\\_create object  \n|     |     |\n| --- | --- |\n| message\\_create.target.recipient\\_id | The ID of the user receiving the message. |\n| message\\_create.sender\\_id | The ID of the user sending the message. |\n| message\\_create.source\\_app\\_id | The ID of the application used to create the event. App details are available in the\u00a0apps\u00a0object in JSON payloads containing\u00a0message\\_create\u00a0events. |\n| message\\_create.message\\_data | A\u00a0message\\_data\u00a0object. |  \nmessage\\_data object  \n-----------------------  \n|     |     |\n| --- | --- |\n| message\\_data.text | The Direct Message text. |\n| message\\_data.entities | A Twitter\u00a0[entities](https://developer.twitter.com/en/docs/tweets/data-dictionary/overview/entities-object)\u00a0object. |\n| message\\_data.quick\\_reply\\_response | A\u00a0[Quick Reply](https://developer.twitter.com/en/docs/direct-messages/quick-replies/overview)\u00a0response object. |\n| message\\_data.attachment | An [attachment](https://developer.twitter.com/en/docs/direct-messages/message-attachments/overview) object (media) |  \nDirect Message migration guide\n",
         "line_start": 68,
-        "line_end": 84
+        "line_end": 84,
+        "url": "https://developer.twitter.com/en/docs/twitter-api/getting-started/about-twitter-api)."
     },
     "5": {
         "content": "Source document: data/platform-docs-versions-english/X_Twitter-API-V1/Direct Messages.md\nParagraph location: \n\tMessage Create Object\n\tDirect Message migration guide\n\nContent: \n## Direct Message migration guide  \n**On September 17th, 2018 we retired the legacy Direct Message endpoints.\nIf you had been using those endpoints, please make sure to migrate over to the new Direct Message endpoints or the Account Activity API.**  \n**Please review\u00a0[this announcment](https://twittercommunity.com/t/details-and-what-to-expect-from-the-api-deprecations-this-week-on-august-16-2018/110746)\u00a0to learn more.**  \nThis guide is designed to help you migrate from legacy Direct Message REST APIs to their enhanced replacements which have graduated from beta. Below you will find a summary of the changes, a new features list, and key differences and considerations to help with the transition. The new Direct Message endpoints are available now to all developers. For guidance in migrating from User Streams or Site Streams, see the [migration guide to Account Activity API](https://developer.twitter.com/content/developer-twitter/en/docs/accounts-and-users/subscribe-account-activity/migration/us-ss-migration-guide).  \n* [Summary of changes](#summary)\n* [New features](#features)\n* [Sending Direct Messages](#sending)\n* [Receiving Direct Messages](#receiving)\n* [Deleting Direct Messages](#deleting)\n",
         "line_start": 90,
-        "line_end": 100
+        "line_end": 100,
+        "url": "https://developer.twitter.com/en/docs/twitter-api/getting-started/about-twitter-api)."
     },
     "6": {
         "content": "Source document: data/platform-docs-versions-english/X_Twitter-API-V1/Direct Messages.md\nParagraph location: \n\tMessage Create Object\n\tDirect Message migration guide\n\tSummary of changes\n\nContent: \n### Summary of changes  \nIf you are still using the following DM endpoints, you will have to migrate to the newer endpoints.  \n| Deprecated endpoint | New migration alternative |\n| --- | --- |\n| [POST\u00a0direct\\_messages/new](https://developer.twitter.com/content/developer-twitter/en/docs/direct-messages/sending-and-receiving/api-reference/new-message) | [POST\u00a0direct\\_messages/events/new](https://developer.twitter.com/content/developer-twitter/en/docs/direct-messages/sending-and-receiving/api-reference/new-event) |\n| [GET\u00a0direct\\_messages/show](https://developer.twitter.com/content/developer-twitter/en/docs/direct-messages/sending-and-receiving/api-reference/get-message) | [GET\u00a0direct\\_messages/events/show](https://developer.twitter.com/content/developer-twitter/en/docs/direct-messages/sending-and-receiving/api-reference/get-event) |\n| [GET\u00a0direct\\_messages](https://developer.twitter.com/content/developer-twitter/en/docs/direct-messages/sending-and-receiving/api-reference/get-messages) | [GET\u00a0direct\\_messages/events/list](https://developer.twitter.com/content/developer-twitter/en/docs/direct-messages/sending-and-receiving/api-reference/list-events) |\n| [GET\u00a0direct\\_messages/sent](https://developer.twitter.com/content/developer-twitter/en/docs/direct-messages/sending-and-receiving/api-reference/get-sent-message) | [GET\u00a0direct\\_messages/events/list](https://developer.twitter.com/content/developer-twitter/en/docs/direct-messages/sending-and-receiving/api-reference/list-events) |\n| [POST\u00a0direct\\_messages/destroy](https://developer.twitter.com/content/developer-twitter/en/docs/direct-messages/sending-and-receiving/api-reference/delete-message) | [DELETE\u00a0direct\\_messages/events/destroy](https://developer.twitter.com/content/developer-twitter/en/docs/direct-messages/sending-and-receiving/api-reference/delete-message-event \"GET direct_messages/events/list\") |\n",
         "line_start": 105,
-        "line_end": 114
+        "line_end": 114,
+        "url": "https://developer.twitter.com/en/docs/twitter-api/getting-started/about-twitter-api)."
     },
     "7": {
         "content": "Source document: data/platform-docs-versions-english/X_Twitter-API-V1/Direct Messages.md\nParagraph location: \n\tMessage Create Object\n\tDirect Message migration guide\n\tNew features\n\nContent: \n### New features  \nThe new Direct Message API endpoints support a number of new capabilities and provide improved access to previous Direct Messages. New features include:  \n* Support for media attachments (image, GIF,\u00a0and video).\n* Ability to prompt users for structured replies with a predefined options list.\n* Up to 30 days of access to past Direct Messages.  \nFor a full list of new Direct Message features and additional new API endpoints refer to the [technical documentation](https://developer.twitter.com/content/developer-twitter/en/docs/direct-messages/sending-and-receiving/overview).\n",
         "line_start": 117,
-        "line_end": 123
+        "line_end": 123,
+        "url": "https://developer.twitter.com/en/docs/twitter-api/getting-started/about-twitter-api)."
     },
     "8": {
         "content": "Source document: data/platform-docs-versions-english/X_Twitter-API-V1/Direct Messages.md\nParagraph location: \n\tMessage Create Object\n\tDirect Message migration guide\n\tDifferences & migration considerations\n\nContent: \n### Differences & migration considerations  \nThe new API endpoints behave very differently from their previous counterparts. Simply updating the endpoint URLs will result in errors in your application. Consider the following when updating your application for the migration.  \n#### New Direct Message object  \nThe first thing you are likely to notice is the new object structure of Direct Messages. This new Message Create object structure has been introduced to support new capabilities like [Quick Replies](https://developer.twitter.com/content/developer-twitter/en/docs/direct-messages/quick-replies) and [Attachments](https://developer.twitter.com/content/developer-twitter/en/docs/direct-messages/message-attachments). The new object also contains a smaller condensed user object. Your application will need to be updated to account for this new object structure when parsing and potentially in data models or storage. For descriptions of each property see the [full documentation on the Message Create Object](https://developer.twitter.com/content/developer-twitter/en/docs/direct-messages/sending-and-receiving/guides/message-create-object).  \n**Example message create object**  \n{\n\"type\": \"message_create\",\n\"id\": \"1234858592\",\n\"created_timestamp\": \"1392078023603\",\n\"initiated_via\": {\n\"tweet_id\": \"123456\",\n\"welcome_message_id\": \"456789\"\n},\n\"message_create\": {\n\"target\": {\n\"recipient_id\": \"1234858592\"\n},\n\"sender_id\": \"3805104374\",\n\"source_app_id\": \"268278\",\n\"message_data\": {\n\"text\": \"Blue Bird\",\n\"entities\": {\n\"hashtags\": [],\n\"symbols\": [],\n\"urls\": [],\n\"user_mentions\": [],\n},\n\"quick_reply_response\": {\n\"type\": \"options\",\n\"metadata\": \"external_id_2\"\n},\n\"attachment\": {\n\"type\": \"media\",\n\"media\": {\n...\n}\n}\n}\n}  \n#### Summary  \n* Entirely new Direct Message object structure.\n* Condensed user object.\n* New information provided (quick reply responses, attachments, etc).\n",
         "line_start": 128,
-        "line_end": 171
+        "line_end": 171,
+        "url": "https://developer.twitter.com/en/docs/twitter-api/getting-started/about-twitter-api)."
     },
     "9": {
         "content": "Source document: data/platform-docs-versions-english/X_Twitter-API-V1/Direct Messages.md\nParagraph location: \n\tMessage Create Object\n\tDirect Message migration guide\n\tSending Direct Messages\n\nContent: \n### Sending Direct Messages  \n[POST direct\\_messages/events/new](https://developer.twitter.com/content/developer-twitter/en/docs/direct-messages/sending-and-receiving/api-reference/new-event) is a direct replacement for sending Direct Messages. The most significant difference with this endpoint is that all information is now sent as JSON in the POST request body as opposed to individual POST params.  \n**Example Twurl request**  \ntwurl -A 'Content-type: application/json' -X POST /1.1/direct\\_messages/events/new.json -d '{\"event\": {\"type\": \"message\\_create\", \"message\\_create\": {\"target\": {\"recipient\\_id\": \"4534871\"}, \"message\\_data\": {\"text\": \"Hello World!\"}}}}'  \nNote in the above request that the content-type is set to application/json as opposed to application/x-www-form-urlencoded. Additionally, if you are constructing the OAuth 1.0a signature, note that the JSON body is not included in the generation of the signature. Most OAuth libraries already account for this. If you are using [twurl](https://github.com/twitter/twurl), ensure you are using at least version 0.9.3.  \n#### Summary  \n* Message is defined in JSON POST body\n* Content-type header must be set to application/json\n* JSON body is not included in the generation of the OAuth signature.\n",
         "line_start": 181,
-        "line_end": 190
+        "line_end": 190,
+        "url": "https://developer.twitter.com/en/docs/twitter-api/getting-started/about-twitter-api)."
     },
     "10": {
         "content": "Source document: data/platform-docs-versions-english/X_Twitter-API-V1/Direct Messages.md\nParagraph location: \n\tMessage Create Object\n\tDirect Message migration guide\n\tRetrieving Direct Messages\n\nContent: \n### Retrieving Direct Messages  \nRetrieving past Direct Message is now accomplished with a single API endpoint: [GET direct\\_messages/events/list](https://developer.twitter.com/content/developer-twitter/en/docs/direct-messages/sending-and-receiving/api-reference/list-events). The significant difference with this new endpoint is that it now returns both sent and received messages in reverse chronological order. This may make it easier to rebuild a conversation. However, if you are only looking for sent or received messages you will need to post-process the response by referring to the sender\\_id property.  \nPagination is now based on a cursor value rather an ID of a Direct Message. A cursor property is returned with each response. [GET direct\\_messages/events/list](https://developer.twitter.com/content/developer-twitter/en/docs/direct-messages/sending-and-receiving/api-reference/list-events) will return up to 30 days of past messages, regardless of how many messages exist within the past 30 days. When a cursor is not returned, there are no more messages to be returned. The method for accessing individual Direct Messages with [GET direct\\_messages/events/show](https://developer.twitter.com/content/developer-twitter/en/docs/direct-messages/sending-and-receiving/api-reference/get-event) remains the same, although the Direct Message object returned has a different structure as described previously.  \nFinally, real-time access to Direct Messages will now be accomplished via webhook with the [Account Activity API](https://developer.twitter.com/content/developer-twitter/en/docs/accounts-and-users/subscribe-account-activity/overview). For guidance in migrating from User Streams or Site Streams, see the migration guide to Account Activity API for more information.  \n#### Summary  \n* Sent and Received messages are now returned on the same endpoint.\n* Up to 30 days of messages returned.\n* Cursor based pagination.\n* Real-time access to Direct Message via webhook.\n",
         "line_start": 198,
-        "line_end": 207
+        "line_end": 207,
+        "url": "https://developer.twitter.com/en/docs/twitter-api/getting-started/about-twitter-api)."
     },
     "11": {
         "content": "Source document: data/platform-docs-versions-english/X_Twitter-API-V1/Direct Messages.md\nParagraph location: \n\tMessage Create Object\n\tDirect Message migration guide\n\tDeleting Direct Messages\n\nContent: \n### Deleting Direct Messages  \nDirect Messages can now be deleted with DELETE direct\\_messages/events/destroy. The interface is largely the same requiring the ID of the message to delete. The key differences is the endpoint now requires a DELETE request instead of a POST request.  \nHow deleted Direct Messages are reflected in official Twitter clients remains the same. Direct Messages are only removed from the interface of the user context provided. Other members of the conversation can still access the Direct Message.  \n#### Summary  \n* Deleting a Direct Message requires the ID.\n* New endpoint requires a DELETE request.\n* How deleted Direct Messages are reflected in official Twitter clients remains unchanged.  \n**Questions about migrating to the new Direct Message endpoints?\n**Post your question to the developer community forum on [twittercommunity.com](https://twittercommunity.com/tags/c/rest-api/rest-api-v1-1/directmessages).\n",
         "line_start": 214,
-        "line_end": 223
+        "line_end": 223,
+        "url": "https://developer.twitter.com/en/docs/twitter-api/getting-started/about-twitter-api)."
     },
     "12": {
         "content": "Source document: data/platform-docs-versions-english/X_Twitter-API-V1/Direct Messages.md\nParagraph location: \n\tMessage Create Object\n\tNext Steps\n\nContent: \n## Next Steps  \n* \u00a0 \u00a0 Download our Direct Message Migration Guide (below)  \nDirect Messages[Direct Message - Migration Guide\n--------------------------------](https://cdn.cms-twdigitalassets.com/content/dam/developer-twitter/pdfs-and-files/DM%20-%20Migration%20Guide.pdf)  \n[Download PDF](https://cdn.cms-twdigitalassets.com/content/dam/developer-twitter/pdfs-and-files/DM%20-%20Migration%20Guide.pdf)  \nPOST direct\\_messages/events/new (message\\_create)  \nnew-event\n",
         "line_start": 229,
-        "line_end": 236
+        "line_end": 236,
+        "url": "https://developer.twitter.com/en/docs/twitter-api/getting-started/about-twitter-api)."
     },
     "13": {
         "content": "Source document: data/platform-docs-versions-english/X_Twitter-API-V1/Direct Messages.md\nParagraph location: \n\tPOST direct\\_messages/events/new (message\\_create)\n\nContent: \n# POST direct\\_messages/events/new (message\\_create)  \nPublishes a new `message_create` event resulting in a Direct Message sent to a specified user from the authenticating user. Returns an event if successful. Supports publishing Direct Messages with optional Quick Reply and media attachment. Replaces behavior currently provided by [POST direct\\_messages/new](https://developer.twitter.com/en/docs/direct-messages/sending-and-receiving/api-reference/new-message).  \nRequires a JSON POST body and `Content-Type` header to be set to `application/json`. Setting `Content-Length` may also be required if it is not automatically.\n",
         "line_start": 242,
-        "line_end": 245
+        "line_end": 245,
+        "url": "https://developer.twitter.com/en/docs/twitter-api/getting-started/about-twitter-api)."
     },
     "14": {
         "content": "Source document: data/platform-docs-versions-english/X_Twitter-API-V1/Direct Messages.md\nParagraph location: \n\tPOST direct\\_messages/events/new (message\\_create)\n\tResource URL[\u00b6](#resource-url \"Permalink to this headline\")\n\nContent: \n## Resource URL[\u00b6](#resource-url \"Permalink to this headline\")  \n`https://api.twitter.com/1.1/direct_messages/events/new.json`\n",
         "line_start": 248,
-        "line_end": 250
+        "line_end": 250,
+        "url": "https://developer.twitter.com/en/docs/twitter-api/getting-started/about-twitter-api)."
     },
     "15": {
         "content": "Source document: data/platform-docs-versions-english/X_Twitter-API-V1/Direct Messages.md\nParagraph location: \n\tPOST direct\\_messages/events/new (message\\_create)\n\tResource Information[\u00b6](#resource-information \"Permalink to this headline\")\n\nContent: \n## Resource Information[\u00b6](#resource-information \"Permalink to this headline\")  \n|     |     |\n| --- | --- |\n| Response formats | JSON |\n| Content-Type | application/json |\n| Requires authentication? | Yes (user context only) |\n| Rate limited? | Yes |\n| Requests / 24-hour window | 1000 per user; 15000 per app |\n",
         "line_start": 252,
-        "line_end": 260
+        "line_end": 260,
+        "url": "https://developer.twitter.com/en/docs/twitter-api/getting-started/about-twitter-api)."
     },
     "16": {
         "content": "Source document: data/platform-docs-versions-english/X_Twitter-API-V1/Direct Messages.md\nParagraph location: \n\tPOST direct\\_messages/events/new (message\\_create)\n\tDirect Message Rate Limiting[\u00b6](#direct-message-rate-limiting \"Permalink to this headline\")\n\nContent: \n## Direct Message Rate Limiting[\u00b6](#direct-message-rate-limiting \"Permalink to this headline\")  \nWhen a message is received from a user you may send up to 5 messages in response within a 24 hour window. Each message received resets the 24 hour window and the 5 allotted messages. Sending a 6th message within a 24 hour window or sending a message outside of a 24 hour window will count towards rate-limiting. This behavior only applies when using the POST direct\\_messages/events/new endpoint.\n",
         "line_start": 262,
-        "line_end": 264
+        "line_end": 264,
+        "url": "https://developer.twitter.com/en/docs/twitter-api/getting-started/about-twitter-api)."
     },
     "17": {
         "content": "Source document: data/platform-docs-versions-english/X_Twitter-API-V1/Direct Messages.md\nParagraph location: \n\tPOST direct\\_messages/events/new (message\\_create)\n\tEvent Object[\u00b6](#event-object \"Permalink to this headline\")\n\nContent: \n## Event Object[\u00b6](#event-object \"Permalink to this headline\")  \n|     |     |\n| --- | --- |\n| **type** (required) | The type of event you are posting. For Direct Messages, use `message_create` |\n| **message\\_create.target.recipient\\_id** (required) | The ID of the user who should receive the direct message. |\n| **message\\_create.message\\_data** (required) | The `Message Data Object` defining the content to deliver to the reciepient. |\n",
         "line_start": 266,
-        "line_end": 272
+        "line_end": 272,
+        "url": "https://developer.twitter.com/en/docs/twitter-api/getting-started/about-twitter-api)."
     },
     "18": {
         "content": "Source document: data/platform-docs-versions-english/X_Twitter-API-V1/Direct Messages.md\nParagraph location: \n\tPOST direct\\_messages/events/new (message\\_create)\n\tMessage Data Object[\u00b6](#message-data-object \"Permalink to this headline\")\n\nContent: \n## Message Data Object[\u00b6](#message-data-object \"Permalink to this headline\")  \n|     |     |\n| --- | --- |\n| **text** (required) | The text of your Direct Message. URL encode as necessary. Max length of 10,000 characters. Max length of 9,990 characters if used as a [Welcome Message](https://developer.twitter.com/en/docs/direct-messages/welcome-messages/api-reference/new-welcome-message). |\n| **quick\\_reply.type** (optional) | The Quick Reply type to present to the user (example requests below):<br><br>* **options** - Array of `Options` objects (20 max). |\n| **attachment.type** (optional) | The attachment type. Can be media or location. |\n| **attachment.media.id** (optional) | A media id to associate with the message. A Direct Message may only reference a single media\\_id. See [Uploading Media](https://developer.twitter.com/en/docs/direct-messages/message-attachments/guides/attaching-media) for further details on uploading media. |  \n**Note**  \nSee [Attaching Media to Direct Messages](https://developer.twitter.com/en/docs/direct-messages/message-attachments/guides/attaching-media) for details on including an image, GIF or video in Direct Messages.\n",
         "line_start": 274,
-        "line_end": 283
+        "line_end": 283,
+        "url": "https://developer.twitter.com/en/docs/twitter-api/getting-started/about-twitter-api)."
     },
     "19": {
         "content": "Source document: data/platform-docs-versions-english/X_Twitter-API-V1/Direct Messages.md\nParagraph location: \n\tPOST direct\\_messages/events/new (message\\_create)\n\tMessage Data Object[\u00b6](#message-data-object \"Permalink to this headline\")\n\tExample request[\u00b6](#example-request \"Permalink to this headline\")\n\nContent: \n### Example request[\u00b6](#example-request \"Permalink to this headline\")  \ncurl --request POST\n--url https://api.twitter.com/1.1/direct_messages/events/new.json\n--header 'authorization: OAuth oauth_consumer_key=\"YOUR_CONSUMER_KEY\", oauth_nonce=\"AUTO_GENERATED_NONCE\", oauth_signature=\"AUTO_GENERATED_SIGNATURE\", oauth_signature_method=\"HMAC-SHA1\", oauth_timestamp=\"AUTO_GENERATED_TIMESTAMP\", oauth_token=\"USERS_ACCESS_TOKEN\", oauth_version=\"1.0\"'\n--header 'content-type: application/json'\n--data '{\"event\": {\"type\": \"message_create\", \"message_create\": {\"target\": {\"recipient_id\": \"RECIPIENT_USER_ID\"}, \"message_data\": {\"text\": \"Hello World!\"}}}}'  \ntwurl -A 'Content-type: application/json' -X POST /1.1/direct_messages/events/new.json -d '{\"event\": {\"type\": \"message_create\", \"message_create\": {\"target\": {\"recipient_id\": \"RECIPIENT_USER_ID\"}, \"message_data\": {\"text\": \"Hello World!\"}}}}'\n",
         "line_start": 287,
-        "line_end": 294
+        "line_end": 294,
+        "url": "https://developer.twitter.com/en/docs/twitter-api/getting-started/about-twitter-api)."
     },
     "20": {
         "content": "Source document: data/platform-docs-versions-english/X_Twitter-API-V1/Direct Messages.md\nParagraph location: \n\tPOST direct\\_messages/events/new (message\\_create)\n\tExample Response[\u00b6](#example-response \"Permalink to this headline\")\n\nContent: \n## Example Response[\u00b6](#example-response \"Permalink to this headline\")  \n{\n\"event\": {\n\"type\": \"message_create\",\n\"message_create\": {\n\"target\": {\n\"recipient_id\": \"RECIPIENT_USER_ID\"\n},\n\"message_data\": {\n\"text\": \"Hello World!\",\n}\n}\n}\n}  \n**Note**  \nSee [media/entity](https://developer.twitter.com/en/docs/tweets/data-dictionary/overview/entities-object1) documentation for details on returned media object properties.  \nGET direct\\_messages/events/show  \nget-event\n",
         "line_start": 297,
-        "line_end": 315
+        "line_end": 315,
+        "url": "https://developer.twitter.com/en/docs/twitter-api/getting-started/about-twitter-api)."
     },
     "21": {
         "content": "Source document: data/platform-docs-versions-english/X_Twitter-API-V1/Direct Messages.md\nParagraph location: \n\tGET direct\\_messages/events/show\n\nContent: \n# GET direct\\_messages/events/show  \nReturns a single Direct Message event by the given id.\n",
         "line_start": 321,
-        "line_end": 323
+        "line_end": 323,
+        "url": "https://developer.twitter.com/en/docs/twitter-api/getting-started/about-twitter-api)."
     },
     "22": {
         "content": "Source document: data/platform-docs-versions-english/X_Twitter-API-V1/Direct Messages.md\nParagraph location: \n\tGET direct\\_messages/events/show\n\tResource URL[\u00b6](#resource-url \"Permalink to this headline\")\n\nContent: \n## Resource URL[\u00b6](#resource-url \"Permalink to this headline\")  \n`https://api.twitter.com/1.1/direct_messages/events/show.json`\n",
         "line_start": 248,
-        "line_end": 250
+        "line_end": 250,
+        "url": "https://developer.twitter.com/en/docs/twitter-api/getting-started/about-twitter-api)."
     },
     "23": {
         "content": "Source document: data/platform-docs-versions-english/X_Twitter-API-V1/Direct Messages.md\nParagraph location: \n\tGET direct\\_messages/events/show\n\tResource Information[\u00b6](#resource-information \"Permalink to this headline\")\n\nContent: \n## Resource Information[\u00b6](#resource-information \"Permalink to this headline\")  \n|     |     |\n| --- | --- |\n| Response formats | JSON |\n| Requires authentication? | Yes (user context only) |\n| Rate limited? | Yes |\n| Requests / 15-min window (user auth) | 15  |\n",
         "line_start": 252,
-        "line_end": 259
+        "line_end": 259,
+        "url": "https://developer.twitter.com/en/docs/twitter-api/getting-started/about-twitter-api)."
     },
     "24": {
         "content": "Source document: data/platform-docs-versions-english/X_Twitter-API-V1/Direct Messages.md\nParagraph location: \n\tGET direct\\_messages/events/show\n\tParameters[\u00b6](#parameters \"Permalink to this headline\")\n\nContent: \n## Parameters[\u00b6](#parameters \"Permalink to this headline\")  \n|     |     |\n| --- | --- |\n| **id** (required) | The id of the Direct Message event that should be returned. |\n",
         "line_start": 338,
-        "line_end": 342
+        "line_end": 342,
+        "url": "https://developer.twitter.com/en/docs/twitter-api/getting-started/about-twitter-api)."
     },
     "25": {
         "content": "Source document: data/platform-docs-versions-english/X_Twitter-API-V1/Direct Messages.md\nParagraph location: \n\tGET direct\\_messages/events/show\n\tExample request using [Twurl](https://github.com/twitter/twurl)[\u00b6](#example-request-using-twurl \"Permalink to this headline\")\n\nContent: \n## Example request using [Twurl](https://github.com/twitter/twurl)[\u00b6](#example-request-using-twurl \"Permalink to this headline\")  \ntwurl -X GET /1.1/direct_messages/events/show.json?id=110\n",
         "line_start": 344,
-        "line_end": 346
+        "line_end": 346,
+        "url": "https://developer.twitter.com/en/docs/twitter-api/getting-started/about-twitter-api)."
     },
     "26": {
         "content": "Source document: data/platform-docs-versions-english/X_Twitter-API-V1/Direct Messages.md\nParagraph location: \n\tGET direct\\_messages/events/show\n\tExample Response[\u00b6](#example-response \"Permalink to this headline\")\n\nContent: \n## Example Response[\u00b6](#example-response \"Permalink to this headline\")  \n{\n\"event\":\n\"id\": \"110\",\n\"created_timestamp\": \"5300\",\n\"type\": \"message_create\",\n\"message_create\": {\n...\n}\n}\n}  \nGET direct\\_messages/events/list  \nlist-events\n",
         "line_start": 297,
-        "line_end": 310
+        "line_end": 310,
+        "url": "https://developer.twitter.com/en/docs/twitter-api/getting-started/about-twitter-api)."
     },
     "27": {
         "content": "Source document: data/platform-docs-versions-english/X_Twitter-API-V1/Direct Messages.md\nParagraph location: \n\tGET direct\\_messages/events/list\n\nContent: \n# GET direct\\_messages/events/list  \nReturns all Direct Message events (both sent _and_ received) within the last 30 days. Sorted in reverse-chronological order.\n",
         "line_start": 365,
-        "line_end": 367
+        "line_end": 367,
+        "url": "https://developer.twitter.com/en/docs/twitter-api/getting-started/about-twitter-api)."
     },
     "28": {
         "content": "Source document: data/platform-docs-versions-english/X_Twitter-API-V1/Direct Messages.md\nParagraph location: \n\tGET direct\\_messages/events/list\n\tResource URL[\u00b6](#resource-url \"Permalink to this headline\")\n\nContent: \n## Resource URL[\u00b6](#resource-url \"Permalink to this headline\")  \n`https://api.twitter.com/1.1/direct_messages/events/list.json`\n",
         "line_start": 248,
-        "line_end": 250
+        "line_end": 250,
+        "url": "https://developer.twitter.com/en/docs/twitter-api/getting-started/about-twitter-api)."
     },
     "29": {
         "content": "Source document: data/platform-docs-versions-english/X_Twitter-API-V1/Direct Messages.md\nParagraph location: \n\tGET direct\\_messages/events/list\n\tResource Information[\u00b6](#resource-information \"Permalink to this headline\")\n\nContent: \n## Resource Information[\u00b6](#resource-information \"Permalink to this headline\")  \n|     |     |\n| --- | --- |\n| Response formats | JSON |\n| Requires authentication? | Yes (user context only) |\n| Rate limited? | Yes |\n| Requests / 15-min window (user auth) | 15/user |\n",
         "line_start": 252,
-        "line_end": 259
+        "line_end": 259,
+        "url": "https://developer.twitter.com/en/docs/twitter-api/getting-started/about-twitter-api)."
     },
     "30": {
         "content": "Source document: data/platform-docs-versions-english/X_Twitter-API-V1/Direct Messages.md\nParagraph location: \n\tGET direct\\_messages/events/list\n\tParameters[\u00b6](#parameters \"Permalink to this headline\")\n\nContent: \n## Parameters[\u00b6](#parameters \"Permalink to this headline\")  \n|     |     |\n| --- | --- |\n| **count** (optional) | Max number of events to be returned. 20 default. 50 max. |\n| **cursor** (optional) | For paging through result sets greater than 1 page, use the \u201cnext\\_cursor\u201d property from the previous request. |\n",
         "line_start": 338,
-        "line_end": 343
+        "line_end": 343,
+        "url": "https://developer.twitter.com/en/docs/twitter-api/getting-started/about-twitter-api)."
     },
     "31": {
         "content": "Source document: data/platform-docs-versions-english/X_Twitter-API-V1/Direct Messages.md\nParagraph location: \n\tGET direct\\_messages/events/list\n\tExample request using [Twurl](https://github.com/twitter/twurl)[\u00b6](#example-request-using-twurl \"Permalink to this headline\")\n\nContent: \n## Example request using [Twurl](https://github.com/twitter/twurl)[\u00b6](#example-request-using-twurl \"Permalink to this headline\")  \ntwurl -X GET /1.1/direct_messages/events/list.json\n",
         "line_start": 344,
-        "line_end": 346
+        "line_end": 346,
+        "url": "https://developer.twitter.com/en/docs/twitter-api/getting-started/about-twitter-api)."
     },
     "32": {
         "content": "Source document: data/platform-docs-versions-english/X_Twitter-API-V1/Direct Messages.md\nParagraph location: \n\tGET direct\\_messages/events/list\n\tExample Response[\u00b6](#example-response \"Permalink to this headline\")\n\nContent: \n## Example Response[\u00b6](#example-response \"Permalink to this headline\")  \nEvents are returned in the `events` array. A `next_cursor` property will be returned if there are more events to be retrieved.  \n> **Note**\n>\n> To determine if there are more event to retrieve, always look for the presence of a `next_cursor`. In rare cases the `events` array may be empty.  \n{\n\"next_cursor\": \"AB345dkfC\",\n\"events\": [\n{ \"id\": \"110\", \"created_timestamp\": \"5300\", ... },\n{ \"id\": \"109\", \"created_timestamp\": \"5200\", ... },\n{ \"id\": \"108\", \"created_timestamp\": \"5200\", ... },\n{ \"id\": \"107\", \"created_timestamp\": \"5200\", ... },\n{ \"id\": \"106\", \"created_timestamp\": \"5100\", ... },\n{ \"id\": \"105\", \"created_timestamp\": \"5100\", ... },\n...\n]\n}  \nDELETE direct\\_messages/events/destroy  \ndelete-message-event\n",
         "line_start": 297,
-        "line_end": 316
+        "line_end": 316,
+        "url": "https://developer.twitter.com/en/docs/twitter-api/getting-started/about-twitter-api)."
     },
     "33": {
         "content": "Source document: data/platform-docs-versions-english/X_Twitter-API-V1/Direct Messages.md\nParagraph location: \n\tDELETE direct\\_messages/events/destroy\n\nContent: \n# DELETE direct\\_messages/events/destroy  \nDeletes the direct message specified in the required ID parameter. The authenticating user must be the recipient of the specified direct message. Direct Messages are only removed from the interface of the user context provided. Other members of the conversation can still access the Direct Messages. A successful delete will return a 204 http response code with no body content.  \n**Important**: This method requires an access token with RWD (read, write & direct message) permissions.\n",
         "line_start": 418,
-        "line_end": 421
+        "line_end": 421,
+        "url": "https://developer.twitter.com/en/docs/twitter-api/getting-started/about-twitter-api)."
     },
     "34": {
         "content": "Source document: data/platform-docs-versions-english/X_Twitter-API-V1/Direct Messages.md\nParagraph location: \n\tDELETE direct\\_messages/events/destroy\n\tResource URL[\u00b6](#resource-url \"Permalink to this headline\")\n\nContent: \n## Resource URL[\u00b6](#resource-url \"Permalink to this headline\")  \n`https://api.twitter.com/1.1/direct_messages/events/destroy.json`\n",
         "line_start": 248,
-        "line_end": 250
+        "line_end": 250,
+        "url": "https://developer.twitter.com/en/docs/twitter-api/getting-started/about-twitter-api)."
     },
     "35": {
         "content": "Source document: data/platform-docs-versions-english/X_Twitter-API-V1/Direct Messages.md\nParagraph location: \n\tDELETE direct\\_messages/events/destroy\n\tResource Information[\u00b6](#resource-information \"Permalink to this headline\")\n\nContent: \n## Resource Information[\u00b6](#resource-information \"Permalink to this headline\")  \n|     |     |\n| --- | --- |\n| Response formats | 204 - No Content |\n| Requires authentication? | Yes (user context only) |\n| Rate limited? | Yes |\n",
         "line_start": 252,
-        "line_end": 258
+        "line_end": 258,
+        "url": "https://developer.twitter.com/en/docs/twitter-api/getting-started/about-twitter-api)."
     },
     "36": {
         "content": "Source document: data/platform-docs-versions-english/X_Twitter-API-V1/Direct Messages.md\nParagraph location: \n\tDELETE direct\\_messages/events/destroy\n\tParameters[\u00b6](#parameters \"Permalink to this headline\")\n\nContent: \n## Parameters[\u00b6](#parameters \"Permalink to this headline\")  \n|     |     |\n| --- | --- |\n| **id** (required) | The id of the Direct Message event that should be deleted. |\n",
         "line_start": 338,
-        "line_end": 342
+        "line_end": 342,
+        "url": "https://developer.twitter.com/en/docs/twitter-api/getting-started/about-twitter-api)."
     },
     "37": {
         "content": "Source document: data/platform-docs-versions-english/X_Twitter-API-V1/Direct Messages.md\nParagraph location: \n\tDELETE direct\\_messages/events/destroy\n\tExample request using [Twurl](https://github.com/twitter/twurl)[\u00b6](#example-request-using-twurl \"Permalink to this headline\")\n\nContent: \n## Example request using [Twurl](https://github.com/twitter/twurl)[\u00b6](#example-request-using-twurl \"Permalink to this headline\")  \ntwurl -X DELETE \"/1.1/direct_messages/events/destroy.json?id=938178981337088004\"  \nOverview  \nWelcome Messages provide the ability to display a message to people who are entering a Direct Message conversation. Welcome messages can be customized for different referral paths. For example, users who click on Direct Message links in a Tweet or if a user enters a Direct Message view for the first time with no prior context. Welcome Messages can contain any content that a Direct Message would, including media, Quick Replies, and more.  \nWelcome Messages can be presented to users in two ways:  \n* [Deeplinking to a Welcome Message](https://developer.twitter.com/en/docs/direct-messages/welcome-messages/guides/deeplinking-to-welcome-message)\nCreate a URL that can be used anywhere to link a user to a specific message in the Direct Message view.\n* [Setting a Default Welcome Message](https://developer.twitter.com/en/docs/direct-messages/welcome-messages/guides/setting-default-welcome-message)\nSet the default message a user will see when they enter the Direct Message view.  \nSetting a default Welcome Message\n",
         "line_start": 344,
-        "line_end": 354
+        "line_end": 354,
+        "url": "https://developer.twitter.com/en/docs/twitter-api/getting-started/about-twitter-api)."
     },
     "38": {
         "content": "Source document: data/platform-docs-versions-english/X_Twitter-API-V1/Direct Messages.md\nParagraph location: \n\tSetting a Default Welcome Message\n\nContent: \n# Setting a Default Welcome Message  \nWithout a default Welcome Message, users are presented with an empty Direct Message conversation view or the state of the previous conversation. \u00a0A Welcome Message may be set to default so that it is presented to the user when a Welcome Message deeplink is not used. Use a default Welcome Message to provide context to users including what services are provided, when they can receive response or provide Quick Reply options to start an automated conversation flow. All features available to Direct Messages can be used in a default Welcome Message.  \nWhen a Welcome Message is set as default, it will be presented to the user in the following scenarios:  \n* Direct Message compose view opened for the first time.\n* Direct Message compose view opened for the first time since leaving a conversation.\n* Direct Message compose view opened after no message activity for 7 days.  \n**Note:** Specifying a Welcome Message in a [deeplink](https://developer.twitter.com/en/docs/direct-messages/welcome-messages/guides/deeplinking-to-welcome-message) will always override the default Welcome Message. Deeplinking without a defined Welcome Message will follow default Welcome Message behavior defined above.  \nTo set a default Welcome Message:  \n1. Create a new Welcome Message with [POST direct\\_messages/welcome\\_messages/new](https://developer.twitter.com/en/docs/direct-messages/welcome-messages/api-reference/new-welcome-message). Take note of the returned Welcome Message ID.\n2. Create a new Welcome Message Rule using the Welcome Message ID with [POST direct\\_messages/welcome\\_messages/rules/new](https://developer.twitter.com/en/docs/direct-messages/welcome-messages/api-reference/new-welcome-message-rule).  \n**Note:** Although an account can have many Welcome Messages, an account may only have a single \u201cdefault\u201d Welcome Message and only a single rule. If you have previously created a rule, you must [delete](https://developer.twitter.com/en/docs/direct-messages/welcome-messages/api-reference/delete-welcome-message-rule) the current rule before creating a new one. See [POST direct\\_messages/welcome\\_messages/rules/new](https://developer.twitter.com/en/docs/direct-messages/welcome-messages/api-reference/new-welcome-message-rule) documentation for more information regarding the future of rules.  \nDeeplinking to a Welcome Message\n",
         "line_start": 459,
-        "line_end": 471
+        "line_end": 471,
+        "url": "https://developer.twitter.com/en/docs/twitter-api/getting-started/about-twitter-api)."
     },
     "39": {
         "content": "Source document: data/platform-docs-versions-english/X_Twitter-API-V1/Direct Messages.md\nParagraph location: \n\tDeeplinking to a Welcome Message\n\nContent: \n# Deeplinking to a Welcome Message  \nEvery Welcome Message can be deeplinked to. When a user follows the deeplink, the Direct Message compose view will be opened with the specified Welcome Message presented. Deeplinks can be used anywhere from a website, an app, a Tweet or even another Direct Message conversation.  \nTo create a Welcome Message deeplink:  \n1. Create a new Welcome Message with [POST direct\\_messages/welcome\\_messages/new](https://developer.twitter.com/en/docs/direct-messages/welcome-messages/api-reference/new-welcome-message). Take note of the returned Welcome Message ID.  \n2. Construct a Direct Message deeplink with the recipient\\_id and welcome\\_message\\_id query string parameters defined.  \nExample Direct Message Deeplink:  \nhttps://twitter.com/messages/compose?recipient\\_id= 3805104374&welcome\\_message\\_id=12345  \n**Note:** You can create as many Welcome Messages as you require and all Welcome Messages can be deeplinked to.  \nDeeplinking from a Tweet  \n----------------------------  \nBy simply including the Direct Message deeplink URL at the end of a Tweet, your can append a \"Send a private message\" button to the bottom of the Tweet. Read more about using Direct Message deeplinks in Tweets in [this blog post](https://blog.twitter.com/marketing/en_us/a/2016/best-practices-using-direct-messages-for-customer-service-0.html).  \nUsing a [Direct Message Card](https://blog.twitter.com/2017/drive-discovery-of-bots-other-personalized-customer-experiences-in-direct-messages), businesses can capture people\u2019s attention with engaging image or video creatives, and include up to four fully customizable call-to-action buttons. Each call-to-action button can deeplink to a unique Welcome Message. The Direct Message Card is currently available in limited beta to Twitter advertisers. Contact your Twitter representative for more information.  \nDeeplinking from a Website  \n-----------------------------  \nDirect Message deeplinks may also be used to deeplink from a website or other external source like a mobile app. For more details on deeplinking to Welcome Messages from a website, see [Message Button](https://dev.twitter.com/web/message-button) documentation.  \nDELETE direct\\_messages/welcome\\_messages/destroy  \ndelete-welcome-message\n",
         "line_start": 481,
-        "line_end": 498
+        "line_end": 498,
+        "url": "https://developer.twitter.com/en/docs/twitter-api/getting-started/about-twitter-api)."
     },
     "40": {
         "content": "Source document: data/platform-docs-versions-english/X_Twitter-API-V1/Direct Messages.md\nParagraph location: \n\tDELETE direct\\_messages/welcome\\_messages/destroy\n\nContent: \n# DELETE direct\\_messages/welcome\\_messages/destroy  \nDeletes a Welcome Message by the given id.\n",
         "line_start": 516,
-        "line_end": 518
+        "line_end": 518,
+        "url": "https://developer.twitter.com/en/docs/twitter-api/getting-started/about-twitter-api)."
     },
     "41": {
         "content": "Source document: data/platform-docs-versions-english/X_Twitter-API-V1/Direct Messages.md\nParagraph location: \n\tDELETE direct\\_messages/welcome\\_messages/destroy\n\tResource URL[\u00b6](#resource-url \"Permalink to this headline\")\n\nContent: \n## Resource URL[\u00b6](#resource-url \"Permalink to this headline\")  \n`https://api.twitter.com/1.1/direct_messages/welcome_messages/destroy.json`\n",
         "line_start": 248,
-        "line_end": 250
+        "line_end": 250,
+        "url": "https://developer.twitter.com/en/docs/twitter-api/getting-started/about-twitter-api)."
     },
     "42": {
         "content": "Source document: data/platform-docs-versions-english/X_Twitter-API-V1/Direct Messages.md\nParagraph location: \n\tDELETE direct\\_messages/welcome\\_messages/destroy\n\tResource Information[\u00b6](#resource-information \"Permalink to this headline\")\n\nContent: \n## Resource Information[\u00b6](#resource-information \"Permalink to this headline\")  \n|     |     |\n| --- | --- |\n| Response formats | 204 - No Content |\n| Requires authentication? | Yes (user context only) |\n| Rate limited? | Yes |\n",
         "line_start": 252,
-        "line_end": 258
+        "line_end": 258,
+        "url": "https://developer.twitter.com/en/docs/twitter-api/getting-started/about-twitter-api)."
     },
     "43": {
         "content": "Source document: data/platform-docs-versions-english/X_Twitter-API-V1/Direct Messages.md\nParagraph location: \n\tDELETE direct\\_messages/welcome\\_messages/destroy\n\tParameters[\u00b6](#parameters \"Permalink to this headline\")\n\nContent: \n## Parameters[\u00b6](#parameters \"Permalink to this headline\")  \n|     |     |\n| --- | --- |\n| **id** (required) | The id of the Welcome Message that should be deleted. |\n",
         "line_start": 338,
-        "line_end": 342
+        "line_end": 342,
+        "url": "https://developer.twitter.com/en/docs/twitter-api/getting-started/about-twitter-api)."
     },
     "44": {
         "content": "Source document: data/platform-docs-versions-english/X_Twitter-API-V1/Direct Messages.md\nParagraph location: \n\tDELETE direct\\_messages/welcome\\_messages/destroy\n\tExample request using [Twurl](https://github.com/twitter/twurl)[\u00b6](#example-request-using-twurl \"Permalink to this headline\")\n\nContent: \n## Example request using [Twurl](https://github.com/twitter/twurl)[\u00b6](#example-request-using-twurl \"Permalink to this headline\")  \ntwurl -X DELETE /1.1/direct_messages/welcome_messages/destroy.json?id=844385345234  \nDELETE direct\\_messages/welcome\\_messages/rules/destroy  \ndelete-welcome-message-rule\n",
         "line_start": 344,
-        "line_end": 348
+        "line_end": 348,
+        "url": "https://developer.twitter.com/en/docs/twitter-api/getting-started/about-twitter-api)."
     },
     "45": {
         "content": "Source document: data/platform-docs-versions-english/X_Twitter-API-V1/Direct Messages.md\nParagraph location: \n\tDELETE direct\\_messages/welcome\\_messages/rules/destroy\n\nContent: \n# DELETE direct\\_messages/welcome\\_messages/rules/destroy  \nDeletes a Welcome Message Rule by the given id.\n",
         "line_start": 546,
-        "line_end": 548
+        "line_end": 548,
+        "url": "https://developer.twitter.com/en/docs/twitter-api/getting-started/about-twitter-api)."
     },
     "46": {
         "content": "Source document: data/platform-docs-versions-english/X_Twitter-API-V1/Direct Messages.md\nParagraph location: \n\tDELETE direct\\_messages/welcome\\_messages/rules/destroy\n\tResource URL[\u00b6](#resource-url \"Permalink to this headline\")\n\nContent: \n## Resource URL[\u00b6](#resource-url \"Permalink to this headline\")  \n`https://api.twitter.com/1.1/direct_messages/welcome_messages/rules/destroy.json`\n",
         "line_start": 248,
-        "line_end": 250
+        "line_end": 250,
+        "url": "https://developer.twitter.com/en/docs/twitter-api/getting-started/about-twitter-api)."
     },
     "47": {
         "content": "Source document: data/platform-docs-versions-english/X_Twitter-API-V1/Direct Messages.md\nParagraph location: \n\tDELETE direct\\_messages/welcome\\_messages/rules/destroy\n\tResource Information[\u00b6](#resource-information \"Permalink to this headline\")\n\nContent: \n## Resource Information[\u00b6](#resource-information \"Permalink to this headline\")  \n|     |     |\n| --- | --- |\n| Response formats | 204 - No Content |\n| Requires authentication? | Yes (user context only) |\n| Rate limited? | Yes |\n",
         "line_start": 252,
-        "line_end": 258
+        "line_end": 258,
+        "url": "https://developer.twitter.com/en/docs/twitter-api/getting-started/about-twitter-api)."
     },
     "48": {
         "content": "Source document: data/platform-docs-versions-english/X_Twitter-API-V1/Direct Messages.md\nParagraph location: \n\tDELETE direct\\_messages/welcome\\_messages/rules/destroy\n\tParameters[\u00b6](#parameters \"Permalink to this headline\")\n\nContent: \n## Parameters[\u00b6](#parameters \"Permalink to this headline\")  \n|     |     |\n| --- | --- |\n| **id** (required) | The id of the Welcome Message Rule that should be deleted. |\n",
         "line_start": 338,
-        "line_end": 342
+        "line_end": 342,
+        "url": "https://developer.twitter.com/en/docs/twitter-api/getting-started/about-twitter-api)."
     },
     "49": {
         "content": "Source document: data/platform-docs-versions-english/X_Twitter-API-V1/Direct Messages.md\nParagraph location: \n\tDELETE direct\\_messages/welcome\\_messages/rules/destroy\n\tExample request using [Twurl](https://github.com/twitter/twurl)[\u00b6](#example-request-using-twurl \"Permalink to this headline\")\n\nContent: \n## Example request using [Twurl](https://github.com/twitter/twurl)[\u00b6](#example-request-using-twurl \"Permalink to this headline\")  \ntwurl -X DELETE /1.1/direct_messages/welcome_messages/rules/destroy.json?id=9910934913490319  \nGET direct\\_messages/welcome\\_messages/show  \nget-welcome-message\n",
         "line_start": 344,
-        "line_end": 348
+        "line_end": 348,
+        "url": "https://developer.twitter.com/en/docs/twitter-api/getting-started/about-twitter-api)."
     },
     "50": {
         "content": "Source document: data/platform-docs-versions-english/X_Twitter-API-V1/Direct Messages.md\nParagraph location: \n\tGET direct\\_messages/welcome\\_messages/show\n\nContent: \n# GET direct\\_messages/welcome\\_messages/show  \nReturns a Welcome Message by the given id.\n",
         "line_start": 576,
-        "line_end": 578
+        "line_end": 578,
+        "url": "https://developer.twitter.com/en/docs/twitter-api/getting-started/about-twitter-api)."
     },
     "51": {
         "content": "Source document: data/platform-docs-versions-english/X_Twitter-API-V1/Direct Messages.md\nParagraph location: \n\tGET direct\\_messages/welcome\\_messages/show\n\tResource URL[\u00b6](#resource-url \"Permalink to this headline\")\n\nContent: \n## Resource URL[\u00b6](#resource-url \"Permalink to this headline\")  \n`https://api.twitter.com/1.1/direct_messages/welcome_messages/show.json`\n",
         "line_start": 248,
-        "line_end": 250
+        "line_end": 250,
+        "url": "https://developer.twitter.com/en/docs/twitter-api/getting-started/about-twitter-api)."
     },
     "52": {
         "content": "Source document: data/platform-docs-versions-english/X_Twitter-API-V1/Direct Messages.md\nParagraph location: \n\tGET direct\\_messages/welcome\\_messages/show\n\tResource Information[\u00b6](#resource-information \"Permalink to this headline\")\n\nContent: \n## Resource Information[\u00b6](#resource-information \"Permalink to this headline\")  \n|     |     |\n| --- | --- |\n| Response formats | JSON |\n| Requires authentication? | Yes (user context only) |\n| Rate limited? | Yes |\n| Requests / 15-min window (user auth) | 15  |\n",
         "line_start": 252,
-        "line_end": 259
+        "line_end": 259,
+        "url": "https://developer.twitter.com/en/docs/twitter-api/getting-started/about-twitter-api)."
     },
     "53": {
         "content": "Source document: data/platform-docs-versions-english/X_Twitter-API-V1/Direct Messages.md\nParagraph location: \n\tGET direct\\_messages/welcome\\_messages/show\n\tParameters[\u00b6](#parameters \"Permalink to this headline\")\n\nContent: \n## Parameters[\u00b6](#parameters \"Permalink to this headline\")  \n|     |     |\n| --- | --- |\n| **id** (required) | The id of the Welcome Message that should be returned. |\n",
         "line_start": 338,
-        "line_end": 342
+        "line_end": 342,
+        "url": "https://developer.twitter.com/en/docs/twitter-api/getting-started/about-twitter-api)."
     },
     "54": {
         "content": "Source document: data/platform-docs-versions-english/X_Twitter-API-V1/Direct Messages.md\nParagraph location: \n\tGET direct\\_messages/welcome\\_messages/show\n\tExample request using [Twurl](https://github.com/twitter/twurl)[\u00b6](#example-request-using-twurl \"Permalink to this headline\")\n\nContent: \n## Example request using [Twurl](https://github.com/twitter/twurl)[\u00b6](#example-request-using-twurl \"Permalink to this headline\")  \ntwurl -X GET /1.1/direct_messages/welcome_messages/show.json?id=844385345234\n",
         "line_start": 344,
-        "line_end": 346
+        "line_end": 346,
+        "url": "https://developer.twitter.com/en/docs/twitter-api/getting-started/about-twitter-api)."
     },
     "55": {
         "content": "Source document: data/platform-docs-versions-english/X_Twitter-API-V1/Direct Messages.md\nParagraph location: \n\tGET direct\\_messages/welcome\\_messages/show\n\tExample Response[\u00b6](#example-response \"Permalink to this headline\")\n\nContent: \n## Example Response[\u00b6](#example-response \"Permalink to this headline\")  \n{\n\"welcome_message\" : {\n\"id\": \"844385345234\",\n\"created_timestamp\": \"1470182274821\",\n\"message_data\": {\n\"text\": \"Welcome!\",\n\"attachment\": {\n\"type\": \"media\",\n\"media\": {\n...\n}\n}\n}\n}\n}  \nGET direct\\_messages/welcome\\_messages/rules/show  \nget-welcome-message-rule\n",
         "line_start": 297,
-        "line_end": 315
+        "line_end": 315,
+        "url": "https://developer.twitter.com/en/docs/twitter-api/getting-started/about-twitter-api)."
     },
     "56": {
         "content": "Source document: data/platform-docs-versions-english/X_Twitter-API-V1/Direct Messages.md\nParagraph location: \n\tGET direct\\_messages/welcome\\_messages/rules/show\n\nContent: \n# GET direct\\_messages/welcome\\_messages/rules/show  \nReturns a Welcome Message Rule by the given id.\n",
         "line_start": 625,
-        "line_end": 627
+        "line_end": 627,
+        "url": "https://developer.twitter.com/en/docs/twitter-api/getting-started/about-twitter-api)."
     },
     "57": {
         "content": "Source document: data/platform-docs-versions-english/X_Twitter-API-V1/Direct Messages.md\nParagraph location: \n\tGET direct\\_messages/welcome\\_messages/rules/show\n\tResource URL[\u00b6](#resource-url \"Permalink to this headline\")\n\nContent: \n## Resource URL[\u00b6](#resource-url \"Permalink to this headline\")  \n`https://api.twitter.com/1.1/direct_messages/welcome_messages/rules/show.json`\n",
         "line_start": 248,
-        "line_end": 250
+        "line_end": 250,
+        "url": "https://developer.twitter.com/en/docs/twitter-api/getting-started/about-twitter-api)."
     },
     "58": {
         "content": "Source document: data/platform-docs-versions-english/X_Twitter-API-V1/Direct Messages.md\nParagraph location: \n\tGET direct\\_messages/welcome\\_messages/rules/show\n\tResource Information[\u00b6](#resource-information \"Permalink to this headline\")\n\nContent: \n## Resource Information[\u00b6](#resource-information \"Permalink to this headline\")  \n|     |     |\n| --- | --- |\n| Response formats | JSON |\n| Requires authentication? | Yes (user context only) |\n| Rate limited? | Yes |\n| Requests / 15-min window (user auth) | 15  |\n",
         "line_start": 252,
-        "line_end": 259
+        "line_end": 259,
+        "url": "https://developer.twitter.com/en/docs/twitter-api/getting-started/about-twitter-api)."
     },
     "59": {
         "content": "Source document: data/platform-docs-versions-english/X_Twitter-API-V1/Direct Messages.md\nParagraph location: \n\tGET direct\\_messages/welcome\\_messages/rules/show\n\tParameters[\u00b6](#parameters \"Permalink to this headline\")\n\nContent: \n## Parameters[\u00b6](#parameters \"Permalink to this headline\")  \n|     |     |\n| --- | --- |\n| **id** (required) | The id of the Welcome Message Rule that should be returned. |\n",
         "line_start": 338,
-        "line_end": 342
+        "line_end": 342,
+        "url": "https://developer.twitter.com/en/docs/twitter-api/getting-started/about-twitter-api)."
     },
     "60": {
         "content": "Source document: data/platform-docs-versions-english/X_Twitter-API-V1/Direct Messages.md\nParagraph location: \n\tGET direct\\_messages/welcome\\_messages/rules/show\n\tExample request using [Twurl](https://github.com/twitter/twurl)[\u00b6](#example-request-using-twurl \"Permalink to this headline\")\n\nContent: \n## Example request using [Twurl](https://github.com/twitter/twurl)[\u00b6](#example-request-using-twurl \"Permalink to this headline\")  \ntwurl -X GET /1.1/direct_messages/welcome_messages/rules/show.json?id=9910934913490319\n",
         "line_start": 344,
-        "line_end": 346
+        "line_end": 346,
+        "url": "https://developer.twitter.com/en/docs/twitter-api/getting-started/about-twitter-api)."
     },
     "61": {
         "content": "Source document: data/platform-docs-versions-english/X_Twitter-API-V1/Direct Messages.md\nParagraph location: \n\tGET direct\\_messages/welcome\\_messages/rules/show\n\tExample Response[\u00b6](#example-response \"Permalink to this headline\")\n\nContent: \n## Example Response[\u00b6](#example-response \"Permalink to this headline\")  \n{\n\"welcome_message_rule\" : {\n\"id\": \"9910934913490319\",\n\"created_timestamp\": \"1470182394258\",\n\"welcome_message_id\": \"844385345234\"\n}\n}  \nGET direct\\_messages/welcome\\_messages/rules/list  \nlist-welcome-message-rules\n",
         "line_start": 297,
-        "line_end": 307
+        "line_end": 307,
+        "url": "https://developer.twitter.com/en/docs/twitter-api/getting-started/about-twitter-api)."
     },
     "62": {
         "content": "Source document: data/platform-docs-versions-english/X_Twitter-API-V1/Direct Messages.md\nParagraph location: \n\tGET direct\\_messages/welcome\\_messages/rules/list\n\nContent: \n# GET direct\\_messages/welcome\\_messages/rules/list  \nReturns a list of Welcome Message Rules.\n",
         "line_start": 666,
-        "line_end": 668
+        "line_end": 668,
+        "url": "https://developer.twitter.com/en/docs/twitter-api/getting-started/about-twitter-api)."
     },
     "63": {
         "content": "Source document: data/platform-docs-versions-english/X_Twitter-API-V1/Direct Messages.md\nParagraph location: \n\tGET direct\\_messages/welcome\\_messages/rules/list\n\tResource URL[\u00b6](#resource-url \"Permalink to this headline\")\n\nContent: \n## Resource URL[\u00b6](#resource-url \"Permalink to this headline\")  \n`https://api.twitter.com/1.1/direct_messages/welcome_messages/rules/list.json`\n",
         "line_start": 248,
-        "line_end": 250
+        "line_end": 250,
+        "url": "https://developer.twitter.com/en/docs/twitter-api/getting-started/about-twitter-api)."
     },
     "64": {
         "content": "Source document: data/platform-docs-versions-english/X_Twitter-API-V1/Direct Messages.md\nParagraph location: \n\tGET direct\\_messages/welcome\\_messages/rules/list\n\tResource Information[\u00b6](#resource-information \"Permalink to this headline\")\n\nContent: \n## Resource Information[\u00b6](#resource-information \"Permalink to this headline\")  \n|     |     |\n| --- | --- |\n| Response formats | JSON |\n| Requires authentication? | Yes (user context only) |\n| Rate limited? | Yes |\n| Requests / 15-min window (user auth) | 15  |\n",
         "line_start": 252,
-        "line_end": 259
+        "line_end": 259,
+        "url": "https://developer.twitter.com/en/docs/twitter-api/getting-started/about-twitter-api)."
     },
     "65": {
         "content": "Source document: data/platform-docs-versions-english/X_Twitter-API-V1/Direct Messages.md\nParagraph location: \n\tGET direct\\_messages/welcome\\_messages/rules/list\n\tParameters[\u00b6](#parameters \"Permalink to this headline\")\n\nContent: \n## Parameters[\u00b6](#parameters \"Permalink to this headline\")  \n|     |     |\n| --- | --- |\n| **count** (optional) | Number of welcome message rules to be returned. Max of 50. Default is 20. |\n| **cursor** (optional) | For paging through result sets greater than 1 page, use the \u201cnext\\_cursor\u201d property from the previous request. |\n",
         "line_start": 338,
-        "line_end": 343
+        "line_end": 343,
+        "url": "https://developer.twitter.com/en/docs/twitter-api/getting-started/about-twitter-api)."
     },
     "66": {
         "content": "Source document: data/platform-docs-versions-english/X_Twitter-API-V1/Direct Messages.md\nParagraph location: \n\tGET direct\\_messages/welcome\\_messages/rules/list\n\tExample request using [Twurl](https://github.com/twitter/twurl)[\u00b6](#example-request-using-twurl \"Permalink to this headline\")\n\nContent: \n## Example request using [Twurl](https://github.com/twitter/twurl)[\u00b6](#example-request-using-twurl \"Permalink to this headline\")  \ntwurl -X GET \"/1.1/direct_messages/welcome_messages/rules/list.json?count=2&cursor=MTIzNDU2Nzg\"\n",
         "line_start": 344,
-        "line_end": 346
+        "line_end": 346,
+        "url": "https://developer.twitter.com/en/docs/twitter-api/getting-started/about-twitter-api)."
     },
     "67": {
         "content": "Source document: data/platform-docs-versions-english/X_Twitter-API-V1/Direct Messages.md\nParagraph location: \n\tGET direct\\_messages/welcome\\_messages/rules/list\n\tExample Responses[\u00b6](#example-responses \"Permalink to this headline\")\n\nContent: \n## Example Responses[\u00b6](#example-responses \"Permalink to this headline\")  \nWelcome message rules are returned in the `welcome_message_rules` array. A `next_cursor` property will be returned if there are more welcome message rules to be retrieved.  \n> **Note**\n>\n> To determine if there are more welcome message rules to retrieve, always look for the presence of a `next_cursor`. In rare cases the `welcome_message_rules` array may be empty.  \n{\n\"welcome_message_rules\": [\n{\n\"id\": \"9910934913490319\",\n\"created_timestamp\": \"1470182394258\",\n\"welcome_message_id\": \"844385345234\"\n},\n{\n\"id\": \"9910934913490431\",\n\"created_timestamp\": \"1470182394265\",\n\"welcome_message_id\": \"844385345238\"\n}\n],\n\"next_cursor\": \"NDUzNDUzNDY3Nzc3\"\n}  \nGET direct\\_messages/welcome\\_messages/list  \nlist-welcome-messages\n",
         "line_start": 694,
-        "line_end": 716
+        "line_end": 716,
+        "url": "https://developer.twitter.com/en/docs/twitter-api/getting-started/about-twitter-api)."
     },
     "68": {
         "content": "Source document: data/platform-docs-versions-english/X_Twitter-API-V1/Direct Messages.md\nParagraph location: \n\tGET direct\\_messages/welcome\\_messages/list\n\nContent: \n# GET direct\\_messages/welcome\\_messages/list  \nReturns a list of Welcome Messages.\n",
         "line_start": 722,
-        "line_end": 724
+        "line_end": 724,
+        "url": "https://developer.twitter.com/en/docs/twitter-api/getting-started/about-twitter-api)."
     },
     "69": {
         "content": "Source document: data/platform-docs-versions-english/X_Twitter-API-V1/Direct Messages.md\nParagraph location: \n\tGET direct\\_messages/welcome\\_messages/list\n\tResource URL[\u00b6](#resource-url \"Permalink to this headline\")\n\nContent: \n## Resource URL[\u00b6](#resource-url \"Permalink to this headline\")  \n`https://api.twitter.com/1.1/direct_messages/welcome_messages/list.json`\n",
         "line_start": 248,
-        "line_end": 250
+        "line_end": 250,
+        "url": "https://developer.twitter.com/en/docs/twitter-api/getting-started/about-twitter-api)."
     },
     "70": {
         "content": "Source document: data/platform-docs-versions-english/X_Twitter-API-V1/Direct Messages.md\nParagraph location: \n\tGET direct\\_messages/welcome\\_messages/list\n\tResource Information[\u00b6](#resource-information \"Permalink to this headline\")\n\nContent: \n## Resource Information[\u00b6](#resource-information \"Permalink to this headline\")  \n|     |     |\n| --- | --- |\n| Response formats | JSON |\n| Requires authentication? | Yes (user context only) |\n| Rate limited? | Yes |\n| Requests / 15-min window (user auth) | 15  |\n",
         "line_start": 252,
-        "line_end": 259
+        "line_end": 259,
+        "url": "https://developer.twitter.com/en/docs/twitter-api/getting-started/about-twitter-api)."
     },
     "71": {
         "content": "Source document: data/platform-docs-versions-english/X_Twitter-API-V1/Direct Messages.md\nParagraph location: \n\tGET direct\\_messages/welcome\\_messages/list\n\tParameters[\u00b6](#parameters \"Permalink to this headline\")\n\nContent: \n## Parameters[\u00b6](#parameters \"Permalink to this headline\")  \n|     |     |\n| --- | --- |\n| **count** (optional) | Number of welcome messages to be returned. Max of 50. Default is 20. |\n| **cursor** (optional) | For paging through result sets greater than 1 page, use the \u201cnext\\_cursor\u201d property from the previous request. |\n",
         "line_start": 338,
-        "line_end": 343
+        "line_end": 343,
+        "url": "https://developer.twitter.com/en/docs/twitter-api/getting-started/about-twitter-api)."
     },
     "72": {
         "content": "Source document: data/platform-docs-versions-english/X_Twitter-API-V1/Direct Messages.md\nParagraph location: \n\tGET direct\\_messages/welcome\\_messages/list\n\tExample request using [Twurl](https://github.com/twitter/twurl)[\u00b6](#example-request-using-twurl \"Permalink to this headline\")\n\nContent: \n## Example request using [Twurl](https://github.com/twitter/twurl)[\u00b6](#example-request-using-twurl \"Permalink to this headline\")  \ntwurl -X GET \"/1.1/direct_messages/welcome_messages/list.json?count=2&cursor=MTIzNDU2Nzg\"\n",
         "line_start": 344,
-        "line_end": 346
+        "line_end": 346,
+        "url": "https://developer.twitter.com/en/docs/twitter-api/getting-started/about-twitter-api)."
     },
     "73": {
         "content": "Source document: data/platform-docs-versions-english/X_Twitter-API-V1/Direct Messages.md\nParagraph location: \n\tGET direct\\_messages/welcome\\_messages/list\n\tExample Response[\u00b6](#example-response \"Permalink to this headline\")\n\nContent: \n## Example Response[\u00b6](#example-response \"Permalink to this headline\")  \nWelcome Messages are returned in the `welcome_messages` array. A `next_cursor` property will be returned if there are more welcome messages to be retrieved.  \n> **Note**\n>\n> To determine if there are more welcome messages to retrieve, always look for the presence of a `next_cursor`. In rare cases the `welcome_messages` array may be empty.  \n{\n\"welcome_messages\": [\n{\n\"id\": \"844385345234\",\n\"created_timestamp\": \"1470182274821\",\n\"message_data\": {\n\"text\": \"Welcome!\",\n\"attachment\": {\n\"type\": \"media\",\n\"media\": {\n...\n}\n}\n}\n},\n{\n\"id\": \"844385345238\",\n\"created_timestamp\": \"1470182275399\",\n\"message_data\": {\n\"text\": \"Welcome Again!\",\n\"attachment\": {\n\"type\": \"media\",\n\"media\": {\n...\n}\n}\n}\n}\n],\n\"next_cursor\": \"NDUzNDUzNDY3Nzc3\"\n}  \nPOST direct\\_messages/welcome\\_messages/new  \nnew-welcome-message\n",
         "line_start": 297,
-        "line_end": 335
+        "line_end": 335,
+        "url": "https://developer.twitter.com/en/docs/twitter-api/getting-started/about-twitter-api)."
     },
     "74": {
         "content": "Source document: data/platform-docs-versions-english/X_Twitter-API-V1/Direct Messages.md\nParagraph location: \n\tPOST direct\\_messages/welcome\\_messages/new\n\nContent: \n# POST direct\\_messages/welcome\\_messages/new  \nCreates a new Welcome Message that will be stored and sent in the future from the authenticating user in defined circumstances. Returns the message template if successful. Supports publishing with the same elements as Direct Messages (e.g. Quick Replies, media attachments).  \nRequires a JSON POST body and `Content-Type` header to be set to `application/json`. Setting `Content-Length` may also be required if it is not automatically.  \nSee the [Welcome Messages overview](https://developer.twitter.com/en/docs/direct-messages/welcome-messages/overview) to learn how to work with Welcome Messages.\n",
         "line_start": 794,
-        "line_end": 798
+        "line_end": 798,
+        "url": "https://developer.twitter.com/en/docs/twitter-api/getting-started/about-twitter-api)."
     },
     "75": {
         "content": "Source document: data/platform-docs-versions-english/X_Twitter-API-V1/Direct Messages.md\nParagraph location: \n\tPOST direct\\_messages/welcome\\_messages/new\n\tResource URL[\u00b6](#resource-url \"Permalink to this headline\")\n\nContent: \n## Resource URL[\u00b6](#resource-url \"Permalink to this headline\")  \n`https://api.twitter.com/1.1/direct_messages/welcome_messages/new.json`\n",
         "line_start": 248,
-        "line_end": 250
+        "line_end": 250,
+        "url": "https://developer.twitter.com/en/docs/twitter-api/getting-started/about-twitter-api)."
     },
     "76": {
         "content": "Source document: data/platform-docs-versions-english/X_Twitter-API-V1/Direct Messages.md\nParagraph location: \n\tPOST direct\\_messages/welcome\\_messages/new\n\tResource Information[\u00b6](#resource-information \"Permalink to this headline\")\n\nContent: \n## Resource Information[\u00b6](#resource-information \"Permalink to this headline\")  \n|     |     |\n| --- | --- |\n| Response formats | JSON |\n| Content-Type | application/json |\n| Requires authentication? | Yes (user context only) |\n| Rate limited? | Yes |\n",
         "line_start": 252,
-        "line_end": 259
+        "line_end": 259,
+        "url": "https://developer.twitter.com/en/docs/twitter-api/getting-started/about-twitter-api)."
     },
     "77": {
         "content": "Source document: data/platform-docs-versions-english/X_Twitter-API-V1/Direct Messages.md\nParagraph location: \n\tPOST direct\\_messages/welcome\\_messages/new\n\tWelcome Message Object[\u00b6](#welcome-message-object \"Permalink to this headline\")\n\nContent: \n## Welcome Message Object[\u00b6](#welcome-message-object \"Permalink to this headline\")  \n|     |     |\n| --- | --- |\n| **message\\_data** (required) | The `Message Data Object` defining the content of the message template. See [POST direct\\_messages/events/new (message\\_create)](https://developer.twitter.com/en/docs/direct-messages/sending-and-receiving/api-reference/new-event) for Message Data object details. |\n| **name** (optional) | A human readable name for the Welcome Message. This is not displayed to the user. Max length of 100 alpha numeric characters including hyphens, underscores, spaces, hashes and at signs. |  \n> **Note**\n>\n> See [Attaching Media to Direct Messages](https://developer.twitter.com/en/docs/direct-messages/message-attachments/guides/attaching-media) for details on including an image, GIF or video in Direct Messages.\n",
         "line_start": 815,
-        "line_end": 823
+        "line_end": 823,
+        "url": "https://developer.twitter.com/en/docs/twitter-api/getting-started/about-twitter-api)."
     },
     "78": {
         "content": "Source document: data/platform-docs-versions-english/X_Twitter-API-V1/Direct Messages.md\nParagraph location: \n\tPOST direct\\_messages/welcome\\_messages/new\n\tExample Request[\u00b6](#example-request \"Permalink to this headline\")\n\nContent: \n## Example Request[\u00b6](#example-request \"Permalink to this headline\")  \n{\n\"welcome_message\" : {\n\"name\": \"simple_welcome-message 01\",\n\"message_data\": {\n\"text\": \"Welcome!\",\n\"attachment\": {\n\"type\": \"media\",\n\"media\": {\n\"id\": \"48909183894931\"\n}\n}\n}\n}\n}\n",
         "line_start": 826,
-        "line_end": 841
+        "line_end": 841,
+        "url": "https://developer.twitter.com/en/docs/twitter-api/getting-started/about-twitter-api)."
     },
     "79": {
         "content": "Source document: data/platform-docs-versions-english/X_Twitter-API-V1/Direct Messages.md\nParagraph location: \n\tPOST direct\\_messages/welcome\\_messages/new\n\tExample Request[\u00b6](#example-request \"Permalink to this headline\")\n\tExample request using [Twurl](https://github.com/twitter/twurl)[\u00b6](#example-request-using-twurl \"Permalink to this headline\")\n\nContent: \n### Example request using [Twurl](https://github.com/twitter/twurl)[\u00b6](#example-request-using-twurl \"Permalink to this headline\")  \ntwurl -A 'Content-type: application/json' /1.1/direct_messages/welcome_messages/new.json -d '{\"name\": \"simple_welcome-message 01\", \"welcome_message\": {\"message_data\": {\"text\": \"Welcome!\", \"attachment\": {\"type\": \"media\", \"media\": {\"id\": \"48909183894931\"}}}}}'\n",
         "line_start": 843,
-        "line_end": 845
+        "line_end": 845,
+        "url": "https://developer.twitter.com/en/docs/twitter-api/getting-started/about-twitter-api)."
     },
     "80": {
         "content": "Source document: data/platform-docs-versions-english/X_Twitter-API-V1/Direct Messages.md\nParagraph location: \n\tPOST direct\\_messages/welcome\\_messages/new\n\tExample Response[\u00b6](#example-response \"Permalink to this headline\")\n\nContent: \n## Example Response[\u00b6](#example-response \"Permalink to this headline\")  \n{\n\"welcome_message\" : {\n\"id\": \"844385345234\",\n\"created_timestamp\": \"1470182274821\",\n\"message_data\": {\n\"text\": \"Welcome!\",\n\"attachment\": {\n\"type\": \"media\",\n\"media\": {\n...\n}\n}\n}\n}\n\"name\": \"simple_welcome-message 01\"\n}  \nPOST direct\\_messages/welcome\\_messages/rules/new  \nnew-welcome-message-rule\n",
         "line_start": 297,
-        "line_end": 316
+        "line_end": 316,
+        "url": "https://developer.twitter.com/en/docs/twitter-api/getting-started/about-twitter-api)."
     },
     "81": {
         "content": "Source document: data/platform-docs-versions-english/X_Twitter-API-V1/Direct Messages.md\nParagraph location: \n\tPOST direct\\_messages/welcome\\_messages/rules/new\n\nContent: \n# POST direct\\_messages/welcome\\_messages/rules/new  \nCreates a new Welcome Message Rule that determines which Welcome Message will be shown in a given conversation. Returns the created rule if successful.  \nRequires a JSON POST body and `Content-Type` header to be set to `application/json`. Setting `Content-Length` may also be required if it is not automatically.  \nAdditional rule configurations are forthcoming. For the initial beta release, the most recently created Rule will always take precedence, and the assigned Welcome Message will be displayed in the conversation.  \nSee the [Welcome Messages overview](https://developer.twitter.com/en/docs/direct-messages/welcome-messages/overview) to learn how to work with Welcome Messages.\n",
         "line_start": 870,
-        "line_end": 875
+        "line_end": 875,
+        "url": "https://developer.twitter.com/en/docs/twitter-api/getting-started/about-twitter-api)."
     },
     "82": {
         "content": "Source document: data/platform-docs-versions-english/X_Twitter-API-V1/Direct Messages.md\nParagraph location: \n\tPOST direct\\_messages/welcome\\_messages/rules/new\n\tResource URL[\u00b6](#resource-url \"Permalink to this headline\")\n\nContent: \n## Resource URL[\u00b6](#resource-url \"Permalink to this headline\")  \n`https://api.twitter.com/1.1/direct_messages/welcome_messages/rules/new.json`\n",
         "line_start": 248,
-        "line_end": 250
+        "line_end": 250,
+        "url": "https://developer.twitter.com/en/docs/twitter-api/getting-started/about-twitter-api)."
     },
     "83": {
         "content": "Source document: data/platform-docs-versions-english/X_Twitter-API-V1/Direct Messages.md\nParagraph location: \n\tPOST direct\\_messages/welcome\\_messages/rules/new\n\tResource Information[\u00b6](#resource-information \"Permalink to this headline\")\n\nContent: \n## Resource Information[\u00b6](#resource-information \"Permalink to this headline\")  \n|     |     |\n| --- | --- |\n| Response formats | JSON |\n| Content-Type | application/json |\n| Requires authentication? | Yes (user context only) |\n| Rate limited? | Yes |\n",
         "line_start": 252,
-        "line_end": 259
+        "line_end": 259,
+        "url": "https://developer.twitter.com/en/docs/twitter-api/getting-started/about-twitter-api)."
     },
     "84": {
         "content": "Source document: data/platform-docs-versions-english/X_Twitter-API-V1/Direct Messages.md\nParagraph location: \n\tPOST direct\\_messages/welcome\\_messages/rules/new\n\tWelcome Message Rule Object[\u00b6](#welcome-message-rule-object \"Permalink to this headline\")\n\nContent: \n## Welcome Message Rule Object[\u00b6](#welcome-message-rule-object \"Permalink to this headline\")  \n|     |     |\n| --- | --- |\n| **welcome\\_message\\_id** (required) | The ID of the Welcome Message that will be sent when this Rule is triggered. |\n",
         "line_start": 893,
-        "line_end": 897
+        "line_end": 897,
+        "url": "https://developer.twitter.com/en/docs/twitter-api/getting-started/about-twitter-api)."
     },
     "85": {
         "content": "Source document: data/platform-docs-versions-english/X_Twitter-API-V1/Direct Messages.md\nParagraph location: \n\tPOST direct\\_messages/welcome\\_messages/rules/new\n\tExample Request[\u00b6](#example-request \"Permalink to this headline\")\n\nContent: \n## Example Request[\u00b6](#example-request \"Permalink to this headline\")  \n{\n\"welcome_message_rule\": {\n\"welcome_message_id\": \"844385345234\"\n}\n}\n",
         "line_start": 826,
-        "line_end": 832
+        "line_end": 832,
+        "url": "https://developer.twitter.com/en/docs/twitter-api/getting-started/about-twitter-api)."
     },
     "86": {
         "content": "Source document: data/platform-docs-versions-english/X_Twitter-API-V1/Direct Messages.md\nParagraph location: \n\tPOST direct\\_messages/welcome\\_messages/rules/new\n\tExample Request[\u00b6](#example-request \"Permalink to this headline\")\n\tExample request using [Twurl](https://github.com/twitter/twurl)[\u00b6](#example-request-using-twurl \"Permalink to this headline\")\n\nContent: \n### Example request using [Twurl](https://github.com/twitter/twurl)[\u00b6](#example-request-using-twurl \"Permalink to this headline\")  \ntwurl -A 'Content-type: application/json' -X POST /1.1/direct_messages/welcome_messages/rules/new.json -d '{\"welcome_message_rule\": {\"welcome_message_id\": \"844385345234\"}}'\n",
         "line_start": 843,
-        "line_end": 845
+        "line_end": 845,
+        "url": "https://developer.twitter.com/en/docs/twitter-api/getting-started/about-twitter-api)."
     },
     "87": {
         "content": "Source document: data/platform-docs-versions-english/X_Twitter-API-V1/Direct Messages.md\nParagraph location: \n\tPOST direct\\_messages/welcome\\_messages/rules/new\n\tExample Response[\u00b6](#example-response \"Permalink to this headline\")\n\nContent: \n## Example Response[\u00b6](#example-response \"Permalink to this headline\")  \n{\n\"welcome_message_rule\" : {\n\"id\": \"9910934913490319\",\n\"created_timestamp\": \"1470182394258\",\n\"welcome_message_id\": \"844385345234\"\n}\n}  \nPUT direct\\_messages/welcome\\_messages/update  \nupdate-welcome-message\n",
         "line_start": 297,
-        "line_end": 307
+        "line_end": 307,
+        "url": "https://developer.twitter.com/en/docs/twitter-api/getting-started/about-twitter-api)."
     },
     "88": {
         "content": "Source document: data/platform-docs-versions-english/X_Twitter-API-V1/Direct Messages.md\nParagraph location: \n\tPUT direct\\_messages/welcome\\_messages/update\n\nContent: \n# PUT direct\\_messages/welcome\\_messages/update  \nUpdates a Welcome Message by the given ID. Updates to the `welcome_message` object are atomic. For example, if the Welcome Message currently has `quick_reply` defined and you only provde `text`, the `quick_reply` object will be removed from the Welcome Message.\n",
         "line_start": 925,
-        "line_end": 927
+        "line_end": 927,
+        "url": "https://developer.twitter.com/en/docs/twitter-api/getting-started/about-twitter-api)."
     },
     "89": {
         "content": "Source document: data/platform-docs-versions-english/X_Twitter-API-V1/Direct Messages.md\nParagraph location: \n\tPUT direct\\_messages/welcome\\_messages/update\n\tResource URL[\u00b6](#resource-url \"Permalink to this headline\")\n\nContent: \n## Resource URL[\u00b6](#resource-url \"Permalink to this headline\")  \n`https://api.twitter.com/1.1/direct_messages/welcome_messages/update.json`\n",
         "line_start": 248,
-        "line_end": 250
+        "line_end": 250,
+        "url": "https://developer.twitter.com/en/docs/twitter-api/getting-started/about-twitter-api)."
     },
     "90": {
         "content": "Source document: data/platform-docs-versions-english/X_Twitter-API-V1/Direct Messages.md\nParagraph location: \n\tPUT direct\\_messages/welcome\\_messages/update\n\tResource Information[\u00b6](#resource-information \"Permalink to this headline\")\n\nContent: \n## Resource Information[\u00b6](#resource-information \"Permalink to this headline\")  \n|     |     |\n| --- | --- |\n| Response formats | JSON |\n| Requires authentication? | Yes (user context only) |\n| Rate limited? | Yes |\n",
         "line_start": 252,
-        "line_end": 258
+        "line_end": 258,
+        "url": "https://developer.twitter.com/en/docs/twitter-api/getting-started/about-twitter-api)."
     },
     "91": {
         "content": "Source document: data/platform-docs-versions-english/X_Twitter-API-V1/Direct Messages.md\nParagraph location: \n\tPUT direct\\_messages/welcome\\_messages/update\n\tParameters[\u00b6](#parameters \"Permalink to this headline\")\n\nContent: \n## Parameters[\u00b6](#parameters \"Permalink to this headline\")  \n|     |     |\n| --- | --- |\n| **id** (required) | The id of the Welcome Message that should be updated. |\n",
         "line_start": 338,
-        "line_end": 342
+        "line_end": 342,
+        "url": "https://developer.twitter.com/en/docs/twitter-api/getting-started/about-twitter-api)."
     },
     "92": {
         "content": "Source document: data/platform-docs-versions-english/X_Twitter-API-V1/Direct Messages.md\nParagraph location: \n\tPUT direct\\_messages/welcome\\_messages/update\n\tExample request using [Twurl](https://github.com/twitter/twurl)[\u00b6](#example-request-using-twurl \"Permalink to this headline\")\n\nContent: \n## Example request using [Twurl](https://github.com/twitter/twurl)[\u00b6](#example-request-using-twurl \"Permalink to this headline\")  \ntwurl -A 'Content-type: application/json' -X PUT '/1.1/direct_messages/welcome_messages/update.json?id=4893198399134' -d \u2018\n{\n\"message_data\":{\n\"text\": \"Welcome!\"\n}\n}\n",
         "line_start": 344,
-        "line_end": 351
+        "line_end": 351,
+        "url": "https://developer.twitter.com/en/docs/twitter-api/getting-started/about-twitter-api)."
     },
     "93": {
         "content": "Source document: data/platform-docs-versions-english/X_Twitter-API-V1/Direct Messages.md\nParagraph location: \n\tPUT direct\\_messages/welcome\\_messages/update\n\tExample Response[\u00b6](#example-response \"Permalink to this headline\")\n\nContent: \n## Example Response[\u00b6](#example-response \"Permalink to this headline\")  \n{\n\"name\": \"Generic Welcome 01\"\n\"welcome_message\": {\n\"id\": \"4893198399134\",\n\"created_timestamp\": \"154903045\",\n\"message_data\": {\n\"text\": \"Welcome!\"\n}\n},\n\"apps\": {\n\"8829219\": {\n\"id\": \"8829219\",\n\"name\": \"Furni\",\n\"url\": \"https://developer.twitter.com\"\n}\n}\n}  \nOverview\n",
         "line_start": 297,
-        "line_end": 316
+        "line_end": 316,
+        "url": "https://developer.twitter.com/en/docs/twitter-api/getting-started/about-twitter-api)."
     },
     "94": {
         "content": "Source document: data/platform-docs-versions-english/X_Twitter-API-V1/Direct Messages.md\nParagraph location: \n\tPUT direct\\_messages/welcome\\_messages/update\n\tOverview\n\nContent: \n## Overview  \nMedia may be attached and retrieved for Direct Messages through authenticated calls with app-user authorization.  \nDirect Messages with an image will contain a media object with relevant details, check our\u00a0Twitter data objects dictionary for more details [here](https://developer.twitter.com/content/developer-twitter/en/docs/tweets/data-dictionary/overview/entities-object#media).\n",
         "line_start": 978,
-        "line_end": 981
+        "line_end": 981,
+        "url": "https://developer.twitter.com/en/docs/twitter-api/getting-started/about-twitter-api)."
     },
     "95": {
         "content": "Source document: data/platform-docs-versions-english/X_Twitter-API-V1/Direct Messages.md\nParagraph location: \n\tPUT direct\\_messages/welcome\\_messages/update\n\tOverview\n\tUploading and attaching media (images, GIFs, video) to a Direct Message.\n\nContent: \n### Uploading and attaching media (images, GIFs, video) to a Direct Message.  \n[Media for Direct Messages upload & attachment guide](https://developer.twitter.com/en/docs/direct-messages/message-attachments/guides/attaching-media)\n",
         "line_start": 985,
-        "line_end": 987
+        "line_end": 987,
+        "url": "https://developer.twitter.com/en/docs/twitter-api/getting-started/about-twitter-api)."
     },
     "96": {
         "content": "Source document: data/platform-docs-versions-english/X_Twitter-API-V1/Direct Messages.md\nParagraph location: \n\tPUT direct\\_messages/welcome\\_messages/update\n\tOverview\n\tRetrieving Direct Message media\n\nContent: \n### Retrieving Direct Message media  \nFor media in Direct Messages `media_url` is the same https URL as `media_url_https` and must be accessed by signing a request with the user\u2019s access token using OAuth 1.0A.  \nIt is not possible to directly embed these images in a web page.  \n[Media in Direct Messages retrieval\u00a0guide](https://developer.twitter.com/en/docs/direct-messages/message-attachments/guides/retrieving-media)  \nAttaching media\n",
         "line_start": 989,
-        "line_end": 994
+        "line_end": 994,
+        "url": "https://developer.twitter.com/en/docs/twitter-api/getting-started/about-twitter-api)."
     },
     "97": {
         "content": "Source document: data/platform-docs-versions-english/X_Twitter-API-V1/Direct Messages.md\nParagraph location: \n\tPUT direct\\_messages/welcome\\_messages/update\n\tAttaching media\n\nContent: \n## Attaching media  \n[POST direct\\_messages/events/new](https://developer.twitter.com/en/docs/direct-messages/sending-and-receiving/api-reference/new-event.html)\u00a0supports media attachments of type image, GIF and video. The process is similar to attaching media to Tweets:  \n1. Chunk upload the image, GIF or video.\n2. Send Direct Message with media attachment.  \nIt is possible to attach the same media asset to multiple Direct Messages. However,\u00a0you must get users\u2019 express consent to set media as \u201cshared,\u201d and must provide them with clear notice that \u201cshared\u201d media will be viewable by anyone with the media\u2019s URL. See the documented process below for how to set media to \"shared.\"  \n**Note:** Media for use with Direct Messages should be uploaded using the\u00a0asynchronous chunked upload process described on this page.\n",
         "line_start": 999,
-        "line_end": 1005
+        "line_end": 1005,
+        "url": "https://developer.twitter.com/en/docs/twitter-api/getting-started/about-twitter-api)."
     },
     "98": {
         "content": "Source document: data/platform-docs-versions-english/X_Twitter-API-V1/Direct Messages.md\nParagraph location: \n\tPUT direct\\_messages/welcome\\_messages/update\n\tAttaching media\n\t1\\. Chunk upload media\n\nContent: \n### 1\\. Chunk upload media  \n* Chunk upload the media file starting with [POST\u00a0media/upload (INIT)](https://developer.twitter.com/en/docs/media/upload-media/api-reference/post-media-upload-init.html).\n* Set the\u00a0media\\_category\u00a0to\u00a0dm\\_image,\u00a0dm\\_gif\u00a0or\u00a0dm\\_video\u00a0appropriately.\n* If reusing the media asset across multiple Direct Messages, you must set\u00a0shared\u00a0to\u00a0true\u00a0during the initial upload.\n* If attaching a media asset to a Welcome Message, you must set\u00a0shared\u00a0to\u00a0true\u00a0during the initial upload.\n* Uploaded media can only be shared across Direct Messages created by the same user.\n* See\u00a0[Uploading Media](https://developer.twitter.com/en/docs/media/upload-media/uploading-media/chunked-media-upload.html)\u00a0for subsequent\u00a0[APPEND](https://developer.twitter.com/en/docs/media/upload-media/api-reference/post-media-upload-append.html)\u00a0and\u00a0[FINALIZE](https://developer.twitter.com/en/docs/media/upload-media/api-reference/post-media-upload-finalize.html)\u00a0steps.\n* The returned media ID will be used when sending the Direct Message. If you did not set shared to true the media ID can only be used in a single Direct Message.  \nOnce a media ID is generated, it must be attached to a Direct Message within 24 hours.  \n#### Parameters  \n|     |     |\n| --- | --- |\n| **media\\_category  <br>**(required) | The media category:\u00a0dm\\_image,\u00a0dm\\_gif,\u00a0dm\\_video |\n| **shared** | Set to true if media asset will be reused for multiple Direct Messages. Default is false. |  \nSee\u00a0[POST media/upload (INIT)](https://developer.twitter.com/en/docs/media/upload-media/api-reference/post-media-upload-init.html)\u00a0documentation for all parameters and full details.\n",
         "line_start": 1011,
-        "line_end": 1026
+        "line_end": 1026,
+        "url": "https://developer.twitter.com/en/docs/twitter-api/getting-started/about-twitter-api)."
     },
     "99": {
         "content": "Source document: data/platform-docs-versions-english/X_Twitter-API-V1/Direct Messages.md\nParagraph location: \n\tPUT direct\\_messages/welcome\\_messages/update\n\tAttaching media\n\t2\\. Send Direct Message with media attachment\n\nContent: \n### 2\\. Send Direct Message with media attachment  \n* Define an\u00a0attachment\u00a0object in the\u00a0message\\_data\u00a0object in the Direct Message event json body.\n* Set attachment\u00a0type\u00a0property to media.\n* Set the\u00a0media.id\u00a0property to the media ID returned in the previous chunk upload process.  \n#### Parameters  \n|     |     |\n| --- | --- |\n| **attachment.type  <br>**(required) | Must be set to\u00a0media. |\n| **attachment.media.id  <br>**(required) | A media ID to associate with the message. A Direct Message may only reference a single media id. |  \nSee\u00a0[POST direct\\_messages/events/new](https://developer.twitter.com/en/docs/direct-messages/sending-and-receiving/api-reference/new-event.html) documentation\u00a0for all parameters and full details.  \nAttaching location\n",
         "line_start": 1033,
-        "line_end": 1044
+        "line_end": 1044,
+        "url": "https://developer.twitter.com/en/docs/twitter-api/getting-started/about-twitter-api)."
     },
     "100": {
         "content": "Source document: data/platform-docs-versions-english/X_Twitter-API-V1/Direct Messages.md\nParagraph location: \n\tAttaching location\n\nContent: \n# Attaching location  \nLocations can be attached to Direct Messages created with [POST direct\\_messages/events/new](https://dev.twitter.com/rest/reference/post/direct_messages/events/new). The location is defined as an attachement object with longitue and latitude coordinates or a Twitter place.\n",
         "line_start": 1051,
-        "line_end": 1053
+        "line_end": 1053,
+        "url": "https://developer.twitter.com/en/docs/twitter-api/getting-started/about-twitter-api)."
     },
     "101": {
         "content": "Source document: data/platform-docs-versions-english/X_Twitter-API-V1/Direct Messages.md\nParagraph location: \n\tAttaching location\n\tExample message with shared coordinate attachment\n\nContent: \n## Example message with shared coordinate attachment  \n`{   \"event\": {     \"type\": \"message_create\",     \"message_create\": {       \"target\": {         \"recipient_id\": \"844385345234\"       },       \"message_data\": {         \"text\": \"Here's my location\",         \"attachment\": {           \"type\": \"location\",           \"location\": {             \"type\": \"shared_coordinate\",             \"shared_coordinate\": {               \"coordinates\": {                 \"type\": \"Point\",                 \"coordinates\": [-122.443893, 37.771718]               }             }           }         }       }     }   } }`\n",
         "line_start": 1055,
-        "line_end": 1057
+        "line_end": 1057,
+        "url": "https://developer.twitter.com/en/docs/twitter-api/getting-started/about-twitter-api)."
     },
     "102": {
         "content": "Source document: data/platform-docs-versions-english/X_Twitter-API-V1/Direct Messages.md\nParagraph location: \n\tAttaching location\n\tExample message with shared place attachment\n\nContent: \n## Example message with shared place attachment  \n`{   \"event\": {     \"type\": \"message_create\",       \"message_create\": {         \"target\": {           \"recipient_id\": \"844385345234\"         },         \"message_data\": {           \"text\": \"Here's my location\",           \"attachment\": {             \"type\": \"location\",             \"location\": {               \"type\": \"shared_place\",               \"shared_place\": {                 \"place\": {                   \"id\": \"123456\"                 }               }             }           }         }       }     }   } }`  \n**Note:** Not all place IDs are discoverable with [GET geo/search](https://developer.twitter.com/en/docs/geo/places-near-location/api-reference/get-geo-search.html).\u00a0To retrieve all available details for a place ID you may also use [GET geo/id/:place\\_id](https://developer.twitter.com/en/docs/twitter-api/v1/geo/place-information/api-reference/get-geo-id-place_id).  \nRetrieving media\n",
         "line_start": 1060,
-        "line_end": 1064
+        "line_end": 1064,
+        "url": "https://developer.twitter.com/en/docs/twitter-api/getting-started/about-twitter-api)."
     },
     "103": {
         "content": "Source document: data/platform-docs-versions-english/X_Twitter-API-V1/Direct Messages.md\nParagraph location: \n\tAttaching location\n\tRetrieving media\n\nContent: \n## Retrieving media  \nMedia in direct messages must be retrieved via an authenticated app-user GET request.\u00a0 It is advised that applications store user's access tokens to use for direct message media retrieval.  \nFor media in direct messages, `media_url` is the same https URL as `media_url_https` and must be accessed by signing a request with the user\u2019s access token using OAuth 1.0A.  \nYou can no longer access media via an\u00a0authenticated www.twitter.com session. We cannot prescribe how you should update your integration if you are affected by this change. However, here is one implementation path to address this that we endorse:  \n* Make sure you\u2019re storing a user\u2019s Twitter access token, if you\u2019re not already\n* Set up an endpoint to make OAuth requests to Twitter to retrieve DM images on behalf of the user using the user\u2019s Twitter access token:\n* The endpoint should be a GET endpoint\n* The endpoint must be authenticated\n* The endpoint must deny all cross-origin requests\n* The endpoint must only be used for making requests to retrieve DM images, and must deny requests to other Twitter APIs  \nExample request:  \n`curl --request GET \\    --url https://ton.twitter.com/1.1/ton/data/dm/1034828552951160836/1034828533812486145/oP5p359h.jpg \\    --header 'authorization: OAuth  oauth_consumer_key=\"6NxxxxxxCS\",  oauth_nonce=\"Sbxxxxxx2G\",  oauth_signature=\"637xxxxxxM%3D\",  oauth_signature_method=\"HMAC-SHA1\",  oauth_timestamp=\"1535557741\",  oauth_token=\"600-SQxxxxxxcqIF\",  oauth_version=\"1.0\"'`  \nIf you display images in a web interface, the URL from the newly created endpoint could be used in\u00a0a <img> tag to display to users of your products.  \nExample:  \n`<img src=\"fetch_dm_image?url=https://ton.twitter.com/i/ton/data/dm/xx.jpg\">`  \nOverview  \nMessages published with\u00a0[POST direct\\_messages/events/new (message\\_create)](https://developer.twitter.com/en/docs/direct-messages/sending-and-receiving/api-reference/new-event)\u00a0can have an attached Quick Reply to request stuctured input from a user.  \n[Quick Reply Options API reference](https://developer.twitter.com/en/docs/direct-messages/quick-replies/api-reference/options)List of up to 20 predefined options presented for a user to choose from.  \nQuick Reply attachment metadata will not be accessible via legacy REST and Streaming endpoints. Only text values will be delivered in the legacy Direct Message JSON format.  \nOptions Quick Reply  \noptions\n",
         "line_start": 1069,
-        "line_end": 1090
+        "line_end": 1090,
+        "url": "https://developer.twitter.com/en/docs/twitter-api/getting-started/about-twitter-api)."
     },
     "104": {
         "content": "Source document: data/platform-docs-versions-english/X_Twitter-API-V1/Direct Messages.md\nParagraph location: \n\tOptions Quick Reply\n\nContent: \n# Options Quick Reply  \nList of up to 20 predefined options presented for a user to choose from. For use with [POST direct\\_messages/events/new (message\\_create)](https://developer.twitter.com/en/docs/direct-messages/sending-and-receiving/api-reference/new-event).\n",
         "line_start": 1109,
-        "line_end": 1111
+        "line_end": 1111,
+        "url": "https://developer.twitter.com/en/docs/twitter-api/getting-started/about-twitter-api)."
     },
     "105": {
         "content": "Source document: data/platform-docs-versions-english/X_Twitter-API-V1/Direct Messages.md\nParagraph location: \n\tOptions Quick Reply\n\tQuick Reply Object[\u00b6](#quick-reply-object \"Permalink to this headline\")\n\nContent: \n## Quick Reply Object[\u00b6](#quick-reply-object \"Permalink to this headline\")  \n|     |     |\n| --- | --- |\n| **quick\\_reply.type** (required) | Must be set to `options` |\n| **quick\\_reply.option** (required) | An array of `options` objects. |\n",
         "line_start": 1113,
-        "line_end": 1118
+        "line_end": 1118,
+        "url": "https://developer.twitter.com/en/docs/twitter-api/getting-started/about-twitter-api)."
     },
     "106": {
         "content": "Source document: data/platform-docs-versions-english/X_Twitter-API-V1/Direct Messages.md\nParagraph location: \n\tOptions Quick Reply\n\tOption Object[\u00b6](#option-object \"Permalink to this headline\")\n\nContent: \n## Option Object[\u00b6](#option-object \"Permalink to this headline\")  \n|     |     |\n| --- | --- |\n| **label** (required) | The text label displayed on the button face. Label text is returned as the user's message response. String, max length of 36 characters including spaces. Values with URLs are not allowed and will return an error. |\n| **description** (optional) | Optional description text displayed under label text. All options must have this property defined if property is present in any option. Text is auto-wrapped and will display on a max of two lines and supports `n` for controlling line breaks. Description text is not include in the user's message response. String, max length of 72 characters including spaces. |\n| **metadata** (optional) | Metadata that will be sent back in the webhook request. String, max length of 1,000 characters including spaces. |\n",
         "line_start": 1120,
-        "line_end": 1126
+        "line_end": 1126,
+        "url": "https://developer.twitter.com/en/docs/twitter-api/getting-started/about-twitter-api)."
     },
     "107": {
         "content": "Source document: data/platform-docs-versions-english/X_Twitter-API-V1/Direct Messages.md\nParagraph location: \n\tOptions Quick Reply\n\tExample Request[\u00b6](#example-request \"Permalink to this headline\")\n\nContent: \n## Example Request[\u00b6](#example-request \"Permalink to this headline\")  \nAlthough not required, if one option defines the `description`, then all `options` must contain the `description`.  \n{\n\"event\": {\n\"type\": \"message_create\",\n\"message_create\": {\n\"target\": {\n\"recipient_id\": \"844385345234\"\n},\n\"message_data\": {\n\"text\": \"What's your favorite type of bird?\",\n\"quick_reply\": {\n\"type\": \"options\",\n\"options\": [\n{\n\"label\": \"Red Bird\",\n\"description\": \"A description about the red bird.\",\n\"metadata\": \"external_id_1\"\n},\n{\n\"label\": \"Blue Bird\",\n\"description\": \"A description about the blue bird.\",\n\"metadata\": \"external_id_2\"\n},\n{\n\"label\": \"Black Bird\",\n\"description\": \"A description about the black bird.\",\n\"metadata\": \"external_id_3\"\n},\n{\n\"label\": \"White Bird\",\n\"description\": \"A description about the white bird.\",\n\"metadata\": \"external_id_4\"\n}\n]\n}\n}\n}\n}\n}\n",
         "line_start": 826,
-        "line_end": 866
+        "line_end": 866,
+        "url": "https://developer.twitter.com/en/docs/twitter-api/getting-started/about-twitter-api)."
     },
     "108": {
         "content": "Source document: data/platform-docs-versions-english/X_Twitter-API-V1/Direct Messages.md\nParagraph location: \n\tOptions Quick Reply\n\tExample User Response[\u00b6](#example-user-response \"Permalink to this headline\")\n\nContent: \n## Example User Response[\u00b6](#example-user-response \"Permalink to this headline\")  \nThe `type` and `metadata` will be present in the `quick_reply_response` object. The `label` for the chosen option is sent as the message `text`.  \n{\n\"event\": {\n\"type\": \"message_create\",\n\"id\": \"1234858592\",\n\"created_timestamp\": \"1392078023603\",\n\"message_create\": {\n\"target\": {\n\"recipient_id\": \"1234858592\"\n},\n\"sender_id\": \"3805104374\",\n\"message_data\": {\n\"text\": \"Blue Bird\",\n\"entities\": {\n\"hashtags\": [],\n\"symbols\": [],\n\"urls\": [],\n\"user_mentions\": []\n},\n\"quick_reply_response\": {\n\"type\": \"options\",\n\"metadata\": \"external_id_2\"\n}\n}\n}\n}\n}  \nOverview  \nButtons enable developers to add up to three call-to-action (CTA) buttons to any Direct Message or Welcome Message. These buttons can be used to open any URL from the Direct Message compose view. The text labels displayed on the buttons can be fully customized.  \nThis feature is intended to make it easier for users to complete actions outside of Direct Messages, whether in a webview or in another part of the Twitter app. For instance, buttons can be used to:  \n* **Open a webview**\u00a0to interact with a mobile web page that is better suited for completing an action than completing that action in messaging. For example, completing a credit card purchase or interacting with a side-by-side comparison of different products.  \n* **Compose a Tweet**\u00a0at the end of a Direct Message interaction. For example, to tell others about a bot or share a coupon publicly. This can be accomplished by using the Tweet\u00a0[web intents URL scheme](https://dev.twitter.com/web/intents).  \n* **Follow a user**\u00a0account at the end of a Direct Message interaction. For example, as a final request from a business at the end of a customer service interaction. This can be accomplished using the Follow\u00a0[web intents URL scheme](https://dev.twitter.com/web/intents).  \n* **Send a Direct Message**\u00a0to a different account. For example, to direct a user from a marketing-related bot to a separate dedicated customer service @username to get help from a person. This can be accomplished using the Direct Message URL deep link scheme. Example below.  \nhttps://twitter.com/messages/compose?recipient\\_id=3805104374  \nButtons  \nbuttons\n",
         "line_start": 1171,
-        "line_end": 1209
+        "line_end": 1209,
+        "url": "https://developer.twitter.com/en/docs/twitter-api/getting-started/about-twitter-api)."
     },
     "109": {
         "content": "Source document: data/platform-docs-versions-english/X_Twitter-API-V1/Direct Messages.md\nParagraph location: \n\tButtons\n\nContent: \n# Buttons  \nButtons enable developers to add up to three call-to-action (CTA) buttons to any Direct Message or Welcome Message. These buttons can be used to open any URL from the Direct Message compose view. The text labels displayed on the buttons can be fully customized.  \nThis feature is intended to make it easier for users to complete actions outside of Direct Messages, whether in a webview or in another part of the Twitter app. For instance, buttons can be used to:  \n* **Open a webview** to interact with a mobile web page that is better suited for completing an action than completing that action in messaging. For example, completing a credit card purchase or interacting with a side-by-side comparison of different products.  \n* **Compose a Tweet** at the end of a Direct Message interaction. For example, to tell others about a bot or share a coupon publicly. This can be accomplished by using the Tweet [web intents URL scheme](https://dev.twitter.com/web/intents).  \n* **Follow a user** account at the end of a Direct Message interaction. For example, as a final request from a business at the end of a customer service interaction. This can be accomplished using the Follow [web intents URL scheme](https://dev.twitter.com/web/intents).  \n* **Send a Direct Message** to a different account. For example, to direct a user from a marketing-related bot to a separate dedicated customer service @username to get help from a person. This can be accomplished using the Direct Message URL deep link scheme. Example below.  \nhttps://twitter.com/messages/compose?recipient_id=3805104374\n",
         "line_start": 1222,
-        "line_end": 1230
+        "line_end": 1230,
+        "url": "https://developer.twitter.com/en/docs/twitter-api/getting-started/about-twitter-api)."
     },
     "110": {
         "content": "Source document: data/platform-docs-versions-english/X_Twitter-API-V1/Direct Messages.md\nParagraph location: \n\tButtons\n\tCTAs Object[\u00b6](#ctas-object \"Permalink to this headline\")\n\nContent: \n## CTAs Object[\u00b6](#ctas-object \"Permalink to this headline\")  \nButtons can be added to a Direct Message by defining a `ctas` array of 1-3 objects.  \n|     |     |\n| --- | --- |\n| **type** (required) | Defines the type of button to display. Currently must be set to `web_url`. |\n| **label** (required) | The text that will be displayed to the user on each button. Max string length of 36 characters. |\n| **url** (required) | A valid http or https target URL of the button. |\n| **tco\\_url** (read only) | The t.co version of the URL will be returned in a POST response and on the read path (GET requests) only. |\n",
         "line_start": 1242,
-        "line_end": 1250
+        "line_end": 1250,
+        "url": "https://developer.twitter.com/en/docs/twitter-api/getting-started/about-twitter-api)."
     },
     "111": {
         "content": "Source document: data/platform-docs-versions-english/X_Twitter-API-V1/Direct Messages.md\nParagraph location: \n\tButtons\n\tExample Request[\u00b6](#example-request \"Permalink to this headline\")\n\nContent: \n## Example Request[\u00b6](#example-request \"Permalink to this headline\")  \n{\n\"event\": {\n\"type\": \"message_create\",\n\"message_create\": {\n\"target\": {\n\"recipient_id\": \"844385345234\"\n},\n\"message_data\": {\n\"text\": \"Flight SF8020 from San Francisco to Montreal is ahead of schedule and will land in approximately 15 minutes. Can we help with anything else?\",\n\"ctas\": [\n{\n\"type\": \"web_url\",\n\"label\": \"See flight details\",\n\"url\": \"https://www.myairline.domain/see-flight-details\"\n},\n{\n\"type\": \"web_url\",\n\"label\": \"Map it\",\n\"url\": \"https://www.myairline.domain/map-it\"\n},\n{\n\"type\": \"web_url\",\n\"label\": \"Visit MyAirline.domain\",\n\"url\": \"https://www.myairline.domain/\"\n}\n]\n}\n}\n}\n}\n",
         "line_start": 826,
-        "line_end": 857
+        "line_end": 857,
+        "url": "https://developer.twitter.com/en/docs/twitter-api/getting-started/about-twitter-api)."
     },
     "112": {
         "content": "Source document: data/platform-docs-versions-english/X_Twitter-API-V1/Direct Messages.md\nParagraph location: \n\tButtons\n\tExample Read Response[\u00b6](#example-read-response \"Permalink to this headline\")\n\nContent: \n## Example Read Response[\u00b6](#example-read-response \"Permalink to this headline\")  \nThe following JSON payload is an example of what will be received using an [Account Activity webhook](https://developer.twitter.com/en/docs/accounts-and-users/subscribe-account-activity/overview.html) or GET request like [GET direct\\_messages/events/list](https://developer.twitter.com/en/docs/direct-messages/sending-and-receiving/api-reference/list-events). Notice the addition of the t.co short URL representation of the full URLs.  \n{\n\"event\": {\n\"type\": \"message_create\",\n\"message_create\": {\n\"target\": {\n\"recipient_id\": \"844385345234\"\n},\n\"message_data\": {\n\"text\": \"Flight SF8020 from San Francisco to Montreal is ahead of schedule and will land in approximately 15 minutes. Can we help with anything else?\",\n\"ctas\": [\n{\n\"type\": \"web_url\",\n\"label\": \"See flight details\",\n\"tco_url\": \"https://t.co/foo1\",\n\"url\": \"https://www.myairline.domain/see-flight-details\"\n},\n{\n\"type\": \"web_url\",\n\"label\": \"Map it\",\n\"tco_url\": \"https://t.co/foo2\",\n\"url\": \"https://www.myairline.domain/map-it\"\n},\n{\n\"type\": \"web_url\",\n\"label\": \"Visit MyAirline.domain\",\n\"tco_url\": \"https://t.co/foo3\",\n\"url\": \"https://www.myairline.domain/\"\n}\n]\n}\n}\n}\n}  \nOverview  \nSend typing indicators or read receipts\u00a0that are displayed in the Direct Message conversation view to let users know that their messages are being processed.  \n* [Typing indicators](https://developer.twitter.com/en/docs/direct-messages/typing-indicator-and-read-receipts/api-reference/new-typing-indicator)\nA visual aniamtion in the Direct Message view notifying the recipient that the user is typing or thinking.\n* [Read\u00a0receipts](https://developer.twitter.com/en/docs/direct-messages/typing-indicator-and-read-receipts/api-reference/new-read-receipt)\nA subtle visual notification in the Direct Message view notifying the recipient that the user has read or seen the last message.  \nPOST direct\\_messages/mark\\_read  \nnew-read-receipt\n",
         "line_start": 1286,
-        "line_end": 1329
+        "line_end": 1329,
+        "url": "https://developer.twitter.com/en/docs/twitter-api/getting-started/about-twitter-api)."
     },
     "113": {
         "content": "Source document: data/platform-docs-versions-english/X_Twitter-API-V1/Direct Messages.md\nParagraph location: \n\tPOST direct\\_messages/mark\\_read\n\nContent: \n# POST direct\\_messages/mark\\_read  \nMarks a message as read in the recipient\u2019s Direct Message conversation view with the sender.\n",
         "line_start": 1338,
-        "line_end": 1340
+        "line_end": 1340,
+        "url": "https://developer.twitter.com/en/docs/twitter-api/getting-started/about-twitter-api)."
     },
     "114": {
         "content": "Source document: data/platform-docs-versions-english/X_Twitter-API-V1/Direct Messages.md\nParagraph location: \n\tPOST direct\\_messages/mark\\_read\n\tResource URL[\u00b6](#resource-url \"Permalink to this headline\")\n\nContent: \n## Resource URL[\u00b6](#resource-url \"Permalink to this headline\")  \n`https://api.twitter.com/1.1/direct_messages/mark_read.json`\n",
         "line_start": 248,
-        "line_end": 250
+        "line_end": 250,
+        "url": "https://developer.twitter.com/en/docs/twitter-api/getting-started/about-twitter-api)."
     },
     "115": {
         "content": "Source document: data/platform-docs-versions-english/X_Twitter-API-V1/Direct Messages.md\nParagraph location: \n\tPOST direct\\_messages/mark\\_read\n\tResource Information[\u00b6](#resource-information \"Permalink to this headline\")\n\nContent: \n## Resource Information[\u00b6](#resource-information \"Permalink to this headline\")  \n|     |     |\n| --- | --- |\n| Response formats | JSON |\n| Content-Type | application/json |\n| Requires authentication? | Yes (user context only) |\n| Rate limited? | Yes |\n| Requests / 15-min window (user auth) | 1000 / 15 minutes |\n",
         "line_start": 252,
-        "line_end": 260
+        "line_end": 260,
+        "url": "https://developer.twitter.com/en/docs/twitter-api/getting-started/about-twitter-api)."
     },
     "116": {
         "content": "Source document: data/platform-docs-versions-english/X_Twitter-API-V1/Direct Messages.md\nParagraph location: \n\tPOST direct\\_messages/mark\\_read\n\tParameters[\u00b6](#parameters \"Permalink to this headline\")\n\nContent: \n## Parameters[\u00b6](#parameters \"Permalink to this headline\")  \n|     |     |\n| --- | --- |\n| **last\\_read\\_event\\_id** (required) | The message ID of the most recent message to be marked read. All messages before it will be marked read as well. |\n| **recipient\\_id** (required) | The user ID of the user the message is from. |\n",
         "line_start": 338,
-        "line_end": 343
+        "line_end": 343,
+        "url": "https://developer.twitter.com/en/docs/twitter-api/getting-started/about-twitter-api)."
     },
     "117": {
         "content": "Source document: data/platform-docs-versions-english/X_Twitter-API-V1/Direct Messages.md\nParagraph location: \n\tPOST direct\\_messages/mark\\_read\n\tExample request using [Twurl](https://github.com/twitter/twurl)[\u00b6](#example-request-using-twurl \"Permalink to this headline\")\n\nContent: \n## Example request using [Twurl](https://github.com/twitter/twurl)[\u00b6](#example-request-using-twurl \"Permalink to this headline\")  \ntwurl -X POST /1.1/direct_messages/mark_read.json -d \"last_read_event_id=8754578330382663743\" -d \"recipient_id=3805104374\"\n",
         "line_start": 344,
-        "line_end": 346
+        "line_end": 346,
+        "url": "https://developer.twitter.com/en/docs/twitter-api/getting-started/about-twitter-api)."
     },
     "118": {
         "content": "Source document: data/platform-docs-versions-english/X_Twitter-API-V1/Direct Messages.md\nParagraph location: \n\tPOST direct\\_messages/mark\\_read\n\tHTTP Response Codes[\u00b6](#http-response-codes \"Permalink to this headline\")\n\nContent: \n## HTTP Response Codes[\u00b6](#http-response-codes \"Permalink to this headline\")  \nResponse contains no body.  \n| Code | Message |\n| --- | --- |\n| 204 | Read receipt successfully sent. |\n| 400 | Missing or invalid parameter(s) included in request. |\n",
         "line_start": 1367,
-        "line_end": 1373
+        "line_end": 1373,
+        "url": "https://developer.twitter.com/en/docs/twitter-api/getting-started/about-twitter-api)."
     },
     "119": {
         "content": "Source document: data/platform-docs-versions-english/X_Twitter-API-V1/Direct Messages.md\nParagraph location: \n\tPOST direct\\_messages/mark\\_read\n\tWebhook Event[\u00b6](#webhook-event \"Permalink to this headline\")\n\nContent: \n## Webhook Event[\u00b6](#webhook-event \"Permalink to this headline\")  \nIf using the [Account Activity API](https://developer.twitter.com/en/docs/accounts-and-users/subscribe-account-activity/overview), the following JSON payload will be sent to your webhook for all subscribed users.  \n{\n\"direct_message_mark_read_events\": [\n{\n\"created_timestamp\": \"1288834974657\",\n\"sender_id\": \"2244994945\",\n\"last_read_event_id\": \"877260925346103299\",\n\"target\": {\n\"recipient_id\": \"3805104374\"\n}\n}\n],\n\"users\": {\n// hydrated user objects\n}\n}  \nPOST direct\\_messages/indicate\\_typing  \nnew-typing-indicator\n",
         "line_start": 1376,
-        "line_end": 1395
+        "line_end": 1395,
+        "url": "https://developer.twitter.com/en/docs/twitter-api/getting-started/about-twitter-api)."
     },
     "120": {
         "content": "Source document: data/platform-docs-versions-english/X_Twitter-API-V1/Direct Messages.md\nParagraph location: \n\tPOST direct\\_messages/indicate\\_typing\n\nContent: \n# POST direct\\_messages/indicate\\_typing  \nDisplays a visual typing indicator in the recipient\u2019s Direct Message conversation view with the sender. Each request triggers a typing indicator animation with a duration of ~3 seconds.\n",
         "line_start": 1400,
-        "line_end": 1402
+        "line_end": 1402,
+        "url": "https://developer.twitter.com/en/docs/twitter-api/getting-started/about-twitter-api)."
     },
     "121": {
         "content": "Source document: data/platform-docs-versions-english/X_Twitter-API-V1/Direct Messages.md\nParagraph location: \n\tPOST direct\\_messages/indicate\\_typing\n\tUsage[\u00b6](#usage \"Permalink to this headline\")\n\nContent: \n## Usage[\u00b6](#usage \"Permalink to this headline\")  \nA rudimentary approach would be to invoke an API request on every keypress or input event, however the application may quickly hit rate limits. A more sophisticated approach is to capture input events, but limit API requests to a specified interval based on the behavior of your users and the rate limit specified below.\n",
         "line_start": 1404,
-        "line_end": 1406
+        "line_end": 1406,
+        "url": "https://developer.twitter.com/en/docs/twitter-api/getting-started/about-twitter-api)."
     },
     "122": {
         "content": "Source document: data/platform-docs-versions-english/X_Twitter-API-V1/Direct Messages.md\nParagraph location: \n\tPOST direct\\_messages/indicate\\_typing\n\tResource URL[\u00b6](#resource-url \"Permalink to this headline\")\n\nContent: \n## Resource URL[\u00b6](#resource-url \"Permalink to this headline\")  \n`https://api.twitter.com/1.1/direct_messages/indicate_typing.json`\n",
         "line_start": 248,
-        "line_end": 250
+        "line_end": 250,
+        "url": "https://developer.twitter.com/en/docs/twitter-api/getting-started/about-twitter-api)."
     },
     "123": {
         "content": "Source document: data/platform-docs-versions-english/X_Twitter-API-V1/Direct Messages.md\nParagraph location: \n\tPOST direct\\_messages/indicate\\_typing\n\tResource Information[\u00b6](#resource-information \"Permalink to this headline\")\n\nContent: \n## Resource Information[\u00b6](#resource-information \"Permalink to this headline\")  \n|     |     |\n| --- | --- |\n| Response formats | JSON |\n| Content-Type | application/json |\n| Requires authentication? | Yes (user context only) |\n| Rate limited? | Yes |\n| Requests / 15-min window (user auth) | 1000 / 15 minutes |\n",
         "line_start": 252,
-        "line_end": 260
+        "line_end": 260,
+        "url": "https://developer.twitter.com/en/docs/twitter-api/getting-started/about-twitter-api)."
     },
     "124": {
         "content": "Source document: data/platform-docs-versions-english/X_Twitter-API-V1/Direct Messages.md\nParagraph location: \n\tPOST direct\\_messages/indicate\\_typing\n\tParameters[\u00b6](#parameters \"Permalink to this headline\")\n\nContent: \n## Parameters[\u00b6](#parameters \"Permalink to this headline\")  \n|     |     |\n| --- | --- |\n| **recipient\\_id** (required) | The user ID of the user to receive the typing indicator. |\n",
         "line_start": 338,
-        "line_end": 342
+        "line_end": 342,
+        "url": "https://developer.twitter.com/en/docs/twitter-api/getting-started/about-twitter-api)."
     },
     "125": {
         "content": "Source document: data/platform-docs-versions-english/X_Twitter-API-V1/Direct Messages.md\nParagraph location: \n\tPOST direct\\_messages/indicate\\_typing\n\tExample request using [Twurl](https://github.com/twitter/twurl)[\u00b6](#example-request-using-twurl \"Permalink to this headline\")\n\nContent: \n## Example request using [Twurl](https://github.com/twitter/twurl)[\u00b6](#example-request-using-twurl \"Permalink to this headline\")  \ntwurl -X POST /1.1/direct_messages/indicate_typing.json -d \"recipient_id=3805104374\"\n",
         "line_start": 344,
-        "line_end": 346
+        "line_end": 346,
+        "url": "https://developer.twitter.com/en/docs/twitter-api/getting-started/about-twitter-api)."
     },
     "126": {
         "content": "Source document: data/platform-docs-versions-english/X_Twitter-API-V1/Direct Messages.md\nParagraph location: \n\tPOST direct\\_messages/indicate\\_typing\n\tHTTP Response Codes[\u00b6](#http-response-codes \"Permalink to this headline\")\n\nContent: \n## HTTP Response Codes[\u00b6](#http-response-codes \"Permalink to this headline\")  \nResponse contains no body.  \n| Code | Message |\n| --- | --- |\n| 204 | Typing indicator successfully sent. |\n| 400 | Missing or invalid parameter(s) included in request. |\n",
         "line_start": 1367,
-        "line_end": 1373
+        "line_end": 1373,
+        "url": "https://developer.twitter.com/en/docs/twitter-api/getting-started/about-twitter-api)."
     },
     "127": {
         "content": "Source document: data/platform-docs-versions-english/X_Twitter-API-V1/Direct Messages.md\nParagraph location: \n\tPOST direct\\_messages/indicate\\_typing\n\tWebhook Event[\u00b6](#webhook-event \"Permalink to this headline\")\n\nContent: \n## Webhook Event[\u00b6](#webhook-event \"Permalink to this headline\")  \n**Coming Soon:** If using the [Account Activity API](https://developer.twitter.com/en/docs/accounts-and-users/subscribe-account-activity/overview), the following JSON payload will be sent to your webhook for all subscribed users.  \n{\n\"direct_message_indicate_typing_events\": [\n{\n\"created_timestamp\":\"1288834974657\",\n\"sender_id\":\"2244994945\",\n\"target\":{\n\"recipient_id\":\"3805104374\"\n}\n}\n],\n\"users\": {\n// hydrated user objects\n}\n}  \nOverview  \nWhen creating an app to manage Direct Messages, having context of where the user came from or what application was responsible for sending the message can be important information for managing the conversation. Having this context can help improve analytics or determine the next action your app should take. To provide this context the following is available in Direct Message event objects when applicable.\n",
         "line_start": 1376,
-        "line_end": 1394
+        "line_end": 1394,
+        "url": "https://developer.twitter.com/en/docs/twitter-api/getting-started/about-twitter-api)."
     },
     "128": {
         "content": "Source document: data/platform-docs-versions-english/X_Twitter-API-V1/Direct Messages.md\nParagraph location: \n\tPOST direct\\_messages/indicate\\_typing\n\tEvent properties\n\nContent: \n## Event properties  \nMessage create event properties for conversation management.  \n* [initiated\\_via](https://developer.twitter.com/en/docs/direct-messages/conversation-management/guides/initiated-via)\nProvides the Twitter entity (Tweet or Welcome Message) that preceded the Direct Message in conversation.\n* [source\\_app](https://developer.twitter.com/en/docs/direct-messages/conversation-management/guides/source-app)\nProvides information about the Twitter app the authenticating account used to send the Direct Message.  \ninitiated\\_via  \nWhen users communicate with businesses through Direct Messages, they may be guided by\u00a0[Welcome Messages](https://dev.twitter.com/rest/direct-messages/direct-messages/welcome-messages)\u00a0or led to a private conversation via a Direct Message deeplink. In these cases, it can be important for developers to know if another object preceded the DM in conversation. For example, Initiated Via helps a customer service agent see the full conversation history or enable a bot developer to perform A/B testing of different welcome messages.  \nThe\u00a0initiated\\_via\u00a0object in the Direct Message event object indicates the ID of the Twitter entity that directly preceded the DM in the sender\u2019s context. Currently\u00a0tweet\\_id\u00a0and\u00a0welcome\\_message\\_id\u00a0may be included. The\u00a0initiated\\_via\u00a0object is only present if a Twitter entity directly preceded the DM.\n",
         "line_start": 1464,
-        "line_end": 1473
+        "line_end": 1473,
+        "url": "https://developer.twitter.com/en/docs/twitter-api/getting-started/about-twitter-api)."
     },
     "129": {
         "content": "Source document: data/platform-docs-versions-english/X_Twitter-API-V1/Direct Messages.md\nParagraph location: \n\tPOST direct\\_messages/indicate\\_typing\n\tinitiated\\_via object\n\nContent: \n## initiated\\_via object  \n|     |     |\n| --- | --- |\n| initiated\\_via.tweet\\_id | The ID of the Tweet with Direct Message Prompt the event was initiated from if one was used. |\n| initiated\\_via.welcome\\_message\\_id | The ID of the Welcome Message immediately preceding the event if one was used. |  \n**Note:**\u00a0Direct Messages are never referenced as an entity type under the \u201cinitiated\\_via\u201d object. Developers should continue to rely on IDs for ordering Direct Message events.\n",
         "line_start": 1479,
-        "line_end": 1485
+        "line_end": 1485,
+        "url": "https://developer.twitter.com/en/docs/twitter-api/getting-started/about-twitter-api)."
     },
     "130": {
         "content": "Source document: data/platform-docs-versions-english/X_Twitter-API-V1/Direct Messages.md\nParagraph location: \n\tPOST direct\\_messages/indicate\\_typing\n\tExample Direct Message Event\n\nContent: \n## Example Direct Message Event  \nThe following Direct Message event was preceded by a Direct Message prompt from a Tweet or a Welcome Message was presented to the user.  \n`{   \"type\": \"message_create\",   \"id\": \"1234858592\",   \"created_timestamp\": \"1392078023603\",   \"initiated_via\": {     \"tweet_id\": \"123456\",     \"welcome_message_id\": \"456789\"   },   \"message_create\": {     \"target\": {       \"recipient_id\": \"1234858592\"     },     \"sender_id\": \"3805104374\",     \"source_app_id\": \"268278\",     \"message_data\": {       \"text\": \"Blue Bird\",       \"entities\": {         \"hashtags\": [],         \"symbols\": [],         \"urls\": [],         \"user_mentions\": [],       },       \"quick_reply_response\": {         \"type\": \"options\",         \"metadata\": \"external_id_2\"       },       \"attachment\": {         \"type\": \"media\",         \"media\": {          ...         }       }     }   } }`  \nsource\\_app\n",
         "line_start": 1488,
-        "line_end": 1492
+        "line_end": 1492,
+        "url": "https://developer.twitter.com/en/docs/twitter-api/getting-started/about-twitter-api)."
     },
     "131": {
         "content": "Source document: data/platform-docs-versions-english/X_Twitter-API-V1/Direct Messages.md\nParagraph location: \n\tsource\\_app\n\nContent: \n# source\\_app  \nSome Twitter accounts may make use of more than one application to send Direct Messages \u2014 such as when a human social care app is used alongside a separate bot app to manage the same account. In these cases, it can be helpful for developers to know which app was used to send a given message.  \nThe new\u00a0source\\_app\u00a0object will return this information for all DMs sent by an account. This object is included in the JSON payload for webhooks and REST endpoints. It is relevant on the read path only \u2014 Twitter automatically adds this information based on the app authentication used to post a DM. This value will not be returned in the response for POST events/new.json.  \n**Note:** This same pattern exists with Tweets with the\u00a0source\u00a0property, however the JSON structure is different. Please also note that this object will not be included for DMs received by an authenticating user and is only included for DMs sent by the authenticating user.\n",
         "line_start": 1496,
-        "line_end": 1500
+        "line_end": 1500,
+        "url": "https://developer.twitter.com/en/docs/twitter-api/getting-started/about-twitter-api)."
     },
     "132": {
         "content": "Source document: data/platform-docs-versions-english/X_Twitter-API-V1/Direct Messages.md\nParagraph location: \n\tsource\\_app\n\tsource\\_app object\n\nContent: \n## source\\_app object  \n|     |     |\n| --- | --- |\n| id  | The ID of the Twitter app used by the authenticating user to send the DM. |\n| name | The name of the Twitter app used by the authenticating user to send the DM. |\n| url | The URL of the Twitter app used by the authenticating user to send the DM. |\n",
         "line_start": 1504,
-        "line_end": 1510
+        "line_end": 1510,
+        "url": "https://developer.twitter.com/en/docs/twitter-api/getting-started/about-twitter-api)."
     },
     "133": {
         "content": "Source document: data/platform-docs-versions-english/X_Twitter-API-V1/Direct Messages.md\nParagraph location: \n\tsource\\_app\n\tExample for GET direct\\_messages/events/list\n\nContent: \n## Example for GET direct\\_messages/events/list  \n`{   \"event\": {     \"type\": \"message_create\",     \"id\": \"854103000570187779\",     \"created_timestamp\": \"1492468998459\",     \"message_create\": {       \"target\": {         \"recipient_id\": \"3340250004\"       },       \"sender_id\": \"51378538\",       \"source_app_id\": \"268278\",       \"message_data\": {         \"text\": \"Hello\",         \"entities\": {           \"hashtags\": [],           \"symbols\": [],           \"user_mentions\": [],           \"urls\": []         }       }     }   }   \"apps\": {     \"268278\": {       \"id\": \"268278\",       \"name\": \"Twitter Web Client\",       \"url\": \"http://twitter.com\"     }   } }`\n",
         "line_start": 1512,
-        "line_end": 1514
+        "line_end": 1514,
+        "url": "https://developer.twitter.com/en/docs/twitter-api/getting-started/about-twitter-api)."
     },
     "134": {
         "content": "Source document: data/platform-docs-versions-english/X_Twitter-API-V1/Direct Messages.md\nParagraph location: \n\tsource\\_app\n\tExample for GET direct\\_messages/events/show\n\nContent: \n## Example for GET direct\\_messages/events/show  \n`{   \"events\": [     {       \"type\": \"message_create\",       \"id\": \"854103000570187779\",       \"created_timestamp\": \"1492468998459\",       \"message_create\": {         \"target\": {           \"recipient_id\": \"3340250004\"         },         \"sender_id\": \"51378538\",         \"source_app_id\": \"268278\",         \"message_data\": {           \"text\": \"Hello\",           \"entities\": {             \"hashtags\": [],             \"symbols\": [],             \"user_mentions\": [],             \"urls\": []           }         }       }     },     {       \"type\": \"message_create\",       \"id\": \"867807494898188291\",       \"created_timestamp\": \"1495736404524\",       \"message_create\": {         \"target\": {           \"recipient_id\": \"3340250004\"         },         \"sender_id\": \"51378538\",         \"source_app_id\": \"9206597\",         \"message_data\": {           \"text\": \"World\",           \"entities\": {             \"hashtags\": [],             \"symbols\": [],             \"user_mentions\": [],             \"urls\": []           }         }       }     },   ],   \"apps\": {     \"9206597\": {       \"id\": \"9206597\",       \"name\": \"BeeToSeaBiz TestApp Awesome\",       \"url\": \"https://twitter.com/beetoseabiz\"     },     \"268278\": {       \"id\": \"268278\",       \"name\": \"Twitter Web Client\",       \"url\": \"http://twitter.com\"     }   } }`  \nOverview  \nCustom profiles allow a Direct Message author to present a different identity than that of the Twitter account being used. For example, brands may want customer service agents posting under a single Twitter account to use their own name and photo. A custom profile may also be used to attach a unique identity to a message authored by an automated application or bot so that users clearly understand they are talking to a bot.\n",
         "line_start": 1517,
-        "line_end": 1521
+        "line_end": 1521,
+        "url": "https://developer.twitter.com/en/docs/twitter-api/getting-started/about-twitter-api)."
     },
     "135": {
         "content": "Source document: data/platform-docs-versions-english/X_Twitter-API-V1/Direct Messages.md\nParagraph location: \n\tsource\\_app\n\tTo use the custom profiles feature:\n\nContent: \n## To use the custom profiles feature:  \n1. Posting accounts must be Verified and on an allowlist to use this feature.\n2. Create a custom profile with a name and photo using the API.\n3. Attach a custom profile ID to new Direct Message POST requests. Valid custom profiles will override the default avatar.  \nSend a Direct Message with custom profile  \nattach-profile\n",
         "line_start": 1525,
-        "line_end": 1531
+        "line_end": 1531,
+        "url": "https://developer.twitter.com/en/docs/twitter-api/getting-started/about-twitter-api)."
     },
     "136": {
         "content": "Source document: data/platform-docs-versions-english/X_Twitter-API-V1/Direct Messages.md\nParagraph location: \n\tSend a Direct Message with custom profile\n\nContent: \n# Send a Direct Message with custom profile  \nTo attach a custom profile to a Direct Message add a `event.custom_profile_id` parameter to the [POST direct\\_messages/events/new.json](https://developer.twitter.com/en/docs/direct-messages/sending-and-receiving/api-reference/new-event) request.  \n_Note:_ See [full documentation](https://developer.twitter.com/en/docs/direct-messages/sending-and-receiving/api-reference/new-event) for all properties. Custom profiles can also be used with [welcome messages](https://developer.twitter.com/en/docs/direct-messages/welcome-messages/overview).\n",
         "line_start": 1535,
-        "line_end": 1538
+        "line_end": 1538,
+        "url": "https://developer.twitter.com/en/docs/twitter-api/getting-started/about-twitter-api)."
     },
     "137": {
         "content": "Source document: data/platform-docs-versions-english/X_Twitter-API-V1/Direct Messages.md\nParagraph location: \n\tSend a Direct Message with custom profile\n\tParameters[\u00b6](#parameters \"Permalink to this headline\")\n\nContent: \n## Parameters[\u00b6](#parameters \"Permalink to this headline\")  \n|     |     |\n| --- | --- |\n| **event.custom\\_profile\\_id** | The string ID of the custom profile to attach to the Direct Message. |\n",
         "line_start": 338,
-        "line_end": 342
+        "line_end": 342,
+        "url": "https://developer.twitter.com/en/docs/twitter-api/getting-started/about-twitter-api)."
     },
     "138": {
         "content": "Source document: data/platform-docs-versions-english/X_Twitter-API-V1/Direct Messages.md\nParagraph location: \n\tSend a Direct Message with custom profile\n\tExample Request[\u00b6](#example-request \"Permalink to this headline\")\n\nContent: \n## Example Request[\u00b6](#example-request \"Permalink to this headline\")  \n{\n\"event\": {\n\"type\": \"message_create\",\n\"message_create\": {\n\"target\": {\n\"recipient_id\": \"844385345234\"\n},\n\"message_data\": {\n\"text\": \"Hi, my name is Jon. How can I help?\",\n},\n\"custom_profile_id\": \"100001\"\n}\n}\n}\n",
         "line_start": 826,
-        "line_end": 841
+        "line_end": 841,
+        "url": "https://developer.twitter.com/en/docs/twitter-api/getting-started/about-twitter-api)."
     },
     "139": {
         "content": "Source document: data/platform-docs-versions-english/X_Twitter-API-V1/Direct Messages.md\nParagraph location: \n\tSend a Direct Message with custom profile\n\tExample Request[\u00b6](#example-request \"Permalink to this headline\")\n\tExample request using [Twurl](https://github.com/twitter/twurl)[\u00b6](#example-request-using-twurl \"Permalink to this headline\")\n\nContent: \n### Example request using [Twurl](https://github.com/twitter/twurl)[\u00b6](#example-request-using-twurl \"Permalink to this headline\")  \ntwurl -A 'Content-type: application/json' -X POST /1.1/direct_messages/events/new.json -d ' { \"event\": { \"type\": \"message_create\", \"message_create\": { \"target\": { \"recipient_id\": \"844385345234\" }, \"message_data\": { \"text\": \"Hi, my name is Jon. How can I help?\", }, \"custom_profile_id\": \"100001\" } } }'\n",
         "line_start": 843,
-        "line_end": 845
+        "line_end": 845,
+        "url": "https://developer.twitter.com/en/docs/twitter-api/getting-started/about-twitter-api)."
     },
     "140": {
         "content": "Source document: data/platform-docs-versions-english/X_Twitter-API-V1/Direct Messages.md\nParagraph location: \n\tSend a Direct Message with custom profile\n\tExample Response[\u00b6](#example-response \"Permalink to this headline\")\n\nContent: \n## Example Response[\u00b6](#example-response \"Permalink to this headline\")  \n{\n\"event\": {\n\"type\": \"message_create\",\n\"message_create\": {\n\"target\": {\n\"recipient_id\": \"844385345234\"\n},\n\"sender_id\": \"1241124\",\n\"message_data\": {\n\"text\": \"Hi, my name is Jon. How can I help?\",\n},\n\"custom_profile_id\":  \"100001\"\n}\n}\n}  \nDELETE custom\\_profiles/destroy.json  \ndelete-profile\n",
         "line_start": 297,
-        "line_end": 315
+        "line_end": 315,
+        "url": "https://developer.twitter.com/en/docs/twitter-api/getting-started/about-twitter-api)."
     },
     "141": {
         "content": "Source document: data/platform-docs-versions-english/X_Twitter-API-V1/Direct Messages.md\nParagraph location: \n\tDELETE custom\\_profiles/destroy.json\n\nContent: \n# DELETE custom\\_profiles/destroy.json  \nDeletes a custom profile that was created with [POST custom\\_profiles/new.json](https://developer.twitter.com/en/docs/direct-messages/custom-profiles/api-reference/new-profile).\n",
         "line_start": 1590,
-        "line_end": 1592
+        "line_end": 1592,
+        "url": "https://developer.twitter.com/en/docs/twitter-api/getting-started/about-twitter-api)."
     },
     "142": {
         "content": "Source document: data/platform-docs-versions-english/X_Twitter-API-V1/Direct Messages.md\nParagraph location: \n\tDELETE custom\\_profiles/destroy.json\n\tResource URL[\u00b6](#resource-url \"Permalink to this headline\")\n\nContent: \n## Resource URL[\u00b6](#resource-url \"Permalink to this headline\")  \n`https://api.twitter.com/1.1/custom_profiles/destroy.json`\n",
         "line_start": 248,
-        "line_end": 250
+        "line_end": 250,
+        "url": "https://developer.twitter.com/en/docs/twitter-api/getting-started/about-twitter-api)."
     },
     "143": {
         "content": "Source document: data/platform-docs-versions-english/X_Twitter-API-V1/Direct Messages.md\nParagraph location: \n\tDELETE custom\\_profiles/destroy.json\n\tResource information[\u00b6](#resource-information \"Permalink to this headline\")\n\nContent: \n## Resource information[\u00b6](#resource-information \"Permalink to this headline\")  \n|     |     |\n| --- | --- |\n| Response formats | JSON |\n| Requires authentication? | Yes (user context only) |\n| Rate limited? | Yes |\n| Requests / 24 hour window (user auth) | Yes (1000 / 1 day) |\n",
         "line_start": 1598,
-        "line_end": 1605
+        "line_end": 1605,
+        "url": "https://developer.twitter.com/en/docs/twitter-api/getting-started/about-twitter-api)."
     },
     "144": {
         "content": "Source document: data/platform-docs-versions-english/X_Twitter-API-V1/Direct Messages.md\nParagraph location: \n\tDELETE custom\\_profiles/destroy.json\n\tParameters[\u00b6](#parameters \"Permalink to this headline\")\n\nContent: \n## Parameters[\u00b6](#parameters \"Permalink to this headline\")  \n|     |     |\n| --- | --- |\n| **id** (required) | The string ID of the custom profile to destroy. |\n",
         "line_start": 338,
-        "line_end": 342
+        "line_end": 342,
+        "url": "https://developer.twitter.com/en/docs/twitter-api/getting-started/about-twitter-api)."
     },
     "145": {
         "content": "Source document: data/platform-docs-versions-english/X_Twitter-API-V1/Direct Messages.md\nParagraph location: \n\tDELETE custom\\_profiles/destroy.json\n\tExample request using [Twurl](https://github.com/twitter/twurl)[\u00b6](#example-request-using-twurl \"Permalink to this headline\")\n\nContent: \n## Example request using [Twurl](https://github.com/twitter/twurl)[\u00b6](#example-request-using-twurl \"Permalink to this headline\")  \ntwurl -X DELETE /1.1/custom_profiles/destroy.json?id=100001\n",
         "line_start": 344,
-        "line_end": 346
+        "line_end": 346,
+        "url": "https://developer.twitter.com/en/docs/twitter-api/getting-started/about-twitter-api)."
     },
     "146": {
         "content": "Source document: data/platform-docs-versions-english/X_Twitter-API-V1/Direct Messages.md\nParagraph location: \n\tDELETE custom\\_profiles/destroy.json\n\tExample Response[\u00b6](#example-response \"Permalink to this headline\")\n\nContent: \n## Example Response[\u00b6](#example-response \"Permalink to this headline\")  \nCalling this multiple times on a valid id will return a 204 response code.  \nHTTP 204 with empty body  \nGET custom\\_profiles/:id  \nget-profile\n",
         "line_start": 297,
-        "line_end": 302
+        "line_end": 302,
+        "url": "https://developer.twitter.com/en/docs/twitter-api/getting-started/about-twitter-api)."
     },
     "147": {
         "content": "Source document: data/platform-docs-versions-english/X_Twitter-API-V1/Direct Messages.md\nParagraph location: \n\tGET custom\\_profiles/:id\n\nContent: \n# GET custom\\_profiles/:id  \nReturns a custom profile that was created with [POST custom\\_profiles/new.json](https://developer.twitter.com/en/docs/direct-messages/custom-profiles/api-reference/new-profile).\n",
         "line_start": 1627,
-        "line_end": 1629
+        "line_end": 1629,
+        "url": "https://developer.twitter.com/en/docs/twitter-api/getting-started/about-twitter-api)."
     },
     "148": {
         "content": "Source document: data/platform-docs-versions-english/X_Twitter-API-V1/Direct Messages.md\nParagraph location: \n\tGET custom\\_profiles/:id\n\tResource URL[\u00b6](#resource-url \"Permalink to this headline\")\n\nContent: \n## Resource URL[\u00b6](#resource-url \"Permalink to this headline\")  \n`https://api.twitter.com/1.1/custom_profiles/:id.json`\n",
         "line_start": 248,
-        "line_end": 250
+        "line_end": 250,
+        "url": "https://developer.twitter.com/en/docs/twitter-api/getting-started/about-twitter-api)."
     },
     "149": {
         "content": "Source document: data/platform-docs-versions-english/X_Twitter-API-V1/Direct Messages.md\nParagraph location: \n\tGET custom\\_profiles/:id\n\tResource Information[\u00b6](#resource-information \"Permalink to this headline\")\n\nContent: \n## Resource Information[\u00b6](#resource-information \"Permalink to this headline\")  \n|     |     |\n| --- | --- |\n| Response formats | JSON |\n| Requires authentication? | Yes (user context only) |\n| Rate limited? | Yes |\n| Requests / 24 hour window (user auth) | Yes (180 / 15 min) |\n",
         "line_start": 252,
-        "line_end": 259
+        "line_end": 259,
+        "url": "https://developer.twitter.com/en/docs/twitter-api/getting-started/about-twitter-api)."
     },
     "150": {
         "content": "Source document: data/platform-docs-versions-english/X_Twitter-API-V1/Direct Messages.md\nParagraph location: \n\tGET custom\\_profiles/:id\n\tParameters[\u00b6](#parameters \"Permalink to this headline\")\n\nContent: \n## Parameters[\u00b6](#parameters \"Permalink to this headline\")  \n|     |     |\n| --- | --- |\n| **id** (required) | The string ID of the custom profile that should be returned. Provided in resource URL. |\n",
         "line_start": 338,
-        "line_end": 342
+        "line_end": 342,
+        "url": "https://developer.twitter.com/en/docs/twitter-api/getting-started/about-twitter-api)."
     },
     "151": {
         "content": "Source document: data/platform-docs-versions-english/X_Twitter-API-V1/Direct Messages.md\nParagraph location: \n\tGET custom\\_profiles/:id\n\tExample request using [Twurl](https://github.com/twitter/twurl)[\u00b6](#example-request-using-twurl \"Permalink to this headline\")\n\nContent: \n## Example request using [Twurl](https://github.com/twitter/twurl)[\u00b6](#example-request-using-twurl \"Permalink to this headline\")  \ntwurl -X GET /1.1/custom_profiles/100001\n",
         "line_start": 344,
-        "line_end": 346
+        "line_end": 346,
+        "url": "https://developer.twitter.com/en/docs/twitter-api/getting-started/about-twitter-api)."
     },
     "152": {
         "content": "Source document: data/platform-docs-versions-english/X_Twitter-API-V1/Direct Messages.md\nParagraph location: \n\tGET custom\\_profiles/:id\n\tExample Response[\u00b6](#example-response \"Permalink to this headline\")\n\nContent: \n## Example Response[\u00b6](#example-response \"Permalink to this headline\")  \n{\n\"custom_profile\": {\n\"id\": \"100001\",\n\"created_timestamp\": \"1479767168196\",\n\"name\": \"Jon C, Partner Engineer\",\n\"avatar\": {\n\"media\": {\n\"url\": \"https://pbs.twimg.com/media/Cr7HZpvVYAAYZIX.jpg\"\n}\n}\n}  \nPOST custom\\_profiles/new.json  \nnew-profile\n",
         "line_start": 297,
-        "line_end": 311
+        "line_end": 311,
+        "url": "https://developer.twitter.com/en/docs/twitter-api/getting-started/about-twitter-api)."
     },
     "153": {
         "content": "Source document: data/platform-docs-versions-english/X_Twitter-API-V1/Direct Messages.md\nParagraph location: \n\tPOST custom\\_profiles/new.json\n\nContent: \n# POST custom\\_profiles/new.json  \nCreates a new custom profile. The returned ID should be used with when publishing a new message with [POST direct\\_messages/events/new](https://developer.twitter.com/en/docs/direct-messages/sending-and-receiving/api-reference/new-event).\n",
         "line_start": 1672,
-        "line_end": 1674
+        "line_end": 1674,
+        "url": "https://developer.twitter.com/en/docs/twitter-api/getting-started/about-twitter-api)."
     },
     "154": {
         "content": "Source document: data/platform-docs-versions-english/X_Twitter-API-V1/Direct Messages.md\nParagraph location: \n\tPOST custom\\_profiles/new.json\n\tResource URL[\u00b6](#resource-url \"Permalink to this headline\")\n\nContent: \n## Resource URL[\u00b6](#resource-url \"Permalink to this headline\")  \n`https://api.twitter.com/1.1/custom_profiles/new.json`\n",
         "line_start": 248,
-        "line_end": 250
+        "line_end": 250,
+        "url": "https://developer.twitter.com/en/docs/twitter-api/getting-started/about-twitter-api)."
     },
     "155": {
         "content": "Source document: data/platform-docs-versions-english/X_Twitter-API-V1/Direct Messages.md\nParagraph location: \n\tPOST custom\\_profiles/new.json\n\tResource Information[\u00b6](#resource-information \"Permalink to this headline\")\n\nContent: \n## Resource Information[\u00b6](#resource-information \"Permalink to this headline\")  \n|     |     |\n| --- | --- |\n| Response formats | JSON |\n| Requires authentication? | Yes (user context only) |\n| Rate limited? | Yes |\n| Requests / 24 hour window (user auth) | Yes (1000 / 1 day) |\n",
         "line_start": 252,
-        "line_end": 259
+        "line_end": 259,
+        "url": "https://developer.twitter.com/en/docs/twitter-api/getting-started/about-twitter-api)."
     },
     "156": {
         "content": "Source document: data/platform-docs-versions-english/X_Twitter-API-V1/Direct Messages.md\nParagraph location: \n\tPOST custom\\_profiles/new.json\n\tParameters[\u00b6](#parameters \"Permalink to this headline\")\n\nContent: \n## Parameters[\u00b6](#parameters \"Permalink to this headline\")  \n|     |     |\n| --- | --- |\n| **name** (required) | The string ID of of the custom profile. 48 characters max length. |\n| **avatar.media.id** (required) | The string ID of the media to associate with the profile. See [Uploading Media](https://developer.twitter.com/en/docs/media/upload-media/overview) for further details on generating a media ID. |\n",
         "line_start": 338,
-        "line_end": 343
+        "line_end": 343,
+        "url": "https://developer.twitter.com/en/docs/twitter-api/getting-started/about-twitter-api)."
     },
     "157": {
         "content": "Source document: data/platform-docs-versions-english/X_Twitter-API-V1/Direct Messages.md\nParagraph location: \n\tPOST custom\\_profiles/new.json\n\tExample Request[\u00b6](#example-request \"Permalink to this headline\")\n\nContent: \n## Example Request[\u00b6](#example-request \"Permalink to this headline\")  \n{\n\"custom_profile\": {\n\"name\": \"Jon C, Partner Engineer\",\n\"avatar\": {\n\"media\": {\n\"id\": \"1234\"\n}\n}\n}\n",
         "line_start": 826,
-        "line_end": 836
+        "line_end": 836,
+        "url": "https://developer.twitter.com/en/docs/twitter-api/getting-started/about-twitter-api)."
     },
     "158": {
         "content": "Source document: data/platform-docs-versions-english/X_Twitter-API-V1/Direct Messages.md\nParagraph location: \n\tPOST custom\\_profiles/new.json\n\tExample Request[\u00b6](#example-request \"Permalink to this headline\")\n\tExample request using [Twurl](https://github.com/twitter/twurl)[\u00b6](#example-request-using-twurl \"Permalink to this headline\")\n\nContent: \n### Example request using [Twurl](https://github.com/twitter/twurl)[\u00b6](#example-request-using-twurl \"Permalink to this headline\")  \ntwurl -A 'Content-type: application/json' /1.1/custom_profiles/new.json -d ' { \"custom_profile\": { \"name\": \"Jon C, Partner Engineer\", \"avatar\": { \"media\": { \"id\": \"1234\" } } }'\n",
         "line_start": 843,
-        "line_end": 845
+        "line_end": 845,
+        "url": "https://developer.twitter.com/en/docs/twitter-api/getting-started/about-twitter-api)."
     },
     "159": {
         "content": "Source document: data/platform-docs-versions-english/X_Twitter-API-V1/Direct Messages.md\nParagraph location: \n\tPOST custom\\_profiles/new.json\n\tExample Response[\u00b6](#example-response \"Permalink to this headline\")\n\nContent: \n## Example Response[\u00b6](#example-response \"Permalink to this headline\")  \n{\n\"custom_profile\": {\n\"id\": \"100001\",\n\"created_timestamp\": \"1479767168196\",\n\"name\": \"Jon C, Partner Engineer\",\n\"avatar\": {\n\"media\": {\n\"url\": \"https://pbs.twimg.com/media/Cr7HZpvVYAAYZIX.jpg\"\n}\n}\n}  \nGET custom\\_profiles/list  \nget-profile-list\n",
         "line_start": 297,
-        "line_end": 311
+        "line_end": 311,
+        "url": "https://developer.twitter.com/en/docs/twitter-api/getting-started/about-twitter-api)."
     },
     "160": {
         "content": "Source document: data/platform-docs-versions-english/X_Twitter-API-V1/Direct Messages.md\nParagraph location: \n\tGET custom\\_profiles/list\n\nContent: \n# GET custom\\_profiles/list  \nRetrieves all custom profiles for the authenticated account. Default page size is 20.\n",
         "line_start": 1730,
-        "line_end": 1732
+        "line_end": 1732,
+        "url": "https://developer.twitter.com/en/docs/twitter-api/getting-started/about-twitter-api)."
     },
     "161": {
         "content": "Source document: data/platform-docs-versions-english/X_Twitter-API-V1/Direct Messages.md\nParagraph location: \n\tGET custom\\_profiles/list\n\tResource URL[\u00b6](#resource-url \"Permalink to this headline\")\n\nContent: \n## Resource URL[\u00b6](#resource-url \"Permalink to this headline\")  \n`https://api.twitter.com/1.1/custom_profiles/list.json`\n",
         "line_start": 248,
-        "line_end": 250
+        "line_end": 250,
+        "url": "https://developer.twitter.com/en/docs/twitter-api/getting-started/about-twitter-api)."
     },
     "162": {
         "content": "Source document: data/platform-docs-versions-english/X_Twitter-API-V1/Direct Messages.md\nParagraph location: \n\tGET custom\\_profiles/list\n\tResource Information[\u00b6](#resource-information \"Permalink to this headline\")\n\nContent: \n## Resource Information[\u00b6](#resource-information \"Permalink to this headline\")  \n|     |     |\n| --- | --- |\n| Response formats | JSON |\n| Requires authentication? | Yes (user context only) |\n| Rate limited? | Yes |\n| Requests / 24 hour window (user auth) | Yes (180 / 15 min) |\n",
         "line_start": 252,
-        "line_end": 259
+        "line_end": 259,
+        "url": "https://developer.twitter.com/en/docs/twitter-api/getting-started/about-twitter-api)."
     },
     "163": {
         "content": "Source document: data/platform-docs-versions-english/X_Twitter-API-V1/Direct Messages.md\nParagraph location: \n\tGET custom\\_profiles/list\n\tParameters[\u00b6](#parameters \"Permalink to this headline\")\n\nContent: \n## Parameters[\u00b6](#parameters \"Permalink to this headline\")  \n|     |     |\n| --- | --- |\n| **count** (optional) | Number of custom profile objects to be returned. Max of 50. Default is 20. |\n| **cursor** (optional) | For paging through result sets greater than 1 page. Use the `next_cursor` property returned from the previous request. |  \n_Note:_ In rare cases a response may contain an empty custom profile object with `next_cursor` defined. The presence of a `next_cursor` property in the response indicates there are more custom profiles to retrieve.\n",
         "line_start": 338,
-        "line_end": 344
+        "line_end": 344,
+        "url": "https://developer.twitter.com/en/docs/twitter-api/getting-started/about-twitter-api)."
     },
     "164": {
         "content": "Source document: data/platform-docs-versions-english/X_Twitter-API-V1/Direct Messages.md\nParagraph location: \n\tGET custom\\_profiles/list\n\tExample request using [Twurl](https://github.com/twitter/twurl)[\u00b6](#example-request-using-twurl \"Permalink to this headline\")\n\nContent: \n## Example request using [Twurl](https://github.com/twitter/twurl)[\u00b6](#example-request-using-twurl \"Permalink to this headline\")  \ntwurl -X GET /1.1/custom_profiles/list.json?count=2&cursor=MTIzNDU2Nzg\n",
         "line_start": 344,
-        "line_end": 346
+        "line_end": 346,
+        "url": "https://developer.twitter.com/en/docs/twitter-api/getting-started/about-twitter-api)."
     },
     "165": {
         "content": "Source document: data/platform-docs-versions-english/X_Twitter-API-V1/Direct Messages.md\nParagraph location: \n\tGET custom\\_profiles/list\n\tExample Response[\u00b6](#example-response \"Permalink to this headline\")\n\nContent: \n## Example Response[\u00b6](#example-response \"Permalink to this headline\")  \n{\n\"custom_profiles\": [\n{\n\"id\": \"100001\",\n\"created_timestamp\": \"1479767168196\",\n\"name\": \"Carol\",\n\"avatar\": {\n\"media\": {\n\"url\": \"https://pbs.twimg.com/some_img/987654321/ABC?format=jpg&name=normal\"\n}\n}\n},\n{\n\"id\": \"100002\",\n\"created_timestamp\": \"1479767168197\",\n\"name\": \"Andy\",\n\"avatar\": {\n\"media\": {\n\"url\": \"https://pbs.twimg.com/some_img/56565656/DEF?format=jpg&name=normal\"\n}\n}\n}\n],\n\"next_cursor\": \"NDUzNDUzNDY3Nzc3\"\n}  \nOverview  \nEnterprise\n",
         "line_start": 297,
-        "line_end": 325
+        "line_end": 325,
+        "url": "https://developer.twitter.com/en/docs/twitter-api/getting-started/about-twitter-api)."
     },
     "166": {
         "content": "Source document: data/platform-docs-versions-english/X_Twitter-API-V1/Direct Messages.md\nParagraph location: \n\tGET custom\\_profiles/list\n\tProduct & development guidance\n\nContent: \n## Product & development guidance  \nCollecting structured feedback about customer interactions is a useful part of the customer service experience, providing quantitative measures of service quality and effectiveness that benefits both people and businesses. By asking for feedback in context and shortly after the interaction is complete, people are more likely to provide a response and more likely to provide feedback that reflects their interaction. This feature supports the programmatic creation and delivery of feedback prompts that allow someone to submit responses to feedback surveys after a conversation in Direct Messages.  \n* Feedback should ideally be built into your product so it can be kicked off automatically, not manually. The goal is to remove potential bias in results and to give a sense of trust to the user (for more honest feedback) that the agent who handled the interaction is not reading the results.\n* Feedback results should be delivered to the business via your product. We've built our APIs with an assumption that you could create a dashboard or file download to provide reports to managers. Twitter is not planning to provide an interface for businesses to retrieve results directly from Twitter.\n* Feedback results should ideally not be surfaced directly to an agent, and instead, be surfaced in supervisor reports or in an asynchronous way such that an agent doesn\u2019t see the feedback and change their interaction demeanor or behavior.  \n* Initially, Feedback can only be requested along with a Direct Message. Make sure to check the user object can\\_dm to see if you have the ability to send Feedback before hitting the POST endpoint. (Particularly relevant if sending a Feedback prompt after a public interaction.)  \n* A Direct Message must be sent before prompting a user for Feedback. When brands are considering the Direct Message text preceding the Feedback prompt, make sure it makes sense in the case that the Feedback experience does not render (web client, old clients, 3rd party clients, etc).\n* Scores and text can be submitted independently and will likely have different timestamps. A score may be submitted without a text comment ever being completed. Both scores and text are immutable once submitted.\n* Code should be tolerant of n \u00adnumber of updates per Feedback object. It should not assume a max of three possible updates. You should always rely on the most recent \u201cupdated\\_at\u201d timestamp.\n* An empty next\\_cursor value indicates you have reached the end of the result set. You should make no assumption about empty/partial page returned in \"events\" array as a signal that there is no more data to be fetched.  \n* * *\n",
         "line_start": 1792,
-        "line_end": 1803
+        "line_end": 1803,
+        "url": "https://developer.twitter.com/en/docs/twitter-api/getting-started/about-twitter-api)."
     },
     "167": {
         "content": "Source document: data/platform-docs-versions-english/X_Twitter-API-V1/Direct Messages.md\nParagraph location: \n\tGET custom\\_profiles/list\n\tAccess & authentication\n\nContent: \n## Access & authentication  \nCustomer feedback cards only display to users in the iOS or Android Twitter apps. They do not display on twitter.com, mobile.twitter.com, TweekDeck, or 3rd-party Twitter apps, even if a feedback request is sent.  \nCustomer feedback cards are only available to Twitter enterprise data customers.  \n* Your client app ID and a @username must each be added to an allowlist to get app \u00adlevel access to the API.\n* Authentication is 3-\u00adlegged OAuth currently used with the Twitter public API.\n* We must additionally add the @username to an allowlist for any accounts you wish to send Feedback requests FROM (either your customer\u2019s handles or your own if used for testing purposes).  \nGET feedback/show/:id.json  \nshow\n",
         "line_start": 1810,
-        "line_end": 1818
+        "line_end": 1818,
+        "url": "https://developer.twitter.com/en/docs/twitter-api/getting-started/about-twitter-api)."
     },
     "168": {
         "content": "Source document: data/platform-docs-versions-english/X_Twitter-API-V1/Direct Messages.md\nParagraph location: \n\tGET feedback/show/:id.json\n\nContent: \n# GET feedback/show/:id.json  \nReturns a single Feedback response for the specified ID in the URL.\n",
         "line_start": 1824,
-        "line_end": 1826
+        "line_end": 1826,
+        "url": "https://developer.twitter.com/en/docs/twitter-api/getting-started/about-twitter-api)."
     },
     "169": {
         "content": "Source document: data/platform-docs-versions-english/X_Twitter-API-V1/Direct Messages.md\nParagraph location: \n\tGET feedback/show/:id.json\n\tResource Information[\u00b6](#resource-information \"Permalink to this headline\")\n\nContent: \n## Resource Information[\u00b6](#resource-information \"Permalink to this headline\")  \n|     |     |\n| --- | --- |\n| Response formats | JSON |\n| Requires authentication? | Yes (user context only) |\n| Rate limited? | Yes |\n| Requests / 15 min window (user auth) | 180 |\n",
         "line_start": 252,
-        "line_end": 259
+        "line_end": 259,
+        "url": "https://developer.twitter.com/en/docs/twitter-api/getting-started/about-twitter-api)."
     },
     "170": {
         "content": "Source document: data/platform-docs-versions-english/X_Twitter-API-V1/Direct Messages.md\nParagraph location: \n\tGET feedback/show/:id.json\n\tParameters[\u00b6](#parameters \"Permalink to this headline\")\n\nContent: \n## Parameters[\u00b6](#parameters \"Permalink to this headline\")  \n|     |     |\n| --- | --- |\n| **feedback\\_id** (required) | Required in path. |\n",
         "line_start": 338,
-        "line_end": 342
+        "line_end": 342,
+        "url": "https://developer.twitter.com/en/docs/twitter-api/getting-started/about-twitter-api)."
     },
     "171": {
         "content": "Source document: data/platform-docs-versions-english/X_Twitter-API-V1/Direct Messages.md\nParagraph location: \n\tGET feedback/show/:id.json\n\tResponse Values[\u00b6](#response-values \"Permalink to this headline\")\n\nContent: \n## Response Values[\u00b6](#response-values \"Permalink to this headline\")  \n|     |     |\n| --- | --- |\n| **score** | The user provided score response. 1\u00ad5 if type is CSAT. 0\u00ad10 if type is NPS. |\n| **text** | The user provided text response. |\n",
         "line_start": 1843,
-        "line_end": 1848
+        "line_end": 1848,
+        "url": "https://developer.twitter.com/en/docs/twitter-api/getting-started/about-twitter-api)."
     },
     "172": {
         "content": "Source document: data/platform-docs-versions-english/X_Twitter-API-V1/Direct Messages.md\nParagraph location: \n\tGET feedback/show/:id.json\n\tExample Result[\u00b6](#example-result \"Permalink to this headline\")\n\nContent: \n## Example Result[\u00b6](#example-result \"Permalink to this headline\")  \n{\n\"created_at\": \"SatDec1517:58:20+00002015\",\n\"updated_at\": \"SatDec1517:59:22+00002015\",\n\"id\": \"123456789\"\n\"text\": \"Thankyouforbeingaloyalcustomer!\",\n\"media_id_str\": 12345,\n\"response\": {\n\"score\": {\n\"created_at\": \"SatDec1518:59:22+00002015\",\n\"value\": 1\n},\n\"text\": {\n\"created_at\": \"SatDec1518:59:52+00002015\",\n\"value\": \"I<3thisbiz\"\n}\n}\n}  \nNote  \nResponse object will only be present if data is available.  \nGET feedback/events.json  \nevents\n",
         "line_start": 1850,
-        "line_end": 1872
+        "line_end": 1872,
+        "url": "https://developer.twitter.com/en/docs/twitter-api/getting-started/about-twitter-api)."
     },
     "173": {
         "content": "Source document: data/platform-docs-versions-english/X_Twitter-API-V1/Direct Messages.md\nParagraph location: \n\tGET feedback/events.json\n\nContent: \n# GET feedback/events.json  \nReturns Feedback creation and response events that occur in a specified time period. Please note that the max to\\_time is 24 hours prior to the current time.\n",
         "line_start": 1878,
-        "line_end": 1880
+        "line_end": 1880,
+        "url": "https://developer.twitter.com/en/docs/twitter-api/getting-started/about-twitter-api)."
     },
     "174": {
         "content": "Source document: data/platform-docs-versions-english/X_Twitter-API-V1/Direct Messages.md\nParagraph location: \n\tGET feedback/events.json\n\tResource Information[\u00b6](#resource-information \"Permalink to this headline\")\n\nContent: \n## Resource Information[\u00b6](#resource-information \"Permalink to this headline\")  \n|     |     |\n| --- | --- |\n| Response formats | JSON |\n| Requires authentication? | Yes (user context only) |\n| Rate limited? | Yes |\n| Requests / 15 min window (user auth) | 1,000 |\n",
         "line_start": 252,
-        "line_end": 259
+        "line_end": 259,
+        "url": "https://developer.twitter.com/en/docs/twitter-api/getting-started/about-twitter-api)."
     },
     "175": {
         "content": "Source document: data/platform-docs-versions-english/X_Twitter-API-V1/Direct Messages.md\nParagraph location: \n\tGET feedback/events.json\n\tParameters[\u00b6](#parameters \"Permalink to this headline\")\n\nContent: \n## Parameters[\u00b6](#parameters \"Permalink to this headline\")  \n|     |     |\n| --- | --- |\n| **from\\_time** (required) | Required on the 1st page. Epoch timestamp in milliseconds. Example: 1451936737470<br><br>The range is inclusive. |\n| **to\\_time** (required) | Required on the 1st page. Epoch timestamp in milliseconds. Example: 1451936737470<br><br>The range is inclusive. The max to\\_time is 24 hours before current time. Requests for more recent data via this endpoint will receive an error. |\n| **count** (required) | Max number of results returned. Default and max is 100. |\n| **cursor** (optiona) | For paging through results. Required for paging through result sets greater than 1 page.<br><br>An empty value indicates you have reached the end of the result set. |\n",
         "line_start": 338,
-        "line_end": 345
+        "line_end": 345,
+        "url": "https://developer.twitter.com/en/docs/twitter-api/getting-started/about-twitter-api)."
     },
     "176": {
         "content": "Source document: data/platform-docs-versions-english/X_Twitter-API-V1/Direct Messages.md\nParagraph location: \n\tGET feedback/events.json\n\tResponse Values[\u00b6](#response-values \"Permalink to this headline\")\n\nContent: \n## Response Values[\u00b6](#response-values \"Permalink to this headline\")  \n|     |     |\n| --- | --- |\n| **events** | An array of events. |\n| **event\\_type** | Possible values: feedback.created, feedback.updated |\n| **next\\_cursor** | Values are unique to a given from\\_time/to\\_time range. |\n",
         "line_start": 1843,
-        "line_end": 1849
+        "line_end": 1849,
+        "url": "https://developer.twitter.com/en/docs/twitter-api/getting-started/about-twitter-api)."
     },
     "177": {
         "content": "Source document: data/platform-docs-versions-english/X_Twitter-API-V1/Direct Messages.md\nParagraph location: \n\tGET feedback/events.json\n\tExample Result[\u00b6](#example-result \"Permalink to this headline\")\n\nContent: \n## Example Result[\u00b6](#example-result \"Permalink to this headline\")  \n{\n\"events\":[\n{\n\"event_type\": \"feedback.updated\",\n\"created_at\": \"SatDec1517:58:22+00002015\",\n\"feedback\": {\n\"created_at\": \"SatDec1517:58:20+00002015\",\n\"updated_at\": \"SatDec1517:59:22+00002015\",\n\"id\": \"123456789\",\n...\n}\n},\n{\n\"event_type\": \"feedback.created\",\n\"created_at\": \"SatDec1517:59:22+00002015\",\n\"feedback\":{\n\"created_at\": \"SatDec1517:59:22+00002015\",\n\"updated_at\": \"SatDec1517:59:22+00002015\",\n\"id\": \"123456799\",\n...\n}\n}\n],\n\"next_cursor\": \"10011\"\n}  \nPOST feedback/create.json  \ncreate\n",
         "line_start": 1850,
-        "line_end": 1878
+        "line_end": 1878,
+        "url": "https://developer.twitter.com/en/docs/twitter-api/getting-started/about-twitter-api)."
     },
     "178": {
         "content": "Source document: data/platform-docs-versions-english/X_Twitter-API-V1/Direct Messages.md\nParagraph location: \n\tPOST feedback/create.json\n\nContent: \n# POST feedback/create.json  \nSends Feedback prompt along with a Direct Message (DM) to a specified user. The DM message is required. Sending Feedback inherits the Direct Message restrictions and behavior from [POST direct\\_messages/events/new](https://developer.twitter.com/en/docs/direct-messages/sending-and-receiving/api-reference/new-event).\n",
         "line_start": 1940,
-        "line_end": 1942
+        "line_end": 1942,
+        "url": "https://developer.twitter.com/en/docs/twitter-api/getting-started/about-twitter-api)."
     },
     "179": {
         "content": "Source document: data/platform-docs-versions-english/X_Twitter-API-V1/Direct Messages.md\nParagraph location: \n\tPOST feedback/create.json\n\tResource Information[\u00b6](#resource-information \"Permalink to this headline\")\n\nContent: \n## Resource Information[\u00b6](#resource-information \"Permalink to this headline\")  \n|     |     |\n| --- | --- |\n| Response formats | JSON |\n| Requires authentication? | Yes (user context only) |\n| Rate limited? | Yes |\n| Requests / 24 hour window (user auth) | 1,000 and 1 per recipient |  \n**Note**  \nHandles can be added to an allowlist to receive more than 1 new feedback request per 24 hours. Please send a list of @handles to your account manager.\n",
         "line_start": 252,
-        "line_end": 261
+        "line_end": 261,
+        "url": "https://developer.twitter.com/en/docs/twitter-api/getting-started/about-twitter-api)."
     },
     "180": {
         "content": "Source document: data/platform-docs-versions-english/X_Twitter-API-V1/Direct Messages.md\nParagraph location: \n\tPOST feedback/create.json\n\tParameters[\u00b6](#parameters \"Permalink to this headline\")\n\nContent: \n## Parameters[\u00b6](#parameters \"Permalink to this headline\")  \n|     |     |\n| --- | --- |\n| **type** (required) | The Feedback type. Possible values: csat, nps (case sensitive) |\n| **to\\_user\\_id** (required) | The ID of the user who should receive the Feedback prompt in a direct message. |\n| **message** (required) | The Direct Message text used to introduce the Feedback prompt. |\n| **privacy\\_url** (required) | The URL to the sender\u2019s hosted privacy policy. The sender is the business owner of the @username. |\n| **external\\_id** (optional) | An open field to track case IDs, conversation IDs, etc with a max length of 256 characters. |\n| **question\\_variant\\_id** (optional) | The ID of the relative question variant text that will override the default text. See NPS Question Variants and CSAT Question Variants sections. Default value is 0 if not provided. |\n| **display\\_name** (optional) | Overrides the display name in the question text only (i.e. \"How likely are you to recommend <display\\_name> to a friend?\" Max length of 20 characters.)<br><br>Confirmation messaging uses the default Twitter display name from the business\u2019 profile. |\n| **test** (optional) | Boolean value. Default is false. If true, we will exclude this feedback from analytics / aggregations.<br><br>This value should be used for any testing activity. |\n",
         "line_start": 338,
-        "line_end": 349
+        "line_end": 349,
+        "url": "https://developer.twitter.com/en/docs/twitter-api/getting-started/about-twitter-api)."
     },
     "181": {
         "content": "Source document: data/platform-docs-versions-english/X_Twitter-API-V1/Direct Messages.md\nParagraph location: \n\tPOST feedback/create.json\n\tExample Result[\u00b6](#example-result \"Permalink to this headline\")\n\nContent: \n## Example Result[\u00b6](#example-result \"Permalink to this headline\")  \n{\n\"created_at\":\"SatDec1517:58:20+00002015\",\n\"updated_at\":\"SatDec1517:59:22+00002015\",\n\"id\":\"123456789\",\n\"type\":\"nps\",\n\"test\":false,\n\"dm_id\":\"8989898989\",\n\"from_user_id\":\"1212121212121\",\n\"to_user_id\":\"343434343434\",\n\"privacy_url\":\"https://my\u00adbusiness.domain/privacy\",\n\"external_id\":\"ticket_5555\",\n\"question_variant_id\":\"3\",\n\"display_name\":\"MyBusinessName\"\n}\n",
         "line_start": 1850,
-        "line_end": 1865
+        "line_end": 1865,
+        "url": "https://developer.twitter.com/en/docs/twitter-api/getting-started/about-twitter-api)."
     },
     "182": {
         "content": "Source document: data/platform-docs-versions-english/X_Twitter-API-V1/Direct Messages.md\nParagraph location: \n\tPOST feedback/create.json\n\tNPS Question Variants[\u00b6](#nps-question-variants \"Permalink to this headline\")\n\nContent: \n## NPS Question Variants[\u00b6](#nps-question-variants \"Permalink to this headline\")  \n| ID  | Text |\n| --- | --- |\n| 0   | What is your overall satisfaction with <display\\_name>? |\n| 1   | How satisfied are you with <display\\_name>? |\n| 2   | Overall, how satisfied were you with your recent <display\\_name> experience? |\n| 3   | How would you rate the overall experience with <display\\_name>? |\n| 4   | How would you rate your overall experience with <display\\_name>? |\n| 5   | How would you rate your experience so far with <display\\_name>? |\n",
         "line_start": 1987,
-        "line_end": 1996
+        "line_end": 1996,
+        "url": "https://developer.twitter.com/en/docs/twitter-api/getting-started/about-twitter-api)."
     },
     "183": {
         "content": "Source document: data/platform-docs-versions-english/X_Twitter-API-V1/Direct Messages.md\nParagraph location: \n\tPOST feedback/create.json\n\tCSAT Question Variants[\u00b6](#csat-question-variants \"Permalink to this headline\")\n\nContent: \n## CSAT Question Variants[\u00b6](#csat-question-variants \"Permalink to this headline\")  \n| ID  | Text |\n| --- | --- |\n| 0   | What is your overall satisfaction with <display\\_name>? |\n| 1   | How satisfied are you with <display\\_name>? |\n| 2   | Overall, how satisfied were you with your recent <display\\_name> experience? |\n| 3   | How would you rate the overall experience with <display\\_name>? |\n| 4   | How would you rate your overall experience with <display\\_name>? |\n| 5   | How would you rate your experience so far with <display\\_name>? |\n| 6   | How would you rate your experience on Twitter with <display\\_name>? |\n| 7   | Were you satisfied with your recent experience with <display\\_name>? |\n| 8   | How well does <display\\_name> meet your expectations? |\n| 9   | How would you rate your guest experience with <display\\_name>? |\n| 10  | How would you rate your service experience with <display\\_name>? |\n| 11  | How would you rate your recent service experience with <display\\_name>? |\n| 12  | How would you rate the service you received from <display\\_name>? |\n| 13  | Were you satisfied with the result of your interaction with <display\\_name>? |\n| 14  | How would you rate the ability to resolve your issue with <display\\_name>? |\n| 15  | How would you rate the response time from <display\\_name>? |\n| 16  | How would you rate the speed of service from <display\\_name>? |\n| 17  | How would you rate the time to resolution with <display\\_name>? |\n| 18  | How would you rate the time to resolve your issue with <display\\_name>? |\n| 19  | How would you rate the speed of resolution with <display\\_name>? |\n| 20  | How would you rate the <display\\_name> advisor's expertise? |\n| 21  | How satisfied were you with the <display\\_name> agent who helped you? |\n| 22  | How satisfied were you with the <display\\_name> specialist who helped you? |\n| 23  | How satisfied were you with the <display\\_name> representative who helped you? |\n| 24  | How would you rate your recent banking experience with <display\\_name>? |\n| 25  | How would you rate the overall event experience at <display\\_name>? |\n| 26  | How would you rate your bill pay experience with <display\\_name>? |\n| 27  | How would you rate your purchase experience with <display\\_name>? |\n| 28  | How would you rate your shopping experience with <display\\_name>? |\n| 29  | How would you rate your delivery experience with <display\\_name>? |\n| 30  | How would you rate your rental experience with <display\\_name>? |\n| 31  | How would you rate your recent <display\\_name> store visit? |\n| 32  | How would you rate your recent <display\\_name> hotel stay? |\n| 33  | How would you rate your recent flight with <display\\_name>? |\n| 34  | How would you rate your recent ride with <display\\_name>? |\n| 35  | How would you rate your recent trip with <display\\_name>? |\n| 36  | How would you rate your recent visit to <display\\_name>? |\n| 37  | How would you rate your recent meal at <display\\_name>? |\n",
         "line_start": 1998,
-        "line_end": 2039
+        "line_end": 2039,
+        "url": "https://developer.twitter.com/en/docs/twitter-api/getting-started/about-twitter-api)."
     }
 }

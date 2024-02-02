@@ -2,556 +2,667 @@
     "0": {
         "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Video Endpoint.md\nParagraph location: \n\tVideo Captions\n\tReading\n\tExample\n\nContent: \n### Example  \nHTTPPHP SDKJavaScript SDKAndroid SDKiOS SDK[Graph API Explorer](https://developers.facebook.com/tools/explorer/?method=GET&path=%7Bvideo-id%7D%2Fcaptions&version=v18.0)  \nGET /v18.0/{video-id}/captions HTTP/1.1\nHost: graph.facebook.com  \n/* PHP SDK v5.0.0 */\n/* make the API call */\ntry {\n// Returns a `Facebook\\FacebookResponse` object\n$response = $fb->get(\n'/{video-id}/captions',\n'{access-token}'\n);\n} catch(Facebook\\Exceptions\\FacebookResponseException $e) {\necho 'Graph returned an error: ' . $e->getMessage();\nexit;\n} catch(Facebook\\Exceptions\\FacebookSDKException $e) {\necho 'Facebook SDK returned an error: ' . $e->getMessage();\nexit;\n}\n$graphNode = $response->getGraphNode();\n/* handle the result */  \n/* make the API call */\nFB.api(\n\"/{video-id}/captions\",\nfunction (response) {\nif (response && !response.error) {\n/* handle the result */\n}\n}\n);  \n/* make the API call */\nnew GraphRequest(\nAccessToken.getCurrentAccessToken(),\n\"/{video-id}/captions\",\nnull,\nHttpMethod.GET,\nnew GraphRequest.Callback() {\npublic void onCompleted(GraphResponse response) {\n/* handle the result */\n}\n}\n).executeAsync();  \n/* make the API call */\nFBSDKGraphRequest *request = [[FBSDKGraphRequest alloc]\ninitWithGraphPath:@\"/{video-id}/captions\"\nparameters:params\nHTTPMethod:@\"GET\"];\n[request startWithCompletionHandler:^(FBSDKGraphRequestConnection *connection,\nid result,\nNSError *error) {\n// Handle the result\n}];  \nIf you want to learn how to use the Graph API, read our [Using Graph API guide](https://developers.facebook.com/docs/graph-api/using-graph-api/).\n",
         "line_start": 8,
-        "line_end": 61
+        "line_end": 61,
+        "url": "https://developers.facebook.com/tools/explorer/?method=GET&path=%7Bvideo-id%7D%2Fcaptions&version=v18.0)"
     },
     "1": {
         "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Video Endpoint.md\nParagraph location: \n\tVideo Captions\n\tReading\n\tParameters\n\nContent: \n### Parameters  \nThis endpoint doesn't have any parameters.\n",
         "line_start": 69,
-        "line_end": 71
+        "line_end": 71,
+        "url": "https://developers.facebook.com/tools/explorer/?method=GET&path=%7Bvideo-id%7D%2Fcaptions&version=v18.0)"
     },
     "2": {
         "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Video Endpoint.md\nParagraph location: \n\tVideo Captions\n\tReading\n\tFields\n\nContent: \n### Fields  \nReading from this edge will return a JSON formatted result:  \n{\n\"`data`\": \\[\\],\n\"`paging`\": {}\n}  \n#### `data`  \nA list of [VideoCaption](https://developers.facebook.com/docs/graph-api/reference/video-caption/) nodes.  \n#### `paging`  \nFor more details about pagination, see the [Graph API guide](https://developers.facebook.com/docs/graph-api/using-graph-api/#paging).\n",
         "line_start": 73,
-        "line_end": 83
+        "line_end": 83,
+        "url": "https://developers.facebook.com/tools/explorer/?method=GET&path=%7Bvideo-id%7D%2Fcaptions&version=v18.0)"
     },
     "3": {
         "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Video Endpoint.md\nParagraph location: \n\tVideo Captions\n\tReading\n\tError Codes\n\nContent: \n### Error Codes  \n| Error | Description |\n| --- | --- |\n| 100 | Invalid parameter |  \n[](#)\n",
         "line_start": 90,
-        "line_end": 95
+        "line_end": 95,
+        "url": "https://developers.facebook.com/tools/explorer/?method=GET&path=%7Bvideo-id%7D%2Fcaptions&version=v18.0)"
     },
     "4": {
         "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Video Endpoint.md\nParagraph location: \n\tVideo Captions\n\tCreating\n\nContent: \n## Creating  \nYou can't perform this operation on this endpoint.  \n[](#)\n",
         "line_start": 98,
-        "line_end": 101
+        "line_end": 101,
+        "url": "https://developers.facebook.com/tools/explorer/?method=GET&path=%7Bvideo-id%7D%2Fcaptions&version=v18.0)"
     },
     "5": {
         "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Video Endpoint.md\nParagraph location: \n\tVideo Captions\n\tUpdating\n\tPermissions\n\nContent: \n## Updating  \n### Permissions  \nTo update a video's caption, you need one of the following:  \n* User is the owner of the video  \n* User has manage access on page that owns the video  \n* User has advertiser access on account that owns the video\n",
         "line_start": 104,
-        "line_end": 110
+        "line_end": 110,
+        "url": "https://developers.facebook.com/tools/explorer/?method=GET&path=%7Bvideo-id%7D%2Fcaptions&version=v18.0)"
     },
     "6": {
         "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Video Endpoint.md\nParagraph location: \n\tVideo Captions\n\tUpdating\n\tLimitations\n\nContent: \n### Limitations  \nThe file size limit for video captions is 200K.  \nYou can update a\u00a0[Video](https://developers.facebook.com/docs/graph-api/reference/video/) by making a POST request to [`/{video_id}/captions`](https://developers.facebook.com/docs/graph-api/reference/video/captions/).\n",
         "line_start": 117,
-        "line_end": 120
+        "line_end": 120,
+        "url": "https://developers.facebook.com/tools/explorer/?method=GET&path=%7Bvideo-id%7D%2Fcaptions&version=v18.0)"
     },
     "7": {
         "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Video Endpoint.md\nParagraph location: \n\tVideo Captions\n\tUpdating\n\tParameters\n\nContent: \n### Parameters  \n| Parameter | Description |\n| --- | --- |\n| `captions_file`<br><br>file | Caption file in SRT (SubRip Text) format. File name must be in the format filename.locale.srt |\n| `default_locale`<br><br>string | Specify which locale should be used as the default for the video. Can be set to 'none' |\n| `locales_to_delete`<br><br>list<string> | Default value: `Vector`<br><br>locales of caption to delete |\n",
         "line_start": 69,
-        "line_end": 75
+        "line_end": 75,
+        "url": "https://developers.facebook.com/tools/explorer/?method=GET&path=%7Bvideo-id%7D%2Fcaptions&version=v18.0)"
     },
     "8": {
         "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Video Endpoint.md\nParagraph location: \n\tVideo Captions\n\tUpdating\n\tReturn Type\n\nContent: \n### Return Type  \nThis endpoint supports [read-after-write](https://developers.facebook.com/docs/graph-api/advanced/#read-after-write) and will read the node to which you POSTed.  \nStruct {  \n`success`: bool,  \n}\n",
         "line_start": 132,
-        "line_end": 137
+        "line_end": 137,
+        "url": "https://developers.facebook.com/tools/explorer/?method=GET&path=%7Bvideo-id%7D%2Fcaptions&version=v18.0)"
     },
     "9": {
         "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Video Endpoint.md\nParagraph location: \n\tVideo Captions\n\tUpdating\n\tError Codes\n\nContent: \n### Error Codes  \n| Error | Description |\n| --- | --- |\n| 482 | The captions files you selected contain locales that had been applied to video, please remove and try again. |\n| 387 | There was a problem uploading your captions file. Please try again. |\n| 386 | You uploaded a .SRT file with an incorrect file name. Please use this format: filename.en\\_US.srt |\n| 100 | Invalid parameter |\n| 385 | The captions file you selected is in a format that we don't support. |  \n[](#)\n",
         "line_start": 90,
-        "line_end": 99
+        "line_end": 99,
+        "url": "https://developers.facebook.com/tools/explorer/?method=GET&path=%7Bvideo-id%7D%2Fcaptions&version=v18.0)"
     },
     "10": {
         "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Video Endpoint.md\nParagraph location: \n\tVideo Captions\n\tDeleting\n\nContent: \n## Deleting  \nYou can't perform this operation on this endpoint.  \n[](#)\n",
         "line_start": 154,
-        "line_end": 157
+        "line_end": 157,
+        "url": "https://developers.facebook.com/tools/explorer/?method=GET&path=%7Bvideo-id%7D%2Fcaptions&version=v18.0)"
     },
     "11": {
         "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Video Endpoint.md\nParagraph location: \n\tVideo Comments\n\tReading\n\tNew Page Experience\n\nContent: \n### New Page Experience  \nThis endpoint is supported for [New Page Experience](https://developers.facebook.com/docs/pages/new-pages-experience/).\n",
         "line_start": 168,
-        "line_end": 170
+        "line_end": 170,
+        "url": "https://developers.facebook.com/tools/explorer/?method=GET&path=%7Bvideo-id%7D%2Fcaptions&version=v18.0)"
     },
     "12": {
         "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Video Endpoint.md\nParagraph location: \n\tVideo Comments\n\tReading\n\tExample\n\nContent: \n### Example  \nHTTPPHP SDKJavaScript SDKAndroid SDKiOS SDK[Graph API Explorer](https://developers.facebook.com/tools/explorer/?method=GET&path=%7Bvideo-id%7D%2Fcomments&version=v18.0)  \nGET /v18.0/{video-id}/comments HTTP/1.1\nHost: graph.facebook.com  \n/* PHP SDK v5.0.0 */\n/* make the API call */\ntry {\n// Returns a `Facebook\\FacebookResponse` object\n$response = $fb->get(\n'/{video-id}/comments',\n'{access-token}'\n);\n} catch(Facebook\\Exceptions\\FacebookResponseException $e) {\necho 'Graph returned an error: ' . $e->getMessage();\nexit;\n} catch(Facebook\\Exceptions\\FacebookSDKException $e) {\necho 'Facebook SDK returned an error: ' . $e->getMessage();\nexit;\n}\n$graphNode = $response->getGraphNode();\n/* handle the result */  \n/* make the API call */\nFB.api(\n\"/{video-id}/comments\",\nfunction (response) {\nif (response && !response.error) {\n/* handle the result */\n}\n}\n);  \n/* make the API call */\nnew GraphRequest(\nAccessToken.getCurrentAccessToken(),\n\"/{video-id}/comments\",\nnull,\nHttpMethod.GET,\nnew GraphRequest.Callback() {\npublic void onCompleted(GraphResponse response) {\n/* handle the result */\n}\n}\n).executeAsync();  \n/* make the API call */\nFBSDKGraphRequest *request = [[FBSDKGraphRequest alloc]\ninitWithGraphPath:@\"/{video-id}/comments\"\nparameters:params\nHTTPMethod:@\"GET\"];\n[request startWithCompletionHandler:^(FBSDKGraphRequestConnection *connection,\nid result,\nNSError *error) {\n// Handle the result\n}];  \nIf you want to learn how to use the Graph API, read our [Using Graph API guide](https://developers.facebook.com/docs/graph-api/using-graph-api/).\n",
         "line_start": 8,
-        "line_end": 61
+        "line_end": 61,
+        "url": "https://developers.facebook.com/tools/explorer/?method=GET&path=%7Bvideo-id%7D%2Fcaptions&version=v18.0)"
     },
     "13": {
         "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Video Endpoint.md\nParagraph location: \n\tVideo Comments\n\tReading\n\tParameters\n\nContent: \n### Parameters  \n| Parameter | Description |\n| --- | --- |\n| `filter`<br><br>enum{stream, toplevel} | Default value: `toplevel`<br><br>SELF\\_EXPLANATORY |\n| `live_filter`<br><br>enum{filter\\_low\\_quality, no\\_filter} | Default value: `filter_low_quality`<br><br>For comments on a Live streaming video, this determines whether low quality comments will be filtered out of the results (filtering is enabled by default). In all other circumstances this parameter is ignored. |\n| `order`<br><br>enum{chronological, reverse\\_chronological} | Preferred ordering of the comments. Accepts chronological (oldest first) and reverse chronological (newest first). If the comments can be ranked, then the order will always be ranked regardless of this modifier. The best practice for querying comments on a Live video is to continually poll for comments in the reversechronological ordering mode. |\n| `since`<br><br>datetime | Lower bound of the time range to consider |\n",
         "line_start": 69,
-        "line_end": 76
+        "line_end": 76,
+        "url": "https://developers.facebook.com/tools/explorer/?method=GET&path=%7Bvideo-id%7D%2Fcaptions&version=v18.0)"
     },
     "14": {
         "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Video Endpoint.md\nParagraph location: \n\tVideo Comments\n\tReading\n\tFields\n\nContent: \n### Fields  \nReading from this edge will return a JSON formatted result:  \n{\n\"`data`\": \\[\\],\n\"`paging`\": {},\n\"`summary`\": {}\n}  \n#### `data`  \nA list of [Comment](https://developers.facebook.com/docs/graph-api/reference/comment/) nodes.  \n#### `paging`  \nFor more details about pagination, see the [Graph API guide](https://developers.facebook.com/docs/graph-api/using-graph-api/#paging).  \n#### `summary`  \nAggregated information about the edge, such as counts. Specify the fields to fetch in the summary param (like `summary=order`).  \n| Field | Description |\n| --- | --- |\n| `order`<br><br>enum | Order of returned comments |\n| `total_count`<br><br>unsigned int32 | Total number of people who commented |\n| `can_comment`<br><br>bool | Can the viewer comment |\n",
         "line_start": 73,
-        "line_end": 91
+        "line_end": 91,
+        "url": "https://developers.facebook.com/tools/explorer/?method=GET&path=%7Bvideo-id%7D%2Fcaptions&version=v18.0)"
     },
     "15": {
         "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Video Endpoint.md\nParagraph location: \n\tVideo Comments\n\tReading\n\tError Codes\n\nContent: \n### Error Codes  \n| Error | Description |\n| --- | --- |\n| 100 | Invalid parameter |\n| 200 | Permissions error |\n| 80001 | There have been too many calls to this Page account. Wait a bit and try again. For more info, please refer to https://developers.facebook.com/docs/graph-api/overview/rate-limiting. |\n| 368 | The action attempted has been deemed abusive or is otherwise disallowed |\n| 190 | Invalid OAuth 2.0 Access Token |  \n[](#)\n",
         "line_start": 90,
-        "line_end": 99
+        "line_end": 99,
+        "url": "https://developers.facebook.com/tools/explorer/?method=GET&path=%7Bvideo-id%7D%2Fcaptions&version=v18.0)"
     },
     "16": {
         "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Video Endpoint.md\nParagraph location: \n\tVideo Comments\n\tCreating\n\nContent: \n## Creating  \nYou can make a POST request to `comments` edge from the following paths:  \n* [`/{video_id}/comments`](https://developers.facebook.com/docs/graph-api/reference/video/comments/)  \nWhen posting to this edge, a\u00a0[Comment](https://developers.facebook.com/docs/graph-api/reference/comment/) will be created.\n",
         "line_start": 98,
-        "line_end": 102
+        "line_end": 102,
+        "url": "https://developers.facebook.com/tools/explorer/?method=GET&path=%7Bvideo-id%7D%2Fcaptions&version=v18.0)"
     },
     "17": {
         "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Video Endpoint.md\nParagraph location: \n\tVideo Comments\n\tCreating\n\tParameters\n\nContent: \n### Parameters  \n| Parameter | Description |\n| --- | --- |\n| `attachment_id`<br><br>numeric string or integer | ID for a photo attachment to associate with this |\n| `attachment_share_url`<br><br>URL | Link to set the comment attachment to. Does not include the url in the message |\n| `attachment_url`<br><br>URL | Link to set the comment attachment to |\n| `is_offline`<br><br>boolean | Whether the comment was originally made while offline |\n| `message`<br><br>UTF-8 string | Same as the text param<br><br>Supports Emoji |\n| `text`<br><br>UTF-8 string | The text of the comment that allows emoji<br><br>Supports Emoji |\n",
         "line_start": 69,
-        "line_end": 78
+        "line_end": 78,
+        "url": "https://developers.facebook.com/tools/explorer/?method=GET&path=%7Bvideo-id%7D%2Fcaptions&version=v18.0)"
     },
     "18": {
         "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Video Endpoint.md\nParagraph location: \n\tVideo Comments\n\tCreating\n\tReturn Type\n\nContent: \n### Return Type  \nThis endpoint supports [read-after-write](https://developers.facebook.com/docs/graph-api/advanced/#read-after-write) and will read the node represented by `id` in the return type.  \nStruct {  \n`id`: token with structure: Comment ID,  \n}\n",
         "line_start": 132,
-        "line_end": 137
+        "line_end": 137,
+        "url": "https://developers.facebook.com/tools/explorer/?method=GET&path=%7Bvideo-id%7D%2Fcaptions&version=v18.0)"
     },
     "19": {
         "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Video Endpoint.md\nParagraph location: \n\tVideo Comments\n\tCreating\n\tError Codes\n\nContent: \n### Error Codes  \n| Error | Description |\n| --- | --- |\n| 368 | The action attempted has been deemed abusive or is otherwise disallowed |\n| 190 | Invalid OAuth 2.0 Access Token |\n| 100 | Invalid parameter |\n| 200 | Permissions error |\n| 1705 | There was an error during posting. |\n| 459 | The session is invalid because the user has been checkpointed |  \n[](#)\n",
         "line_start": 90,
-        "line_end": 100
+        "line_end": 100,
+        "url": "https://developers.facebook.com/tools/explorer/?method=GET&path=%7Bvideo-id%7D%2Fcaptions&version=v18.0)"
     },
     "20": {
         "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Video Endpoint.md\nParagraph location: \n\tVideo Comments\n\tUpdating\n\nContent: \n## Updating  \nYou can't perform this operation on this endpoint.  \n[](#)\n",
         "line_start": 104,
-        "line_end": 107
+        "line_end": 107,
+        "url": "https://developers.facebook.com/tools/explorer/?method=GET&path=%7Bvideo-id%7D%2Fcaptions&version=v18.0)"
     },
     "21": {
         "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Video Endpoint.md\nParagraph location: \n\tVideo Comments\n\tDeleting\n\nContent: \n## Deleting  \nYou can't perform this operation on this endpoint.  \n[](#)\n",
         "line_start": 154,
-        "line_end": 157
+        "line_end": 157,
+        "url": "https://developers.facebook.com/tools/explorer/?method=GET&path=%7Bvideo-id%7D%2Fcaptions&version=v18.0)"
     },
     "22": {
         "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Video Endpoint.md\nParagraph location: \n\tVideo Crosspost Shared Pages\n\tReading\n\tExample\n\nContent: \n### Example  \nHTTPPHP SDKJavaScript SDKAndroid SDKiOS SDK[Graph API Explorer](https://developers.facebook.com/tools/explorer/?method=GET&path=%7Bvideo-id%7D%2Fcrosspost_shared_pages&version=v18.0)  \nGET /v18.0/{video-id}/crosspost_shared_pages HTTP/1.1\nHost: graph.facebook.com  \n/* PHP SDK v5.0.0 */\n/* make the API call */\ntry {\n// Returns a `Facebook\\FacebookResponse` object\n$response = $fb->get(\n'/{video-id}/crosspost_shared_pages',\n'{access-token}'\n);\n} catch(Facebook\\Exceptions\\FacebookResponseException $e) {\necho 'Graph returned an error: ' . $e->getMessage();\nexit;\n} catch(Facebook\\Exceptions\\FacebookSDKException $e) {\necho 'Facebook SDK returned an error: ' . $e->getMessage();\nexit;\n}\n$graphNode = $response->getGraphNode();\n/* handle the result */  \n/* make the API call */\nFB.api(\n\"/{video-id}/crosspost_shared_pages\",\nfunction (response) {\nif (response && !response.error) {\n/* handle the result */\n}\n}\n);  \n/* make the API call */\nnew GraphRequest(\nAccessToken.getCurrentAccessToken(),\n\"/{video-id}/crosspost_shared_pages\",\nnull,\nHttpMethod.GET,\nnew GraphRequest.Callback() {\npublic void onCompleted(GraphResponse response) {\n/* handle the result */\n}\n}\n).executeAsync();  \n/* make the API call */\nFBSDKGraphRequest *request = [[FBSDKGraphRequest alloc]\ninitWithGraphPath:@\"/{video-id}/crosspost_shared_pages\"\nparameters:params\nHTTPMethod:@\"GET\"];\n[request startWithCompletionHandler:^(FBSDKGraphRequestConnection *connection,\nid result,\nNSError *error) {\n// Handle the result\n}];  \nIf you want to learn how to use the Graph API, read our [Using Graph API guide](https://developers.facebook.com/docs/graph-api/using-graph-api/).\n",
         "line_start": 8,
-        "line_end": 61
+        "line_end": 61,
+        "url": "https://developers.facebook.com/tools/explorer/?method=GET&path=%7Bvideo-id%7D%2Fcaptions&version=v18.0)"
     },
     "23": {
         "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Video Endpoint.md\nParagraph location: \n\tVideo Crosspost Shared Pages\n\tReading\n\tParameters\n\nContent: \n### Parameters  \nThis endpoint doesn't have any parameters.\n",
         "line_start": 69,
-        "line_end": 71
+        "line_end": 71,
+        "url": "https://developers.facebook.com/tools/explorer/?method=GET&path=%7Bvideo-id%7D%2Fcaptions&version=v18.0)"
     },
     "24": {
         "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Video Endpoint.md\nParagraph location: \n\tVideo Crosspost Shared Pages\n\tReading\n\tFields\n\nContent: \n### Fields  \nReading from this edge will return a JSON formatted result:  \n{\n\"`data`\": \\[\\],\n\"`paging`\": {}\n}  \n#### `data`  \nA list of [Page](https://developers.facebook.com/docs/graph-api/reference/page/) nodes.  \n#### `paging`  \nFor more details about pagination, see the [Graph API guide](https://developers.facebook.com/docs/graph-api/using-graph-api/#paging).\n",
         "line_start": 73,
-        "line_end": 83
+        "line_end": 83,
+        "url": "https://developers.facebook.com/tools/explorer/?method=GET&path=%7Bvideo-id%7D%2Fcaptions&version=v18.0)"
     },
     "25": {
         "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Video Endpoint.md\nParagraph location: \n\tVideo Crosspost Shared Pages\n\tReading\n\tError Codes\n\nContent: \n### Error Codes  \n| Error | Description |\n| --- | --- |\n| 100 | Invalid parameter |  \n[](#)\n",
         "line_start": 90,
-        "line_end": 95
+        "line_end": 95,
+        "url": "https://developers.facebook.com/tools/explorer/?method=GET&path=%7Bvideo-id%7D%2Fcaptions&version=v18.0)"
     },
     "26": {
         "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Video Endpoint.md\nParagraph location: \n\tVideo Crosspost Shared Pages\n\tCreating\n\nContent: \n## Creating  \nYou can't perform this operation on this endpoint.  \n[](#)\n",
         "line_start": 98,
-        "line_end": 101
+        "line_end": 101,
+        "url": "https://developers.facebook.com/tools/explorer/?method=GET&path=%7Bvideo-id%7D%2Fcaptions&version=v18.0)"
     },
     "27": {
         "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Video Endpoint.md\nParagraph location: \n\tVideo Crosspost Shared Pages\n\tUpdating\n\nContent: \n## Updating  \nYou can't perform this operation on this endpoint.  \n[](#)\n",
         "line_start": 104,
-        "line_end": 107
+        "line_end": 107,
+        "url": "https://developers.facebook.com/tools/explorer/?method=GET&path=%7Bvideo-id%7D%2Fcaptions&version=v18.0)"
     },
     "28": {
         "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Video Endpoint.md\nParagraph location: \n\tVideo Crosspost Shared Pages\n\tDeleting\n\nContent: \n## Deleting  \nYou can't perform this operation on this endpoint.  \n[](#)\n",
         "line_start": 154,
-        "line_end": 157
+        "line_end": 157,
+        "url": "https://developers.facebook.com/tools/explorer/?method=GET&path=%7Bvideo-id%7D%2Fcaptions&version=v18.0)"
     },
     "29": {
         "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Video Endpoint.md\nParagraph location: \n\tVideo Gaming Clip Create\n\tReading\n\nContent: \n## Reading  \nYou can't perform this operation on this endpoint.  \n[](#)\n",
         "line_start": 4,
-        "line_end": 7
+        "line_end": 7,
+        "url": "https://developers.facebook.com/tools/explorer/?method=GET&path=%7Bvideo-id%7D%2Fcaptions&version=v18.0)"
     },
     "30": {
         "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Video Endpoint.md\nParagraph location: \n\tVideo Gaming Clip Create\n\tCreating\n\nContent: \n## Creating  \nYou can make a POST request to `gaming_clip_create` edge from the following paths:  \n* [`/{video_id}/gaming_clip_create`](https://developers.facebook.com/docs/graph-api/reference/video/gaming_clip_create/)  \nWhen posting to this edge, a\u00a0[Video](https://developers.facebook.com/docs/graph-api/reference/video/) will be created.\n",
         "line_start": 98,
-        "line_end": 102
+        "line_end": 102,
+        "url": "https://developers.facebook.com/tools/explorer/?method=GET&path=%7Bvideo-id%7D%2Fcaptions&version=v18.0)"
     },
     "31": {
         "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Video Endpoint.md\nParagraph location: \n\tVideo Gaming Clip Create\n\tCreating\n\tParameters\n\nContent: \n### Parameters  \n| Parameter | Description |\n| --- | --- |\n| `duration_seconds`<br><br>float | Default value: `60`<br><br>The duration in seconds to create the clip. Should be a positive number. |\n",
         "line_start": 69,
-        "line_end": 73
+        "line_end": 73,
+        "url": "https://developers.facebook.com/tools/explorer/?method=GET&path=%7Bvideo-id%7D%2Fcaptions&version=v18.0)"
     },
     "32": {
         "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Video Endpoint.md\nParagraph location: \n\tVideo Gaming Clip Create\n\tCreating\n\tReturn Type\n\nContent: \n### Return Type  \nThis endpoint supports [read-after-write](https://developers.facebook.com/docs/graph-api/advanced/#read-after-write) and will read the node to which you POSTed.  \nStruct {  \n`id`: numeric string,  \n}\n",
         "line_start": 132,
-        "line_end": 137
+        "line_end": 137,
+        "url": "https://developers.facebook.com/tools/explorer/?method=GET&path=%7Bvideo-id%7D%2Fcaptions&version=v18.0)"
     },
     "33": {
         "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Video Endpoint.md\nParagraph location: \n\tVideo Gaming Clip Create\n\tCreating\n\tError Codes\n\nContent: \n### Error Codes  \n| Error | Description |\n| --- | --- |\n| 100 | Invalid parameter |  \n[](#)\n",
         "line_start": 90,
-        "line_end": 95
+        "line_end": 95,
+        "url": "https://developers.facebook.com/tools/explorer/?method=GET&path=%7Bvideo-id%7D%2Fcaptions&version=v18.0)"
     },
     "34": {
         "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Video Endpoint.md\nParagraph location: \n\tVideo Gaming Clip Create\n\tUpdating\n\nContent: \n## Updating  \nYou can't perform this operation on this endpoint.  \n[](#)\n",
         "line_start": 104,
-        "line_end": 107
+        "line_end": 107,
+        "url": "https://developers.facebook.com/tools/explorer/?method=GET&path=%7Bvideo-id%7D%2Fcaptions&version=v18.0)"
     },
     "35": {
         "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Video Endpoint.md\nParagraph location: \n\tVideo Gaming Clip Create\n\tDeleting\n\nContent: \n## Deleting  \nYou can't perform this operation on this endpoint.  \n[](#)\n",
         "line_start": 154,
-        "line_end": 157
+        "line_end": 157,
+        "url": "https://developers.facebook.com/tools/explorer/?method=GET&path=%7Bvideo-id%7D%2Fcaptions&version=v18.0)"
     },
     "36": {
         "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Video Endpoint.md\nParagraph location: \n\tVideo Likes\n\tReading\n\tNew Page Experience\n\nContent: \n### New Page Experience  \nThis endpoint is supported for [New Page Experience](https://developers.facebook.com/docs/pages/new-pages-experience/).\n",
         "line_start": 168,
-        "line_end": 170
+        "line_end": 170,
+        "url": "https://developers.facebook.com/tools/explorer/?method=GET&path=%7Bvideo-id%7D%2Fcaptions&version=v18.0)"
     },
     "37": {
         "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Video Endpoint.md\nParagraph location: \n\tVideo Likes\n\tReading\n\tExample\n\nContent: \n### Example  \nHTTPPHP SDKJavaScript SDKAndroid SDKiOS SDK[Graph API Explorer](https://developers.facebook.com/tools/explorer/?method=GET&path=%7Bvideo-id%7D%2Flikes&version=v18.0)  \nGET /v18.0/{video-id}/likes HTTP/1.1\nHost: graph.facebook.com  \n/* PHP SDK v5.0.0 */\n/* make the API call */\ntry {\n// Returns a `Facebook\\FacebookResponse` object\n$response = $fb->get(\n'/{video-id}/likes',\n'{access-token}'\n);\n} catch(Facebook\\Exceptions\\FacebookResponseException $e) {\necho 'Graph returned an error: ' . $e->getMessage();\nexit;\n} catch(Facebook\\Exceptions\\FacebookSDKException $e) {\necho 'Facebook SDK returned an error: ' . $e->getMessage();\nexit;\n}\n$graphNode = $response->getGraphNode();\n/* handle the result */  \n/* make the API call */\nFB.api(\n\"/{video-id}/likes\",\nfunction (response) {\nif (response && !response.error) {\n/* handle the result */\n}\n}\n);  \n/* make the API call */\nnew GraphRequest(\nAccessToken.getCurrentAccessToken(),\n\"/{video-id}/likes\",\nnull,\nHttpMethod.GET,\nnew GraphRequest.Callback() {\npublic void onCompleted(GraphResponse response) {\n/* handle the result */\n}\n}\n).executeAsync();  \n/* make the API call */\nFBSDKGraphRequest *request = [[FBSDKGraphRequest alloc]\ninitWithGraphPath:@\"/{video-id}/likes\"\nparameters:params\nHTTPMethod:@\"GET\"];\n[request startWithCompletionHandler:^(FBSDKGraphRequestConnection *connection,\nid result,\nNSError *error) {\n// Handle the result\n}];  \nIf you want to learn how to use the Graph API, read our [Using Graph API guide](https://developers.facebook.com/docs/graph-api/using-graph-api/).\n",
         "line_start": 8,
-        "line_end": 61
+        "line_end": 61,
+        "url": "https://developers.facebook.com/tools/explorer/?method=GET&path=%7Bvideo-id%7D%2Fcaptions&version=v18.0)"
     },
     "38": {
         "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Video Endpoint.md\nParagraph location: \n\tVideo Likes\n\tReading\n\tParameters\n\nContent: \n### Parameters  \nThis endpoint doesn't have any parameters.\n",
         "line_start": 69,
-        "line_end": 71
+        "line_end": 71,
+        "url": "https://developers.facebook.com/tools/explorer/?method=GET&path=%7Bvideo-id%7D%2Fcaptions&version=v18.0)"
     },
     "39": {
         "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Video Endpoint.md\nParagraph location: \n\tVideo Likes\n\tReading\n\tFields\n\nContent: \n### Fields  \nReading from this edge will return a JSON formatted result:  \n{\n\"`data`\": \\[\\],\n\"`paging`\": {},\n\"`summary`\": {}\n}  \n#### `data`  \nA list of [Profile](https://developers.facebook.com/docs/graph-api/reference/profile/) nodes.  \n#### `paging`  \nFor more details about pagination, see the [Graph API guide](https://developers.facebook.com/docs/graph-api/using-graph-api/#paging).  \n#### `summary`  \nAggregated information about the edge, such as counts. Specify the fields to fetch in the summary param (like `summary=total_count`).  \n| Field | Description |\n| --- | --- |\n| `total_count`<br><br>unsigned int32 | Total number of likes |\n| `can_like`<br><br>bool | Can the viewer like |\n| `has_liked`<br><br>bool | Has the viewer liked |\n",
         "line_start": 73,
-        "line_end": 91
+        "line_end": 91,
+        "url": "https://developers.facebook.com/tools/explorer/?method=GET&path=%7Bvideo-id%7D%2Fcaptions&version=v18.0)"
     },
     "40": {
         "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Video Endpoint.md\nParagraph location: \n\tVideo Likes\n\tReading\n\tError Codes\n\nContent: \n### Error Codes  \n| Error | Description |\n| --- | --- |\n| 200 | Permissions error |\n| 100 | Invalid parameter |\n| 80001 | There have been too many calls to this Page account. Wait a bit and try again. For more info, please refer to https://developers.facebook.com/docs/graph-api/overview/rate-limiting. |\n| 190 | Invalid OAuth 2.0 Access Token |  \n[](#)\n",
         "line_start": 90,
-        "line_end": 98
+        "line_end": 98,
+        "url": "https://developers.facebook.com/tools/explorer/?method=GET&path=%7Bvideo-id%7D%2Fcaptions&version=v18.0)"
     },
     "41": {
         "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Video Endpoint.md\nParagraph location: \n\tVideo Likes\n\tCreating\n\nContent: \n## Creating  \nYou can't perform this operation on this endpoint.  \n[](#)\n",
         "line_start": 98,
-        "line_end": 101
+        "line_end": 101,
+        "url": "https://developers.facebook.com/tools/explorer/?method=GET&path=%7Bvideo-id%7D%2Fcaptions&version=v18.0)"
     },
     "42": {
         "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Video Endpoint.md\nParagraph location: \n\tVideo Likes\n\tUpdating\n\nContent: \n## Updating  \nYou can't perform this operation on this endpoint.  \n[](#)\n",
         "line_start": 104,
-        "line_end": 107
+        "line_end": 107,
+        "url": "https://developers.facebook.com/tools/explorer/?method=GET&path=%7Bvideo-id%7D%2Fcaptions&version=v18.0)"
     },
     "43": {
         "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Video Endpoint.md\nParagraph location: \n\tVideo Likes\n\tDeleting\n\nContent: \n## Deleting  \nYou can't perform this operation on this endpoint.  \n[](#)\n",
         "line_start": 154,
-        "line_end": 157
+        "line_end": 157,
+        "url": "https://developers.facebook.com/tools/explorer/?method=GET&path=%7Bvideo-id%7D%2Fcaptions&version=v18.0)"
     },
     "44": {
         "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Video Endpoint.md\nParagraph location: \n\tVideo Picture\n\tReading\n\tExample\n\nContent: \n## Reading  \n### Example  \nHTTPPHP SDKJavaScript SDKAndroid SDKiOS SDK[Graph API Explorer](https://developers.facebook.com/tools/explorer/?method=GET&path=%7Bvideo-id%7D%2Fpicture&version=v18.0)  \nGET /v18.0/{video-id}/picture HTTP/1.1\nHost: graph.facebook.com  \n/* PHP SDK v5.0.0 */\n/* make the API call */\ntry {\n// Returns a `Facebook\\FacebookResponse` object\n$response = $fb->get(\n'/{video-id}/picture',\n'{access-token}'\n);\n} catch(Facebook\\Exceptions\\FacebookResponseException $e) {\necho 'Graph returned an error: ' . $e->getMessage();\nexit;\n} catch(Facebook\\Exceptions\\FacebookSDKException $e) {\necho 'Facebook SDK returned an error: ' . $e->getMessage();\nexit;\n}\n$graphNode = $response->getGraphNode();\n/* handle the result */  \n/* make the API call */\nFB.api(\n\"/{video-id}/picture\",\nfunction (response) {\nif (response && !response.error) {\n/* handle the result */\n}\n}\n);  \n/* make the API call */\nnew GraphRequest(\nAccessToken.getCurrentAccessToken(),\n\"/{video-id}/picture\",\nnull,\nHttpMethod.GET,\nnew GraphRequest.Callback() {\npublic void onCompleted(GraphResponse response) {\n/* handle the result */\n}\n}\n).executeAsync();  \n/* make the API call */\nFBSDKGraphRequest *request = [[FBSDKGraphRequest alloc]\ninitWithGraphPath:@\"/{video-id}/picture\"\nparameters:params\nHTTPMethod:@\"GET\"];\n[request startWithCompletionHandler:^(FBSDKGraphRequestConnection *connection,\nid result,\nNSError *error) {\n// Handle the result\n}];  \nIf you want to learn how to use the Graph API, read our [Using Graph API guide](https://developers.facebook.com/docs/graph-api/using-graph-api/).\n",
         "line_start": 4,
-        "line_end": 58
+        "line_end": 58,
+        "url": "https://developers.facebook.com/tools/explorer/?method=GET&path=%7Bvideo-id%7D%2Fcaptions&version=v18.0)"
     },
     "45": {
         "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Video Endpoint.md\nParagraph location: \n\tVideo Picture\n\tReading\n\tParameters\n\nContent: \n### Parameters  \n| Parameter | Description |\n| --- | --- |\n| `redirect`<br><br>boolean | Default value: `true`<br><br>By default the picture edge will return a picture instead of a JSON response. If you want the picture edge to return JSON that describes the image set `redirect=0` when you make the request. |\n",
         "line_start": 69,
-        "line_end": 73
+        "line_end": 73,
+        "url": "https://developers.facebook.com/tools/explorer/?method=GET&path=%7Bvideo-id%7D%2Fcaptions&version=v18.0)"
     },
     "46": {
         "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Video Endpoint.md\nParagraph location: \n\tVideo Picture\n\tReading\n\tFields\n\nContent: \n### Fields  \nReading from this edge will return a JSON formatted result:  \n{\n\"`data`\": \\[\\],\n\"`paging`\": {}\n}  \n#### `data`  \nA list of [ProfilePictureSource](https://developers.facebook.com/docs/graph-api/reference/profile-picture-source/) nodes.  \n#### `paging`  \nFor more details about pagination, see the [Graph API guide](https://developers.facebook.com/docs/graph-api/using-graph-api/#paging).\n",
         "line_start": 73,
-        "line_end": 83
+        "line_end": 83,
+        "url": "https://developers.facebook.com/tools/explorer/?method=GET&path=%7Bvideo-id%7D%2Fcaptions&version=v18.0)"
     },
     "47": {
         "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Video Endpoint.md\nParagraph location: \n\tVideo Picture\n\tReading\n\tError Codes\n\nContent: \n### Error Codes  \n| Error | Description |\n| --- | --- |\n| 100 | Invalid parameter |  \n[](#)\n",
         "line_start": 90,
-        "line_end": 95
+        "line_end": 95,
+        "url": "https://developers.facebook.com/tools/explorer/?method=GET&path=%7Bvideo-id%7D%2Fcaptions&version=v18.0)"
     },
     "48": {
         "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Video Endpoint.md\nParagraph location: \n\tVideo Picture\n\tCreating\n\nContent: \n## Creating  \nYou can't perform this operation on this endpoint.  \n[](#)\n",
         "line_start": 98,
-        "line_end": 101
+        "line_end": 101,
+        "url": "https://developers.facebook.com/tools/explorer/?method=GET&path=%7Bvideo-id%7D%2Fcaptions&version=v18.0)"
     },
     "49": {
         "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Video Endpoint.md\nParagraph location: \n\tVideo Picture\n\tUpdating\n\nContent: \n## Updating  \nYou can't perform this operation on this endpoint.  \n[](#)\n",
         "line_start": 104,
-        "line_end": 107
+        "line_end": 107,
+        "url": "https://developers.facebook.com/tools/explorer/?method=GET&path=%7Bvideo-id%7D%2Fcaptions&version=v18.0)"
     },
     "50": {
         "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Video Endpoint.md\nParagraph location: \n\tVideo Picture\n\tDeleting\n\nContent: \n## Deleting  \nYou can't perform this operation on this endpoint.  \n[](#)\n",
         "line_start": 154,
-        "line_end": 157
+        "line_end": 157,
+        "url": "https://developers.facebook.com/tools/explorer/?method=GET&path=%7Bvideo-id%7D%2Fcaptions&version=v18.0)"
     },
     "51": {
         "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Video Endpoint.md\nParagraph location: \n\tVideo Poll Settings\n\tReading\n\tExample\n\nContent: \n### Example  \nHTTPPHP SDKJavaScript SDKAndroid SDKiOS SDK[Graph API Explorer](https://developers.facebook.com/tools/explorer/?method=GET&path=%7Bvideo-id%7D%2Fpoll_settings&version=v18.0)  \nGET /v18.0/{video-id}/poll_settings HTTP/1.1\nHost: graph.facebook.com  \n/* PHP SDK v5.0.0 */\n/* make the API call */\ntry {\n// Returns a `Facebook\\FacebookResponse` object\n$response = $fb->get(\n'/{video-id}/poll_settings',\n'{access-token}'\n);\n} catch(Facebook\\Exceptions\\FacebookResponseException $e) {\necho 'Graph returned an error: ' . $e->getMessage();\nexit;\n} catch(Facebook\\Exceptions\\FacebookSDKException $e) {\necho 'Facebook SDK returned an error: ' . $e->getMessage();\nexit;\n}\n$graphNode = $response->getGraphNode();\n/* handle the result */  \n/* make the API call */\nFB.api(\n\"/{video-id}/poll_settings\",\nfunction (response) {\nif (response && !response.error) {\n/* handle the result */\n}\n}\n);  \n/* make the API call */\nnew GraphRequest(\nAccessToken.getCurrentAccessToken(),\n\"/{video-id}/poll_settings\",\nnull,\nHttpMethod.GET,\nnew GraphRequest.Callback() {\npublic void onCompleted(GraphResponse response) {\n/* handle the result */\n}\n}\n).executeAsync();  \n/* make the API call */\nFBSDKGraphRequest *request = [[FBSDKGraphRequest alloc]\ninitWithGraphPath:@\"/{video-id}/poll_settings\"\nparameters:params\nHTTPMethod:@\"GET\"];\n[request startWithCompletionHandler:^(FBSDKGraphRequestConnection *connection,\nid result,\nNSError *error) {\n// Handle the result\n}];  \nIf you want to learn how to use the Graph API, read our [Using Graph API guide](https://developers.facebook.com/docs/graph-api/using-graph-api/).\n",
         "line_start": 8,
-        "line_end": 61
+        "line_end": 61,
+        "url": "https://developers.facebook.com/tools/explorer/?method=GET&path=%7Bvideo-id%7D%2Fcaptions&version=v18.0)"
     },
     "52": {
         "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Video Endpoint.md\nParagraph location: \n\tVideo Poll Settings\n\tReading\n\tParameters\n\nContent: \n### Parameters  \nThis endpoint doesn't have any parameters.\n",
         "line_start": 69,
-        "line_end": 71
+        "line_end": 71,
+        "url": "https://developers.facebook.com/tools/explorer/?method=GET&path=%7Bvideo-id%7D%2Fcaptions&version=v18.0)"
     },
     "53": {
         "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Video Endpoint.md\nParagraph location: \n\tVideo Poll Settings\n\tReading\n\tFields\n\nContent: \n### Fields  \nReading from this edge will return a JSON formatted result:  \n{\n\"`data`\": \\[\\],\n\"`paging`\": {}\n}  \n#### `data`  \nA list of PollSettings nodes.  \n#### `paging`  \nFor more details about pagination, see the [Graph API guide](https://developers.facebook.com/docs/graph-api/using-graph-api/#paging).\n",
         "line_start": 73,
-        "line_end": 83
+        "line_end": 83,
+        "url": "https://developers.facebook.com/tools/explorer/?method=GET&path=%7Bvideo-id%7D%2Fcaptions&version=v18.0)"
     },
     "54": {
         "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Video Endpoint.md\nParagraph location: \n\tVideo Poll Settings\n\tReading\n\tError Codes\n\nContent: \n### Error Codes  \n| Error | Description |\n| --- | --- |\n| 100 | Invalid parameter |  \n[](#)\n",
         "line_start": 90,
-        "line_end": 95
+        "line_end": 95,
+        "url": "https://developers.facebook.com/tools/explorer/?method=GET&path=%7Bvideo-id%7D%2Fcaptions&version=v18.0)"
     },
     "55": {
         "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Video Endpoint.md\nParagraph location: \n\tVideo Poll Settings\n\tCreating\n\nContent: \n## Creating  \nYou can't perform this operation on this endpoint.  \n[](#)\n",
         "line_start": 98,
-        "line_end": 101
+        "line_end": 101,
+        "url": "https://developers.facebook.com/tools/explorer/?method=GET&path=%7Bvideo-id%7D%2Fcaptions&version=v18.0)"
     },
     "56": {
         "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Video Endpoint.md\nParagraph location: \n\tVideo Poll Settings\n\tUpdating\n\nContent: \n## Updating  \nYou can't perform this operation on this endpoint.  \n[](#)\n",
         "line_start": 104,
-        "line_end": 107
+        "line_end": 107,
+        "url": "https://developers.facebook.com/tools/explorer/?method=GET&path=%7Bvideo-id%7D%2Fcaptions&version=v18.0)"
     },
     "57": {
         "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Video Endpoint.md\nParagraph location: \n\tVideo Poll Settings\n\tDeleting\n\nContent: \n## Deleting  \nYou can't perform this operation on this endpoint.  \n[](#)\n",
         "line_start": 154,
-        "line_end": 157
+        "line_end": 157,
+        "url": "https://developers.facebook.com/tools/explorer/?method=GET&path=%7Bvideo-id%7D%2Fcaptions&version=v18.0)"
     },
     "58": {
         "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Video Endpoint.md\nParagraph location: \n\tVideo Polls\n\tReading\n\tExample\n\nContent: \n### Example  \nHTTPPHP SDKJavaScript SDKAndroid SDKiOS SDK[Graph API Explorer](https://developers.facebook.com/tools/explorer/?method=GET&path=%7Bvideo-id%7D%2Fpolls&version=v18.0)  \nGET /v18.0/{video-id}/polls HTTP/1.1\nHost: graph.facebook.com  \n/* PHP SDK v5.0.0 */\n/* make the API call */\ntry {\n// Returns a `Facebook\\FacebookResponse` object\n$response = $fb->get(\n'/{video-id}/polls',\n'{access-token}'\n);\n} catch(Facebook\\Exceptions\\FacebookResponseException $e) {\necho 'Graph returned an error: ' . $e->getMessage();\nexit;\n} catch(Facebook\\Exceptions\\FacebookSDKException $e) {\necho 'Facebook SDK returned an error: ' . $e->getMessage();\nexit;\n}\n$graphNode = $response->getGraphNode();\n/* handle the result */  \n/* make the API call */\nFB.api(\n\"/{video-id}/polls\",\nfunction (response) {\nif (response && !response.error) {\n/* handle the result */\n}\n}\n);  \n/* make the API call */\nnew GraphRequest(\nAccessToken.getCurrentAccessToken(),\n\"/{video-id}/polls\",\nnull,\nHttpMethod.GET,\nnew GraphRequest.Callback() {\npublic void onCompleted(GraphResponse response) {\n/* handle the result */\n}\n}\n).executeAsync();  \n/* make the API call */\nFBSDKGraphRequest *request = [[FBSDKGraphRequest alloc]\ninitWithGraphPath:@\"/{video-id}/polls\"\nparameters:params\nHTTPMethod:@\"GET\"];\n[request startWithCompletionHandler:^(FBSDKGraphRequestConnection *connection,\nid result,\nNSError *error) {\n// Handle the result\n}];  \nIf you want to learn how to use the Graph API, read our [Using Graph API guide](https://developers.facebook.com/docs/graph-api/using-graph-api/).\n",
         "line_start": 8,
-        "line_end": 61
+        "line_end": 61,
+        "url": "https://developers.facebook.com/tools/explorer/?method=GET&path=%7Bvideo-id%7D%2Fcaptions&version=v18.0)"
     },
     "59": {
         "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Video Endpoint.md\nParagraph location: \n\tVideo Polls\n\tReading\n\tParameters\n\nContent: \n### Parameters  \nThis endpoint doesn't have any parameters.\n",
         "line_start": 69,
-        "line_end": 71
+        "line_end": 71,
+        "url": "https://developers.facebook.com/tools/explorer/?method=GET&path=%7Bvideo-id%7D%2Fcaptions&version=v18.0)"
     },
     "60": {
         "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Video Endpoint.md\nParagraph location: \n\tVideo Polls\n\tReading\n\tFields\n\nContent: \n### Fields  \nReading from this edge will return a JSON formatted result:  \n{\n\"`data`\": \\[\\],\n\"`paging`\": {}\n}  \n#### `data`  \nA list of [VideoPoll](https://developers.facebook.com/docs/graph-api/reference/video-poll/) nodes.  \n#### `paging`  \nFor more details about pagination, see the [Graph API guide](https://developers.facebook.com/docs/graph-api/using-graph-api/#paging).\n",
         "line_start": 73,
-        "line_end": 83
+        "line_end": 83,
+        "url": "https://developers.facebook.com/tools/explorer/?method=GET&path=%7Bvideo-id%7D%2Fcaptions&version=v18.0)"
     },
     "61": {
         "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Video Endpoint.md\nParagraph location: \n\tVideo Polls\n\tReading\n\tError Codes\n\nContent: \n### Error Codes  \n| Error | Description |\n| --- | --- |\n| 210 | User not visible |  \n[](#)\n",
         "line_start": 90,
-        "line_end": 95
+        "line_end": 95,
+        "url": "https://developers.facebook.com/tools/explorer/?method=GET&path=%7Bvideo-id%7D%2Fcaptions&version=v18.0)"
     },
     "62": {
         "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Video Endpoint.md\nParagraph location: \n\tVideo Polls\n\tCreating\n\nContent: \n## Creating  \nYou can make a POST request to `polls` edge from the following paths:  \n* [`/{video_id}/polls`](https://developers.facebook.com/docs/graph-api/reference/video/polls/)  \nWhen posting to this edge, a\u00a0[Video](https://developers.facebook.com/docs/graph-api/reference/video/) will be created.\n",
         "line_start": 98,
-        "line_end": 102
+        "line_end": 102,
+        "url": "https://developers.facebook.com/tools/explorer/?method=GET&path=%7Bvideo-id%7D%2Fcaptions&version=v18.0)"
     },
     "63": {
         "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Video Endpoint.md\nParagraph location: \n\tVideo Polls\n\tCreating\n\tParameters\n\nContent: \n### Parameters  \n| Parameter | Description |\n| --- | --- |\n| `correct_option`<br><br>int64 | Number of the correct option (in order, starting from 1) |\n| `options`<br><br>array<string> | Text options for users to select in order<br><br>Required |\n| `question`<br><br>string | Question text<br><br>Required |\n| `show_results`<br><br>boolean | True to show the results after voting, otherwise false |\n",
         "line_start": 69,
-        "line_end": 76
+        "line_end": 76,
+        "url": "https://developers.facebook.com/tools/explorer/?method=GET&path=%7Bvideo-id%7D%2Fcaptions&version=v18.0)"
     },
     "64": {
         "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Video Endpoint.md\nParagraph location: \n\tVideo Polls\n\tCreating\n\tReturn Type\n\nContent: \n### Return Type  \nThis endpoint supports [read-after-write](https://developers.facebook.com/docs/graph-api/advanced/#read-after-write) and will read the node represented by `id` in the return type.  \nStruct {  \n`id`: numeric string,  \n`option_ids`: List \\[  \nnumeric string  \n\\],  \n}\n",
         "line_start": 132,
-        "line_end": 140
+        "line_end": 140,
+        "url": "https://developers.facebook.com/tools/explorer/?method=GET&path=%7Bvideo-id%7D%2Fcaptions&version=v18.0)"
     },
     "65": {
         "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Video Endpoint.md\nParagraph location: \n\tVideo Polls\n\tCreating\n\tError Codes\n\nContent: \n### Error Codes  \n| Error | Description |\n| --- | --- |\n| 100 | Invalid parameter |  \n[](#)\n",
         "line_start": 90,
-        "line_end": 95
+        "line_end": 95,
+        "url": "https://developers.facebook.com/tools/explorer/?method=GET&path=%7Bvideo-id%7D%2Fcaptions&version=v18.0)"
     },
     "66": {
         "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Video Endpoint.md\nParagraph location: \n\tVideo Polls\n\tUpdating\n\nContent: \n## Updating  \nYou can't perform this operation on this endpoint.  \n[](#)\n",
         "line_start": 104,
-        "line_end": 107
+        "line_end": 107,
+        "url": "https://developers.facebook.com/tools/explorer/?method=GET&path=%7Bvideo-id%7D%2Fcaptions&version=v18.0)"
     },
     "67": {
         "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Video Endpoint.md\nParagraph location: \n\tVideo Polls\n\tDeleting\n\nContent: \n## Deleting  \nYou can't perform this operation on this endpoint.  \n[](#)\n",
         "line_start": 154,
-        "line_end": 157
+        "line_end": 157,
+        "url": "https://developers.facebook.com/tools/explorer/?method=GET&path=%7Bvideo-id%7D%2Fcaptions&version=v18.0)"
     },
     "68": {
         "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Video Endpoint.md\nParagraph location: \n\tVideo Sponsor Tags\n\tReading\n\tExample\n\nContent: \n### Example  \nHTTPPHP SDKJavaScript SDKAndroid SDKiOS SDK[Graph API Explorer](https://developers.facebook.com/tools/explorer/?method=GET&path=%7Bvideo-id%7D%2Fsponsor_tags&version=v18.0)  \nGET /v18.0/{video-id}/sponsor_tags HTTP/1.1\nHost: graph.facebook.com  \n/* PHP SDK v5.0.0 */\n/* make the API call */\ntry {\n// Returns a `Facebook\\FacebookResponse` object\n$response = $fb->get(\n'/{video-id}/sponsor_tags',\n'{access-token}'\n);\n} catch(Facebook\\Exceptions\\FacebookResponseException $e) {\necho 'Graph returned an error: ' . $e->getMessage();\nexit;\n} catch(Facebook\\Exceptions\\FacebookSDKException $e) {\necho 'Facebook SDK returned an error: ' . $e->getMessage();\nexit;\n}\n$graphNode = $response->getGraphNode();\n/* handle the result */  \n/* make the API call */\nFB.api(\n\"/{video-id}/sponsor_tags\",\nfunction (response) {\nif (response && !response.error) {\n/* handle the result */\n}\n}\n);  \n/* make the API call */\nnew GraphRequest(\nAccessToken.getCurrentAccessToken(),\n\"/{video-id}/sponsor_tags\",\nnull,\nHttpMethod.GET,\nnew GraphRequest.Callback() {\npublic void onCompleted(GraphResponse response) {\n/* handle the result */\n}\n}\n).executeAsync();  \n/* make the API call */\nFBSDKGraphRequest *request = [[FBSDKGraphRequest alloc]\ninitWithGraphPath:@\"/{video-id}/sponsor_tags\"\nparameters:params\nHTTPMethod:@\"GET\"];\n[request startWithCompletionHandler:^(FBSDKGraphRequestConnection *connection,\nid result,\nNSError *error) {\n// Handle the result\n}];  \nIf you want to learn how to use the Graph API, read our [Using Graph API guide](https://developers.facebook.com/docs/graph-api/using-graph-api/).\n",
         "line_start": 8,
-        "line_end": 61
+        "line_end": 61,
+        "url": "https://developers.facebook.com/tools/explorer/?method=GET&path=%7Bvideo-id%7D%2Fcaptions&version=v18.0)"
     },
     "69": {
         "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Video Endpoint.md\nParagraph location: \n\tVideo Sponsor Tags\n\tReading\n\tParameters\n\nContent: \n### Parameters  \nThis endpoint doesn't have any parameters.\n",
         "line_start": 69,
-        "line_end": 71
+        "line_end": 71,
+        "url": "https://developers.facebook.com/tools/explorer/?method=GET&path=%7Bvideo-id%7D%2Fcaptions&version=v18.0)"
     },
     "70": {
         "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Video Endpoint.md\nParagraph location: \n\tVideo Sponsor Tags\n\tReading\n\tFields\n\nContent: \n### Fields  \nReading from this edge will return a JSON formatted result:  \n{\n\"`data`\": \\[\\],\n\"`paging`\": {}\n}  \n#### `data`  \nA list of [Page](https://developers.facebook.com/docs/graph-api/reference/page/) nodes.  \n#### `paging`  \nFor more details about pagination, see the [Graph API guide](https://developers.facebook.com/docs/graph-api/using-graph-api/#paging).\n",
         "line_start": 73,
-        "line_end": 83
+        "line_end": 83,
+        "url": "https://developers.facebook.com/tools/explorer/?method=GET&path=%7Bvideo-id%7D%2Fcaptions&version=v18.0)"
     },
     "71": {
         "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Video Endpoint.md\nParagraph location: \n\tVideo Sponsor Tags\n\tReading\n\tError Codes\n\nContent: \n### Error Codes  \n| Error | Description |\n| --- | --- |\n| 200 | Permissions error |  \n[](#)\n",
         "line_start": 90,
-        "line_end": 95
+        "line_end": 95,
+        "url": "https://developers.facebook.com/tools/explorer/?method=GET&path=%7Bvideo-id%7D%2Fcaptions&version=v18.0)"
     },
     "72": {
         "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Video Endpoint.md\nParagraph location: \n\tVideo Sponsor Tags\n\tCreating\n\nContent: \n## Creating  \nYou can't perform this operation on this endpoint.  \n[](#)\n",
         "line_start": 98,
-        "line_end": 101
+        "line_end": 101,
+        "url": "https://developers.facebook.com/tools/explorer/?method=GET&path=%7Bvideo-id%7D%2Fcaptions&version=v18.0)"
     },
     "73": {
         "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Video Endpoint.md\nParagraph location: \n\tVideo Sponsor Tags\n\tUpdating\n\nContent: \n## Updating  \nYou can't perform this operation on this endpoint.  \n[](#)\n",
         "line_start": 104,
-        "line_end": 107
+        "line_end": 107,
+        "url": "https://developers.facebook.com/tools/explorer/?method=GET&path=%7Bvideo-id%7D%2Fcaptions&version=v18.0)"
     },
     "74": {
         "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Video Endpoint.md\nParagraph location: \n\tVideo Sponsor Tags\n\tDeleting\n\nContent: \n## Deleting  \nYou can't perform this operation on this endpoint.  \n[](#)\n",
         "line_start": 154,
-        "line_end": 157
+        "line_end": 157,
+        "url": "https://developers.facebook.com/tools/explorer/?method=GET&path=%7Bvideo-id%7D%2Fcaptions&version=v18.0)"
     },
     "75": {
         "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Video Endpoint.md\nParagraph location: \n\tVideo Tags\n\tReading\n\tExample\n\nContent: \n### Example  \nHTTPPHP SDKJavaScript SDKAndroid SDKiOS SDK[Graph API Explorer](https://developers.facebook.com/tools/explorer/?method=GET&path=%7Bvideo-id%7D%2Ftags&version=v18.0)  \nGET /v18.0/{video-id}/tags HTTP/1.1\nHost: graph.facebook.com  \n/* PHP SDK v5.0.0 */\n/* make the API call */\ntry {\n// Returns a `Facebook\\FacebookResponse` object\n$response = $fb->get(\n'/{video-id}/tags',\n'{access-token}'\n);\n} catch(Facebook\\Exceptions\\FacebookResponseException $e) {\necho 'Graph returned an error: ' . $e->getMessage();\nexit;\n} catch(Facebook\\Exceptions\\FacebookSDKException $e) {\necho 'Facebook SDK returned an error: ' . $e->getMessage();\nexit;\n}\n$graphNode = $response->getGraphNode();\n/* handle the result */  \n/* make the API call */\nFB.api(\n\"/{video-id}/tags\",\nfunction (response) {\nif (response && !response.error) {\n/* handle the result */\n}\n}\n);  \n/* make the API call */\nnew GraphRequest(\nAccessToken.getCurrentAccessToken(),\n\"/{video-id}/tags\",\nnull,\nHttpMethod.GET,\nnew GraphRequest.Callback() {\npublic void onCompleted(GraphResponse response) {\n/* handle the result */\n}\n}\n).executeAsync();  \n/* make the API call */\nFBSDKGraphRequest *request = [[FBSDKGraphRequest alloc]\ninitWithGraphPath:@\"/{video-id}/tags\"\nparameters:params\nHTTPMethod:@\"GET\"];\n[request startWithCompletionHandler:^(FBSDKGraphRequestConnection *connection,\nid result,\nNSError *error) {\n// Handle the result\n}];  \nIf you want to learn how to use the Graph API, read our [Using Graph API guide](https://developers.facebook.com/docs/graph-api/using-graph-api/).\n",
         "line_start": 8,
-        "line_end": 61
+        "line_end": 61,
+        "url": "https://developers.facebook.com/tools/explorer/?method=GET&path=%7Bvideo-id%7D%2Fcaptions&version=v18.0)"
     },
     "76": {
         "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Video Endpoint.md\nParagraph location: \n\tVideo Tags\n\tReading\n\tParameters\n\nContent: \n### Parameters  \nThis endpoint doesn't have any parameters.\n",
         "line_start": 69,
-        "line_end": 71
+        "line_end": 71,
+        "url": "https://developers.facebook.com/tools/explorer/?method=GET&path=%7Bvideo-id%7D%2Fcaptions&version=v18.0)"
     },
     "77": {
         "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Video Endpoint.md\nParagraph location: \n\tVideo Tags\n\tReading\n\tFields\n\nContent: \n### Fields  \nReading from this edge will return a JSON formatted result:  \n{\n\"`data`\": \\[\\],\n\"`paging`\": {}\n}  \n#### `data`  \nA list of [TaggableSubject](https://developers.facebook.com/docs/graph-api/reference/taggable-subject/) nodes.  \nThe following fields will be added to each node that is returned:  \n| Field | Description |\n| --- | --- |\n| `created_time`<br><br>datetime | The time the tag was created<br><br>[Default](https://developers.facebook.com/docs/graph-api/using-graph-api/#fields) |  \n#### `paging`  \nFor more details about pagination, see the [Graph API guide](https://developers.facebook.com/docs/graph-api/using-graph-api/#paging).\n",
         "line_start": 73,
-        "line_end": 87
+        "line_end": 87,
+        "url": "https://developers.facebook.com/tools/explorer/?method=GET&path=%7Bvideo-id%7D%2Fcaptions&version=v18.0)"
     },
     "78": {
         "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Video Endpoint.md\nParagraph location: \n\tVideo Tags\n\tReading\n\tError Codes\n\nContent: \n### Error Codes  \n| Error | Description |\n| --- | --- |\n| 100 | Invalid parameter |  \n[](#)\n",
         "line_start": 90,
-        "line_end": 95
+        "line_end": 95,
+        "url": "https://developers.facebook.com/tools/explorer/?method=GET&path=%7Bvideo-id%7D%2Fcaptions&version=v18.0)"
     },
     "79": {
         "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Video Endpoint.md\nParagraph location: \n\tVideo Tags\n\tCreating\n\nContent: \n## Creating  \nYou can't perform this operation on this endpoint.  \n[](#)\n",
         "line_start": 98,
-        "line_end": 101
+        "line_end": 101,
+        "url": "https://developers.facebook.com/tools/explorer/?method=GET&path=%7Bvideo-id%7D%2Fcaptions&version=v18.0)"
     },
     "80": {
         "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Video Endpoint.md\nParagraph location: \n\tVideo Tags\n\tUpdating\n\nContent: \n## Updating  \nYou can't perform this operation on this endpoint.  \n[](#)\n",
         "line_start": 104,
-        "line_end": 107
+        "line_end": 107,
+        "url": "https://developers.facebook.com/tools/explorer/?method=GET&path=%7Bvideo-id%7D%2Fcaptions&version=v18.0)"
     },
     "81": {
         "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Video Endpoint.md\nParagraph location: \n\tVideo Tags\n\tDeleting\n\nContent: \n## Deleting  \nYou can't perform this operation on this endpoint.  \n[](#)\n",
         "line_start": 154,
-        "line_end": 157
+        "line_end": 157,
+        "url": "https://developers.facebook.com/tools/explorer/?method=GET&path=%7Bvideo-id%7D%2Fcaptions&version=v18.0)"
     },
     "82": {
         "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Video Endpoint.md\nParagraph location: \n\tVideo Thumbnails\n\nContent: \n# Video Thumbnails  \n[](#)  \nRepresents a collection of [VideoThumbnails ![](https://scontent-cdg4-2.xx.fbcdn.net/v/t39.2365-6/310307727_3347317042262105_1088877051262827250_n.png?_nc_cat=107&ccb=1-7&_nc_sid=e280be&_nc_ohc=831MNFLSQwkAX_NBYJc&_nc_ht=scontent-cdg4-2.xx&oh=00_AfBFzfp_r0uP87LWhIW9LbUGV2HepuPyhHSxWkm3ugn0Bg&oe=65CA3DE2)](https://developers.facebook.com/docs/graph-api/reference/video-thumbnail) on a [Video ![](https://scontent-cdg4-2.xx.fbcdn.net/v/t39.2365-6/310307727_3347317042262105_1088877051262827250_n.png?_nc_cat=107&ccb=1-7&_nc_sid=e280be&_nc_ohc=831MNFLSQwkAX_NBYJc&_nc_ht=scontent-cdg4-2.xx&oh=00_AfBFzfp_r0uP87LWhIW9LbUGV2HepuPyhHSxWkm3ugn0Bg&oe=65CA3DE2)](https://developers.facebook.com/docs/graph-api/reference/video)  \n[](#)\n",
         "line_start": 1261,
-        "line_end": 1265
+        "line_end": 1265,
+        "url": "https://developers.facebook.com/tools/explorer/?method=GET&path=%7Bvideo-id%7D%2Fcaptions&version=v18.0)"
     },
     "83": {
         "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Video Endpoint.md\nParagraph location: \n\tVideo Thumbnails\n\tReading\n\nContent: \n## Reading  \nGet a list of [VideoThumbnails](https://developers.facebook.com/docs/graph-api/reference/video-thumbnail/) on a [Video](https://developers.facebook.com/docs/graph-api/reference/video/).\n",
         "line_start": 4,
-        "line_end": 6
+        "line_end": 6,
+        "url": "https://developers.facebook.com/tools/explorer/?method=GET&path=%7Bvideo-id%7D%2Fcaptions&version=v18.0)"
     },
     "84": {
         "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Video Endpoint.md\nParagraph location: \n\tVideo Thumbnails\n\tReading\n\tRequirements\n\nContent: \n### Requirements  \n| Type | Requirement |\n| --- | --- |\n| [Access Tokens ![](https://scontent-cdg4-2.xx.fbcdn.net/v/t39.2365-6/310307727_3347317042262105_1088877051262827250_n.png?_nc_cat=107&ccb=1-7&_nc_sid=e280be&_nc_ohc=831MNFLSQwkAX_NBYJc&_nc_ht=scontent-cdg4-2.xx&oh=00_AfBFzfp_r0uP87LWhIW9LbUGV2HepuPyhHSxWkm3ugn0Bg&oe=65CA3DE2)](https://developers.facebook.com/docs/facebook-login/access-tokens) | App or Page |\n| [Permissions ![](https://scontent-cdg4-2.xx.fbcdn.net/v/t39.2365-6/310307727_3347317042262105_1088877051262827250_n.png?_nc_cat=107&ccb=1-7&_nc_sid=e280be&_nc_ohc=831MNFLSQwkAX_NBYJc&_nc_ht=scontent-cdg4-2.xx&oh=00_AfBFzfp_r0uP87LWhIW9LbUGV2HepuPyhHSxWkm3ugn0Bg&oe=65CA3DE2)](https://developers.facebook.com/docs/permissions/reference#p) | `pages_read_engagement`, `pages_show_list` |\n",
         "line_start": 1273,
-        "line_end": 1278
+        "line_end": 1278,
+        "url": "https://developers.facebook.com/tools/explorer/?method=GET&path=%7Bvideo-id%7D%2Fcaptions&version=v18.0)"
     },
     "85": {
         "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Video Endpoint.md\nParagraph location: \n\tVideo Thumbnails\n\tReading\n\tExamples\n\nContent: \n### Examples  \ncurl \\-X GET \"https://graph.facebook.com/**_`v18.0`_**/**_video-id_**/thumbnails?access\\_token=**_page\\_access\\_token_**\"  \nOn success your app receives a list of VideoThumbnail objects for the video.  \n{\n\"id\": \"**_video-id-1_**\",\n\"height\": **_1280_**,\n\"scale\": 1,\n\"uri\": \"**_url-for-video-1_**\",\n\"width\": **_720_**,\n\"is\\_preferred\": **_false_**\n},\n{\n\"id\": \"**_video-id-2_**\",\n\"height\": **_1280_**,\n\"scale\": 1,\n\"uri\": \"**_url-for-video-2_**\",\n\"width\": **_720_**,\n\"is\\_preferred\": **_false_**\n},\n...\n",
         "line_start": 1280,
-        "line_end": 1300
+        "line_end": 1300,
+        "url": "https://developers.facebook.com/tools/explorer/?method=GET&path=%7Bvideo-id%7D%2Fcaptions&version=v18.0)"
     },
     "86": {
         "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Video Endpoint.md\nParagraph location: \n\tVideo Thumbnails\n\tReading\n\tParameters\n\nContent: \n### Parameters  \nThis endpoint doesn't have any parameters.\n",
         "line_start": 69,
-        "line_end": 71
+        "line_end": 71,
+        "url": "https://developers.facebook.com/tools/explorer/?method=GET&path=%7Bvideo-id%7D%2Fcaptions&version=v18.0)"
     },
     "87": {
         "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Video Endpoint.md\nParagraph location: \n\tVideo Thumbnails\n\tReading\n\tFields\n\nContent: \n### Fields  \nReading from this edge will return a JSON formatted result:  \n{\n\"`data`\": \\[\\],\n\"`paging`\": {}\n}  \n#### `data`  \nA list of [VideoThumbnail](https://developers.facebook.com/docs/graph-api/reference/video-thumbnail/) nodes.  \n#### `paging`  \nFor more details about pagination, see the [Graph API guide](https://developers.facebook.com/docs/graph-api/using-graph-api/#paging).\n",
         "line_start": 73,
-        "line_end": 83
+        "line_end": 83,
+        "url": "https://developers.facebook.com/tools/explorer/?method=GET&path=%7Bvideo-id%7D%2Fcaptions&version=v18.0)"
     },
     "88": {
         "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Video Endpoint.md\nParagraph location: \n\tVideo Thumbnails\n\tReading\n\tError Codes\n\nContent: \n### Error Codes  \n| Error | Description |\n| --- | --- |\n| 100 | Invalid parameter |\n| 200 | Permissions error |\n| 368 | The action attempted has been deemed abusive or is otherwise disallowed |\n| 190 | Invalid OAuth 2.0 Access Token |  \n[](#)\n",
         "line_start": 90,
-        "line_end": 98
+        "line_end": 98,
+        "url": "https://developers.facebook.com/tools/explorer/?method=GET&path=%7Bvideo-id%7D%2Fcaptions&version=v18.0)"
     },
     "89": {
         "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Video Endpoint.md\nParagraph location: \n\tVideo Thumbnails\n\tCreating\n\nContent: \n## Creating  \nYou can make a POST request to `thumbnails` edge from the following paths:  \n* [`/{video_id}/thumbnails`](https://developers.facebook.com/docs/graph-api/reference/video/thumbnails/)  \nWhen posting to this edge, a\u00a0[VideoThumbnail](https://developers.facebook.com/docs/graph-api/reference/video-thumbnail/) will be created.\n",
         "line_start": 98,
-        "line_end": 102
+        "line_end": 102,
+        "url": "https://developers.facebook.com/tools/explorer/?method=GET&path=%7Bvideo-id%7D%2Fcaptions&version=v18.0)"
     },
     "90": {
         "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Video Endpoint.md\nParagraph location: \n\tVideo Thumbnails\n\tCreating\n\tLimitations\n\nContent: \n### Limitations  \n* Maximum thumbnail file size 10MB.\n* Thumbnails can only be created on [Videos](https://developers.facebook.com/docs/graph-api/reference/video/) that have been associated with a [Page](https://developers.facebook.com/docs/graph-api/reference/page/).\n* We recommend that you use thumbnails with the same aspect ratio as the video.\n",
         "line_start": 117,
-        "line_end": 121
+        "line_end": 121,
+        "url": "https://developers.facebook.com/tools/explorer/?method=GET&path=%7Bvideo-id%7D%2Fcaptions&version=v18.0)"
     },
     "91": {
         "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Video Endpoint.md\nParagraph location: \n\tVideo Thumbnails\n\tCreating\n\tRequirements\n\nContent: \n### Requirements  \n| Type | Requirement |\n| --- | --- |\n| [Access Tokens ![](https://scontent-cdg4-2.xx.fbcdn.net/v/t39.2365-6/310307727_3347317042262105_1088877051262827250_n.png?_nc_cat=107&ccb=1-7&_nc_sid=e280be&_nc_ohc=831MNFLSQwkAX_NBYJc&_nc_ht=scontent-cdg4-2.xx&oh=00_AfBFzfp_r0uP87LWhIW9LbUGV2HepuPyhHSxWkm3ugn0Bg&oe=65CA3DE2)](https://developers.facebook.com/docs/facebook-login/access-tokens) | App or Page |\n| [Permissions ![](https://scontent-cdg4-2.xx.fbcdn.net/v/t39.2365-6/310307727_3347317042262105_1088877051262827250_n.png?_nc_cat=107&ccb=1-7&_nc_sid=e280be&_nc_ohc=831MNFLSQwkAX_NBYJc&_nc_ht=scontent-cdg4-2.xx&oh=00_AfBFzfp_r0uP87LWhIW9LbUGV2HepuPyhHSxWkm3ugn0Bg&oe=65CA3DE2)](https://developers.facebook.com/docs/permissions/reference#p) | `pages_read_user_content`, `pages_manage_engagement`, `pages_show_list` |\n",
         "line_start": 1273,
-        "line_end": 1278
+        "line_end": 1278,
+        "url": "https://developers.facebook.com/tools/explorer/?method=GET&path=%7Bvideo-id%7D%2Fcaptions&version=v18.0)"
     },
     "92": {
         "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Video Endpoint.md\nParagraph location: \n\tVideo Thumbnails\n\tCreating\n\tExamples\n\nContent: \n### Examples  \ncurl \\-X POST \"https://graph.facebook.com/**_`v18.0`_**/**_video-id_**/thumbnails\n?access\\_token=**_page\\_access\\_token_**\n&is\\_preferred=**_true_**\n&source=@**_ThumbnailSample1.jpg_**\"  \nOn success your app receives a list of VideoThumbnail objects for the video.  \n{\n\"success\": **_true_**\n}\n",
         "line_start": 1280,
-        "line_end": 1289
+        "line_end": 1289,
+        "url": "https://developers.facebook.com/tools/explorer/?method=GET&path=%7Bvideo-id%7D%2Fcaptions&version=v18.0)"
     },
     "93": {
         "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Video Endpoint.md\nParagraph location: \n\tVideo Thumbnails\n\tCreating\n\tParameters\n\nContent: \n### Parameters  \n| Parameter | Description |\n| --- | --- |\n| `is_preferred`<br><br>boolean | Default value: `false`<br><br>Set to `true` if this thumbnail is the preferred thumbnail to be shown for this video |\n| `source`<br><br>image | The source for the thumbnail, an image file<br><br>Required |\n",
         "line_start": 69,
-        "line_end": 74
+        "line_end": 74,
+        "url": "https://developers.facebook.com/tools/explorer/?method=GET&path=%7Bvideo-id%7D%2Fcaptions&version=v18.0)"
     },
     "94": {
         "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Video Endpoint.md\nParagraph location: \n\tVideo Thumbnails\n\tCreating\n\tReturn Type\n\nContent: \n### Return Type  \nThis endpoint supports [read-after-write](https://developers.facebook.com/docs/graph-api/advanced/#read-after-write) and will read the node to which you POSTed.  \nStruct {  \n`success`: bool,  \n}\n",
         "line_start": 132,
-        "line_end": 137
+        "line_end": 137,
+        "url": "https://developers.facebook.com/tools/explorer/?method=GET&path=%7Bvideo-id%7D%2Fcaptions&version=v18.0)"
     },
     "95": {
         "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Video Endpoint.md\nParagraph location: \n\tVideo Thumbnails\n\tCreating\n\tError Codes\n\nContent: \n### Error Codes  \n| Error | Description |\n| --- | --- |\n| 100 | Invalid parameter |\n| 200 | Permissions error |  \n[](#)\n",
         "line_start": 90,
-        "line_end": 96
+        "line_end": 96,
+        "url": "https://developers.facebook.com/tools/explorer/?method=GET&path=%7Bvideo-id%7D%2Fcaptions&version=v18.0)"
     },
     "96": {
         "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Video Endpoint.md\nParagraph location: \n\tVideo Thumbnails\n\tUpdating\n\nContent: \n## Updating  \nYou can't perform this operation on this endpoint.  \n[](#)\n",
         "line_start": 104,
-        "line_end": 107
+        "line_end": 107,
+        "url": "https://developers.facebook.com/tools/explorer/?method=GET&path=%7Bvideo-id%7D%2Fcaptions&version=v18.0)"
     },
     "97": {
         "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Video Endpoint.md\nParagraph location: \n\tVideo Thumbnails\n\tDeleting\n\nContent: \n## Deleting  \nYou can't perform this operation on this endpoint.  \n[](#)\n",
         "line_start": 154,
-        "line_end": 157
+        "line_end": 157,
+        "url": "https://developers.facebook.com/tools/explorer/?method=GET&path=%7Bvideo-id%7D%2Fcaptions&version=v18.0)"
     },
     "98": {
         "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Video Endpoint.md\nParagraph location: \n\tVideo Insights\n\tReading\n\nContent: \n## Reading  \nGet aggregated insight metrics for videos on a [Page](https://developers.facebook.com/docs/graph-api/reference/page). You can get metrics for Videos, Reels, and Ad Breaks. For the full list of metrics, see [Available Metrics](#metrics).\n",
         "line_start": 4,
-        "line_end": 6
+        "line_end": 6,
+        "url": "https://developers.facebook.com/tools/explorer/?method=GET&path=%7Bvideo-id%7D%2Fcaptions&version=v18.0)"
     },
     "99": {
         "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Video Endpoint.md\nParagraph location: \n\tVideo Insights\n\tReading\n\tRequirements\n\nContent: \n### Requirements  \n* The [pages\\_manage\\_engagement](https://developers.facebook.com/docs/permissions/reference/pages_manage_engagement) Permission.\n* The [read\\_insights](https://developers.facebook.com/docs/permissions/reference/read_insights) Permission.\n* A Page access token requested by a person who is able to perform `ANALYZE` [Tasks](https://developers.facebook.com/docs/pages/overview#tasks) on a Page.\n* Only Page admins can query earnings insights by using the API. Learn about [setting up user roles for a Page.](https://www.facebook.com/help/187316341316631)\n",
         "line_start": 1273,
-        "line_end": 1278
+        "line_end": 1278,
+        "url": "https://developers.facebook.com/tools/explorer/?method=GET&path=%7Bvideo-id%7D%2Fcaptions&version=v18.0)"
     },
     "100": {
         "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Video Endpoint.md\nParagraph location: \n\tVideo Insights\n\tReading\n\tLimitations\n\nContent: \n### Limitations  \n* Insights for Videos on [Users](https://developers.facebook.com/docs/graph-api/reference/user) or [Groups](https://developers.facebook.com/docs/graph-api/reference/group) are not available.\n* Data is only available for the past 2 years.\n* A crossposted Video will have a unique video ID for each Page it was posted to.\n",
         "line_start": 117,
-        "line_end": 121
+        "line_end": 121,
+        "url": "https://developers.facebook.com/tools/explorer/?method=GET&path=%7Bvideo-id%7D%2Fcaptions&version=v18.0)"
     },
     "101": {
         "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Video Endpoint.md\nParagraph location: \n\tVideo Insights\n\tReading\n\tExample\n\nContent: \n### Example  \nHTTPPHP SDKJavaScript SDKAndroid SDKiOS SDK[Graph API Explorer](https://developers.facebook.com/tools/explorer/?method=GET&path=%7Bvideo-id%7D%2Fvideo_insights&version=v18.0)  \nGET /v18.0/{video-id}/video_insights HTTP/1.1\nHost: graph.facebook.com  \n/* PHP SDK v5.0.0 */\n/* make the API call */\ntry {\n// Returns a `Facebook\\FacebookResponse` object\n$response = $fb->get(\n'/{video-id}/video_insights',\n'{access-token}'\n);\n} catch(Facebook\\Exceptions\\FacebookResponseException $e) {\necho 'Graph returned an error: ' . $e->getMessage();\nexit;\n} catch(Facebook\\Exceptions\\FacebookSDKException $e) {\necho 'Facebook SDK returned an error: ' . $e->getMessage();\nexit;\n}\n$graphNode = $response->getGraphNode();\n/* handle the result */  \n/* make the API call */\nFB.api(\n\"/{video-id}/video_insights\",\nfunction (response) {\nif (response && !response.error) {\n/* handle the result */\n}\n}\n);  \n/* make the API call */\nnew GraphRequest(\nAccessToken.getCurrentAccessToken(),\n\"/{video-id}/video_insights\",\nnull,\nHttpMethod.GET,\nnew GraphRequest.Callback() {\npublic void onCompleted(GraphResponse response) {\n/* handle the result */\n}\n}\n).executeAsync();  \n/* make the API call */\nFBSDKGraphRequest *request = [[FBSDKGraphRequest alloc]\ninitWithGraphPath:@\"/{video-id}/video_insights\"\nparameters:params\nHTTPMethod:@\"GET\"];\n[request startWithCompletionHandler:^(FBSDKGraphRequestConnection *connection,\nid result,\nNSError *error) {\n// Handle the result\n}];  \nIf you want to learn how to use the Graph API, read our [Using Graph API guide](https://developers.facebook.com/docs/graph-api/using-graph-api/).\n",
         "line_start": 8,
-        "line_end": 61
+        "line_end": 61,
+        "url": "https://developers.facebook.com/tools/explorer/?method=GET&path=%7Bvideo-id%7D%2Fcaptions&version=v18.0)"
     },
     "102": {
         "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Video Endpoint.md\nParagraph location: \n\tVideo Insights\n\tReading\n\tParameters\n\nContent: \n### Parameters  \n| Parameter | Description |\n| --- | --- |\n| `metric`<br><br>list<A valid metric for an insights endpoint> | A list of [available metrics](#metrics) that you want to receive. |\n| `period`<br><br>enum{day, week, days\\_28, month, lifetime, total\\_over\\_range} | The aggregation period. |\n| `since`<br><br>datetime/timestamp | Lower bound of the time range to consider. |\n| `until`<br><br>datetime/timestamp | Upper bound of the time range to consider. |\n",
         "line_start": 69,
-        "line_end": 76
+        "line_end": 76,
+        "url": "https://developers.facebook.com/tools/explorer/?method=GET&path=%7Bvideo-id%7D%2Fcaptions&version=v18.0)"
     },
     "103": {
         "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Video Endpoint.md\nParagraph location: \n\tVideo Insights\n\tReading\n\tFields\n\nContent: \n### Fields  \nReading from this edge will return a JSON formatted result:  \n{\n\"`data`\": \\[\\],\n\"`paging`\": {}\n}  \n#### `data`  \nA list of [InsightsResult](https://developers.facebook.com/docs/graph-api/reference/insights-result/) nodes.  \n#### `paging`  \nFor more details about pagination, see the [Graph API guide](https://developers.facebook.com/docs/graph-api/using-graph-api/#paging).\n",
         "line_start": 73,
-        "line_end": 83
+        "line_end": 83,
+        "url": "https://developers.facebook.com/tools/explorer/?method=GET&path=%7Bvideo-id%7D%2Fcaptions&version=v18.0)"
     },
     "104": {
         "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Video Endpoint.md\nParagraph location: \n\tVideo Insights\n\tReading\n\tError Codes\n\nContent: \n### Error Codes  \n| Error | Description |\n| --- | --- |\n| 200 | Permissions error |\n| 100 | Invalid parameter |\n| 80001 | There have been too many calls to this Page account. Wait a bit and try again. For more info, please refer to https://developers.facebook.com/docs/graph-api/overview/rate-limiting. |  \n[](#)\n",
         "line_start": 90,
-        "line_end": 97
+        "line_end": 97,
+        "url": "https://developers.facebook.com/tools/explorer/?method=GET&path=%7Bvideo-id%7D%2Fcaptions&version=v18.0)"
     },
     "105": {
         "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Video Endpoint.md\nParagraph location: \n\tVideo Insights\n\tCreating\n\nContent: \n## Creating  \nYou can't perform this operation on this endpoint.  \n[](#)\n",
         "line_start": 98,
-        "line_end": 101
+        "line_end": 101,
+        "url": "https://developers.facebook.com/tools/explorer/?method=GET&path=%7Bvideo-id%7D%2Fcaptions&version=v18.0)"
     },
     "106": {
         "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Video Endpoint.md\nParagraph location: \n\tVideo Insights\n\tUpdating\n\nContent: \n## Updating  \nYou can't perform this operation on this endpoint.  \n[](#)\n",
         "line_start": 104,
-        "line_end": 107
+        "line_end": 107,
+        "url": "https://developers.facebook.com/tools/explorer/?method=GET&path=%7Bvideo-id%7D%2Fcaptions&version=v18.0)"
     },
     "107": {
         "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Video Endpoint.md\nParagraph location: \n\tVideo Insights\n\tDeleting\n\nContent: \n## Deleting  \nYou can't perform this operation on this endpoint.  \n[](#)\n",
         "line_start": 154,
-        "line_end": 157
+        "line_end": 157,
+        "url": "https://developers.facebook.com/tools/explorer/?method=GET&path=%7Bvideo-id%7D%2Fcaptions&version=v18.0)"
     },
     "108": {
         "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Video Endpoint.md\nParagraph location: \n\tVideo Insights\n\tAvailable Metrics\n\tAd Breaks Metrics\n\nContent: \n## Available Metrics  \n### Ad Breaks Metrics  \nThe following metrics are available for the `metric` [parameter](#parameters) when you read aggregated insights for ad breaks.  \n| Name | Description | Values for `period` |\n| --- | --- | --- |\n| `total_video_ad_break_ad_cpm` | The average amount paid by advertisers for 1,000 impressions of their ads in your video, in U.S. cents. This number also includes the amount paid to Facebook. | day, lifetime |\n| `total_video_ad_break_ad_impressions` | Number of times an ad was shown during your video's ad breaks. | day, lifetime |\n| `total_video_ad_break_earnings` | An estimate of the amount you earned from ad breaks in your video, in U.S. cents, based on the number of impressions and CPM of ads shown. Actual payments may differ if there are content ownership claims or other adjustments. | day, lifetime |\n",
         "line_start": 1544,
-        "line_end": 1552
+        "line_end": 1552,
+        "url": "https://developers.facebook.com/tools/explorer/?method=GET&path=%7Bvideo-id%7D%2Fcaptions&version=v18.0)"
     },
     "109": {
         "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Video Endpoint.md\nParagraph location: \n\tVideo Insights\n\tAvailable Metrics\n\tReels Metrics\n\nContent: \n### Reels Metrics  \nThe following metrics are available for the `metric` [parameter](#parameters) when you read aggregated insights for a reel. For more information about Reels, see [Reels Developer Documentation](https://developers.facebook.com/docs/reels).  \n| Name | Description | Values for `period` |\n| --- | --- | --- |\n| `blue_reels_play_count` | The number of times your reel starts to play after an impression is already counted. This metric counts reels sessions with 1 millisecond or more of playback. This metric excludes replays. | lifetime |\n| `post_impressions_unique` | The number of people who saw your reel at least once, whether or not the person played your reel. This metric is different from impressions, which includes multiple views of your reel by the same person. This metric is estimated. | lifetime |\n| `post_video_avg_time_watched` | The average number of milliseconds your reel was played during a single instance of playing it, including time spent replaying your reel. Because this metric includes replays, the value can be greater than the total length of the reel. | lifetime |\n| `post_video_likes_by_reaction_type` | The number of likes on your reel. | lifetime |\n| `post_video_social_actions` | The number of comments on your reel and the number of times your reel was shared. | lifetime |\n| `post_video_view_time` | The total number of milliseconds your reel played, including time spent replaying your reel. | lifetime |\n",
         "line_start": 1556,
-        "line_end": 1566
+        "line_end": 1566,
+        "url": "https://developers.facebook.com/tools/explorer/?method=GET&path=%7Bvideo-id%7D%2Fcaptions&version=v18.0)"
     },
     "110": {
         "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Video Endpoint.md\nParagraph location: \n\tVideo Insights\n\tAvailable Metrics\n\tVideo Metrics\n\nContent: \n### Video Metrics  \nThe following metrics are available for the `metric` [parameter](#parameters) when you read aggregated insights for a video.  \n| Name | Description | Values for `period` |\n| --- | --- | --- |\n| `total_video_views` | The number of times your videos played for at least 3 seconds, or for nearly their total length if they're shorter than 3 seconds. During a single instance of a video playing, we'll exclude any time spent replaying the video. | lifetime |\n| `total_video_views_unique` | The number of people who viewed your videos for at least 3 seconds, or for nearly their total length if they're shorter than 3 seconds. During a single instance of a video playing, we'll exclude any time spent replaying the video. | lifetime |\n| `total_video_views_autoplayed` | The number of times your videos automatically played for at least 3 seconds, or for nearly their total length if they're shorter than 3 seconds. During a single instance of a video playing, we'll exclude any time spent replaying the video. | lifetime |\n| `total_video_views_clicked_to_play` | The number of times your videos played for at least 3 seconds, or for nearly their total length if they're shorter than 3 seconds, after people clicked play. During a single instance of a video playing, we'll exclude any time spent replaying the video. | lifetime |\n| `total_video_views_organic` | The number of times your videos played for at least 3 seconds, or for nearly their total length if they're shorter than 3 seconds, by organic reach. During a single instance of a video playing, we'll exclude any time spent replaying the video. | lifetime |\n| `total_video_views_organic_unique` | The number of people who viewed your videos for at least 3 seconds, or for nearly their total length if they're shorter than 3 seconds, by organic reach. During a single instance of a video playing, we'll exclude any time spent replaying the video. | lifetime |\n| `total_video_views_paid` | The number of times your promoted videos played for at least 3 seconds, or for nearly their total length if they're shorter than 3 seconds. For each [impression](https://www.facebook.com/business/help/675615482516035) of a video, we'll count video views separately and exclude any time spent replaying the video. | lifetime |\n| `total_video_views_paid_unique` | The number of people who viewed your promoted videos for at least 3 seconds, or for nearly their total length if they're shorter than 3 seconds. For each [impression](https://www.facebook.com/business/help/675615482516035) of a video, we'll count video views separately and exclude any time spent replaying the video. | lifetime |\n| `total_video_views_sound_on` | The number of times your videos played with sound on for at least 3 seconds, or for nearly their total length if they're shorter than 3 seconds. During a single instance of a video playing, we'll exclude any time spent replaying the video. | lifetime |\n| `total_video_complete_views` | The number of times your videos played for 97%, or more, or its length. During a single instance of a video playing, we'll exclude any time spent replaying the video. | lifetime |\n| `total_video_complete_views_unique` | The number of people who viewed your videos for 97%, or more, of its length. During a single instance of a video playing, we'll exclude any time spent replaying the video. | lifetime |\n| `total_video_complete_views_auto_played` | The number of times your videos automatically played for 97%, or more, of its length. During a single instance of a video playing, we'll exclude any time spent replaying the video. | lifetime |\n| `total_video_complete_views_clicked_to_play` | The number of times your videos played for 97%, or more, of its length, after people clicked play. During a single instance of a video playing, we'll exclude any time spent replaying the video. | lifetime |\n| `total_video_complete_views_organic` | The number of times your videos played for 97%, or more, of its length, by organic reach. During a single instance of a video playing, we'll exclude any time spent replaying the video. | lifetime |\n| `total_video_complete_views_organic_unique` | The number of people who viewed your videos for 97%, or more, of its length, by organic reach. During a single instance of a video playing, we'll exclude any time spent replaying the video. | lifetime |\n| `total_video_complete_views_paid` | The number of times your promoted videos played for 97%, or more, of its length. For each [impression](https://www.facebook.com/business/help/675615482516035) of a video, we'll count video views separately and exclude any time spent replaying the video. | lifetime |\n| `total_video_complete_views_paid_unique` | The number of people who viewed your promoted videos for 97%, or more, of its length. For each [impression](https://www.facebook.com/business/help/675615482516035) of a video, we'll count video views separately and exclude any time spent replaying the video. | lifetime |\n| `total_video_10s_views` | The number of times your videos played for 10 seconds. During a single instance of a video playing, we'll exclude any time spent replaying the video. | lifetime |\n| `total_video_10s_views_unique` | The number of people who viewed your videos for 10 seconds or more. During a single instance of a video playing, we'll exclude any time spent replaying the video. | lifetime |\n| `total_video_10s_views_auto_played` | The number of times your videos automatically played for 10 seconds or more. During a single instance of a video playing, we'll exclude any time spent replaying the video. | lifetime |\n| `total_video_10s_views_clicked_to_play` | The number of times your videos played for 10 seconds or more, after people clicked play. During a single instance of a video playing, we'll exclude any time spent replaying the video. | lifetime |\n| `total_video_10s_views_organic` | The number of times your videos played for 10 seconds or more, by organic reach. During a single instance of a video playing, we'll exclude any time spent replaying the video. | lifetime |\n| `total_video_10s_views_paid` | The number of times your promoted videos played for 10 seconds or more. For each [impression](https://www.facebook.com/business/help/675615482516035) of a video, we'll count video views separately and exclude any time spent replaying the video. | lifetime |\n| `total_video_10s_views_sound_on` | The number of times your videos played with sound on for 10 seconds or more. During a single instance of a video playing, we'll exclude any time spent replaying the video. | lifetime |\n| `total_video_15s_views` | The number of times your videos played for 15 seconds or more. During a single instance of a video playing, we'll exclude any time spent replaying the video. | lifetime |\n| `total_video_60s_excludes_shorter_views` | The number of times your videos played for 60 seconds or more. During a single instance of a video playing, we'll exclude any time spent replaying the video. | lifetime |\n| `total_video_retention_graph` | The number of times your videos played at each interval as a percentage of all views. Videos are divided into 40 equal intervals. Retention graphs may show more [impressions](https://www.facebook.com/business/help/675615482516035) later in the video than at the beginning. People might start the video in the middle, skip ahead, save, and rewatch it from that point, or other similar behaviors | lifetime |\n| `total_video_retention_graph_autoplayed` | The number of times your videos automatically played at each interval as a percentage of all views. Videos are divided into 40 equal intervals. Retention graphs may show more [impressions](https://www.facebook.com/business/help/675615482516035) later in the video than at the beginning. People might start the video in the middle, skip ahead, save, and rewatch it from that point, or other similar behaviors. | lifetime |\n| `total_video_retention_graph_clicked_to_play` | The number of times your videos played at each interval as a percentage of all views, after people clicked play. Videos are divided into 40 equal intervals. Retention graphs may show more [impressions](https://www.facebook.com/business/help/675615482516035) later in the video than at the beginning. People might start the video in the middle, skip ahead, save, and rewatch it from that point, or other similar behaviors. | lifetime |\n| `total_video_avg_time_watched` | The average time, in milliseconds, people viewed your videos. | lifetime |\n| `total_video_view_total_time` | The total time, in milliseconds, people viewed your videos. | lifetime |\n| `total_video_view_total_time_organic` | The total time, in milliseconds, people viewed your videos, by organic reach. | lifetime |\n| `total_video_view_total_time_paid` | The total time, in milliseconds, people viewed your promoted videos. | lifetime |\n| `total_video_impressions` | The total number of [impressions](https://www.facebook.com/business/help/675615482516035) of your videos. | lifetime |\n| `total_video_impressions_unique` | The total number of unique [impressions](https://www.facebook.com/business/help/675615482516035) of your videos. | lifetime |\n| `total_video_impressions_paid_unique` | The total number of unique [impressions](https://www.facebook.com/business/help/675615482516035) or your promoted videos. | lifetime |\n| `total_video_impressions_paid` | The total number of [impressions](https://www.facebook.com/business/help/675615482516035) of your promoted videos. | lifetime |\n| `total_video_impressions_organic_unique` | The total number of unique [impressions](https://www.facebook.com/business/help/675615482516035) of your videos, by organic reach. | lifetime |\n| `total_video_impressions_organic` | The total number of [impressions](https://www.facebook.com/business/help/675615482516035) of your videos, by organic reach. | lifetime |\n| `total_video_impressions_viral_unique` | The total number of unique [impressions](https://www.facebook.com/business/help/675615482516035) of your videos in a friend's story. | lifetime |\n| `total_video_impressions_viral` | The total number of [impressions](https://www.facebook.com/business/help/675615482516035) of your videos in a story generated by a friend. | lifetime |\n| `total_video_impressions_fan_unique` | The total number of unique [impressions](https://www.facebook.com/business/help/675615482516035) of your videos for people who liked your Page. | lifetime |\n| `total_video_impressions_fan` | The total number of [impressions](https://www.facebook.com/business/help/675615482516035) of your videos for people who liked your Page. | lifetime |\n| `total_video_impressions_fan_paid_unique` | The total number of unique [impressions](https://www.facebook.com/business/help/675615482516035) of your promoted videos for people who liked your Page. | lifetime |\n| `total_video_impressions_fan_paid` | The total number of [impressions](https://www.facebook.com/business/help/675615482516035) of your promoted video for people who liked your Page. | lifetime |\n| `total_video_stories_by_action_type` | The total number of stories created about your Page's video, by action type; liking, commenting, sharing, etc. | lifetime |\n| `total_video_reactions_by_type_total` | The total number of reactions to your Page's video, by type. | lifetime |\n| `total_video_view_time_by_age_bucket_and_gender` | The total time, in milliseconds, your video has been viewed by Top Audiences; age and gender. | lifetime |\n| `total_video_view_time_by_region_id` | The total time, in milliseconds, your Page's videos played for your Top 45 Locations; Region - Country. | lifetime |\n| `total_video_views_by_distribution_type` | The number of times your videos played by distribution type; page\\_owned and shared. | lifetime |\n| `total_video_view_time_by_distribution_type` | The total time, in milliseconds, your Page's videos played by distribution type; page\\_owned and shared. | lifetime |\n| `total_video_view_total_time_live` | Total time (in ms) video has been viewed when it was broadcasted live. (Total Count). | lifetime |\n| `total_video_views_by_country_id` | Lifetime video views by country. | lifetime |\n| `total_video_views_live` | Number of people who viewed your video for 3 seconds or viewed to the end, when it was streamed live. | lifetime |\n| `total_video_views_by_age_bucket_and_gender` | Lifetime video views by age bucket and gender. | lifetime |\n| `total_video_views_gender_male` | Lifetime total number of times your videos played for at least 3 seconds, or for nearly their total length if they're shorter than 3 seconds by male viewers. | lifetime |\n| `total_video_views_gender_female` | Lifetime total number of times your videos played for at least 3 seconds, or for nearly their total length if they're shorter than 3 seconds by female viewers. | lifetime |\n| `total_video_views_live_clicked_to_play` | Lifetime total number of times people clicked to play your video and viewed it more than 3 seconds - while it was being streamed live. | lifetime |\n| `total_video_views_gender_male_live` | Lifetime total number of times males viewed your video for more than 3 seconds while it was being streamed live. | lifetime |\n| `total_video_views_live_autoplayed` | Lifetime total number of times your video started automatically playing and people viewed it for more than 3 seconds - while it was being streamed live. | lifetime |\n| `total_video_views_gender_female_live` | Lifetime total number of times females viewed your video for more than 3 seconds while it was being streamed live. | lifetime |\n| `has_total_video_views_by_publisher_platform_type` | Whether the video played for at least 3 seconds, or for nearly their total length if they're shorter than 3 seconds broken down by publisher platform type. | lifetime |\n| `total_video_30s_views` | Total number of times your video was viewed for 30 seconds or 97% of the video if video is less than 30 seconds. (Total Count) | lifetime |  \n[](#)\n",
         "line_start": 1569,
-        "line_end": 1637
+        "line_end": 1637,
+        "url": "https://developers.facebook.com/tools/explorer/?method=GET&path=%7Bvideo-id%7D%2Fcaptions&version=v18.0)"
     }
 }

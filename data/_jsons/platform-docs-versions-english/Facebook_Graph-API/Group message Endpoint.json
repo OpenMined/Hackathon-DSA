@@ -2,206 +2,247 @@
     "0": {
         "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Group message Endpoint.md\nParagraph location: \n\tGroup Message\n\tReading\n\tNew Page Experience\n\nContent: \n### New Page Experience  \nThis endpoint is supported for [New Page Experience](https://developers.facebook.com/docs/pages/new-pages-experience/).\n",
         "line_start": 8,
-        "line_end": 10
+        "line_end": 10,
+        "url": "https://developers.facebook.com/docs/pages/new-pages-experience/)."
     },
     "1": {
         "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Group message Endpoint.md\nParagraph location: \n\tGroup Message\n\tReading\n\tFeature Permissions\n\nContent: \n### Feature Permissions  \n| Name | Description |\n| --- | --- |\n| Groups API | This [feature permission](https://developers.facebook.com/docs/graph-api/reference/group/) may be required. |\n",
         "line_start": 12,
-        "line_end": 16
+        "line_end": 16,
+        "url": "https://developers.facebook.com/docs/pages/new-pages-experience/)."
     },
     "2": {
         "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Group message Endpoint.md\nParagraph location: \n\tGroup Message\n\tReading\n\tExample\n\nContent: \n### Example  \nHTTPPHP SDKJavaScript SDKAndroid SDKiOS SDK[Graph API Explorer](https://developers.facebook.com/tools/explorer/?method=GET&path=%7Bgroup-message-id%7D&version=v18.0)  \nGET /v18.0/{group-message-id} HTTP/1.1\nHost: graph.facebook.com  \n/* PHP SDK v5.0.0 */\n/* make the API call */\ntry {\n// Returns a `Facebook\\FacebookResponse` object\n$response = $fb->get(\n'/{group-message-id}',\n'{access-token}'\n);\n} catch(Facebook\\Exceptions\\FacebookResponseException $e) {\necho 'Graph returned an error: ' . $e->getMessage();\nexit;\n} catch(Facebook\\Exceptions\\FacebookSDKException $e) {\necho 'Facebook SDK returned an error: ' . $e->getMessage();\nexit;\n}\n$graphNode = $response->getGraphNode();\n/* handle the result */  \n/* make the API call */\nFB.api(\n\"/{group-message-id}\",\nfunction (response) {\nif (response && !response.error) {\n/* handle the result */\n}\n}\n);  \n/* make the API call */\nnew GraphRequest(\nAccessToken.getCurrentAccessToken(),\n\"/{group-message-id}\",\nnull,\nHttpMethod.GET,\nnew GraphRequest.Callback() {\npublic void onCompleted(GraphResponse response) {\n/* handle the result */\n}\n}\n).executeAsync();  \n/* make the API call */\nFBSDKGraphRequest *request = [[FBSDKGraphRequest alloc]\ninitWithGraphPath:@\"/{group-message-id}\"\nparameters:params\nHTTPMethod:@\"GET\"];\n[request startWithCompletionHandler:^(FBSDKGraphRequestConnection *connection,\nid result,\nNSError *error) {\n// Handle the result\n}];  \nIf you want to learn how to use the Graph API, read our [Using Graph API guide](https://developers.facebook.com/docs/graph-api/using-graph-api/).\n",
         "line_start": 18,
-        "line_end": 71
+        "line_end": 71,
+        "url": "https://developers.facebook.com/docs/pages/new-pages-experience/)."
     },
     "3": {
         "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Group message Endpoint.md\nParagraph location: \n\tGroup Message\n\tReading\n\tParameters\n\nContent: \n### Parameters  \nThis endpoint doesn't have any parameters.\n",
         "line_start": 79,
-        "line_end": 81
+        "line_end": 81,
+        "url": "https://developers.facebook.com/docs/pages/new-pages-experience/)."
     },
     "4": {
         "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Group message Endpoint.md\nParagraph location: \n\tGroup Message\n\tReading\n\tFields\n\nContent: \n### Fields  \n| Field | Description |\n| --- | --- |\n| `id`<br><br>token with structure: Post ID | id  |\n| `actions`<br><br>list | actions |\n| `admin_creator`<br><br>BusinessUser\\|User\\|Application | admin\\_creator |\n| `allowed_advertising_objectives`<br><br>list<string> | allowed\\_advertising\\_objectives |\n| `application`<br><br>[Application](https://developers.facebook.com/docs/graph-api/reference/application/) | application |\n| `backdated_time`<br><br>datetime | backdated\\_time |\n| `call_to_action`<br><br>struct with keys: type, value | call\\_to\\_action |\n| `can_reply_privately`<br><br>bool | can\\_reply\\_privately |\n| `caption`<br><br>string | caption |\n| `child_attachments`<br><br>list | child\\_attachments |\n| `comments_mirroring_domain`<br><br>string | comments\\_mirroring\\_domain |\n| `coordinates`<br><br>struct with keys: checkin\\_id, author\\_uid, page\\_id, target\\_id, target\\_href, coords, tagged\\_uids, timestamp, message, target\\_type | coordinates |\n| `created_time`<br><br>datetime | created\\_time<br><br>[Default](https://developers.facebook.com/docs/graph-api/using-graph-api/#fields) |\n| `description`<br><br>string | description |\n| `event`[](#)<br><br>[Event](https://developers.facebook.com/docs/graph-api/reference/event/) | event |\n| `expanded_height`<br><br>unsigned int32 | expanded\\_height |\n| `expanded_width`<br><br>unsigned int32 | expanded\\_width |\n| `feed_targeting`<br><br>struct with keys: country, cities, regions, genders, age\\_min, age\\_max, education\\_statuses, college\\_years, relationship\\_statuses, interests, interested\\_in, user\\_adclusters, locales, countries, geo\\_locations, work\\_positions, work\\_employers, education\\_majors, education\\_schools, family\\_statuses, life\\_events, industries, politics, ethnic\\_affinity, generation, fan\\_of, relevant\\_until\\_ts | feed\\_targeting |\n| `from`<br><br>User\\|Page | from |\n| `full_picture`<br><br>string | full\\_picture |\n| `height`<br><br>unsigned int32 | height |\n| `icon`<br><br>string | icon |\n| `is_app_share`<br><br>bool | is\\_app\\_share |\n| `is_eligible_for_promotion`<br><br>bool | is\\_eligible\\_for\\_promotion |\n| `is_expired`<br><br>bool | is\\_expired |\n| `is_hidden`<br><br>bool | is\\_hidden |\n| `is_inline_created`<br><br>bool | is\\_inline\\_created |\n| `is_popular`<br><br>bool | is\\_popular |\n| `is_published`<br><br>bool | is\\_published |\n| `is_spherical`<br><br>bool | is\\_spherical |\n| `link`<br><br>uri | link |\n| `message`<br><br>string | message<br><br>[Default](https://developers.facebook.com/docs/graph-api/using-graph-api/#fields) |\n| `message_tags`<br><br>list | message\\_tags |\n| `multi_share_end_card`<br><br>bool | multi\\_share\\_end\\_card |\n| `multi_share_optimized`<br><br>bool | multi\\_share\\_optimized |\n| `name`<br><br>string | name |\n| `object_id`<br><br>string | object\\_id |\n| `parent_id`<br><br>token with structure: Post ID | parent\\_id |\n| `permalink_url`<br><br>uri | permalink\\_url |\n| `place`<br><br>[Place](https://developers.facebook.com/docs/graph-api/reference/place/) | place |\n| `privacy`<br><br>[Privacy](https://developers.facebook.com/docs/graph-api/reference/privacy/) | privacy |\n| `promotable_id`[](#)<br><br>token with structure: Post ID | promotable\\_id |\n| `properties`<br><br>list | properties |\n| `scheduled_publish_time`<br><br>float | scheduled\\_publish\\_time |\n| `shares`<br><br>struct with keys: count | shares |\n| `source`<br><br>string | source |\n| `status_type`<br><br>string | status\\_type |\n| `story`<br><br>string | story<br><br>[Default](https://developers.facebook.com/docs/graph-api/using-graph-api/#fields) |\n| `story_tags`<br><br>list | story\\_tags |\n| `subscribed`<br><br>bool | subscribed |\n| `target`[](#)<br><br>[Profile](https://developers.facebook.com/docs/graph-api/reference/profile/) | target |\n| `targeting`<br><br>struct with keys: country, cities, regions, zips, genders, college\\_networks, work\\_networks, age\\_min, age\\_max, education\\_statuses, college\\_years, college\\_majors, political\\_views, relationship\\_statuses, interests, keywords, interested\\_in, user\\_clusters, user\\_clusters2, user\\_clusters3, user\\_adclusters, excluded\\_user\\_adclusters, custom\\_audiences, excluded\\_custom\\_audiences, locales, radius, connections, excluded\\_connections, friends\\_of\\_connections, countries, excluded\\_user\\_clusters, adgroup\\_id, user\\_event, qrt\\_versions, page\\_types, user\\_os, user\\_device, action\\_spec, action\\_spec\\_friend, action\\_spec\\_excluded, geo\\_locations, excluded\\_geo\\_locations, targeted\\_entities, conjunctive\\_user\\_adclusters, wireless\\_carrier, site\\_category, work\\_positions, work\\_employers, education\\_majors, education\\_schools, family\\_statuses, life\\_events, behaviors, travel\\_status, industries, politics, markets, income, net\\_worth, home\\_type, home\\_ownership, home\\_value, ethnic\\_affinity, generation, household\\_composition, moms, office\\_type, interest\\_clusters\\_expansion, dynamic\\_audience\\_ids, product\\_audience\\_specs, excluded\\_product\\_audience\\_specs, exclusions, flexible\\_spec, engagement\\_specs, excluded\\_engagement\\_specs | targeting |\n| `timeline_visibility`<br><br>string | timeline\\_visibility |\n| `type`<br><br>string | type |\n| `updated_time`<br><br>datetime | updated\\_time |\n| `via`<br><br>User\\|Page | via |\n| `width`<br><br>unsigned int32 | width |\n",
         "line_start": 83,
-        "line_end": 143
+        "line_end": 143,
+        "url": "https://developers.facebook.com/docs/pages/new-pages-experience/)."
     },
     "5": {
         "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Group message Endpoint.md\nParagraph location: \n\tGroup Message\n\tReading\n\tEdges\n\nContent: \n### Edges  \n| Edge | Description |\n| --- | --- |\n| [`attachments`](https://developers.facebook.com/docs/graph-api/reference/group-message/attachments/)[](#) | attachments |\n| [`comments`](https://developers.facebook.com/docs/graph-api/reference/group-message/comments/) | comments |\n| [`dynamic_posts`](https://developers.facebook.com/docs/graph-api/reference/group-message/dynamic_posts/) | dynamic\\_posts |\n| [`insights`](https://developers.facebook.com/docs/graph-api/reference/group-message/insights/) | insights |\n| [`reactions`](https://developers.facebook.com/docs/graph-api/reference/group-message/reactions/)[](#) | reactions |\n| [`sharedposts`](https://developers.facebook.com/docs/graph-api/reference/group-message/sharedposts/) | sharedposts |\n| [`sponsor_tags`](https://developers.facebook.com/docs/graph-api/reference/group-message/sponsor_tags/) | sponsor\\_tags |\n| [`to`](https://developers.facebook.com/docs/graph-api/reference/group-message/to/) | to  |\n",
         "line_start": 145,
-        "line_end": 156
+        "line_end": 156,
+        "url": "https://developers.facebook.com/docs/pages/new-pages-experience/)."
     },
     "6": {
         "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Group message Endpoint.md\nParagraph location: \n\tGroup Message\n\tReading\n\tError Codes\n\nContent: \n### Error Codes  \n| Error | Description |\n| --- | --- |\n| 368 | The action attempted has been deemed abusive or is otherwise disallowed |\n| 200 | Permissions error |\n| 100 | Invalid parameter |\n| 190 | Invalid OAuth 2.0 Access Token |\n| 2500 | Error parsing graph query |  \n[](#)\n",
         "line_start": 158,
-        "line_end": 167
+        "line_end": 167,
+        "url": "https://developers.facebook.com/docs/pages/new-pages-experience/)."
     },
     "7": {
         "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Group message Endpoint.md\nParagraph location: \n\tGroup Message\n\tCreating\n\nContent: \n## Creating  \nYou can't perform this operation on this endpoint.  \n[](#)\n",
         "line_start": 170,
-        "line_end": 173
+        "line_end": 173,
+        "url": "https://developers.facebook.com/docs/pages/new-pages-experience/)."
     },
     "8": {
         "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Group message Endpoint.md\nParagraph location: \n\tGroup Message\n\tUpdating\n\nContent: \n## Updating  \nYou can't perform this operation on this endpoint.  \n[](#)\n",
         "line_start": 176,
-        "line_end": 179
+        "line_end": 179,
+        "url": "https://developers.facebook.com/docs/pages/new-pages-experience/)."
     },
     "9": {
         "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Group message Endpoint.md\nParagraph location: \n\tGroup Message\n\tDeleting\n\nContent: \n## Deleting  \nYou can't perform this operation on this endpoint.  \n[](#)\n",
         "line_start": 182,
-        "line_end": 185
+        "line_end": 185,
+        "url": "https://developers.facebook.com/docs/pages/new-pages-experience/)."
     },
     "10": {
         "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Group message Endpoint.md\nParagraph location: \n\tGroup Message Attachments\n\tReading\n\nContent: \n## Reading  \nYou can't perform this operation on this endpoint.  \n[](#)\n",
         "line_start": 4,
-        "line_end": 7
+        "line_end": 7,
+        "url": "https://developers.facebook.com/docs/pages/new-pages-experience/)."
     },
     "11": {
         "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Group message Endpoint.md\nParagraph location: \n\tGroup Message Attachments\n\tCreating\n\nContent: \n## Creating  \nYou can't perform this operation on this endpoint.  \n[](#)\n",
         "line_start": 170,
-        "line_end": 173
+        "line_end": 173,
+        "url": "https://developers.facebook.com/docs/pages/new-pages-experience/)."
     },
     "12": {
         "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Group message Endpoint.md\nParagraph location: \n\tGroup Message Attachments\n\tUpdating\n\nContent: \n## Updating  \nYou can't perform this operation on this endpoint.  \n[](#)\n",
         "line_start": 176,
-        "line_end": 179
+        "line_end": 179,
+        "url": "https://developers.facebook.com/docs/pages/new-pages-experience/)."
     },
     "13": {
         "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Group message Endpoint.md\nParagraph location: \n\tGroup Message Attachments\n\tDeleting\n\nContent: \n## Deleting  \nYou can't perform this operation on this endpoint.  \n[](#)\n",
         "line_start": 182,
-        "line_end": 185
+        "line_end": 185,
+        "url": "https://developers.facebook.com/docs/pages/new-pages-experience/)."
     },
     "14": {
         "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Group message Endpoint.md\nParagraph location: \n\tGroup Message Dynamic Posts\n\tReading\n\nContent: \n## Reading  \nYou can't perform this operation on this endpoint.  \n[](#)\n",
         "line_start": 4,
-        "line_end": 7
+        "line_end": 7,
+        "url": "https://developers.facebook.com/docs/pages/new-pages-experience/)."
     },
     "15": {
         "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Group message Endpoint.md\nParagraph location: \n\tGroup Message Dynamic Posts\n\tCreating\n\nContent: \n## Creating  \nYou can't perform this operation on this endpoint.  \n[](#)\n",
         "line_start": 170,
-        "line_end": 173
+        "line_end": 173,
+        "url": "https://developers.facebook.com/docs/pages/new-pages-experience/)."
     },
     "16": {
         "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Group message Endpoint.md\nParagraph location: \n\tGroup Message Dynamic Posts\n\tUpdating\n\nContent: \n## Updating  \nYou can't perform this operation on this endpoint.  \n[](#)\n",
         "line_start": 176,
-        "line_end": 179
+        "line_end": 179,
+        "url": "https://developers.facebook.com/docs/pages/new-pages-experience/)."
     },
     "17": {
         "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Group message Endpoint.md\nParagraph location: \n\tGroup Message Dynamic Posts\n\tDeleting\n\nContent: \n## Deleting  \nYou can't perform this operation on this endpoint.  \n[](#)\n",
         "line_start": 182,
-        "line_end": 185
+        "line_end": 185,
+        "url": "https://developers.facebook.com/docs/pages/new-pages-experience/)."
     },
     "18": {
         "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Group message Endpoint.md\nParagraph location: \n\tGroup Message Insights\n\tReading\n\tNew Page Experience\n\nContent: \n### New Page Experience  \nThis endpoint is supported for [New Page Experience](https://developers.facebook.com/docs/pages/new-pages-experience/).\n",
         "line_start": 8,
-        "line_end": 10
+        "line_end": 10,
+        "url": "https://developers.facebook.com/docs/pages/new-pages-experience/)."
     },
     "19": {
         "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Group message Endpoint.md\nParagraph location: \n\tGroup Message Insights\n\tReading\n\tExample\n\nContent: \n### Example  \nHTTPPHP SDKJavaScript SDKAndroid SDKiOS SDK[Graph API Explorer](https://developers.facebook.com/tools/explorer/?method=GET&path=%7Bgroup-message-id%7D%2Finsights&version=v18.0)  \nGET /v18.0/{group-message-id}/insights HTTP/1.1\nHost: graph.facebook.com  \n/* PHP SDK v5.0.0 */\n/* make the API call */\ntry {\n// Returns a `Facebook\\FacebookResponse` object\n$response = $fb->get(\n'/{group-message-id}/insights',\n'{access-token}'\n);\n} catch(Facebook\\Exceptions\\FacebookResponseException $e) {\necho 'Graph returned an error: ' . $e->getMessage();\nexit;\n} catch(Facebook\\Exceptions\\FacebookSDKException $e) {\necho 'Facebook SDK returned an error: ' . $e->getMessage();\nexit;\n}\n$graphNode = $response->getGraphNode();\n/* handle the result */  \n/* make the API call */\nFB.api(\n\"/{group-message-id}/insights\",\nfunction (response) {\nif (response && !response.error) {\n/* handle the result */\n}\n}\n);  \n/* make the API call */\nnew GraphRequest(\nAccessToken.getCurrentAccessToken(),\n\"/{group-message-id}/insights\",\nnull,\nHttpMethod.GET,\nnew GraphRequest.Callback() {\npublic void onCompleted(GraphResponse response) {\n/* handle the result */\n}\n}\n).executeAsync();  \n/* make the API call */\nFBSDKGraphRequest *request = [[FBSDKGraphRequest alloc]\ninitWithGraphPath:@\"/{group-message-id}/insights\"\nparameters:params\nHTTPMethod:@\"GET\"];\n[request startWithCompletionHandler:^(FBSDKGraphRequestConnection *connection,\nid result,\nNSError *error) {\n// Handle the result\n}];  \nIf you want to learn how to use the Graph API, read our [Using Graph API guide](https://developers.facebook.com/docs/graph-api/using-graph-api/).\n",
         "line_start": 18,
-        "line_end": 71
+        "line_end": 71,
+        "url": "https://developers.facebook.com/docs/pages/new-pages-experience/)."
     },
     "20": {
         "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Group message Endpoint.md\nParagraph location: \n\tGroup Message Insights\n\tReading\n\tParameters\n\nContent: \n### Parameters  \n| Parameter | Description |\n| --- | --- |\n| `date_preset`<br><br>enum{today, yesterday, this\\_month, last\\_month, this\\_quarter, maximum, data\\_maximum, last\\_3d, last\\_7d, last\\_14d, last\\_28d, last\\_30d, last\\_90d, last\\_week\\_mon\\_sun, last\\_week\\_sun\\_sat, last\\_quarter, last\\_year, this\\_week\\_mon\\_today, this\\_week\\_sun\\_today, this\\_year} | date\\_preset |\n| `metric`<br><br>list<A valid metric for an insights endpoint> | metric |\n| `period`<br><br>enum{day, week, days\\_28, month, lifetime, total\\_over\\_range} | period |\n| `since`<br><br>datetime | since |\n| `until`<br><br>datetime | until |\n",
         "line_start": 79,
-        "line_end": 87
+        "line_end": 87,
+        "url": "https://developers.facebook.com/docs/pages/new-pages-experience/)."
     },
     "21": {
         "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Group message Endpoint.md\nParagraph location: \n\tGroup Message Insights\n\tReading\n\tFields\n\nContent: \n### Fields  \nReading from this edge will return a JSON formatted result:  \n{\n\"`data`\": \\[\\],\n\"`paging`\": {}\n}  \n#### `data`  \nA list of [InsightsResult](https://developers.facebook.com/docs/graph-api/reference/insights-result/) nodes.  \n#### `paging`  \nFor more details about pagination, see the [Graph API guide](https://developers.facebook.com/docs/graph-api/using-graph-api/#paging).\n",
         "line_start": 83,
-        "line_end": 93
+        "line_end": 93,
+        "url": "https://developers.facebook.com/docs/pages/new-pages-experience/)."
     },
     "22": {
         "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Group message Endpoint.md\nParagraph location: \n\tGroup Message Insights\n\tReading\n\tError Codes\n\nContent: \n### Error Codes  \n| Error | Description |\n| --- | --- |\n| 100 | Invalid parameter |  \n[](#)\n",
         "line_start": 158,
-        "line_end": 163
+        "line_end": 163,
+        "url": "https://developers.facebook.com/docs/pages/new-pages-experience/)."
     },
     "23": {
         "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Group message Endpoint.md\nParagraph location: \n\tGroup Message Insights\n\tCreating\n\nContent: \n## Creating  \nYou can't perform this operation on this endpoint.  \n[](#)\n",
         "line_start": 170,
-        "line_end": 173
+        "line_end": 173,
+        "url": "https://developers.facebook.com/docs/pages/new-pages-experience/)."
     },
     "24": {
         "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Group message Endpoint.md\nParagraph location: \n\tGroup Message Insights\n\tUpdating\n\nContent: \n## Updating  \nYou can't perform this operation on this endpoint.  \n[](#)\n",
         "line_start": 176,
-        "line_end": 179
+        "line_end": 179,
+        "url": "https://developers.facebook.com/docs/pages/new-pages-experience/)."
     },
     "25": {
         "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Group message Endpoint.md\nParagraph location: \n\tGroup Message Insights\n\tDeleting\n\nContent: \n## Deleting  \nYou can't perform this operation on this endpoint.  \n[](#)\n",
         "line_start": 182,
-        "line_end": 185
+        "line_end": 185,
+        "url": "https://developers.facebook.com/docs/pages/new-pages-experience/)."
     },
     "26": {
         "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Group message Endpoint.md\nParagraph location: \n\tGroup Message Reactions\n\tReading\n\nContent: \n## Reading  \nYou can't perform this operation on this endpoint.  \n[](#)\n",
         "line_start": 4,
-        "line_end": 7
+        "line_end": 7,
+        "url": "https://developers.facebook.com/docs/pages/new-pages-experience/)."
     },
     "27": {
         "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Group message Endpoint.md\nParagraph location: \n\tGroup Message Reactions\n\tCreating\n\nContent: \n## Creating  \nYou can't perform this operation on this endpoint.  \n[](#)\n",
         "line_start": 170,
-        "line_end": 173
+        "line_end": 173,
+        "url": "https://developers.facebook.com/docs/pages/new-pages-experience/)."
     },
     "28": {
         "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Group message Endpoint.md\nParagraph location: \n\tGroup Message Reactions\n\tUpdating\n\nContent: \n## Updating  \nYou can't perform this operation on this endpoint.  \n[](#)\n",
         "line_start": 176,
-        "line_end": 179
+        "line_end": 179,
+        "url": "https://developers.facebook.com/docs/pages/new-pages-experience/)."
     },
     "29": {
         "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Group message Endpoint.md\nParagraph location: \n\tGroup Message Reactions\n\tDeleting\n\nContent: \n## Deleting  \nYou can't perform this operation on this endpoint.  \n[](#)\n",
         "line_start": 182,
-        "line_end": 185
+        "line_end": 185,
+        "url": "https://developers.facebook.com/docs/pages/new-pages-experience/)."
     },
     "30": {
         "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Group message Endpoint.md\nParagraph location: \n\tGroup Message Sharedposts\n\tReading\n\nContent: \n## Reading  \nYou can't perform this operation on this endpoint.  \n[](#)\n",
         "line_start": 4,
-        "line_end": 7
+        "line_end": 7,
+        "url": "https://developers.facebook.com/docs/pages/new-pages-experience/)."
     },
     "31": {
         "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Group message Endpoint.md\nParagraph location: \n\tGroup Message Sharedposts\n\tCreating\n\nContent: \n## Creating  \nYou can't perform this operation on this endpoint.  \n[](#)\n",
         "line_start": 170,
-        "line_end": 173
+        "line_end": 173,
+        "url": "https://developers.facebook.com/docs/pages/new-pages-experience/)."
     },
     "32": {
         "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Group message Endpoint.md\nParagraph location: \n\tGroup Message Sharedposts\n\tUpdating\n\nContent: \n## Updating  \nYou can't perform this operation on this endpoint.  \n[](#)\n",
         "line_start": 176,
-        "line_end": 179
+        "line_end": 179,
+        "url": "https://developers.facebook.com/docs/pages/new-pages-experience/)."
     },
     "33": {
         "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Group message Endpoint.md\nParagraph location: \n\tGroup Message Sharedposts\n\tDeleting\n\nContent: \n## Deleting  \nYou can't perform this operation on this endpoint.  \n[](#)\n",
         "line_start": 182,
-        "line_end": 185
+        "line_end": 185,
+        "url": "https://developers.facebook.com/docs/pages/new-pages-experience/)."
     },
     "34": {
         "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Group message Endpoint.md\nParagraph location: \n\tGroup Message To\n\tReading\n\tExample\n\nContent: \n### Example  \nHTTPPHP SDKJavaScript SDKAndroid SDKiOS SDK[Graph API Explorer](https://developers.facebook.com/tools/explorer/?method=GET&path=%7Bgroup-message-id%7D%2Fto&version=v18.0)  \nGET /v18.0/{group-message-id}/to HTTP/1.1\nHost: graph.facebook.com  \n/* PHP SDK v5.0.0 */\n/* make the API call */\ntry {\n// Returns a `Facebook\\FacebookResponse` object\n$response = $fb->get(\n'/{group-message-id}/to',\n'{access-token}'\n);\n} catch(Facebook\\Exceptions\\FacebookResponseException $e) {\necho 'Graph returned an error: ' . $e->getMessage();\nexit;\n} catch(Facebook\\Exceptions\\FacebookSDKException $e) {\necho 'Facebook SDK returned an error: ' . $e->getMessage();\nexit;\n}\n$graphNode = $response->getGraphNode();\n/* handle the result */  \n/* make the API call */\nFB.api(\n\"/{group-message-id}/to\",\nfunction (response) {\nif (response && !response.error) {\n/* handle the result */\n}\n}\n);  \n/* make the API call */\nnew GraphRequest(\nAccessToken.getCurrentAccessToken(),\n\"/{group-message-id}/to\",\nnull,\nHttpMethod.GET,\nnew GraphRequest.Callback() {\npublic void onCompleted(GraphResponse response) {\n/* handle the result */\n}\n}\n).executeAsync();  \n/* make the API call */\nFBSDKGraphRequest *request = [[FBSDKGraphRequest alloc]\ninitWithGraphPath:@\"/{group-message-id}/to\"\nparameters:params\nHTTPMethod:@\"GET\"];\n[request startWithCompletionHandler:^(FBSDKGraphRequestConnection *connection,\nid result,\nNSError *error) {\n// Handle the result\n}];  \nIf you want to learn how to use the Graph API, read our [Using Graph API guide](https://developers.facebook.com/docs/graph-api/using-graph-api/).\n",
         "line_start": 18,
-        "line_end": 71
+        "line_end": 71,
+        "url": "https://developers.facebook.com/docs/pages/new-pages-experience/)."
     },
     "35": {
         "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Group message Endpoint.md\nParagraph location: \n\tGroup Message To\n\tReading\n\tParameters\n\nContent: \n### Parameters  \nThis endpoint doesn't have any parameters.\n",
         "line_start": 79,
-        "line_end": 81
+        "line_end": 81,
+        "url": "https://developers.facebook.com/docs/pages/new-pages-experience/)."
     },
     "36": {
         "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Group message Endpoint.md\nParagraph location: \n\tGroup Message To\n\tReading\n\tFields\n\nContent: \n### Fields  \nReading from this edge will return a JSON formatted result:  \n{\n\"`data`\": \\[\\],\n\"`paging`\": {}\n}  \n#### `data`  \nA list of [Profile](https://developers.facebook.com/docs/graph-api/reference/profile/) nodes.  \n#### `paging`  \nFor more details about pagination, see the [Graph API guide](https://developers.facebook.com/docs/graph-api/using-graph-api/#paging).\n",
         "line_start": 83,
-        "line_end": 93
+        "line_end": 93,
+        "url": "https://developers.facebook.com/docs/pages/new-pages-experience/)."
     },
     "37": {
         "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Group message Endpoint.md\nParagraph location: \n\tGroup Message To\n\tReading\n\tError Codes\n\nContent: \n### Error Codes  \n| Error | Description |\n| --- | --- |\n| 100 | Invalid parameter |  \n[](#)\n",
         "line_start": 158,
-        "line_end": 163
+        "line_end": 163,
+        "url": "https://developers.facebook.com/docs/pages/new-pages-experience/)."
     },
     "38": {
         "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Group message Endpoint.md\nParagraph location: \n\tGroup Message To\n\tCreating\n\nContent: \n## Creating  \nYou can't perform this operation on this endpoint.  \n[](#)\n",
         "line_start": 170,
-        "line_end": 173
+        "line_end": 173,
+        "url": "https://developers.facebook.com/docs/pages/new-pages-experience/)."
     },
     "39": {
         "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Group message Endpoint.md\nParagraph location: \n\tGroup Message To\n\tUpdating\n\nContent: \n## Updating  \nYou can't perform this operation on this endpoint.  \n[](#)\n",
         "line_start": 176,
-        "line_end": 179
+        "line_end": 179,
+        "url": "https://developers.facebook.com/docs/pages/new-pages-experience/)."
     },
     "40": {
         "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Group message Endpoint.md\nParagraph location: \n\tGroup Message To\n\tDeleting\n\nContent: \n## Deleting  \nYou can't perform this operation on this endpoint.  \n[](#)\n",
         "line_start": 182,
-        "line_end": 185
+        "line_end": 185,
+        "url": "https://developers.facebook.com/docs/pages/new-pages-experience/)."
     }
 }

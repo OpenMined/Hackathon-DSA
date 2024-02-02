@@ -45,12 +45,26 @@ def write_output(output_dir, output, type):
         f.write(output['content'])
 
 def prep_retrieval():
-    docs = DirectoryLoader(VERSIONS_DIR, glob="[!.]*/[!.]*.md", loader_cls=TextLoader).load()
-    docs = [d for d in docs if Path(d.metadata['source']) != VERSIONS_DIR / "README.md"]
+    import os
+    import json
 
-    languages = [langdetect.detect(d.page_content) for d in docs]
+    from langchain.docstore.document import Document
 
-    for doc, language in zip(docs, languages):
+    documents = []
+    for root, dirs, files in os.walk('../../data/_jsons'):
+        for name in files:
+            if name.endswith((".json")):
+                full_path = os.path.join(root, name)
+                with open(full_path, "r") as f:
+                    data = json.load(f)
+                    for value in data.values():
+                        doc = value['content']
+                        doc =  Document(page_content=value['content'], metadata={"source": full_path, "line_start": value['line_start'], "line_end": value['line_end']})
+                        documents.append(doc)
+
+    languages = [langdetect.detect(d.page_content) for d in documents]
+
+    for doc, language in zip(documents, languages):
         doc.metadata["language"] = language
 
     print(Counter(languages))
@@ -59,7 +73,7 @@ def prep_retrieval():
     # from retrievers.colbert import ColbertRetriever
     # retriever = ColbertRetriever()
     collection_name = "DSA"
-    retriever.build(docs, collection_name)
+    retriever.build(documents, collection_name)
     return retriever
 
 def prep_generator():

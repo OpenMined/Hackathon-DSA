@@ -3,10 +3,11 @@ import json
 
 VERSIONS_DIR = "data/platform-docs-versions-english/"
 
-from langchain_community.document_loaders import UnstructuredMarkdownLoader, DirectoryLoader, TextLoader
-from langchain.text_splitter import RecursiveCharacterTextSplitter
+from langchain_community.document_loaders import DirectoryLoader, TextLoader
+from langchain.text_splitter import MarkdownHeaderTextSplitter
 
 import os
+import re
 
 def list_folders(directory):
     # Ensure the directory exists
@@ -20,8 +21,6 @@ def list_folders(directory):
     # Filter out only the directories
     return [item for item in items if os.path.isdir(os.path.join(directory, item))]
 
-
-import re
 
 def replace_alternate_headings(text):
     lines = text.split('\n')
@@ -55,7 +54,6 @@ def find_substring_line(content, substring):
     return None, None
 
 
-from langchain.text_splitter import MarkdownHeaderTextSplitter
 
 def process_document(document, merge_h3=False):
     if merge_h3:
@@ -96,9 +94,35 @@ def process_document(document, merge_h3=False):
         
         item = f"{source}\n{hierarchy}\n{content}" 
 
+
+
+        def extract_urls(text):
+            if "Resource URL" in text:
+                print('found')
+                # Regular expression pattern to match URLs
+                pattern = r'https?://\S+'
+
+                # Find all matches using re.findall
+                urls = re.findall(pattern, text)
+
+                return urls[0]
+            
+            # Regular expression pattern to match URLs
+            pattern = r'https?://\S+'
+
+            # Find all matches using re.findall
+            urls = re.findall(pattern, text)
+            
+            if len(urls):
+                return urls[0]
+            
+            return document.metadata['source'].split('/')[-2] + '/' + document.metadata['source'].split('/')[-1]
+        
+        url = extract_urls(d.page_content)
+
         if new_markdown is not None and d.page_content is not None:
             line_start, line_end = find_substring_line(new_markdown, d.page_content)
-            metadata=(line_start, line_end)
+            metadata=(line_start, line_end, url)
     
         filtered_header_splits.append((item, metadata))
 
@@ -112,7 +136,8 @@ def save_splits(folder_name, file_name, splits):
         data[idx] = {
             'content': split[0],
             'line_start': split[1][0],
-            'line_end': split[1][1]
+            'line_end': split[1][1],
+            'url': split[1][2],
         }
 
     if not os.path.exists(folder_name):

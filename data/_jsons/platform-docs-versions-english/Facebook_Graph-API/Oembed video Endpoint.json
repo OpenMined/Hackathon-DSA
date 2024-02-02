@@ -2,36 +2,43 @@
     "0": {
         "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Oembed video Endpoint.md\nParagraph location: \n\tOembed Video\n\tReading\n\tExample\n\nContent: \n### Example  \nHTTPPHP SDKJavaScript SDKAndroid SDKiOS SDK[Graph API Explorer](https://developers.facebook.com/tools/explorer/?method=GET&path=oembed_video&version=v19.0)  \nGET /v19.0/oembed_video HTTP/1.1\nHost: graph.facebook.com  \n/* PHP SDK v5.0.0 */\n/* make the API call */\ntry {\n// Returns a `Facebook\\FacebookResponse` object\n$response = $fb->get(\n'/oembed_video',\n'{access-token}'\n);\n} catch(Facebook\\Exceptions\\FacebookResponseException $e) {\necho 'Graph returned an error: ' . $e->getMessage();\nexit;\n} catch(Facebook\\Exceptions\\FacebookSDKException $e) {\necho 'Facebook SDK returned an error: ' . $e->getMessage();\nexit;\n}\n$graphNode = $response->getGraphNode();\n/* handle the result */  \n/* make the API call */\nFB.api(\n\"/oembed_video\",\nfunction (response) {\nif (response && !response.error) {\n/* handle the result */\n}\n}\n);  \n/* make the API call */\nnew GraphRequest(\nAccessToken.getCurrentAccessToken(),\n\"/oembed_video\",\nnull,\nHttpMethod.GET,\nnew GraphRequest.Callback() {\npublic void onCompleted(GraphResponse response) {\n/* handle the result */\n}\n}\n).executeAsync();  \n/* make the API call */\nFBSDKGraphRequest *request = [[FBSDKGraphRequest alloc]\ninitWithGraphPath:@\"/oembed_video\"\nparameters:params\nHTTPMethod:@\"GET\"];\n[request startWithCompletionHandler:^(FBSDKGraphRequestConnection *connection,\nid result,\nNSError *error) {\n// Handle the result\n}];  \nIf you want to learn how to use the Graph API, read our [Using Graph API guide](https://developers.facebook.com/docs/graph-api/using-graph-api/).\n",
         "line_start": 6,
-        "line_end": 59
+        "line_end": 59,
+        "url": "https://developers.facebook.com/tools/explorer/?method=GET&path=oembed_video&version=v19.0)"
     },
     "1": {
         "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Oembed video Endpoint.md\nParagraph location: \n\tOembed Video\n\tReading\n\tParameters\n\nContent: \n### Parameters  \n| Parameter | Description |\n| --- | --- |\n| `maxwidth`<br><br>int64 | maxwidth |\n| `omitscript`<br><br>boolean | Default value: `false`<br><br>omitscript |\n| `sdklocale`<br><br>string | sdklocale |\n| `url`<br><br>URI | url<br><br>Required |\n| `useiframe`<br><br>boolean | Default value: `false`<br><br>useiframe |\n",
         "line_start": 67,
-        "line_end": 75
+        "line_end": 75,
+        "url": "https://developers.facebook.com/tools/explorer/?method=GET&path=oembed_video&version=v19.0)"
     },
     "2": {
         "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Oembed video Endpoint.md\nParagraph location: \n\tOembed Video\n\tReading\n\tFields\n\nContent: \n### Fields  \n| Field | Description |\n| --- | --- |\n| `author_name`<br><br>string | author\\_name<br><br>[Default](https://developers.facebook.com/docs/graph-api/using-graph-api/#fields) |\n| `author_url`<br><br>string | author\\_url<br><br>[Default](https://developers.facebook.com/docs/graph-api/using-graph-api/#fields) |\n| `height`<br><br>int32 | height<br><br>[Default](https://developers.facebook.com/docs/graph-api/using-graph-api/#fields) |\n| `html`<br><br>string | html<br><br>[Default](https://developers.facebook.com/docs/graph-api/using-graph-api/#fields) |\n| `provider_name`<br><br>string | provider\\_name<br><br>[Default](https://developers.facebook.com/docs/graph-api/using-graph-api/#fields) |\n| `provider_url`<br><br>string | provider\\_url<br><br>[Default](https://developers.facebook.com/docs/graph-api/using-graph-api/#fields) |\n| `type`<br><br>string | type<br><br>[Default](https://developers.facebook.com/docs/graph-api/using-graph-api/#fields) |\n| `version`<br><br>string | version<br><br>[Default](https://developers.facebook.com/docs/graph-api/using-graph-api/#fields) |\n| `width`<br><br>int32 | width<br><br>[Default](https://developers.facebook.com/docs/graph-api/using-graph-api/#fields) |\n",
         "line_start": 77,
-        "line_end": 89
+        "line_end": 89,
+        "url": "https://developers.facebook.com/tools/explorer/?method=GET&path=oembed_video&version=v19.0)"
     },
     "3": {
         "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Oembed video Endpoint.md\nParagraph location: \n\tOembed Video\n\tReading\n\tError Codes\n\nContent: \n### Error Codes  \n| Error | Description |\n| --- | --- |\n| 200 | Permissions error |\n| 100 | Invalid parameter |\n",
         "line_start": 91,
-        "line_end": 96
+        "line_end": 96,
+        "url": "https://developers.facebook.com/tools/explorer/?method=GET&path=oembed_video&version=v19.0)"
     },
     "4": {
         "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Oembed video Endpoint.md\nParagraph location: \n\tOembed Video\n\tCreating\n\nContent: \n## Creating  \nYou can't perform this operation on this endpoint.\n",
         "line_start": 98,
-        "line_end": 100
+        "line_end": 100,
+        "url": "https://developers.facebook.com/tools/explorer/?method=GET&path=oembed_video&version=v19.0)"
     },
     "5": {
         "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Oembed video Endpoint.md\nParagraph location: \n\tOembed Video\n\tUpdating\n\nContent: \n## Updating  \nYou can't perform this operation on this endpoint.\n",
         "line_start": 102,
-        "line_end": 104
+        "line_end": 104,
+        "url": "https://developers.facebook.com/tools/explorer/?method=GET&path=oembed_video&version=v19.0)"
     },
     "6": {
         "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Oembed video Endpoint.md\nParagraph location: \n\tOembed Video\n\tDeleting\n\nContent: \n## Deleting  \nYou can't perform this operation on this endpoint.  \n![](https://www.facebook.com/tr?id=675141479195042&ev=PageView&noscript=1)  \n![](https://www.facebook.com/tr?id=574561515946252&ev=PageView&noscript=1)  \n![](https://www.facebook.com/tr?id=1754628768090156&ev=PageView&noscript=1)\n",
         "line_start": 106,
-        "line_end": 111
+        "line_end": 111,
+        "url": "https://developers.facebook.com/tools/explorer/?method=GET&path=oembed_video&version=v19.0)"
     }
 }

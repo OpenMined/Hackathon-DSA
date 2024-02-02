@@ -1,0 +1,80 @@
+{
+    "0": {
+        "content": "Source document: data/platform-docs-versions-english/Platforms/platforms.md\nParagraph location: \n\tList of platforms and documentation\n\tSubject to complements\n\tAmazon Store\n\nContent: \n# List of platforms and documentation  \n## Subject to complements  \n### Amazon Store\n- ~~https://assets.aboutamazon.com/cd/28/4d02dd2e41ec8c6d1bc341e9d919/amazon-eu-store-transparency-report-jan-june-2023.pdf~~\n",
+        "line_start": 0,
+        "line_end": 4,
+        "url": "https://assets.aboutamazon.com/cd/28/4d02dd2e41ec8c6d1bc341e9d919/amazon-eu-store-transparency-report-jan-june-2023.pdf~~"
+    },
+    "1": {
+        "content": "Source document: data/platform-docs-versions-english/Platforms/platforms.md\nParagraph location: \n\tList of platforms and documentation\n\tSubject to complements\n\tApple App Store\n\nContent: \n### Apple App Store\n- https://adrepository.apple.com/fr\n- ~~https://developer.apple.com/support/downloads/Ad-Repository.pdf~~\n- https://contentreports.apple.com/\n- ~~https://www.apple.com/legal/dsa/transparency/eu/app-store/2310/~~\n",
+        "line_start": 7,
+        "line_end": 12,
+        "url": "https://assets.aboutamazon.com/cd/28/4d02dd2e41ec8c6d1bc341e9d919/amazon-eu-store-transparency-report-jan-june-2023.pdf~~"
+    },
+    "2": {
+        "content": "Source document: data/platform-docs-versions-english/Platforms/platforms.md\nParagraph location: \n\tList of platforms and documentation\n\tSubject to complements\n\tBing\n\nContent: \n### Bing\n- https://adlibrary.ads.microsoft.com/\n- ~~https://support.microsoft.com/en-gb/topic/eu-digital-services-act-information-6b16b41f-2fa5-4e64-a8d3-033958812642~~\n- ~~https://learn.microsoft.com/en-us/advertising/guides/ad-library-api?view=bingads-13~~\n",
+        "line_start": 13,
+        "line_end": 17,
+        "url": "https://assets.aboutamazon.com/cd/28/4d02dd2e41ec8c6d1bc341e9d919/amazon-eu-store-transparency-report-jan-june-2023.pdf~~"
+    },
+    "3": {
+        "content": "Source document: data/platform-docs-versions-english/Platforms/platforms.md\nParagraph location: \n\tList of platforms and documentation\n\tSubject to complements\n\tBooking\n\nContent: \n### Booking\n- https://www.booking.com/ad-repository.fr.html\n- ~~https://www.booking.com/ad-repository/apidoc.fr.html~~\n- ~~https://www.booking.com/content/dsa.fr.html~~\n- ~~https://r-xx.bstatic.com/data/mobile/dsa_transparency_report_bf3fdc24.pdf~~\n",
+        "line_start": 18,
+        "line_end": 23,
+        "url": "https://assets.aboutamazon.com/cd/28/4d02dd2e41ec8c6d1bc341e9d919/amazon-eu-store-transparency-report-jan-june-2023.pdf~~"
+    },
+    "4": {
+        "content": "Source document: data/platform-docs-versions-english/Platforms/platforms.md\nParagraph location: \n\tList of platforms and documentation\n\tSubject to complements\n\tFacebook / Instagram\n\nContent: \n### Facebook / Instagram\n- https://developers.facebook.com/docs/\n- ~~https://developers.facebook.com/docs/threat-exchange~~\n- ~~https://developers.facebook.com/docs/ad-targeting-dataset/~~\n- https://developers.facebook.com/docs/content-library-api/guides\n- ~~https://developers.facebook.com/docs/fort-pages-api/reference~~\n- ~~https://developers.facebook.com/docs/graph-api/~~\n- ~~https://developers.facebook.com/docs/features-reference~~\n- ~~https://developers.facebook.com/docs/instagram-api~~/\n- ~~https://transparency.fb.com/reports/community-standards-enforcement/~~\n- https://transparency.fb.com/reports/regulatory-transparency-reports/\n- ~~https://transparency.fb.com/reports/government-data-requests/~~\n- ~~https://transparency.fb.com/features/explaining-ranking~~\n- ~~https://transparency.fb.com/fr-fr/researchtools/ad-library-tools~~\n- https://www.facebook.com/ads/library/report\n- ~~https://www.facebook.com/ads/library/api/?source=onboarding~~\n- ~~https://help.crowdtangle.com/en/articles/3443476-api-cheat-sheet~~\n- ~~https://github.com/CrowdTangle/API/wiki~~\n- ~~https://fort.fb.com/researcher-apis~~\n",
+        "line_start": 24,
+        "line_end": 43,
+        "url": "https://assets.aboutamazon.com/cd/28/4d02dd2e41ec8c6d1bc341e9d919/amazon-eu-store-transparency-report-jan-june-2023.pdf~~"
+    },
+    "5": {
+        "content": "Source document: data/platform-docs-versions-english/Platforms/platforms.md\nParagraph location: \n\tList of platforms and documentation\n\tSubject to complements\n\tGoogle Maps / Google Play / Google Search / Google Shopping\n\nContent: \n### Google Maps / Google Play / Google Search / Google Shopping\n- ~~https://storage.googleapis.com/transparencyreport/report-downloads/pdf-report-27_2023-8-28_2023-9-10_en_v1.pdf~~\n- ~~https://developers.google.com/custom-search/v1/overview~~\n- https://console.cloud.google.com/marketplace/details/bigquery-public-data/google-ads-transparency-center\n",
+        "line_start": 44,
+        "line_end": 48,
+        "url": "https://assets.aboutamazon.com/cd/28/4d02dd2e41ec8c6d1bc341e9d919/amazon-eu-store-transparency-report-jan-june-2023.pdf~~"
+    },
+    "6": {
+        "content": "Source document: data/platform-docs-versions-english/Platforms/platforms.md\nParagraph location: \n\tList of platforms and documentation\n\tSubject to complements\n\tLinkedIn\n\nContent: \n### LinkedIn\n- ~~https://about.linkedin.com/transparency/community-report~~\n- ~~https://learn.microsoft.com/en-us/linkedin/~~\n- ~~https://www.linkedin.com/ad-library/home~~\n- ~~https://about.linkedin.com/transparency/government-requests-report~~\n",
+        "line_start": 49,
+        "line_end": 54,
+        "url": "https://assets.aboutamazon.com/cd/28/4d02dd2e41ec8c6d1bc341e9d919/amazon-eu-store-transparency-report-jan-june-2023.pdf~~"
+    },
+    "7": {
+        "content": "Source document: data/platform-docs-versions-english/Platforms/platforms.md\nParagraph location: \n\tList of platforms and documentation\n\tSubject to complements\n\tPinterest\n\nContent: \n### Pinterest\n- ~~https://policy.pinterest.com/en/digital-services-act-transparency-report~~\n- ~~https://help.pinterest.com/en/article/digital-services-act~~\n- ~~https://developers.pinterest.com/~~\n- https://developers.pinterest.com/usecase/analyze/\n- https://ads.pinterest.com/ads-repository/\n",
+        "line_start": 55,
+        "line_end": 61,
+        "url": "https://assets.aboutamazon.com/cd/28/4d02dd2e41ec8c6d1bc341e9d919/amazon-eu-store-transparency-report-jan-june-2023.pdf~~"
+    },
+    "8": {
+        "content": "Source document: data/platform-docs-versions-english/Platforms/platforms.md\nParagraph location: \n\tList of platforms and documentation\n\tSubject to complements\n\tSnapchat\n\nContent: \n### Snapchat\n- ~~https://values.snap.com/fr-FR/privacy/transparency~~\n- ~~https://values.snap.com/fr-FR/privacy/transparency/european-union~~\n- https://adsgallery.snap.com/\n- https://www.snap.com/en-US/political-ads\n",
+        "line_start": 62,
+        "line_end": 67,
+        "url": "https://assets.aboutamazon.com/cd/28/4d02dd2e41ec8c6d1bc341e9d919/amazon-eu-store-transparency-report-jan-june-2023.pdf~~"
+    },
+    "9": {
+        "content": "Source document: data/platform-docs-versions-english/Platforms/platforms.md\nParagraph location: \n\tList of platforms and documentation\n\tSubject to complements\n\tTiktok\n\nContent: \n### Tiktok\n- ~~https://developers.tiktok.com/doc/research-api-codebook/~~\n- ~~https://www.tiktok.com/transparency/fr-fr/community-guidelines-enforcement-2023-3/~~\n- https://library.tiktok.com/ads\n- ~~https://developers.tiktok.com/doc/commercial-content-api-query-ads/~~\n",
+        "line_start": 68,
+        "line_end": 73,
+        "url": "https://assets.aboutamazon.com/cd/28/4d02dd2e41ec8c6d1bc341e9d919/amazon-eu-store-transparency-report-jan-june-2023.pdf~~"
+    },
+    "10": {
+        "content": "Source document: data/platform-docs-versions-english/Platforms/platforms.md\nParagraph location: \n\tList of platforms and documentation\n\tSubject to complements\n\tX\n\nContent: \n### X\n- ~~https://developer.twitter.com/en/docs/twitter-api~~\n- ~~https://transparency.twitter.com/dsa-transparency-report.html~~\n- https://business.twitter.com/en/help/ads-policies/product-policies/ads-transparency.html\n- https://ads.twitter.com/ads-repository?ref=BTC\n",
+        "line_start": 74,
+        "line_end": 79,
+        "url": "https://assets.aboutamazon.com/cd/28/4d02dd2e41ec8c6d1bc341e9d919/amazon-eu-store-transparency-report-jan-june-2023.pdf~~"
+    },
+    "11": {
+        "content": "Source document: data/platform-docs-versions-english/Platforms/platforms.md\nParagraph location: \n\tList of platforms and documentation\n\tSubject to complements\n\tWikipedia\n\nContent: \n### Wikipedia\n- ~~https://foundation.wikimedia.org/wiki/Legal:EU_DSA_Userbase_Statistics~~\n- ~~https://www.mediawiki.org/wiki/API:Main_page~~\n",
+        "line_start": 80,
+        "line_end": 83,
+        "url": "https://assets.aboutamazon.com/cd/28/4d02dd2e41ec8c6d1bc341e9d919/amazon-eu-store-transparency-report-jan-june-2023.pdf~~"
+    },
+    "12": {
+        "content": "Source document: data/platform-docs-versions-english/Platforms/platforms.md\nParagraph location: \n\tList of platforms and documentation\n\tSubject to complements\n\tYoutube\n\nContent: \n### Youtube\n- https://storage.googleapis.com/transparencyreport/report-downloads/pdf-report-27_2023-8-28_2023-9-10_en_v1.pdf ;\n- ~~https://developers.google.com/youtube/v3/docs~~\n",
+        "line_start": 84,
+        "line_end": 87,
+        "url": "https://assets.aboutamazon.com/cd/28/4d02dd2e41ec8c6d1bc341e9d919/amazon-eu-store-transparency-report-jan-june-2023.pdf~~"
+    }
+}
