@@ -17,7 +17,7 @@ from langchain_community.document_loaders import UnstructuredMarkdownLoader, Dir
 from langchain.text_splitter import RecursiveCharacterTextSplitter
 
 def answer_query(query, retriever, rag_generator):
-    k = 5
+    k = 3
     results = retriever.query(query['question'], k)
     context = [r['content'] for r in results]
     chat_logs = rag_generator.generate_batch(context, query['question'])
