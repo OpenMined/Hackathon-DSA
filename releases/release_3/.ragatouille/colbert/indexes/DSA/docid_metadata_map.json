@@ -1,0 +1,558 @@
+{
+  "ba78b987-8f2a-4611-8b70-49b3b3a106e7":{
+    "source":"../data/platform-docs-versions/Pinterest_DSA-Home-Page/DSA-Home-Page.md",
+    "language":"en"
+  },
+  "dbc0512b-58fc-4d42-a05a-55841fe3a65b":{
+    "source":"../data/platform-docs-versions/Snapchat_Transparency-World/Transparency Report.md",
+    "language":"fr"
+  },
+  "8653c3e0-4ece-45ab-aa50-25169a07c495":{
+    "source":"../data/platform-docs-versions/Google_Custom-Search-JSON-API/Custom Search JSON API.md",
+    "language":"en"
+  },
+  "292d668a-3c67-492f-9b54-d52f8b9be672":{
+    "source":"../data/platform-docs-versions/Booking.com_AD-API/Ads Repository API Documentation.md",
+    "language":"en"
+  },
+  "bc5a7371-760f-4b9d-9baa-71e409631387":{
+    "source":"../data/platform-docs-versions/Facebook_Instagram-API/API Reference.md",
+    "language":"en"
+  },
+  "6d0d2c47-acd9-4014-8e1b-dbbfe4f40437":{
+    "source":"../data/platform-docs-versions/Facebook_Instagram-API/Instagram API Documentation.md",
+    "language":"en"
+  },
+  "bc5a1d71-1500-4758-a3be-20176973f3e8":{
+    "source":"../data/platform-docs-versions/Booking.com_DSA-Home-Page/DSA Home Page.md",
+    "language":"fr"
+  },
+  "37c6ca0d-def7-4ded-ad86-1c3989a6f0bd":{
+    "source":"../data/platform-docs-versions/Booking.com_DSA-Home-Page/Developer Terms.md",
+    "language":"fr"
+  },
+  "cc72bd98-c1db-49d9-8d4d-588f9cc74aa4":{
+    "source":"../data/platform-docs-versions/Facebook_Content-Library-API/Content-Library-API Documentation.md",
+    "language":"en"
+  },
+  "777e1010-651f-48ae-997e-a6ad3c15824b":{
+    "source":"../data/platform-docs-versions/Bing_DSA-Home-Page/DSA Home Page.md",
+    "language":"en"
+  },
+  "2c674f68-7700-4e21-b970-1bda6b01a0a7":{
+    "source":"../data/platform-docs-versions/Bing_DSA-Home-Page/Developer Terms.md",
+    "language":"en"
+  },
+  "f0881e3d-34ad-4f03-8dc3-4b1b70f0c1b8":{
+    "source":"../data/platform-docs-versions/X_Twitter-API-V2/Usage.md",
+    "language":"en"
+  },
+  "c2aab42d-ef30-4bbc-babc-b789880c463f":{
+    "source":"../data/platform-docs-versions/X_Twitter-API-V2/Trends.md",
+    "language":"en"
+  },
+  "fca669c9-80ef-4ce1-a362-5cd775cf35f9":{
+    "source":"../data/platform-docs-versions/X_Twitter-API-V2/Lists.md",
+    "language":"en"
+  },
+  "d262ca99-5170-43d1-8906-da3f72404258":{
+    "source":"../data/platform-docs-versions/X_Twitter-API-V2/Fundamentals.md",
+    "language":"en"
+  },
+  "382bc124-2314-4bc3-a519-36b946cec1e1":{
+    "source":"../data/platform-docs-versions/X_Twitter-API-V2/Users.md",
+    "language":"en"
+  },
+  "cf36fa74-d594-4b1d-aab8-f60468fa2b07":{
+    "source":"../data/platform-docs-versions/X_Twitter-API-V2/Compliance.md",
+    "language":"en"
+  },
+  "7a5452fa-7813-4b4c-8969-e7ae5e036be3":{
+    "source":"../data/platform-docs-versions/X_Twitter-API-V2/Tweets.md",
+    "language":"en"
+  },
+  "789e96d1-59bb-47e0-ad8b-7ada4c3e8b39":{
+    "source":"../data/platform-docs-versions/X_Twitter-API-V2/Spaces.md",
+    "language":"en"
+  },
+  "a6a0525b-6800-42b9-aa4e-d3a9d9c79985":{
+    "source":"../data/platform-docs-versions/X_Twitter-API-V2/Direct Messages.md",
+    "language":"en"
+  },
+  "34359b04-e291-44a6-b71d-463e96568922":{
+    "source":"../data/platform-docs-versions/Pinterest_DSA-Report/DSA Report.md",
+    "language":"en"
+  },
+  "2ec9845d-d3fc-4d43-93c9-b98b34af8f06":{
+    "source":"../data/platform-docs-versions/CrowdTangle_API/Api CheatSheet.md",
+    "language":"en"
+  },
+  "68d7d77e-57ba-4ad3-92e7-982bbca62fad":{
+    "source":"../data/platform-docs-versions/CrowdTangle_API/API Documentation.md",
+    "language":"en"
+  },
+  "9268e4c1-bc89-4065-9ed9-e68328b32a7b":{
+    "source":"../data/platform-docs-versions/Snapchat_Transparency/Transparency Report.md",
+    "language":"fr"
+  },
+  "5f8a8697-7512-4012-ae78-712b27fb7528":{
+    "source":"../data/platform-docs-versions/Facebook_Fort-Home-Page/Fort Researcher API.md",
+    "language":"en"
+  },
+  "8582def7-9cc3-494f-a0f5-f42ae17cee66":{
+    "source":"../data/platform-docs-versions/Facebook_API-Threat-Exchange/API Overview.md",
+    "language":"en"
+  },
+  "bca9bbc2-5cc1-4e22-b18d-025070f6e8b5":{
+    "source":"../data/platform-docs-versions/Facebook_API-Threat-Exchange/API Reference.md",
+    "language":"en"
+  },
+  "453a783c-16fe-4c80-918c-90719f966024":{
+    "source":"../data/platform-docs-versions/Google_Transparency-Report/Transparency Report.md",
+    "language":"en"
+  },
+  "0260a60b-3cec-4539-83bb-f21ec97dd795":{
+    "source":"../data/platform-docs-versions/Facebook_API-Ad/API Meta Ad Library.md",
+    "language":"en"
+  },
+  "58a31df6-56db-403b-a887-02998bbc3ce0":{
+    "source":"../data/platform-docs-versions/Apple_DSA-Home-Page/DSA Home Page.md",
+    "language":"en"
+  },
+  "117683b0-b6f9-49c8-87f9-3662c903d217":{
+    "source":"../data/platform-docs-versions/Apple_DSA-Home-Page/Developer Terms.md",
+    "language":"en"
+  },
+  "ce741c77-db56-4b89-ab26-d449fe4cd4c8":{
+    "source":"../data/platform-docs-versions/Wikipedia_API/API.md",
+    "language":"en"
+  },
+  "68857c3b-509f-426d-b666-b039b8da94e7":{
+    "source":"../data/platform-docs-versions/X_DSA-Transparency-Report/DSA Transparency Report.md",
+    "language":"en"
+  },
+  "7da05519-cb3b-4aa7-b701-e7522a406bb4":{
+    "source":"../data/platform-docs-versions/Facebook_Ad-Library-Tools/Meta Ad Library Tools.md",
+    "language":"en"
+  },
+  "29575e68-b191-417c-80ad-3185ff2df526":{
+    "source":"../data/platform-docs-versions/Facebook_Community-Report/Community Standards Enforcement Report.md",
+    "language":"en"
+  },
+  "b4be3d75-371d-4982-862b-59904b27ed93":{
+    "source":"../data/platform-docs-versions/Booking.com_Transparency-Report/Transparency Report.md",
+    "language":"en"
+  },
+  "ef007c9d-28d1-41e6-9888-79db21b77f8e":{
+    "source":"../data/platform-docs-versions/Linkedin_Community-Report/Community Report.md",
+    "language":"en"
+  },
+  "0854d9b6-cb63-4498-8587-d863e717129b":{
+    "source":"../data/platform-docs-versions/Linkedin_Ad-Library/Ad Library.md",
+    "language":"en"
+  },
+  "bd1e2cc8-09df-4949-8677-e0781c2e97c0":{
+    "source":"../data/platform-docs-versions/Bing_Ad-Library-API/Ad Library API.md",
+    "language":"en"
+  },
+  "3e99f0ad-b9c7-4b5e-b153-1cfbcf9ce274":{
+    "source":"../data/platform-docs-versions/Linkedin_API/API.md",
+    "language":"en"
+  },
+  "d53f2e89-2d54-4573-bbcb-391752538083":{
+    "source":"../data/platform-docs-versions/Amazon_Transparency-Report/EU Store Transparency Report.md",
+    "language":"en"
+  },
+  "887853ee-570b-45ee-8cf2-9fe4c4b80f1f":{
+    "source":"../data/platform-docs-versions/Facebook_Ad-Targeting-Dataset/Overview.md",
+    "language":"en"
+  },
+  "f011f079-0189-4710-9b9b-dc28eb70b16f":{
+    "source":"../data/platform-docs-versions/Facebook_Ad-Targeting-Dataset/Table Schema Documentation.md",
+    "language":"en"
+  },
+  "f28b173d-e427-4169-9523-42562aed3f47":{
+    "source":"../data/platform-docs-versions/Facebook_Ad-Targeting-Dataset/Get Started.md",
+    "language":"en"
+  },
+  "a5484a2b-4f48-46ba-b0b3-d5fbcf2f952b":{
+    "source":"../data/platform-docs-versions/Facebook_Ad-Targeting-Dataset/Sample Queries.md",
+    "language":"en"
+  },
+  "f2aa1c2b-5d05-4202-ba11-e7d4efd67688":{
+    "source":"../data/platform-docs-versions/TikTok_Transparency/Government Removal Requests Reports.md",
+    "language":"fr"
+  },
+  "6299ac72-3681-4c32-a518-52a1bdb86dde":{
+    "source":"../data/platform-docs-versions/TikTok_Transparency/Intellectual Property Removal Requests Reports.md",
+    "language":"fr"
+  },
+  "8a357e6c-ee94-43a6-8c94-2aab96f7f95e":{
+    "source":"../data/platform-docs-versions/TikTok_Transparency/Community Guidelines Enforcement Reports.md",
+    "language":"fr"
+  },
+  "f349f993-a740-4089-8d1f-34cac1d50b01":{
+    "source":"../data/platform-docs-versions/TikTok_Transparency/Information Requests.md",
+    "language":"fr"
+  },
+  "5c3447b5-ee93-4f87-acf2-326ba85a973b":{
+    "source":"../data/platform-docs-versions/TikTok_Transparency/Digital Services Act EU.md",
+    "language":"en"
+  },
+  "3738ca68-19b2-4403-94aa-abccc62596e0":{
+    "source":"../data/platform-docs-versions/Facebook_Government-Report/Government Requests for User Data Report.md",
+    "language":"en"
+  },
+  "2efb122d-cdaf-4d74-937d-24fcc0185bbe":{
+    "source":"../data/platform-docs-versions/Apple_DSA-Transparency-Report/DSA Transparency Report.md",
+    "language":"en"
+  },
+  "9274b550-04a9-4647-8efb-b513e68a7007":{
+    "source":"../data/platform-docs-versions/Apple_DSA-Transparency-Report/Developer Terms.md",
+    "language":"en"
+  },
+  "ef50c871-3b89-4ac4-ad8f-875453593b6a":{
+    "source":"../data/platform-docs-versions/X_Twitter-API-V1/Trends.md",
+    "language":"en"
+  },
+  "85a459e8-7821-46da-abc3-d3f1eba5dbef":{
+    "source":"../data/platform-docs-versions/X_Twitter-API-V1/Fundamentals.md",
+    "language":"en"
+  },
+  "af52b867-cb0f-4bcd-9bc9-d5c8e02d0ecc":{
+    "source":"../data/platform-docs-versions/X_Twitter-API-V1/Users.md",
+    "language":"en"
+  },
+  "58f1db64-12f4-4760-8316-e32641709459":{
+    "source":"../data/platform-docs-versions/X_Twitter-API-V1/Media.md",
+    "language":"en"
+  },
+  "4d73f168-e448-48d0-b400-3de98cf44038":{
+    "source":"../data/platform-docs-versions/X_Twitter-API-V1/Tweets.md",
+    "language":"en"
+  },
+  "66699c2f-08c2-46ed-85ef-ac0be0c602a9":{
+    "source":"../data/platform-docs-versions/X_Twitter-API-V1/Direct Messages.md",
+    "language":"en"
+  },
+  "a8ec50ca-b137-4dc7-b44c-0a0547af9d58":{
+    "source":"../data/platform-docs-versions/Wikipedia_DSA-Statistics/DSA-Statistics.md",
+    "language":"en"
+  },
+  "1ebb9cb1-5ebd-4993-a276-3a65564d945b":{
+    "source":"../data/platform-docs-versions/X_Twitter-API-Overview/Migrate.md",
+    "language":"en"
+  },
+  "b7c6436b-0337-4476-8e60-4b8de5064222":{
+    "source":"../data/platform-docs-versions/X_Twitter-API-Overview/Getting Started.md",
+    "language":"en"
+  },
+  "b6e44bed-32cf-4b34-adc9-f932e7d9f595":{
+    "source":"../data/platform-docs-versions/X_Twitter-API-Overview/Tools and Libraries.md",
+    "language":"en"
+  },
+  "f7b628bf-fcb6-4ab1-8282-370f01500ff2":{
+    "source":"../data/platform-docs-versions/X_Twitter-API-Overview/What to build.md",
+    "language":"en"
+  },
+  "464c42fc-31f6-4133-b104-cc3ec6b60df3":{
+    "source":"../data/platform-docs-versions/TikTok_Research-API/Research API Documentation.md",
+    "language":"en"
+  },
+  "ef285c10-9cf7-4950-907f-1023a8bb88a6":{
+    "source":"../data/platform-docs-versions/TikTok_Research-API/Research API Reference.md",
+    "language":"en"
+  },
+  "194b0e8e-c9b8-4981-9b2e-358f2eda4532":{
+    "source":"../data/platform-docs-versions/Youtube_Data-API/DSA-Statistics.md",
+    "language":"en"
+  },
+  "0a77001c-b809-4f14-9055-c5b81855effb":{
+    "source":"../data/platform-docs-versions/Facebook_Ranking-Transparency/Ranking-Transparency.md",
+    "language":"en"
+  },
+  "366214c7-2977-4025-943e-6066dccfb178":{
+    "source":"../data/platform-docs-versions/TikTok_Example/Developer Terms.md",
+    "language":"en"
+  },
+  "c0574f29-97a7-4368-996a-73b252b5c77a":{
+    "source":"../data/platform-docs-versions/Facebook_Features-Reference/Features Reference.md",
+    "language":"en"
+  },
+  "804da8ca-a3a8-4064-9eb8-7e8929bc5373":{
+    "source":"../data/platform-docs-versions/Linkedin_Government-Requests/Government Requests Report.md",
+    "language":"en"
+  },
+  "ee2a5ad8-984e-47c6-b3f2-c04c396e9586":{
+    "source":"../data/platform-docs-versions/Apple_API-Ad-Repository/Ad Repository API.md",
+    "language":"en"
+  },
+  "e5c92dd3-617b-4fca-86c1-18892c6017a8":{
+    "source":"../data/platform-docs-versions/Pinterest_API/API.md",
+    "language":"en"
+  },
+  "ddc3bcae-0454-4c02-a04e-527017f05df5":{
+    "source":"../data/platform-docs-versions/Facebook_Graph-API/Page call to action Endpoint.md",
+    "language":"en"
+  },
+  "9eebd0be-fa97-491a-b0ae-e00ac694e1ee":{
+    "source":"../data/platform-docs-versions/Facebook_Graph-API/Photo Endpoint.md",
+    "language":"en"
+  },
+  "eb7142f4-319a-4cbf-abac-4b61cee416cc":{
+    "source":"../data/platform-docs-versions/Facebook_Graph-API/Media fingerprint Endpoint.md",
+    "language":"en"
+  },
+  "73f37b30-a5e6-4614-a858-2ba754a136e9":{
+    "source":"../data/platform-docs-versions/Facebook_Graph-API/Url Endpoint.md",
+    "language":"en"
+  },
+  "2ef607db-a625-48a7-b9ab-92b41577cd13":{
+    "source":"../data/platform-docs-versions/Facebook_Graph-API/Graph API Overview.md",
+    "language":"en"
+  },
+  "6e878f01-691a-4361-bb69-93cf960a8a91":{
+    "source":"../data/platform-docs-versions/Facebook_Graph-API/Comment Endpoint.md",
+    "language":"en"
+  },
+  "f081900d-3365-4418-af3b-30bd3346c59c":{
+    "source":"../data/platform-docs-versions/Facebook_Graph-API/Video copyright Endpoint.md",
+    "language":"en"
+  },
+  "e0a645be-766a-4606-9d4f-9035bebb0d48":{
+    "source":"../data/platform-docs-versions/Facebook_Graph-API/Thread Endpoint.md",
+    "language":"en"
+  },
+  "e6bdc4ea-4a2e-42ae-acd5-2852cdb1e9a7":{
+    "source":"../data/platform-docs-versions/Facebook_Graph-API/Canvas Endpoint.md",
+    "language":"en"
+  },
+  "058ba2ff-c4a3-413c-9bcf-d6dbf6105ff1":{
+    "source":"../data/platform-docs-versions/Facebook_Graph-API/Oembed page Endpoint.md",
+    "language":"en"
+  },
+  "662de9ea-aef6-48c7-a5f0-3c65d516e654":{
+    "source":"../data/platform-docs-versions/Facebook_Graph-API/Graph API Reference.md",
+    "language":"en"
+  },
+  "67acf046-5eb4-4be7-adc8-36e8f4e76d73":{
+    "source":"../data/platform-docs-versions/Facebook_Graph-API/Group Endpoint.md",
+    "language":"en"
+  },
+  "8cc63560-a33a-4565-a216-6b6c4b922d44":{
+    "source":"../data/platform-docs-versions/Facebook_Graph-API/Ads Archive Endpoint.md",
+    "language":"en"
+  },
+  "87483903-5072-4158-a146-d679ed3afea7":{
+    "source":"../data/platform-docs-versions/Facebook_Graph-API/Page upcoming change Endpoint.md",
+    "language":"en"
+  },
+  "c47bcdac-20b5-4916-9e1a-ad227547d493":{
+    "source":"../data/platform-docs-versions/Facebook_Graph-API/Live video input stream Endpoint.md",
+    "language":"en"
+  },
+  "c7a13d02-8a27-44a7-a0f6-c71ce7d66c7a":{
+    "source":"../data/platform-docs-versions/Facebook_Graph-API/Profile Endpoint.md",
+    "language":"en"
+  },
+  "f75e12e1-1cae-4523-ad3b-b870f3224eda":{
+    "source":"../data/platform-docs-versions/Facebook_Graph-API/Video Endpoint.md",
+    "language":"en"
+  },
+  "7c8aa591-b6a1-433f-a28a-442e9cfca409":{
+    "source":"../data/platform-docs-versions/Facebook_Graph-API/Collaborative ads directory Endpoint.md",
+    "language":"en"
+  },
+  "707220d2-7518-4766-aa27-7788c1df341b":{
+    "source":"../data/platform-docs-versions/Facebook_Graph-API/Image copyright Endpoint.md",
+    "language":"en"
+  },
+  "aff66765-1805-4525-a2e2-b69ef44770d1":{
+    "source":"../data/platform-docs-versions/Facebook_Graph-API/Cpas advertiser partnership recommendation Endpoint.md",
+    "language":"en"
+  },
+  "2c31e180-bba8-44f0-aa99-077e1ce6663f":{
+    "source":"../data/platform-docs-versions/Facebook_Graph-API/Album Endpoint.md",
+    "language":"en"
+  },
+  "12f47b88-b2a7-4595-be20-b99ac52c9635":{
+    "source":"../data/platform-docs-versions/Facebook_Graph-API/Link Endpoint.md",
+    "language":"en"
+  },
+  "8d2230e1-6c93-4d75-9d94-4a3d7c9b9258":{
+    "source":"../data/platform-docs-versions/Facebook_Graph-API/Games iap product Endpoint.md",
+    "language":"en"
+  },
+  "a0d67233-acef-4f1a-b05c-2fbda794b58c":{
+    "source":"../data/platform-docs-versions/Facebook_Graph-API/User Endpoint.md",
+    "language":"en"
+  },
+  "58e81979-3ce9-4057-b2d2-ce50a76552b5":{
+    "source":"../data/platform-docs-versions/Facebook_Graph-API/Page Endpoint.md",
+    "language":"en"
+  },
+  "d15c1d43-ee00-4d5a-86fe-7fbfb20a09a3":{
+    "source":"../data/platform-docs-versions/Facebook_Graph-API/Page post Endpoint.md",
+    "language":"en"
+  },
+  "23c132e6-271d-46a4-af11-33ca431c6bb9":{
+    "source":"../data/platform-docs-versions/Facebook_Graph-API/Branded Content Search Endpoint.md",
+    "language":"en"
+  },
+  "85dd5260-ab4b-4d1f-8acf-7945fd213721":{
+    "source":"../data/platform-docs-versions/Facebook_Graph-API/Whats app business account Endpoint.md",
+    "language":"en"
+  },
+  "2320c975-6298-4f41-9b25-8a05a244f643":{
+    "source":"../data/platform-docs-versions/Facebook_Graph-API/Video poll Endpoint.md",
+    "language":"en"
+  },
+  "131bd61c-ff2d-48b1-b74e-e7fbab82ae96":{
+    "source":"../data/platform-docs-versions/Facebook_Graph-API/Oembed video Endpoint.md",
+    "language":"en"
+  },
+  "63e06518-f66e-4b6f-baec-77ab6a5178a3":{
+    "source":"../data/platform-docs-versions/Facebook_Graph-API/Offline conversion data set upload Endpoint.md",
+    "language":"en"
+  },
+  "301546e2-f587-452b-8b53-f7baae249f4d":{
+    "source":"../data/platform-docs-versions/Facebook_Graph-API/Event Endpoint.md",
+    "language":"en"
+  },
+  "7325d808-bdd4-49d6-806f-5046b54baa30":{
+    "source":"../data/platform-docs-versions/Facebook_Graph-API/Instagram oembed Endpoint.md",
+    "language":"en"
+  },
+  "1a1625bf-d882-45c5-bbbf-3ffe178a18b4":{
+    "source":"../data/platform-docs-versions/Facebook_Graph-API/Message Endpoint.md",
+    "language":"en"
+  },
+  "5254aa09-621d-4ddf-bfab-8dc1bc2ea3c7":{
+    "source":"../data/platform-docs-versions/Facebook_Graph-API/Group message Endpoint.md",
+    "language":"en"
+  },
+  "6ab052d5-660f-4cd5-9c2e-5192d83a66e9":{
+    "source":"../data/platform-docs-versions/Facebook_Graph-API/Application Endpoint.md",
+    "language":"en"
+  },
+  "ed841ed8-4f88-4385-bb35-93961e3c73cb":{
+    "source":"../data/platform-docs-versions/Facebook_Graph-API/Permissions Reference.md",
+    "language":"en"
+  },
+  "9cbabaf6-5fb1-4b7e-9677-d95aa4e060e5":{
+    "source":"../data/platform-docs-versions/Facebook_Graph-API/Place topic Endpoint.md",
+    "language":"en"
+  },
+  "65180b15-2645-4782-aee5-cd02f5ab85dd":{
+    "source":"../data/platform-docs-versions/Facebook_Graph-API/Debug token Endpoint.md",
+    "language":"en"
+  },
+  "286ac847-5630-4e3e-b55c-a1c27a07f111":{
+    "source":"../data/platform-docs-versions/Facebook_Graph-API/Insights Endpoint.md",
+    "language":"en"
+  },
+  "9a73e40f-473f-4616-95fb-456330c7a5da":{
+    "source":"../data/platform-docs-versions/Facebook_Graph-API/Live video Endpoint.md",
+    "language":"en"
+  },
+  "266af87c-185c-49cd-8df1-4c42aa752de0":{
+    "source":"../data/platform-docs-versions/Facebook_Graph-API/Post Endpoint.md",
+    "language":"en"
+  },
+  "24aa3726-d614-4342-b52c-16482c81e05b":{
+    "source":"../data/platform-docs-versions/Facebook_Graph-API/Commerce merchant settings Endpoint.md",
+    "language":"en"
+  },
+  "8e1f8bbd-c9ee-4f3d-849a-e5daaf70956c":{
+    "source":"../data/platform-docs-versions/Facebook_Graph-API/Video list Endpoint.md",
+    "language":"en"
+  },
+  "827a93b0-e817-44f1-9d35-239dcbdb96a6":{
+    "source":"../data/platform-docs-versions/Facebook_Graph-API/Place Endpoint.md",
+    "language":"en"
+  },
+  "3966763e-651e-4ae8-a3bf-d88f2a27fdb5":{
+    "source":"../data/platform-docs-versions/Facebook_Graph-API/Test user Endpoint.md",
+    "language":"en"
+  },
+  "ebdc3533-5009-4a0a-b671-3d466b958931":{
+    "source":"../data/platform-docs-versions/Facebook_Graph-API/Groupdoc Endpoint.md",
+    "language":"en"
+  },
+  "1d0b5d04-5c9f-4381-b280-9923ff76a29d":{
+    "source":"../data/platform-docs-versions/Facebook_Graph-API/App Link Host Endpoint.md",
+    "language":"en"
+  },
+  "b263438d-3ad8-4f91-ab29-3a0aa27740d9":{
+    "source":"../data/platform-docs-versions/Facebook_Graph-API/Mailing address Endpoint.md",
+    "language":"en"
+  },
+  "2abac9ba-3642-45dd-a594-d2ab949768a8":{
+    "source":"../data/platform-docs-versions/Facebook_Graph-API/Conversation Endpoint.md",
+    "language":"en"
+  },
+  "f1edb607-8d5c-47c6-8ceb-01e5b43ac4fd":{
+    "source":"../data/platform-docs-versions/Facebook_Graph-API/Milestone Endpoint.md",
+    "language":"en"
+  },
+  "b8d87ac2-2c0c-4777-aeb0-aee298509357":{
+    "source":"../data/platform-docs-versions/Facebook_Graph-API/Whats app business hsm Endpoint.md",
+    "language":"en"
+  },
+  "b6952311-2e98-40ed-a588-6a881f16ef57":{
+    "source":"../data/platform-docs-versions/Facebook_Graph-API/Payment Endpoint.md",
+    "language":"en"
+  },
+  "851e3e47-5b42-424a-a0f2-127640f410ad":{
+    "source":"../data/platform-docs-versions/Facebook_Graph-API/Place tag Endpoint.md",
+    "language":"en"
+  },
+  "aff5bd4d-042c-48f5-bc6f-0b24b900e99a":{
+    "source":"../data/platform-docs-versions/Facebook_Graph-API/Request Endpoint.md",
+    "language":"en"
+  },
+  "59cfb052-0772-4d7b-8118-845c708aecba":{
+    "source":"../data/platform-docs-versions/Facebook_Graph-API/Oembed post Endpoint.md",
+    "language":"en"
+  },
+  "a93e6bd8-f28c-4982-823f-c2247e7d8dcf":{
+    "source":"../data/platform-docs-versions/Facebook_Graph-API/Object Endpoint.md",
+    "language":"en"
+  },
+  "3d6d70c9-9cfe-4ead-9940-39747cb4429b":{
+    "source":"../data/platform-docs-versions/TikTok_Commercial-Content-API/Commercial Content API Documentation.md",
+    "language":"en"
+  },
+  "93304e97-46c6-4420-a268-6f980df31434":{
+    "source":"../data/platform-docs-versions/X_Twitter-API-Enterprise/Usage API.md",
+    "language":"en"
+  },
+  "7b09eda2-4ae8-4f34-bacf-f37ea8a74574":{
+    "source":"../data/platform-docs-versions/X_Twitter-API-Enterprise/Engagement API.md",
+    "language":"en"
+  },
+  "74203a91-f27d-417b-b991-f56dbc6b9ebb":{
+    "source":"../data/platform-docs-versions/X_Twitter-API-Enterprise/Search API.md",
+    "language":"en"
+  },
+  "a9169238-d283-43a7-ba7c-9eab930b1362":{
+    "source":"../data/platform-docs-versions/X_Twitter-API-Enterprise/Decahose API.md",
+    "language":"en"
+  },
+  "53cc82f3-c811-421d-abfd-c66ccde9a5c0":{
+    "source":"../data/platform-docs-versions/X_Twitter-API-Enterprise/Compliance Firehose API.md",
+    "language":"en"
+  },
+  "72b96ef3-6a9d-4686-b84c-e5d115527ab9":{
+    "source":"../data/platform-docs-versions/X_Twitter-API-Enterprise/Fundamentals.md",
+    "language":"en"
+  },
+  "06293c96-26eb-468d-8f33-b2c5a9248ca5":{
+    "source":"../data/platform-docs-versions/X_Twitter-API-Enterprise/Account Activity API.md",
+    "language":"en"
+  },
+  "eab8e8a1-4847-4c1b-91a9-b7b75b35e6ae":{
+    "source":"../data/platform-docs-versions/X_Twitter-API-Enterprise/PowerTrack API.md",
+    "language":"en"
+  }
+}
