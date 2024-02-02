@@ -1,0 +1,77 @@
+{
+    "0": {
+        "content": "Source document: ../data/platform-docs-versions/Facebook_Graph-API/Conversation Endpoint.md\nParagraph location: \n\tResource URL: https://developers.facebook.com/docs/graph-api/reference/v18.0/conversation\n\nContent: \n# Resource URL: https://developers.facebook.com/docs/graph-api/reference/v18.0/conversation\nThis document refers to an outdated version of Graph API.\u00a0Please [use the latest version.](https://developers.facebook.com/docs/graph-api/reference/v19.0/conversation)\n",
+        "line_start": 0,
+        "line_end": 2
+    },
+    "1": {
+        "content": "Source document: ../data/platform-docs-versions/Facebook_Graph-API/Conversation Endpoint.md\nParagraph location: \n\tConversation `/{conversation-id}`\n\nContent: \n# Conversation `/{conversation-id}`  \nA Messenger conversation between a person and a Facebook Page or an Instagram Professional Account.\n",
+        "line_start": 3,
+        "line_end": 5
+    },
+    "2": {
+        "content": "Source document: ../data/platform-docs-versions/Facebook_Graph-API/Conversation Endpoint.md\nParagraph location: \n\tConversation `/{conversation-id}`\n\tReading\n\nContent: \n## Reading  \nHTTPPHP SDKJavaScript SDKAndroid SDKiOS SDK[Graph API Explorer](https://developers.facebook.com/tools/explorer/?method=GET&path=%7Bconversation-id%7D&version=v19.0)  \nGET /v19.0/{conversation-id} HTTP/1.1\nHost: graph.facebook.com  \n/* PHP SDK v5.0.0 */\n/* make the API call */\ntry {\n// Returns a `Facebook\\FacebookResponse` object\n$response = $fb->get(\n'/{conversation-id}',\n'{access-token}'\n);\n} catch(Facebook\\Exceptions\\FacebookResponseException $e) {\necho 'Graph returned an error: ' . $e->getMessage();\nexit;\n} catch(Facebook\\Exceptions\\FacebookSDKException $e) {\necho 'Facebook SDK returned an error: ' . $e->getMessage();\nexit;\n}\n$graphNode = $response->getGraphNode();\n/* handle the result */  \n/* make the API call */\nFB.api(\n\"/{conversation-id}\",\nfunction (response) {\nif (response && !response.error) {\n/* handle the result */\n}\n}\n);  \n/* make the API call */\nnew GraphRequest(\nAccessToken.getCurrentAccessToken(),\n\"/{conversation-id}\",\nnull,\nHttpMethod.GET,\nnew GraphRequest.Callback() {\npublic void onCompleted(GraphResponse response) {\n/* handle the result */\n}\n}\n).executeAsync();  \n/* make the API call */\nFBSDKGraphRequest *request = [[FBSDKGraphRequest alloc]\ninitWithGraphPath:@\"/{conversation-id}\"\nparameters:params\nHTTPMethod:@\"GET\"];\n[request startWithCompletionHandler:^(FBSDKGraphRequestConnection *connection,\nid result,\nNSError *error) {\n// Handle the result\n}];\n",
+        "line_start": 7,
+        "line_end": 59
+    },
+    "3": {
+        "content": "Source document: ../data/platform-docs-versions/Facebook_Graph-API/Conversation Endpoint.md\nParagraph location: \n\tConversation `/{conversation-id}`\n\tReading\n\tPermissions\n\nContent: \n### Permissions  \n* A Page access token requested by a person who can perform the [`MESSAGING` task](https://developers.facebook.com/docs/pages/overview-1#tasks) on the Page being queried  \n* The [`pages_messaging` permission](https://developers.facebook.com/docs/apps/review/login-permissions#reference-pages_messaging)  \n* The [`pages_manage_metadata` permission](https://developers.facebook.com/docs/apps/review/login-permissions#reference-pages_manage_metadata)  \nFor Instagram Messaging, you will also need:  \n* The [`instagram_basic` permission](https://developers.facebook.com/docs/apps/review/login-permissions#reference-instagram_basic)  \n* The [`instagram_manage_messages` permission](https://developers.facebook.com/docs/apps/review/login-permissions#reference-instagram_manage_messages)\n",
+        "line_start": 66,
+        "line_end": 73
+    },
+    "4": {
+        "content": "Source document: ../data/platform-docs-versions/Facebook_Graph-API/Conversation Endpoint.md\nParagraph location: \n\tConversation `/{conversation-id}`\n\tReading\n\tLimitations\n\nContent: \n### Limitations  \n* When querying this endpoint for Instagram Messaging, all messages for the conversation will be returned. However, you will only be able to query data for the 20 most recent messages in the conversation. If a message is not within the 20 most recent, an error will be returned stating that the message has been deleted.\n",
+        "line_start": 82,
+        "line_end": 84
+    },
+    "5": {
+        "content": "Source document: ../data/platform-docs-versions/Facebook_Graph-API/Conversation Endpoint.md\nParagraph location: \n\tConversation `/{conversation-id}`\n\tReading\n\tFields\n\nContent: \n### Fields  \n| Name | Description |\n| --- | --- |\n| `id`<br><br>_string_ | The ID for the conversation |\n| `messages`<br><br>_string_ | Messages within the conversation |\n| `participants`<br><br>_object_<br><br>`id`<br><br>  <br><br>`email`<br><br>_Page messaging only_<br><br>`name`<br><br>_Page messaging only_<br><br>`username`<br><br>_Instagram Messaging only_ | Participants in the conversation<br><br>  <br><br>Instagram-Scoped ID or Page-scoped ID for a person or Instagram ID for your Instagram Professional account or the Page ID.<br><br>Email for the person or Page<br><br>  <br><br>Name for the person or Page<br><br>  <br><br>Instagram username for a person or your Instagram Profession account |\n| `updated_time`<br><br>_datetime_ | The time when the last message was added to the conversation |  \nTo get information about a specific message within a conversation, send a request to the [Message endpoint](https://developers.facebook.com/docs/graph-api/reference/message).\n",
+        "line_start": 87,
+        "line_end": 95
+    },
+    "6": {
+        "content": "Source document: ../data/platform-docs-versions/Facebook_Graph-API/Conversation Endpoint.md\nParagraph location: \n\tConversation `/{conversation-id}`\n\tPublishing\n\nContent: \n## Publishing  \nYou can't publish using this edge.  \nUse the [Messenger Platform](https://developers.facebook.com/docs/messenger-platform/reference/send-api/) to send [Templates](https://developers.facebook.com/docs/messenger-platform/send-messages/templates), [Quick Replies](https://developers.facebook.com/docs/messenger-platform/send-messages/quick-replies), and more.\n",
+        "line_start": 98,
+        "line_end": 101
+    },
+    "7": {
+        "content": "Source document: ../data/platform-docs-versions/Facebook_Graph-API/Conversation Endpoint.md\nParagraph location: \n\tConversation `/{conversation-id}`\n\tEdges\n\nContent: \n## Edges  \n| Name | Description | Used to Publish |\n| --- | --- | --- |\n| [`/messages`](https://developers.facebook.com/docs/graph-api/reference/conversation/messages/) | List of all messages in the conversation | Replies (by Pages only) |  \n![](https://www.facebook.com/tr?id=675141479195042&ev=PageView&noscript=1)  \n![](https://www.facebook.com/tr?id=574561515946252&ev=PageView&noscript=1)  \n![](https://www.facebook.com/tr?id=1754628768090156&ev=PageView&noscript=1)\n",
+        "line_start": 112,
+        "line_end": 119
+    },
+    "8": {
+        "content": "Source document: ../data/platform-docs-versions/Facebook_Graph-API/Conversation Endpoint.md\nParagraph location: \n\tResource URL: https://developers.facebook.com/docs/graph-api/reference/v18.0/conversation/messages\n\nContent: \n# Resource URL: https://developers.facebook.com/docs/graph-api/reference/v18.0/conversation/messages\nThis document refers to an outdated version of Graph API.\u00a0Please [use the latest version.](https://developers.facebook.com/docs/graph-api/reference/v19.0/conversation/messages)\n",
+        "line_start": 124,
+        "line_end": 126
+    },
+    "9": {
+        "content": "Source document: ../data/platform-docs-versions/Facebook_Graph-API/Conversation Endpoint.md\nParagraph location: \n\tGraph API Reference [`/{conversation-id}`](https://developers.facebook.com/docs/graph-api/reference/conversation/)`/messages`\n\nContent: \n# Graph API Reference [`/{conversation-id}`](https://developers.facebook.com/docs/graph-api/reference/conversation/)`/messages`  \nThe messages in a conversation between a person and a Facebook Page or Instagram Professional account.\n",
+        "line_start": 127,
+        "line_end": 129
+    },
+    "10": {
+        "content": "Source document: ../data/platform-docs-versions/Facebook_Graph-API/Conversation Endpoint.md\nParagraph location: \n\tGraph API Reference [`/{conversation-id}`](https://developers.facebook.com/docs/graph-api/reference/conversation/)`/messages`\n\tReading\n\nContent: \n## Reading  \nHTTPPHP SDKJavaScript SDKAndroid SDKiOS SDK[Graph API Explorer](https://developers.facebook.com/tools/explorer/?method=GET&path=%7Bconversation-id%7D%2Fmessages&version=v19.0)  \nGET /v19.0/{conversation-id}/messages HTTP/1.1\nHost: graph.facebook.com  \n/* PHP SDK v5.0.0 */\n/* make the API call */\ntry {\n// Returns a `Facebook\\FacebookResponse` object\n$response = $fb->get(\n'/{conversation-id}/messages',\n'{access-token}'\n);\n} catch(Facebook\\Exceptions\\FacebookResponseException $e) {\necho 'Graph returned an error: ' . $e->getMessage();\nexit;\n} catch(Facebook\\Exceptions\\FacebookSDKException $e) {\necho 'Facebook SDK returned an error: ' . $e->getMessage();\nexit;\n}\n$graphNode = $response->getGraphNode();\n/* handle the result */  \n/* make the API call */\nFB.api(\n\"/{conversation-id}/messages\",\nfunction (response) {\nif (response && !response.error) {\n/* handle the result */\n}\n}\n);  \n/* make the API call */\nnew GraphRequest(\nAccessToken.getCurrentAccessToken(),\n\"/{conversation-id}/messages\",\nnull,\nHttpMethod.GET,\nnew GraphRequest.Callback() {\npublic void onCompleted(GraphResponse response) {\n/* handle the result */\n}\n}\n).executeAsync();  \n/* make the API call */\nFBSDKGraphRequest *request = [[FBSDKGraphRequest alloc]\ninitWithGraphPath:@\"/{conversation-id}/messages\"\nparameters:params\nHTTPMethod:@\"GET\"];\n[request startWithCompletionHandler:^(FBSDKGraphRequestConnection *connection,\nid result,\nNSError *error) {\n// Handle the result\n}];\n",
+        "line_start": 7,
+        "line_end": 59
+    },
+    "11": {
+        "content": "Source document: ../data/platform-docs-versions/Facebook_Graph-API/Conversation Endpoint.md\nParagraph location: \n\tGraph API Reference [`/{conversation-id}`](https://developers.facebook.com/docs/graph-api/reference/conversation/)`/messages`\n\tReading\n\tPermissions\n\nContent: \n### Permissions  \n* A Page access token requested by a person who can perform the `MESSAGING` task on the Page  \n* The `[pages_messaging](https://developers.facebook.com/docs/apps/review/login-permissions#reference-pages_messaging)` permission  \n* For Instagram Messaging, the `instagram_manage_messages` permission is also required\n",
+        "line_start": 66,
+        "line_end": 70
+    },
+    "12": {
+        "content": "Source document: ../data/platform-docs-versions/Facebook_Graph-API/Conversation Endpoint.md\nParagraph location: \n\tGraph API Reference [`/{conversation-id}`](https://developers.facebook.com/docs/graph-api/reference/conversation/)`/messages`\n\tReading\n\tFields\n\nContent: \n### Fields  \nReturns an array of [Message objects](https://developers.facebook.com/docs/graph-api/reference/message) with additional fields:  \n| Name | Description | Type |\n| --- | --- | --- |\n| Vector | Vector |\n",
+        "line_start": 87,
+        "line_end": 92
+    },
+    "13": {
+        "content": "Source document: ../data/platform-docs-versions/Facebook_Graph-API/Conversation Endpoint.md\nParagraph location: \n\tGraph API Reference [`/{conversation-id}`](https://developers.facebook.com/docs/graph-api/reference/conversation/)`/messages`\n\tSend a message\n\nContent: \n## Send a message  \nYou cannot send a message to this enpoint. Use [Send API](https://developers.facebook.com/docs/messenger-platform/reference/send-api/) instead.\n",
+        "line_start": 207,
+        "line_end": 209
+    },
+    "14": {
+        "content": "Source document: ../data/platform-docs-versions/Facebook_Graph-API/Conversation Endpoint.md\nParagraph location: \n\tGraph API Reference [`/{conversation-id}`](https://developers.facebook.com/docs/graph-api/reference/conversation/)`/messages`\n\tDelete\n\nContent: \n## Delete  \nYou cannot delete this endpoint.  \n![](https://www.facebook.com/tr?id=675141479195042&ev=PageView&noscript=1)  \n![](https://www.facebook.com/tr?id=574561515946252&ev=PageView&noscript=1)  \n![](https://www.facebook.com/tr?id=1754628768090156&ev=PageView&noscript=1)\n",
+        "line_start": 211,
+        "line_end": 216
+    }
+}

@@ -1,0 +1,57 @@
+{
+    "0": {
+        "content": "Source document: ../data/platform-docs-versions/Facebook_Ad-Targeting-Dataset/Sample Queries.md\nParagraph location: \n\tResource URL: https://developers.facebook.com/docs/ad-targeting-dataset/sample-queries\n\nContent: \n# Resource URL: https://developers.facebook.com/docs/ad-targeting-dataset/sample-queries\n",
+        "line_start": 0,
+        "line_end": 1
+    },
+    "1": {
+        "content": "Source document: ../data/platform-docs-versions/Facebook_Ad-Targeting-Dataset/Sample Queries.md\nParagraph location: \n\tSample queries\n\nContent: \n# Sample queries  \nOnce you import our query module, you can use it to query the dataset using your own custom SQL queries. The code sample below shows importing the query module; specifying the database, table, and API table; defining a SQL query; and assigning the query to a variable (`sql`).  \nRPython  \nlibrary(fbrir)\nathena = AthenaFacade$new()  \ndatabase <- \"fbri_prod_atp\"\ntable <- \"ad_targeting_dataset_siep_aug_2020\"\napi_table <- \"ad_archive_api\"\n",
+        "line_start": 1,
+        "line_end": 9
+    },
+    "2": {
+        "content": "Source document: ../data/platform-docs-versions/Facebook_Ad-Targeting-Dataset/Sample Queries.md\nParagraph location: \n\tDefine your own SQL query and assign to variable 'sql'\n\nContent: \n# Define your own SQL query and assign to variable 'sql'\nsql <- sprintf(\"SELECT * FROM %s.%s LIMIT 5\", database, table)\nathena$QueryAthena(sql)  \nfrom fbri.private.sql.query import execute  \ndatabase = \"fbri_prod_atp\"\ntable = \"ad_targeting_dataset_siep_aug_2020\"\napi_table = \"ad_archive_api\"  \n# Define your own SQL query and assign to variable 'sql'\nsql = f\"SELECT * FROM {database}.{table} LIMIT 5\"  \nexecute(sql)  \nThe dataframe result from the R example would look similar to this (blurred intentionally):  \nThe dataframe result from the Python example would look similar to this (blurred intentionally):  \nThe sample queries in the rest of this section demonstrate the types of queries you can perform against the dataset. For each example, we show the SQL first followed by a tabbed codeblock with Python and R so you can see how the SQL is used to define the `sql` variable. To try out a sample query, copy the R or Python from the codeblock and paste it into your Jupyter notebook cell. Then run the code.  \nDataframe results screenshots have been blurred intentionally. They are intended only to show the output format you can expect.\n",
+        "line_start": 14,
+        "line_end": 28
+    },
+    "3": {
+        "content": "Source document: ../data/platform-docs-versions/Facebook_Ad-Targeting-Dataset/Sample Queries.md\nParagraph location: \n\tDefine your own SQL query and assign to variable 'sql'\n\tGet data on ad targeting by user interest\n\tSQL query\n\nContent: \n## Get data on ad targeting by user interest  \n### SQL query  \nSELECT\narchive\\_id,\ninclude\nFROM {database}.{table}\nWHERE\nCARDINALITY(\nFILTER(\nCAST(JSON\\_EXTRACT(include, '$') AS ARRAY(MAP(VARCHAR, VARCHAR))),\n(x) -> ELEMENT\\_AT(x, 'Joe Biden') = 'Interests'))  > 0\n",
+        "line_start": 43,
+        "line_end": 54
+    },
+    "4": {
+        "content": "Source document: ../data/platform-docs-versions/Facebook_Ad-Targeting-Dataset/Sample Queries.md\nParagraph location: \n\tDefine your own SQL query and assign to variable 'sql'\n\tGet data on ad targeting by user interest\n\tPython and R\n\nContent: \n### Python and R  \nRPython  \nsql <- sprintf(\"SELECT archive_id, include FROM %s.%s WHERE CARDINALITY( FILTER( CAST(JSON_EXTRACT(include, '$') AS ARRAY(MAP(VARCHAR, VARCHAR))), (x) -> ELEMENT_AT(x, 'Joe Biden') = 'Interests')) > 0\", database, table)\nathena$QueryAthena(sql)  \nsql = f\"SELECT archive_id, include FROM {database}.{table} WHERE CARDINALITY( FILTER( CAST(JSON_EXTRACT(include, '$') AS ARRAY(MAP(VARCHAR, VARCHAR))), (x) -> ELEMENT_AT(x, 'Joe Biden') = 'Interests')) > 0\"\nexecute(sql)\n",
+        "line_start": 57,
+        "line_end": 63
+    },
+    "5": {
+        "content": "Source document: ../data/platform-docs-versions/Facebook_Ad-Targeting-Dataset/Sample Queries.md\nParagraph location: \n\tDefine your own SQL query and assign to variable 'sql'\n\tGet data and number of ads targeting by education levels\n\tSQL query\n\nContent: \n## Get data and number of ads targeting by education levels  \n### SQL query  \nWITH education\\_table AS (\nSELECT\nREDUCE(\nCAST(JSON\\_EXTRACT(include, '$') AS ARRAY(MAP(VARCHAR, VARCHAR))),\nMAP(),\n(s, x) -> (\nMAP\\_CONCAT(s, MAP\\_FILTER(x, (k, v) -> v = 'Education level'))\n),\ns -> s\n) AS education\\_levels\nFROM {database}.{table}\n)\nSELECT\neducation\\_levels,\nCOUNT(\\*) AS count\nFROM education\\_table\nGROUP BY\neducation\\_levels;\nORDER BY\n-count;\n",
+        "line_start": 69,
+        "line_end": 91
+    },
+    "6": {
+        "content": "Source document: ../data/platform-docs-versions/Facebook_Ad-Targeting-Dataset/Sample Queries.md\nParagraph location: \n\tDefine your own SQL query and assign to variable 'sql'\n\tGet data and number of ads targeting by education levels\n\tPython and R\n\nContent: \n### Python and R  \nRPython  \nsql <- sprintf(\"WITH education_table AS ( SELECT REDUCE( CAST(JSON_EXTRACT(include, '$') AS ARRAY(MAP(VARCHAR, VARCHAR))), MAP(), (s, x) -> (MAP_CONCAT(s, MAP_FILTER(x, (k, v) -> v = 'Education level'))), s -> s) AS education_levels FROM %s.%s) SELECT education_levels, COUNT(*) AS count FROM education_table GROUP BY education_levels ORDER BY -count;\", database, table)\nathena$QueryAthena(sql)  \nsql = f\"WITH education_table AS ( SELECT REDUCE( CAST(JSON_EXTRACT(include, '$') AS ARRAY(MAP(VARCHAR, VARCHAR))), MAP(), (s, x) -> (MAP_CONCAT(s, MAP_FILTER(x, (k, v) -> v = 'Education level'))), s -> s) AS education_levels FROM {database}.{table}) SELECT education_levels, COUNT(*) AS count FROM education_table GROUP BY education_levels ORDER BY -count;\"\nexecute(sql)\n",
+        "line_start": 57,
+        "line_end": 63
+    },
+    "7": {
+        "content": "Source document: ../data/platform-docs-versions/Facebook_Ad-Targeting-Dataset/Sample Queries.md\nParagraph location: \n\tDefine your own SQL query and assign to variable 'sql'\n\tGet data and count of ads targeting by non-interest\n\tSQL query\n\nContent: \n## Get data and count of ads targeting by non-interest  \n### SQL query  \nSELECT\nexclusion,\nexclusion\\_type,\nCOUNT(\\*)\nFROM {database}.{table}\nCROSS JOIN UNNEST(CAST(JSON\\_EXTRACT(exclude, '$') AS MAP(VARCHAR, VARCHAR))) AS t (\nexclusion,\nexclusion\\_type\n)\nGROUP BY\nexclusion,\nexclusion\\_type;\n",
+        "line_start": 106,
+        "line_end": 120
+    },
+    "8": {
+        "content": "Source document: ../data/platform-docs-versions/Facebook_Ad-Targeting-Dataset/Sample Queries.md\nParagraph location: \n\tDefine your own SQL query and assign to variable 'sql'\n\tGet data and count of ads targeting by non-interest\n\tPython and R\n\nContent: \n### Python and R  \nRPython  \nsql <- sprintf(\"SELECT exclusion, exclusion_type, COUNT(*) FROM %s.%s CROSS JOIN  UNNEST(CAST(JSON_EXTRACT(exclude, '$') AS MAP(VARCHAR, VARCHAR))) AS t (exclusion, exclusion_type) GROUP BY exclusion, exclusion_type;\", database, table)\nathena$QueryAthena(sql)  \nsql =f\"SELECT exclusion, exclusion_type, COUNT(*) FROM {database}.{table} CROSS JOIN UNNEST(CAST(JSON_EXTRACT(exclude, '$') AS MAP(VARCHAR, VARCHAR))) AS t (exclusion, exclusion_type) GROUP BY exclusion, exclusion_type;\"\nexecute(sql)\n",
+        "line_start": 57,
+        "line_end": 63
+    },
+    "9": {
+        "content": "Source document: ../data/platform-docs-versions/Facebook_Ad-Targeting-Dataset/Sample Queries.md\nParagraph location: \n\tDefine your own SQL query and assign to variable 'sql'\n\tGet data on ad targeting by specific country\n\tSQL query\n\nContent: \n## Get data on ad targeting by specific country  \n### SQL query  \nIn this query, we use the Ad Library data table (`ad_archive_api`) to combine targeting data with delivery data.  \nSELECT\na.\\*\nFROM {database}.{table} AS a,\n{database}.{api\\_table} AS b\nWHERE\na.ds = b.ds\nAND a.archive\\_id = b.fbid\nAND b.reached\\_countries LIKE '%US%';\n",
+        "line_start": 135,
+        "line_end": 146
+    },
+    "10": {
+        "content": "Source document: ../data/platform-docs-versions/Facebook_Ad-Targeting-Dataset/Sample Queries.md\nParagraph location: \n\tDefine your own SQL query and assign to variable 'sql'\n\tGet data on ad targeting by specific country\n\tPython and SQL\n\nContent: \n### Python and SQL  \nRPython  \nsql <- sprintf(\"SELECT a.* FROM %s.%s AS a, %s.%s AS b WHERE a.ds = b.ds AND a.archive_id = b.fbid AND b.reached_countries LIKE '%%US%%';\", database, table, database, api_table)\nathena$QueryAthena(sql)  \nsql = f\"SELECT a.* FROM {database}.{table} AS a, {database}.{api_table} AS b WHERE a.ds = b.ds AND a.archive_id = b.fbid AND b.reached_countries LIKE '%US%';\"\nexecute(sql)\n",
+        "line_start": 151,
+        "line_end": 157
+    }
+}

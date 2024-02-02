@@ -1,0 +1,482 @@
+{
+    "0": {
+        "content": "Source document: ../data/platform-docs-versions/Facebook_Graph-API/Live video Endpoint.md\nParagraph location: \n\tResource URL: https://developers.facebook.com/docs/graph-api/reference/live-video/\n\nContent: \n# Resource URL: https://developers.facebook.com/docs/graph-api/reference/live-video/\n",
+        "line_start": 0,
+        "line_end": 1
+    },
+    "1": {
+        "content": "Source document: ../data/platform-docs-versions/Facebook_Graph-API/Live video Endpoint.md\nParagraph location: \n\tLive Video\n\nContent: \n# Live Video  \nRepresents a live video broadcast. Refer to the [Live Video API](https://developers.facebook.com/docs/live-video-api) documentation for additional usage information.\n",
+        "line_start": 1,
+        "line_end": 3
+    },
+    "2": {
+        "content": "Source document: ../data/platform-docs-versions/Facebook_Graph-API/Live video Endpoint.md\nParagraph location: \n\tLive Video\n\tReading\n\nContent: \n## Reading  \nGet fields and edges on a LiveVideo.  \nStarting September 14, 2021, the following fields will throw an error for version 12.0+ calls made by apps that lack the endpoint's required permissions. This change will apply to all versions on December 13, 2021.  \n* `copyright`\n",
+        "line_start": 5,
+        "line_end": 9
+    },
+    "3": {
+        "content": "Source document: ../data/platform-docs-versions/Facebook_Graph-API/Live video Endpoint.md\nParagraph location: \n\tLive Video\n\tReading\n\tNew Page Experience\n\nContent: \n### New Page Experience  \nThis endpoint is supported for [New Page Experience](https://developers.facebook.com/docs/pages/new-pages-experience/).\n",
+        "line_start": 14,
+        "line_end": 16
+    },
+    "4": {
+        "content": "Source document: ../data/platform-docs-versions/Facebook_Graph-API/Live video Endpoint.md\nParagraph location: \n\tLive Video\n\tReading\n\tExample\n\nContent: \n### Example  \nHTTPPHP SDKJavaScript SDKAndroid SDKiOS SDK[Graph API Explorer](https://developers.facebook.com/tools/explorer/?method=GET&path=%7Blive-video-id%7D&version=v19.0)  \nGET /v19.0/{live-video-id} HTTP/1.1\nHost: graph.facebook.com  \n/* PHP SDK v5.0.0 */\n/* make the API call */\ntry {\n// Returns a `Facebook\\FacebookResponse` object\n$response = $fb->get(\n'/{live-video-id}',\n'{access-token}'\n);\n} catch(Facebook\\Exceptions\\FacebookResponseException $e) {\necho 'Graph returned an error: ' . $e->getMessage();\nexit;\n} catch(Facebook\\Exceptions\\FacebookSDKException $e) {\necho 'Facebook SDK returned an error: ' . $e->getMessage();\nexit;\n}\n$graphNode = $response->getGraphNode();\n/* handle the result */  \n/* make the API call */\nFB.api(\n\"/{live-video-id}\",\nfunction (response) {\nif (response && !response.error) {\n/* handle the result */\n}\n}\n);  \n/* make the API call */\nnew GraphRequest(\nAccessToken.getCurrentAccessToken(),\n\"/{live-video-id}\",\nnull,\nHttpMethod.GET,\nnew GraphRequest.Callback() {\npublic void onCompleted(GraphResponse response) {\n/* handle the result */\n}\n}\n).executeAsync();  \n/* make the API call */\nFBSDKGraphRequest *request = [[FBSDKGraphRequest alloc]\ninitWithGraphPath:@\"/{live-video-id}\"\nparameters:params\nHTTPMethod:@\"GET\"];\n[request startWithCompletionHandler:^(FBSDKGraphRequestConnection *connection,\nid result,\nNSError *error) {\n// Handle the result\n}];  \nIf you want to learn how to use the Graph API, read our [Using Graph API guide](https://developers.facebook.com/docs/graph-api/using-graph-api/).\n",
+        "line_start": 18,
+        "line_end": 71
+    },
+    "5": {
+        "content": "Source document: ../data/platform-docs-versions/Facebook_Graph-API/Live video Endpoint.md\nParagraph location: \n\tLive Video\n\tReading\n\tParameters\n\nContent: \n### Parameters  \n| Parameter | Description |\n| --- | --- |\n| `target_token`<br><br>string | A target token recently returned by the speed test API |\n",
+        "line_start": 79,
+        "line_end": 83
+    },
+    "6": {
+        "content": "Source document: ../data/platform-docs-versions/Facebook_Graph-API/Live video Endpoint.md\nParagraph location: \n\tLive Video\n\tReading\n\tFields\n\nContent: \n### Fields  \n| Field | Description |\n| --- | --- |\n| `id`<br><br>numeric string | The live video ID. |\n| `ad_break_config`<br><br>LiveVideoAdBreakConfig | The ad break configurations for clients implementing triggering an ad break ui. Contains ad break eligibility and constants to render the ui. In order to use this, the page hosting the broadcast needs to be whitelisted. |\n| `ad_break_failure_reason`<br><br>enum | Ad Break failure reason |\n| `broadcast_start_time`<br><br>datetime | The time the video was initially published |\n| `copyright`<br><br>[VideoCopyright](https://developers.facebook.com/docs/graph-api/reference/video-copyright/) | The copyright information for the live video |\n| `creation_time`<br><br>datetime | The creation time of the live video |\n| `dash_ingest_url`<br><br>string | The dash ingest stream URL of the live video |\n| `dash_preview_url`<br><br>string | Preview URL for dash player |\n| `description`<br><br>string | The description of the live video |\n| `embed_html`<br><br>iframe\\_with\\_src | The embed html of the live video<br><br>[Default](https://developers.facebook.com/docs/graph-api/using-graph-api/#fields) |\n| `from`<br><br>User\\|Page | The originator of the live video |\n| `ingest_streams`<br><br>[list<LiveVideoInputStream>](https://developers.facebook.com/docs/graph-api/reference/live-video-input-stream/) | Individual ingest streams. |\n| `is_manual_mode`<br><br>bool | Whether schedule live is in manual mode, in which live video will start manually instead of on schedled time |\n| `is_reference_only`<br><br>bool | Whether the live video is exclusively used for copyright monitoring |\n| `live_views`<br><br>unsigned int32 | The instant viewer count of the live video now |\n| `overlay_url`<br><br>string | A URL used in conjunction with Facebook Live Producer to show overlays for this broadcast. In order to use this, the page hosting the broadcast needs to be whitelisted. |\n| `permalink_url`<br><br>uri | The permalink URL of this video on Facebook. |\n| `planned_start_time`<br><br>datetime | Planned start time for a live video |\n| `recommended_encoder_settings`<br><br>LiveVideoRecommendedEncoderSettings | Recommended encoder settings for this live video. |\n| `seconds_left`<br><br>int32 | Seconds left in the maximum possible duration for this live video |\n| `secure_stream_url`<br><br>string | The secure stream url of the live video. Check with your encoder whether this is supported before adapting<br><br>[Default](https://developers.facebook.com/docs/graph-api/using-graph-api/#fields) |\n| `status`<br><br>enum | The status of the LiveVideo.<br><br>A `LIVE_NOW` LiveVideo is one that will be published to the intended destination (Timeline, Group, Page, etc) upon receiving valid video data, or one that is already published and actively streaming.<br><br>An `UNPUBLISHED` LiveVideo is in preparation; it's not visible to other users, and it may be automatically deleted after several hours in this state.<br><br>A `SCHEDULED_UNPUBLISHED` LiveVideo is scheduled to go live at a future time.<br><br>A `SCHEDULED_LIVE` LiveVideo is one whose scheduled time has passed, yet the stream is not yet live. Either in the process of transitioning, or still waiting for a valid video stream.<br><br>(Consider using the `SCHEDULED` states to create a planned, future LiveVideo.)<br><br>[Default](https://developers.facebook.com/docs/graph-api/using-graph-api/#fields) |\n| `stream_url`<br><br>string | The stream url of the live video<br><br>[Default](https://developers.facebook.com/docs/graph-api/using-graph-api/#fields) |\n| `targeting`<br><br>LiveVideoTargeting | Targeting information for this live video |\n| `title`<br><br>string | The title of the live video<br><br>[Default](https://developers.facebook.com/docs/graph-api/using-graph-api/#fields) |\n| `video`<br><br>[Video](https://developers.facebook.com/docs/graph-api/reference/video/) | The inside video of the live video |\n",
+        "line_start": 85,
+        "line_end": 114
+    },
+    "7": {
+        "content": "Source document: ../data/platform-docs-versions/Facebook_Graph-API/Live video Endpoint.md\nParagraph location: \n\tLive Video\n\tReading\n\tEdges\n\nContent: \n### Edges  \n| Edge | Description |\n| --- | --- |\n| [`blocked_users`](https://developers.facebook.com/docs/graph-api/reference/live-video/blocked_users/) | The users who are blocked from commenting on the live video |\n| [`comments`](https://developers.facebook.com/docs/graph-api/reference/live-video/comments/) | Comments made on this |\n| [`crosspost_shared_pages`](https://developers.facebook.com/docs/graph-api/reference/live-video/crosspost_shared_pages/) | Pages which are allowed to crosspost this live video. This field is only available on the original live video. |\n| [`crossposted_broadcasts`](https://developers.facebook.com/docs/graph-api/reference/live-video/crossposted_broadcasts/) | Live videos which have been crossposted from this live video. This field is only available on the original live video. |\n| [`errors`](https://developers.facebook.com/docs/graph-api/reference/live-video/errors/) | Errors that occurred during the live stream |\n| [`polls`](https://developers.facebook.com/docs/graph-api/reference/live-video/polls/) | Polls configured for this broadcast |\n| [`reactions`](https://developers.facebook.com/docs/graph-api/reference/live-video/reactions/)[](#) | People who reacted on this |\n",
+        "line_start": 116,
+        "line_end": 126
+    },
+    "8": {
+        "content": "Source document: ../data/platform-docs-versions/Facebook_Graph-API/Live video Endpoint.md\nParagraph location: \n\tLive Video\n\tReading\n\tError Codes\n\nContent: \n### Error Codes  \n| Error | Description |\n| --- | --- |\n| 100 | Invalid parameter |\n| 190 | Invalid OAuth 2.0 Access Token |\n| 200 | Permissions error |\n",
+        "line_start": 128,
+        "line_end": 134
+    },
+    "9": {
+        "content": "Source document: ../data/platform-docs-versions/Facebook_Graph-API/Live video Endpoint.md\nParagraph location: \n\tLive Video\n\tCreating\n\nContent: \n## Creating  \nYou can make a POST request to `live_videos` edge from the following paths:  \n* [`/{user_id}/live_videos`](https://developers.facebook.com/docs/graph-api/reference/user/live_videos/)  \nWhen posting to this edge, a\u00a0[LiveVideo](https://developers.facebook.com/docs/graph-api/reference/live-video/) will be created.\n",
+        "line_start": 136,
+        "line_end": 140
+    },
+    "10": {
+        "content": "Source document: ../data/platform-docs-versions/Facebook_Graph-API/Live video Endpoint.md\nParagraph location: \n\tLive Video\n\tCreating\n\tParameters\n\nContent: \n### Parameters  \n| Parameter | Description |\n| --- | --- |\n| `content_tags`<br><br>list<numeric string> | Tags that describe the contents of the video. Use search endpoint with `type=adinterest` to get possible IDs.<br><br>                        Example:<br>                        ~~~~<br>                        /search?type=adinterest&q=couscous<br>                        ~~~~ |\n| `description`<br><br>UTF-8 string | The description of the live video.<br><br>Supports Emoji |\n| `donate_button_charity_id`<br><br>numeric string or integer | Specifies the ID of the charity for which a donate button will be added to the live video. |\n| `enable_backup_ingest`<br><br>boolean | Set this to true to enable a backup ingest url. stop\\_on\\_delete\\_stream defaults to false when set |\n| `encoding_settings`<br><br>string | Identifier of the encoding settings group the broadcaster is using for this stream. This parameter is currently only in use for live-360 broadcasts. The value to be passed to this parameter is the value of the `identifier` key of the encoding settings preset. Encoding presets can be found by querying the `/broadcaster_encoding_settings` Graph API endpoint (`GET` query). |\n| `event_params`<br><br>Live Video Event Parameter | Parameters specific to Live Online Event broadcast. If `start_time` (unix timecode) is set, LOE's start time will be updated. Also, `cover` (url) uploads an image to use as the cover photo for the event.<br><br>Example: { start\\_time: 1641013200, cover: 'https://your.url/image.jpg', } |\n| `fisheye_video_cropped`<br><br>boolean | Whether the single fisheye video is cropped or not |\n| `front_z_rotation`<br><br>float | The front z rotation in degrees on the single fisheye video |\n| `is_spherical`<br><br>boolean | Flag that denotes the broadcast is a 360 live broadcast. |\n| `original_fov`<br><br>int64 | Original field of view of the camera |\n| `privacy`<br><br>Privacy Parameter | Privacy for this live video. |\n| `projection`<br><br>enum {EQUIRECTANGULAR, CUBEMAP, HALF\\_EQUIRECTANGULAR} | Flag that denotes expected projection for 360 live streams. The default value is EQUIRECTANGULAR. |\n| `published`<br><br>boolean | Set this to false to preview the stream before going live.<br><br>                        Deprecated. Prefer setting the status instead. |\n| `schedule_custom_profile_image`<br><br>image | Custom image that will appear in the scheduled live story and lobby. |\n| `spatial_audio_format`<br><br>enum {ambiX\\_4} | Denotes the format of the spatial audio stream. When unspecified audio is presumed to be mono or stereo. |\n| `status`<br><br>enum {UNPUBLISHED, LIVE\\_NOW, SCHEDULED\\_UNPUBLISHED, SCHEDULED\\_LIVE, SCHEDULED\\_CANCELED} | The status of the broadcast. A `LIVE_NOW` broadcast is currently live and visible to users. An `UNPUBLISHED` broadcast is in preparation; it's not visible to other users, and it may be automatically deleted after several hours in this state. (Consider using the `SCHEDULED` states to create a planned, future broadcast.) |\n| `stereoscopic_mode`<br><br>enum {MONO, LEFT\\_RIGHT, TOP\\_BOTTOM} | Set this parameter to the stereoscopic mode for this video. |\n| `stop_on_delete_stream`<br><br>boolean | Set this to true if stream should be stopped when deleteStream RTMP command received. |\n| `title`<br><br>UTF-8 string | The title of the live video. Maximum 254 characters.<br><br>Supports Emoji |\n",
+        "line_start": 79,
+        "line_end": 101
+    },
+    "11": {
+        "content": "Source document: ../data/platform-docs-versions/Facebook_Graph-API/Live video Endpoint.md\nParagraph location: \n\tLive Video\n\tCreating\n\tReturn Type\n\nContent: \n### Return Type  \nThis endpoint supports [read-after-write](https://developers.facebook.com/docs/graph-api/advanced/#read-after-write) and will read the node represented by `id` in the return type.  \nStruct {  \n`id`: numeric string,  \n`stream_url`: string,  \n`secure_stream_url`: string,  \n`stream_secondary_urls`: List \\[  \nstring  \n\\],  \n`secure_stream_secondary_urls`: List \\[  \nstring  \n\\],  \n`dash_ingest_url`: string,  \n`dash_ingest_secondary_urls`: List \\[  \nstring  \n\\],  \n`event_id`: numeric string,  \n}\n",
+        "line_start": 168,
+        "line_end": 186
+    },
+    "12": {
+        "content": "Source document: ../data/platform-docs-versions/Facebook_Graph-API/Live video Endpoint.md\nParagraph location: \n\tLive Video\n\tCreating\n\tError Codes\n\nContent: \n### Error Codes  \n| Error | Description |\n| --- | --- |\n| 200 | Permissions error |\n| 100 | Invalid parameter |\n| 1005 | Fail to upload cover photo. |\n| 1000 | Invalid time for an event. |  \nYou can make a POST request to `live_videos` edge from the following paths:  \n* [`/{event_id}/live_videos`](https://developers.facebook.com/docs/graph-api/reference/event/live_videos/)  \nWhen posting to this edge, a\u00a0[LiveVideo](https://developers.facebook.com/docs/graph-api/reference/live-video/) will be created.\n",
+        "line_start": 128,
+        "line_end": 138
+    },
+    "13": {
+        "content": "Source document: ../data/platform-docs-versions/Facebook_Graph-API/Live video Endpoint.md\nParagraph location: \n\tLive Video\n\tCreating\n\tParameters\n\nContent: \n### Parameters  \n| Parameter | Description |\n| --- | --- |\n| `content_tags`<br><br>list<numeric string> | Tags that describe the contents of the video. Use search endpoint with `type=adinterest` to get possible IDs.<br><br>                                    Example:<br>                                    ~~~~<br>                                    /search?type=adinterest&q=couscous<br>                                    ~~~~ |\n| `description`<br><br>UTF-8 string | The description of the live video.<br><br>Supports Emoji |\n| `enable_backup_ingest`<br><br>boolean | Set this to true to enable a backup ingest url. stop\\_on\\_delete\\_stream defaults to false when set |\n| `encoding_settings`<br><br>string | Identifier of the encoding settings group the broadcaster is using for this stream. This parameter is currently only in use for live-360 broadcasts. The value to be passed to this parameter is the value of the `identifier` key of the encoding settings preset. Encoding presets can be found by querying the `/broadcaster_encoding_settings` Graph API endpoint (`GET` query). |\n| `event_params`<br><br>Live Video Event Parameter | Parameters specific to Live Online Event broadcast. If `start_time` (unix timecode) is set, LOE's start time will be updated. Also, `cover` (url) uploads an image to use as the cover photo for the event.<br><br>Example: { start\\_time: 1641013200, cover: 'https://your.url/image.jpg', } |\n| `fisheye_video_cropped`<br><br>boolean | Whether the single fisheye video is cropped or not |\n| `front_z_rotation`<br><br>float | The front z rotation in degrees on the single fisheye video |\n| `is_spherical`<br><br>boolean | Flag that denotes the broadcast is a 360 live broadcast. |\n| `original_fov`<br><br>int64 | Original field of view of the camera |\n| `privacy`<br><br>Privacy Parameter | Privacy for this live video. |\n| `projection`<br><br>enum {EQUIRECTANGULAR, CUBEMAP, HALF\\_EQUIRECTANGULAR} | Flag that denotes expected projection for 360 live streams. The default value is EQUIRECTANGULAR. |\n| `published`<br><br>boolean | Set this to false to preview the stream before going live.<br><br>                                    Deprecated. Prefer setting the status instead. |\n| `schedule_custom_profile_image`<br><br>image | Custom image that will appear in the scheduled live story and lobby. |\n| `spatial_audio_format`<br><br>enum {ambiX\\_4} | Denotes the format of the spatial audio stream. When unspecified audio is presumed to be mono or stereo. |\n| `status`<br><br>enum {UNPUBLISHED, LIVE\\_NOW, SCHEDULED\\_UNPUBLISHED, SCHEDULED\\_LIVE, SCHEDULED\\_CANCELED} | The status of the broadcast. A `LIVE_NOW` broadcast is currently live and visible to users. An `UNPUBLISHED` broadcast is in preparation; it's not visible to other users, and it may be automatically deleted after several hours in this state. (Consider using the `SCHEDULED` states to create a planned, future broadcast.) |\n| `stereoscopic_mode`<br><br>enum {MONO, LEFT\\_RIGHT, TOP\\_BOTTOM} | Set this parameter to the stereoscopic mode for this video. |\n| `stop_on_delete_stream`<br><br>boolean | Set this to true if stream should be stopped when deleteStream RTMP command received. |\n| `title`<br><br>UTF-8 string | The title of the live video. Maximum 254 characters.<br><br>Supports Emoji |\n",
+        "line_start": 79,
+        "line_end": 100
+    },
+    "14": {
+        "content": "Source document: ../data/platform-docs-versions/Facebook_Graph-API/Live video Endpoint.md\nParagraph location: \n\tLive Video\n\tCreating\n\tReturn Type\n\nContent: \n### Return Type  \nThis endpoint supports [read-after-write](https://developers.facebook.com/docs/graph-api/advanced/#read-after-write) and will read the node represented by `id` in the return type.  \nStruct {  \n`id`: numeric string,  \n`stream_url`: string,  \n`secure_stream_url`: string,  \n`stream_secondary_urls`: List \\[  \nstring  \n\\],  \n`secure_stream_secondary_urls`: List \\[  \nstring  \n\\],  \n`dash_ingest_url`: string,  \n`dash_ingest_secondary_urls`: List \\[  \nstring  \n\\],  \n`event_id`: numeric string,  \n}\n",
+        "line_start": 168,
+        "line_end": 186
+    },
+    "15": {
+        "content": "Source document: ../data/platform-docs-versions/Facebook_Graph-API/Live video Endpoint.md\nParagraph location: \n\tLive Video\n\tCreating\n\tError Codes\n\nContent: \n### Error Codes  \n| Error | Description |\n| --- | --- |\n| 6000 | There was a problem uploading your video file. Please try again with another file. |  \nYou can make a POST request to `live_videos` edge from the following paths:  \n* [`/{group_id}/live_videos`](https://developers.facebook.com/docs/graph-api/reference/group/live_videos/)  \nWhen posting to this edge, a\u00a0[LiveVideo](https://developers.facebook.com/docs/graph-api/reference/live-video/) will be created.\n",
+        "line_start": 128,
+        "line_end": 135
+    },
+    "16": {
+        "content": "Source document: ../data/platform-docs-versions/Facebook_Graph-API/Live video Endpoint.md\nParagraph location: \n\tLive Video\n\tCreating\n\tParameters\n\nContent: \n### Parameters  \n| Parameter | Description |\n| --- | --- |\n| `content_tags`<br><br>list<numeric string> | Tags that describe the contents of the Live Video. Use search endpoint with `type=adinterest` to get possible IDs. For example: `/search?type=adinterest&q=couscous` |\n| `description`<br><br>UTF-8 string | The description of the Live Video<br><br>Supports Emoji |\n| `enable_backup_ingest`<br><br>boolean | Set this to true to enable a backup ingest url. stop\\_on\\_delete\\_stream defaults to false when set |\n| `encoding_settings`<br><br>string | Identifier of the encoding settings group. Currently only used for live-360 broadcasts. The value should be the `identifier` key of the encoding settings preset. Encoding presets can be found by querying the `GET /broadcaster_encoding_settings` endpoint |\n| `event_params`<br><br>Live Video Event Parameter | Parameters specific to Live Online Event broadcast. If `start_time` (unix timecode) is set, LOE's start time will be updated. Also, `cover` (url) uploads an image to use as the cover photo for the event.<br><br>Example: { start\\_time: 1641013200, cover: 'https://your.url/image.jpg', } |\n| `fisheye_video_cropped`<br><br>boolean | Whether the single fisheye video is cropped or not |\n| `front_z_rotation`<br><br>float | The front z rotation in degrees on the single fisheye video |\n| `is_spherical`<br><br>boolean | Denotes if the broadcast is a 360 live broadcast |\n| `original_fov`<br><br>int64 | Original field of view of the camera |\n| `privacy`<br><br>Privacy Parameter | Privacy for this Live Video |\n| `projection`<br><br>enum {EQUIRECTANGULAR, CUBEMAP, HALF\\_EQUIRECTANGULAR} | Flag that denotes expected projection for 360 live streams. The default value is EQUIRECTANGULAR |\n| `published`<br><br>boolean | Set this to false to preview the stream before going live. Deprecated. Set the status instead |\n| `schedule_custom_profile_image`<br><br>image | Custom image that will appear in the scheduled live story and lobby |\n| `spatial_audio_format`<br><br>enum {ambiX\\_4} | Denotes the format of the spatial audio stream. When unspecified audio is presumed to be mono or stereo |\n| `status`<br><br>enum {UNPUBLISHED, LIVE\\_NOW, SCHEDULED\\_UNPUBLISHED, SCHEDULED\\_LIVE, SCHEDULED\\_CANCELED} | The status of the broadcast. A `LIVE_NOW` broadcast is currently live and visible to users. An `UNPUBLISHED` broadcast is in preparation; it's not visible to other users, and it may be automatically deleted after several hours in this state. (Consider using the `SCHEDULED` states to create a planned, future broadcast.) |\n| `stereoscopic_mode`<br><br>enum {MONO, LEFT\\_RIGHT, TOP\\_BOTTOM} | The stereoscopic mode for this video |\n| `stop_on_delete_stream`<br><br>boolean | Set this to true if stream should be stopped when deleteStream RTMP command received |\n| `title`<br><br>UTF-8 string | Title of the live video. Maximum 254 characters.<br><br>Supports Emoji |\n",
+        "line_start": 79,
+        "line_end": 100
+    },
+    "17": {
+        "content": "Source document: ../data/platform-docs-versions/Facebook_Graph-API/Live video Endpoint.md\nParagraph location: \n\tLive Video\n\tCreating\n\tReturn Type\n\nContent: \n### Return Type  \nThis endpoint supports [read-after-write](https://developers.facebook.com/docs/graph-api/advanced/#read-after-write) and will read the node represented by `id` in the return type.  \nStruct {  \n`id`: numeric string,  \n`stream_url`: string,  \n`secure_stream_url`: string,  \n`stream_secondary_urls`: List \\[  \nstring  \n\\],  \n`secure_stream_secondary_urls`: List \\[  \nstring  \n\\],  \n`dash_ingest_url`: string,  \n`dash_ingest_secondary_urls`: List \\[  \nstring  \n\\],  \n`event_id`: numeric string,  \n}\n",
+        "line_start": 168,
+        "line_end": 186
+    },
+    "18": {
+        "content": "Source document: ../data/platform-docs-versions/Facebook_Graph-API/Live video Endpoint.md\nParagraph location: \n\tLive Video\n\tCreating\n\tError Codes\n\nContent: \n### Error Codes  \n| Error | Description |\n| --- | --- |\n| 200 | Permissions error |\n| 100 | Invalid parameter |\n| 1005 | Fail to upload cover photo. |\n| 1000 | Invalid time for an event. |  \nYou can make a POST request to `live_videos` edge from the following paths:  \n* [`/{page_id}/live_videos`](https://developers.facebook.com/docs/graph-api/reference/page/live_videos/)  \nWhen posting to this edge, a\u00a0[LiveVideo](https://developers.facebook.com/docs/graph-api/reference/live-video/) will be created.\n",
+        "line_start": 128,
+        "line_end": 138
+    },
+    "19": {
+        "content": "Source document: ../data/platform-docs-versions/Facebook_Graph-API/Live video Endpoint.md\nParagraph location: \n\tLive Video\n\tCreating\n\tParameters\n\nContent: \n### Parameters  \n| Parameter | Description |\n| --- | --- |\n| `content_tags`<br><br>list<numeric string> | Tags that describe the contents of the video. Use search endpoint with `type=adinterest` to get possible IDs.<br><br>                                                      Example:<br>                                                      ~~~~<br>                                                      /search?type=adinterest&q=couscous<br>                                                      ~~~~ |\n| `crossposting_actions`<br><br>array<JSON object> | List of desired changes to crossposting for this broadcast. Each change must provide a `page_id` and `action`. Example:<br><br>\\[ {page\\_id: 1234, action: 'enable\\_crossposting'}, {page\\_id: 4567, action: 'enable\\_crossposting\\_and\\_create\\_post'} \\]<br><br>Available action types:<br><br>* `enable_crossposting`: Enables crossposting for this broadcast with the Page if it is not currently enabled. No change if crossposting is already enabled with the Page for this broadcast.<br>* `disable_crossposting`: Disables crossposting for this broadcast with the Page if it is currently enabled. No change if crossposting is not already enabled with the Page for this broadcast.<br>* `enable_crossposting_and_create_post`: Same as `enable_crossposting`, but will also create a post as the Page. The post will be created even if crossposting is already enabled for the Page. This option is subject to your [live crossposting relationships](https://www.facebook.com/help/publisher/1385580858214929) and will fail for Pages without the required permission.<br><br>When used with a Live Online Event, this will apply to the event. |\n| `page_id`<br><br>page ID | page\\_id<br><br>Required |\n| `action`<br><br>enum {ENABLE\\_CROSSPOSTING, DISABLE\\_CROSSPOSTING, ENABLE\\_CROSSPOSTING\\_AND\\_CREATE\\_POST} | action<br><br>Required |\n| `custom_labels`<br><br>list<string> | Labels used to describe the video. Unlike content tags, custom labels are not published and only appear in insights data. |\n| `description`<br><br>UTF-8 string | The description of the live video.<br><br>Supports Emoji |\n| `donate_button_charity_id`<br><br>numeric string or integer | Specifies the ID of the charity for which a donate button will be added to the live video. |\n| `enable_backup_ingest`<br><br>boolean | Set this to true to enable a backup ingest url. stop\\_on\\_delete\\_stream defaults to false when set |\n| `encoding_settings`<br><br>string | Identifier of the encoding settings group the broadcaster is using for this stream. This parameter is currently only in use for live-360 broadcasts. The value to be passed to this parameter is the value of the `identifier` key of the encoding settings preset. Encoding presets can be found by querying the `/broadcaster_encoding_settings` Graph API endpoint (`GET` query). |\n| `event_params`<br><br>Live Video Event Parameter | Parameters specific to Live Online Event broadcast. If `start_time` (unix timecode) is set, LOE's start time will be updated. Also, `cover` (url) uploads an image to use as the cover photo for the event.<br><br>Example: { start\\_time: 1641013200, cover: 'https://your.url/image.jpg', } |\n| `fisheye_video_cropped`<br><br>boolean | Whether the single fisheye video is cropped or not |\n| `front_z_rotation`<br><br>float | The front z rotation in degrees on the single fisheye video |\n| `game_show`<br><br>JSON object | Configure this live stream to be a game show |\n| `game_type`<br><br>enum {KNOCKOUT} | game\\_type<br><br>Required |\n| `is_spherical`<br><br>boolean | Flag that denotes the broadcast is a 360 live broadcast. |\n| `original_fov`<br><br>int64 | Original field of view of the camera |\n| `privacy`<br><br>Privacy Parameter | Privacy for this live video. |\n| `product_items`<br><br>list<numeric string> | Products which will be shown with live videos. |\n| `projection`<br><br>enum {EQUIRECTANGULAR, CUBEMAP, HALF\\_EQUIRECTANGULAR} | Flag that denotes expected projection for 360 live streams. The default value is EQUIRECTANGULAR. |\n| `published`<br><br>boolean | Set this to false to preview the stream before going live.<br><br>                                                      Deprecated. Prefer setting the status instead. |\n| `schedule_custom_profile_image`<br><br>image | Custom image that will appear in the scheduled live story and lobby. |\n| `spatial_audio_format`<br><br>enum {ambiX\\_4} | Denotes the format of the spatial audio stream. When unspecified audio is presumed to be mono or stereo. |\n| `status`<br><br>enum {UNPUBLISHED, LIVE\\_NOW, SCHEDULED\\_UNPUBLISHED, SCHEDULED\\_LIVE, SCHEDULED\\_CANCELED} | The status of the broadcast. A `LIVE_NOW` broadcast is currently live and visible to users. An `UNPUBLISHED` broadcast is in preparation; it's not visible to other users, and it may be automatically deleted after several hours in this state. (Consider using the `SCHEDULED` states to create a planned, future broadcast.) |\n| `stereoscopic_mode`<br><br>enum {MONO, LEFT\\_RIGHT, TOP\\_BOTTOM} | Set this parameter to the stereoscopic mode for this video. |\n| `stop_on_delete_stream`<br><br>boolean | Set this to true if stream should be stopped when deleteStream RTMP command received. |\n| `targeting`<br><br>target | Object that [limits the audience](https://www.facebook.com/help/352402648173466) for this content. Anyone not in these demographics will not be able to view this content.<br><br>When used with a Live Online Event, this will apply to the event. |\n| `geo_locations`<br><br>Object |     |\n| `countries`<br><br>list<string> |     |\n| `regions`<br><br>list<Object> |     |\n| `key`<br><br>int64 |     |\n| `cities`<br><br>list<Object> |     |\n| `key`<br><br>int64 |     |\n| `zips`<br><br>list<Object> |     |\n| `key`<br><br>string |     |\n| `locales`<br><br>list<string> |     |\n| `excluded_countries`[](#)<br><br>list<string> |     |\n| `excluded_regions`[](#)<br><br>list<int64> |     |\n| `excluded_cities`[](#)<br><br>list<int64> |     |\n| `excluded_zipcodes`[](#)<br><br>list<string> |     |\n| `timezones`[](#)<br><br>list<int64> |     |\n| `age_min`<br><br>enum {13, 15, 18, 21, 25} |     |\n| `title`<br><br>UTF-8 string | The title of the live video. Maximum 254 characters.<br><br>Supports Emoji |\n",
+        "line_start": 79,
+        "line_end": 124
+    },
+    "20": {
+        "content": "Source document: ../data/platform-docs-versions/Facebook_Graph-API/Live video Endpoint.md\nParagraph location: \n\tLive Video\n\tCreating\n\tReturn Type\n\nContent: \n### Return Type  \nThis endpoint supports [read-after-write](https://developers.facebook.com/docs/graph-api/advanced/#read-after-write) and will read the node represented by `id` in the return type.  \nStruct {  \n`id`: numeric string,  \n`stream_url`: string,  \n`secure_stream_url`: string,  \n`stream_secondary_urls`: List \\[  \nstring  \n\\],  \n`secure_stream_secondary_urls`: List \\[  \nstring  \n\\],  \n`dash_ingest_url`: string,  \n`dash_ingest_secondary_urls`: List \\[  \nstring  \n\\],  \n`event_id`: numeric string,  \n}\n",
+        "line_start": 168,
+        "line_end": 186
+    },
+    "21": {
+        "content": "Source document: ../data/platform-docs-versions/Facebook_Graph-API/Live video Endpoint.md\nParagraph location: \n\tLive Video\n\tCreating\n\tError Codes\n\nContent: \n### Error Codes  \n| Error | Description |\n| --- | --- |\n| 100 | Invalid parameter |\n| 200 | Permissions error |\n| 1005 | Fail to upload cover photo. |\n| 1000 | Invalid time for an event. |\n| 475 | You have been temporarily blocked from posting videos because you added videos containing content that may belong to someone else. |\n",
+        "line_start": 128,
+        "line_end": 136
+    },
+    "22": {
+        "content": "Source document: ../data/platform-docs-versions/Facebook_Graph-API/Live video Endpoint.md\nParagraph location: \n\tLive Video\n\tUpdating\n\nContent: \n## Updating  \nYou can update a\u00a0[LiveVideo](https://developers.facebook.com/docs/graph-api/reference/live-video/) by making a POST request to [`/{live_video_id}`](https://developers.facebook.com/docs/graph-api/reference/live-video/).\n",
+        "line_start": 457,
+        "line_end": 459
+    },
+    "23": {
+        "content": "Source document: ../data/platform-docs-versions/Facebook_Graph-API/Live video Endpoint.md\nParagraph location: \n\tLive Video\n\tUpdating\n\tParameters\n\nContent: \n### Parameters  \n| Parameter | Description |\n| --- | --- |\n| `allow_bm_crossposting`<br><br>boolean | If set to true, makes this live video available for crossposting by Pages in your Business Manager. |\n| `content_tags`<br><br>list<numeric string> | Tags that describe the contents of the video. Use search endpoint with `type=adinterest` to get possible IDs. For example, `/search?type=adinterest&q=couscous`. |\n| `cross_share_to_group_ids`<br><br>list<numeric string> | List of Groups by ID where the broadcast will be shared. The broadcast owner will require publishing permission to the groups in order to share. |\n| `crossposting_actions`<br><br>array<JSON object> | List of desired changes to crossposting for this broadcast. Each change must provide a `page_id` and `action`. Example:<br>    <br>    <br>                [<br>                  {page_id: 1234, action: 'enable_crossposting'},<br>                  {page_id: 4567, action: 'enable_crossposting_and_create_post'}<br>                ]<br>    <br>    <br>            Available action types:<br>    <br>    <br>            - `enable_crossposting`: Enables crossposting for this broadcast with the Page if it is not currently enabled. No change if crossposting is already enabled with the Page for this broadcast.<br>            - `disable_crossposting`: Disables crossposting for this broadcast with the Page if it is currently enabled. No change if crossposting is not already enabled with the Page for this broadcast.<br>            - `enable_crossposting_and_create_post`: Same as `enable_crossposting`, but will also create a post as the Page. The post will be created even if crossposting is already enabled for the Page. This option is subject to your [live crossposting relationships](https://www.facebook.com/help/publisher/1385580858214929) and will fail for Pages without the required permission.<br>    <br>            When used with a Live Online Event, this will apply to the event. |\n| `page_id`<br><br>page ID | page\\_id<br><br>Required |\n| `action`<br><br>enum {ENABLE\\_CROSSPOSTING, DISABLE\\_CROSSPOSTING, ENABLE\\_CROSSPOSTING\\_AND\\_CREATE\\_POST} | action<br><br>Required |\n| `custom_labels`<br><br>list<string> | Labels used to describe the video. Unlike content tags, custom labels are not published and only appear in insights data. |\n| `description`<br><br>UTF-8 string | The description of live video<br><br>Supports Emoji |\n| `direct_share_status`<br><br>int64 | The status to allow sponsor directly boost the post. |\n| `disturbing`<br><br>boolean | If true, autoplay will be disabled and live video will have a graphic content warning overlay |\n| `donate_button_charity_id`<br><br>int64 | Specifies the ID of the charity for which a donate button will be added to the live video. If zero is passed, will remove the donate button on the video. |\n| `embeddable`<br><br>boolean | If true, live video will be embeddable |\n| `end_live_video`<br><br>boolean | If true, the live video will be ended. Only valid if the live video is still running |\n| `event_params`<br><br>Live Video Event Parameter | Parameters specific to Live Online Event broadcast. If `start_time` (unix timecode) is set, LOE's start time will be updated. Also, `cover` (url) uploads an image to use as the cover photo for the event. Example: { start\\_time: 1641013200, cover: 'https://your.url/image.jpg', } |\n| `is_manual_mode`<br><br>boolean | Flag to indicate that the scheduled broadcast is switched to manual mode |\n| `live_comment_moderation_setting`<br><br>list<enum {DEFAULT, FOLLOWER, SLOW, DISCUSSION, RESTRICTED, PROTECTED\\_MODE, SUPPORTER, NO\\_HYPERLINK, FOLLOWED, TAGGED}> | Set of comment moderation settings for the live video |\n| `master_ingest_stream_id`<br><br>numeric string | Ingest stream to set to master and route viewers to. |\n| `persistent_stream_key_status`<br><br>enum {ENABLE, DISABLE, REGENERATE} | Set the status of the persistent stream key for this live video |\n| `place`<br><br>place tag | Location associated with the video, if any. |\n| `planned_start_time`<br><br>datetime/timestamp | Planned start time for a scheduled live video |\n| `privacy`<br><br>Privacy Parameter | The privacy setting of live video |\n| `published`<br><br>boolean | Should the live video be published? Only valid if not yet published.<br><br>            Deprecated. Prefer setting the status instead. |\n| `schedule_custom_profile_image`<br><br>image | Custom image that will appear in the scheduled live story and lobby. |\n| `schedule_feed_background_image`<br><br>image | Custom background image that appears in the updated scheduled live story |\n| `sponsor_id`<br><br>numeric string or integer | Facebook Page id that is tagged as sponsor in the video post |\n| `sponsor_relationship`<br><br>int64 | Sponsor Relationship, such as Presented By or Paid PartnershipWith |\n| `status`<br><br>enum {UNPUBLISHED, LIVE\\_NOW, SCHEDULED\\_UNPUBLISHED, SCHEDULED\\_LIVE, SCHEDULED\\_CANCELED} | The status of the LiveVideo.<br><br>A `LIVE_NOW` LiveVideo is one that will be published to the intended destination (Timeline, Group, Page, etc) upon receiving valid video data, or one that is already published and actively streaming.<br><br>An `UNPUBLISHED` LiveVideo is in preparation; it's not visible to other users, and it may be automatically deleted after several hours in this state.<br><br>A `SCHEDULED_UNPUBLISHED` LiveVideo is scheduled to go live at a future time.<br><br>A `SCHEDULED_LIVE` LiveVideo is one whose scheduled time has passed, yet the stream is not yet live. Either in the process of transitioning, or still waiting for a valid video stream.<br><br>(Consider using the `SCHEDULED` states to create a planned, future LiveVideo.) |\n| `tags`<br><br>list<int> | Users tagged in the live video. |\n| `targeting`<br><br>target | Object that [limits the audience](https://www.facebook.com/help/352402648173466) for this content. Anyone not in these demographics will not be able to view this content.<br><br>When used with a Live Online Event, this will apply to the event. |\n| `geo_locations`<br><br>Object |     |\n| `countries`<br><br>list<string> |     |\n| `regions`<br><br>list<Object> |     |\n| `key`<br><br>int64 |     |\n| `cities`<br><br>list<Object> |     |\n| `key`<br><br>int64 |     |\n| `zips`<br><br>list<Object> |     |\n| `key`<br><br>string |     |\n| `locales`<br><br>list<string> |     |\n| `excluded_countries`[](#)<br><br>list<string> |     |\n| `excluded_regions`[](#)<br><br>list<int64> |     |\n| `excluded_cities`[](#)<br><br>list<int64> |     |\n| `excluded_zipcodes`[](#)<br><br>list<string> |     |\n| `timezones`[](#)<br><br>list<int64> |     |\n| `age_min`<br><br>enum {13, 15, 18, 21, 25} |     |\n| `title`<br><br>UTF-8 string | The title of the live video.<br><br>Supports Emoji |\n",
+        "line_start": 79,
+        "line_end": 127
+    },
+    "24": {
+        "content": "Source document: ../data/platform-docs-versions/Facebook_Graph-API/Live video Endpoint.md\nParagraph location: \n\tLive Video\n\tUpdating\n\tReturn Type\n\nContent: \n### Return Type  \nThis endpoint supports [read-after-write](https://developers.facebook.com/docs/graph-api/advanced/#read-after-write) and will read the node represented by `id` in the return type.  \nStruct {  \n`id`: numeric string,  \n`persistent_stream_url`: string,  \n`backup_persistent_stream_url`: string,  \n}\n",
+        "line_start": 168,
+        "line_end": 175
+    },
+    "25": {
+        "content": "Source document: ../data/platform-docs-versions/Facebook_Graph-API/Live video Endpoint.md\nParagraph location: \n\tLive Video\n\tUpdating\n\tError Codes\n\nContent: \n### Error Codes  \n| Error | Description |\n| --- | --- |\n| 200 | Permissions error |\n| 100 | Invalid parameter |\n| 1005 | Fail to upload cover photo. |\n",
+        "line_start": 128,
+        "line_end": 134
+    },
+    "26": {
+        "content": "Source document: ../data/platform-docs-versions/Facebook_Graph-API/Live video Endpoint.md\nParagraph location: \n\tLive Video\n\tDeleting\n\nContent: \n## Deleting  \nYou can delete a\u00a0[LiveVideo](https://developers.facebook.com/docs/graph-api/reference/live-video/) by making a DELETE request to [`/{live_video_id}`](https://developers.facebook.com/docs/graph-api/reference/live-video/).\n",
+        "line_start": 533,
+        "line_end": 535
+    },
+    "27": {
+        "content": "Source document: ../data/platform-docs-versions/Facebook_Graph-API/Live video Endpoint.md\nParagraph location: \n\tLive Video\n\tDeleting\n\tLimitations\n\nContent: \n### Limitations  \nYou cannot delete a LiveVideo on a [User](https://developers.facebook.com/docs/graph-api/reference/user) or [Group](https://developers.facebook.com/docs/graph-api/reference/group).\n",
+        "line_start": 537,
+        "line_end": 539
+    },
+    "28": {
+        "content": "Source document: ../data/platform-docs-versions/Facebook_Graph-API/Live video Endpoint.md\nParagraph location: \n\tLive Video\n\tDeleting\n\tParameters\n\nContent: \n### Parameters  \nThis endpoint doesn't have any parameters.\n",
+        "line_start": 79,
+        "line_end": 81
+    },
+    "29": {
+        "content": "Source document: ../data/platform-docs-versions/Facebook_Graph-API/Live video Endpoint.md\nParagraph location: \n\tLive Video\n\tDeleting\n\tError Codes\n\nContent: \n### Error Codes  \n| Error | Description |\n| --- | --- |\n| 100 | Invalid parameter |  \n![](https://www.facebook.com/tr?id=675141479195042&ev=PageView&noscript=1)  \n![](https://www.facebook.com/tr?id=574561515946252&ev=PageView&noscript=1)  \n![](https://www.facebook.com/tr?id=1754628768090156&ev=PageView&noscript=1)\n",
+        "line_start": 128,
+        "line_end": 135
+    },
+    "30": {
+        "content": "Source document: ../data/platform-docs-versions/Facebook_Graph-API/Live video Endpoint.md\nParagraph location: \n\tResource URL: https://developers.facebook.com/docs/graph-api/reference/live-video/blocked_users/\n\nContent: \n# Resource URL: https://developers.facebook.com/docs/graph-api/reference/live-video/blocked_users/\n",
+        "line_start": 565,
+        "line_end": 566
+    },
+    "31": {
+        "content": "Source document: ../data/platform-docs-versions/Facebook_Graph-API/Live video Endpoint.md\nParagraph location: \n\tLive Video Blocked Users\n\tReading\n\nContent: \n# Live Video Blocked Users  \n## Reading  \nList of users who are blocked from video broadcast\n",
+        "line_start": 566,
+        "line_end": 569
+    },
+    "32": {
+        "content": "Source document: ../data/platform-docs-versions/Facebook_Graph-API/Live video Endpoint.md\nParagraph location: \n\tLive Video Blocked Users\n\tReading\n\tExample\n\nContent: \n### Example  \nHTTPPHP SDKJavaScript SDKAndroid SDKiOS SDK[Graph API Explorer](https://developers.facebook.com/tools/explorer/?method=GET&path=%7Blive-video-id%7D%2Fblocked_users&version=v19.0)  \nGET /v19.0/{live-video-id}/blocked_users HTTP/1.1\nHost: graph.facebook.com  \n/* PHP SDK v5.0.0 */\n/* make the API call */\ntry {\n// Returns a `Facebook\\FacebookResponse` object\n$response = $fb->get(\n'/{live-video-id}/blocked_users',\n'{access-token}'\n);\n} catch(Facebook\\Exceptions\\FacebookResponseException $e) {\necho 'Graph returned an error: ' . $e->getMessage();\nexit;\n} catch(Facebook\\Exceptions\\FacebookSDKException $e) {\necho 'Facebook SDK returned an error: ' . $e->getMessage();\nexit;\n}\n$graphNode = $response->getGraphNode();\n/* handle the result */  \n/* make the API call */\nFB.api(\n\"/{live-video-id}/blocked_users\",\nfunction (response) {\nif (response && !response.error) {\n/* handle the result */\n}\n}\n);  \n/* make the API call */\nnew GraphRequest(\nAccessToken.getCurrentAccessToken(),\n\"/{live-video-id}/blocked_users\",\nnull,\nHttpMethod.GET,\nnew GraphRequest.Callback() {\npublic void onCompleted(GraphResponse response) {\n/* handle the result */\n}\n}\n).executeAsync();  \n/* make the API call */\nFBSDKGraphRequest *request = [[FBSDKGraphRequest alloc]\ninitWithGraphPath:@\"/{live-video-id}/blocked_users\"\nparameters:params\nHTTPMethod:@\"GET\"];\n[request startWithCompletionHandler:^(FBSDKGraphRequestConnection *connection,\nid result,\nNSError *error) {\n// Handle the result\n}];  \nIf you want to learn how to use the Graph API, read our [Using Graph API guide](https://developers.facebook.com/docs/graph-api/using-graph-api/).\n",
+        "line_start": 18,
+        "line_end": 71
+    },
+    "33": {
+        "content": "Source document: ../data/platform-docs-versions/Facebook_Graph-API/Live video Endpoint.md\nParagraph location: \n\tLive Video Blocked Users\n\tReading\n\tParameters\n\nContent: \n### Parameters  \n| Parameter | Description |\n| --- | --- |\n| `uid`<br><br>numeric string or integer | IDs of users who are blocked from the video broadcast |\n",
+        "line_start": 79,
+        "line_end": 83
+    },
+    "34": {
+        "content": "Source document: ../data/platform-docs-versions/Facebook_Graph-API/Live video Endpoint.md\nParagraph location: \n\tLive Video Blocked Users\n\tReading\n\tFields\n\nContent: \n### Fields  \nReading from this edge will return a JSON formatted result:  \n{\n\"`data`\": \\[\\],\n\"`paging`\": {}\n}  \n#### `data`  \nA list of [User](https://developers.facebook.com/docs/graph-api/reference/user/) nodes.  \n#### `paging`  \nFor more details about pagination, see the [Graph API guide](https://developers.facebook.com/docs/graph-api/using-graph-api/#paging).\n",
+        "line_start": 85,
+        "line_end": 95
+    },
+    "35": {
+        "content": "Source document: ../data/platform-docs-versions/Facebook_Graph-API/Live video Endpoint.md\nParagraph location: \n\tLive Video Blocked Users\n\tReading\n\tError Codes\n\nContent: \n### Error Codes  \n| Error | Description |\n| --- | --- |\n| 210 | User not visible |\n",
+        "line_start": 128,
+        "line_end": 132
+    },
+    "36": {
+        "content": "Source document: ../data/platform-docs-versions/Facebook_Graph-API/Live video Endpoint.md\nParagraph location: \n\tLive Video Blocked Users\n\tCreating\n\nContent: \n## Creating  \nYou can't perform this operation on this endpoint.\n",
+        "line_start": 136,
+        "line_end": 138
+    },
+    "37": {
+        "content": "Source document: ../data/platform-docs-versions/Facebook_Graph-API/Live video Endpoint.md\nParagraph location: \n\tLive Video Blocked Users\n\tUpdating\n\nContent: \n## Updating  \nYou can't perform this operation on this endpoint.\n",
+        "line_start": 457,
+        "line_end": 459
+    },
+    "38": {
+        "content": "Source document: ../data/platform-docs-versions/Facebook_Graph-API/Live video Endpoint.md\nParagraph location: \n\tLive Video Blocked Users\n\tDeleting\n\nContent: \n## Deleting  \nYou can't perform this operation on this endpoint.  \n![](https://www.facebook.com/tr?id=675141479195042&ev=PageView&noscript=1)  \n![](https://www.facebook.com/tr?id=574561515946252&ev=PageView&noscript=1)  \n![](https://www.facebook.com/tr?id=1754628768090156&ev=PageView&noscript=1)\n",
+        "line_start": 533,
+        "line_end": 538
+    },
+    "39": {
+        "content": "Source document: ../data/platform-docs-versions/Facebook_Graph-API/Live video Endpoint.md\nParagraph location: \n\tResource URL: https://developers.facebook.com/docs/graph-api/reference/live-video/comments/\n\nContent: \n# Resource URL: https://developers.facebook.com/docs/graph-api/reference/live-video/comments/\n",
+        "line_start": 680,
+        "line_end": 681
+    },
+    "40": {
+        "content": "Source document: ../data/platform-docs-versions/Facebook_Graph-API/Live video Endpoint.md\nParagraph location: \n\tLive Video Comments\n\tReading\n\nContent: \n# Live Video Comments  \n## Reading  \nComments for this object\n",
+        "line_start": 681,
+        "line_end": 684
+    },
+    "41": {
+        "content": "Source document: ../data/platform-docs-versions/Facebook_Graph-API/Live video Endpoint.md\nParagraph location: \n\tLive Video Comments\n\tReading\n\tNew Page Experience\n\nContent: \n### New Page Experience  \nThis endpoint is supported for [New Page Experience](https://developers.facebook.com/docs/pages/new-pages-experience/).\n",
+        "line_start": 14,
+        "line_end": 16
+    },
+    "42": {
+        "content": "Source document: ../data/platform-docs-versions/Facebook_Graph-API/Live video Endpoint.md\nParagraph location: \n\tLive Video Comments\n\tReading\n\tExample\n\nContent: \n### Example  \nHTTPPHP SDKJavaScript SDKAndroid SDKiOS SDK[Graph API Explorer](https://developers.facebook.com/tools/explorer/?method=GET&path=%7Blive-video-id%7D%2Fcomments&version=v19.0)  \nGET /v19.0/{live-video-id}/comments HTTP/1.1\nHost: graph.facebook.com  \n/* PHP SDK v5.0.0 */\n/* make the API call */\ntry {\n// Returns a `Facebook\\FacebookResponse` object\n$response = $fb->get(\n'/{live-video-id}/comments',\n'{access-token}'\n);\n} catch(Facebook\\Exceptions\\FacebookResponseException $e) {\necho 'Graph returned an error: ' . $e->getMessage();\nexit;\n} catch(Facebook\\Exceptions\\FacebookSDKException $e) {\necho 'Facebook SDK returned an error: ' . $e->getMessage();\nexit;\n}\n$graphNode = $response->getGraphNode();\n/* handle the result */  \n/* make the API call */\nFB.api(\n\"/{live-video-id}/comments\",\nfunction (response) {\nif (response && !response.error) {\n/* handle the result */\n}\n}\n);  \n/* make the API call */\nnew GraphRequest(\nAccessToken.getCurrentAccessToken(),\n\"/{live-video-id}/comments\",\nnull,\nHttpMethod.GET,\nnew GraphRequest.Callback() {\npublic void onCompleted(GraphResponse response) {\n/* handle the result */\n}\n}\n).executeAsync();  \n/* make the API call */\nFBSDKGraphRequest *request = [[FBSDKGraphRequest alloc]\ninitWithGraphPath:@\"/{live-video-id}/comments\"\nparameters:params\nHTTPMethod:@\"GET\"];\n[request startWithCompletionHandler:^(FBSDKGraphRequestConnection *connection,\nid result,\nNSError *error) {\n// Handle the result\n}];  \nIf you want to learn how to use the Graph API, read our [Using Graph API guide](https://developers.facebook.com/docs/graph-api/using-graph-api/).\n",
+        "line_start": 18,
+        "line_end": 71
+    },
+    "43": {
+        "content": "Source document: ../data/platform-docs-versions/Facebook_Graph-API/Live video Endpoint.md\nParagraph location: \n\tLive Video Comments\n\tReading\n\tParameters\n\nContent: \n### Parameters  \n| Parameter | Description |\n| --- | --- |\n| `filter`<br><br>enum{stream, toplevel} | Default value: `toplevel`<br><br>SELF\\_EXPLANATORY |\n| `live_filter`<br><br>enum{filter\\_low\\_quality, no\\_filter} | Default value: `filter_low_quality`<br><br>For comments on a Live streaming video, this determines whether low quality comments will be filtered out of the results (filtering is enabled by default). In all other circumstances this parameter is ignored. |\n| `order`<br><br>enum{chronological, reverse\\_chronological} | Preferred ordering of the comments. Accepts chronological (oldest first) and reverse chronological (newest first). If the comments can be ranked, then the order will always be ranked regardless of this modifier. The best practice for querying comments on a Live video is to continually poll for comments in the reversechronological ordering mode. |\n| `since`<br><br>datetime | Lower bound of the time range to consider |\n",
+        "line_start": 79,
+        "line_end": 86
+    },
+    "44": {
+        "content": "Source document: ../data/platform-docs-versions/Facebook_Graph-API/Live video Endpoint.md\nParagraph location: \n\tLive Video Comments\n\tReading\n\tFields\n\nContent: \n### Fields  \nReading from this edge will return a JSON formatted result:  \n{\n\"`data`\": \\[\\],\n\"`paging`\": {},\n\"`summary`\": {}\n}  \n#### `data`  \nA list of [Comment](https://developers.facebook.com/docs/graph-api/reference/comment/) nodes.  \n#### `paging`  \nFor more details about pagination, see the [Graph API guide](https://developers.facebook.com/docs/graph-api/using-graph-api/#paging).  \n#### `summary`  \nAggregated information about the edge, such as counts. Specify the fields to fetch in the summary param (like `summary=order`).  \n| Field | Description |\n| --- | --- |\n| `order`<br><br>enum | Order of returned comments |\n| `total_count`<br><br>unsigned int32 | Total number of people who commented |\n| `can_comment`<br><br>bool | Can the viewer comment |\n",
+        "line_start": 85,
+        "line_end": 103
+    },
+    "45": {
+        "content": "Source document: ../data/platform-docs-versions/Facebook_Graph-API/Live video Endpoint.md\nParagraph location: \n\tLive Video Comments\n\tReading\n\tError Codes\n\nContent: \n### Error Codes  \n| Error | Description |\n| --- | --- |\n| 100 | Invalid parameter |\n| 200 | Permissions error |\n",
+        "line_start": 128,
+        "line_end": 133
+    },
+    "46": {
+        "content": "Source document: ../data/platform-docs-versions/Facebook_Graph-API/Live video Endpoint.md\nParagraph location: \n\tLive Video Comments\n\tCreating\n\nContent: \n## Creating  \nYou can't perform this operation on this endpoint.\n",
+        "line_start": 136,
+        "line_end": 138
+    },
+    "47": {
+        "content": "Source document: ../data/platform-docs-versions/Facebook_Graph-API/Live video Endpoint.md\nParagraph location: \n\tLive Video Comments\n\tUpdating\n\nContent: \n## Updating  \nYou can't perform this operation on this endpoint.\n",
+        "line_start": 457,
+        "line_end": 459
+    },
+    "48": {
+        "content": "Source document: ../data/platform-docs-versions/Facebook_Graph-API/Live video Endpoint.md\nParagraph location: \n\tLive Video Comments\n\tDeleting\n\nContent: \n## Deleting  \nYou can't perform this operation on this endpoint.  \n![](https://www.facebook.com/tr?id=675141479195042&ev=PageView&noscript=1)  \n![](https://www.facebook.com/tr?id=574561515946252&ev=PageView&noscript=1)  \n![](https://www.facebook.com/tr?id=1754628768090156&ev=PageView&noscript=1)\n",
+        "line_start": 533,
+        "line_end": 538
+    },
+    "49": {
+        "content": "Source document: ../data/platform-docs-versions/Facebook_Graph-API/Live video Endpoint.md\nParagraph location: \n\tResource URL: https://developers.facebook.com/docs/graph-api/reference/live-video/crossposted_broadcasts/\n\nContent: \n# Resource URL: https://developers.facebook.com/docs/graph-api/reference/live-video/crossposted_broadcasts/\n",
+        "line_start": 814,
+        "line_end": 815
+    },
+    "50": {
+        "content": "Source document: ../data/platform-docs-versions/Facebook_Graph-API/Live video Endpoint.md\nParagraph location: \n\tLive Video Crossposted Broadcasts\n\tReading\n\nContent: \n# Live Video Crossposted Broadcasts  \n## Reading  \nLive videos which have been crossposted from this live video. This field is only available on the original live video.\n",
+        "line_start": 815,
+        "line_end": 818
+    },
+    "51": {
+        "content": "Source document: ../data/platform-docs-versions/Facebook_Graph-API/Live video Endpoint.md\nParagraph location: \n\tLive Video Crossposted Broadcasts\n\tReading\n\tExample\n\nContent: \n### Example  \nHTTPPHP SDKJavaScript SDKAndroid SDKiOS SDK[Graph API Explorer](https://developers.facebook.com/tools/explorer/?method=GET&path=%7Blive-video-id%7D%2Fcrossposted_broadcasts&version=v19.0)  \nGET /v19.0/{live-video-id}/crossposted_broadcasts HTTP/1.1\nHost: graph.facebook.com  \n/* PHP SDK v5.0.0 */\n/* make the API call */\ntry {\n// Returns a `Facebook\\FacebookResponse` object\n$response = $fb->get(\n'/{live-video-id}/crossposted_broadcasts',\n'{access-token}'\n);\n} catch(Facebook\\Exceptions\\FacebookResponseException $e) {\necho 'Graph returned an error: ' . $e->getMessage();\nexit;\n} catch(Facebook\\Exceptions\\FacebookSDKException $e) {\necho 'Facebook SDK returned an error: ' . $e->getMessage();\nexit;\n}\n$graphNode = $response->getGraphNode();\n/* handle the result */  \n/* make the API call */\nFB.api(\n\"/{live-video-id}/crossposted_broadcasts\",\nfunction (response) {\nif (response && !response.error) {\n/* handle the result */\n}\n}\n);  \n/* make the API call */\nnew GraphRequest(\nAccessToken.getCurrentAccessToken(),\n\"/{live-video-id}/crossposted_broadcasts\",\nnull,\nHttpMethod.GET,\nnew GraphRequest.Callback() {\npublic void onCompleted(GraphResponse response) {\n/* handle the result */\n}\n}\n).executeAsync();  \n/* make the API call */\nFBSDKGraphRequest *request = [[FBSDKGraphRequest alloc]\ninitWithGraphPath:@\"/{live-video-id}/crossposted_broadcasts\"\nparameters:params\nHTTPMethod:@\"GET\"];\n[request startWithCompletionHandler:^(FBSDKGraphRequestConnection *connection,\nid result,\nNSError *error) {\n// Handle the result\n}];  \nIf you want to learn how to use the Graph API, read our [Using Graph API guide](https://developers.facebook.com/docs/graph-api/using-graph-api/).\n",
+        "line_start": 18,
+        "line_end": 71
+    },
+    "52": {
+        "content": "Source document: ../data/platform-docs-versions/Facebook_Graph-API/Live video Endpoint.md\nParagraph location: \n\tLive Video Crossposted Broadcasts\n\tReading\n\tParameters\n\nContent: \n### Parameters  \nThis endpoint doesn't have any parameters.\n",
+        "line_start": 79,
+        "line_end": 81
+    },
+    "53": {
+        "content": "Source document: ../data/platform-docs-versions/Facebook_Graph-API/Live video Endpoint.md\nParagraph location: \n\tLive Video Crossposted Broadcasts\n\tReading\n\tFields\n\nContent: \n### Fields  \nReading from this edge will return a JSON formatted result:  \n{\n\"`data`\": \\[\\],\n\"`paging`\": {}\n}  \n#### `data`  \nA list of [LiveVideo](https://developers.facebook.com/docs/graph-api/reference/live-video/) nodes.  \n#### `paging`  \nFor more details about pagination, see the [Graph API guide](https://developers.facebook.com/docs/graph-api/using-graph-api/#paging).\n",
+        "line_start": 85,
+        "line_end": 95
+    },
+    "54": {
+        "content": "Source document: ../data/platform-docs-versions/Facebook_Graph-API/Live video Endpoint.md\nParagraph location: \n\tLive Video Crossposted Broadcasts\n\tReading\n\tError Codes\n\nContent: \n### Error Codes  \n| Error | Description |\n| --- | --- |\n| 100 | Invalid parameter |\n",
+        "line_start": 128,
+        "line_end": 132
+    },
+    "55": {
+        "content": "Source document: ../data/platform-docs-versions/Facebook_Graph-API/Live video Endpoint.md\nParagraph location: \n\tLive Video Crossposted Broadcasts\n\tCreating\n\nContent: \n## Creating  \nYou can't perform this operation on this endpoint.\n",
+        "line_start": 136,
+        "line_end": 138
+    },
+    "56": {
+        "content": "Source document: ../data/platform-docs-versions/Facebook_Graph-API/Live video Endpoint.md\nParagraph location: \n\tLive Video Crossposted Broadcasts\n\tUpdating\n\nContent: \n## Updating  \nYou can't perform this operation on this endpoint.\n",
+        "line_start": 457,
+        "line_end": 459
+    },
+    "57": {
+        "content": "Source document: ../data/platform-docs-versions/Facebook_Graph-API/Live video Endpoint.md\nParagraph location: \n\tLive Video Crossposted Broadcasts\n\tDeleting\n\nContent: \n## Deleting  \nYou can't perform this operation on this endpoint.  \n![](https://www.facebook.com/tr?id=675141479195042&ev=PageView&noscript=1)  \n![](https://www.facebook.com/tr?id=574561515946252&ev=PageView&noscript=1)  \n![](https://www.facebook.com/tr?id=1754628768090156&ev=PageView&noscript=1)\n",
+        "line_start": 533,
+        "line_end": 538
+    },
+    "58": {
+        "content": "Source document: ../data/platform-docs-versions/Facebook_Graph-API/Live video Endpoint.md\nParagraph location: \n\tResource URL: https://developers.facebook.com/docs/graph-api/reference/live-video/errors/\n\nContent: \n# Resource URL: https://developers.facebook.com/docs/graph-api/reference/live-video/errors/\n",
+        "line_start": 927,
+        "line_end": 928
+    },
+    "59": {
+        "content": "Source document: ../data/platform-docs-versions/Facebook_Graph-API/Live video Endpoint.md\nParagraph location: \n\tLive Video Errors\n\tReading\n\tExample\n\nContent: \n### Example  \nHTTPPHP SDKJavaScript SDKAndroid SDKiOS SDK[Graph API Explorer](https://developers.facebook.com/tools/explorer/?method=GET&path=%7Blive-video-id%7D%2Ferrors&version=v19.0)  \nGET /v19.0/{live-video-id}/errors HTTP/1.1\nHost: graph.facebook.com  \n/* PHP SDK v5.0.0 */\n/* make the API call */\ntry {\n// Returns a `Facebook\\FacebookResponse` object\n$response = $fb->get(\n'/{live-video-id}/errors',\n'{access-token}'\n);\n} catch(Facebook\\Exceptions\\FacebookResponseException $e) {\necho 'Graph returned an error: ' . $e->getMessage();\nexit;\n} catch(Facebook\\Exceptions\\FacebookSDKException $e) {\necho 'Facebook SDK returned an error: ' . $e->getMessage();\nexit;\n}\n$graphNode = $response->getGraphNode();\n/* handle the result */  \n/* make the API call */\nFB.api(\n\"/{live-video-id}/errors\",\nfunction (response) {\nif (response && !response.error) {\n/* handle the result */\n}\n}\n);  \n/* make the API call */\nnew GraphRequest(\nAccessToken.getCurrentAccessToken(),\n\"/{live-video-id}/errors\",\nnull,\nHttpMethod.GET,\nnew GraphRequest.Callback() {\npublic void onCompleted(GraphResponse response) {\n/* handle the result */\n}\n}\n).executeAsync();  \n/* make the API call */\nFBSDKGraphRequest *request = [[FBSDKGraphRequest alloc]\ninitWithGraphPath:@\"/{live-video-id}/errors\"\nparameters:params\nHTTPMethod:@\"GET\"];\n[request startWithCompletionHandler:^(FBSDKGraphRequestConnection *connection,\nid result,\nNSError *error) {\n// Handle the result\n}];  \nIf you want to learn how to use the Graph API, read our [Using Graph API guide](https://developers.facebook.com/docs/graph-api/using-graph-api/).\n",
+        "line_start": 18,
+        "line_end": 71
+    },
+    "60": {
+        "content": "Source document: ../data/platform-docs-versions/Facebook_Graph-API/Live video Endpoint.md\nParagraph location: \n\tLive Video Errors\n\tReading\n\tParameters\n\nContent: \n### Parameters  \nThis endpoint doesn't have any parameters.\n",
+        "line_start": 79,
+        "line_end": 81
+    },
+    "61": {
+        "content": "Source document: ../data/platform-docs-versions/Facebook_Graph-API/Live video Endpoint.md\nParagraph location: \n\tLive Video Errors\n\tReading\n\tFields\n\nContent: \n### Fields  \nReading from this edge will return a JSON formatted result:  \n{\n\"`data`\": \\[\\],\n\"`paging`\": {}\n}  \n#### `data`  \nA list of LiveVideoError nodes.  \n#### `paging`  \nFor more details about pagination, see the [Graph API guide](https://developers.facebook.com/docs/graph-api/using-graph-api/#paging).\n",
+        "line_start": 85,
+        "line_end": 95
+    },
+    "62": {
+        "content": "Source document: ../data/platform-docs-versions/Facebook_Graph-API/Live video Endpoint.md\nParagraph location: \n\tLive Video Errors\n\tReading\n\tError Codes\n\nContent: \n### Error Codes  \n| Error | Description |\n| --- | --- |\n| 100 | Invalid parameter |\n",
+        "line_start": 128,
+        "line_end": 132
+    },
+    "63": {
+        "content": "Source document: ../data/platform-docs-versions/Facebook_Graph-API/Live video Endpoint.md\nParagraph location: \n\tLive Video Errors\n\tCreating\n\nContent: \n## Creating  \nYou can't perform this operation on this endpoint.\n",
+        "line_start": 136,
+        "line_end": 138
+    },
+    "64": {
+        "content": "Source document: ../data/platform-docs-versions/Facebook_Graph-API/Live video Endpoint.md\nParagraph location: \n\tLive Video Errors\n\tUpdating\n\nContent: \n## Updating  \nYou can't perform this operation on this endpoint.\n",
+        "line_start": 457,
+        "line_end": 459
+    },
+    "65": {
+        "content": "Source document: ../data/platform-docs-versions/Facebook_Graph-API/Live video Endpoint.md\nParagraph location: \n\tLive Video Errors\n\tDeleting\n\nContent: \n## Deleting  \nYou can't perform this operation on this endpoint.  \n![](https://www.facebook.com/tr?id=675141479195042&ev=PageView&noscript=1)  \n![](https://www.facebook.com/tr?id=574561515946252&ev=PageView&noscript=1)  \n![](https://www.facebook.com/tr?id=1754628768090156&ev=PageView&noscript=1)\n",
+        "line_start": 533,
+        "line_end": 538
+    },
+    "66": {
+        "content": "Source document: ../data/platform-docs-versions/Facebook_Graph-API/Live video Endpoint.md\nParagraph location: \n\tResource URL: https://developers.facebook.com/docs/graph-api/reference/live-video/input_streams/\n\nContent: \n# Resource URL: https://developers.facebook.com/docs/graph-api/reference/live-video/input_streams/\n",
+        "line_start": 1040,
+        "line_end": 1041
+    },
+    "67": {
+        "content": "Source document: ../data/platform-docs-versions/Facebook_Graph-API/Live video Endpoint.md\nParagraph location: \n\tLive Video Input Streams\n\tReading\n\nContent: \n# Live Video Input Streams  \n## Reading  \nYou can't perform this operation on this endpoint.\n",
+        "line_start": 1041,
+        "line_end": 1044
+    },
+    "68": {
+        "content": "Source document: ../data/platform-docs-versions/Facebook_Graph-API/Live video Endpoint.md\nParagraph location: \n\tLive Video Input Streams\n\tCreating\n\nContent: \n## Creating  \nYou can make a POST request to `input_streams` edge from the following paths:  \n* [`/{live_video_id}/input_streams`](https://developers.facebook.com/docs/graph-api/reference/live-video/input_streams/)  \nWhen posting to this edge, a\u00a0[LiveVideoInputStream](https://developers.facebook.com/docs/graph-api/reference/live-video-input-stream/) will be created.\n",
+        "line_start": 136,
+        "line_end": 140
+    },
+    "69": {
+        "content": "Source document: ../data/platform-docs-versions/Facebook_Graph-API/Live video Endpoint.md\nParagraph location: \n\tLive Video Input Streams\n\tCreating\n\tParameters\n\nContent: \n### Parameters  \nThis endpoint doesn't have any parameters.\n",
+        "line_start": 79,
+        "line_end": 81
+    },
+    "70": {
+        "content": "Source document: ../data/platform-docs-versions/Facebook_Graph-API/Live video Endpoint.md\nParagraph location: \n\tLive Video Input Streams\n\tCreating\n\tReturn Type\n\nContent: \n### Return Type  \nThis endpoint supports [read-after-write](https://developers.facebook.com/docs/graph-api/advanced/#read-after-write) and will read the node represented by `id` in the return type.  \nStruct {  \n`id`: numeric string,  \n}\n",
+        "line_start": 168,
+        "line_end": 173
+    },
+    "71": {
+        "content": "Source document: ../data/platform-docs-versions/Facebook_Graph-API/Live video Endpoint.md\nParagraph location: \n\tLive Video Input Streams\n\tCreating\n\tError Codes\n\nContent: \n### Error Codes  \n| Error | Description |\n| --- | --- |\n| 200 | Permissions error |\n",
+        "line_start": 128,
+        "line_end": 132
+    },
+    "72": {
+        "content": "Source document: ../data/platform-docs-versions/Facebook_Graph-API/Live video Endpoint.md\nParagraph location: \n\tLive Video Input Streams\n\tUpdating\n\nContent: \n## Updating  \nYou can't perform this operation on this endpoint.\n",
+        "line_start": 457,
+        "line_end": 459
+    },
+    "73": {
+        "content": "Source document: ../data/platform-docs-versions/Facebook_Graph-API/Live video Endpoint.md\nParagraph location: \n\tLive Video Input Streams\n\tDeleting\n\nContent: \n## Deleting  \nYou can't perform this operation on this endpoint.  \n![](https://www.facebook.com/tr?id=675141479195042&ev=PageView&noscript=1)  \n![](https://www.facebook.com/tr?id=574561515946252&ev=PageView&noscript=1)  \n![](https://www.facebook.com/tr?id=1754628768090156&ev=PageView&noscript=1)\n",
+        "line_start": 533,
+        "line_end": 538
+    },
+    "74": {
+        "content": "Source document: ../data/platform-docs-versions/Facebook_Graph-API/Live video Endpoint.md\nParagraph location: \n\tResource URL: https://developers.facebook.com/docs/graph-api/reference/live-video/polls/\n\nContent: \n# Resource URL: https://developers.facebook.com/docs/graph-api/reference/live-video/polls/\n",
+        "line_start": 1089,
+        "line_end": 1090
+    },
+    "75": {
+        "content": "Source document: ../data/platform-docs-versions/Facebook_Graph-API/Live video Endpoint.md\nParagraph location: \n\tLive Video Polls\n\nContent: \n# Live Video Polls  \nRepresents a collection of [VideoPolls](https://developers.facebook.com/docs/graph-api/reference/video-poll) on a [LiveVideo](https://developers.facebook.com/docs/graph-api/reference/live-video).\n",
+        "line_start": 1090,
+        "line_end": 1092
+    },
+    "76": {
+        "content": "Source document: ../data/platform-docs-versions/Facebook_Graph-API/Live video Endpoint.md\nParagraph location: \n\tLive Video Polls\n\tReading\n\nContent: \n## Reading  \nGets a list of [VideoPolls](https://developers.facebook.com/docs/graph-api/reference/video-poll) on a [LiveVideo](https://developers.facebook.com/docs/graph-api/reference/live-video).\n",
+        "line_start": 5,
+        "line_end": 7
+    },
+    "77": {
+        "content": "Source document: ../data/platform-docs-versions/Facebook_Graph-API/Live video Endpoint.md\nParagraph location: \n\tLive Video Polls\n\tReading\n\tExample\n\nContent: \n### Example  \nHTTPPHP SDKJavaScript SDKAndroid SDKiOS SDK[Graph API Explorer](https://developers.facebook.com/tools/explorer/?method=GET&path=%7Blive-video-id%7D%2Fpolls&version=v19.0)  \nGET /v19.0/{live-video-id}/polls HTTP/1.1\nHost: graph.facebook.com  \n/* PHP SDK v5.0.0 */\n/* make the API call */\ntry {\n// Returns a `Facebook\\FacebookResponse` object\n$response = $fb->get(\n'/{live-video-id}/polls',\n'{access-token}'\n);\n} catch(Facebook\\Exceptions\\FacebookResponseException $e) {\necho 'Graph returned an error: ' . $e->getMessage();\nexit;\n} catch(Facebook\\Exceptions\\FacebookSDKException $e) {\necho 'Facebook SDK returned an error: ' . $e->getMessage();\nexit;\n}\n$graphNode = $response->getGraphNode();\n/* handle the result */  \n/* make the API call */\nFB.api(\n\"/{live-video-id}/polls\",\nfunction (response) {\nif (response && !response.error) {\n/* handle the result */\n}\n}\n);  \n/* make the API call */\nnew GraphRequest(\nAccessToken.getCurrentAccessToken(),\n\"/{live-video-id}/polls\",\nnull,\nHttpMethod.GET,\nnew GraphRequest.Callback() {\npublic void onCompleted(GraphResponse response) {\n/* handle the result */\n}\n}\n).executeAsync();  \n/* make the API call */\nFBSDKGraphRequest *request = [[FBSDKGraphRequest alloc]\ninitWithGraphPath:@\"/{live-video-id}/polls\"\nparameters:params\nHTTPMethod:@\"GET\"];\n[request startWithCompletionHandler:^(FBSDKGraphRequestConnection *connection,\nid result,\nNSError *error) {\n// Handle the result\n}];  \nIf you want to learn how to use the Graph API, read our [Using Graph API guide](https://developers.facebook.com/docs/graph-api/using-graph-api/).\n",
+        "line_start": 18,
+        "line_end": 71
+    },
+    "78": {
+        "content": "Source document: ../data/platform-docs-versions/Facebook_Graph-API/Live video Endpoint.md\nParagraph location: \n\tLive Video Polls\n\tReading\n\tParameters\n\nContent: \n### Parameters  \nThis endpoint doesn't have any parameters.\n",
+        "line_start": 79,
+        "line_end": 81
+    },
+    "79": {
+        "content": "Source document: ../data/platform-docs-versions/Facebook_Graph-API/Live video Endpoint.md\nParagraph location: \n\tLive Video Polls\n\tReading\n\tFields\n\nContent: \n### Fields  \nReading from this edge will return a JSON formatted result:  \n{\n\"`data`\": \\[\\],\n\"`paging`\": {}\n}  \n#### `data`  \nA list of [VideoPoll](https://developers.facebook.com/docs/graph-api/reference/video-poll/) nodes.  \n#### `paging`  \nFor more details about pagination, see the [Graph API guide](https://developers.facebook.com/docs/graph-api/using-graph-api/#paging).\n",
+        "line_start": 85,
+        "line_end": 95
+    },
+    "80": {
+        "content": "Source document: ../data/platform-docs-versions/Facebook_Graph-API/Live video Endpoint.md\nParagraph location: \n\tLive Video Polls\n\tReading\n\tError Codes\n\nContent: \n### Error Codes  \n| Error | Description |\n| --- | --- |\n| 100 | Invalid parameter |\n",
+        "line_start": 128,
+        "line_end": 132
+    },
+    "81": {
+        "content": "Source document: ../data/platform-docs-versions/Facebook_Graph-API/Live video Endpoint.md\nParagraph location: \n\tLive Video Polls\n\tCreating\n\nContent: \n## Creating  \nYou can make a POST request to `polls` edge from the following paths:  \n* [`/{live_video_id}/polls`](https://developers.facebook.com/docs/graph-api/reference/live-video/polls/)  \nWhen posting to this edge, a\u00a0[VideoPoll](https://developers.facebook.com/docs/graph-api/reference/video-poll/) will be created.\n",
+        "line_start": 136,
+        "line_end": 140
+    },
+    "82": {
+        "content": "Source document: ../data/platform-docs-versions/Facebook_Graph-API/Live video Endpoint.md\nParagraph location: \n\tLive Video Polls\n\tCreating\n\tParameters\n\nContent: \n### Parameters  \n| Parameter | Description |\n| --- | --- |\n| `correct_option`<br><br>int64 | Number of the correct option (in order, starting from 1) |\n| `options`<br><br>array<string> | Text options for users to select in order<br><br>Required |\n| `question`<br><br>string | Question text<br><br>Required |\n| `show_results`<br><br>boolean | True to show the results after voting, otherwise false |\n",
+        "line_start": 79,
+        "line_end": 86
+    },
+    "83": {
+        "content": "Source document: ../data/platform-docs-versions/Facebook_Graph-API/Live video Endpoint.md\nParagraph location: \n\tLive Video Polls\n\tCreating\n\tReturn Type\n\nContent: \n### Return Type  \nThis endpoint supports [read-after-write](https://developers.facebook.com/docs/graph-api/advanced/#read-after-write) and will read the node represented by `id` in the return type.  \nStruct {  \n`id`: numeric string,  \n`option_ids`: List \\[  \nnumeric string  \n\\],  \n}\n",
+        "line_start": 168,
+        "line_end": 176
+    },
+    "84": {
+        "content": "Source document: ../data/platform-docs-versions/Facebook_Graph-API/Live video Endpoint.md\nParagraph location: \n\tLive Video Polls\n\tCreating\n\tError Codes\n\nContent: \n### Error Codes  \n| Error | Description |\n| --- | --- |\n| 200 | Permissions error |\n| 100 | Invalid parameter |\n",
+        "line_start": 128,
+        "line_end": 133
+    },
+    "85": {
+        "content": "Source document: ../data/platform-docs-versions/Facebook_Graph-API/Live video Endpoint.md\nParagraph location: \n\tLive Video Polls\n\tUpdating\n\nContent: \n## Updating  \nYou can't perform this operation on this endpoint.\n",
+        "line_start": 457,
+        "line_end": 459
+    },
+    "86": {
+        "content": "Source document: ../data/platform-docs-versions/Facebook_Graph-API/Live video Endpoint.md\nParagraph location: \n\tLive Video Polls\n\tDeleting\n\nContent: \n## Deleting  \nYou can't perform this operation on this endpoint.  \n![](https://www.facebook.com/tr?id=675141479195042&ev=PageView&noscript=1)  \n![](https://www.facebook.com/tr?id=574561515946252&ev=PageView&noscript=1)  \n![](https://www.facebook.com/tr?id=1754628768090156&ev=PageView&noscript=1)\n",
+        "line_start": 533,
+        "line_end": 538
+    },
+    "87": {
+        "content": "Source document: ../data/platform-docs-versions/Facebook_Graph-API/Live video Endpoint.md\nParagraph location: \n\tResource URL: https://developers.facebook.com/docs/graph-api/reference/live-video/reactions/\n\nContent: \n# Resource URL: https://developers.facebook.com/docs/graph-api/reference/live-video/reactions/\n",
+        "line_start": 1240,
+        "line_end": 1241
+    },
+    "88": {
+        "content": "Source document: ../data/platform-docs-versions/Facebook_Graph-API/Live video Endpoint.md\nParagraph location: \n\tLive Video Reactions\n\tReading\n\nContent: \n# Live Video Reactions  \n## Reading  \nReactions for this object\n",
+        "line_start": 1241,
+        "line_end": 1244
+    },
+    "89": {
+        "content": "Source document: ../data/platform-docs-versions/Facebook_Graph-API/Live video Endpoint.md\nParagraph location: \n\tLive Video Reactions\n\tReading\n\tExample\n\nContent: \n### Example  \nHTTPPHP SDKJavaScript SDKAndroid SDKiOS SDK[Graph API Explorer](https://developers.facebook.com/tools/explorer/?method=GET&path=%7Blive-video-id%7D%2Freactions&version=v19.0)  \nGET /v19.0/{live-video-id}/reactions HTTP/1.1\nHost: graph.facebook.com  \n/* PHP SDK v5.0.0 */\n/* make the API call */\ntry {\n// Returns a `Facebook\\FacebookResponse` object\n$response = $fb->get(\n'/{live-video-id}/reactions',\n'{access-token}'\n);\n} catch(Facebook\\Exceptions\\FacebookResponseException $e) {\necho 'Graph returned an error: ' . $e->getMessage();\nexit;\n} catch(Facebook\\Exceptions\\FacebookSDKException $e) {\necho 'Facebook SDK returned an error: ' . $e->getMessage();\nexit;\n}\n$graphNode = $response->getGraphNode();\n/* handle the result */  \n/* make the API call */\nFB.api(\n\"/{live-video-id}/reactions\",\nfunction (response) {\nif (response && !response.error) {\n/* handle the result */\n}\n}\n);  \n/* make the API call */\nnew GraphRequest(\nAccessToken.getCurrentAccessToken(),\n\"/{live-video-id}/reactions\",\nnull,\nHttpMethod.GET,\nnew GraphRequest.Callback() {\npublic void onCompleted(GraphResponse response) {\n/* handle the result */\n}\n}\n).executeAsync();  \n/* make the API call */\nFBSDKGraphRequest *request = [[FBSDKGraphRequest alloc]\ninitWithGraphPath:@\"/{live-video-id}/reactions\"\nparameters:params\nHTTPMethod:@\"GET\"];\n[request startWithCompletionHandler:^(FBSDKGraphRequestConnection *connection,\nid result,\nNSError *error) {\n// Handle the result\n}];  \nIf you want to learn how to use the Graph API, read our [Using Graph API guide](https://developers.facebook.com/docs/graph-api/using-graph-api/).\n",
+        "line_start": 18,
+        "line_end": 71
+    },
+    "90": {
+        "content": "Source document: ../data/platform-docs-versions/Facebook_Graph-API/Live video Endpoint.md\nParagraph location: \n\tLive Video Reactions\n\tReading\n\tParameters\n\nContent: \n### Parameters  \n| Parameter | Description |\n| --- | --- |\n| `type`<br><br>enum {NONE, LIKE, LOVE, WOW, HAHA, SAD, ANGRY, THANKFUL, PRIDE, CARE, FIRE, HUNDRED} | Reaction type |\n",
+        "line_start": 79,
+        "line_end": 83
+    },
+    "91": {
+        "content": "Source document: ../data/platform-docs-versions/Facebook_Graph-API/Live video Endpoint.md\nParagraph location: \n\tLive Video Reactions\n\tReading\n\tFields\n\nContent: \n### Fields  \nReading from this edge will return a JSON formatted result:  \n{\n\"`data`\": \\[\\],\n\"`paging`\": {},\n\"`summary`\": {}\n}  \n#### `data`  \nA list of [Profile](https://developers.facebook.com/docs/graph-api/reference/profile/) nodes.  \nThe following fields will be added to each node that is returned:  \n| Field | Description |\n| --- | --- |\n| `type`<br><br>enum {NONE, LIKE, LOVE, WOW, HAHA, SAD, ANGRY, THANKFUL, PRIDE, CARE, FIRE, HUNDRED} | The reaction type<br><br>[Default](https://developers.facebook.com/docs/graph-api/using-graph-api/#fields) |  \n#### `paging`  \nFor more details about pagination, see the [Graph API guide](https://developers.facebook.com/docs/graph-api/using-graph-api/#paging).  \n#### `summary`  \nAggregated information about the edge, such as counts. Specify the fields to fetch in the summary param (like `summary=total_count`).  \n| Field | Description |\n| --- | --- |\n| `total_count`<br><br>unsigned int32 | Total number of reactions |\n| `viewer_reaction`<br><br>enum {NONE, LIKE, LOVE, WOW, HAHA, SAD, ANGRY, THANKFUL, PRIDE, CARE, FIRE, HUNDRED} | The viewer's reaction |\n",
+        "line_start": 85,
+        "line_end": 106
+    },
+    "92": {
+        "content": "Source document: ../data/platform-docs-versions/Facebook_Graph-API/Live video Endpoint.md\nParagraph location: \n\tLive Video Reactions\n\tReading\n\tError Codes\n\nContent: \n### Error Codes  \n| Error | Description |\n| --- | --- |\n| 100 | Invalid parameter |\n| 200 | Permissions error |\n",
+        "line_start": 128,
+        "line_end": 133
+    },
+    "93": {
+        "content": "Source document: ../data/platform-docs-versions/Facebook_Graph-API/Live video Endpoint.md\nParagraph location: \n\tLive Video Reactions\n\tCreating\n\nContent: \n## Creating  \nYou can't perform this operation on this endpoint.\n",
+        "line_start": 136,
+        "line_end": 138
+    },
+    "94": {
+        "content": "Source document: ../data/platform-docs-versions/Facebook_Graph-API/Live video Endpoint.md\nParagraph location: \n\tLive Video Reactions\n\tUpdating\n\nContent: \n## Updating  \nYou can't perform this operation on this endpoint.\n",
+        "line_start": 457,
+        "line_end": 459
+    },
+    "95": {
+        "content": "Source document: ../data/platform-docs-versions/Facebook_Graph-API/Live video Endpoint.md\nParagraph location: \n\tLive Video Reactions\n\tDeleting\n\nContent: \n## Deleting  \nYou can't perform this operation on this endpoint.  \n![](https://www.facebook.com/tr?id=675141479195042&ev=PageView&noscript=1)  \n![](https://www.facebook.com/tr?id=574561515946252&ev=PageView&noscript=1)  \n![](https://www.facebook.com/tr?id=1754628768090156&ev=PageView&noscript=1)\n",
+        "line_start": 533,
+        "line_end": 538
+    }
+}

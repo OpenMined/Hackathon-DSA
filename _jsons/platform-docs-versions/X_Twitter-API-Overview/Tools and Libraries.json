@@ -1,0 +1,297 @@
+{
+    "0": {
+        "content": "Source document: ../data/platform-docs-versions/X_Twitter-API-Overview/Tools and Libraries.md\nParagraph location: \n\tResource URL: https://developer.twitter.com/en/docs/twitter-api/tools-and-libraries/v2\n\nContent: \n# Resource URL: https://developer.twitter.com/en/docs/twitter-api/tools-and-libraries/v2\nv2 tools and libraries\n",
+        "line_start": 0,
+        "line_end": 2
+    },
+    "1": {
+        "content": "Source document: ../data/platform-docs-versions/X_Twitter-API-Overview/Tools and Libraries.md\nParagraph location: \n\tResource URL: https://developer.twitter.com/en/docs/twitter-api/tools-and-libraries/v2\n\tTwitter-built v2 tools and libraries\n\nContent: \n## Twitter-built v2 tools and libraries  \nTwitter maintains a set of official libraries and SDKs, listed here.  \nWe also include a list of [community-supported libraries](#community-libraries) lower on this page.  \n[Explore TwitterDev code on GitHub](https://github.com/twitterdev)  \n[Find Twitter samples on Glitch](https://glitch.com/@twitter)  \n[Find Twitter samples on Replit](https://replit.com/@twitter)\n",
+        "line_start": 3,
+        "line_end": 9
+    },
+    "2": {
+        "content": "Source document: ../data/platform-docs-versions/X_Twitter-API-Overview/Tools and Libraries.md\nParagraph location: \n\tResource URL: https://developer.twitter.com/en/docs/twitter-api/tools-and-libraries/v2\n\tTwitter-built v2 tools and libraries\n\tv2 SDKs and sample code\n\nContent: \n### v2 SDKs and sample code  \n* **[Twitter API Java SDK](https://github.com/twitterdev/twitter-api-java-sdk)** - Official Java SDK for the Twitter API v2\n* **[Twitter API TypeScript/JavaScript SDK](https://github.com/twitterdev/twitter-api-typescript-sdk)** - Official TS/JS SDK for the Twitter API v2  \n* [Twitter API v2 sample code](https://github.com/twitterdev/Twitter-API-v2-sample-code)\u00a0- Sample code in Javascript, Ruby, Python, and Java\n",
+        "line_start": 15,
+        "line_end": 19
+    },
+    "3": {
+        "content": "Source document: ../data/platform-docs-versions/X_Twitter-API-Overview/Tools and Libraries.md\nParagraph location: \n\tResource URL: https://developer.twitter.com/en/docs/twitter-api/tools-and-libraries/v2\n\tTwitter-built v2 tools and libraries\n\tv2 API specification\n\nContent: \n### v2 API specification  \n* [**OpenAPI specification**](https://api.twitter.com/2/openapi.json)\u00a0- Use this to exercise the\u00a0API with tools like\u00a0[Postman](https://www.postman.com/)\u00a0or\u00a0[Insomnia](https://insomnia.rest/products/core).\n",
+        "line_start": 22,
+        "line_end": 24
+    },
+    "4": {
+        "content": "Source document: ../data/platform-docs-versions/X_Twitter-API-Overview/Tools and Libraries.md\nParagraph location: \n\tResource URL: https://developer.twitter.com/en/docs/twitter-api/tools-and-libraries/v2\n\tTwitter-built v2 tools and libraries\n\tEndpoint-specific scripts and libraries\n\nContent: \n### Endpoint-specific scripts and libraries  \n* [**search-tweets Python**](https://github.com/twitterdev/search-tweets-python) - Python library for the v2 and enterprise search endpoints\n* [**search-tweets Ruby**](https://github.com/twitterdev/search-tweets-ruby) - Ruby library for the v2 search endpoints\n* **[compliant client](https://github.com/twitterdev/compliant-client)** \\- A set of Python scripts for the v2 Tweet and User batch compliance endpoints\n* **[Autohook](https://github.com/twitterdev/autohook)** \\- JavaScript package to automatically setup and serve webhooks for the enterprise and premium Account Activity API\n",
+        "line_start": 27,
+        "line_end": 32
+    },
+    "5": {
+        "content": "Source document: ../data/platform-docs-versions/X_Twitter-API-Overview/Tools and Libraries.md\nParagraph location: \n\tResource URL: https://developer.twitter.com/en/docs/twitter-api/tools-and-libraries/v2\n\tTwitter-built v2 tools and libraries\n\tIntegrate with Cloud\n\nContent: \n### Integrate with Cloud  \n* **[Twitter API Toolkit for Google Cloud: Recent Search](https://developer.twitter.com/en/docs/tutorials/developer-guide--twitter-api-toolkit-for-google-cloud)** - Process, analyze and visualize Tweets using Google Cloud and Recent Search Twitter API v2\n* **[Twitter API Toolkit for Google Cloud: Filtered Stream](https://developer.twitter.com/en/docs/tutorials/developer-guide--twitter-api-toolkit-for-google-cloud1)**\u00a0- Listen to Tweets in real-time, detect and monitor trends using Google Cloud and the Filtered Stream API v2\n",
+        "line_start": 34,
+        "line_end": 37
+    },
+    "6": {
+        "content": "Source document: ../data/platform-docs-versions/X_Twitter-API-Overview/Tools and Libraries.md\nParagraph location: \n\tResource URL: https://developer.twitter.com/en/docs/twitter-api/tools-and-libraries/v2\n\tTwitter-built v2 tools and libraries\n\tNo-code tools\n\nContent: \n### No-code tools  \n* [**Postman collection**](https://t.co/twitter-api-postman) \\- Explore the API using Postman, the visual REST client.\n* [**V2 request builder**](https://developer.twitter.com/apitools/api) - Generate an API request by selecting an endpoint and parameters.\n* [**V2 search and filtered stream query builder**](https://developer.twitter.com/apitools/query) - Easily craft working search queries or filtered stream rules.\n* [**Migrate v1.1 search query to v2**](https://developer.twitter.com/apitools/migrate/query) - Quickly convert your standard v1.1 search queries into the v2 search query format.\n* [**Download Tweet search results**](https://developer.twitter.com/apitools/downloader) (Academic researchers only) - Download potentially large batches of Tweets into CSV or JSON files.\n",
+        "line_start": 39,
+        "line_end": 45
+    },
+    "7": {
+        "content": "Source document: ../data/platform-docs-versions/X_Twitter-API-Overview/Tools and Libraries.md\nParagraph location: \n\tResource URL: https://developer.twitter.com/en/docs/twitter-api/tools-and-libraries/v2\n\tTwitter-built v2 tools and libraries\n\tv1.1 to v2 migration tools\n\nContent: \n### v1.1 to v2 migration tools  \n* [**Migrate v1.1 search query to v2**](https://developer.twitter.com/apitools/migrate/query) - Convert your standard v1.1 search queries into the v2 search query format.\n* [**Migrate v1.1 data format to v2**](https://developer.twitter.com/content/developer-twitter/en/docs/twitter-api/migrate/data-formats/visual-data-format-migration-tool) - Visually explore the differences between the v1.1 and v2 data formats.\n",
+        "line_start": 47,
+        "line_end": 50
+    },
+    "8": {
+        "content": "Source document: ../data/platform-docs-versions/X_Twitter-API-Overview/Tools and Libraries.md\nParagraph location: \n\tResource URL: https://developer.twitter.com/en/docs/twitter-api/tools-and-libraries/v2\n\tTwitter-built v2 tools and libraries\n\tCommand-line interface (CLI)\n\nContent: \n### Command-line interface (CLI)  \n* [**twurl**](https://github.com/twitter/twurl) - Interact with the Twitter API, including OAuth authentication, via your command-line interface. Requires a Ruby runtime. twurl does not currently work with OAuth 2.0 Authorization Code with PKCE.\n",
+        "line_start": 52,
+        "line_end": 54
+    },
+    "9": {
+        "content": "Source document: ../data/platform-docs-versions/X_Twitter-API-Overview/Tools and Libraries.md\nParagraph location: \n\tResource URL: https://developer.twitter.com/en/docs/twitter-api/tools-and-libraries/v2\n\tTwitter-built v2 tools and libraries\n\tAdditional tools\n\nContent: \n### Additional tools  \n* [**twemoji**](https://twemoji.twitter.com/) - Twitter\u2019s free, open source emoji character set, including a JavaScript library for display.\n* [**twitter-text**](https://github.com/twitter/twitter-text) - A collection of libraries to standardize parsing and tokenization of Tweet text. Available for Java, JavaScript (Node.JS), Objective-C & Ruby. [Learn more about counting characters in Tweets](https://developer-staging.twitter.com/en/docs/counting-characters).  \nLooking for even more code? You can find examples from our team on our\u00a0[GitHub](https://github.com/twitterdev), and on\u00a0[Glitch](https://glitch.com/@twitter).\n",
+        "line_start": 56,
+        "line_end": 60
+    },
+    "10": {
+        "content": "Source document: ../data/platform-docs-versions/X_Twitter-API-Overview/Tools and Libraries.md\nParagraph location: \n\tResource URL: https://developer.twitter.com/en/docs/twitter-api/tools-and-libraries/v2\n\tCommunity tools and libraries for v2\n\nContent: \n## Community tools and libraries for v2  \nThe libraries listed here have been built by members of the developer community. Note that they may be at different stages of API coverage.  \nIf you've built your own Twitter API library or useful tool, please\u00a0[let us know](https://twittercommunity.com/c/libraries-and-sdks/63), and we'll add it to this list to help others to find it. We also have some\u00a0[version badges](https://twbadges.glitch.me/)\u00a0you can borrow, to use in your own README files.  \nLooking for inspiration? You can browse and search in the\u00a0[Twitter](https://github.com/topics/twitter?o=desc&s=updated)\u00a0and\u00a0[twitter-api-v2](https://github.com/topics/twitter-api-v2?o=desc&s=updated)\u00a0topics on GitHub to find helpful code examples from other developers.  \n**Jump to:** [C# / .NET](#csharp), [Dart / Flutter](#dart), [Go](#go), [Java](#java), [JavaScript (Node.JS) / TypeScript](#nodejs), [Kotlin](#kotlin), [PHP](#php), [PowerShell](#powershell), [Python](#python), [R](#r), [Ruby](#ruby), [Rust](#rust), [Swift](#swift)\n",
+        "line_start": 63,
+        "line_end": 68
+    },
+    "11": {
+        "content": "Source document: ../data/platform-docs-versions/X_Twitter-API-Overview/Tools and Libraries.md\nParagraph location: \n\tResource URL: https://developer.twitter.com/en/docs/twitter-api/tools-and-libraries/v2\n\tCommunity tools and libraries for v2\n\tC# / .NET\n\nContent: \n### C# / .NET  \n* [**CoreTweet**](https://github.com/CoreTweet/CoreTweet)\u00a0Yet Another .NET Twitter Library\n* [**LinqToTwitter**](https://github.com/JoeMayo/LinqToTwitter)\u00a0LINQ Provider for the Twitter API\n* [**SocialOpinion**](https://github.com/jamiemaguiredotnet/SocialOpinion-Public)\u00a0APIs written in C# that connect to the Twitter API\n* [**Tweetinvi**](https://github.com/linvi/tweetinvi)\u00a0an intuitive Twitter C# library\n* [**TwitterSharp**](https://github.com/Xwilarg/TwitterSharp)\u00a0C# wrapper around Twitter API V2\n",
+        "line_start": 73,
+        "line_end": 79
+    },
+    "12": {
+        "content": "Source document: ../data/platform-docs-versions/X_Twitter-API-Overview/Tools and Libraries.md\nParagraph location: \n\tResource URL: https://developer.twitter.com/en/docs/twitter-api/tools-and-libraries/v2\n\tCommunity tools and libraries for v2\n\tDart / Flutter\n\nContent: \n### Dart / Flutter  \n* [**twitter-api-v2**](https://github.com/twitter-dart/twitter-api-v2)\u00a0a lightweight wrapper library for Twitter API v2.0 written in Dart and Flutter\n",
+        "line_start": 81,
+        "line_end": 83
+    },
+    "13": {
+        "content": "Source document: ../data/platform-docs-versions/X_Twitter-API-Overview/Tools and Libraries.md\nParagraph location: \n\tResource URL: https://developer.twitter.com/en/docs/twitter-api/tools-and-libraries/v2\n\tCommunity tools and libraries for v2\n\tGo\n\nContent: \n### Go  \n* [**ctw**](https://github.com/0dayfall/ctw)\u00a0a library for the Twitter API\n* [**go-twitter**](https://github.com/g8rswimmer/go-twitter)\u00a0a Go library for Twitter v2 API integration.\n* [**gotwi**](https://github.com/michimani/gotwi)\u00a0a library for the Twitter API v2 in Go\n* [**gotwtr**](https://github.com/sivchari/gotwtr)\u00a0a library for the Twitter API\n* [**twitter-stream**](https://github.com/Fallenstedt/twitter-stream)\u00a0a Go wrapper for Twitter's V2 Filtered Stream API\n* [**twitter**](https://github.com/creachadair/twitter)\u00a0a Go client for the Twitter API\n",
+        "line_start": 85,
+        "line_end": 92
+    },
+    "14": {
+        "content": "Source document: ../data/platform-docs-versions/X_Twitter-API-Overview/Tools and Libraries.md\nParagraph location: \n\tResource URL: https://developer.twitter.com/en/docs/twitter-api/tools-and-libraries/v2\n\tCommunity tools and libraries for v2\n\tJava\n\nContent: \n### Java  \n* [**twittered**](https://github.com/redouane59/twittered)\u00a0Twitter API client for Java developers\n* [**twitter4j-v2**](https://github.com/takke/twitter4j-v2)\u00a0a simple wrapper for Twitter API v2 that is designed to be used with Twitter4J\n* [**twitter-compliance**](https://github.com/UCL/twitter-compliance)\u00a0multi-module Jakarta EE application for syncing compliance events from Twitter\n* [**JTW**](https://github.com/uakihir0/jtw)\u00a0Twitter V2 API client library for Java\n",
+        "line_start": 94,
+        "line_end": 99
+    },
+    "15": {
+        "content": "Source document: ../data/platform-docs-versions/X_Twitter-API-Overview/Tools and Libraries.md\nParagraph location: \n\tResource URL: https://developer.twitter.com/en/docs/twitter-api/tools-and-libraries/v2\n\tCommunity tools and libraries for v2\n\tJavaScript (Node.JS) / TypeScript\n\nContent: \n### JavaScript (Node.JS) / TypeScript  \n* [**node-twitter-api-v2**](https://github.com/PLhery/node-twitter-api-v2)\u00a0strongly typed, full-featured, light, versatile yet powerful Twitter API client for Node.js\n* [**twitter.js**](https://github.com/twitterjs/twitter.js)\u00a0an object-oriented Node.js and TypeScript library for interacting with Twitter API v2\n* [**twitter-types**](https://github.com/twitterjs/twitter-types)\u00a0type definitions for the Twitter API\n* [**twitter-v2**](https://github.com/HunterLarco/twitter-v2)\u00a0An asynchronous client library for the Twitter APIs\n* [**tweet-json-to-html**](https://github.com/wdl/tweet-json-to-html)\u00a0converts Twitter API v2 Tweet JSON objects into HTML format\n",
+        "line_start": 101,
+        "line_end": 107
+    },
+    "16": {
+        "content": "Source document: ../data/platform-docs-versions/X_Twitter-API-Overview/Tools and Libraries.md\nParagraph location: \n\tResource URL: https://developer.twitter.com/en/docs/twitter-api/tools-and-libraries/v2\n\tCommunity tools and libraries for v2\n\tKotlin\n\nContent: \n### Kotlin  \n* [**KTweet**](https://github.com/ChromasIV/KTweet)\u00a0a Kotlin library that allows you to consume the Twitter API v2.\n* [**Tweedle**](https://github.com/tyczj/Tweedle)\u00a0a Kotlin-based Android library around the Twitter v2 API\n* [**TwitterApiKit**](https://github.com/kojofosu/TwitterApiKit)\u00a0saves you time creating data objects to access Twitter's API v2. This library is supported on Java, Kotlin, and Android\n",
+        "line_start": 109,
+        "line_end": 113
+    },
+    "17": {
+        "content": "Source document: ../data/platform-docs-versions/X_Twitter-API-Overview/Tools and Libraries.md\nParagraph location: \n\tResource URL: https://developer.twitter.com/en/docs/twitter-api/tools-and-libraries/v2\n\tCommunity tools and libraries for v2\n\tPHP\n\nContent: \n### PHP  \n* [**bird-elephant**](https://github.com/danieldevine/bird-elephant)\u00a0PHP client library for the Twitter API v2 endpoints\n* [**twifer**](https://github.com/ferrysyahrinal/twifer)\u00a0Simple PHP Library for Twitter API Standard v1.1 & Twitter API v2\n* [**twitter-api-v2-php**](https://github.com/noweh/twitter-api-v2-php)\u00a0PHP package providing easy and fast access to Twitter API V2\n* [**twitteroauth**](https://github.com/abraham/twitteroauth)\u00a0PHP library for use with the Twitter API\n* [**twitter-ultimate-php**](https://github.com/utxo-one/twitter-ultimate-php)\u00a0PHP Wrapper for the Twitter v2 API\n* [**Twitter Stream API**](https://github.com/redwebcreation/twitter-stream-api)\u00a0consume the Twitter Stream API v2 in real-time\n",
+        "line_start": 115,
+        "line_end": 122
+    },
+    "18": {
+        "content": "Source document: ../data/platform-docs-versions/X_Twitter-API-Overview/Tools and Libraries.md\nParagraph location: \n\tResource URL: https://developer.twitter.com/en/docs/twitter-api/tools-and-libraries/v2\n\tCommunity tools and libraries for v2\n\tPowerShell\n\nContent: \n### PowerShell  \n* [**BluebirdPS**](https://github.com/thedavecarroll/BluebirdPS)\u00a0a Twitter Automation Client for PowerShell 7. Tweet, Retweet, send Direct Messages, manage lists, and more\n",
+        "line_start": 124,
+        "line_end": 126
+    },
+    "19": {
+        "content": "Source document: ../data/platform-docs-versions/X_Twitter-API-Overview/Tools and Libraries.md\nParagraph location: \n\tResource URL: https://developer.twitter.com/en/docs/twitter-api/tools-and-libraries/v2\n\tCommunity tools and libraries for v2\n\tPython\n\nContent: \n### Python  \n* [**tweepy**](https://github.com/tweepy/tweepy)\u00a0Twitter for Python\n* [**twarc**](https://twarc-project.readthedocs.io/en/latest/twarc2_en_us/) a command line tool and Python library for collecting JSON data via the Twitter API, with a command (twarc2) for working with the v2 API\n* [**python-twitter**](https://github.com/sns-sdks/python-twitter)\u00a0a simple Python wrapper for Twitter API v2\n* [**TwitterAPI**](https://github.com/geduldig/TwitterAPI)\u00a0minimal Python wrapper for Twitter's APIs\n* [**twitterati**](https://github.com/JeannieDaniel/twitterati)\u00a0Wrapper for Twitter Developer API V2\n* [**twitter-stream.py**](https://github.com/twitivity/twitter-stream.py)\u00a0a Python API client for Twitter API v2\n* [**twitivity**](https://github.com/twitivity/twitivity)\u00a0Account Activity API client library for Python\n* [**PyTweet**](https://github.com/TheFarGG/PyTweet)\u00a0a synchronous Python wrapper for the Twitter API\n* [**tweetkit**](https://github.com/ysenarath/tweetkit)\u00a0a Python Client for the Twitter API for Academic Research\n* [**tweetple**](https://github.com/dapivei/tweetple)\u00a0a wrapper to stream information from the Full-Archive Search Endpoint, for Academic Research\n* [**2wttr**](https://github.com/simonlindgren/2wttr)\u00a0get Tweets from the v2 Twitter API, for Academic Research\n",
+        "line_start": 128,
+        "line_end": 140
+    },
+    "20": {
+        "content": "Source document: ../data/platform-docs-versions/X_Twitter-API-Overview/Tools and Libraries.md\nParagraph location: \n\tResource URL: https://developer.twitter.com/en/docs/twitter-api/tools-and-libraries/v2\n\tCommunity tools and libraries for v2\n\tR\n\nContent: \n### R  \n* [**academictwitteR**](https://github.com/cjbarrie/academictwitteR)\u00a0R package to query the Twitter Academic Research Product Track v2 API endpoint\n* [**RTwitterV2**](https://github.com/MaelKubli/RTwitterV2)\u00a0R functions for Twitter's v2 API\n",
+        "line_start": 142,
+        "line_end": 145
+    },
+    "21": {
+        "content": "Source document: ../data/platform-docs-versions/X_Twitter-API-Overview/Tools and Libraries.md\nParagraph location: \n\tResource URL: https://developer.twitter.com/en/docs/twitter-api/tools-and-libraries/v2\n\tCommunity tools and libraries for v2\n\tRuby\n\nContent: \n### Ruby  \n* [**omniauth-twitter2**](https://github.com/unasuke/omniauth-twitter2)\u00a0OmniAuth strategy for authenticating with Twitter OAuth2\n* [**tweetkit**](https://github.com/julianfssen/tweetkit)\u00a0Twitter v2 API client for Ruby\n* [**twitter\\_oauth2**](https://github.com/nov/twitter_oauth2)\u00a0Twitter OAuth 2.0 Client Library in Ruby\n",
+        "line_start": 147,
+        "line_end": 151
+    },
+    "22": {
+        "content": "Source document: ../data/platform-docs-versions/X_Twitter-API-Overview/Tools and Libraries.md\nParagraph location: \n\tResource URL: https://developer.twitter.com/en/docs/twitter-api/tools-and-libraries/v2\n\tCommunity tools and libraries for v2\n\tRust\n\nContent: \n### Rust  \n* [**twitter-v2**](https://github.com/jpopesculian/twitter-v2-rs)\u00a0Rust bindings for Twitter API v2\n",
+        "line_start": 153,
+        "line_end": 155
+    },
+    "23": {
+        "content": "Source document: ../data/platform-docs-versions/X_Twitter-API-Overview/Tools and Libraries.md\nParagraph location: \n\tResource URL: https://developer.twitter.com/en/docs/twitter-api/tools-and-libraries/v2\n\tCommunity tools and libraries for v2\n\tSwift\n\nContent: \n### Swift  \n* [**Twift**](https://github.com/daneden/Twift/)\u00a0An async Swift library for the Twitter v2 API\n* [**TwitterAPIKit**](https://github.com/mironal/TwitterAPIKit)\u00a0Swift library for the Twitter API v1 and v2\n",
+        "line_start": 157,
+        "line_end": 160
+    },
+    "24": {
+        "content": "Source document: ../data/platform-docs-versions/X_Twitter-API-Overview/Tools and Libraries.md\nParagraph location: \n\tResource URL: https://developer.twitter.com/en/docs/twitter-api/tools-and-libraries/v1\n\nContent: \n# Resource URL: https://developer.twitter.com/en/docs/twitter-api/tools-and-libraries/v1\nv1.1 tools and libraries\n",
+        "line_start": 162,
+        "line_end": 164
+    },
+    "25": {
+        "content": "Source document: ../data/platform-docs-versions/X_Twitter-API-Overview/Tools and Libraries.md\nParagraph location: \n\tResource URL: https://developer.twitter.com/en/docs/twitter-api/tools-and-libraries/v1\n\tOfficial v1.1 tools and libraries\n\nContent: \n## Official v1.1 tools and libraries  \nThe Twitter teams maintain a set of official libraries and SDKs, listed here.  \nWe also include a list of\u00a0[community-supported libraries](#community-libraries) lower on this page.\n",
+        "line_start": 166,
+        "line_end": 169
+    },
+    "26": {
+        "content": "Source document: ../data/platform-docs-versions/X_Twitter-API-Overview/Tools and Libraries.md\nParagraph location: \n\tResource URL: https://developer.twitter.com/en/docs/twitter-api/tools-and-libraries/v1\n\tOfficial v1.1 tools and libraries\n\tJavaScript / Node.js\n\nContent: \n### JavaScript / Node.js  \n**Clients**  \n**\\--**  \n**SDKs / Libraries**  \n**\\--**  \n**Tools**  \n[**Autohook**](https://www.npmjs.com/package/twitter-autohook)  \nGet started with the Premium v1.1\u00a0Account Activity API\n",
+        "line_start": 172,
+        "line_end": 180
+    },
+    "27": {
+        "content": "Source document: ../data/platform-docs-versions/X_Twitter-API-Overview/Tools and Libraries.md\nParagraph location: \n\tResource URL: https://developer.twitter.com/en/docs/twitter-api/tools-and-libraries/v1\n\tOfficial v1.1 tools and libraries\n\tPython\n\nContent: \n### Python  \n**Clients**  \n**[search-tweets-python](https://github.com/twitterdev/search-tweets-python)**  \nA client supporting\u00a0v2, Premium v1.1 and Enterprise\u00a0search  \n**SDKs / Libraries**  \n**\\--**  \n**Tools**  \n**\\--**\n",
+        "line_start": 128,
+        "line_end": 136
+    },
+    "28": {
+        "content": "Source document: ../data/platform-docs-versions/X_Twitter-API-Overview/Tools and Libraries.md\nParagraph location: \n\tResource URL: https://developer.twitter.com/en/docs/twitter-api/tools-and-libraries/v1\n\tOfficial v1.1 tools and libraries\n\tRuby\n\nContent: \n### Ruby  \n**Clients**  \n**[search-tweets-ruby](https://github.com/twitterdev/search-tweets-ruby)**  \nA client supporting\u00a0v2, Premium v1.1 and Enterprise\u00a0search  \n**SDKs / Libraries**  \n**\\--**  \n**Tools**  \n**\\--**\n",
+        "line_start": 147,
+        "line_end": 155
+    },
+    "29": {
+        "content": "Source document: ../data/platform-docs-versions/X_Twitter-API-Overview/Tools and Libraries.md\nParagraph location: \n\tResource URL: https://developer.twitter.com/en/docs/twitter-api/tools-and-libraries/v1\n\tOfficial v1.1 tools and libraries\n\tAdditional official resources\n\nContent: \n### Additional official resources  \nThe tools below can also be useful when working with the Twitter API.  \nLooking for even more code? You can find examples on our\u00a0[GitHub](https://github.com/twitterdev), and on\u00a0[Glitch](https://glitch.com/@twitter).  \n**[twemoji](https://twemoji.twitter.com/)**  \nTwitter\u2019s free, open source emoji character set, including a JavaScript library for cross-platform support.  \n**[twitter-text](https://github.com/twitter/twitter-text)**  \nA collection of libraries to standardize parsing and tokenization of Tweet text.  \nAvailable for Java, JavaScript, Objective-C & Ruby.  \n[Learn more about counting characters in Tweets](https://developer.twitter.com/en/docs/counting-characters).  \n**[OpenAPI specification](https://api.twitter.com/2/openapi.json)**  \nUse this specification to exercise the v2 API with tools like [Postman](https://www.postman.com/) or [Insomnia](https://insomnia.rest/products/core).  \n**[twurl](https://github.com/twitter/twurl)**  \nA command-line tool (CLI) for interacting with the Twitter API, including OAuth authentication.  \nRequires a Ruby runtime.  \n**[Postman collection](https://t.co/twitter-api-postman)**  \nExplore the v2 API endpoints using Postman, the visual REST client.\n",
+        "line_start": 220,
+        "line_end": 236
+    },
+    "30": {
+        "content": "Source document: ../data/platform-docs-versions/X_Twitter-API-Overview/Tools and Libraries.md\nParagraph location: \n\tResource URL: https://developer.twitter.com/en/docs/twitter-api/tools-and-libraries/v1\n\tCommunity tools and libraries\n\nContent: \n## Community tools and libraries  \nThese are some of the many community-supported libraries that cover the Twitter API, across several programming languages and platforms. Note that these resources may not all have been tested by the Twitter team.  \nThe libraries listed here should implement most features of the Standard API v1.1, unless otherwise noted - check with the authors for details, and for additional support.  \nIf you have built a library that supports Twitter API v2, please let us know about it [via our community forums](https://twittercommunity.com/c/libraries-and-sdks/63), for possible addition to this page. You can also use the forums to let us know about any changes to the listings on this page.  \nIf you're missing a library or tool for your favorite programming language, let us know via the [feedback platform](https://twitterdevfeedback.uservoice.com/), where you can also vote for ideas, or get inspired to build and submit something new.\n",
+        "line_start": 252,
+        "line_end": 257
+    },
+    "31": {
+        "content": "Source document: ../data/platform-docs-versions/X_Twitter-API-Overview/Tools and Libraries.md\nParagraph location: \n\tResource URL: https://developer.twitter.com/en/docs/twitter-api/tools-and-libraries/v1\n\tCommunity tools and libraries\n\t(ASP, C#, VB)\n\nContent: \n### (ASP, C#, VB)  \n**Clients**  \n**[ASPTwitter](http://www.timacheson.com/Blog/2013/jun/asptwitter)**  \nby [@timacheson](https://twitter.com/timacheson)  \n**SDKs / Libraries**  \n**[LINQ2Twitter](https://github.com/JoeMayo/LinqToTwitter)**  \nby\u00a0[@JoeMayo](https://twitter.com/JoeMayo)\u00a0(v2)  \n**[SocialOpinion](https://github.com/jamiemaguiredotnet/SocialOpinion-Public)**  \nby [@jamie\\_maguire1](https://twitter.com/jamie_maguire1)\u00a0(v2)  \n**[Tweetinvi](https://github.com/linvi/tweetinvi)**  \nby\u00a0[@TweetinviApi](https://twitter.com/TweetinviApi)\u00a0(v2)  \n**[CoreTweet](https://coretweet.github.io/)**  \nby\u00a0[@CoreTweet](https://github.com/CoreTweet/)\u00a0(v2)  \n**Tools**  \n**\\--**\n",
+        "line_start": 264,
+        "line_end": 279
+    },
+    "32": {
+        "content": "Source document: ../data/platform-docs-versions/X_Twitter-API-Overview/Tools and Libraries.md\nParagraph location: \n\tResource URL: https://developer.twitter.com/en/docs/twitter-api/tools-and-libraries/v1\n\tCommunity tools and libraries\n\tC++\n\nContent: \n### C++  \n**Clients**  \n**\\--**  \n**SDKs / Libraries**  \n**[Twitter-API-C-Library](https://github.com/a-n-t-h-o-n-y/Twitter-API-C-Library)**  \nby [@a-n-t-h-o-n-y](https://github.com/a-n-t-h-o-n-y)  \n**Tools**  \n**\\--**\n",
+        "line_start": 294,
+        "line_end": 302
+    },
+    "33": {
+        "content": "Source document: ../data/platform-docs-versions/X_Twitter-API-Overview/Tools and Libraries.md\nParagraph location: \n\tResource URL: https://developer.twitter.com/en/docs/twitter-api/tools-and-libraries/v1\n\tCommunity tools and libraries\n\tClojure\n\nContent: \n### Clojure  \n**Clients**  \n**\\--**  \n**SDKs / Libraries**  \n**[twitter-api](https://github.com/adamwynne/twitter-api)**  \nby [@adamjwynne](https://twitter.com/adamjwynne) / [@StreamScience](https://twitter.com/streamscience)  \n**[twttr](https://github.com/chbrown/twttr)**  \nby [@chbrown](https://github.com/chbrown/)  \n**Tools**  \n**\\--**\n",
+        "line_start": 310,
+        "line_end": 320
+    },
+    "34": {
+        "content": "Source document: ../data/platform-docs-versions/X_Twitter-API-Overview/Tools and Libraries.md\nParagraph location: \n\tResource URL: https://developer.twitter.com/en/docs/twitter-api/tools-and-libraries/v1\n\tCommunity tools and libraries\n\tColdFusion\n\nContent: \n### ColdFusion  \n**Clients**  \n**\\--**  \n**SDKs / Libraries**  \n**[MonkehTweets](https://github.com/coldfumonkeh/monkehTweets)**  \nby [@coldfumonkeh](https://twitter.com/coldfumonkeh)  \n**Tools**  \n**\\--**\n",
+        "line_start": 330,
+        "line_end": 338
+    },
+    "35": {
+        "content": "Source document: ../data/platform-docs-versions/X_Twitter-API-Overview/Tools and Libraries.md\nParagraph location: \n\tResource URL: https://developer.twitter.com/en/docs/twitter-api/tools-and-libraries/v1\n\tCommunity tools and libraries\n\tDart\n\nContent: \n### Dart  \n**Clients**  \n**\\--**  \n**SDKs / Libraries**  \n**[dartTwitterAPI](https://github.com/stefanuros/dartTwitterAPI)**  \nby [@stefanuros](https://github.com/stefanuros)  \n**[twitter.dart](https://github.com/sh4869/twitter.dart)**  \nby [@sh4869sh](https://twitter.com/sh4869sh)  \n**[dart\\_twitter\\_api](https://github.com/robertodoering/twitter_api)**  \nby [@robertodoering](https://github.com/robertodoering)  \n**Tools**  \n**\\--**\n",
+        "line_start": 346,
+        "line_end": 358
+    },
+    "36": {
+        "content": "Source document: ../data/platform-docs-versions/X_Twitter-API-Overview/Tools and Libraries.md\nParagraph location: \n\tResource URL: https://developer.twitter.com/en/docs/twitter-api/tools-and-libraries/v1\n\tCommunity tools and libraries\n\tElixir\n\nContent: \n### Elixir  \n**Clients**  \n**\\--**  \n**SDKs / Libraries**  \n**[extwitter](https://github.com/parroty/extwitter)**  \nby [@parroty](https://github.com/parroty)  \n**Tools**  \n**\\--**\n",
+        "line_start": 370,
+        "line_end": 378
+    },
+    "37": {
+        "content": "Source document: ../data/platform-docs-versions/X_Twitter-API-Overview/Tools and Libraries.md\nParagraph location: \n\tResource URL: https://developer.twitter.com/en/docs/twitter-api/tools-and-libraries/v1\n\tCommunity tools and libraries\n\tErlang\n\nContent: \n### Erlang  \n**Clients**  \n**\\--**  \n**SDKs / Libraries**  \n**[ErlyBird](https://github.com/igb/ErlyBird)**  \nby [@igb](https://twitter.com/igb)  \n**[yatael](https://github.com/tgrk/yatael)**  \nby [@tajgur](https://twitter.com/tajgur)  \n**Tools**  \n**\\--**\n",
+        "line_start": 386,
+        "line_end": 396
+    },
+    "38": {
+        "content": "Source document: ../data/platform-docs-versions/X_Twitter-API-Overview/Tools and Libraries.md\nParagraph location: \n\tResource URL: https://developer.twitter.com/en/docs/twitter-api/tools-and-libraries/v1\n\tCommunity tools and libraries\n\tGo\n\nContent: \n### Go  \n**Clients**  \n**[twty](https://github.com/mattn/twty)**  \nA command-line client tool written in Go, by [@mattn](https://github.com/mattn)  \n**SDKs / Libraries**  \n**[go-twitter](https://github.com/g8rswimmer/go-twitter)**  \nby [@g8rswimmer](https://github.com/g8rswimmer)\u00a0(v2)  \n**[twittergo](https://github.com/kurrik/twittergo)**  \nby [@kurrik](https://twitter.com/kurrik)  \n**[go-twitter](https://github.com/dghubble/go-twitter)**  \nby [@dghubble](https://twitter.com/dghubble)  \n**[Anaconda](https://github.com/ChimeraCoder/anaconda)**  \nby [@chimeracoder](https://twitter.com/chimeracoder)  \n**Tools**  \n**[tw-oob-oauth-cli](https://github.com/smaeda-ks/tw-oob-oauth-cli)**  \nA small PIN-based OAuth tool to retrieve tokens, by [@smaeda-ks](https://github.com/smaeda-ks)\n",
+        "line_start": 85,
+        "line_end": 101
+    },
+    "39": {
+        "content": "Source document: ../data/platform-docs-versions/X_Twitter-API-Overview/Tools and Libraries.md\nParagraph location: \n\tResource URL: https://developer.twitter.com/en/docs/twitter-api/tools-and-libraries/v1\n\tCommunity tools and libraries\n\tHaskell\n\nContent: \n### Haskell  \n**Clients**  \n**\\--**  \n**SDKs / Libraries**  \n**[twitter-conduit](https://github.com/himura/twitter-conduit)**  \nby [@himura](https://github.com/himura)  \n**Tools**  \n**[twitter-types](https://github.com/himura/twitter-types)**  \nby [@himura](https://github.com/himura)\n",
+        "line_start": 438,
+        "line_end": 447
+    },
+    "40": {
+        "content": "Source document: ../data/platform-docs-versions/X_Twitter-API-Overview/Tools and Libraries.md\nParagraph location: \n\tResource URL: https://developer.twitter.com/en/docs/twitter-api/tools-and-libraries/v1\n\tCommunity tools and libraries\n\tJava\n\nContent: \n### Java  \n**Clients**  \n**\\--**  \n**SDKs / Libraries**  \n**[twittered](https://github.com/redouane59/twittered)**  \nby [@redouanebali](https://twitter.com/redouanebali) (v2, Premium v1.1 support)  \n**[JTwitter](https://github.com/winterstein/JTwitter)**  \nby [@winterwellassoc](https://twitter.com/winterwellassoc)  \n**[Twitter4J](https://github.com/Twitter4J/Twitter4J)**  \nby [@yusuke](https://twitter.com/yusuke)  \n**Tools**  \n**\\--**\n",
+        "line_start": 94,
+        "line_end": 106
+    },
+    "41": {
+        "content": "Source document: ../data/platform-docs-versions/X_Twitter-API-Overview/Tools and Libraries.md\nParagraph location: \n\tResource URL: https://developer.twitter.com/en/docs/twitter-api/tools-and-libraries/v1\n\tCommunity tools and libraries\n\tJavaScript / Node.js\n\nContent: \n### JavaScript / Node.js  \n**Clients**  \n**\\--**  \n**SDKs / Libraries**  \n[**twitter-v2**](https://github.com/HunterLarco/twitter-v2)  \nby [@HunterLarco](https://github.com/HunterLarco)\u00a0(v2)  \n[**twitter-lite**](https://github.com/draftbit/twitter-lite)  \nby [@dandv](https://twitter.com/dandv) and [@peterpm](https://twitter.com/peterpme)  \n**Tools**  \n[**twitter-error-handler**](https://github.com/shalvah/twitter-error-handler)  \nby [@shalvah](https://github.com/shalvah)  \n[**twittersignin**](https://github.com/shalvah/twittersignin)  \nA wrapper around Twit to simplify signin, by [@shalvah](https://github.com/shalvah)\n",
+        "line_start": 172,
+        "line_end": 185
+    },
+    "42": {
+        "content": "Source document: ../data/platform-docs-versions/X_Twitter-API-Overview/Tools and Libraries.md\nParagraph location: \n\tResource URL: https://developer.twitter.com/en/docs/twitter-api/tools-and-libraries/v1\n\tCommunity tools and libraries\n\tJulia\n\nContent: \n### Julia  \n**Clients**  \n**\\--**  \n**SDKs / Libraries**  \n**[Twitter.jl](https://github.com/randyzwitch/Twitter.jl)**  \nby [@randyzwitch](https://twitter.com/randyzwitch)  \n**Tools**  \n**\\--**\n",
+        "line_start": 506,
+        "line_end": 514
+    },
+    "43": {
+        "content": "Source document: ../data/platform-docs-versions/X_Twitter-API-Overview/Tools and Libraries.md\nParagraph location: \n\tResource URL: https://developer.twitter.com/en/docs/twitter-api/tools-and-libraries/v1\n\tCommunity tools and libraries\n\tKotlin\n\nContent: \n### Kotlin  \n**Clients**  \n**\\--**  \n**SDKs / Libraries**  \n**[Tweedle](https://github.com/tyczj/Tweedle)**  \nby [@tyczj](https://github.com/tyczj)\u00a0(v2 in alpha)  \n**Tools**  \n**\\--**\n",
+        "line_start": 109,
+        "line_end": 117
+    },
+    "44": {
+        "content": "Source document: ../data/platform-docs-versions/X_Twitter-API-Overview/Tools and Libraries.md\nParagraph location: \n\tResource URL: https://developer.twitter.com/en/docs/twitter-api/tools-and-libraries/v1\n\tCommunity tools and libraries\n\tLua\n\nContent: \n### Lua  \n**Clients**  \n**\\--**  \n**SDKs / Libraries**  \n**[lua-twitter](https://github.com/leafo/lua-twitter)**  \nby [@moonscript](https://twitter.com/moonscript)  \n**Tools**  \n**\\--**\n",
+        "line_start": 538,
+        "line_end": 546
+    },
+    "45": {
+        "content": "Source document: ../data/platform-docs-versions/X_Twitter-API-Overview/Tools and Libraries.md\nParagraph location: \n\tResource URL: https://developer.twitter.com/en/docs/twitter-api/tools-and-libraries/v1\n\tCommunity tools and libraries\n\tObjective-C\n\nContent: \n### Objective-C  \n**Clients**  \n**\\--**  \n**SDKs / Libraries**  \n**[STTwitter](https://github.com/nst/STTwitter)**  \nby [@nst021](https://twitter.com/nst021)  \n**Tools**  \n**\\--**\n",
+        "line_start": 554,
+        "line_end": 562
+    },
+    "46": {
+        "content": "Source document: ../data/platform-docs-versions/X_Twitter-API-Overview/Tools and Libraries.md\nParagraph location: \n\tResource URL: https://developer.twitter.com/en/docs/twitter-api/tools-and-libraries/v1\n\tCommunity tools and libraries\n\tPerl\n\nContent: \n### Perl  \n**Clients**  \n**\\--**  \n**SDKs / Libraries**  \n**[Twitter::API](https://github.com/semifor/Twitter-API)**  \nby [@semifor](https://twitter.com/semifor)  \n**Tools**  \n**\\--**\n",
+        "line_start": 570,
+        "line_end": 578
+    },
+    "47": {
+        "content": "Source document: ../data/platform-docs-versions/X_Twitter-API-Overview/Tools and Libraries.md\nParagraph location: \n\tResource URL: https://developer.twitter.com/en/docs/twitter-api/tools-and-libraries/v1\n\tCommunity tools and libraries\n\tPHP\n\nContent: \n### PHP  \n**Clients**  \n**\\--**  \n**SDKs / Libraries**  \n**[twitter-labs](https://github.com/spatie/twitter-labs)**  \nby [@spatie\\_be](https://twitter.com/spatie_be) (Labs)  \n**[TwitterOAuth](https://twitteroauth.com/)**  \nby [@Abraham](https://twitter.com/Abraham)  \n**[codebird-php](https://github.com/jublo/codebird-php)**  \nby [@jublo](https://twitter.com/jublo)  \n**[Twitter-API-PHP](https://github.com/J7mbo/twitter-api-php)**  \nby [@j7mbo](https://twitter.com/J7mbo/)  \n**[phirehose](https://github.com/fennb/phirehose)**  \nby [@fennb](https://twitter.com/fennb)  \n**[twitter-streaming-api](https://github.com/spatie/twitter-streaming-api)**  \nby [@spatie\\_be](https://twitter.com/spatie_be)  \n**Tools**  \n**\\--**\n",
+        "line_start": 115,
+        "line_end": 133
+    },
+    "48": {
+        "content": "Source document: ../data/platform-docs-versions/X_Twitter-API-Overview/Tools and Libraries.md\nParagraph location: \n\tResource URL: https://developer.twitter.com/en/docs/twitter-api/tools-and-libraries/v1\n\tCommunity tools and libraries\n\tPowerShell\n\nContent: \n### PowerShell  \n**Clients**  \n**\\--**  \n**SDKs / Libraries**  \n**\\--**  \n**Tools**  \n**[PSTwitterAPI](https://github.com/mkellerman/PSTwitterAPI)**  \nby\u00a0[@mkellerman](https://twitter.com/)\n",
+        "line_start": 124,
+        "line_end": 132
+    },
+    "49": {
+        "content": "Source document: ../data/platform-docs-versions/X_Twitter-API-Overview/Tools and Libraries.md\nParagraph location: \n\tResource URL: https://developer.twitter.com/en/docs/twitter-api/tools-and-libraries/v1\n\tCommunity tools and libraries\n\tPython\n\nContent: \n### Python  \n**Clients**  \n**[TwitterSearch](https://github.com/ckoepp/TwitterSearch)**  \nby [@ckoepp](https://github.com/ckoepp)  \n**[tweetget](https://github.com/gnascimento/tweeget)**  \nby [@gnascimento](https://github.com/gnascimento). A search client library for Premium v1.1.  \n**SDKs / Libraries**  \n**[TwitterAPI](https://github.com/geduldig/TwitterAPI)**  \nby [@geduldig](https://github.com/geduldig). Includes v2, Premium v1.1 and Labs support.  \n**[python-twitter](https://python-twitter.readthedocs.io/en/latest/)**  \nby [the Python-Twitter Developers](https://github.com/bear/python-twitter)  \n**[tweepy](https://github.com/tweepy/tweepy)**  \nby [the tweepy Developers](https://github.com/tweepy). Includes Premium v1.1 support.  \n**[twython](https://github.com/ryanmcgrath/twython)**  \nby [@ryanmcgrath](https://twitter.com/ryanmcgrath) and [@mikehelmick](https://twitter.com/mikehelmick)  \n**Tools**  \n**[twitter](https://github.com/sixohsix/twitter)**  \nby [the Python Twitter Tools developer team](https://mike.verdone.ca/twitter/). Includes a CLI, IRC tools, and minimalist API library for v1.1\n",
+        "line_start": 128,
+        "line_end": 146
+    },
+    "50": {
+        "content": "Source document: ../data/platform-docs-versions/X_Twitter-API-Overview/Tools and Libraries.md\nParagraph location: \n\tResource URL: https://developer.twitter.com/en/docs/twitter-api/tools-and-libraries/v1\n\tCommunity tools and libraries\n\tR\n\nContent: \n### R  \n**Clients**  \n**\\--**  \n**SDKs / Libraries**  \n**[rtweet](https://docs.ropensci.org/rtweet/)**  \nby [@kearnymw](https://twitter.com/kearneymw). Includes Premium v1.1 search support.  \n**[streamr](https://github.com/pablobarbera/streamR)**  \nby [@p\\_barbera](https://twitter.com/p_barbera)  \n**Tools**  \n**[rtweetXtras](https://github.com/Arf9999/rtweetXtras)**  \nHelper functions for rTweet, by [@Arf9999](https://github.com/Arf9999)  \n**[tweetrmd](https://github.com/gadenbuie/tweetrmd)**  \nEasily embed Tweets into R Markdown, by [@gadenbuie](https://github.com/gadenbuie)\n",
+        "line_start": 142,
+        "line_end": 155
+    },
+    "51": {
+        "content": "Source document: ../data/platform-docs-versions/X_Twitter-API-Overview/Tools and Libraries.md\nParagraph location: \n\tResource URL: https://developer.twitter.com/en/docs/twitter-api/tools-and-libraries/v1\n\tCommunity tools and libraries\n\tRuby\n\nContent: \n### Ruby  \n**Clients**  \n**[t](https://github.com/sferik/t)**  \nA command-line tool by [@sferik](https://twitter.com/sferik)  \n**SDKs / Libraries**  \n[**twitter-labs-api**](https://github.com/tomholford/twitter-labs-api)  \nby [@tomholford](https://twitter.com/tomholford) (supports Labs)  \n[**twitter**](https://github.com/sferik/twitter)  \nby\u00a0[@sferik](https://twitter.com/sferik)  \n**Tools**  \n**\\--**\n",
+        "line_start": 147,
+        "line_end": 158
+    },
+    "52": {
+        "content": "Source document: ../data/platform-docs-versions/X_Twitter-API-Overview/Tools and Libraries.md\nParagraph location: \n\tResource URL: https://developer.twitter.com/en/docs/twitter-api/tools-and-libraries/v1\n\tCommunity tools and libraries\n\tRust\n\nContent: \n### Rust  \n**Clients**  \n**\\--**  \n**SDKs / Libraries**  \n**[egg-mode](https://github.com/QuietMisdreavus/twitter-rs)**  \nby [@QuietMisdreavus](https://twitter.com/QuietMisdreavus)  \n**[twitter-api-rs](https://github.com/gifnksm/twitter-api-rs)**  \nby [@gifnksm](https://twitter.com/gifnksm)  \n**[twitter-stream-rs](https://github.com/tesaguri/twitter-stream-rs)**  \nby [@teseguri](https://github.com/tesaguri)  \n**Tools**  \n**\\--**\n",
+        "line_start": 153,
+        "line_end": 165
+    },
+    "53": {
+        "content": "Source document: ../data/platform-docs-versions/X_Twitter-API-Overview/Tools and Libraries.md\nParagraph location: \n\tResource URL: https://developer.twitter.com/en/docs/twitter-api/tools-and-libraries/v1\n\tCommunity tools and libraries\n\tScala\n\nContent: \n### Scala  \n**Clients**  \n**\\--**  \n**SDKs / Libraries**  \n[**twitter4s**](https://github.com/DanielaSfregola/twitter4s)  \nby [@danielesfregola](https://twitter.com/danielasfregola)  \n**Tools**  \n**\\--**\n",
+        "line_start": 746,
+        "line_end": 754
+    },
+    "54": {
+        "content": "Source document: ../data/platform-docs-versions/X_Twitter-API-Overview/Tools and Libraries.md\nParagraph location: \n\tResource URL: https://developer.twitter.com/en/docs/twitter-api/tools-and-libraries/v1\n\tCommunity tools and libraries\n\tShell script (Bash)\n\nContent: \n### Shell script (Bash)  \n**Clients**  \n[**tweet.sh**](https://github.com/piroor/tweet.sh)  \nA simple Twitter client by [@piroor](https://github.com/piroor). Requires additional command-line tools.  \n**SDKs / Libraries**  \n**\\--**  \n**Tools**  \n**\\--**\n",
+        "line_start": 762,
+        "line_end": 770
+    },
+    "55": {
+        "content": "Source document: ../data/platform-docs-versions/X_Twitter-API-Overview/Tools and Libraries.md\nParagraph location: \n\tResource URL: https://developer.twitter.com/en/docs/twitter-api/tools-and-libraries/v1\n\tCommunity tools and libraries\n\tSwift\n\nContent: \n### Swift  \n**Clients**  \n**\\--**  \n**SDKs / Libraries**  \n**[Swifter](https://github.com/mattdonnelly/Swifter)**  \nby [@mattdonnelly](https://github.com/mattdonnelly)  \n**Tools**  \n**\\--**\n",
+        "line_start": 157,
+        "line_end": 165
+    },
+    "56": {
+        "content": "Source document: ../data/platform-docs-versions/X_Twitter-API-Overview/Tools and Libraries.md\nParagraph location: \n\tResource URL: https://developer.twitter.com/en/docs/twitter-api/tools-and-libraries/v1\n\tCommunity tools and libraries\n\tTypeScript\n\nContent: \n### TypeScript  \n**Clients**  \n**\\--**  \n**SDKs / Libraries**  \n**[twitter-api-ts](https://github.com/OliverJAsh/twitter-api-ts)**  \nby [@OliverJAsh](https://twitter.com/oliverjash)  \n**Tools**  \n**[twitter-d](https://github.com/abraham/twitter-d)**  \nTypeScript definitions for v1.1 Twitter API objects, by [@Abraham](https://twitter.com/Abraham)\n",
+        "line_start": 796,
+        "line_end": 805
+    },
+    "57": {
+        "content": "Source document: ../data/platform-docs-versions/X_Twitter-API-Overview/Tools and Libraries.md\nParagraph location: \n\tResource URL: https://developer.twitter.com/en/docs/twitter-api/tools-and-libraries/sdks/overview\n\nContent: \n# Resource URL: https://developer.twitter.com/en/docs/twitter-api/tools-and-libraries/sdks/overview\nOverview\n",
+        "line_start": 814,
+        "line_end": 816
+    },
+    "58": {
+        "content": "Source document: ../data/platform-docs-versions/X_Twitter-API-Overview/Tools and Libraries.md\nParagraph location: \n\tResource URL: https://developer.twitter.com/en/docs/twitter-api/tools-and-libraries/sdks/overview\n\tIntroduction\n\nContent: \n## Introduction  \nA software development kit (SDK) is a set of software tools and programs tailored for a specific platform or API. The purpose of an SDK is to build or extend functionality of applications by providing libraries or codebases that developers can use within their applications, efficiently and with minimal coding. This significantly speeds up the development process, saving time, money, and effort.  \nThe Twitter Developer Platform now offers 2 official SDKs for those who develop in TypeScript/Javascript and Java. These will allow developers to build more effectively by eliminating the need to manually program the complexities around the Twitter API v2, utilizing the pre-built functions for all available v2 endpoints as well as simplifying the authentication process. As these are built and maintained by the Developer Platform team, they will always be up to date with future releases to the Twitter API v2  \nSince these SDKs wrap the Twitter API, you must have a\u00a0[developer account](https://developer.twitter.com/en/portal/petition/essential/basic-info)\u00a0to authenticate requests using the credentials from a\u00a0[developer App](https://developer.twitter.com/en/docs/apps), located within a\u00a0[Project](https://developer.twitter.com/en/docs/projects).  \n#### Installing  \n* [Java](#item0)\n* [TypeScript](#item1)  \nJava  \nTypeScript  \nThere are a few ways to install the Java package (requires Java 1.8+)  \n* Maven users - add this dependency to your project's POM file:  \n`<dependency>   <groupId>com.twitter</groupId>   <artifactId>twitter-api-java-sdk</artifactId>   <version>1.1.4</version> </dependency>`  \n* Grade users - add this dependency to your project's build file:  \nimplementation \"com.twitter:twitter-api-java-sdk:1.1.4\"  \n* Others - first generate the JAR by running the following command  \nmvn clean package  \nThen manually install the following JARs:  \ntarget/twitter-api-java-sdk-1.1.4.jar  \ntarget/lib/\\*.jar  \nThis package supports Node.js 14+, to install, run the following command in the directory of the Node project:  \nnpm install twitter-api-sdk  \n#### Client basics  \nImport the classes (Java) and package (TypeScript) at the top of a working file to gain access to the authentication and library clients. In order to use the methods from the library client, authentication credentials must be passed, this could either be Bearer Token (App-only) or client id/client secret if authenticating with OAuth 2.0 user context.  \nHere are examples of how this would look:  \nJava TypeScript  \n`// Import classes: import com.twitter.clientlib.ApiClient; import com.twitter.clientlib.ApiException; import com.twitter.clientlib.Configuration; import com.twitter.clientlib.auth.*; import com.twitter.clientlib.model.*; import com.twitter.clientlib.TwitterCredentialsBearer; import com.twitter.clientlib.api.TwitterApi;  // Instantiate library client TwitterApi apiInstance = new TwitterApi();   // Instantiate auth credentials (App-only example) TwitterCredentialsBearer credentials = new TwitterCredentialsBearer(System.getenv(\"APP-ONLY-ACCESS-TOKEN\"));   // Pass credentials to library client apiInstance.setTwitterCredentials(credentials);`  \n`//Import package import { Client, auth } from \"twitter-api-sdk\";   // Initialize auth client first const authClient = new auth.OAuth2User({  client_id: process.env.CLIENT_ID as string,  client_secret: process.env.CLIENT_SECRET as string,  callback: \"YOUR-CALLBACK\",  scopes: [\"tweet.read\", \"users.read\", \"offline.access\"], });   // Pass auth credentials to the library client   const twitterClient = new Client(authClient);`  \n#### Authentication Flow  \nIf you are using the application only option to authenticate the SDKs, you will only need to provide the token and the library client will be ready to use the endpoint methods right away. Keep in mind, application only tokens cannot be used on endpoints that require user context authentication.  \nOAuth 2.0 user context authentication requires a few extra steps after creating the auth client.  \n* Generate authorization URL\n* Authorize the application from the authorization URL\n* Redirects to callback (this should be matching the callback URL set in the auth settings page in the Developer Portal).\n* Parse code verifier to exchange for access token  \nThe SDKs provide methods on the auth client that simplifies these steps.\u00a0For a full example of how to make a request authenticating with OAuth 2.0 user context, check out the GitHub repositories.  \n* [TypeScript](https://github.com/twitterdev/twitter-api-typescript-sdk/blob/main/examples/oauth2-callback_pkce_s256.ts)  \n* [Java](https://github.com/twitterdev/twitter-api-java-sdk/blob/main/examples/src/main/java/com/twitter/clientlib/auth/OAuth20GetAccessToken.java)  \n#### Endpoint methods  \nThe methods provided within the library client are clearly named to correspond with every endpoint and all parameters are passed in as arguments.  \nHere is an example of Tweet lookup by ID:  \nJava TypeScript  \n`String id = \"1511757922354663425\"; // String | A single Tweet ID. Set<String> expansions = new HashSet<>(Arrays.asList(\"author_id\")); // Set<String> | A comma separated list of fields to expand. Set<String> tweetFields = new HashSet<>(Arrays.asList(\"created_at\", \"lang\", \"context_annotations\")); // Set<String> | A comma separated list of Tweet fields to display. Set<String> userFields = new HashSet<>(Arrays.asList(\"created_at\", \"description\", \"name\")); // Set<String> | A comma separated list of User fields to display.   try {  SingleTweetLookupResponse result = apiInstance.tweets().findTweetById(id, expansions, tweetFields, userFields, null, null, null);  System.out.println(result); } catch (ApiException e) {  System.err.println(\"Exception when calling TweetsApi#findTweetById\");  System.err.println(\"Status code: \" + e.getCode());  System.err.println(\"Reason: \" + e.getResponseBody());  System.err.println(\"Response headers: \" + e.getResponseHeaders());  e.printStackTrace(); }`  \n`const lookupTweetById = await client.tweets.findTweetById(   // Tweet ID   \"1511757922354663425\",   {     // Optional parameters     expansions: [\"author_id\"],     \"user.fields\": [\"created_at\", \"description\", \"name\"],   } );`\n",
+        "line_start": 817,
+        "line_end": 860
+    }
+}
