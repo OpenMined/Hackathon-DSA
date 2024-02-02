@@ -1,0 +1,127 @@
+{
+    "0": {
+        "content": "Source document: ../data/platform-docs-versions/TikTok_Research-API/Research API Reference.md\nParagraph location: \n\tResource URL: https://developers.tiktok.com/doc/research-api-specs-query-videos/\n\nContent: \n# Resource URL: https://developers.tiktok.com/doc/research-api-specs-query-videos/\n",
+        "line_start": 0,
+        "line_end": 1
+    },
+    "1": {
+        "content": "Source document: ../data/platform-docs-versions/TikTok_Research-API/Research API Reference.md\nParagraph location: \n\tRequest\n\nContent: \n# Request  \n|     |     |\n| --- | --- |\n| **HTTP** **URL** | https://open.tiktokapis.com/v2/research/video/query/ |\n| **HTTP Method** | POST |\n| **Scopes** | research.data.basic (**required**) |\n",
+        "line_start": 3,
+        "line_end": 9
+    },
+    "2": {
+        "content": "Source document: ../data/platform-docs-versions/TikTok_Research-API/Research API Reference.md\nParagraph location: \n\tRequest\n\tHeaders\n\nContent: \n## Headers  \n|     |     |     |     |     |\n| --- | --- | --- | --- | --- |\n| **Key** | **Type** | **Description** | **Example** | **Required** |\n| Content-Type | string | Indicate the original media type of the resource. | \"application/json\" | Yes |\n| Authorization | string | The client access token which is obtained through /v2/oauth/token/. | Bearer clt.example12345Example12345Example | Yes |\n",
+        "line_start": 11,
+        "line_end": 17
+    },
+    "3": {
+        "content": "Source document: ../data/platform-docs-versions/TikTok_Research-API/Research API Reference.md\nParagraph location: \n\tRequest\n\tQuery Parameters\n\nContent: \n## Query Parameters  \n|     |     |     |     |     |\n| --- | --- | --- | --- | --- |\n| **Key** | **Type** | **Description** | **Example** | **Required** |\n| fields | string | The requested fields. Choose from the Video Object's fields. | Complete list:<br><br>id,video\\_description,create\\_time, region\\_code,share\\_count,view\\_count,like\\_count,comment\\_count, music\\_id,hashtag\\_names, username,effect\\_ids,playlist\\_id,voice\\_to\\_text | Yes |\n",
+        "line_start": 19,
+        "line_end": 24
+    },
+    "4": {
+        "content": "Source document: ../data/platform-docs-versions/TikTok_Research-API/Research API Reference.md\nParagraph location: \n\tRequest\n\tBody\n\nContent: \n## Body  \n|     |     |     |     |     |\n| --- | --- | --- | --- | --- |\n| **Key** | **Type** | **Description** | **Example** | **Required** |\n| query | Query object<br><br>(See the definition below) | A JSON object that contains three types of children: `and`, `or`, and `not`, each of which is a list of conditions. An valid query must contain at least one non-empty `and`, `or` or `not` condition lists | {<br>      \"and\":[<br>        {<br>          \"operation\":\"IN\",<br>          \"field_name\":\"region_code\",<br>          \"field_values\":[<br>            \"JP\",<br>            \"US\"<br>          ]<br>        },<br>        {<br>          \"operation\":\"EQ\",<br>          \"field_name\":\"keyword\",<br>          \"field_values\":[<br>            \"animal\"<br>          ]<br>        }<br>      ],<br>      \"not\":[<br>        {<br>          \"operation\":\"LT\",<br>          \"field_name\":\"create_date\",<br>          \"field_values\":[<br>            \"20230101\"<br>          ]<br>        }<br>      ]<br>    } | Yes |\n| start\\_date | string | The lower bound of video creation time in UTC | \"20210102\" | Yes |\n| end\\_date | string | The upper bound of video creation time in UTC<br><br>The end\\_date must be no more than 30 days after the start\\_date | \"20210123\" | Yes |\n| max\\_count | int64 | The number of videos in response. Default is 20, max is 100.<br><br>It is possible that the API returns less videos than the max count due to reasons such as videos deleted/marked as private by users etc. | 20  | No  |\n| cursor | int64 | Retrieve video results starting from the specified index | 100 | No  |\n| search\\_id | string | The unique identifier assigned to a cached search result. This identifier enables the resumption of a prior search and retrieval of additional results based on the same search criteria. | \"7201388525814961198\" | No  |\n| is\\_random | bool | The flag that indicates whether to return results in a random order.<br><br>If set to true, then the API returns 1 - 100 videos in random order that matches the query.<br><br>If set to false or not set with any value, then the API returns results in the decreasing order of video IDs. | true | No  |  \n##### Query  \n|     |     |     |     |\n| --- | --- | --- | --- |\n| **Key** | **Type** | **Description** | **Required** |\n| and | list<Condition> | The `and` conditions specify that all the conditions in the list must be met | No  |\n| or  | list<Condition> | The `or` conditions specify that at least one of the conditions in the list must be met | No  |\n| not | list<Condition> | The `not` conditions specify that none of the conditions in the list must be met | No  |  \n##### Condition  \n|     |     |     |\n| --- | --- | --- |\n| **Name** | **Type** | **Description** |\n| field\\_name | string | The name of the field this condition is restricting<br><br>One of: \\[\"create\\_date\", \"username\", \"region\\_code\", \"video\\_id\", \"hashtag\\_name\", \"keyword\", \"music\\_id\", \"effect\\_id\", \"video\\_length\"\\] |\n| operation | string | One of: \"EQ\", \"IN\", \"GT\", \"GTE\", \"LT\", \"LTE\" |\n| field\\_values | list<string> | A list of restriction values |  \n##### Condition fields  \n|     |     |     |\n| --- | --- | --- |\n| **Field Name** | **Description** | **Example** |\n| create\\_date | The video creation date in UTC, presented in the format YYYYMMDD | 20220910 |\n| username | The username of the video creator | \"cookie\\_love\\_122\" |\n| region\\_code | The abbreviated name of the country where the video was created | 'FR', 'TH', 'MM', 'BD', 'IT', 'NP', 'IQ', 'BR', 'US', 'KW', 'VN', 'AR', 'KZ', 'GB', 'UA', 'TR', 'ID', 'PK', 'NG', 'KH', 'PH', 'EG', 'QA', 'MY', 'ES', 'JO', 'MA', 'SA', 'TW', 'AF', 'EC', 'MX', 'BW', 'JP', 'LT', 'TN', 'RO', 'LY', 'IL', 'DZ', 'CG', 'GH', 'DE', 'BJ', 'SN', 'SK', 'BY', 'NL', 'LA', 'BE', 'DO', 'TZ', 'LK', 'NI', 'LB', 'IE', 'RS', 'HU', 'PT', 'GP', 'CM', 'HN', 'FI', 'GA', 'BN', 'SG', 'BO', 'GM', 'BG', 'SD', 'TT', 'OM', 'FO', 'MZ', 'ML', 'UG', 'RE', 'PY', 'GT', 'CI', 'SR', 'AO', 'AZ', 'LR', 'CD', 'HR', 'SV', 'MV', 'GY', 'BH', 'TG', 'SL', 'MK', 'KE', 'MT', 'MG', 'MR', 'PA', 'IS', 'LU', 'HT', 'TM', 'ZM', 'CR', 'NO', 'AL', 'ET', 'GW', 'AU', 'KR', 'UY', 'JM', 'DK', 'AE', 'MD', 'SE', 'MU', 'SO', 'CO', 'AT', 'GR', 'UZ', 'CL', 'GE', 'PL', 'CA', 'CZ', 'ZA', 'AI', 'VE', 'KG', 'PE', 'CH', 'LV', 'PR', 'NZ', 'TL', 'BT', 'MN', 'FJ', 'SZ', 'VU', 'BF', 'TJ', 'BA', 'AM', 'TD', 'SI', 'CY', 'MW', 'EE', 'XK', 'ME', 'KY', 'YE', 'LS', 'ZW', 'MC', 'GN', 'BS', 'PF', 'NA', 'VI', 'BB', 'BZ', 'CW', 'PS', 'FM', 'PG', 'BI', 'AD', 'TV', 'GL', 'KM', 'AW', 'TC', 'CV', 'MO', 'VC', 'NE', 'WS', 'MP', 'DJ', 'RW', 'AG', 'GI', 'GQ', 'AS', 'AX', 'TO', 'KN', 'LC', 'NC', 'LI', 'SS', 'IR', 'SY', 'IM', 'SC', 'VG', 'SB', 'DM', 'KI', 'UM', 'SX', 'GD', 'MH', 'BQ', 'YT', 'ST', 'CF', 'BM', 'SM', 'PW', 'GU', 'HK', 'IN', 'CK', 'AQ', 'WF', 'JE', 'MQ', 'CN', 'GF', 'MS', 'GG', 'TK', 'FK', 'PM', 'NU', 'MF', 'ER', 'NF', 'VA', 'IO', 'SH', 'BL', 'CU', 'NR', 'TP', 'BV', 'EH', 'PN', 'TF', 'RU' |\n| video\\_id | The unique identifier of the video | 6978662169214864645 |\n| hashtag\\_name | The hashtag associated with the video | \"arianagrande\", \"celebrity\" |\n| keyword | The keyword in the video description | \"tiktok\" |\n| music\\_id | The music ID of the video. | 8978345345214861235 |\n| effect\\_id | The effect ID of the video. | 3957392342148643476 |\n| video\\_length | The duration of the video<br><br>SHORT: <15s<br><br>MID: 15 ~60s<br><br>LONG: 1~5min<br><br>EXTRA\\_LONG: >5min | \"SHORT\", \"MID\", \"LONG\", \"EXTRA\\_LONG\" |\n",
+        "line_start": 26,
+        "line_end": 64
+    },
+    "5": {
+        "content": "Source document: ../data/platform-docs-versions/TikTok_Research-API/Research API Reference.md\nParagraph location: \n\tRequest\n\tExample\n\nContent: \n## Example  \ncurl -L -X POST 'https://open.tiktokapis.com/v2/research/video/query/?fields=id,video_description,create_time' \\\n-H 'Authorization: Bearer clt.example12345Example12345Example' \\\n-H 'Content-Type: application/json' \\\n--data-raw '{\n\"query\": {\n\"and\": [\n{\n\"operation\": \"IN\",\n\"field_name\": \"region_code\",\n\"field_values\": [\"JP\", \"US\"]\n},\n{\n\"operation\":\"EQ\",\n\"field_name\":\"hashtag_name\",\n\"field_values\":[\"animal\"]\n}\n],\n\"not\": [\n{\n\"operation\": \"EQ\",\n\"field_name\": \"video_length\",\n\"field_values\": [\"SHORT\"]\n}\n]\n},\n\"max_count\": 100,\n\"cursor\": 0,\n\"start_date\": \"20230101\",\n\"end_date\": \"20230115\"\n}'\n",
+        "line_start": 72,
+        "line_end": 103
+    },
+    "6": {
+        "content": "Source document: ../data/platform-docs-versions/TikTok_Research-API/Research API Reference.md\nParagraph location: \n\tResponse\n\nContent: \n# Response  \n|     |     |     |\n| --- | --- | --- |\n| **Key** | **Type** | **Example** |\n| data | QueryVideoResponseData | {<br><br>\"videos\": \\[...\\],<br><br>\"cursor\": 100,<br><br>\"has\\_more\": true,<br><br>\"search\\_id\": \"\"<br><br>} |\n| error | ErrorStruct | Error object |\n",
+        "line_start": 106,
+        "line_end": 112
+    },
+    "7": {
+        "content": "Source document: ../data/platform-docs-versions/TikTok_Research-API/Research API Reference.md\nParagraph location: \n\tResponse\n\tData Structures\n\tQueryVideoResponseData\n\nContent: \n## Data Structures  \n### QueryVideoResponseData  \n|     |     |     |\n| --- | --- | --- |\n| **Field** | **Type** | **Description** |\n| videos | list<Video Object> | A list of video objects that match the query |\n| cursor | int64 | Returns video results from the given index. |\n| has\\_more | bool | Whether there are more videos or not. |\n| search\\_id | string | A search\\_id is a unique identifier assigned to a cached search result. This identifier enables the resumption of a prior search and retrieval of additional results based on the same search criteria. |  \n##### Video Object  \n|     |     |     |\n| --- | --- | --- |\n| **Field** | **Type** | **Description** |\n| \"id\" | int64 | Unique identifier for the TikTok video. Also called \"item\\_id\" or \"video\\_id\" |\n| \"create\\_time\" | int64 | UTC Unix epoch (in seconds) of when the TikTok video was posted. (Inherited field from TNS research API) |\n| \"username\" | string | The video's author's username |\n| \"region\\_code\" | string | A two digit code for the country the video was posted in |\n| \"video\\_description\" | string | The description of the video, also known as the title |\n| \"music\\_id\" | int64 | The music\\_id used in the video |\n| \"like\\_count\" | int64 | The number of likes the video has received. |\n| \"comment\\_count\" | int64 | The number of comments the video has received. |\n| \"share\\_count\" | int64 | The number of shares the video has received. |\n| \"view\\_count\" | int64 | The number of video views the video has received. |\n| \"effect\\_ids\" | list<string> | The list of effect ids applied on the video |\n| \"hashtag\\_names\" | list<string> | The list of hashtag names that the video participates in |\n| \"playlist\\_id\" | int64 | The ID of playlist that the video belongs to |\n| \"voice\\_to\\_text\" | string | Voice to text and subtitles (for videos that have voice to text features on, show the texts already generated) |\n",
+        "line_start": 114,
+        "line_end": 141
+    },
+    "8": {
+        "content": "Source document: ../data/platform-docs-versions/TikTok_Research-API/Research API Reference.md\nParagraph location: \n\tResponse\n\tExample\n\nContent: \n## Example  \n{\n\"data\": {\n\"videos\": [\n{\n\"hashtag_names\": [\n\"avengers\",\n\"pov\"\n],\n\"region_code\": \"CA\",\n\"create_time\": 1633823999,\n\"effect_ids\": [\n\"0\"\n],\n\"video_id\": 702874395068494965,\n\"music_id\": 703847506349838790,\n\"video_description\": \"lol #pov #avengers\",\n\"view_count\": 1050,\n\"comment_count\": 2\n},\n...\n],\n\"cursor\": 100,\n\"search_id\": \"7201388525814961198\",\n\"has_more\": true\n},\n\"error\": {\n\"code\": \"ok\",\n\"message\": \"\",\n\"log_id\": \"20230113024658F0D7C5D6CA3A9B79C5B9\"\n}\n}\n",
+        "line_start": 72,
+        "line_end": 104
+    },
+    "9": {
+        "content": "Source document: ../data/platform-docs-versions/TikTok_Research-API/Research API Reference.md\nParagraph location: \n\tResource URL: https://developers.tiktok.com/doc/research-api-specs-query-user-info/\n\nContent: \n# Resource URL: https://developers.tiktok.com/doc/research-api-specs-query-user-info/\n",
+        "line_start": 180,
+        "line_end": 181
+    },
+    "10": {
+        "content": "Source document: ../data/platform-docs-versions/TikTok_Research-API/Research API Reference.md\nParagraph location: \n\tRequest\n\nContent: \n# Request  \n|     |     |\n| --- | --- |\n| **HTTP** **URL** | https://open.tiktokapis.com/v2/research/user/info/ |\n| **HTTP Method** | POST |\n| **Scopes** | research.data.basic (**required**) |\n",
+        "line_start": 3,
+        "line_end": 9
+    },
+    "11": {
+        "content": "Source document: ../data/platform-docs-versions/TikTok_Research-API/Research API Reference.md\nParagraph location: \n\tRequest\n\tHeaders\n\nContent: \n## Headers  \n|     |     |     |     |\n| --- | --- | --- | --- |\n| **Key** | **Type** | **Description** | **Example Value** |\n| Authorization | string | The client access token obtained from /v2/oauth/token/. | Bearer clt.example12345Example12345Example |\n",
+        "line_start": 11,
+        "line_end": 16
+    },
+    "12": {
+        "content": "Source document: ../data/platform-docs-versions/TikTok_Research-API/Research API Reference.md\nParagraph location: \n\tRequest\n\tQuery Parameters\n\nContent: \n## Query Parameters  \n|     |     |     |     |     |\n| --- | --- | --- | --- | --- |\n| **Key** | **Type** | **Description** | **Example** | **Required** |\n| fields | string | Field names for desired data to be returned. It is a comma separated list.<br><br>See User Info Object below for a full list of values. | **Complete list**:<br><br>display\\_name, bio\\_description, avatar\\_url, is\\_verified, follower\\_count, following\\_count, likes\\_count, video\\_count | Yes |\n",
+        "line_start": 19,
+        "line_end": 24
+    },
+    "13": {
+        "content": "Source document: ../data/platform-docs-versions/TikTok_Research-API/Research API Reference.md\nParagraph location: \n\tRequest\n\tQuery Parameters\n\tBody Parameters\n\nContent: \n### Body Parameters  \n|     |     |     |     |\n| --- | --- | --- | --- |\n| **Key** | **Type** | **Description** | **Example Value** |\n| username | string | username as the unique identifier | \"joe11235\" |\n",
+        "line_start": 205,
+        "line_end": 210
+    },
+    "14": {
+        "content": "Source document: ../data/platform-docs-versions/TikTok_Research-API/Research API Reference.md\nParagraph location: \n\tRequest\n\tQuery Parameters\n\tExample\n\nContent: \n### Example  \ncurl -L 'https://open.tiktokapis.com/v2/research/user/info/?fields=display_name,bio_description,avatar_url,is_verified,follower_count,following_count,likes_count,video_count' \\\n-H 'Authorization: Bearer clt.example12345Example12345Example' \\\n-H 'Content-Type:application/json' \\\n-d '{\"username\": \"joe123456\"}'\n",
+        "line_start": 212,
+        "line_end": 217
+    },
+    "15": {
+        "content": "Source document: ../data/platform-docs-versions/TikTok_Research-API/Research API Reference.md\nParagraph location: \n\tResponse\n\tBody\n\nContent: \n# Response  \n### Body  \n|     |     |     |\n| --- | --- | --- |\n| **Key** | **Type** | **Description** |\n| data | User Info Object | The returned user info data |\n| error | ErrorStructV2 | Error object |  \nUser Info Object  \n|     |     |     |\n| --- | --- | --- |\n| Field name | Type | Description |\n| \"display\\_name\" | string | The user's display name / nickname |\n| \"bio\\_description\" | string | The user's bio description |\n| \"avatar\\_url\" | string | The url to a user's profile picture |\n| \"is\\_verified\" | bool | The user's verified status. True if verified, false if not |\n| \"following\\_count\" | int | The number of people the user is following |\n| \"follower\\_count\" | int | The number of followers the user has |\n| \"video\\_count\" | int | The number of videos the user has posted |\n| \"likes\\_count\" | int | The total number of likes the user has accumulated |\n",
+        "line_start": 106,
+        "line_end": 125
+    },
+    "16": {
+        "content": "Source document: ../data/platform-docs-versions/TikTok_Research-API/Research API Reference.md\nParagraph location: \n\tResponse\n\tExample\n\nContent: \n### Example  \n{\n\"data\": {\n\"bio_description\": \"my_bio\",\n\"is_verified\": false,\n\"likes_count\": 27155089,\n\"video_count\": 44,\n\"avatar_url\": \"https://some_cdn.com/my_avatar\",\n\"follower_count\": 232,\n\"following_count\": 45,\n\"display_name\": \"my nick name\"\n},\n\"error\": {\n\"code\": \"ok\",\n\"message\": \"\",\n\"log_id\": \"202207280326050102231031430C7E754E\",\n}\n}\n",
+        "line_start": 212,
+        "line_end": 230
+    },
+    "17": {
+        "content": "Source document: ../data/platform-docs-versions/TikTok_Research-API/Research API Reference.md\nParagraph location: \n\tResource URL: https://developers.tiktok.com/doc/research-api-specs-query-video-comments/\n\nContent: \n# Resource URL: https://developers.tiktok.com/doc/research-api-specs-query-video-comments/\n",
+        "line_start": 263,
+        "line_end": 264
+    },
+    "18": {
+        "content": "Source document: ../data/platform-docs-versions/TikTok_Research-API/Research API Reference.md\nParagraph location: \n\tRequest\n\nContent: \n# Request  \n|     |     |\n| --- | --- |\n| **HTTP** **URL** | https://open.tiktokapis.com/v2/research/video/comment/list/ |\n| **HTTP Method** | POST |\n| **Scopes** | research.data.basic (**required**) |\n",
+        "line_start": 3,
+        "line_end": 9
+    },
+    "19": {
+        "content": "Source document: ../data/platform-docs-versions/TikTok_Research-API/Research API Reference.md\nParagraph location: \n\tRequest\n\tHeaders\n\nContent: \n## Headers  \n|     |     |     |     |\n| --- | --- | --- | --- |\n| **Key** | **Type** | **Description** | **Example Value** |\n| Authorization | string | The client access token obtained from /v2/oauth/token/. | Bearer clt.example12345Example12345Example |\n| Content-Type | string | Content type for the return data | application/json |\n",
+        "line_start": 11,
+        "line_end": 17
+    },
+    "20": {
+        "content": "Source document: ../data/platform-docs-versions/TikTok_Research-API/Research API Reference.md\nParagraph location: \n\tRequest\n\tQuery Parameters\n\nContent: \n## Query Parameters  \n|     |     |     |     |     |\n| --- | --- | --- | --- | --- |\n| **Key** | **Type** | **Description** | **Example** | **Required** |\n| fields | string | The requested fields. Choose from the Comment Object fields. | **Complete list**:<br><br>id, video\\_id, text, like\\_count, reply\\_count, parent\\_comment\\_id, create\\_time | Yes |\n",
+        "line_start": 19,
+        "line_end": 24
+    },
+    "21": {
+        "content": "Source document: ../data/platform-docs-versions/TikTok_Research-API/Research API Reference.md\nParagraph location: \n\tRequest\n\tQuery Parameters\n\tBody Parameters\n\nContent: \n### Body Parameters  \n|     |     |     |     |\n| --- | --- | --- | --- |\n| **Key** | **Type** | **Description** | **Required** |\n| video\\_id | int\\_64 | The id of the video that the comments are made to. | Yes |\n| max\\_count | int64 | The number of comments in response.<br><br>Default is 10, max is 100.<br><br>It is possible that the API returns less comments than the max count due to reasons such as comments deleted by users etc. | No  |\n| cursor | int64 | The starting index of the comments in the response.<br><br>**Note**: only the top 1000 comments will be returned, so cursor + max\\_count <= 1000. | No  |\n",
+        "line_start": 205,
+        "line_end": 212
+    },
+    "22": {
+        "content": "Source document: ../data/platform-docs-versions/TikTok_Research-API/Research API Reference.md\nParagraph location: \n\tRequest\n\tQuery Parameters\n\tExample\n\nContent: \n### Example  \ncurl -L POST 'https://open.tiktokapis.com/v2/research/video/comment/list/?fields=id,like_count,create_time,text,video_id,parent_comment_id' \\\n-H 'Authorization: Bearer clt.example12345Example12345Example' \\\n-H 'Content-Type:application/json' \\\n-d '{\n\"video_id\": 7178997441201524010,\n\"max_count\": 50,\n\"cursor\": 150\n}'\n",
+        "line_start": 212,
+        "line_end": 221
+    },
+    "23": {
+        "content": "Source document: ../data/platform-docs-versions/TikTok_Research-API/Research API Reference.md\nParagraph location: \n\tResponse\n\tBody\n\nContent: \n# Response  \n### Body  \n|     |     |     |\n| --- | --- | --- |\n| **Key** | **Type** | **Description** |\n| data | ResearchVideoCommentsData | A list of comment objects for a given video |\n| error | ErrorStructV2 | Error object |  \n##### ResearchVideoCommentsData  \n|     |     |     |     |\n| --- | --- | --- | --- |\n| **Key** | **Type** | **Description** | **Example** |\n| comments | CommentObject | The metadata of a comment. | See example below |\n| cursor | int64 | The cursor of the next page. | 1050 |\n| has\\_more | bool | Whether there are more videos or not. | true |  \n##### Comment Object  \n|     |     |     |\n| --- | --- | --- |\n| **Key** | **Type** | **Description** |\n| id  | int | The unique ID for the comment |\n| text | string | The text within the comment |\n| video\\_id | int | The ID of the video or item that the comment is under |\n| parent\\_comment\\_id | int | The ID of the comment's parent comment, if any |\n| like\\_count | int | The number of likes a comment has |\n| reply\\_count | int | The number of replies a comment has |\n| create\\_time | int | The unix timestamp that the comment was created on |\n",
+        "line_start": 106,
+        "line_end": 131
+    },
+    "24": {
+        "content": "Source document: ../data/platform-docs-versions/TikTok_Research-API/Research API Reference.md\nParagraph location: \n\tResponse\n\tExample\n\nContent: \n### Example  \n{\n\"data\": {\n\"comments\": [\n{\n\"text\": \"AWEEEEEE \ud83e\udd70\ud83e\udd70\ud83e\udd70\",\n\"video_id\": 1234563451201523412,\n\"create_time\": 1671491598,\n\"id\": 12345616934634134,\n\"like_count\": 50,\n\"parent_comment_id\": 1234561201524010,\n\"reply_count\": 10\n},\n...\n],\n\"has_more\": true,\n\"cursor\": 300\n},\n\"error\": {\n\"code\": \"ok\",\n\"message\": \"\",\n\"log_id\": \"202207280326050102231031430C7E754E\"\n}\n}  \n**Personal information (phone number, email and credit card account, etc) in the comments will be redacted. See the example below.**  \nComment (original): \"Could you please contact me? 4059233930 is my number. Hi Edmond, email Mwen numerow at acharles@emortgagecapital.com, epi map relew. Download \u201cTemu\u201d make an account then search up 23216471 then click accept.\"  \nComment (returned by the API): \"Could you please contact me? 40\\*\\*\\*\\*\\*\\*30 is my number.  \nHi Edmond, email Mwen numerow at a\\*\\*\\*\\*\\*\\*\\*@\\*\\*\\*\\*\\*\\*\\*\\*\\*\\*\\*\\*\\*\\*\\*\\*\\*\\*\\*\\*, epi map relew.  \nDownload \u201cTemu\u201d make an account then search up \\*\\*\\*\\*6471 then click accept.\"\n",
+        "line_start": 212,
+        "line_end": 241
+    }
+}

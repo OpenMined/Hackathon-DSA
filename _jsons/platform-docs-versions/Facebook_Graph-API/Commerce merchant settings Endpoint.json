@@ -1,0 +1,532 @@
+{
+    "0": {
+        "content": "Source document: ../data/platform-docs-versions/Facebook_Graph-API/Commerce merchant settings Endpoint.md\nParagraph location: \n\tResource URL: https://developers.facebook.com/docs/graph-api/reference/commerce-merchant-settings/\n\nContent: \n# Resource URL: https://developers.facebook.com/docs/graph-api/reference/commerce-merchant-settings/\n",
+        "line_start": 0,
+        "line_end": 1
+    },
+    "1": {
+        "content": "Source document: ../data/platform-docs-versions/Facebook_Graph-API/Commerce merchant settings Endpoint.md\nParagraph location: \n\tCommerce Merchant Settings\n\tReading\n\nContent: \n# Commerce Merchant Settings  \n## Reading  \nCommerce Merchant Settings object  \nStarting September 14, 2021, the following fields will throw an error for version 12.0+ calls made by apps that lack the endpoint's required permissions. This change will apply to all versions on December 13, 2021.  \n* `instagram_channel`\n",
+        "line_start": 1,
+        "line_end": 6
+    },
+    "2": {
+        "content": "Source document: ../data/platform-docs-versions/Facebook_Graph-API/Commerce merchant settings Endpoint.md\nParagraph location: \n\tCommerce Merchant Settings\n\tReading\n\tNew Page Experience\n\nContent: \n### New Page Experience  \nThis endpoint is supported for [New Page Experience](https://developers.facebook.com/docs/pages/new-pages-experience/).\n",
+        "line_start": 12,
+        "line_end": 14
+    },
+    "3": {
+        "content": "Source document: ../data/platform-docs-versions/Facebook_Graph-API/Commerce merchant settings Endpoint.md\nParagraph location: \n\tCommerce Merchant Settings\n\tReading\n\tPermisions\n\nContent: \n### Permisions  \nThe system user needs to have  \n* `pages_read_engagement`\n* `commerce_account_read_settings`\n* Admin access for the Facebook Page connected to the Instagram handle\n",
+        "line_start": 16,
+        "line_end": 21
+    },
+    "4": {
+        "content": "Source document: ../data/platform-docs-versions/Facebook_Graph-API/Commerce merchant settings Endpoint.md\nParagraph location: \n\tCommerce Merchant Settings\n\tReading\n\tExample\n\nContent: \n### Example  \nHTTPPHP SDKJavaScript SDKAndroid SDKiOS SDK[Graph API Explorer](https://developers.facebook.com/tools/explorer/?method=GET&path=%7Bcommerce-merchant-settings-id%7D&version=v19.0)  \nGET /v19.0/{commerce-merchant-settings-id} HTTP/1.1\nHost: graph.facebook.com  \n/* PHP SDK v5.0.0 */\n/* make the API call */\ntry {\n// Returns a `Facebook\\FacebookResponse` object\n$response = $fb->get(\n'/{commerce-merchant-settings-id}',\n'{access-token}'\n);\n} catch(Facebook\\Exceptions\\FacebookResponseException $e) {\necho 'Graph returned an error: ' . $e->getMessage();\nexit;\n} catch(Facebook\\Exceptions\\FacebookSDKException $e) {\necho 'Facebook SDK returned an error: ' . $e->getMessage();\nexit;\n}\n$graphNode = $response->getGraphNode();\n/* handle the result */  \n/* make the API call */\nFB.api(\n\"/{commerce-merchant-settings-id}\",\nfunction (response) {\nif (response && !response.error) {\n/* handle the result */\n}\n}\n);  \n/* make the API call */\nnew GraphRequest(\nAccessToken.getCurrentAccessToken(),\n\"/{commerce-merchant-settings-id}\",\nnull,\nHttpMethod.GET,\nnew GraphRequest.Callback() {\npublic void onCompleted(GraphResponse response) {\n/* handle the result */\n}\n}\n).executeAsync();  \n/* make the API call */\nFBSDKGraphRequest *request = [[FBSDKGraphRequest alloc]\ninitWithGraphPath:@\"/{commerce-merchant-settings-id}\"\nparameters:params\nHTTPMethod:@\"GET\"];\n[request startWithCompletionHandler:^(FBSDKGraphRequestConnection *connection,\nid result,\nNSError *error) {\n// Handle the result\n}];  \nIf you want to learn how to use the Graph API, read our [Using Graph API guide](https://developers.facebook.com/docs/graph-api/using-graph-api/).\n",
+        "line_start": 24,
+        "line_end": 77
+    },
+    "5": {
+        "content": "Source document: ../data/platform-docs-versions/Facebook_Graph-API/Commerce merchant settings Endpoint.md\nParagraph location: \n\tCommerce Merchant Settings\n\tReading\n\tParameters\n\nContent: \n### Parameters  \nThis endpoint doesn't have any parameters.\n",
+        "line_start": 85,
+        "line_end": 87
+    },
+    "6": {
+        "content": "Source document: ../data/platform-docs-versions/Facebook_Graph-API/Commerce merchant settings Endpoint.md\nParagraph location: \n\tCommerce Merchant Settings\n\tReading\n\tFields\n\nContent: \n### Fields  \n| Field | Description |\n| --- | --- |\n| `id`<br><br>numeric string | ID of the Commerce Merchant Settings |\n| `braintree_merchant_id`<br><br>string | The Braintree Merchant ID (for BigCommerce) |\n| `checkout_message`<br><br>string | Checkout Message of Commerce Merchant Settings<br><br>[Default](https://developers.facebook.com/docs/graph-api/using-graph-api/#fields) |\n| `contact_email`<br><br>string | Contact email of Commerce Merchant Settings<br><br>[Default](https://developers.facebook.com/docs/graph-api/using-graph-api/#fields) |\n| `cta`<br><br>enum | Shop's CTA (ie. onsite checkout, offsite, or contact-merchant) |\n| `disable_checkout_urls`<br><br>bool | Ignore checkout\\_urls for offsite links forthis merchant, if they exist on products. |\n| `display_name`<br><br>string | Business display name |\n| `external_merchant_id`<br><br>string | Merchant Identifier on External Partner Platforms (i.e. Shopify) |\n| `facebook_channel`[](#)<br><br>CommerceFacebookChannel | Facebook channel settings |\n| `feature_eligibility`<br><br>CommerceMerchantSettingsFeatureEligibility | Returns feature eligibilities for the Commerce Merchant Settings |\n| `has_discount_code`<br><br>bool | Whether or not this merchant has discount code |\n| `has_onsite_intent`<br><br>bool | This merchant selected onsite checkout during setup |\n| `instagram_channel`[](#)<br><br>CommerceInstagramChannel | Instagram channel settings |\n| `merchant_alert_email`<br><br>string | Place to send alert emails for the merchant |\n| `merchant_page`<br><br>[Profile](https://developers.facebook.com/docs/graph-api/reference/profile/) | Profile of the merchant selling products<br><br>[Default](https://developers.facebook.com/docs/graph-api/using-graph-api/#fields) |\n| `merchant_status`<br><br>enum | Current status of the merchant |\n| `onsite_commerce_merchant`<br><br>CommerceMerchantSettingsOnsiteCommerceMerchant | Commerce Merchant Settings Info for the new commerce platform API |\n| `payment_provider`<br><br>enum | Payment Provider for Commerce Merchant Settings<br><br>[Default](https://developers.facebook.com/docs/graph-api/using-graph-api/#fields) |\n| `privacy_url_by_locale`<br><br>list<KeyValue:string,string> | Map from locale to merchant privacy policy url. The locale follows the format of concatenating ISO language and country code with an underscore. For instance, en\\_US represents U.S. English. |\n| `review_rejection_messages`<br><br>list<string> | Descriptive rejection messages corresponding to the given rejection reasons, if applicable |\n| `review_rejection_reasons`<br><br>list<enum> | Reasons the merchant was rejected on review (for onboarding requests or performance metrics), if applicable |\n| `supported_card_types`<br><br>list<enum> | Credit card types supported by the merchant |\n| `terms`<br><br>string | Terms of Commerce Merchant Settings<br><br>[Default](https://developers.facebook.com/docs/graph-api/using-graph-api/#fields) |\n| `terms_url_by_locale`<br><br>list<KeyValue:string,string> | Map from locale to merchant terms url. The locale follows the format of concatenating ISO language and country code with an underscore. For instance, en\\_US represents U.S. English. |\n| `whatsapp_channel`[](#)<br><br>CommerceWhatsAppChannel | WhatsApp Channel Settings |\n",
+        "line_start": 89,
+        "line_end": 117
+    },
+    "7": {
+        "content": "Source document: ../data/platform-docs-versions/Facebook_Graph-API/Commerce merchant settings Endpoint.md\nParagraph location: \n\tCommerce Merchant Settings\n\tReading\n\tEdges\n\nContent: \n### Edges  \n| Edge | Description |\n| --- | --- |\n| [`commerce_orders`](https://developers.facebook.com/docs/graph-api/reference/commerce-merchant-settings/commerce_orders/) | Orders for this merchant |\n| [`commerce_payouts`](https://developers.facebook.com/docs/graph-api/reference/commerce-merchant-settings/commerce_payouts/) | The commerce payouts of this Page |\n| [`order_management_apps`](https://developers.facebook.com/docs/graph-api/reference/commerce-merchant-settings/order_management_apps/) | App ID that is authorized to manage this shop |\n| [`product_catalogs`](https://developers.facebook.com/docs/graph-api/reference/commerce-merchant-settings/product_catalogs/) | Product catalogs attached to this merchant |\n| [`returns`](https://developers.facebook.com/docs/graph-api/reference/commerce-merchant-settings/returns/)[](#) | Order Returns for this Merchant |\n| [`seller_issues`](https://developers.facebook.com/docs/graph-api/reference/commerce-merchant-settings/seller_issues/) | seller\\_issues |\n| [`setup_status`](https://developers.facebook.com/docs/graph-api/reference/commerce-merchant-settings/setup_status/) | Onboarding status for this merchant |\n| [`shops`](https://developers.facebook.com/docs/graph-api/reference/commerce-merchant-settings/shops/) | The shops associated with the merchant. |\n| [`tax_settings`](https://developers.facebook.com/docs/graph-api/reference/commerce-merchant-settings/tax_settings/) | Tax settings including information about fulfillment locations |\n",
+        "line_start": 119,
+        "line_end": 131
+    },
+    "8": {
+        "content": "Source document: ../data/platform-docs-versions/Facebook_Graph-API/Commerce merchant settings Endpoint.md\nParagraph location: \n\tCommerce Merchant Settings\n\tReading\n\tError Codes\n\nContent: \n### Error Codes  \n| Error | Description |\n| --- | --- |\n| 100 | Invalid parameter |\n| 200 | Permissions error |\n",
+        "line_start": 133,
+        "line_end": 138
+    },
+    "9": {
+        "content": "Source document: ../data/platform-docs-versions/Facebook_Graph-API/Commerce merchant settings Endpoint.md\nParagraph location: \n\tCommerce Merchant Settings\n\tCreating\n\nContent: \n## Creating  \nYou can't perform this operation on this endpoint.\n",
+        "line_start": 140,
+        "line_end": 142
+    },
+    "10": {
+        "content": "Source document: ../data/platform-docs-versions/Facebook_Graph-API/Commerce merchant settings Endpoint.md\nParagraph location: \n\tCommerce Merchant Settings\n\tUpdating\n\nContent: \n## Updating  \nYou can't perform this operation on this endpoint.\n",
+        "line_start": 144,
+        "line_end": 146
+    },
+    "11": {
+        "content": "Source document: ../data/platform-docs-versions/Facebook_Graph-API/Commerce merchant settings Endpoint.md\nParagraph location: \n\tCommerce Merchant Settings\n\tDeleting\n\nContent: \n## Deleting  \nYou can't perform this operation on this endpoint.  \n![](https://www.facebook.com/tr?id=675141479195042&ev=PageView&noscript=1)  \n![](https://www.facebook.com/tr?id=574561515946252&ev=PageView&noscript=1)  \n![](https://www.facebook.com/tr?id=1754628768090156&ev=PageView&noscript=1)\n",
+        "line_start": 148,
+        "line_end": 153
+    },
+    "12": {
+        "content": "Source document: ../data/platform-docs-versions/Facebook_Graph-API/Commerce merchant settings Endpoint.md\nParagraph location: \n\tResource URL: https://developers.facebook.com/docs/graph-api/reference/commerce-merchant-settings/acknowledge_orders/\n\nContent: \n# Resource URL: https://developers.facebook.com/docs/graph-api/reference/commerce-merchant-settings/acknowledge_orders/\n",
+        "line_start": 158,
+        "line_end": 159
+    },
+    "13": {
+        "content": "Source document: ../data/platform-docs-versions/Facebook_Graph-API/Commerce merchant settings Endpoint.md\nParagraph location: \n\tCommerce Merchant Settings Acknowledge Orders\n\tReading\n\nContent: \n# Commerce Merchant Settings Acknowledge Orders  \n## Reading  \nYou can't perform this operation on this endpoint.\n",
+        "line_start": 159,
+        "line_end": 162
+    },
+    "14": {
+        "content": "Source document: ../data/platform-docs-versions/Facebook_Graph-API/Commerce merchant settings Endpoint.md\nParagraph location: \n\tCommerce Merchant Settings Acknowledge Orders\n\tCreating\n\nContent: \n## Creating  \nYou can't perform this operation on this endpoint.\n",
+        "line_start": 140,
+        "line_end": 142
+    },
+    "15": {
+        "content": "Source document: ../data/platform-docs-versions/Facebook_Graph-API/Commerce merchant settings Endpoint.md\nParagraph location: \n\tCommerce Merchant Settings Acknowledge Orders\n\tUpdating\n\nContent: \n## Updating  \nYou can't perform this operation on this endpoint.\n",
+        "line_start": 144,
+        "line_end": 146
+    },
+    "16": {
+        "content": "Source document: ../data/platform-docs-versions/Facebook_Graph-API/Commerce merchant settings Endpoint.md\nParagraph location: \n\tCommerce Merchant Settings Acknowledge Orders\n\tDeleting\n\nContent: \n## Deleting  \nYou can't perform this operation on this endpoint.  \n![](https://www.facebook.com/tr?id=675141479195042&ev=PageView&noscript=1)  \n![](https://www.facebook.com/tr?id=574561515946252&ev=PageView&noscript=1)  \n![](https://www.facebook.com/tr?id=1754628768090156&ev=PageView&noscript=1)\n",
+        "line_start": 148,
+        "line_end": 153
+    },
+    "17": {
+        "content": "Source document: ../data/platform-docs-versions/Facebook_Graph-API/Commerce merchant settings Endpoint.md\nParagraph location: \n\tResource URL: https://developers.facebook.com/docs/graph-api/reference/commerce-merchant-settings/commerce_orders/\n\nContent: \n# Resource URL: https://developers.facebook.com/docs/graph-api/reference/commerce-merchant-settings/commerce_orders/\n",
+        "line_start": 183,
+        "line_end": 184
+    },
+    "18": {
+        "content": "Source document: ../data/platform-docs-versions/Facebook_Graph-API/Commerce merchant settings Endpoint.md\nParagraph location: \n\tCommerce Merchant Settings Commerce Orders\n\tReading\n\nContent: \n# Commerce Merchant Settings Commerce Orders  \n## Reading  \nCommerceMerchantSettingsCommerceOrders\n",
+        "line_start": 184,
+        "line_end": 187
+    },
+    "19": {
+        "content": "Source document: ../data/platform-docs-versions/Facebook_Graph-API/Commerce merchant settings Endpoint.md\nParagraph location: \n\tCommerce Merchant Settings Commerce Orders\n\tReading\n\tNew Page Experience\n\nContent: \n### New Page Experience  \nThis endpoint is supported for [New Page Experience](https://developers.facebook.com/docs/pages/new-pages-experience/).\n",
+        "line_start": 12,
+        "line_end": 14
+    },
+    "20": {
+        "content": "Source document: ../data/platform-docs-versions/Facebook_Graph-API/Commerce merchant settings Endpoint.md\nParagraph location: \n\tCommerce Merchant Settings Commerce Orders\n\tReading\n\tExample\n\nContent: \n### Example  \nHTTPPHP SDKJavaScript SDKAndroid SDKiOS SDK[Graph API Explorer](https://developers.facebook.com/tools/explorer/?method=GET&path=%7Bcommerce-merchant-settings-id%7D%2Fcommerce_orders&version=v19.0)  \nGET /v19.0/{commerce-merchant-settings-id}/commerce_orders HTTP/1.1\nHost: graph.facebook.com  \n/* PHP SDK v5.0.0 */\n/* make the API call */\ntry {\n// Returns a `Facebook\\FacebookResponse` object\n$response = $fb->get(\n'/{commerce-merchant-settings-id}/commerce_orders',\n'{access-token}'\n);\n} catch(Facebook\\Exceptions\\FacebookResponseException $e) {\necho 'Graph returned an error: ' . $e->getMessage();\nexit;\n} catch(Facebook\\Exceptions\\FacebookSDKException $e) {\necho 'Facebook SDK returned an error: ' . $e->getMessage();\nexit;\n}\n$graphNode = $response->getGraphNode();\n/* handle the result */  \n/* make the API call */\nFB.api(\n\"/{commerce-merchant-settings-id}/commerce_orders\",\nfunction (response) {\nif (response && !response.error) {\n/* handle the result */\n}\n}\n);  \n/* make the API call */\nnew GraphRequest(\nAccessToken.getCurrentAccessToken(),\n\"/{commerce-merchant-settings-id}/commerce_orders\",\nnull,\nHttpMethod.GET,\nnew GraphRequest.Callback() {\npublic void onCompleted(GraphResponse response) {\n/* handle the result */\n}\n}\n).executeAsync();  \n/* make the API call */\nFBSDKGraphRequest *request = [[FBSDKGraphRequest alloc]\ninitWithGraphPath:@\"/{commerce-merchant-settings-id}/commerce_orders\"\nparameters:params\nHTTPMethod:@\"GET\"];\n[request startWithCompletionHandler:^(FBSDKGraphRequestConnection *connection,\nid result,\nNSError *error) {\n// Handle the result\n}];  \nIf you want to learn how to use the Graph API, read our [Using Graph API guide](https://developers.facebook.com/docs/graph-api/using-graph-api/).\n",
+        "line_start": 24,
+        "line_end": 77
+    },
+    "21": {
+        "content": "Source document: ../data/platform-docs-versions/Facebook_Graph-API/Commerce merchant settings Endpoint.md\nParagraph location: \n\tCommerce Merchant Settings Commerce Orders\n\tReading\n\tParameters\n\nContent: \n### Parameters  \n| Parameter | Description |\n| --- | --- |\n| `filters`<br><br>array<enum {HAS\\_FULFILLMENTS, HAS\\_CANCELLATIONS, HAS\\_REFUNDS, NO\\_SHIPMENTS, NO\\_CANCELLATIONS, NO\\_REFUNDS}> | Various filters to sort through the orders |\n| `state`<br><br>array<enum {FB\\_PROCESSING, CREATED, IN\\_PROGRESS, COMPLETED}> | The state of the order (added support for multi-item in v3.3+) |\n| `updated_after`<br><br>datetime/timestamp | Updated after time |\n| `updated_before`<br><br>datetime/timestamp | Updated before time |\n",
+        "line_start": 85,
+        "line_end": 92
+    },
+    "22": {
+        "content": "Source document: ../data/platform-docs-versions/Facebook_Graph-API/Commerce merchant settings Endpoint.md\nParagraph location: \n\tCommerce Merchant Settings Commerce Orders\n\tReading\n\tFields\n\nContent: \n### Fields  \nReading from this edge will return a JSON formatted result:  \n{\n\"`data`\": \\[\\],\n\"`paging`\": {}\n}  \n#### `data`  \nA list of [CommerceOrder](https://developers.facebook.com/docs/graph-api/reference/commerce-order/) nodes.  \n#### `paging`  \nFor more details about pagination, see the [Graph API guide](https://developers.facebook.com/docs/graph-api/using-graph-api/#paging).\n",
+        "line_start": 89,
+        "line_end": 99
+    },
+    "23": {
+        "content": "Source document: ../data/platform-docs-versions/Facebook_Graph-API/Commerce merchant settings Endpoint.md\nParagraph location: \n\tCommerce Merchant Settings Commerce Orders\n\tReading\n\tError Codes\n\nContent: \n### Error Codes  \n| Error | Description |\n| --- | --- |\n| 100 | Invalid parameter |\n| 200 | Permissions error |\n",
+        "line_start": 133,
+        "line_end": 138
+    },
+    "24": {
+        "content": "Source document: ../data/platform-docs-versions/Facebook_Graph-API/Commerce merchant settings Endpoint.md\nParagraph location: \n\tCommerce Merchant Settings Commerce Orders\n\tCreating\n\nContent: \n## Creating  \nYou can't perform this operation on this endpoint.\n",
+        "line_start": 140,
+        "line_end": 142
+    },
+    "25": {
+        "content": "Source document: ../data/platform-docs-versions/Facebook_Graph-API/Commerce merchant settings Endpoint.md\nParagraph location: \n\tCommerce Merchant Settings Commerce Orders\n\tUpdating\n\nContent: \n## Updating  \nYou can't perform this operation on this endpoint.\n",
+        "line_start": 144,
+        "line_end": 146
+    },
+    "26": {
+        "content": "Source document: ../data/platform-docs-versions/Facebook_Graph-API/Commerce merchant settings Endpoint.md\nParagraph location: \n\tCommerce Merchant Settings Commerce Orders\n\tDeleting\n\nContent: \n## Deleting  \nYou can't perform this operation on this endpoint.  \n![](https://www.facebook.com/tr?id=675141479195042&ev=PageView&noscript=1)  \n![](https://www.facebook.com/tr?id=574561515946252&ev=PageView&noscript=1)  \n![](https://www.facebook.com/tr?id=1754628768090156&ev=PageView&noscript=1)\n",
+        "line_start": 148,
+        "line_end": 153
+    },
+    "27": {
+        "content": "Source document: ../data/platform-docs-versions/Facebook_Graph-API/Commerce merchant settings Endpoint.md\nParagraph location: \n\tResource URL: https://developers.facebook.com/docs/graph-api/reference/commerce-merchant-settings/commerce_payouts/\n\nContent: \n# Resource URL: https://developers.facebook.com/docs/graph-api/reference/commerce-merchant-settings/commerce_payouts/\n",
+        "line_start": 306,
+        "line_end": 307
+    },
+    "28": {
+        "content": "Source document: ../data/platform-docs-versions/Facebook_Graph-API/Commerce merchant settings Endpoint.md\nParagraph location: \n\tCommerce Merchant Settings Commerce Payouts\n\tReading\n\nContent: \n# Commerce Merchant Settings Commerce Payouts  \n## Reading  \nThe edge from a cms to all the commerce payouts made for that cms\n",
+        "line_start": 307,
+        "line_end": 310
+    },
+    "29": {
+        "content": "Source document: ../data/platform-docs-versions/Facebook_Graph-API/Commerce merchant settings Endpoint.md\nParagraph location: \n\tCommerce Merchant Settings Commerce Payouts\n\tReading\n\tNew Page Experience\n\nContent: \n### New Page Experience  \nThis endpoint is supported for [New Page Experience](https://developers.facebook.com/docs/pages/new-pages-experience/).\n",
+        "line_start": 12,
+        "line_end": 14
+    },
+    "30": {
+        "content": "Source document: ../data/platform-docs-versions/Facebook_Graph-API/Commerce merchant settings Endpoint.md\nParagraph location: \n\tCommerce Merchant Settings Commerce Payouts\n\tReading\n\tExample\n\nContent: \n### Example  \nHTTPPHP SDKJavaScript SDKAndroid SDKiOS SDK[Graph API Explorer](https://developers.facebook.com/tools/explorer/?method=GET&path=%7Bcommerce-merchant-settings-id%7D%2Fcommerce_payouts&version=v19.0)  \nGET /v19.0/{commerce-merchant-settings-id}/commerce_payouts HTTP/1.1\nHost: graph.facebook.com  \n/* PHP SDK v5.0.0 */\n/* make the API call */\ntry {\n// Returns a `Facebook\\FacebookResponse` object\n$response = $fb->get(\n'/{commerce-merchant-settings-id}/commerce_payouts',\n'{access-token}'\n);\n} catch(Facebook\\Exceptions\\FacebookResponseException $e) {\necho 'Graph returned an error: ' . $e->getMessage();\nexit;\n} catch(Facebook\\Exceptions\\FacebookSDKException $e) {\necho 'Facebook SDK returned an error: ' . $e->getMessage();\nexit;\n}\n$graphNode = $response->getGraphNode();\n/* handle the result */  \n/* make the API call */\nFB.api(\n\"/{commerce-merchant-settings-id}/commerce_payouts\",\nfunction (response) {\nif (response && !response.error) {\n/* handle the result */\n}\n}\n);  \n/* make the API call */\nnew GraphRequest(\nAccessToken.getCurrentAccessToken(),\n\"/{commerce-merchant-settings-id}/commerce_payouts\",\nnull,\nHttpMethod.GET,\nnew GraphRequest.Callback() {\npublic void onCompleted(GraphResponse response) {\n/* handle the result */\n}\n}\n).executeAsync();  \n/* make the API call */\nFBSDKGraphRequest *request = [[FBSDKGraphRequest alloc]\ninitWithGraphPath:@\"/{commerce-merchant-settings-id}/commerce_payouts\"\nparameters:params\nHTTPMethod:@\"GET\"];\n[request startWithCompletionHandler:^(FBSDKGraphRequestConnection *connection,\nid result,\nNSError *error) {\n// Handle the result\n}];  \nIf you want to learn how to use the Graph API, read our [Using Graph API guide](https://developers.facebook.com/docs/graph-api/using-graph-api/).\n",
+        "line_start": 24,
+        "line_end": 77
+    },
+    "31": {
+        "content": "Source document: ../data/platform-docs-versions/Facebook_Graph-API/Commerce merchant settings Endpoint.md\nParagraph location: \n\tCommerce Merchant Settings Commerce Payouts\n\tReading\n\tParameters\n\nContent: \n### Parameters  \n| Parameter | Description |\n| --- | --- |\n| `end_time`<br><br>datetime/timestamp | The end time until which the payouts should be fetched |\n| `start_time`<br><br>datetime/timestamp | The start time from which the payouts should be fetched |\n",
+        "line_start": 85,
+        "line_end": 90
+    },
+    "32": {
+        "content": "Source document: ../data/platform-docs-versions/Facebook_Graph-API/Commerce merchant settings Endpoint.md\nParagraph location: \n\tCommerce Merchant Settings Commerce Payouts\n\tReading\n\tFields\n\nContent: \n### Fields  \nReading from this edge will return a JSON formatted result:  \n{\n\"`data`\": \\[\\],\n\"`paging`\": {}\n}  \n#### `data`  \nA list of CommercePayout nodes.  \n#### `paging`  \nFor more details about pagination, see the [Graph API guide](https://developers.facebook.com/docs/graph-api/using-graph-api/#paging).\n",
+        "line_start": 89,
+        "line_end": 99
+    },
+    "33": {
+        "content": "Source document: ../data/platform-docs-versions/Facebook_Graph-API/Commerce merchant settings Endpoint.md\nParagraph location: \n\tCommerce Merchant Settings Commerce Payouts\n\tReading\n\tError Codes\n\nContent: \n### Error Codes  \n| Error | Description |\n| --- | --- |\n| 100 | Invalid parameter |\n| 200 | Permissions error |\n",
+        "line_start": 133,
+        "line_end": 138
+    },
+    "34": {
+        "content": "Source document: ../data/platform-docs-versions/Facebook_Graph-API/Commerce merchant settings Endpoint.md\nParagraph location: \n\tCommerce Merchant Settings Commerce Payouts\n\tCreating\n\nContent: \n## Creating  \nYou can't perform this operation on this endpoint.\n",
+        "line_start": 140,
+        "line_end": 142
+    },
+    "35": {
+        "content": "Source document: ../data/platform-docs-versions/Facebook_Graph-API/Commerce merchant settings Endpoint.md\nParagraph location: \n\tCommerce Merchant Settings Commerce Payouts\n\tUpdating\n\nContent: \n## Updating  \nYou can't perform this operation on this endpoint.\n",
+        "line_start": 144,
+        "line_end": 146
+    },
+    "36": {
+        "content": "Source document: ../data/platform-docs-versions/Facebook_Graph-API/Commerce merchant settings Endpoint.md\nParagraph location: \n\tCommerce Merchant Settings Commerce Payouts\n\tDeleting\n\nContent: \n## Deleting  \nYou can't perform this operation on this endpoint.  \n![](https://www.facebook.com/tr?id=675141479195042&ev=PageView&noscript=1)  \n![](https://www.facebook.com/tr?id=574561515946252&ev=PageView&noscript=1)  \n![](https://www.facebook.com/tr?id=1754628768090156&ev=PageView&noscript=1)\n",
+        "line_start": 148,
+        "line_end": 153
+    },
+    "37": {
+        "content": "Source document: ../data/platform-docs-versions/Facebook_Graph-API/Commerce merchant settings Endpoint.md\nParagraph location: \n\tResource URL: https://developers.facebook.com/docs/graph-api/reference/commerce-merchant-settings/order_management_apps/\n\nContent: \n# Resource URL: https://developers.facebook.com/docs/graph-api/reference/commerce-merchant-settings/order_management_apps/\n",
+        "line_start": 427,
+        "line_end": 428
+    },
+    "38": {
+        "content": "Source document: ../data/platform-docs-versions/Facebook_Graph-API/Commerce merchant settings Endpoint.md\nParagraph location: \n\tCommerce Merchant Settings Order Management Apps\n\tReading\n\nContent: \n# Commerce Merchant Settings Order Management Apps  \n## Reading  \nApps authorized to manage orders for this shop\n",
+        "line_start": 428,
+        "line_end": 431
+    },
+    "39": {
+        "content": "Source document: ../data/platform-docs-versions/Facebook_Graph-API/Commerce merchant settings Endpoint.md\nParagraph location: \n\tCommerce Merchant Settings Order Management Apps\n\tReading\n\tNew Page Experience\n\nContent: \n### New Page Experience  \nThis endpoint is supported for [New Page Experience](https://developers.facebook.com/docs/pages/new-pages-experience/).\n",
+        "line_start": 12,
+        "line_end": 14
+    },
+    "40": {
+        "content": "Source document: ../data/platform-docs-versions/Facebook_Graph-API/Commerce merchant settings Endpoint.md\nParagraph location: \n\tCommerce Merchant Settings Order Management Apps\n\tReading\n\tExample\n\nContent: \n### Example  \nHTTPPHP SDKJavaScript SDKAndroid SDKiOS SDK[Graph API Explorer](https://developers.facebook.com/tools/explorer/?method=GET&path=%7Bcommerce-merchant-settings-id%7D%2Forder_management_apps&version=v19.0)  \nGET /v19.0/{commerce-merchant-settings-id}/order_management_apps HTTP/1.1\nHost: graph.facebook.com  \n/* PHP SDK v5.0.0 */\n/* make the API call */\ntry {\n// Returns a `Facebook\\FacebookResponse` object\n$response = $fb->get(\n'/{commerce-merchant-settings-id}/order_management_apps',\n'{access-token}'\n);\n} catch(Facebook\\Exceptions\\FacebookResponseException $e) {\necho 'Graph returned an error: ' . $e->getMessage();\nexit;\n} catch(Facebook\\Exceptions\\FacebookSDKException $e) {\necho 'Facebook SDK returned an error: ' . $e->getMessage();\nexit;\n}\n$graphNode = $response->getGraphNode();\n/* handle the result */  \n/* make the API call */\nFB.api(\n\"/{commerce-merchant-settings-id}/order_management_apps\",\nfunction (response) {\nif (response && !response.error) {\n/* handle the result */\n}\n}\n);  \n/* make the API call */\nnew GraphRequest(\nAccessToken.getCurrentAccessToken(),\n\"/{commerce-merchant-settings-id}/order_management_apps\",\nnull,\nHttpMethod.GET,\nnew GraphRequest.Callback() {\npublic void onCompleted(GraphResponse response) {\n/* handle the result */\n}\n}\n).executeAsync();  \n/* make the API call */\nFBSDKGraphRequest *request = [[FBSDKGraphRequest alloc]\ninitWithGraphPath:@\"/{commerce-merchant-settings-id}/order_management_apps\"\nparameters:params\nHTTPMethod:@\"GET\"];\n[request startWithCompletionHandler:^(FBSDKGraphRequestConnection *connection,\nid result,\nNSError *error) {\n// Handle the result\n}];  \nIf you want to learn how to use the Graph API, read our [Using Graph API guide](https://developers.facebook.com/docs/graph-api/using-graph-api/).\n",
+        "line_start": 24,
+        "line_end": 77
+    },
+    "41": {
+        "content": "Source document: ../data/platform-docs-versions/Facebook_Graph-API/Commerce merchant settings Endpoint.md\nParagraph location: \n\tCommerce Merchant Settings Order Management Apps\n\tReading\n\tParameters\n\nContent: \n### Parameters  \nThis endpoint doesn't have any parameters.\n",
+        "line_start": 85,
+        "line_end": 87
+    },
+    "42": {
+        "content": "Source document: ../data/platform-docs-versions/Facebook_Graph-API/Commerce merchant settings Endpoint.md\nParagraph location: \n\tCommerce Merchant Settings Order Management Apps\n\tReading\n\tFields\n\nContent: \n### Fields  \nReading from this edge will return a JSON formatted result:  \n{\n\"`data`\": \\[\\],\n\"`paging`\": {}\n}  \n#### `data`  \nA list of [Application](https://developers.facebook.com/docs/graph-api/reference/application/) nodes.  \n#### `paging`  \nFor more details about pagination, see the [Graph API guide](https://developers.facebook.com/docs/graph-api/using-graph-api/#paging).\n",
+        "line_start": 89,
+        "line_end": 99
+    },
+    "43": {
+        "content": "Source document: ../data/platform-docs-versions/Facebook_Graph-API/Commerce merchant settings Endpoint.md\nParagraph location: \n\tCommerce Merchant Settings Order Management Apps\n\tReading\n\tError Codes\n\nContent: \n### Error Codes  \n| Error | Description |\n| --- | --- |\n| 200 | Permissions error |\n",
+        "line_start": 133,
+        "line_end": 137
+    },
+    "44": {
+        "content": "Source document: ../data/platform-docs-versions/Facebook_Graph-API/Commerce merchant settings Endpoint.md\nParagraph location: \n\tCommerce Merchant Settings Order Management Apps\n\tCreating\n\nContent: \n## Creating  \nYou can't perform this operation on this endpoint.\n",
+        "line_start": 140,
+        "line_end": 142
+    },
+    "45": {
+        "content": "Source document: ../data/platform-docs-versions/Facebook_Graph-API/Commerce merchant settings Endpoint.md\nParagraph location: \n\tCommerce Merchant Settings Order Management Apps\n\tUpdating\n\nContent: \n## Updating  \nYou can't perform this operation on this endpoint.\n",
+        "line_start": 144,
+        "line_end": 146
+    },
+    "46": {
+        "content": "Source document: ../data/platform-docs-versions/Facebook_Graph-API/Commerce merchant settings Endpoint.md\nParagraph location: \n\tCommerce Merchant Settings Order Management Apps\n\tDeleting\n\nContent: \n## Deleting  \nYou can't perform this operation on this endpoint.  \n![](https://www.facebook.com/tr?id=675141479195042&ev=PageView&noscript=1)  \n![](https://www.facebook.com/tr?id=574561515946252&ev=PageView&noscript=1)  \n![](https://www.facebook.com/tr?id=1754628768090156&ev=PageView&noscript=1)\n",
+        "line_start": 148,
+        "line_end": 153
+    },
+    "47": {
+        "content": "Source document: ../data/platform-docs-versions/Facebook_Graph-API/Commerce merchant settings Endpoint.md\nParagraph location: \n\tResource URL: https://developers.facebook.com/docs/graph-api/reference/commerce-merchant-settings/product_catalogs/\n\nContent: \n# Resource URL: https://developers.facebook.com/docs/graph-api/reference/commerce-merchant-settings/product_catalogs/\n",
+        "line_start": 544,
+        "line_end": 545
+    },
+    "48": {
+        "content": "Source document: ../data/platform-docs-versions/Facebook_Graph-API/Commerce merchant settings Endpoint.md\nParagraph location: \n\tCommerce Merchant Settings Product Catalogs\n\tReading\n\nContent: \n# Commerce Merchant Settings Product Catalogs  \n## Reading  \nCommerceMerchantSettingsProductCatalogs\n",
+        "line_start": 545,
+        "line_end": 548
+    },
+    "49": {
+        "content": "Source document: ../data/platform-docs-versions/Facebook_Graph-API/Commerce merchant settings Endpoint.md\nParagraph location: \n\tCommerce Merchant Settings Product Catalogs\n\tReading\n\tNew Page Experience\n\nContent: \n### New Page Experience  \nThis endpoint is supported for [New Page Experience](https://developers.facebook.com/docs/pages/new-pages-experience/).\n",
+        "line_start": 12,
+        "line_end": 14
+    },
+    "50": {
+        "content": "Source document: ../data/platform-docs-versions/Facebook_Graph-API/Commerce merchant settings Endpoint.md\nParagraph location: \n\tCommerce Merchant Settings Product Catalogs\n\tReading\n\tExample\n\nContent: \n### Example  \nHTTPPHP SDKJavaScript SDKAndroid SDKiOS SDK[Graph API Explorer](https://developers.facebook.com/tools/explorer/?method=GET&path=%7Bcommerce-merchant-settings-id%7D%2Fproduct_catalogs&version=v19.0)  \nGET /v19.0/{commerce-merchant-settings-id}/product_catalogs HTTP/1.1\nHost: graph.facebook.com  \n/* PHP SDK v5.0.0 */\n/* make the API call */\ntry {\n// Returns a `Facebook\\FacebookResponse` object\n$response = $fb->get(\n'/{commerce-merchant-settings-id}/product_catalogs',\n'{access-token}'\n);\n} catch(Facebook\\Exceptions\\FacebookResponseException $e) {\necho 'Graph returned an error: ' . $e->getMessage();\nexit;\n} catch(Facebook\\Exceptions\\FacebookSDKException $e) {\necho 'Facebook SDK returned an error: ' . $e->getMessage();\nexit;\n}\n$graphNode = $response->getGraphNode();\n/* handle the result */  \n/* make the API call */\nFB.api(\n\"/{commerce-merchant-settings-id}/product_catalogs\",\nfunction (response) {\nif (response && !response.error) {\n/* handle the result */\n}\n}\n);  \n/* make the API call */\nnew GraphRequest(\nAccessToken.getCurrentAccessToken(),\n\"/{commerce-merchant-settings-id}/product_catalogs\",\nnull,\nHttpMethod.GET,\nnew GraphRequest.Callback() {\npublic void onCompleted(GraphResponse response) {\n/* handle the result */\n}\n}\n).executeAsync();  \n/* make the API call */\nFBSDKGraphRequest *request = [[FBSDKGraphRequest alloc]\ninitWithGraphPath:@\"/{commerce-merchant-settings-id}/product_catalogs\"\nparameters:params\nHTTPMethod:@\"GET\"];\n[request startWithCompletionHandler:^(FBSDKGraphRequestConnection *connection,\nid result,\nNSError *error) {\n// Handle the result\n}];  \nIf you want to learn how to use the Graph API, read our [Using Graph API guide](https://developers.facebook.com/docs/graph-api/using-graph-api/).\n",
+        "line_start": 24,
+        "line_end": 77
+    },
+    "51": {
+        "content": "Source document: ../data/platform-docs-versions/Facebook_Graph-API/Commerce merchant settings Endpoint.md\nParagraph location: \n\tCommerce Merchant Settings Product Catalogs\n\tReading\n\tParameters\n\nContent: \n### Parameters  \nThis endpoint doesn't have any parameters.\n",
+        "line_start": 85,
+        "line_end": 87
+    },
+    "52": {
+        "content": "Source document: ../data/platform-docs-versions/Facebook_Graph-API/Commerce merchant settings Endpoint.md\nParagraph location: \n\tCommerce Merchant Settings Product Catalogs\n\tReading\n\tFields\n\nContent: \n### Fields  \nReading from this edge will return a JSON formatted result:  \n{\n\"`data`\": \\[\\],\n\"`paging`\": {}\n}  \n#### `data`  \nA list of [ProductCatalog](https://developers.facebook.com/docs/marketing-api/reference/product-catalog/) nodes.  \n#### `paging`  \nFor more details about pagination, see the [Graph API guide](https://developers.facebook.com/docs/graph-api/using-graph-api/#paging).\n",
+        "line_start": 89,
+        "line_end": 99
+    },
+    "53": {
+        "content": "Source document: ../data/platform-docs-versions/Facebook_Graph-API/Commerce merchant settings Endpoint.md\nParagraph location: \n\tCommerce Merchant Settings Product Catalogs\n\tReading\n\tError Codes\n\nContent: \n### Error Codes  \n| Error | Description |\n| --- | --- |\n| 200 | Permissions error |\n",
+        "line_start": 133,
+        "line_end": 137
+    },
+    "54": {
+        "content": "Source document: ../data/platform-docs-versions/Facebook_Graph-API/Commerce merchant settings Endpoint.md\nParagraph location: \n\tCommerce Merchant Settings Product Catalogs\n\tCreating\n\nContent: \n## Creating  \nYou can't perform this operation on this endpoint.\n",
+        "line_start": 140,
+        "line_end": 142
+    },
+    "55": {
+        "content": "Source document: ../data/platform-docs-versions/Facebook_Graph-API/Commerce merchant settings Endpoint.md\nParagraph location: \n\tCommerce Merchant Settings Product Catalogs\n\tUpdating\n\nContent: \n## Updating  \nYou can't perform this operation on this endpoint.\n",
+        "line_start": 144,
+        "line_end": 146
+    },
+    "56": {
+        "content": "Source document: ../data/platform-docs-versions/Facebook_Graph-API/Commerce merchant settings Endpoint.md\nParagraph location: \n\tCommerce Merchant Settings Product Catalogs\n\tDeleting\n\nContent: \n## Deleting  \nYou can't perform this operation on this endpoint.  \n![](https://www.facebook.com/tr?id=675141479195042&ev=PageView&noscript=1)  \n![](https://www.facebook.com/tr?id=574561515946252&ev=PageView&noscript=1)  \n![](https://www.facebook.com/tr?id=1754628768090156&ev=PageView&noscript=1)\n",
+        "line_start": 148,
+        "line_end": 153
+    },
+    "57": {
+        "content": "Source document: ../data/platform-docs-versions/Facebook_Graph-API/Commerce merchant settings Endpoint.md\nParagraph location: \n\tResource URL: https://developers.facebook.com/docs/graph-api/reference/commerce-merchant-settings/returns/\n\nContent: \n# Resource URL: https://developers.facebook.com/docs/graph-api/reference/commerce-merchant-settings/returns/\n",
+        "line_start": 661,
+        "line_end": 662
+    },
+    "58": {
+        "content": "Source document: ../data/platform-docs-versions/Facebook_Graph-API/Commerce merchant settings Endpoint.md\nParagraph location: \n\tCommerce Merchant Settings Returns\n\tReading\n\nContent: \n# Commerce Merchant Settings Returns  \n## Reading  \nAll Returns on all channels for a particular Merchant\n",
+        "line_start": 662,
+        "line_end": 665
+    },
+    "59": {
+        "content": "Source document: ../data/platform-docs-versions/Facebook_Graph-API/Commerce merchant settings Endpoint.md\nParagraph location: \n\tCommerce Merchant Settings Returns\n\tReading\n\tNew Page Experience\n\nContent: \n### New Page Experience  \nThis endpoint is supported for [New Page Experience](https://developers.facebook.com/docs/pages/new-pages-experience/).\n",
+        "line_start": 12,
+        "line_end": 14
+    },
+    "60": {
+        "content": "Source document: ../data/platform-docs-versions/Facebook_Graph-API/Commerce merchant settings Endpoint.md\nParagraph location: \n\tCommerce Merchant Settings Returns\n\tReading\n\tExample\n\nContent: \n### Example  \nHTTPPHP SDKJavaScript SDKAndroid SDKiOS SDK[Graph API Explorer](https://developers.facebook.com/tools/explorer/?method=GET&path=%7Bcommerce-merchant-settings-id%7D%2Freturns&version=v19.0)  \nGET /v19.0/{commerce-merchant-settings-id}/returns HTTP/1.1\nHost: graph.facebook.com  \n/* PHP SDK v5.0.0 */\n/* make the API call */\ntry {\n// Returns a `Facebook\\FacebookResponse` object\n$response = $fb->get(\n'/{commerce-merchant-settings-id}/returns',\n'{access-token}'\n);\n} catch(Facebook\\Exceptions\\FacebookResponseException $e) {\necho 'Graph returned an error: ' . $e->getMessage();\nexit;\n} catch(Facebook\\Exceptions\\FacebookSDKException $e) {\necho 'Facebook SDK returned an error: ' . $e->getMessage();\nexit;\n}\n$graphNode = $response->getGraphNode();\n/* handle the result */  \n/* make the API call */\nFB.api(\n\"/{commerce-merchant-settings-id}/returns\",\nfunction (response) {\nif (response && !response.error) {\n/* handle the result */\n}\n}\n);  \n/* make the API call */\nnew GraphRequest(\nAccessToken.getCurrentAccessToken(),\n\"/{commerce-merchant-settings-id}/returns\",\nnull,\nHttpMethod.GET,\nnew GraphRequest.Callback() {\npublic void onCompleted(GraphResponse response) {\n/* handle the result */\n}\n}\n).executeAsync();  \n/* make the API call */\nFBSDKGraphRequest *request = [[FBSDKGraphRequest alloc]\ninitWithGraphPath:@\"/{commerce-merchant-settings-id}/returns\"\nparameters:params\nHTTPMethod:@\"GET\"];\n[request startWithCompletionHandler:^(FBSDKGraphRequestConnection *connection,\nid result,\nNSError *error) {\n// Handle the result\n}];  \nIf you want to learn how to use the Graph API, read our [Using Graph API guide](https://developers.facebook.com/docs/graph-api/using-graph-api/).\n",
+        "line_start": 24,
+        "line_end": 77
+    },
+    "61": {
+        "content": "Source document: ../data/platform-docs-versions/Facebook_Graph-API/Commerce merchant settings Endpoint.md\nParagraph location: \n\tCommerce Merchant Settings Returns\n\tReading\n\tParameters\n\nContent: \n### Parameters  \n| Parameter | Description |\n| --- | --- |\n| `end_time_created`<br><br>datetime/timestamp | Default value: `1706766107`<br><br>Limit to returns created before a certain time |\n| `merchant_return_id`<br><br>string | Filter to find returns with matching merchant\\_return\\_id, which was provided when approving/disapproving a return. |\n| `start_time_created`<br><br>datetime/timestamp | Default value: `0`<br><br>Limit to returns created after a certain time |\n| `statuses`<br><br>array<enum {APPROVED, DISAPPROVED, MERCHANT\\_MARKED\\_COMPLETED, REFUNDED, REQUESTED}> | Default value: `[]`<br><br>Filter by return status |\n",
+        "line_start": 85,
+        "line_end": 92
+    },
+    "62": {
+        "content": "Source document: ../data/platform-docs-versions/Facebook_Graph-API/Commerce merchant settings Endpoint.md\nParagraph location: \n\tCommerce Merchant Settings Returns\n\tReading\n\tFields\n\nContent: \n### Fields  \nReading from this edge will return a JSON formatted result:  \n{\n\"`data`\": \\[\\],\n\"`paging`\": {}\n}  \n#### `data`  \nA list of CommerceReturn nodes.  \n#### `paging`  \nFor more details about pagination, see the [Graph API guide](https://developers.facebook.com/docs/graph-api/using-graph-api/#paging).\n",
+        "line_start": 89,
+        "line_end": 99
+    },
+    "63": {
+        "content": "Source document: ../data/platform-docs-versions/Facebook_Graph-API/Commerce merchant settings Endpoint.md\nParagraph location: \n\tCommerce Merchant Settings Returns\n\tReading\n\tError Codes\n\nContent: \n### Error Codes  \n| Error | Description |\n| --- | --- |\n| 100 | Invalid parameter |\n",
+        "line_start": 133,
+        "line_end": 137
+    },
+    "64": {
+        "content": "Source document: ../data/platform-docs-versions/Facebook_Graph-API/Commerce merchant settings Endpoint.md\nParagraph location: \n\tCommerce Merchant Settings Returns\n\tCreating\n\nContent: \n## Creating  \nYou can't perform this operation on this endpoint.\n",
+        "line_start": 140,
+        "line_end": 142
+    },
+    "65": {
+        "content": "Source document: ../data/platform-docs-versions/Facebook_Graph-API/Commerce merchant settings Endpoint.md\nParagraph location: \n\tCommerce Merchant Settings Returns\n\tUpdating\n\nContent: \n## Updating  \nYou can't perform this operation on this endpoint.\n",
+        "line_start": 144,
+        "line_end": 146
+    },
+    "66": {
+        "content": "Source document: ../data/platform-docs-versions/Facebook_Graph-API/Commerce merchant settings Endpoint.md\nParagraph location: \n\tCommerce Merchant Settings Returns\n\tDeleting\n\nContent: \n## Deleting  \nYou can't perform this operation on this endpoint.  \n![](https://www.facebook.com/tr?id=675141479195042&ev=PageView&noscript=1)  \n![](https://www.facebook.com/tr?id=574561515946252&ev=PageView&noscript=1)  \n![](https://www.facebook.com/tr?id=1754628768090156&ev=PageView&noscript=1)\n",
+        "line_start": 148,
+        "line_end": 153
+    },
+    "67": {
+        "content": "Source document: ../data/platform-docs-versions/Facebook_Graph-API/Commerce merchant settings Endpoint.md\nParagraph location: \n\tResource URL: https://developers.facebook.com/docs/graph-api/reference/commerce-merchant-settings/seller_issues/\n\nContent: \n# Resource URL: https://developers.facebook.com/docs/graph-api/reference/commerce-merchant-settings/seller_issues/\n",
+        "line_start": 783,
+        "line_end": 784
+    },
+    "68": {
+        "content": "Source document: ../data/platform-docs-versions/Facebook_Graph-API/Commerce merchant settings Endpoint.md\nParagraph location: \n\tCommerce Merchant Settings Seller Issues\n\tReading\n\nContent: \n# Commerce Merchant Settings Seller Issues  \n## Reading  \nSeller Issues object which surfaces problems with sellers' accounts as well as suggested actions to fix.\n",
+        "line_start": 784,
+        "line_end": 787
+    },
+    "69": {
+        "content": "Source document: ../data/platform-docs-versions/Facebook_Graph-API/Commerce merchant settings Endpoint.md\nParagraph location: \n\tCommerce Merchant Settings Seller Issues\n\tReading\n\tNew Page Experience\n\nContent: \n### New Page Experience  \nThis endpoint is supported for [New Page Experience](https://developers.facebook.com/docs/pages/new-pages-experience/).\n",
+        "line_start": 12,
+        "line_end": 14
+    },
+    "70": {
+        "content": "Source document: ../data/platform-docs-versions/Facebook_Graph-API/Commerce merchant settings Endpoint.md\nParagraph location: \n\tCommerce Merchant Settings Seller Issues\n\tReading\n\tExample\n\nContent: \n### Example  \nHTTPPHP SDKJavaScript SDKAndroid SDKiOS SDK[Graph API Explorer](https://developers.facebook.com/tools/explorer/?method=GET&path=%7Bcommerce-merchant-settings-id%7D%2Fseller_issues&version=v19.0)  \nGET /v19.0/{commerce-merchant-settings-id}/seller_issues HTTP/1.1\nHost: graph.facebook.com  \n/* PHP SDK v5.0.0 */\n/* make the API call */\ntry {\n// Returns a `Facebook\\FacebookResponse` object\n$response = $fb->get(\n'/{commerce-merchant-settings-id}/seller_issues',\n'{access-token}'\n);\n} catch(Facebook\\Exceptions\\FacebookResponseException $e) {\necho 'Graph returned an error: ' . $e->getMessage();\nexit;\n} catch(Facebook\\Exceptions\\FacebookSDKException $e) {\necho 'Facebook SDK returned an error: ' . $e->getMessage();\nexit;\n}\n$graphNode = $response->getGraphNode();\n/* handle the result */  \n/* make the API call */\nFB.api(\n\"/{commerce-merchant-settings-id}/seller_issues\",\nfunction (response) {\nif (response && !response.error) {\n/* handle the result */\n}\n}\n);  \n/* make the API call */\nnew GraphRequest(\nAccessToken.getCurrentAccessToken(),\n\"/{commerce-merchant-settings-id}/seller_issues\",\nnull,\nHttpMethod.GET,\nnew GraphRequest.Callback() {\npublic void onCompleted(GraphResponse response) {\n/* handle the result */\n}\n}\n).executeAsync();  \n/* make the API call */\nFBSDKGraphRequest *request = [[FBSDKGraphRequest alloc]\ninitWithGraphPath:@\"/{commerce-merchant-settings-id}/seller_issues\"\nparameters:params\nHTTPMethod:@\"GET\"];\n[request startWithCompletionHandler:^(FBSDKGraphRequestConnection *connection,\nid result,\nNSError *error) {\n// Handle the result\n}];  \nIf you want to learn how to use the Graph API, read our [Using Graph API guide](https://developers.facebook.com/docs/graph-api/using-graph-api/).\n",
+        "line_start": 24,
+        "line_end": 77
+    },
+    "71": {
+        "content": "Source document: ../data/platform-docs-versions/Facebook_Graph-API/Commerce merchant settings Endpoint.md\nParagraph location: \n\tCommerce Merchant Settings Seller Issues\n\tReading\n\tParameters\n\nContent: \n### Parameters  \nThis endpoint doesn't have any parameters.\n",
+        "line_start": 85,
+        "line_end": 87
+    },
+    "72": {
+        "content": "Source document: ../data/platform-docs-versions/Facebook_Graph-API/Commerce merchant settings Endpoint.md\nParagraph location: \n\tCommerce Merchant Settings Seller Issues\n\tReading\n\tFields\n\nContent: \n### Fields  \nReading from this edge will return a JSON formatted result:  \n{\n\"`data`\": \\[\\],\n\"`paging`\": {}\n}  \n#### `data`  \nA list of CommerceAPISellerIssue nodes.  \n#### `paging`  \nFor more details about pagination, see the [Graph API guide](https://developers.facebook.com/docs/graph-api/using-graph-api/#paging).\n",
+        "line_start": 89,
+        "line_end": 99
+    },
+    "73": {
+        "content": "Source document: ../data/platform-docs-versions/Facebook_Graph-API/Commerce merchant settings Endpoint.md\nParagraph location: \n\tCommerce Merchant Settings Seller Issues\n\tReading\n\tError Codes\n\nContent: \n### Error Codes  \n| Error | Description |\n| --- | --- |\n| 200 | Permissions error |\n",
+        "line_start": 133,
+        "line_end": 137
+    },
+    "74": {
+        "content": "Source document: ../data/platform-docs-versions/Facebook_Graph-API/Commerce merchant settings Endpoint.md\nParagraph location: \n\tCommerce Merchant Settings Seller Issues\n\tCreating\n\nContent: \n## Creating  \nYou can't perform this operation on this endpoint.\n",
+        "line_start": 140,
+        "line_end": 142
+    },
+    "75": {
+        "content": "Source document: ../data/platform-docs-versions/Facebook_Graph-API/Commerce merchant settings Endpoint.md\nParagraph location: \n\tCommerce Merchant Settings Seller Issues\n\tUpdating\n\nContent: \n## Updating  \nYou can't perform this operation on this endpoint.\n",
+        "line_start": 144,
+        "line_end": 146
+    },
+    "76": {
+        "content": "Source document: ../data/platform-docs-versions/Facebook_Graph-API/Commerce merchant settings Endpoint.md\nParagraph location: \n\tCommerce Merchant Settings Seller Issues\n\tDeleting\n\nContent: \n## Deleting  \nYou can't perform this operation on this endpoint.  \n![](https://www.facebook.com/tr?id=675141479195042&ev=PageView&noscript=1)  \n![](https://www.facebook.com/tr?id=574561515946252&ev=PageView&noscript=1)  \n![](https://www.facebook.com/tr?id=1754628768090156&ev=PageView&noscript=1)\n",
+        "line_start": 148,
+        "line_end": 153
+    },
+    "77": {
+        "content": "Source document: ../data/platform-docs-versions/Facebook_Graph-API/Commerce merchant settings Endpoint.md\nParagraph location: \n\tResource URL: https://developers.facebook.com/docs/graph-api/reference/commerce-merchant-settings/setup_status/\n\nContent: \n# Resource URL: https://developers.facebook.com/docs/graph-api/reference/commerce-merchant-settings/setup_status/\n",
+        "line_start": 900,
+        "line_end": 901
+    },
+    "78": {
+        "content": "Source document: ../data/platform-docs-versions/Facebook_Graph-API/Commerce merchant settings Endpoint.md\nParagraph location: \n\tCommerce Merchant Settings Setup Status\n\tReading\n\nContent: \n# Commerce Merchant Settings Setup Status  \n## Reading  \nThis is the edge between the CommerceMerchantSettings and the onboarding status of the shop\n",
+        "line_start": 901,
+        "line_end": 904
+    },
+    "79": {
+        "content": "Source document: ../data/platform-docs-versions/Facebook_Graph-API/Commerce merchant settings Endpoint.md\nParagraph location: \n\tCommerce Merchant Settings Setup Status\n\tReading\n\tNew Page Experience\n\nContent: \n### New Page Experience  \nThis endpoint is supported for [New Page Experience](https://developers.facebook.com/docs/pages/new-pages-experience/).\n",
+        "line_start": 12,
+        "line_end": 14
+    },
+    "80": {
+        "content": "Source document: ../data/platform-docs-versions/Facebook_Graph-API/Commerce merchant settings Endpoint.md\nParagraph location: \n\tCommerce Merchant Settings Setup Status\n\tReading\n\tExample\n\nContent: \n### Example  \nHTTPPHP SDKJavaScript SDKAndroid SDKiOS SDK[Graph API Explorer](https://developers.facebook.com/tools/explorer/?method=GET&path=%7Bcommerce-merchant-settings-id%7D%2Fsetup_status&version=v19.0)  \nGET /v19.0/{commerce-merchant-settings-id}/setup_status HTTP/1.1\nHost: graph.facebook.com  \n/* PHP SDK v5.0.0 */\n/* make the API call */\ntry {\n// Returns a `Facebook\\FacebookResponse` object\n$response = $fb->get(\n'/{commerce-merchant-settings-id}/setup_status',\n'{access-token}'\n);\n} catch(Facebook\\Exceptions\\FacebookResponseException $e) {\necho 'Graph returned an error: ' . $e->getMessage();\nexit;\n} catch(Facebook\\Exceptions\\FacebookSDKException $e) {\necho 'Facebook SDK returned an error: ' . $e->getMessage();\nexit;\n}\n$graphNode = $response->getGraphNode();\n/* handle the result */  \n/* make the API call */\nFB.api(\n\"/{commerce-merchant-settings-id}/setup_status\",\nfunction (response) {\nif (response && !response.error) {\n/* handle the result */\n}\n}\n);  \n/* make the API call */\nnew GraphRequest(\nAccessToken.getCurrentAccessToken(),\n\"/{commerce-merchant-settings-id}/setup_status\",\nnull,\nHttpMethod.GET,\nnew GraphRequest.Callback() {\npublic void onCompleted(GraphResponse response) {\n/* handle the result */\n}\n}\n).executeAsync();  \n/* make the API call */\nFBSDKGraphRequest *request = [[FBSDKGraphRequest alloc]\ninitWithGraphPath:@\"/{commerce-merchant-settings-id}/setup_status\"\nparameters:params\nHTTPMethod:@\"GET\"];\n[request startWithCompletionHandler:^(FBSDKGraphRequestConnection *connection,\nid result,\nNSError *error) {\n// Handle the result\n}];  \nIf you want to learn how to use the Graph API, read our [Using Graph API guide](https://developers.facebook.com/docs/graph-api/using-graph-api/).\n",
+        "line_start": 24,
+        "line_end": 77
+    },
+    "81": {
+        "content": "Source document: ../data/platform-docs-versions/Facebook_Graph-API/Commerce merchant settings Endpoint.md\nParagraph location: \n\tCommerce Merchant Settings Setup Status\n\tReading\n\tParameters\n\nContent: \n### Parameters  \nThis endpoint doesn't have any parameters.\n",
+        "line_start": 85,
+        "line_end": 87
+    },
+    "82": {
+        "content": "Source document: ../data/platform-docs-versions/Facebook_Graph-API/Commerce merchant settings Endpoint.md\nParagraph location: \n\tCommerce Merchant Settings Setup Status\n\tReading\n\tFields\n\nContent: \n### Fields  \nReading from this edge will return a JSON formatted result:  \n{\n\"`data`\": \\[\\],\n\"`paging`\": {}\n}  \n#### `data`  \nA list of CommerceMerchantSettingsSetupStatus nodes.  \n#### `paging`  \nFor more details about pagination, see the [Graph API guide](https://developers.facebook.com/docs/graph-api/using-graph-api/#paging).\n",
+        "line_start": 89,
+        "line_end": 99
+    },
+    "83": {
+        "content": "Source document: ../data/platform-docs-versions/Facebook_Graph-API/Commerce merchant settings Endpoint.md\nParagraph location: \n\tCommerce Merchant Settings Setup Status\n\tReading\n\tError Codes\n\nContent: \n### Error Codes  \n| Error | Description |\n| --- | --- |\n| 100 | Invalid parameter |\n",
+        "line_start": 133,
+        "line_end": 137
+    },
+    "84": {
+        "content": "Source document: ../data/platform-docs-versions/Facebook_Graph-API/Commerce merchant settings Endpoint.md\nParagraph location: \n\tCommerce Merchant Settings Setup Status\n\tCreating\n\nContent: \n## Creating  \nYou can't perform this operation on this endpoint.\n",
+        "line_start": 140,
+        "line_end": 142
+    },
+    "85": {
+        "content": "Source document: ../data/platform-docs-versions/Facebook_Graph-API/Commerce merchant settings Endpoint.md\nParagraph location: \n\tCommerce Merchant Settings Setup Status\n\tUpdating\n\nContent: \n## Updating  \nYou can't perform this operation on this endpoint.\n",
+        "line_start": 144,
+        "line_end": 146
+    },
+    "86": {
+        "content": "Source document: ../data/platform-docs-versions/Facebook_Graph-API/Commerce merchant settings Endpoint.md\nParagraph location: \n\tCommerce Merchant Settings Setup Status\n\tDeleting\n\nContent: \n## Deleting  \nYou can't perform this operation on this endpoint.  \n![](https://www.facebook.com/tr?id=675141479195042&ev=PageView&noscript=1)  \n![](https://www.facebook.com/tr?id=574561515946252&ev=PageView&noscript=1)  \n![](https://www.facebook.com/tr?id=1754628768090156&ev=PageView&noscript=1)\n",
+        "line_start": 148,
+        "line_end": 153
+    },
+    "87": {
+        "content": "Source document: ../data/platform-docs-versions/Facebook_Graph-API/Commerce merchant settings Endpoint.md\nParagraph location: \n\tResource URL: https://developers.facebook.com/docs/graph-api/reference/commerce-merchant-settings/shops/\n\nContent: \n# Resource URL: https://developers.facebook.com/docs/graph-api/reference/commerce-merchant-settings/shops/\n",
+        "line_start": 1017,
+        "line_end": 1018
+    },
+    "88": {
+        "content": "Source document: ../data/platform-docs-versions/Facebook_Graph-API/Commerce merchant settings Endpoint.md\nParagraph location: \n\tCommerce Merchant Settings Shops\n\tReading\n\nContent: \n# Commerce Merchant Settings Shops  \n## Reading  \nReturns the list of shops associated with merchant configuration.\n",
+        "line_start": 1018,
+        "line_end": 1021
+    },
+    "89": {
+        "content": "Source document: ../data/platform-docs-versions/Facebook_Graph-API/Commerce merchant settings Endpoint.md\nParagraph location: \n\tCommerce Merchant Settings Shops\n\tReading\n\tExample\n\nContent: \n### Example  \nHTTPPHP SDKJavaScript SDKAndroid SDKiOS SDK[Graph API Explorer](https://developers.facebook.com/tools/explorer/?method=GET&path=%7Bcommerce-merchant-settings-id%7D%2Fshops&version=v19.0)  \nGET /v19.0/{commerce-merchant-settings-id}/shops HTTP/1.1\nHost: graph.facebook.com  \n/* PHP SDK v5.0.0 */\n/* make the API call */\ntry {\n// Returns a `Facebook\\FacebookResponse` object\n$response = $fb->get(\n'/{commerce-merchant-settings-id}/shops',\n'{access-token}'\n);\n} catch(Facebook\\Exceptions\\FacebookResponseException $e) {\necho 'Graph returned an error: ' . $e->getMessage();\nexit;\n} catch(Facebook\\Exceptions\\FacebookSDKException $e) {\necho 'Facebook SDK returned an error: ' . $e->getMessage();\nexit;\n}\n$graphNode = $response->getGraphNode();\n/* handle the result */  \n/* make the API call */\nFB.api(\n\"/{commerce-merchant-settings-id}/shops\",\nfunction (response) {\nif (response && !response.error) {\n/* handle the result */\n}\n}\n);  \n/* make the API call */\nnew GraphRequest(\nAccessToken.getCurrentAccessToken(),\n\"/{commerce-merchant-settings-id}/shops\",\nnull,\nHttpMethod.GET,\nnew GraphRequest.Callback() {\npublic void onCompleted(GraphResponse response) {\n/* handle the result */\n}\n}\n).executeAsync();  \n/* make the API call */\nFBSDKGraphRequest *request = [[FBSDKGraphRequest alloc]\ninitWithGraphPath:@\"/{commerce-merchant-settings-id}/shops\"\nparameters:params\nHTTPMethod:@\"GET\"];\n[request startWithCompletionHandler:^(FBSDKGraphRequestConnection *connection,\nid result,\nNSError *error) {\n// Handle the result\n}];  \nIf you want to learn how to use the Graph API, read our [Using Graph API guide](https://developers.facebook.com/docs/graph-api/using-graph-api/).\n",
+        "line_start": 24,
+        "line_end": 77
+    },
+    "90": {
+        "content": "Source document: ../data/platform-docs-versions/Facebook_Graph-API/Commerce merchant settings Endpoint.md\nParagraph location: \n\tCommerce Merchant Settings Shops\n\tReading\n\tParameters\n\nContent: \n### Parameters  \nThis endpoint doesn't have any parameters.\n",
+        "line_start": 85,
+        "line_end": 87
+    },
+    "91": {
+        "content": "Source document: ../data/platform-docs-versions/Facebook_Graph-API/Commerce merchant settings Endpoint.md\nParagraph location: \n\tCommerce Merchant Settings Shops\n\tReading\n\tFields\n\nContent: \n### Fields  \nReading from this edge will return a JSON formatted result:  \n{\n\"`data`\": \\[\\],\n\"`paging`\": {}\n}  \n#### `data`  \nA list of Shop nodes.  \n#### `paging`  \nFor more details about pagination, see the [Graph API guide](https://developers.facebook.com/docs/graph-api/using-graph-api/#paging).\n",
+        "line_start": 89,
+        "line_end": 99
+    },
+    "92": {
+        "content": "Source document: ../data/platform-docs-versions/Facebook_Graph-API/Commerce merchant settings Endpoint.md\nParagraph location: \n\tCommerce Merchant Settings Shops\n\tReading\n\tError Codes\n\nContent: \n### Error Codes  \n| Error | Description |\n| --- | --- |\n| 100 | Invalid parameter |\n| 200 | Permissions error |\n",
+        "line_start": 133,
+        "line_end": 138
+    },
+    "93": {
+        "content": "Source document: ../data/platform-docs-versions/Facebook_Graph-API/Commerce merchant settings Endpoint.md\nParagraph location: \n\tCommerce Merchant Settings Shops\n\tCreating\n\nContent: \n## Creating  \nYou can't perform this operation on this endpoint.\n",
+        "line_start": 140,
+        "line_end": 142
+    },
+    "94": {
+        "content": "Source document: ../data/platform-docs-versions/Facebook_Graph-API/Commerce merchant settings Endpoint.md\nParagraph location: \n\tCommerce Merchant Settings Shops\n\tUpdating\n\nContent: \n## Updating  \nYou can't perform this operation on this endpoint.\n",
+        "line_start": 144,
+        "line_end": 146
+    },
+    "95": {
+        "content": "Source document: ../data/platform-docs-versions/Facebook_Graph-API/Commerce merchant settings Endpoint.md\nParagraph location: \n\tCommerce Merchant Settings Shops\n\tDeleting\n\nContent: \n## Deleting  \nYou can't perform this operation on this endpoint.  \n![](https://www.facebook.com/tr?id=675141479195042&ev=PageView&noscript=1)  \n![](https://www.facebook.com/tr?id=574561515946252&ev=PageView&noscript=1)  \n![](https://www.facebook.com/tr?id=1754628768090156&ev=PageView&noscript=1)\n",
+        "line_start": 148,
+        "line_end": 153
+    },
+    "96": {
+        "content": "Source document: ../data/platform-docs-versions/Facebook_Graph-API/Commerce merchant settings Endpoint.md\nParagraph location: \n\tResource URL: https://developers.facebook.com/docs/graph-api/reference/commerce-merchant-settings/tax_settings/\n\nContent: \n# Resource URL: https://developers.facebook.com/docs/graph-api/reference/commerce-merchant-settings/tax_settings/\n",
+        "line_start": 1131,
+        "line_end": 1132
+    },
+    "97": {
+        "content": "Source document: ../data/platform-docs-versions/Facebook_Graph-API/Commerce merchant settings Endpoint.md\nParagraph location: \n\tCommerce Merchant Settings Tax Settings\n\tReading\n\nContent: \n# Commerce Merchant Settings Tax Settings  \n## Reading  \nThis is the tax settings associated with this merchant - it will show you the fulfillment locations that you can use with purchases.\n",
+        "line_start": 1132,
+        "line_end": 1135
+    },
+    "98": {
+        "content": "Source document: ../data/platform-docs-versions/Facebook_Graph-API/Commerce merchant settings Endpoint.md\nParagraph location: \n\tCommerce Merchant Settings Tax Settings\n\tReading\n\tNew Page Experience\n\nContent: \n### New Page Experience  \nThis endpoint is supported for [New Page Experience](https://developers.facebook.com/docs/pages/new-pages-experience/).\n",
+        "line_start": 12,
+        "line_end": 14
+    },
+    "99": {
+        "content": "Source document: ../data/platform-docs-versions/Facebook_Graph-API/Commerce merchant settings Endpoint.md\nParagraph location: \n\tCommerce Merchant Settings Tax Settings\n\tReading\n\tExample\n\nContent: \n### Example  \nHTTPPHP SDKJavaScript SDKAndroid SDKiOS SDK[Graph API Explorer](https://developers.facebook.com/tools/explorer/?method=GET&path=%7Bcommerce-merchant-settings-id%7D%2Ftax_settings&version=v19.0)  \nGET /v19.0/{commerce-merchant-settings-id}/tax_settings HTTP/1.1\nHost: graph.facebook.com  \n/* PHP SDK v5.0.0 */\n/* make the API call */\ntry {\n// Returns a `Facebook\\FacebookResponse` object\n$response = $fb->get(\n'/{commerce-merchant-settings-id}/tax_settings',\n'{access-token}'\n);\n} catch(Facebook\\Exceptions\\FacebookResponseException $e) {\necho 'Graph returned an error: ' . $e->getMessage();\nexit;\n} catch(Facebook\\Exceptions\\FacebookSDKException $e) {\necho 'Facebook SDK returned an error: ' . $e->getMessage();\nexit;\n}\n$graphNode = $response->getGraphNode();\n/* handle the result */  \n/* make the API call */\nFB.api(\n\"/{commerce-merchant-settings-id}/tax_settings\",\nfunction (response) {\nif (response && !response.error) {\n/* handle the result */\n}\n}\n);  \n/* make the API call */\nnew GraphRequest(\nAccessToken.getCurrentAccessToken(),\n\"/{commerce-merchant-settings-id}/tax_settings\",\nnull,\nHttpMethod.GET,\nnew GraphRequest.Callback() {\npublic void onCompleted(GraphResponse response) {\n/* handle the result */\n}\n}\n).executeAsync();  \n/* make the API call */\nFBSDKGraphRequest *request = [[FBSDKGraphRequest alloc]\ninitWithGraphPath:@\"/{commerce-merchant-settings-id}/tax_settings\"\nparameters:params\nHTTPMethod:@\"GET\"];\n[request startWithCompletionHandler:^(FBSDKGraphRequestConnection *connection,\nid result,\nNSError *error) {\n// Handle the result\n}];  \nIf you want to learn how to use the Graph API, read our [Using Graph API guide](https://developers.facebook.com/docs/graph-api/using-graph-api/).\n",
+        "line_start": 24,
+        "line_end": 77
+    },
+    "100": {
+        "content": "Source document: ../data/platform-docs-versions/Facebook_Graph-API/Commerce merchant settings Endpoint.md\nParagraph location: \n\tCommerce Merchant Settings Tax Settings\n\tReading\n\tParameters\n\nContent: \n### Parameters  \nThis endpoint doesn't have any parameters.\n",
+        "line_start": 85,
+        "line_end": 87
+    },
+    "101": {
+        "content": "Source document: ../data/platform-docs-versions/Facebook_Graph-API/Commerce merchant settings Endpoint.md\nParagraph location: \n\tCommerce Merchant Settings Tax Settings\n\tReading\n\tFields\n\nContent: \n### Fields  \nReading from this edge will return a JSON formatted result:  \n{\n\"`data`\": \\[\\],\n\"`paging`\": {}\n}  \n#### `data`  \nA list of CommerceMerchantTaxSettings nodes.  \n#### `paging`  \nFor more details about pagination, see the [Graph API guide](https://developers.facebook.com/docs/graph-api/using-graph-api/#paging).\n",
+        "line_start": 89,
+        "line_end": 99
+    },
+    "102": {
+        "content": "Source document: ../data/platform-docs-versions/Facebook_Graph-API/Commerce merchant settings Endpoint.md\nParagraph location: \n\tCommerce Merchant Settings Tax Settings\n\tReading\n\tError Codes\n\nContent: \n### Error Codes  \n| Error | Description |\n| --- | --- |\n| 200 | Permissions error |\n",
+        "line_start": 133,
+        "line_end": 137
+    },
+    "103": {
+        "content": "Source document: ../data/platform-docs-versions/Facebook_Graph-API/Commerce merchant settings Endpoint.md\nParagraph location: \n\tCommerce Merchant Settings Tax Settings\n\tCreating\n\nContent: \n## Creating  \nYou can't perform this operation on this endpoint.\n",
+        "line_start": 140,
+        "line_end": 142
+    },
+    "104": {
+        "content": "Source document: ../data/platform-docs-versions/Facebook_Graph-API/Commerce merchant settings Endpoint.md\nParagraph location: \n\tCommerce Merchant Settings Tax Settings\n\tUpdating\n\nContent: \n## Updating  \nYou can't perform this operation on this endpoint.\n",
+        "line_start": 144,
+        "line_end": 146
+    },
+    "105": {
+        "content": "Source document: ../data/platform-docs-versions/Facebook_Graph-API/Commerce merchant settings Endpoint.md\nParagraph location: \n\tCommerce Merchant Settings Tax Settings\n\tDeleting\n\nContent: \n## Deleting  \nYou can't perform this operation on this endpoint.  \n![](https://www.facebook.com/tr?id=675141479195042&ev=PageView&noscript=1)  \n![](https://www.facebook.com/tr?id=574561515946252&ev=PageView&noscript=1)  \n![](https://www.facebook.com/tr?id=1754628768090156&ev=PageView&noscript=1)\n",
+        "line_start": 148,
+        "line_end": 153
+    }
+}

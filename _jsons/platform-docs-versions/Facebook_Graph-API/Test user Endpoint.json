@@ -1,0 +1,82 @@
+{
+    "0": {
+        "content": "Source document: ../data/platform-docs-versions/Facebook_Graph-API/Test user Endpoint.md\nParagraph location: \n\tResource URL: https://developers.facebook.com/docs/graph-api/reference/v18.0/test-user\n\nContent: \n# Resource URL: https://developers.facebook.com/docs/graph-api/reference/v18.0/test-user\nThis document refers to an outdated version of Graph API.\u00a0Please [use the latest version.](https://developers.facebook.com/docs/graph-api/reference/v19.0/test-user)\n",
+        "line_start": 0,
+        "line_end": 2
+    },
+    "1": {
+        "content": "Source document: ../data/platform-docs-versions/Facebook_Graph-API/Test user Endpoint.md\nParagraph location: \n\tTest User /{test-user-id}\n\nContent: \n# Test User /{test-user-id}  \nA test user associated with a Facebook app. Test users are created and associated using the [`/{app-id}/accounts/test-users`](https://developers.facebook.com/docs/graph-api/reference/app/accounts/test-users) edge or [in the App Dashboard](https://developers.facebook.com/docs/apps/test-users#managetool).\n",
+        "line_start": 3,
+        "line_end": 5
+    },
+    "2": {
+        "content": "Source document: ../data/platform-docs-versions/Facebook_Graph-API/Test user Endpoint.md\nParagraph location: \n\tTest User /{test-user-id}\n\tRelated Guides\n\nContent: \n### Related Guides  \n* [Managing Test Accounts using the App Dashboard](https://developers.facebook.com/docs/apps/test-users#managetool)\n",
+        "line_start": 7,
+        "line_end": 9
+    },
+    "3": {
+        "content": "Source document: ../data/platform-docs-versions/Facebook_Graph-API/Test user Endpoint.md\nParagraph location: \n\tTest User /{test-user-id}\n\tReading\n\nContent: \n## Reading  \nPermissions and fields for read operations on this node are [identical to those of the regular `/{user-id}` node](https://developers.facebook.com/docs/graph-api/reference/user#read).\n",
+        "line_start": 12,
+        "line_end": 14
+    },
+    "4": {
+        "content": "Source document: ../data/platform-docs-versions/Facebook_Graph-API/Test user Endpoint.md\nParagraph location: \n\tTest User /{test-user-id}\n\tPublishing and Updating\n\nContent: \n## Publishing and Updating  \nYou can publish to this node to update the test user's password or name.  \nHTTPPHP SDKAndroid SDKiOS SDK  \nPOST /v19.0/{test-user-id} HTTP/1.1\nHost: graph.facebook.com  \npassword=newpassword&name=Newname+Smith  \n/* PHP SDK v5.0.0 */\n/* make the API call */\ntry {\n// Returns a `Facebook\\FacebookResponse` object\n$response = $fb->post(\n'/{test-user-id}',\narray (\n'password' => 'newpassword',\n'name' => 'Newname Smith',\n),\n'{access-token}'\n);\n} catch(Facebook\\Exceptions\\FacebookResponseException $e) {\necho 'Graph returned an error: ' . $e->getMessage();\nexit;\n} catch(Facebook\\Exceptions\\FacebookSDKException $e) {\necho 'Facebook SDK returned an error: ' . $e->getMessage();\nexit;\n}\n$graphNode = $response->getGraphNode();\n/* handle the result */  \nBundle params = new Bundle();\nparams.putString(\"password\", \"newpassword\");\nparams.putString(\"name\", \"Newname Smith\");\n/* make the API call */\nnew GraphRequest(\nAccessToken.getCurrentAccessToken(),\n\"/{test-user-id}\",\nparams,\nHttpMethod.POST,\nnew GraphRequest.Callback() {\npublic void onCompleted(GraphResponse response) {\n/* handle the result */\n}\n}\n).executeAsync();  \nNSDictionary *params = @{\n@\"password\": @\"newpassword\",\n@\"name\": @\"Newname Smith\",\n};\n/* make the API call */\nFBSDKGraphRequest *request = [[FBSDKGraphRequest alloc]\ninitWithGraphPath:@\"/{test-user-id}\"\nparameters:params\nHTTPMethod:@\"POST\"];\n[request startWithCompletionHandler:^(FBSDKGraphRequestConnection *connection,\nid result,\nNSError *error) {\n// Handle the result\n}];\n",
+        "line_start": 16,
+        "line_end": 72
+    },
+    "5": {
+        "content": "Source document: ../data/platform-docs-versions/Facebook_Graph-API/Test user Endpoint.md\nParagraph location: \n\tTest User /{test-user-id}\n\tPublishing and Updating\n\tPermissions\n\nContent: \n### Permissions  \n* An app access token is required to update these fields for any test users associated with that app.\n",
+        "line_start": 80,
+        "line_end": 82
+    },
+    "6": {
+        "content": "Source document: ../data/platform-docs-versions/Facebook_Graph-API/Test user Endpoint.md\nParagraph location: \n\tTest User /{test-user-id}\n\tPublishing and Updating\n\tFields\n\nContent: \n### Fields  \n| Name | Description | Type |\n| --- | --- | --- |\n| `name` | New name for the test user. | `string` |\n| `password` | A new password for the test user. | `string` |\n",
+        "line_start": 85,
+        "line_end": 90
+    },
+    "7": {
+        "content": "Source document: ../data/platform-docs-versions/Facebook_Graph-API/Test user Endpoint.md\nParagraph location: \n\tTest User /{test-user-id}\n\tPublishing and Updating\n\tResponse\n\nContent: \n### Response  \nIf update is successful, `true`, otherwise an error message.\n",
+        "line_start": 92,
+        "line_end": 94
+    },
+    "8": {
+        "content": "Source document: ../data/platform-docs-versions/Facebook_Graph-API/Test user Endpoint.md\nParagraph location: \n\tTest User /{test-user-id}\n\tDeleting\n\nContent: \n## Deleting  \nYou can delete a test user by making a delete operation on this node.  \nHTTPPHP SDKAndroid SDKiOS SDK  \nDELETE /v19.0/{test-user-id} HTTP/1.1\nHost: graph.facebook.com  \n/* PHP SDK v5.0.0 */\n/* make the API call */\ntry {\n// Returns a `Facebook\\FacebookResponse` object\n$response = $fb->delete(\n'/{test-user-id}',\narray (),\n'{access-token}'\n);\n} catch(Facebook\\Exceptions\\FacebookResponseException $e) {\necho 'Graph returned an error: ' . $e->getMessage();\nexit;\n} catch(Facebook\\Exceptions\\FacebookSDKException $e) {\necho 'Facebook SDK returned an error: ' . $e->getMessage();\nexit;\n}\n$graphNode = $response->getGraphNode();\n/* handle the result */  \n/* make the API call */\nnew GraphRequest(\nAccessToken.getCurrentAccessToken(),\n\"/{test-user-id}\",\nnull,\nHttpMethod.DELETE,\nnew GraphRequest.Callback() {\npublic void onCompleted(GraphResponse response) {\n/* handle the result */\n}\n}\n).executeAsync();  \n/* make the API call */\nFBSDKGraphRequest *request = [[FBSDKGraphRequest alloc]\ninitWithGraphPath:@\"/{test-user-id}\"\nparameters:params\nHTTPMethod:@\"DELETE\"];\n[request startWithCompletionHandler:^(FBSDKGraphRequestConnection *connection,\nid result,\nNSError *error) {\n// Handle the result\n}];\n",
+        "line_start": 96,
+        "line_end": 141
+    },
+    "9": {
+        "content": "Source document: ../data/platform-docs-versions/Facebook_Graph-API/Test user Endpoint.md\nParagraph location: \n\tTest User /{test-user-id}\n\tDeleting\n\tPermissions\n\nContent: \n### Permissions  \n* An app access token for an associated app or the test user's own access token must be used to delete that test user.  \n* The test user must have been disassociated from all but a single app. You can disassociate test users using the [`/{app-id}/accounts/test-users` edge](https://developers.facebook.com/docs/graph-api/reference/app/accounts/test-users#delete).\n",
+        "line_start": 80,
+        "line_end": 83
+    },
+    "10": {
+        "content": "Source document: ../data/platform-docs-versions/Facebook_Graph-API/Test user Endpoint.md\nParagraph location: \n\tTest User /{test-user-id}\n\tDeleting\n\tResponse\n\nContent: \n### Response  \nIf delete is successful, `true`, otherwise an error message.\n",
+        "line_start": 92,
+        "line_end": 94
+    },
+    "11": {
+        "content": "Source document: ../data/platform-docs-versions/Facebook_Graph-API/Test user Endpoint.md\nParagraph location: \n\tTest User /{test-user-id}\n\tEdges\n\nContent: \n## Edges  \n| Name | Description |\n| --- | --- |\n| [`/friends`](https://developers.facebook.com/docs/graph-api/reference/test-user/friends) | The friends of the test user - this edge can be used to friend two test users. |  \n![](https://www.facebook.com/tr?id=675141479195042&ev=PageView&noscript=1)  \n![](https://www.facebook.com/tr?id=574561515946252&ev=PageView&noscript=1)  \n![](https://www.facebook.com/tr?id=1754628768090156&ev=PageView&noscript=1)\n",
+        "line_start": 163,
+        "line_end": 170
+    },
+    "12": {
+        "content": "Source document: ../data/platform-docs-versions/Facebook_Graph-API/Test user Endpoint.md\nParagraph location: \n\tResource URL: https://developers.facebook.com/docs/graph-api/reference/v18.0/test-user/friends\n\nContent: \n# Resource URL: https://developers.facebook.com/docs/graph-api/reference/v18.0/test-user/friends\nThis document refers to an outdated version of Graph API.\u00a0Please [use the latest version.](https://developers.facebook.com/docs/graph-api/reference/v19.0/test-user/friends)\n",
+        "line_start": 175,
+        "line_end": 177
+    },
+    "13": {
+        "content": "Source document: ../data/platform-docs-versions/Facebook_Graph-API/Test user Endpoint.md\nParagraph location: \n\t[`/{test-user-id}`](https://developers.facebook.com/docs/graph-api/reference/test-user)`/friends`\n\nContent: \n# [`/{test-user-id}`](https://developers.facebook.com/docs/graph-api/reference/test-user)`/friends`  \nThe friends of a test user. This is [identical to the `/{user-id}/friends` edge](https://developers.facebook.com/docs/graph-api/reference/user/friends/) aside from the [publishing](#publishing) operation explained below.\n",
+        "line_start": 178,
+        "line_end": 180
+    },
+    "14": {
+        "content": "Source document: ../data/platform-docs-versions/Facebook_Graph-API/Test user Endpoint.md\nParagraph location: \n\t[`/{test-user-id}`](https://developers.facebook.com/docs/graph-api/reference/test-user)`/friends`\n\tRelated Guides\n\nContent: \n### Related Guides  \n* [Managing Test Accounts using the App Dashboard](https://developers.facebook.com/docs/apps/test-users#managetool)\n",
+        "line_start": 7,
+        "line_end": 9
+    },
+    "15": {
+        "content": "Source document: ../data/platform-docs-versions/Facebook_Graph-API/Test user Endpoint.md\nParagraph location: \n\t[`/{test-user-id}`](https://developers.facebook.com/docs/graph-api/reference/test-user)`/friends`\n\tPublishing\n\nContent: \n## Publishing  \nYou can't perform this operation on this endpoint.  \n![](https://www.facebook.com/tr?id=675141479195042&ev=PageView&noscript=1)  \n![](https://www.facebook.com/tr?id=574561515946252&ev=PageView&noscript=1)  \n![](https://www.facebook.com/tr?id=1754628768090156&ev=PageView&noscript=1)\n",
+        "line_start": 187,
+        "line_end": 192
+    }
+}

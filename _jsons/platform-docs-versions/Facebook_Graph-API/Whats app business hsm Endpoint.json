@@ -1,0 +1,177 @@
+{
+    "0": {
+        "content": "Source document: ../data/platform-docs-versions/Facebook_Graph-API/Whats app business hsm Endpoint.md\nParagraph location: \n\tResource URL: https://developers.facebook.com/docs/graph-api/reference/whats-app-business-hsm/\n\nContent: \n# Resource URL: https://developers.facebook.com/docs/graph-api/reference/whats-app-business-hsm/\n",
+        "line_start": 0,
+        "line_end": 1
+    },
+    "1": {
+        "content": "Source document: ../data/platform-docs-versions/Facebook_Graph-API/Whats app business hsm Endpoint.md\nParagraph location: \n\tWhatsApp Message Template\n\nContent: \n# WhatsApp Message Template  \nRepresents a specific [message template](https://developers.facebook.com/docs/whatsapp/overview/messages#message-templates). Make the API call to the message template ID.  \nTo find a message template ID, call ``https://graph.facebook.com/`v19.0`/{whatsapp-business-account-ID}/message_templates``.  \nFor more information on how to use the API, see [WhatsApp Business Management API](https://developers.facebook.com/docs/whatsapp/business-account-management-api).\n",
+        "line_start": 1,
+        "line_end": 5
+    },
+    "2": {
+        "content": "Source document: ../data/platform-docs-versions/Facebook_Graph-API/Whats app business hsm Endpoint.md\nParagraph location: \n\tWhatsApp Message Template\n\tReading\n\nContent: \n## Reading  \nRetrieves information about the message template\n",
+        "line_start": 13,
+        "line_end": 15
+    },
+    "3": {
+        "content": "Source document: ../data/platform-docs-versions/Facebook_Graph-API/Whats app business hsm Endpoint.md\nParagraph location: \n\tWhatsApp Message Template\n\tReading\n\tExample\n\nContent: \n### Example  \nRequirements  \n* whatsapp\\_business\\_management permission  \n* whatsapp\\_business\\_messaging permission  \n* public\\_profile permission  \n* WHATSAPP MESSAGE TEMPLATE ID  \n* USER ACCESS TOKEN  \nRequest  \ncURLAndroid SDKObjective-C  \ncurl -i -X GET \\\n\"https://graph.facebook.com/LATEST-VERSION/WHATS-APP-MESSAGE-TEMPLATE-ID?access_token=USER-ACCESS-TOKEN\"  \nGraphRequest request = GraphRequest.newGraphPathRequest(\naccessToken,\n\"/WHATS-APP-MESSAGE-TEMPLATE-ID\",\nnew GraphRequest.Callback() {\n@Override\npublic void onCompleted(GraphResponse response) {\n// Insert your code here\n}\n});  \nrequest.executeAsync();  \nFBSDKGraphRequest *request = [[FBSDKGraphRequest alloc]\ninitWithGraphPath:@\"/WHATS-APP-MESSAGE-TEMPLATE-ID\"\nparameters:nil\nHTTPMethod:@\"GET\"];\n[request startWithCompletionHandler:^(FBSDKGraphRequestConnection *connection, id result, NSError *error) {\n// Insert your code here\n}];  \nResponse  \n{\n\"name\": \"shiptest\",\n\"components\": \\[\n{\n\"type\": \"BODY\",\n\"text\": \"testing\"\n}\n\\],\n\"language\": \"en\\_US\",\n\"status\": \"REJECTED\",\n\"category\": \"TRANSACTIONAL\",\n\"id\": \"WHATS-APP-MESSAGE-TEMPLATE-ID\"\n}\n",
+        "line_start": 17,
+        "line_end": 59
+    },
+    "4": {
+        "content": "Source document: ../data/platform-docs-versions/Facebook_Graph-API/Whats app business hsm Endpoint.md\nParagraph location: \n\tWhatsApp Message Template\n\tReading\n\tParameters\n\nContent: \n### Parameters  \nThis endpoint doesn't have any parameters.\n",
+        "line_start": 75,
+        "line_end": 77
+    },
+    "5": {
+        "content": "Source document: ../data/platform-docs-versions/Facebook_Graph-API/Whats app business hsm Endpoint.md\nParagraph location: \n\tWhatsApp Message Template\n\tReading\n\tFields\n\nContent: \n### Fields  \n| Field | Description |\n| --- | --- |\n| `id`<br><br>numeric string | ID  |\n| `category`<br><br>enum | The category type of the message template<br><br>[Default](https://developers.facebook.com/docs/graph-api/using-graph-api/#fields) |\n| `components`<br><br>[list<WhatsAppBusinessHSMWhatsAppHSMComponentGet>](https://developers.facebook.com/docs/graph-api/reference/whats-app-business-hsm-whats-app-hsm-component-get/) | An array of JSON objects describing the message template components.<br><br>[Default](https://developers.facebook.com/docs/graph-api/using-graph-api/#fields) |\n| `cta_url_link_tracking_opted_out`<br><br>bool | Optional boolean field for opting out/in of link tracking at template level |\n| `language`<br><br>string | The language (and locale) of the element translation<br><br>[Default](https://developers.facebook.com/docs/graph-api/using-graph-api/#fields) |\n| `message_send_ttl_seconds`<br><br>integer | Template message delivery retry time-to-live (TTL) override value. If unable to deliver the template message to the WhatsApp user, we will periodically retry for this period of time. If we are unable to deliver the message for this period of time, the message will be dropped.  <br>  <br>Only allowed for authentication message templates. See [Time-To-Live](https://developers.facebook.com/docs/whatsapp/business-management-api/authentication-templates/#time-to-live).<br><br>[Default](https://developers.facebook.com/docs/graph-api/using-graph-api/#fields) |\n| `name`<br><br>string | The message template name<br><br>[Default](https://developers.facebook.com/docs/graph-api/using-graph-api/#fields) |\n| `previous_category`<br><br>enum | Previous category of the template. See [Template Categories](https://developers.facebook.com/docs/whatsapp/business-management-api/message-templates#categories).<br><br>[Default](https://developers.facebook.com/docs/graph-api/using-graph-api/#fields) |\n| `quality_score`<br><br>[WhatsAppBusinessHSMWhatsAppBusinessHSMQualityScoreShape](https://developers.facebook.com/docs/graph-api/reference/whats-app-business-hsm-whats-app-business-hsm-quality-score-shape/) | Quality score of the HSM |\n| `rejected_reason`<br><br>enum | The reason the message template was rejected<br><br>enum {ABUSIVE\\_CONTENT, INVALID\\_FORMAT, NONE, PROMOTIONAL, TAG\\_CONTENT\\_MISMATCH, SCAM} |\n| `status`<br><br>enum | The status of the message template<br><br>enum {APPROVED, IN\\_APPEAL, PENDING, REJECTED, PENDING\\_DELETION, DELETED, DISABLED, PAUSED, LIMIT\\_EXCEEDED}<br><br>[Default](https://developers.facebook.com/docs/graph-api/using-graph-api/#fields) |\n| `sub_category`<br><br>enum | Sub category of the template<br><br>[Default](https://developers.facebook.com/docs/graph-api/using-graph-api/#fields) |\n",
+        "line_start": 79,
+        "line_end": 94
+    },
+    "6": {
+        "content": "Source document: ../data/platform-docs-versions/Facebook_Graph-API/Whats app business hsm Endpoint.md\nParagraph location: \n\tWhatsApp Message Template\n\tReading\n\tEdges\n\nContent: \n### Edges  \n| Edge | Description |\n| --- | --- |\n| [`compare`](https://developers.facebook.com/docs/graph-api/reference/whats-app-business-hsm/compare/) | compare |\n",
+        "line_start": 96,
+        "line_end": 100
+    },
+    "7": {
+        "content": "Source document: ../data/platform-docs-versions/Facebook_Graph-API/Whats app business hsm Endpoint.md\nParagraph location: \n\tWhatsApp Message Template\n\tReading\n\tError Codes\n\nContent: \n### Error Codes  \n| Error | Description |\n| --- | --- |\n| 100 | Invalid parameter |\n| 80008 | There have been too many calls to this WhatsApp Business account. Wait a bit and try again. For more info, please refer to https://developers.facebook.com/docs/graph-api/overview/rate-limiting. |\n",
+        "line_start": 102,
+        "line_end": 107
+    },
+    "8": {
+        "content": "Source document: ../data/platform-docs-versions/Facebook_Graph-API/Whats app business hsm Endpoint.md\nParagraph location: \n\tWhatsApp Message Template\n\tCreating\n\nContent: \n## Creating  \nYou can make a POST request to `message_templates` edge from the following paths:  \n* [`/{whats_app_business_account_id}/message_templates`](https://developers.facebook.com/docs/graph-api/reference/whats-app-business-account/message_templates/)  \nWhen posting to this edge, a\u00a0[WhatsAppMessageTemplate](https://developers.facebook.com/docs/graph-api/reference/whats-app-business-hsm/) will be created.\n",
+        "line_start": 109,
+        "line_end": 113
+    },
+    "9": {
+        "content": "Source document: ../data/platform-docs-versions/Facebook_Graph-API/Whats app business hsm Endpoint.md\nParagraph location: \n\tWhatsApp Message Template\n\tCreating\n\tParameters\n\nContent: \n### Parameters  \n| Parameter | Description |\n| --- | --- |\n| `allow_category_change`<br><br>boolean | Set to `true` to allow us to assign a category based on our [template guidelines](https://developers.facebook.com/docs/whatsapp/updates-to-pricing/new-template-guidelines) and the template's contents. This can prevent the template `status` from immediately being set to `REJECTED` upon creation due to miscategorization.<br><br>  <br>If omitted, template will not be auto-assigned a category and its status may be set to `REJECTED` if determined to be miscategorized.<br><br>  <br>See [Template Categories](https://developers.facebook.com/docs/whatsapp/business-management-api/message-templates/#categories). |\n| `category`<br><br>enum {UTILITY, MARKETING, AUTHENTICATION} | Template category. See [Template Categories](https://developers.facebook.com/docs/whatsapp/business-management-api/message-templates/#categories).<br><br>Required |\n| `components`<br><br>array<JSON object> | Array of components that make up the template. See [Template Components](https://developers.facebook.com/docs/whatsapp/business-management-api/message-templates/components).<br><br>  <br>For types `HEADER`, `BODY`, `FOOTER`, `text` is required.<br><br>Required |\n| `type`<br><br>enum {HEADER, BODY, FOOTER, BUTTONS, CAROUSEL, LIMITED\\_TIME\\_OFFER} | Component type.<br><br>Required |\n| `format`<br><br>enum {TEXT, IMAGE, DOCUMENT, VIDEO, LOCATION} | Component format. |\n| `text`<br><br>string | **Required for components with type `HEADER`,`BODY`, or `FOOTER`.**<br><br>  <br>Component text. |\n| `buttons`<br><br>array<JSON object> | Button components to be used in the template. |\n| `type`<br><br>enum {QUICK\\_REPLY, URL, PHONE\\_NUMBER, OTP, MPM, CATALOG, VOICE\\_CALL} | Button type.<br><br>Required |\n| `text`<br><br>string | Button text. |\n| `url`<br><br>URI | url |\n| `phone_number`<br><br>phone number string | phone\\_number |\n| `example`<br><br>array<string> | example |\n| `flow_id`<br><br>int64 | flow\\_id |\n| `zero_tap_terms_accepted`<br><br>boolean | zero\\_tap\\_terms\\_accepted |\n| `example`<br><br>JSON object | Placeholder examples. Templates will not be approved without examples. |\n| `header_text`<br><br>array<string> | header\\_text |\n| `body_text`<br><br>array<array<string>> | body\\_text |\n| `header_handle`<br><br>array<string> | header\\_handle |\n| `language`<br><br>string | Template [location and locale code](https://developers.facebook.com/docs/whatsapp/business-management-api/message-templates/supported-languages).<br><br>Required |\n| `name`<br><br>string | Template name.<br><br>Required |\n| `sub_category`<br><br>enum {CUSTOM, ORDER\\_DETAILS, ORDER\\_STATUS} | Sub category of the template |\n",
+        "line_start": 75,
+        "line_end": 99
+    },
+    "10": {
+        "content": "Source document: ../data/platform-docs-versions/Facebook_Graph-API/Whats app business hsm Endpoint.md\nParagraph location: \n\tWhatsApp Message Template\n\tCreating\n\tReturn Type\n\nContent: \n### Return Type  \nThis endpoint supports [read-after-write](https://developers.facebook.com/docs/graph-api/advanced/#read-after-write) and will read the node to which you POSTed.  \nStruct {  \n`id`: numeric string,  \n`status`: enum,  \n`category`: enum,  \n}\n",
+        "line_start": 143,
+        "line_end": 150
+    },
+    "11": {
+        "content": "Source document: ../data/platform-docs-versions/Facebook_Graph-API/Whats app business hsm Endpoint.md\nParagraph location: \n\tWhatsApp Message Template\n\tCreating\n\tError Codes\n\nContent: \n### Error Codes  \n| Error | Description |\n| --- | --- |\n| 100 | Invalid parameter |\n| 80008 | There have been too many calls to this WhatsApp Business account. Wait a bit and try again. For more info, please refer to https://developers.facebook.com/docs/graph-api/overview/rate-limiting. |\n| 192 | Invalid phone number |\n| 200 | Permissions error |\n| 200002 | HSM Template creation failed |\n",
+        "line_start": 102,
+        "line_end": 110
+    },
+    "12": {
+        "content": "Source document: ../data/platform-docs-versions/Facebook_Graph-API/Whats app business hsm Endpoint.md\nParagraph location: \n\tWhatsApp Message Template\n\tUpdating\n\nContent: \n## Updating  \nYou can update a\u00a0[WhatsAppMessageTemplate](https://developers.facebook.com/docs/graph-api/reference/whats-app-business-hsm/) by making a POST request to [`/{whats_app_message_template_id}`](https://developers.facebook.com/docs/graph-api/reference/whats-app-business-hsm/).\n",
+        "line_start": 167,
+        "line_end": 169
+    },
+    "13": {
+        "content": "Source document: ../data/platform-docs-versions/Facebook_Graph-API/Whats app business hsm Endpoint.md\nParagraph location: \n\tWhatsApp Message Template\n\tUpdating\n\tParameters\n\nContent: \n### Parameters  \n| Parameter | Description |\n| --- | --- |\n| `category`<br><br>enum {UTILITY, MARKETING, AUTHENTICATION} | category |\n| `components`<br><br>array<JSON object> | The array containing all the content of the message template |\n| `type`<br><br>enum {HEADER, BODY, FOOTER, BUTTONS, CAROUSEL, LIMITED\\_TIME\\_OFFER} | Component type.<br><br>Required |\n| `format`<br><br>enum {TEXT, IMAGE, DOCUMENT, VIDEO, LOCATION} | Component format. |\n| `text`<br><br>string | **Required for components with type `HEADER`,`BODY`, or `FOOTER`.**<br><br>  <br>Component text. |\n| `buttons`<br><br>array<JSON object> | Button components to be used in the template. |\n| `type`<br><br>enum {QUICK\\_REPLY, URL, PHONE\\_NUMBER, OTP, MPM, CATALOG, VOICE\\_CALL} | Button type.<br><br>Required |\n| `text`<br><br>string | Button text. |\n| `url`<br><br>URI | url |\n| `phone_number`<br><br>phone number string | phone\\_number |\n| `flow_id`<br><br>int64 | flow\\_id |\n| `zero_tap_terms_accepted`<br><br>boolean | zero\\_tap\\_terms\\_accepted |\n| `message_send_ttl_seconds`<br><br>int64 | Template message delivery retry time-to-live (TTL) override value. If unable to deliver the template message to the WhatsApp user, we will periodically retry for this period of time. If we are unable to deliver the message for this period of time, the message will be dropped.  <br>  <br>Only allowed for authentication message templates. See [Time-To-Live](https://developers.facebook.com/docs/whatsapp/business-management-api/authentication-templates/#time-to-live). |\n",
+        "line_start": 75,
+        "line_end": 91
+    },
+    "14": {
+        "content": "Source document: ../data/platform-docs-versions/Facebook_Graph-API/Whats app business hsm Endpoint.md\nParagraph location: \n\tWhatsApp Message Template\n\tUpdating\n\tReturn Type\n\nContent: \n### Return Type  \nThis endpoint supports [read-after-write](https://developers.facebook.com/docs/graph-api/advanced/#read-after-write) and will read the node to which you POSTed.  \nStruct {  \n`success`: bool,  \n}\n",
+        "line_start": 143,
+        "line_end": 148
+    },
+    "15": {
+        "content": "Source document: ../data/platform-docs-versions/Facebook_Graph-API/Whats app business hsm Endpoint.md\nParagraph location: \n\tWhatsApp Message Template\n\tUpdating\n\tError Codes\n\nContent: \n### Error Codes  \n| Error | Description |\n| --- | --- |\n| 100 | Invalid parameter |\n| 80012 | There have been too many calls to this message template. Wait a bit and try again. For more info, please refer to https://developers.facebook.com/docs/graph-api/overview/rate-limiting. |\n| 192 | Invalid phone number |\n",
+        "line_start": 102,
+        "line_end": 108
+    },
+    "16": {
+        "content": "Source document: ../data/platform-docs-versions/Facebook_Graph-API/Whats app business hsm Endpoint.md\nParagraph location: \n\tWhatsApp Message Template\n\tDeleting\n\nContent: \n## Deleting  \nYou can dissociate a\u00a0[WhatsAppMessageTemplate](https://developers.facebook.com/docs/graph-api/reference/whats-app-business-hsm/) from a\u00a0[WhatsAppBusinessAccount](https://developers.facebook.com/docs/graph-api/reference/whats-app-business-account/) by making a DELETE request to [`/{whats_app_business_account_id}/message_templates`](https://developers.facebook.com/docs/graph-api/reference/whats-app-business-account/message_templates/).\n",
+        "line_start": 207,
+        "line_end": 209
+    },
+    "17": {
+        "content": "Source document: ../data/platform-docs-versions/Facebook_Graph-API/Whats app business hsm Endpoint.md\nParagraph location: \n\tWhatsApp Message Template\n\tDeleting\n\tParameters\n\nContent: \n### Parameters  \n| Parameter | Description |\n| --- | --- |\n| `hsm_id`<br><br>whatsapp business hsm ID | ID of template to be deleted. Required if deleting a template by ID. |\n| `name`<br><br>string | Name of template to be deleted.<br><br>Required |\n",
+        "line_start": 75,
+        "line_end": 80
+    },
+    "18": {
+        "content": "Source document: ../data/platform-docs-versions/Facebook_Graph-API/Whats app business hsm Endpoint.md\nParagraph location: \n\tWhatsApp Message Template\n\tDeleting\n\tError Codes\n\nContent: \n### Error Codes  \n| Error | Description |\n| --- | --- |\n| 100 | Invalid parameter |\n| 200 | Permissions error |  \n[WhatsApp Business Platform](https://developers.facebook.com/docs/whatsapp) | [Cloud API](https://developers.facebook.com/docs/whatsapp/cloud-api) | [On-Premises API](https://developers.facebook.com/docs/whatsapp/on-premises) | [Business Management API](https://developers.facebook.com/docs/whatsapp/business-management-api)  \n![](https://www.facebook.com/tr?id=675141479195042&ev=PageView&noscript=1)  \n![](https://www.facebook.com/tr?id=574561515946252&ev=PageView&noscript=1)  \n![](https://www.facebook.com/tr?id=1754628768090156&ev=PageView&noscript=1)\n",
+        "line_start": 102,
+        "line_end": 111
+    },
+    "19": {
+        "content": "Source document: ../data/platform-docs-versions/Facebook_Graph-API/Whats app business hsm Endpoint.md\nParagraph location: \n\tResource URL: https://developers.facebook.com/docs/graph-api/reference/whats-app-business-hsm/compare/\n\nContent: \n# Resource URL: https://developers.facebook.com/docs/graph-api/reference/whats-app-business-hsm/compare/\n",
+        "line_start": 241,
+        "line_end": 242
+    },
+    "20": {
+        "content": "Source document: ../data/platform-docs-versions/Facebook_Graph-API/Whats app business hsm Endpoint.md\nParagraph location: \n\tWhats App Message Template Compare\n\nContent: \n# Whats App Message Template Compare  \nCompare template send counts and block ratios. See [Template Comparison](https://developers.facebook.com/docs/whatsapp/business-management-api/message-templates/template-comparison).\n",
+        "line_start": 242,
+        "line_end": 244
+    },
+    "21": {
+        "content": "Source document: ../data/platform-docs-versions/Facebook_Graph-API/Whats app business hsm Endpoint.md\nParagraph location: \n\tWhats App Message Template Compare\n\tReading\n\nContent: \n## Reading  \nCompare the WhatsApp message template's send count and block ratio to another WhatsApp message template's send count and block ratio.\n",
+        "line_start": 13,
+        "line_end": 15
+    },
+    "22": {
+        "content": "Source document: ../data/platform-docs-versions/Facebook_Graph-API/Whats app business hsm Endpoint.md\nParagraph location: \n\tWhats App Message Template Compare\n\tReading\n\tRequirements\n\nContent: \n### Requirements  \n| Type | Description |\n| --- | --- |\n| [Access Tokens](https://developers.facebook.com/docs/facebook-login/guides/access-tokens) | [User](https://developers.facebook.com/docs/whatsapp/business-management-api/get-started#user-access-tokens) or [System User](https://developers.facebook.com/docs/whatsapp/business-management-api/get-started#user-access-tokens) |\n| [Permissions](https://developers.facebook.com/docs/permissions/reference) | [business\\_management](https://developers.facebook.com/docs/permissions/reference/business_management) |\n",
+        "line_start": 250,
+        "line_end": 255
+    },
+    "23": {
+        "content": "Source document: ../data/platform-docs-versions/Facebook_Graph-API/Whats app business hsm Endpoint.md\nParagraph location: \n\tWhats App Message Template Compare\n\tReading\n\tLimitations\n\nContent: \n### Limitations  \n* Only two templates can be compared at a time.\n* Templates must have been sent at least 1,000 times in the queries specified timeframe.\n* Timeframes are limited to 7, 30, 60 and 90 day lookbacks from the time of the request.\n",
+        "line_start": 257,
+        "line_end": 261
+    },
+    "24": {
+        "content": "Source document: ../data/platform-docs-versions/Facebook_Graph-API/Whats app business hsm Endpoint.md\nParagraph location: \n\tWhats App Message Template Compare\n\tReading\n\tRequest Syntax\n\nContent: \n### Request Syntax  \nGET /<WHATSAPP\\_MESSAGE\\_TEMPLATE\\_ID>/compare\n?template\\_ids=\\[<TEMPLATE\\_IDS\\]\n&start=<START>\n&end=<END>\n",
+        "line_start": 263,
+        "line_end": 268
+    },
+    "25": {
+        "content": "Source document: ../data/platform-docs-versions/Facebook_Graph-API/Whats app business hsm Endpoint.md\nParagraph location: \n\tWhats App Message Template Compare\n\tReading\n\tResponse\n\nContent: \n### Response  \n{\n\"data\": \\[\n{\n\"metric\": \"BLOCK\\_RATE\",\n\"type\": \"RELATIVE\",\n\"order\\_by\\_relative\\_metric\": \\[<ORDER\\_BY\\_RELATIVE\\_METRIC>\\]\n},\n{\n\"metric\": \"MESSAGE\\_SENDS\",\n\"type\": \"NUMBER\\_VALUES\",\n\"number\\_values\": \\[<NUMBER\\_VALUES>\\]\n},\n{\n\"metric\": \"TOP\\_BLOCK\\_REASON\",\n\"type\": \"STRING\\_VALUES\",\n\"string\\_values\": \\[<STRING\\_VALUES>\\]\n}\n\\]\n}\n",
+        "line_start": 270,
+        "line_end": 290
+    },
+    "26": {
+        "content": "Source document: ../data/platform-docs-versions/Facebook_Graph-API/Whats app business hsm Endpoint.md\nParagraph location: \n\tWhats App Message Template Compare\n\tReading\n\tSample Request\n\nContent: \n### Sample Request  \ncurl -X GET 'https://graph.facebook.com/`v19.0`/5289179717853347/compare?template\\_ids=\\[1533406637136032\\]&start=1674844791182&end=1674845395982' \\\\\n-H 'Authorization: Bearer EAAJB...'\n",
+        "line_start": 292,
+        "line_end": 295
+    },
+    "27": {
+        "content": "Source document: ../data/platform-docs-versions/Facebook_Graph-API/Whats app business hsm Endpoint.md\nParagraph location: \n\tWhats App Message Template Compare\n\tReading\n\tSample Response\n\nContent: \n### Sample Response  \n{\n\"data\": \\[\n{\n\"metric\": \"BLOCK\\_RATE\",\n\"type\": \"RELATIVE\",\n\"order\\_by\\_relative\\_metric\": \\[\n\"1533406637136032\",\n\"5289179717853347\"\n\\]\n},\n{\n\"metric\": \"MESSAGE\\_SENDS\",\n\"type\": \"NUMBER\\_VALUES\",\n\"number\\_values\": \\[\n{\n\"key\": \"5289179717853347\",\n\"value\": 1273\n},\n{\n\"key\": \"1533406637136032\",\n\"value\": 1042\n}\n\\]\n},\n{\n\"metric\": \"TOP\\_BLOCK\\_REASON\",\n\"type\": \"STRING\\_VALUES\",\n\"string\\_values\": \\[\n{\n\"key\": \"5289179717853347\",\n\"value\": \"UNKNOWN\\_BLOCK\\_REASON\"\n},\n{\n\"key\": \"1533406637136032\",\n\"value\": \"UNKNOWN\\_BLOCK\\_REASON\"\n}\n\\]\n}\n\\]\n}\n",
+        "line_start": 297,
+        "line_end": 338
+    },
+    "28": {
+        "content": "Source document: ../data/platform-docs-versions/Facebook_Graph-API/Whats app business hsm Endpoint.md\nParagraph location: \n\tWhats App Message Template Compare\n\tReading\n\tExample\n\nContent: \n### Example  \nHTTPPHP SDKJavaScript SDKAndroid SDKiOS SDK[Graph API Explorer](https://developers.facebook.com/tools/explorer/?method=GET&path=%7Bwhats-app-message-template-id%7D%2Fcompare&version=v19.0)  \nGET /v19.0/{whats-app-message-template-id}/compare HTTP/1.1\nHost: graph.facebook.com  \n/* PHP SDK v5.0.0 */\n/* make the API call */\ntry {\n// Returns a `Facebook\\FacebookResponse` object\n$response = $fb->get(\n'/{whats-app-message-template-id}/compare',\n'{access-token}'\n);\n} catch(Facebook\\Exceptions\\FacebookResponseException $e) {\necho 'Graph returned an error: ' . $e->getMessage();\nexit;\n} catch(Facebook\\Exceptions\\FacebookSDKException $e) {\necho 'Facebook SDK returned an error: ' . $e->getMessage();\nexit;\n}\n$graphNode = $response->getGraphNode();\n/* handle the result */  \n/* make the API call */\nFB.api(\n\"/{whats-app-message-template-id}/compare\",\nfunction (response) {\nif (response && !response.error) {\n/* handle the result */\n}\n}\n);  \n/* make the API call */\nnew GraphRequest(\nAccessToken.getCurrentAccessToken(),\n\"/{whats-app-message-template-id}/compare\",\nnull,\nHttpMethod.GET,\nnew GraphRequest.Callback() {\npublic void onCompleted(GraphResponse response) {\n/* handle the result */\n}\n}\n).executeAsync();  \n/* make the API call */\nFBSDKGraphRequest *request = [[FBSDKGraphRequest alloc]\ninitWithGraphPath:@\"/{whats-app-message-template-id}/compare\"\nparameters:params\nHTTPMethod:@\"GET\"];\n[request startWithCompletionHandler:^(FBSDKGraphRequestConnection *connection,\nid result,\nNSError *error) {\n// Handle the result\n}];  \nIf you want to learn how to use the Graph API, read our [Using Graph API guide](https://developers.facebook.com/docs/graph-api/using-graph-api/).\n",
+        "line_start": 17,
+        "line_end": 70
+    },
+    "29": {
+        "content": "Source document: ../data/platform-docs-versions/Facebook_Graph-API/Whats app business hsm Endpoint.md\nParagraph location: \n\tWhats App Message Template Compare\n\tReading\n\tParameters\n\nContent: \n### Parameters  \n| Parameter | Description |\n| --- | --- |\n| `end`<br><br>datetime/timestamp | UNIX timestamp indicating end of timeframe. Timeframes are limited to 7, 30, 60 and 90 day lookbacks from the time of the request. To define a timeframe, set your end date to the current time as a UNIX timestamp, then subtract the number of days for your desired timeframe, in seconds, from that value:<br><br>Required |\n| `start`<br><br>datetime/timestamp | UNIX timestamp indicating start of timeframe. Timeframes are limited to 7, 30, 60 and 90 day lookbacks from the time of the request. To define a timeframe, set your end date to the current time as a UNIX timestamp, then subtract the number of days for your desired timeframe, in seconds, from that value:<br><br>Required |\n| `template_ids`<br><br>array<EntWhatsAppBusinessHSM ID> | ID of the WhatsApp Message Template to compare the target to.<br><br>Required |\n",
+        "line_start": 75,
+        "line_end": 81
+    },
+    "30": {
+        "content": "Source document: ../data/platform-docs-versions/Facebook_Graph-API/Whats app business hsm Endpoint.md\nParagraph location: \n\tWhats App Message Template Compare\n\tReading\n\tFields\n\nContent: \n### Fields  \nReading from this edge will return a JSON formatted result:  \n{\n\"`data`\": \\[\\],\n\"`paging`\": {}\n}  \n#### `data`  \nA list of [WhatsAppBusinessHSMComparison](https://developers.facebook.com/docs/graph-api/reference/whats-app-business-hsm-comparison/) nodes.  \n#### `paging`  \nFor more details about pagination, see the [Graph API guide](https://developers.facebook.com/docs/graph-api/using-graph-api/#paging).\n",
+        "line_start": 79,
+        "line_end": 89
+    },
+    "31": {
+        "content": "Source document: ../data/platform-docs-versions/Facebook_Graph-API/Whats app business hsm Endpoint.md\nParagraph location: \n\tWhats App Message Template Compare\n\tReading\n\tError Codes\n\nContent: \n### Error Codes  \n| Error | Description |\n| --- | --- |\n| 100 | Invalid parameter |\n",
+        "line_start": 102,
+        "line_end": 106
+    },
+    "32": {
+        "content": "Source document: ../data/platform-docs-versions/Facebook_Graph-API/Whats app business hsm Endpoint.md\nParagraph location: \n\tWhats App Message Template Compare\n\tCreating\n\nContent: \n## Creating  \nYou can't perform this operation on this endpoint.\n",
+        "line_start": 109,
+        "line_end": 111
+    },
+    "33": {
+        "content": "Source document: ../data/platform-docs-versions/Facebook_Graph-API/Whats app business hsm Endpoint.md\nParagraph location: \n\tWhats App Message Template Compare\n\tUpdating\n\nContent: \n## Updating  \nYou can't perform this operation on this endpoint.\n",
+        "line_start": 167,
+        "line_end": 169
+    },
+    "34": {
+        "content": "Source document: ../data/platform-docs-versions/Facebook_Graph-API/Whats app business hsm Endpoint.md\nParagraph location: \n\tWhats App Message Template Compare\n\tDeleting\n\nContent: \n## Deleting  \nYou can't perform this operation on this endpoint.  \n![](https://www.facebook.com/tr?id=675141479195042&ev=PageView&noscript=1)  \n![](https://www.facebook.com/tr?id=574561515946252&ev=PageView&noscript=1)  \n![](https://www.facebook.com/tr?id=1754628768090156&ev=PageView&noscript=1)\n",
+        "line_start": 207,
+        "line_end": 212
+    }
+}
