@@ -1,62 +1,281 @@
-::: xyzno7u
-::: _9nrg
-Meta responds to government requests for data in accordance with
-applicable law and our terms of service. Each and every request we
-receive is carefully reviewed for legal sufficiency and we may reject or
-require greater specificity on requests that appear overly broad or
-vague. This chart provides data on the number of requests we received
-and the rate we complied with all or some of the government\'s request
-for each half by country or region. We publish this information in
-6-month increments, subject to certain limitations, and we began
-reporting this information in 2013.
+Government Requests for User Data | Transparency Center
 
-[ ![](https://static.xx.fbcdn.net/rsrc.php/y9/r/YkQBK_9uWKR.svg){._9sq3
-.img} ]{._58ah}
-:::
 
-::: {.x1n2onr6 .x1ja2u2z}
-![](data:image/svg+xml;base64,PHN2Zz4gPGc+IDxnIGNsYXNzPSJ0aWNrIj4gPHRleHQgY2xhc3M9Il85cmU1IF85bm9iIF85cTd1IGxlZnRBeGlzIj4gMCUgPC90ZXh0PiA8L2c+IDxnIGNsYXNzPSJ0aWNrIj4gPHRleHQgY2xhc3M9Il85cmU1IF85bm9iIF85cTd1IGxlZnRBeGlzIj4gMjUlIDwvdGV4dD4gPC9nPiA8ZyBjbGFzcz0idGljayI+IDx0ZXh0IGNsYXNzPSJfOXJlNSBfOW5vYiBfOXE3dSBsZWZ0QXhpcyI+IDUwJSA8L3RleHQ+IDwvZz4gPGcgY2xhc3M9InRpY2siPiA8dGV4dCBjbGFzcz0iXzlyZTUgXzlub2IgXzlxN3UgbGVmdEF4aXMiPiA3NSUgPC90ZXh0PiA8L2c+IDxnIGNsYXNzPSJ0aWNrIj4gPHRleHQgY2xhc3M9Il85cmU1IF85bm9iIF85cTd1IGxlZnRBeGlzIj4gMTAwJSA8L3RleHQ+IDwvZz4gPC9nPiA8Zz4gPGcgY2xhc3M9InRpY2siPiA8dGV4dCBjbGFzcz0iXzlyZTUgXzlub2IgXzlxN3UiPiAwIDwvdGV4dD4gPC9nPiA8ZyBjbGFzcz0idGljayI+IDx0ZXh0IGNsYXNzPSJfOXJlNSBfOW5vYiBfOXE3dSI+IDc1ayA8L3RleHQ+IDwvZz4gPGcgY2xhc3M9InRpY2siPiA8dGV4dCBjbGFzcz0iXzlyZTUgXzlub2IgXzlxN3UiPiAxNTBrIDwvdGV4dD4gPC9nPiA8ZyBjbGFzcz0idGljayI+IDx0ZXh0IGNsYXNzPSJfOXJlNSBfOW5vYiBfOXE3dSI+IDIyNWsgPC90ZXh0PiA8L2c+IDxnIGNsYXNzPSJ0aWNrIj4gPHRleHQgY2xhc3M9Il85cmU1IF85bm9iIF85cTd1Ij4gMzAwayA8L3RleHQ+IDwvZz4gPC9nPiA8ZyBjbGFzcz0iXzlxN3YiPiA8Zz4gPGxpbmU+IDwvbGluZT4gPGxpbmU+IDwvbGluZT4gPGxpbmU+IDwvbGluZT4gPGxpbmU+IDwvbGluZT4gPGxpbmU+IDwvbGluZT4gPC9nPiA8L2c+IDxnPiA8ZyBjbGFzcz0idGljayI+IDxsaW5lIGNsYXNzPSJfOXJmZSI+IDwvbGluZT4gPHRleHQgY2xhc3M9Il85cmU1IF85bm9iIF85cTd1Ij4gMjAxMyA8L3RleHQ+IDwvZz4gPGcgY2xhc3M9InRpY2siPiA8bGluZSBjbGFzcz0iXzlyZmUiPiA8L2xpbmU+IDx0ZXh0IGNsYXNzPSJfOXJlNSBfOW5vYiBfOXE3dSI+IDIwMTQgPC90ZXh0PiA8L2c+IDxnIGNsYXNzPSJ0aWNrIj4gPGxpbmUgY2xhc3M9Il85cmZlIj4gPC9saW5lPiA8dGV4dCBjbGFzcz0iXzlyZTUgXzlub2IgXzlxN3UiPiAyMDE1IDwvdGV4dD4gPC9nPiA8ZyBjbGFzcz0idGljayI+IDxsaW5lIGNsYXNzPSJfOXJmZSI+IDwvbGluZT4gPHRleHQgY2xhc3M9Il85cmU1IF85bm9iIF85cTd1Ij4gMjAxNiA8L3RleHQ+IDwvZz4gPGcgY2xhc3M9InRpY2siPiA8bGluZSBjbGFzcz0iXzlyZmUiPiA8L2xpbmU+IDx0ZXh0IGNsYXNzPSJfOXJlNSBfOW5vYiBfOXE3dSI+IDIwMTcgPC90ZXh0PiA8L2c+IDxnIGNsYXNzPSJ0aWNrIj4gPGxpbmUgY2xhc3M9Il85cmZlIj4gPC9saW5lPiA8dGV4dCBjbGFzcz0iXzlyZTUgXzlub2IgXzlxN3UiPiAyMDE4IDwvdGV4dD4gPC9nPiA8ZyBjbGFzcz0idGljayI+IDxsaW5lIGNsYXNzPSJfOXJmZSI+IDwvbGluZT4gPHRleHQgY2xhc3M9Il85cmU1IF85bm9iIF85cTd1Ij4gMjAxOSA8L3RleHQ+IDwvZz4gPGcgY2xhc3M9InRpY2siPiA8bGluZSBjbGFzcz0iXzlyZmUiPiA8L2xpbmU+IDx0ZXh0IGNsYXNzPSJfOXJlNSBfOW5vYiBfOXE3dSI+IDIwMjAgPC90ZXh0PiA8L2c+IDxnIGNsYXNzPSJ0aWNrIj4gPGxpbmUgY2xhc3M9Il85cmZlIj4gPC9saW5lPiA8dGV4dCBjbGFzcz0iXzlyZTUgXzlub2IgXzlxN3UiPiAyMDIxIDwvdGV4dD4gPC9nPiA8ZyBjbGFzcz0idGljayI+IDxsaW5lIGNsYXNzPSJfOXJmZSI+IDwvbGluZT4gPHRleHQgY2xhc3M9Il85cmU1IF85bm9iIF85cTd1Ij4gMjAyMiA8L3RleHQ+IDwvZz4gPGcgY2xhc3M9InRpY2siPiA8bGluZSBjbGFzcz0iXzlyZmUiPiA8L2xpbmU+IDx0ZXh0IGNsYXNzPSJfOXJlNSBfOW5vYiBfOXE3dSI+IDIwMjMgPC90ZXh0PiA8L2c+IDwvZz4gPGxpbmUgY2xhc3M9Il85cmZlIj4gPC9saW5lPiA8Zz4gPHJlY3QgaGVpZ2h0PSI1MS4zMTQxMzMzMzMzMzMzIiB3aWR0aD0iMTUuNjA5NzU2MDk3NTYwOTY4Ij4gPC9yZWN0PiA8cmVjdCBoZWlnaHQ9IjU0LjAyMzQ2NjY2NjY2NjY1IiB3aWR0aD0iMTUuNjA5NzU2MDk3NTYwOTY4Ij4gPC9yZWN0PiA8cmVjdCBoZWlnaHQ9IjYxLjI3NTczMzMzMzMzMzMzNSIgd2lkdGg9IjE1LjYwOTc1NjA5NzU2MDk2OCI+IDwvcmVjdD4gPHJlY3QgaGVpZ2h0PSI2MS4zODc3MzMzMzMzMzMzNiIgd2lkdGg9IjE1LjYwOTc1NjA5NzU2MDk2OCI+IDwvcmVjdD4gPHJlY3QgaGVpZ2h0PSI2Ny45NjE1OTk5OTk5OTk5OCIgd2lkdGg9IjE1LjYwOTc1NjA5NzU2MDk2OCI+IDwvcmVjdD4gPHJlY3QgaGVpZ2h0PSI3My44MjQwMDAwMDAwMDAwMSIgd2lkdGg9IjE1LjYwOTc1NjA5NzU2MDk2OCI+IDwvcmVjdD4gPHJlY3QgaGVpZ2h0PSI4Ny4xNzc1OTk5OTk5OTk5OCIgd2lkdGg9IjE1LjYwOTc1NjA5NzU2MDk2OCI+IDwvcmVjdD4gPHJlY3QgaGVpZ2h0PSI5Mi41NjQyNjY2NjY2NjY2NCIgd2lkdGg9IjE1LjYwOTc1NjA5NzU2MDk2OCI+IDwvcmVjdD4gPHJlY3QgaGVpZ2h0PSIxMDguMTQ5MzMzMzMzMzMzMzUiIHdpZHRoPSIxNS42MDk3NTYwOTc1NjA5NjgiPiA8L3JlY3Q+IDxyZWN0IGhlaWdodD0iMTExLjgzMDQiIHdpZHRoPSIxNS42MDk3NTYwOTc1NjA5NjgiPiA8L3JlY3Q+IDxyZWN0IGhlaWdodD0iMTM0LjczNiIgd2lkdGg9IjE1LjYwOTc1NjA5NzU2MDk2OCI+IDwvcmVjdD4gPHJlY3QgaGVpZ2h0PSIxNDIuMDA5NiIgd2lkdGg9IjE1LjYwOTc1NjA5NzU2MDk2OCI+IDwvcmVjdD4gPHJlY3QgaGVpZ2h0PSIxNjEuMTkxNDY2NjY2NjY2NjYiIHdpZHRoPSIxNS42MDk3NTYwOTc1NjA5NjgiPiA8L3JlY3Q+IDxyZWN0IGhlaWdodD0iMTc0LjI2NjY2NjY2NjY2NjY4IiB3aWR0aD0iMTUuNjA5NzU2MDk3NTYwOTY4Ij4gPC9yZWN0PiA8cmVjdCBoZWlnaHQ9IjIwOS4xNjQ4IiB3aWR0aD0iMTUuNjA5NzU2MDk3NTYwOTY4Ij4gPC9yZWN0PiA8cmVjdCBoZWlnaHQ9IjIyNy43NDcyIiB3aWR0aD0iMTUuNjA5NzU2MDk3NTYwOTY4Ij4gPC9yZWN0PiA8cmVjdCBoZWlnaHQ9IjI0OS4xMjUzMzMzMzMzMzMzNCIgd2lkdGg9IjE1LjYwOTc1NjA5NzU2MDk2OCI+IDwvcmVjdD4gPHJlY3QgaGVpZ2h0PSIyNTMuMDk1NDY2NjY2NjY2NjgiIHdpZHRoPSIxNS42MDk3NTYwOTc1NjA5NjgiPiA8L3JlY3Q+IDxyZWN0IGhlaWdodD0iMjc3LjI0MTYiIHdpZHRoPSIxNS42MDk3NTYwOTc1NjA5NjgiPiA8L3JlY3Q+IDxyZWN0IGhlaWdodD0iMjc5LjM0NzIiIHdpZHRoPSIxNS42MDk3NTYwOTc1NjA5NjgiPiA8L3JlY3Q+IDxyZWN0IGhlaWdodD0iMzEzLjgwNDgiIHdpZHRoPSIxNS42MDk3NTYwOTc1NjA5NjgiPiA8L3JlY3Q+IDxjbGlwcGF0aCBpZD0iYmFyLWNvcm5lci1jbGlwLWw1ajg0NWZuOGRwIj4gPHJlY3QgaGVpZ2h0PSIzMjAiIHdpZHRoPSI2NDAiPiA8L3JlY3Q+IDwvY2xpcHBhdGg+IDxjbGlwcGF0aCBpZD0iYmFyLWNvcm5lci1jbGlwLWw1ajg0NWZuOGRwIj4gPHJlY3QgaGVpZ2h0PSIzMjAiIHdpZHRoPSI2NDAiPiA8L3JlY3Q+IDwvY2xpcHBhdGg+IDxjbGlwcGF0aCBpZD0iYmFyLWNvcm5lci1jbGlwLWw1ajg0NWZuOGRwIj4gPHJlY3QgaGVpZ2h0PSIzMjAiIHdpZHRoPSI2NDAiPiA8L3JlY3Q+IDwvY2xpcHBhdGg+IDxjbGlwcGF0aCBpZD0iYmFyLWNvcm5lci1jbGlwLWw1ajg0NWZuOGRwIj4gPHJlY3QgaGVpZ2h0PSIzMjAiIHdpZHRoPSI2NDAiPiA8L3JlY3Q+IDwvY2xpcHBhdGg+IDxjbGlwcGF0aCBpZD0iYmFyLWNvcm5lci1jbGlwLWw1ajg0NWZuOGRwIj4gPHJlY3QgaGVpZ2h0PSIzMjAiIHdpZHRoPSI2NDAiPiA8L3JlY3Q+IDwvY2xpcHBhdGg+IDxjbGlwcGF0aCBpZD0iYmFyLWNvcm5lci1jbGlwLWw1ajg0NWZuOGRwIj4gPHJlY3QgaGVpZ2h0PSIzMjAiIHdpZHRoPSI2NDAiPiA8L3JlY3Q+IDwvY2xpcHBhdGg+IDxjbGlwcGF0aCBpZD0iYmFyLWNvcm5lci1jbGlwLWw1ajg0NWZuOGRwIj4gPHJlY3QgaGVpZ2h0PSIzMjAiIHdpZHRoPSI2NDAiPiA8L3JlY3Q+IDwvY2xpcHBhdGg+IDxjbGlwcGF0aCBpZD0iYmFyLWNvcm5lci1jbGlwLWw1ajg0NWZuOGRwIj4gPHJlY3QgaGVpZ2h0PSIzMjAiIHdpZHRoPSI2NDAiPiA8L3JlY3Q+IDwvY2xpcHBhdGg+IDxjbGlwcGF0aCBpZD0iYmFyLWNvcm5lci1jbGlwLWw1ajg0NWZuOGRwIj4gPHJlY3QgaGVpZ2h0PSIzMjAiIHdpZHRoPSI2NDAiPiA8L3JlY3Q+IDwvY2xpcHBhdGg+IDxjbGlwcGF0aCBpZD0iYmFyLWNvcm5lci1jbGlwLWw1ajg0NWZuOGRwIj4gPHJlY3QgaGVpZ2h0PSIzMjAiIHdpZHRoPSI2NDAiPiA8L3JlY3Q+IDwvY2xpcHBhdGg+IDxjbGlwcGF0aCBpZD0iYmFyLWNvcm5lci1jbGlwLWw1ajg0NWZuOGRwIj4gPHJlY3QgaGVpZ2h0PSIzMjAiIHdpZHRoPSI2NDAiPiA8L3JlY3Q+IDwvY2xpcHBhdGg+IDxjbGlwcGF0aCBpZD0iYmFyLWNvcm5lci1jbGlwLWw1ajg0NWZuOGRwIj4gPHJlY3QgaGVpZ2h0PSIzMjAiIHdpZHRoPSI2NDAiPiA8L3JlY3Q+IDwvY2xpcHBhdGg+IDxjbGlwcGF0aCBpZD0iYmFyLWNvcm5lci1jbGlwLWw1ajg0NWZuOGRwIj4gPHJlY3QgaGVpZ2h0PSIzMjAiIHdpZHRoPSI2NDAiPiA8L3JlY3Q+IDwvY2xpcHBhdGg+IDxjbGlwcGF0aCBpZD0iYmFyLWNvcm5lci1jbGlwLWw1ajg0NWZuOGRwIj4gPHJlY3QgaGVpZ2h0PSIzMjAiIHdpZHRoPSI2NDAiPiA8L3JlY3Q+IDwvY2xpcHBhdGg+IDxjbGlwcGF0aCBpZD0iYmFyLWNvcm5lci1jbGlwLWw1ajg0NWZuOGRwIj4gPHJlY3QgaGVpZ2h0PSIzMjAiIHdpZHRoPSI2NDAiPiA8L3JlY3Q+IDwvY2xpcHBhdGg+IDxjbGlwcGF0aCBpZD0iYmFyLWNvcm5lci1jbGlwLWw1ajg0NWZuOGRwIj4gPHJlY3QgaGVpZ2h0PSIzMjAiIHdpZHRoPSI2NDAiPiA8L3JlY3Q+IDwvY2xpcHBhdGg+IDxjbGlwcGF0aCBpZD0iYmFyLWNvcm5lci1jbGlwLWw1ajg0NWZuOGRwIj4gPHJlY3QgaGVpZ2h0PSIzMjAiIHdpZHRoPSI2NDAiPiA8L3JlY3Q+IDwvY2xpcHBhdGg+IDxjbGlwcGF0aCBpZD0iYmFyLWNvcm5lci1jbGlwLWw1ajg0NWZuOGRwIj4gPHJlY3QgaGVpZ2h0PSIzMjAiIHdpZHRoPSI2NDAiPiA8L3JlY3Q+IDwvY2xpcHBhdGg+IDxjbGlwcGF0aCBpZD0iYmFyLWNvcm5lci1jbGlwLWw1ajg0NWZuOGRwIj4gPHJlY3QgaGVpZ2h0PSIzMjAiIHdpZHRoPSI2NDAiPiA8L3JlY3Q+IDwvY2xpcHBhdGg+IDxjbGlwcGF0aCBpZD0iYmFyLWNvcm5lci1jbGlwLWw1ajg0NWZuOGRwIj4gPHJlY3QgaGVpZ2h0PSIzMjAiIHdpZHRoPSI2NDAiPiA8L3JlY3Q+IDwvY2xpcHBhdGg+IDxjbGlwcGF0aCBpZD0iYmFyLWNvcm5lci1jbGlwLWw1ajg0NWZuOGRwIj4gPHJlY3QgaGVpZ2h0PSIzMjAiIHdpZHRoPSI2NDAiPiA8L3JlY3Q+IDwvY2xpcHBhdGg+IDwvZz4gPGcgYWx0PSIlIG9mIHJlcXVlc3RzIHdoZXJlIHNvbWUgZGF0YSBwcm9kdWNlZCIgY2xhc3M9ImFuaW1hdGlvbi1mb2xkIj4gPHBhdGg+IDwvcGF0aD4gPHBhdGg+IDwvcGF0aD4gPC9nPiA8bGluZT4gPC9saW5lPiA8cGF0aD4gPC9wYXRoPiA8Y2lyY2xlPiA8L2NpcmNsZT4gPHJlY3QgaGVpZ2h0PSIzNTIiIHdpZHRoPSI3MzYiPiA8L3JlY3Q+IDwvc3ZnPg==)
 
-![](data:image/svg+xml;base64,PHN2ZyBoZWlnaHQ9IjE2IiB3aWR0aD0iMTYiPiA8cmVjdCBoZWlnaHQ9IjQiIHdpZHRoPSIxMiI+IDwvcmVjdD4gPC9zdmc+)
 
-\% of requests where some data produced
-:::
 
-::: _9tnv
-::: _9tnw
-::: {._9nui ._9rop ._9nuo ._9sqg}
-::: {._9nuj ._9ro8 ._9sqh ._9nuk}
-::: _9tn-
-469,372
 
-Users/accounts requested
-:::
-:::
-:::
-:::
 
-::: _9tnw
-::: {._9nui ._9rop ._9nuo ._9sqg}
-::: {._9nuj ._9ro8 ._9sqh ._9nuk}
-::: _9tn-
-76.90%
 
-Of requests where some data produced
-:::
-:::
-:::
-:::
-:::
 
-[Further asked
-questions](/data/government-data-requests/further-asked-questions){._9nrc
-._9noc ._9noa ._9qfr ._9nu6 ._9nu8 ._653e} [Law enforcement
-guidelines](https://www.facebook.com/safety/groups/law/){._9nrc ._9noc
-._9noa ._9qfr ._9nu6 ._9nu8 ._653e} [Accessing your
-information](https://www.facebook.com/help/930396167085762){._9nrc
-._9noc ._9noa ._9qfr ._9nu6 ._9nu8 ._653e} [Safety
-Center](https://www.facebook.com/safety){._9nrc ._9noc ._9noa ._9qfr
-._9nu6 ._9nu8 ._653e} [Case
-Studies](https://transparency.fb.com/data/government-data-requests/case-studies/){._9nrc
-._9noc ._9noa ._9qfr ._9nu6 ._9nu8 ._653e}
-:::
+
+
+
+
+
+
+####  Transparency CenterPolicies
+
+###### Facebook Community Standards
+
+Policies that outline what is and isn't allowed on the Facebook app.###### Instagram Community Guidelines
+
+Policies that outline what is and isn't allowed on the Instagram app.###### Meta Advertising Standards
+
+Policies for ad content and business assets.###### Other policies
+
+Other policies that apply to Meta technologies.###### How Meta improves
+
+How we update our policies, measure results, work with others, and more.Enforcement
+
+###### Detecting violations
+
+How technology and review teams help us detect and review violating content and accounts.###### Taking action
+
+Our three-part approach to content enforcement: remove, reduce and inform.Security
+
+###### Threat disruptions
+
+
+ How we take down coordinated adversarial networks to protect people using our services###### Security threats
+
+
+ Challenges we investigate and counter around the globe###### Threat reporting
+
+
+ Security research into the adversarial networks we’ve taken down since 2017Features
+
+###### Our approach to elections
+
+How we help prevent interference, empower people to vote and more.###### Our approach to misinformation
+
+How we work with independent fact-checkers, and more, to identify and take action on misinformation.###### Our approach to newsworthy content
+
+How we assess content for newsworthiness.###### Our approach to Facebook Feed ranking
+
+
+ How we reduce problematic content in News Feed.###### Our approach to explaining ranking
+
+
+ How we build AI systems.Oversight
+
+###### How to appeal to the Oversight Board###### Oversight Board cases###### Oversight Board recommendations###### Creating the Oversight Board###### Oversight Board: Further asked questions###### Meta’s Quarterly Updates on the Oversight BoardResearch tools
+
+###### Content Library and Content Library API
+
+Comprehensive access to public data from Facebook and Instagram###### Ad Library tools
+
+Comprehensive and searchable database of all ads currently running across Meta technologies###### Other research tools and datasets
+
+Additional tools for in-depth research on Meta technologies and programsReports
+
+###### Community Standards Enforcement Report
+
+Quarterly report on how well we're doing at enforcing our policies on the Facebook app and Instagram.###### Intellectual Property
+
+Report on how well we're helping people protect their intellectual property.###### Government Requests for User Data
+
+Report on government request for people's data.###### Content Restrictions Based on Local Law
+
+Report on when we restrict content that's reported to us as violating local law.###### Internet Disruptions
+
+Report on intentional internet restrictions that limit people's ability to access the internet.###### Widely Viewed Content Report
+
+
+ Quarterly report on what people see on Facebook, including the content that receives the widest distribution during the quarter.###### Regulatory and Other Transparency Reports
+
+
+ Download current and past regulatory reports for Facebook and Instagram.HomeDataGovernment Requests for User Data
+ Government Requests for User Data
+===================================
+
+
+ As part of our ongoing effort to share more information about the requests we have received from governments around the world, Meta regularly produces this report on government requests for user data to provide information on the nature and extent of these requests and the strict policies and processes we have in place to handle them.
+ 
+
+Global overviewDownload (CSV)
+ Global Overview
+-----------------
+
+
+ Meta responds to government requests for data in accordance with applicable law and our terms of service. Each and every request we receive is carefully reviewed for legal sufficiency and we may reject or require greater specificity on requests that appear overly broad or vague. This chart provides data on the number of requests we received and the rate we complied with all or some of the government's request for each half by country or region. We publish this information in 6-month increments, subject to certain limitations, and we began reporting this information in 2013.
+ 
+
+Jan - Jun 20230%25%50%75%100%075k150k225k300k20132014201520162017201820192020202120222023% of requests where some data produced
+
+Total requests
+
+271,692Total requests469,372Users/accounts requested76.90%Of requests where some data producedLearn more about this report
+----------------------------
+
+DEEP DIVE
+---------
+
+Further asked questionsAdditional resources
+--------------------
+
+DEEP DIVE
+---------
+
+Law enforcement guidelinesAccessing your informationSafety CenterCase StudiesNEXT### Data typesTransparency CenterPOLICIES
+--------Facebook Community StandardsInstagram Community GuidelinesOther policiesHow Meta improvesENFORCEMENT
+-----------Detecting violationsTaking actionSECURITY
+--------Threat disruptionsSecurity threatsThreat reportingFEATURES
+--------Our approach to electionsOur approach to misinformationOur approach to newsworthy contentOur approach to Facebook Feed rankingOur approach to explaining rankingOVERSIGHT
+---------How to appeal to the Oversight BoardOversight Board casesOversight Board recommendationsCreating the Oversight BoardOversight Board: Further asked questionsMeta’s Quarterly Updates on the Oversight BoardREPORTS
+-------Community Standards Enforcement ReportIntellectual PropertyGovernment Requests for User DataContent Restrictions Based on Local LawInternet DisruptionsWidely Viewed Content ReportRegulatory and Other Transparency ReportsAd LibraryCrowdtangleFacebook Open Research and TransparencyRESEARCH TOOLS
+--------------Content Library and Content Library APIAd Library ToolsOther research tools and datasetsPrivacy Policy
+
+Terms of Service
+
+Cookies
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#### Transparency Center
+
+#### Policies
+
+Community Standards, other policies and how we’re improving.#### Enforcement
+
+AI detection, human review, the Oversight Board, and how we prioritize.#### Security
+
+Taking down coordinated adversarial networks to counter global threats and improve our defenses.#### Features
+
+Facebook’s approach to elections, COVID-19 and other topics in the news.#### Oversight
+
+The Oversight Board's decisions and impact across Facebook#### Research tools
+
+Research tools and datasets#### Reports
+
+Reports on enforcement effectiveness, how we use your data, and more.Accept cookies from Facebook on this browser?We use cookies on this site to help personalize and improve content and services, and provide a safer experience. You can review your cookie controls at any time. Learn more about cookies uses and controls in our Cookie Policy.Learn MoreAccept All

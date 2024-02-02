@@ -1,165 +1,288 @@
-<div>
+Community Standards Enforcement | Transparency Center
 
-::: _9r2z
-::: _9r0h
-::: _9r0i
-::: _9r2y
-::: {._9nui ._9rop ._9nuo ._9rw9}
-::: {._9nuj ._9ro8 ._9rwa ._9nuk}
-## Q3 2023 {#q3-2023 ._9qfq ._9oxt ._9nou ._9nmv ._9nus ._9nut}
 
-![](data:image/svg+xml;base64,PHN2ZyBoZWlnaHQ9IjI0IiB3aWR0aD0iMjQiPiA8cGF0aD4gPC9wYXRoPiA8cGF0aD4gPC9wYXRoPiA8L3N2Zz4=)
 
-Content actioned decreased from 51.2 million in Q2 2023 to 35.1 million
-in Q3 2023, returning to pre-Q2 levels after an increase in enforcement
-on non-violating content due to a bug in our proactive detection
-technology that was later fixed and the content was restored.
 
-[](/reports/community-standards-enforcement/adult-nudity-and-sexual-activity/facebook/#content-actioned){._9nrc
-._9noc ._9noa ._9qfr ._9nu4 ._9nu6 ._9nu8 ._653e}
 
-::: _9nuu
-![Chevron
-Icon](https://static.xx.fbcdn.net/rsrc.php/y3/r/TX8iPctcZpv.svg){._9nuv
-.img width="16"} ![Chevron
-Icon](https://static.xx.fbcdn.net/rsrc.php/yE/r/wQDb6j3mhl8.svg){._9o5l
-._9nuv .img width="16"}
-:::
-:::
-:::
-:::
 
-::: _9r2y
-::: {._9nui ._9rop ._9nuo ._9rw9}
-::: {._9nuj ._9ro8 ._9rwa ._9nuk}
-## Q3 2023 {#q3-2023-1 ._9qfq ._9oxt ._9nou ._9nmv ._9nus ._9nut}
 
-![](data:image/svg+xml;base64,PHN2ZyBoZWlnaHQ9IjI0IiB3aWR0aD0iMjQiPiA8cGF0aD4gPC9wYXRoPiA8cGF0aD4gPC9wYXRoPiA8L3N2Zz4=)
 
-Proactive rate decreased from 93.8% in Q2 2023 to 92.4% in Q3 2023, due
-to a bug in our proactive detection technology.
 
-[](/reports/community-standards-enforcement/adult-nudity-and-sexual-activity/facebook/#proactive-rate){._9nrc
-._9noc ._9noa ._9qfr ._9nu4 ._9nu6 ._9nu8 ._653e}
 
-::: _9nuu
-![Chevron
-Icon](https://static.xx.fbcdn.net/rsrc.php/y3/r/TX8iPctcZpv.svg){._9nuv
-.img width="16"} ![Chevron
-Icon](https://static.xx.fbcdn.net/rsrc.php/yE/r/wQDb6j3mhl8.svg){._9o5l
-._9nuv .img width="16"}
-:::
-:::
-:::
-:::
-:::
-:::
-:::
 
-::: {#prevalence}
-::: _9nrg
+
+
+
+
+
+
+
+####  Transparency CenterPolicies
+
+###### Facebook Community Standards
+
+Policies that outline what is and isn't allowed on the Facebook app.###### Instagram Community Guidelines
+
+Policies that outline what is and isn't allowed on the Instagram app.###### Meta Advertising Standards
+
+Policies for ad content and business assets.###### Other policies
+
+Other policies that apply to Meta technologies.###### How Meta improves
+
+How we update our policies, measure results, work with others, and more.Enforcement
+
+###### Detecting violations
+
+How technology and review teams help us detect and review violating content and accounts.###### Taking action
+
+Our three-part approach to content enforcement: remove, reduce and inform.Security
+
+###### Threat disruptions
+
+
+ How we take down coordinated adversarial networks to protect people using our services###### Security threats
+
+
+ Challenges we investigate and counter around the globe###### Threat reporting
+
+
+ Security research into the adversarial networks we’ve taken down since 2017Features
+
+###### Our approach to elections
+
+How we help prevent interference, empower people to vote and more.###### Our approach to misinformation
+
+How we work with independent fact-checkers, and more, to identify and take action on misinformation.###### Our approach to newsworthy content
+
+How we assess content for newsworthiness.###### Our approach to Facebook Feed ranking
+
+
+ How we reduce problematic content in News Feed.###### Our approach to explaining ranking
+
+
+ How we build AI systems.Oversight
+
+###### How to appeal to the Oversight Board###### Oversight Board cases###### Oversight Board recommendations###### Creating the Oversight Board###### Oversight Board: Further asked questions###### Meta’s Quarterly Updates on the Oversight BoardResearch tools
+
+###### Content Library and Content Library API
+
+Comprehensive access to public data from Facebook and Instagram###### Ad Library tools
+
+Comprehensive and searchable database of all ads currently running across Meta technologies###### Other research tools and datasets
+
+Additional tools for in-depth research on Meta technologies and programsReports
+
+###### Community Standards Enforcement Report
+
+Quarterly report on how well we're doing at enforcing our policies on the Facebook app and Instagram.###### Intellectual Property
+
+Report on how well we're helping people protect their intellectual property.###### Government Requests for User Data
+
+Report on government request for people's data.###### Content Restrictions Based on Local Law
+
+Report on when we restrict content that's reported to us as violating local law.###### Internet Disruptions
+
+Report on intentional internet restrictions that limit people's ability to access the internet.###### Widely Viewed Content Report
+
+
+ Quarterly report on what people see on Facebook, including the content that receives the widest distribution during the quarter.###### Regulatory and Other Transparency Reports
+
+
+ Download current and past regulatory reports for Facebook and Instagram.HomeDataCommunity Standards Enforcement ReportAdult Nudity and Sexual Activity
+================================
+
+We restrict the display of adult nudity and sexual activity on Facebook and Instagram. We make some exceptions when it is clear the content is being shared in the context of a protest, for educational or medical reasons or a similar reason. On the other hand, we default to removing sexual imagery to prevent non-consensual or underage content from being shared.
+
+This report does not include metrics related to our separate policy on the promotion of sexual assault, violence or exploitation.
+
+Read the policy detailsAdult Nudity and Sexual ActivityFacebook
+
+FacebookInstagramDownload (CSV)Recent trends
+-------------
+
+Q3 2023
+-------
+
+35.1 million
+------------
+
+Content Actioned on Adult Nudity and Sexual Activity
+----------------------------------------------------
+
+Content actioned decreased from 51.2 million in Q2 2023 to 35.1 million in Q3 2023, returning to pre-Q2 levels after an increase in enforcement on non-violating content due to a bug in our proactive detection technology that was later fixed and the content was restored.
+
+Q3 2023
+-------
+
+92.4%
+-----
+
+Proactive Rate on Adult Nudity and Sexual Activity
+--------------------------------------------------
+
+Proactive rate decreased from 93.8% in Q2 2023 to 92.4% in Q3 2023, due to a bug in our proactive detection technology.
+
+prevalence
+----------
+
 How prevalent were adult nudity and sexual activity violations?
-:::
 
-::: {.x1n2onr6 .x1ja2u2z}
-![](data:image/svg+xml;base64,PHN2Zz4gPGc+IDxnIGNsYXNzPSJ0aWNrIj4gPHRleHQgY2xhc3M9Il85cmU1IF85bm9iIF85cTd1Ij4gMCUgPC90ZXh0PiA8L2c+IDxnIGNsYXNzPSJ0aWNrIj4gPHRleHQgY2xhc3M9Il85cmU1IF85bm9iIF85cTd1Ij4gMC4wMiUgPC90ZXh0PiA8L2c+IDxnIGNsYXNzPSJ0aWNrIj4gPHRleHQgY2xhc3M9Il85cmU1IF85bm9iIF85cTd1Ij4gMC4wNCUgPC90ZXh0PiA8L2c+IDxnIGNsYXNzPSJ0aWNrIj4gPHRleHQgY2xhc3M9Il85cmU1IF85bm9iIF85cTd1Ij4gMC4wNiUgPC90ZXh0PiA8L2c+IDxnIGNsYXNzPSJ0aWNrIj4gPHRleHQgY2xhc3M9Il85cmU1IF85bm9iIF85cTd1Ij4gMC4wOCUgPC90ZXh0PiA8L2c+IDxnIGNsYXNzPSJ0aWNrIj4gPHRleHQgY2xhc3M9Il85cmU1IF85bm9iIF85cTd1Ij4gMC4xMCUgPC90ZXh0PiA8L2c+IDxnIGNsYXNzPSJ0aWNrIj4gPHRleHQgY2xhc3M9Il85cmU1IF85bm9iIF85cTd1Ij4gMC4xMiUgPC90ZXh0PiA8L2c+IDxnIGNsYXNzPSJ0aWNrIj4gPHRleHQgY2xhc3M9Il85cmU1IF85bm9iIF85cTd1Ij4gMC4xNCUgPC90ZXh0PiA8L2c+IDwvZz4gPGcgY2xhc3M9Il85cTd2Ij4gPGc+IDxsaW5lPiA8L2xpbmU+IDxsaW5lPiA8L2xpbmU+IDxsaW5lPiA8L2xpbmU+IDxsaW5lPiA8L2xpbmU+IDxsaW5lPiA8L2xpbmU+IDxsaW5lPiA8L2xpbmU+IDxsaW5lPiA8L2xpbmU+IDxsaW5lPiA8L2xpbmU+IDwvZz4gPC9nPiA8Zz4gPGcgY2xhc3M9InRpY2siPiA8bGluZSBjbGFzcz0iXzlyZmUiPiA8L2xpbmU+IDx0ZXh0IGNsYXNzPSJfOXJlNSBfOW5vYiBfOXE3dSI+IDIwMTggPC90ZXh0PiA8L2c+IDxnIGNsYXNzPSJ0aWNrIj4gPGxpbmUgY2xhc3M9Il85cmZlIj4gPC9saW5lPiA8dGV4dCBjbGFzcz0iXzlyZTUgXzlub2IgXzlxN3UiPiAyMDE5IDwvdGV4dD4gPC9nPiA8ZyBjbGFzcz0idGljayI+IDxsaW5lIGNsYXNzPSJfOXJmZSI+IDwvbGluZT4gPHRleHQgY2xhc3M9Il85cmU1IF85bm9iIF85cTd1Ij4gMjAyMCA8L3RleHQ+IDwvZz4gPGcgY2xhc3M9InRpY2siPiA8bGluZSBjbGFzcz0iXzlyZmUiPiA8L2xpbmU+IDx0ZXh0IGNsYXNzPSJfOXJlNSBfOW5vYiBfOXE3dSI+IDIwMjEgPC90ZXh0PiA8L2c+IDxnIGNsYXNzPSJ0aWNrIj4gPGxpbmUgY2xhc3M9Il85cmZlIj4gPC9saW5lPiA8dGV4dCBjbGFzcz0iXzlyZTUgXzlub2IgXzlxN3UiPiAyMDIyIDwvdGV4dD4gPC9nPiA8ZyBjbGFzcz0idGljayI+IDxsaW5lIGNsYXNzPSJfOXJmZSI+IDwvbGluZT4gPHRleHQgY2xhc3M9Il85cmU1IF85bm9iIF85cTd1Ij4gMjAyMyA8L3RleHQ+IDwvZz4gPC9nPiA8bGluZSBjbGFzcz0iXzlyZmUiPiA8L2xpbmU+IDxnIGFsdD0iUHJldmFsZW5jZSIgY2xhc3M9ImFuaW1hdGlvbi1mb2xkIj4gPHBhdGg+IDwvcGF0aD4gPHBhdGg+IDwvcGF0aD4gPHBhdGg+IDwvcGF0aD4gPHBhdGg+IDwvcGF0aD4gPHBhdGg+IDwvcGF0aD4gPC9nPiA8bGluZT4gPC9saW5lPiA8cGF0aD4gPC9wYXRoPiA8Y2lyY2xlPiA8L2NpcmNsZT4gPGNpcmNsZT4gPC9jaXJjbGU+IDxyZWN0IGhlaWdodD0iMzUyIiB3aWR0aD0iNzM2Ij4gPC9yZWN0PiA8L3N2Zz4=)
+0%0.02%0.04%0.06%0.08%0.10%0.12%0.14%201820192020202120222023How we calculate itPrevalence is the estimated number of views that showed violating content, divided by the estimated number of total content views on Facebook.Read about this datacontent actioned
+----------------
 
-::: _9sj8
-::: {.section ._9nnd}
-::: _9nnj
-![](https://static.xx.fbcdn.net/rsrc.php/yR/r/lz1K8YbpVaR.svg){._9nkr
-.img} [ How we calculate it ]{._9qfn ._9oxt ._9nos ._9q-o}
-:::
-:::
-
-[ [Read about this data](/policies/improving/prevalence-metric/){._9oxt
-._9oo0 ._9nxb ._9nx6 ._9nxd ._9txn} ]{._9sj5}
-:::
-:::
-:::
-
-::: {#content-actioned}
-::: _9nrg
 How much adult nudity and sexual activity content did we take action on?
-:::
-:::
 
-::: {#proactive-rate}
-::: _9nrg
-Of the violating content we actioned for adult nudity and sexual
-activity, how much did we find and action before people reported it?
-:::
+010M20M30M40M50M201820192020202120222023How we calculate itContent actioned is the total number of pieces of content that Facebook took action on for adult nudity and sexual activity. It includes both content we actioned after someone reported it, and content that we found proactively.Read about this dataproactive rate
+--------------
 
-::: {.x1n2onr6 .x1ja2u2z}
-![](data:image/svg+xml;base64,PHN2Zz4gPGcgY2xhc3M9Il85cTd2Ij4gPGc+IDxsaW5lPiA8L2xpbmU+IDxsaW5lPiA8L2xpbmU+IDxsaW5lPiA8L2xpbmU+IDxsaW5lPiA8L2xpbmU+IDxsaW5lPiA8L2xpbmU+IDxsaW5lPiA8L2xpbmU+IDwvZz4gPC9nPiA8ZyBhbHQ9ImFyZWFzLWFuaW1hdGlvbiIgY2xhc3M9ImFuaW1hdGlvbi1mb2xkIj4gPHBhdGg+IDwvcGF0aD4gPHBhdGg+IDwvcGF0aD4gPC9nPiA8Zz4gPGcgY2xhc3M9InRpY2siPiA8dGV4dCBjbGFzcz0iXzlyZTUgXzlub2IgXzlxN3UiPiAwJSA8L3RleHQ+IDwvZz4gPGcgY2xhc3M9InRpY2siPiA8dGV4dCBjbGFzcz0iXzlyZTUgXzlub2IgXzlxN3UiPiAyMCUgPC90ZXh0PiA8L2c+IDxnIGNsYXNzPSJ0aWNrIj4gPHRleHQgY2xhc3M9Il85cmU1IF85bm9iIF85cTd1Ij4gNDAlIDwvdGV4dD4gPC9nPiA8ZyBjbGFzcz0idGljayI+IDx0ZXh0IGNsYXNzPSJfOXJlNSBfOW5vYiBfOXE3dSI+IDYwJSA8L3RleHQ+IDwvZz4gPGcgY2xhc3M9InRpY2siPiA8dGV4dCBjbGFzcz0iXzlyZTUgXzlub2IgXzlxN3UiPiA4MCUgPC90ZXh0PiA8L2c+IDxnIGNsYXNzPSJ0aWNrIj4gPHRleHQgY2xhc3M9Il85cmU1IF85bm9iIF85cTd1Ij4gMTAwJSA8L3RleHQ+IDwvZz4gPC9nPiA8Zz4gPGcgY2xhc3M9InRpY2siPiA8bGluZSBjbGFzcz0iXzlyZmUiPiA8L2xpbmU+IDx0ZXh0IGNsYXNzPSJfOXJlNSBfOW5vYiBfOXE3dSI+IDIwMTggPC90ZXh0PiA8L2c+IDxnIGNsYXNzPSJ0aWNrIj4gPGxpbmUgY2xhc3M9Il85cmZlIj4gPC9saW5lPiA8dGV4dCBjbGFzcz0iXzlyZTUgXzlub2IgXzlxN3UiPiAyMDE5IDwvdGV4dD4gPC9nPiA8ZyBjbGFzcz0idGljayI+IDxsaW5lIGNsYXNzPSJfOXJmZSI+IDwvbGluZT4gPHRleHQgY2xhc3M9Il85cmU1IF85bm9iIF85cTd1Ij4gMjAyMCA8L3RleHQ+IDwvZz4gPGcgY2xhc3M9InRpY2siPiA8bGluZSBjbGFzcz0iXzlyZmUiPiA8L2xpbmU+IDx0ZXh0IGNsYXNzPSJfOXJlNSBfOW5vYiBfOXE3dSI+IDIwMjEgPC90ZXh0PiA8L2c+IDxnIGNsYXNzPSJ0aWNrIj4gPGxpbmUgY2xhc3M9Il85cmZlIj4gPC9saW5lPiA8dGV4dCBjbGFzcz0iXzlyZTUgXzlub2IgXzlxN3UiPiAyMDIyIDwvdGV4dD4gPC9nPiA8ZyBjbGFzcz0idGljayI+IDxsaW5lIGNsYXNzPSJfOXJmZSI+IDwvbGluZT4gPHRleHQgY2xhc3M9Il85cmU1IF85bm9iIF85cTd1Ij4gMjAyMyA8L3RleHQ+IDwvZz4gPC9nPiA8bGluZSBjbGFzcz0iXzlyZmUiPiA8L2xpbmU+IDxsaW5lPiA8L2xpbmU+IDxjaXJjbGU+IDwvY2lyY2xlPiA8Y2lyY2xlPiA8L2NpcmNsZT4gPHJlY3QgaGVpZ2h0PSIzNTIiIHdpZHRoPSI3MzYiPiA8L3JlY3Q+IDwvc3ZnPg==)
+Of the violating content we actioned for adult nudity and sexual activity, how much did we find and action before people reported it?
 
-::: _9sj8
-::: {.section ._9nnd}
-::: _9nnj
-![](https://static.xx.fbcdn.net/rsrc.php/yR/r/lz1K8YbpVaR.svg){._9nkr
-.img} [ How we calculate it ]{._9qfn ._9oxt ._9nos ._9q-o}
-:::
-:::
+0%20%40%60%80%100%201820192020202120222023Found and actioned by us
 
-[ [Read about this
-data](/policies/improving/proactive-rate-metric/){._9oxt ._9oo0 ._9nxb
-._9nx6 ._9nxd ._9txn} ]{._9sj5}
-:::
-:::
-:::
+Reported by users
 
-::: {#appealed-content}
-::: _9nrg
-[ Correcting mistakes ]{._9qfm ._9qfh ._9nos}
+How we calculate itProactive rate is the number of pieces of content acted on that we found and actioned before people using Facebook reported them, divided by the total number of pieces of content we took action on.Read about this dataCorrecting mistakesPeople can appeal our decisions, unless there are extreme safety concerns. We restore content we incorrectly removed or when circumstances change. Restores can happen from appeals or when we identify issues ourselves.
 
-People can appeal our decisions, unless there are extreme safety
-concerns. We restore content we incorrectly removed or when
-circumstances change. Restores can happen from appeals or when we
-identify issues ourselves.
-:::
+appealed content
+----------------
 
-::: _9nrg
-How much of the content we actioned for adult nudity and sexual activity
-did people appeal?
-:::
-:::
+How much of the content we actioned for adult nudity and sexual activity did people appeal?
 
-::: {#restored-content}
-::: _9nrg
-How much actioned content for adult nudity and sexual activity was later
-restored?
-:::
+01M2M3M4M20192020202120222023How we calculate itAppealed content counts the number of pieces of content actioned which were submitted for another review during the reporting period.Read about this datarestored content
+----------------
 
-::: {.x1n2onr6 .x1ja2u2z}
-![](data:image/svg+xml;base64,PHN2Zz4gPGcgY2xhc3M9Il85cTd2Ij4gPGc+IDxsaW5lPiA8L2xpbmU+IDxsaW5lPiA8L2xpbmU+IDxsaW5lPiA8L2xpbmU+IDxsaW5lPiA8L2xpbmU+IDxsaW5lPiA8L2xpbmU+IDxsaW5lPiA8L2xpbmU+IDwvZz4gPC9nPiA8ZyBhbHQ9ImFyZWFzLWFuaW1hdGlvbiIgY2xhc3M9ImFuaW1hdGlvbi1mb2xkIj4gPHBhdGg+IDwvcGF0aD4gPHBhdGg+IDwvcGF0aD4gPC9nPiA8ZyBhbHQ9IlRvdGFsIiBjbGFzcz0iYW5pbWF0aW9uLWZvbGQiPiA8cGF0aD4gPC9wYXRoPiA8cGF0aD4gPC9wYXRoPiA8L2c+IDxnPiA8ZyBjbGFzcz0idGljayI+IDx0ZXh0IGNsYXNzPSJfOXJlNSBfOW5vYiBfOXE3dSI+IDAgPC90ZXh0PiA8L2c+IDxnIGNsYXNzPSJ0aWNrIj4gPHRleHQgY2xhc3M9Il85cmU1IF85bm9iIF85cTd1Ij4gNTAwayA8L3RleHQ+IDwvZz4gPGcgY2xhc3M9InRpY2siPiA8dGV4dCBjbGFzcz0iXzlyZTUgXzlub2IgXzlxN3UiPiAxTSA8L3RleHQ+IDwvZz4gPGcgY2xhc3M9InRpY2siPiA8dGV4dCBjbGFzcz0iXzlyZTUgXzlub2IgXzlxN3UiPiAxLjVNIDwvdGV4dD4gPC9nPiA8ZyBjbGFzcz0idGljayI+IDx0ZXh0IGNsYXNzPSJfOXJlNSBfOW5vYiBfOXE3dSI+IDJNIDwvdGV4dD4gPC9nPiA8ZyBjbGFzcz0idGljayI+IDx0ZXh0IGNsYXNzPSJfOXJlNSBfOW5vYiBfOXE3dSI+IDIuNU0gPC90ZXh0PiA8L2c+IDwvZz4gPGc+IDxnIGNsYXNzPSJ0aWNrIj4gPGxpbmUgY2xhc3M9Il85cmZlIj4gPC9saW5lPiA8dGV4dCBjbGFzcz0iXzlyZTUgXzlub2IgXzlxN3UiPiAyMDE5IDwvdGV4dD4gPC9nPiA8ZyBjbGFzcz0idGljayI+IDxsaW5lIGNsYXNzPSJfOXJmZSI+IDwvbGluZT4gPHRleHQgY2xhc3M9Il85cmU1IF85bm9iIF85cTd1Ij4gMjAyMCA8L3RleHQ+IDwvZz4gPGcgY2xhc3M9InRpY2siPiA8bGluZSBjbGFzcz0iXzlyZmUiPiA8L2xpbmU+IDx0ZXh0IGNsYXNzPSJfOXJlNSBfOW5vYiBfOXE3dSI+IDIwMjEgPC90ZXh0PiA8L2c+IDxnIGNsYXNzPSJ0aWNrIj4gPGxpbmUgY2xhc3M9Il85cmZlIj4gPC9saW5lPiA8dGV4dCBjbGFzcz0iXzlyZTUgXzlub2IgXzlxN3UiPiAyMDIyIDwvdGV4dD4gPC9nPiA8ZyBjbGFzcz0idGljayI+IDxsaW5lIGNsYXNzPSJfOXJmZSI+IDwvbGluZT4gPHRleHQgY2xhc3M9Il85cmU1IF85bm9iIF85cTd1Ij4gMjAyMyA8L3RleHQ+IDwvZz4gPC9nPiA8bGluZSBjbGFzcz0iXzlyZmUiPiA8L2xpbmU+IDxsaW5lPiA8L2xpbmU+IDxjaXJjbGU+IDwvY2lyY2xlPiA8Y2lyY2xlPiA8L2NpcmNsZT4gPGNpcmNsZT4gPC9jaXJjbGU+IDxyZWN0IGhlaWdodD0iMzUyIiB3aWR0aD0iNzM2Ij4gPC9yZWN0PiA8L3N2Zz4=)
+How much actioned content for adult nudity and sexual activity was later restored?
 
-::: _9sj8
-::: {.section ._9nnd}
-::: _9nnj
-![](https://static.xx.fbcdn.net/rsrc.php/yR/r/lz1K8YbpVaR.svg){._9nkr
-.img} [ How we calculate it ]{._9qfn ._9oxt ._9nos ._9q-o}
-:::
-:::
+0500k1M1.5M2M2.5M20192020202120222023Restored without appeal
 
-[ [Read about this
-data](/policies/improving/restored-content-metric/){._9oxt ._9oo0 ._9nxb
-._9nx6 ._9nxd ._9txn} ]{._9sj5}
-:::
-:::
-:::
+Restored after appeal
 
-::: {.x8rce41 .x1lcm9me .x1yr5g0i .xrt01vj .x10y3i5r .xyamay9 .x1pi30zi .x1l90r2v .x1swvt13}
-[ NOTE: ]{._9qfn ._9oxt ._9nos} [ [ Due to a temporary reduction in our
-review capacity as a result of COVID-19, we could not always offer
-people the option to appeal. We still gave people the option to tell us
-they disagreed with our decision, which helped us review many of these
-instances and restore content when appropriate. Starting in Q2 2022, we
-[updated our
-methodology](https://transparency.fb.com/policies/improving/corrections-adjustments/){._9nrc
-._9noc ._9noa ._9qfs ._9nu4 ._9nu6 ._9nu8 ._653e} for how we count
-appeals to include all instances where content was submitted for
-additional review, including after people told us that they disagreed
-with our decision. ]{._9qfs ._9nob ._9nos} ]{._9r-l ._9nob ._9nos}
-:::
+Total
 
-</div>
+How we calculate itRestored content is the number of pieces of content that we restored during the reporting period after previously actioning it. We restore content both when it is appealed and when we discover issues ourselves.Read about this dataNOTE:Due to a temporary reduction in our review capacity as a result of COVID-19, we could not always offer people the option to appeal. We still gave people the option to tell us they disagreed with our decision, which helped us review many of these instances and restore content when appropriate. Starting in Q2 2022, we updated our methodology for how we count appeals to include all instances where content was submitted for additional review, including after people told us that they disagreed with our decision. 
+ PREVIOUS### OverviewNEXT### Bullying and HarassmentTransparency CenterPOLICIES
+--------Facebook Community StandardsInstagram Community GuidelinesOther policiesHow Meta improvesENFORCEMENT
+-----------Detecting violationsTaking actionSECURITY
+--------Threat disruptionsSecurity threatsThreat reportingFEATURES
+--------Our approach to electionsOur approach to misinformationOur approach to newsworthy contentOur approach to Facebook Feed rankingOur approach to explaining rankingOVERSIGHT
+---------How to appeal to the Oversight BoardOversight Board casesOversight Board recommendationsCreating the Oversight BoardOversight Board: Further asked questionsMeta’s Quarterly Updates on the Oversight BoardREPORTS
+-------Community Standards Enforcement ReportIntellectual PropertyGovernment Requests for User DataContent Restrictions Based on Local LawInternet DisruptionsWidely Viewed Content ReportRegulatory and Other Transparency ReportsAd LibraryCrowdtangleFacebook Open Research and TransparencyRESEARCH TOOLS
+--------------Content Library and Content Library APIAd Library ToolsOther research tools and datasetsPrivacy Policy
+
+Terms of Service
+
+Cookies
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#### Transparency Center
+
+#### Policies
+
+Community Standards, other policies and how we’re improving.#### Enforcement
+
+AI detection, human review, the Oversight Board, and how we prioritize.#### Security
+
+Taking down coordinated adversarial networks to counter global threats and improve our defenses.#### Features
+
+Facebook’s approach to elections, COVID-19 and other topics in the news.#### Oversight
+
+The Oversight Board's decisions and impact across Facebook#### Research tools
+
+Research tools and datasets#### Reports
+
+Reports on enforcement effectiveness, how we use your data, and more.Accept cookies from Facebook on this browser?We use cookies on this site to help personalize and improve content and services, and provide a safer experience. You can review your cookie controls at any time. Learn more about cookies uses and controls in our Cookie Policy.Learn MoreAccept All

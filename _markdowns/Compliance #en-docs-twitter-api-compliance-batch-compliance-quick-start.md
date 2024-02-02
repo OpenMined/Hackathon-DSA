@@ -1,89 +1,225 @@
-::: main-content__wrapper
-::: c01-rich-text-editor
-::: is-table-default
+
+
+
+
+Batch compliance quick start guide | Docs | Twitter Developer Platform 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Quick start
+
+
+
+Getting started with the batch compliance endpoints
+---------------------------------------------------
+
+
 Working with the batch compliance endpoints generally involves 5 steps:
 
-1.  Creating a compliance job
-2.  Preparing the list of Tweet IDs or user IDs
-3.  Uploading the list of Tweet IDs or user IDs
-4.  Checking the status of the compliance job
-5.  Downloading the results
 
-In this section, we will learn how to go through each of these steps
-using the command line. If you would like to see sample code in
-different programming languages, please visit our [Twitter API v2 sample
-code GitHub
-repository](https://github.com/twitterdev/Twitter-API-v2-sample-code) .
-:::
-:::
+1. Creating a compliance job
+2. Preparing the list of Tweet IDs or user IDs
+3. Uploading the list of Tweet IDs or user IDs
+4. Checking the status of the compliance job
+5. Downloading the results
 
-::: dtc09-callout-text
-::: dtc09-callout-text
-::: dtc09__item
-::: dtc09__text
-::: c01-rich-text-editor
-::: is-table-default
-To complete this guide, you will need to have a set of [keys and
-tokens](/en/docs/authentication) to authenticate your request. You can
-generate these keys and tokens by following these steps:
 
--   [Sign up for a developer account](/en/apply-for-access) and receive
-    approval.
--   Create a [Project](/en/docs/projects) and an associated [developer
-    App](/en/docs/apps) in the developer portal.
--   Navigate to your App\'s "Keys and tokens" page to generate the
-    required credentials. Make sure to save all credentials in a secure
-    location.
-:::
-:::
-:::
-:::
-:::
-:::
+ 
 
-::: c01-rich-text-editor
-::: is-table-default
-First, you will have to create a compliance job and specify whether you
-will be uploading Tweet IDs or user IDs (using the [ type
-]{.code-inline} parameter). Optionally, you can also give your job a
-name (using the [ name ]{.code-inline} parameter).
 
-To authorize this request, you will need to use [OAuth 2.0
-App-Only](/en/docs/authentication/oauth-2-0/application-only) . To do
-so, make sure to replace the [ \$APP_ACCESS_TOKEN ]{.code-inline} below
-with your [App Access
-Token](/en/docs/authentication/oauth-2-0/bearer-tokens) that you can
-generate in your [Twitter App](/en/docs/apps) on the developer portal.
-:::
-:::
+In this section, we will learn how to go through each of these steps using the command line. If you would like to see sample code in different programming languages, please visit our Twitter API v2 sample code GitHub repository.
 
-::: {.b19-code-snippet .twtr-component-space--md}
-::: {.b19-snippet .b19__theme--light}
-::: t05-inline-code-snippet
-``` {.line-numbers .t05__pre--with-button}
- curl --request POST 'https://api.twitter.com/2/compliance/jobs' \
+
+
+
+
+
+
+
+
+
+
+### Prerequisites
+
+
+To complete this guide, you will need to have a set of keys and tokens to authenticate your request. You can generate these keys and tokens by following these steps:
+
+
+* Sign up for a developer account and receive approval.
+* Create a Project and an associated developer App in the developer portal.
+* Navigate to your App's “Keys and tokens” page to generate the required credentials. Make sure to save all credentials in a secure location.
+
+
+
+
+
+
+
+
+
+
+#### Step one: Create a compliance job
+
+
+First, you will have to create a compliance job and specify whether you will be uploading Tweet IDs or user IDs (using the type parameter). Optionally, you can also give your job a name (using the name parameter). 
+
+
+To authorize this request, you will need to use OAuth 2.0 App-Only. To do so, make sure to replace the $APP\_ACCESS\_TOKEN below with your App Access Token that you can generate in your Twitter App on the developer portal.
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+```
+
+      curl --request POST 'https://api.twitter.com/2/compliance/jobs' \
 --header 'Authorization: Bearer $APP_ACCESS_TOKEN' \
 --header 'Content-Type: application/json' \
 --data-raw '{"type": "tweets"}'
 
     
 ```
-:::
-:::
-:::
 
-::: c01-rich-text-editor
-::: is-table-default
-If your API call is successful, you will get a response similar to the
-following:
-:::
-:::
 
-::: {.b19-code-snippet .twtr-component-space--md}
-::: {.b19-snippet .b19__theme--light}
-::: t05-inline-code-snippet
-``` {.line-numbers .t05__pre--with-button .t05__pre--wrap-text}
- {
+
+
+
+Code copied to clipboard
+
+
+
+
+
+
+
+
+If your API call is successful, you will get a response similar to the following:
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+```
+
+      {
    "data": {
        "download_expires_at": "2021-08-18T19:42:55.000Z",
        "status": "created",
@@ -98,114 +234,165 @@ following:
 }
     
 ```
-:::
-:::
-:::
 
-::: c01-rich-text-editor
-::: is-table-default
-Take note of the value from the [ upload_url ]{.code-inline} , [
-download_url ]{.code-inline} , and [ id ]{.code-inline} fields; you will
-need those in the following steps.
-:::
-:::
 
-::: c01-rich-text-editor
-::: is-table-default
-Create a text file with Tweet IDs or user IDs, where each line contains
-a Tweet ID or user ID. The contents of the text file can look something
-like this:
 
-[ 1417856744319971329 ]{.code-inline}
 
-[ 1415457498803232770 ]{.code-inline}
 
-[ 1415348607813832708 ]{.code-inline}
+Code copied to clipboard
 
-[ 1413515358766452738 ]{.code-inline}
 
-[ . . . ]{.code-inline}
 
-[ . . . ]{.code-inline}
-:::
-:::
 
-::: dtc09-callout-text
-::: dtc09-callout-text
-::: dtc09__item
-::: dtc09__text
-::: c01-rich-text-editor
-::: is-table-default
-**Note** : The file above can either contain Tweet IDs or User IDs and
-can not be a mix of both.
 
-You can upload your file directly to this URL via a **PUT** request.
-Note that the URL is already signed with an authentication token, which
-means you will not authenticate by passing your App Access Token again.
-Make sure to pass a [ Content-Type ]{.code-inline} header to signal you
-are uploading a text file and replace the [ \$FILE_LOCATION
-]{.code-inline} below with the path to your file.
-:::
-:::
-:::
-:::
-:::
-:::
 
-::: {.b19-code-snippet .twtr-component-space--md}
-::: {.b19-snippet .b19__theme--light}
-::: t05-inline-code-snippet
-``` {.line-numbers .t05__pre--with-button .t05__pre--wrap-text}
- curl -X PUT  \
+
+
+Take note of the value from the upload\_url, download\_url, and id fields; you will need those in the following steps.
+
+
+ 
+
+
+
+
+
+
+#### Step two: Prepare a list of Tweet IDs or user IDs
+
+
+Create a text file with Tweet IDs or user IDs, where each line contains a Tweet ID or user ID. The contents of the text file can look something like this:
+
+
+1417856744319971329
+
+
+1415457498803232770
+
+
+1415348607813832708
+
+
+1413515358766452738
+
+
+. . .
+
+
+. . .
+
+
+
+
+
+
+
+
+
+
+
+**Note**: The file above can either contain Tweet IDs or User IDs and can not be a mix of both.
+
+
+You can upload your file directly to this URL via a **PUT** request. Note that the URL is already signed with an authentication token, which means you will not authenticate by passing your App Access Token again. Make sure to pass a Content-Type header to signal you are uploading a text file and replace the $FILE\_LOCATION below with the path to your file.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+```
+
+      curl -X PUT  \
  -H "Content-Type: text/plain" \
  --data-binary @$FILE_LOCATION \
 "https://storage.googleapis.com/twitter-compliance/customer_test_object_123456_d8ske9.json?X-Goog-Algorithm=\nGOOG4-RSA-SHA256&X-Goog-Credential=example%40example-project.iam.gserviceaccount\n.com%2F20181026%2Fus-central-1%2Fstorage%2Fgoog4_request&X-Goog-Date=20181026T18\n1309Z&X-Goog-Expires=900&X-Goog-SignedHeaders=host&X-Goog-Signature=247a2aa45f16\n9edf4d187d54e7cc46e4731b1e6273242c4f4c39a1d2507a0e58706e25e3a85a7dbb891d62afa849\n6def8e260c1db863d9ace85ff0a184b894b117fe46d1225c82f2aa19efd52cf21d3e2022b3b868dc\nc1aca2741951ed5bf3bb25a34f5e9316a2841e8ff4c530b22ceaa1c5ce09c7cbb5732631510c2058\n0e61723f5594de3aea497f195456a2ff2bdd0d13bad47289d8611b6f9cfeef0c46c91a455b94e90a\n66924f722292d21e24d31dcfb38ce0c0f353ffa5a9756fc2a9f2b40bc2113206a81e324fc4fd6823\na29163fa845c8ae7eca1fcf6e5bb48b3200983c56c5ca81fffb151cca7402beddfc4a76b13344703\n2ea7abedc098d2eb14a7"
     
 ```
-:::
-:::
-:::
 
-::: c01-rich-text-editor
-::: is-table-default
-A status code [ 200 ]{.code-inline} will indicate that the upload was
-successful.
+
+
+
+
+Code copied to clipboard
+
+
+
+
+
+
+
+
+A status code 200 will indicate that the upload was successful.
+
+
+ 
+
 
 #### Step three (optional): Check your job status
 
-Large uploads may take some time to process. You can request a status
-update from the content compliance job endpoint by specifying the job ID
-you received in the first step.
 
-Again, make sure to replace the [ \$APP_ACCESS_TOKEN ]{.code-inline}
-below with your App Access Token, and replace the [ \$ID ]{.code-inline}
-with your job ID from the first step.
-:::
-:::
+Large uploads may take some time to process. You can request a status update from the content compliance job endpoint by specifying the job ID you received in the first step. 
 
-::: {.b19-code-snippet .twtr-component-space--md}
-::: {.b19-snippet .b19__theme--light}
-::: t05-inline-code-snippet
-``` {.line-numbers .t05__pre--with-button .t05__pre--wrap-text}
- curl --request GET 'https://api.twitter.com/2/compliance/jobs/$ID' \
+
+Again, make sure to replace the $APP\_ACCESS\_TOKEN below with your App Access Token, and replace the $ID with your job ID from the first step.
+
+
+
+
+
+
+
+
+
+
+
+
+```
+
+      curl --request GET 'https://api.twitter.com/2/compliance/jobs/$ID' \
 --header 'Authorization: Bearer $APP_ACCESS_TOKEN'
     
 ```
-:::
-:::
-:::
 
-::: c01-rich-text-editor
-::: is-table-default
+
+
+
+
+Code copied to clipboard
+
+
+
+
+
+
+
+
 The response will include information about the job.
-:::
-:::
 
-::: {.b19-code-snippet .twtr-component-space--md}
-::: {.b19-snippet .b19__theme--light}
-::: t05-inline-code-snippet
-``` {.line-numbers .t05__pre--with-button .t05__pre--wrap-text}
- {
+
+
+
+
+
+
+
+
+
+
+
+```
+
+      {
    "data": {
        "upload_expires_at": "2021-08-05T01:50:11.000Z",
        "type": "tweets",
@@ -220,82 +407,313 @@ The response will include information about the job.
 }
     
 ```
-:::
-:::
-:::
 
-::: c01-rich-text-editor
-::: is-table-default
-A [ complete ]{.code-inline} status means the results are ready for you
-to download. Note: The other values of statuses can be [ created
-]{.code-inline} , [ complete ]{.code-inline} , [ in_progress
-]{.code-inline} , [ failed ]{.code-inline} and [ expired ]{.code-inline}
+
+
+
+
+Code copied to clipboard
+
+
+
+
+
+
+
+
+A complete status means the results are ready for you to download. Note: The other values of statuses can be created, complete, in\_progress, failed and expired
+
+
+ 
+
 
 #### Step four: Download the results
 
-As you receive a job completion status, you can download the compliance
-results from the URL indicated in the [ download_url ]{.code-inline}
-field (also generated in the first step). This URL is already signed
-with an authentication token, which means you will not need authenticate
-by passing your App Access Token again.
-:::
-:::
 
-::: {.b19-code-snippet .twtr-component-space--md}
-::: {.b19-snippet .b19__theme--light}
-::: t05-inline-code-snippet
-``` {.line-numbers .t05__pre--with-button .t05__pre--wrap-text}
- curl --request GET \
+As you receive a job completion status, you can download the compliance results from the URL indicated in the download\_url field (also generated in the first step). This URL is already signed with an authentication token, which means you will not need authenticate by passing your App Access Token again.
+
+
+
+
+
+
+
+
+
+
+
+
+```
+
+      curl --request GET \
 'https://storage.googleapis.com/twttr-tweet-compliance/1423047488781488129/delivery/1202726487847104512_1423047488781488129?X-Goog-Algorithm=GOOG4-RSA-SHA256&X-Goog-Credential=complianceapi-public-svc-acct%40twttr-compliance-public-prod.iam.gserviceaccount.com%2F20210804%2Fauto%2Fstorage%2Fgoog4_request&X-Goog-Date=20210804T222534Z&X-Goog-Expires=604800&X-Goog-SignedHeaders=host&X-Goog-Signature=8ed0fe9e9748f6be5e7e052f6635c8b5cbe62fb2d3a165278b922b28a48fb79b02d74f0bd31b4fdb32532bc6746c6082aaff2154cdab4b59c4c6561ff2c840e5f32dd13c09ff5b52376dfac1b7f97807c72209d2844a6c078b71fddf22a5493f88118802e98a60e16ce5715fce0242baddd17d4598d31be59393e1dacd22fc1eeb532572cc4e784402c5fbeb84a22dd308922e937a26fa99cb717bb26fb61b657403010121a996691814b7aeb00bc05ed25f15d394fd46899dd9390be6d5da44960e81d8018318c325c70b39d0a4fc9d65fea2b8b3355d4c7dd7c386eac1d9c09233462bde40fa3f4023d1cd6470b0346f9f36d74665dde3f716940312019703'
     
 ```
-:::
-:::
-:::
 
-::: c01-rich-text-editor
-::: is-table-default
-The result will contain a set of JSON objects (one object per line).
-Each object will contain a Tweet or user ID, the Tweet or user's
-creation date (useful to locate Tweets organized by date), required
-action, the reason for the compliance action, and its date:
-:::
-:::
 
-::: {.b19-code-snippet .twtr-component-space--md}
-::: {.b19-snippet .b19__theme--light}
-::: t05-inline-code-snippet
-``` {.line-numbers .t05__pre--with-button .t05__pre--wrap-text}
- {"id":"1265324480517361664","action":"delete","created_at":"2019-10-29T17:02:47.000Z","redacted_at":"2020-07-29T17:02:47.000Z","reason":"deleted"}
+
+
+
+Code copied to clipboard
+
+
+
+
+
+
+
+
+The result will contain a set of JSON objects (one object per line). Each object will contain a Tweet or user ID, the Tweet or user’s creation date (useful to locate Tweets organized by date), required action, the reason for the compliance action, and its date:
+
+
+
+
+
+
+
+
+
+
+
+
+```
+
+      {"id":"1265324480517361664","action":"delete","created_at":"2019-10-29T17:02:47.000Z","redacted_at":"2020-07-29T17:02:47.000Z","reason":"deleted"}
 {"id":"1263926741774581761","action":"delete","created_at":"2019-10-29T17:02:47.000Z","redacted_at":"2020-07-29T17:02:47.000Z","reason":"protected"}
 {"id":"1265324480517361669","action":"delete","created_at":"2019-10-29T17:02:47.000Z","redacted_at":"2020-07-29T17:02:47.000Z","reason":"suspended"}
     
 ```
-:::
-:::
-:::
 
-::: c01-rich-text-editor
-::: is-table-default
-Your code can parse each JSON line to locate the Tweet or user ID and
-delete the Tweets and users with those IDs from your dataset to stay in
-compliance. If there is no corresponding JSON object for an ID you
-uploaded, you can assume that ID is in compliance.
-:::
-:::
 
-::: dtc09-callout-text
-::: dtc09-callout-text
-::: dtc09__item
-::: dtc09__text
-::: c01-rich-text-editor
-::: is-table-default
-**Note** : Not all compliance events will include the [ redacted_at
-]{.code-inline} field.
-:::
-:::
-:::
-:::
-:::
-:::
-:::
+
+
+
+Code copied to clipboard
+
+
+
+
+
+
+
+
+Your code can parse each JSON line to locate the Tweet or user ID and delete the Tweets and users with those IDs from your dataset to stay in compliance. If there is no corresponding JSON object for an ID you uploaded, you can assume that ID is in compliance.
+
+
+
+
+
+
+
+
+
+
+
+**Note**: Not all compliance events will include the redacted\_atfield.
+
+
+
+
+
+
+
+
+
+
+
+
+
+Next steps
+----------
+
+
+
+
+
+
+Customize your request using the API Reference
+
+
+Reach out to the community for help
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Developer policy and terms
+
+
+Follow @XDevelopers
+
+
+Subscribe to developer news
+
+
+
+
+
+
+
+
+
+
+
+
+#### 
+ X platform
+
+
+* X.com
+* Status
+* Accessibility
+* Embed a post
+* Privacy Center
+* Transparency Center
+* Download the X app
+
+
+
+
+#### 
+ X Corp.
+
+
+* About the company
+* Company news
+* Brand toolkit
+* Jobs and internships
+* Investors
+
+
+
+
+#### 
+ Help
+
+
+* Help Center
+* Using X
+* X for creators
+* Ads Help Center
+* Managing your account
+* Email Preference Center
+* Rules and policies
+* Contact us
+
+
+
+
+#### 
+ Developer resources
+
+
+* Developer home
+* Documentation
+* Forums
+* Communities
+* Developer blog
+* Engineering blog
+* Developer terms
+
+
+
+
+#### 
+ Business resources
+
+
+* Advertise
+* X for business
+* Resources and guides
+* X for marketers
+* Marketing insights
+* Brand inspiration
+* X Ads Academy
+
+
+
+
+
+
+
+
+
+ © 2024 X Corp.
+ 
+
+
+Cookies
+
+
+Privacy
+
+
+Terms and conditions
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+**Did someone say … cookies?**  
+  
+
+
+ X and its partners use cookies to provide you with a better, safer and
+ faster service and to support our business. Some cookies are necessary to use
+ our services, improve our services, and make sure they work properly.
+ Show more about your choices.
+
+
+ 
+
+
+
+
+* Accept all cookies
+* Refuse non-essential cookies
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

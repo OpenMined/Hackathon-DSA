@@ -1,58 +1,70 @@
-::: {._4-u3 ._588p}
-The following query parameters are available (bold parameters are
-required):
 
--   **` access_token `** - The key for authenticating to the API. It is
-    a concatenation of &lt;your-app-id&gt;\|&lt;your-app-secret&gt;. For
-    example, if our app ID was 555 and our app secret aSdF123GhK, our
-    access_token would be \"555\|aSdF123GhK\".
+/threat\_indicators - ThreatExchange - Documentation - Meta for Developers
 
--   ` limit ` - Defines the maximum size of a page of results. The
-    maximum is 1,000.
 
--   ` text ` - Freeform text field with a value to search for. This can
-    be a file hash or a string found in other fields of the objects.
 
--   ::: fcb
-    ` sort_order ` - A given
-    [SortOrderType](/docs/threat-exchange/reference/apis/sort-order-type)
-    :::
 
--   ` sort_by ` - Sort results by RELEVANCE or by CREATE_TIME. When
-    sorting by RELEVANCE, your query will return results sorted by
-    similarity against your text query.
 
--   ` strict_text ` - When set to \'true\', the API will not do
-    approximate matching on the value in text
 
--   ::: fcb
-    ` threat_type ` - The broad threat type the indicator is associated
-    with (see
-    [ThreatTypes](/docs/threat-exchange/reference/apis/threat-type/) )
-    :::
 
--   ::: fcb
-    ` type ` - The type of indicators to search for (see
-    [IndicatorTypes](/docs/threat-exchange/reference/apis/indicator-type/)
-    )
-    :::
 
--   ` since ` - Returns indicators collected after a timestamp
 
--   ` until ` - Returns indicators collected before a timestamp
 
--   ` fields ` - A list of fields to return in the response
+
+
+ThreatExchange* Get Started
+* Get Access
+* Best Practices
+* UI Overview
+* UI Reference
+* API Overview
+* API Examples
+* API Structure
+* API Reference
+* Privacy Controls
+* Submitting Data
+* Editing Existing Data
+* Delete Data
+* Re-sharing
+* React to Data
+* Submit Connections
+* Integrations
+* Webhooks
+* FAQ
+* Webinar
+* Changelog
+Graph API Versionv18.0/threat\_indicators
+===================
+
+This API call enables searching for indicators of compromise stored in ThreatExchange. With this call you can search for indicators by free text, type, or all in a specific time window. Combinations of these query types are also allowed.
+
+Parameters
+----------
+
+The following query parameters are available (bold parameters are required):
+
+* **`access_token`** - The key for authenticating to the API. It is a concatenation of &lt;your-app-id&gt;|&lt;your-app-secret&gt;. For example, if our app ID was 555 and our app secret aSdF123GhK, our access\_token would be "555|aSdF123GhK".
+* `limit` - Defines the maximum size of a page of results. The maximum is 1,000.
+* `text` - Freeform text field with a value to search for. This can be a file hash or a string found in other fields of the objects.
+* `sort_order` - A given SortOrderType
+* `sort_by` - Sort results by RELEVANCE or by CREATE\_TIME. When sorting by RELEVANCE, your query will return results sorted by similarity against your text query.
+* `strict_text` - When set to 'true', the API will not do approximate matching on the value in text
+* `threat_type` - The broad threat type the indicator is associated with (see ThreatTypes)
+* `type` - The type of indicators to search for (see IndicatorTypes)
+* `since` - Returns indicators collected after a timestamp
+* `until` - Returns indicators collected before a timestamp
+* `fields` - A list of fields to return in the response
 
 Example query for all malicious IP addresses that are proxies:
 
-``` {._5s-8 .prettyprint .lang-code}
+
+```
 https://graph.facebook.com/v2.7/threat_indicators?access_token=555|aSdF123GhK&amp;type=IP_ADDRESS&amp;text=proxy
 ```
+The data returned by this API call changed in Platform version 2.4. Data returned in Platform v2.3:
 
-The data returned by this API call changed in Platform version 2.4. Data
-returned in Platform v2.3:
 
-``` {._5s-8 .prettyprint .lang-code}
+```
 {
   "data": [
     {
@@ -78,10 +90,10 @@ returned in Platform v2.3:
   }
 }
 ```
-
 Data returned in Platforms v2.4 and above:
 
-``` {._5s-8 .prettyprint .lang-code}
+
+```
 {
   "data": [
     {
@@ -100,17 +112,17 @@ Data returned in Platforms v2.4 and above:
   },
 }
 ```
-
 The same query using a cURL:
 
-``` {._5s-8 .prettyprint .lang-code}
+
+```
 curl -i -X GET \
  "https://graph.facebook.com/v2.7/threat_indicators?type=IP_ADDRESS&amp;text=proxy&amp;access_token=555%7C1234"
 ```
-
 The same query in Python:
 
-``` {._5s-8 .prettyprint .lang-code}
+
+```
 import requests
 import json
 import ast
@@ -131,10 +143,10 @@ r = requests.get('https://graph.facebook.com/v2.7/threat_indicators?' + query_pa
 
 print json.dumps(ast.literal_eval(r.text), sort_keys=True,indent=4,separators=(',', ': '))
 ```
-
 The same query in Java:
 
-``` {._5s-8 .prettyprint .lang-code}
+
+```
 import java.io.InputStream;
 import java.net.URL;
 import java.net.URLConnection;
@@ -167,10 +179,10 @@ public class ThreatIndicators {
     
 }
 ```
-
 The same query in PHP:
 
-``` {._5s-8 .prettyprint .lang-code}
+
+```
 <?php
   $appID = "555"; // Replace this with your AppID
   $appSecret = "1234"; // Replace this with your App Secret
@@ -191,4 +203,37 @@ The same query in PHP:
   curl_close($ch);
 ?>
 ```
-:::
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 

@@ -1,127 +1,144 @@
-::: {._4-u3 ._588p}
-**` GET /{ig-user-id}/live_media `**
 
-Get a collection of live video [IG
-Media](/docs/instagram-api/reference/ig-media) on an [IG
-User](/docs/instagram-api/reference/ig-user) .
+Live Media - Instagram Platform - Documentation - Meta for Developers
+
+
+
+
+
+
+
+
+
+
+Instagram Graph API* Overview
+* Getting Started
+* Guides
+* Reference
+* Changelog
+IG User Live Media
+==================
+
+
+Represents a collection of live video IG Media on an IG User.
+
+
+Creating
+--------
+
+
+This operation is not supported.
+
+
+Reading
+-------
+
+
+**`GET /{ig-user-id}/live_media`**
+
+
+Get a collection of live video IG Media on an IG User.
+
 
 ### Limitations
 
-Only live video IG Media being broadcast at the time of the request will
-be returned.
+
+Only live video IG Media being broadcast at the time of the request will be returned.
+
 
 ### Time-based Pagination
 
-This endpoint supports [time-based
-pagination](/docs/graph-api/using-graph-api#time) . Include ` since `
-and ` until ` query-string paramaters with Unix timestamp or
-` strtotime ` data values to define a time range.
+
+This endpoint supports time-based pagination. Include `since` and `until` query-string paramaters with Unix timestamp or `strtotime` data values to define a time range.
+
 
 ### Requirements
 
+
+
+
+ Type | Requirement || Access Tokens | User |
+| Permissions | `instagram_basic`
+`instagram_read_engagement`
+`pages_read_engagement`
+If the app user was granted a role via the Business Manager on the Page connected to the targeted IG User, you will also need one of:
+`ads_management`
+`business_management` |
+
 ### Request Syntax
 
-``` {._5s-8 .prettyprint .lang-code}
+
+
+```
+
 GET https://graph.facebook.com/{api-version}/{ig-user-id}/live_media
   ?access_token={access-token}
 ```
-
 ### Path Parameters
 
-::: _57-c
-Placeholder
-:::
-:::
 
-Value
 
-` {api-version} `\
-*String*
 
-API [version](/docs/instagram-basic-display-api/overview#versions) .
-
-` {ig-user-id} `\
-**Required**\
-*String*
-
-App user\'s app-scoped user ID.
+ Placeholder | Value || `{api-version}`
+*String* | API version. |
+| `{ig-user-id}`
+**Required**
+*String* | App user's app-scoped user ID. |
 
 ### Query String Parameters
 
-::: _57-c
-Key
-:::
 
-Value
 
-` access_token `\
-**Required**\
-*String*
 
-App user\'s [User](/docs/facebook-login/access-tokens/#usertokens)
-access token.
-
-` fields `\
-*Comma-separated list*
-
-Comma-separated list of IG Media
-[fields](/docs/instagram-api/reference/ig-media#fields) you want
-returned for each live IG Media in the result set.
-
-` since `\
-*timestamp*
-
-A Unix timestamp or ` strtotime ` data value that points to the start of
-a range of time-based data. See [time-based
-pagination](/docs/graph-api/using-graph-api#time) .
-
-` until `\
-*timestamp*
-
-A Unix timestamp or ` strtotime ` data value that points to the end of a
-range of time-based data. See [time-based
-pagination](/docs/graph-api/using-graph-api#time) .
+ Key | Value || `access_token`
+**Required**
+*String* | App user's User access token. |
+| `fields`
+*Comma-separated list* | Comma-separated list of IG Media fields you want returned for each live IG Media in the result set. |
+| `since`
+*timestamp* | A Unix timestamp or `strtotime` data value that points to the start of a range of time-based data. See time-based pagination. |
+| `until`
+*timestamp* | A Unix timestamp or `strtotime` data value that points to the end of a range of time-based data. See time-based pagination. |
 
 ### Response
 
+
 A JSON-formatted object containing the data you requested.
 
-``` {._5s-8 .prettyprint .lang-json}
+
+
+```
+
 {
   "data": [],
   "paging": {}
 }
 ```
-
 #### Response Contents
 
-::: _57-c
-Property
-:::
 
-Value
 
-` data `
 
-An array of [IG Media](/docs/instagram-api/reference/ig-media) on an [IG
-User](/docs/instagram-api/reference/ig-user) .
-
-` paging `
-
-An object containing [paging](/docs/graph-api/using-graph-api#paging)
-cursors and next/previous data set retrievial URLs.
+ Property | Value || `data` | An array of IG Media on an IG User. |
+| `paging` | An object containing paging cursors and next/previous data set retrievial URLs. |
 
 ### cURL Example
 
+
 #### Request
 
-``` {._5s-8 .prettyprint .lang-curl}
-curl -X GET \ 'https://graph.facebook.com/v18.0/17841405822304914/live_media?fields=id,media_type,media_product_type,owner,username,comments&access_token=IGQVJ...'
+
+
 ```
 
+curl -X GET \
+  'https://graph.facebook.com/v18.0/17841405822304914/live_media?fields=id,media_type,media_product_type,owner,username,comments&access_token=IGQVJ...'
+```
 #### Response
 
-``` {._5s-8 .prettyprint .lang-json}
+
+
+```
+
 {
    "id":"90010498116233",
    "media_type":"BROADCAST",
@@ -151,3 +168,55 @@ curl -X GET \ 'https://graph.facebook.com/v18.0/17841405822304914/live_media?fie
    }
 }
 ```
+Updating
+--------
+
+
+This operation is not supported.
+
+
+Deleting
+--------
+
+
+This operation is not supported.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 

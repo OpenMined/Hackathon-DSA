@@ -1,253 +1,319 @@
-::: {#twtr-dtc-main .dtc-rebrand-flag-on}
-::: {#twtr-main .twtr-color-bg--white-neutral role="main"}
-::: {.page-wrapper .documentation-page .twtr-color-bg--white-neutral}
-::: {.page-content .twtr-container-wide .left-rail-container}
-::: {.main-content .twtr-col-lg-6}
-::: main-content__wrapper
-::: c01-rich-text-editor
-::: is-table-default
-The actor object contains Twitter User account metadata that describes
-the Twitter User which created the activity.
 
-### []{#actor-object-dictionary} Data Dictionary
 
-+-----------------------+-----------------------+-----------------------+
-| Attribute             | Type                  | Description           |
-+-----------------------+-----------------------+-----------------------+
-| objectType            | string                | **\"objectType\":**   |
-|                       |                       | \"person\"            |
-+-----------------------+-----------------------+-----------------------+
-| id                    | string                | The string            |
-|                       |                       | representation of the |
-|                       |                       | unique identifier for |
-|                       |                       | this author. Example: |
-|                       |                       |                       |
-|                       |                       | ::: {                 |
-|                       |                       | .code .javascript .la |
-|                       |                       | st .highlight-python} |
-|                       |                       | ::: highlight         |
-|                       |                       |     "id:tw            |
-|                       |                       | itter.com:2244994945" |
-|                       |                       | :::                   |
-|                       |                       | :::                   |
-+-----------------------+-----------------------+-----------------------+
-| link                  |                       | \"http://www.t        |
-|                       |                       | witter.com/TwitterDev |
-+-----------------------+-----------------------+-----------------------+
-| displayName           | String                | The name of the user, |
-|                       |                       | as they've defined    |
-|                       |                       | it. Not necessarily a |
-|                       |                       | person's name.        |
-|                       |                       | Typically capped at   |
-|                       |                       | 50 characters, but    |
-|                       |                       | subject to change.    |
-|                       |                       | Example:              |
-|                       |                       |                       |
-|                       |                       | ::: {                 |
-|                       |                       | .code .javascript .la |
-|                       |                       | st .highlight-python} |
-|                       |                       | ::: highlight         |
-|                       |                       |                       |
-|                       |                       |     "displa           |
-|                       |                       | yName": "Twitter Dev" |
-|                       |                       | :::                   |
-|                       |                       | :::                   |
-+-----------------------+-----------------------+-----------------------+
-| preferredUsername     | string                | The screen name,      |
-|                       |                       | handle, or alias that |
-|                       |                       | this user identifies  |
-|                       |                       | themselves with.      |
-|                       |                       | Unique but subject to |
-|                       |                       | change. Use           |
-|                       |                       | ` `{.docutils         |
-|                       |                       | .lite                 |
-|                       |                       | ral}[` id `{.docutils |
-|                       |                       | .literal              |
-|                       |                       | }]{.pre}` `{.docutils |
-|                       |                       | .literal} as a user   |
-|                       |                       | identifier whenever   |
-|                       |                       | possible. Typically a |
-|                       |                       | maximum of 15         |
-|                       |                       | characters long, but  |
-|                       |                       | some historical       |
-|                       |                       | accounts may exist    |
-|                       |                       | with longer names.    |
-|                       |                       | Example:              |
-|                       |                       |                       |
-|                       |                       | ::: {                 |
-|                       |                       | .code .javascript .la |
-|                       |                       | st .highlight-python} |
-|                       |                       | ::: highlight         |
-|                       |                       |                       |
-|                       |                       |     "preferredUs      |
-|                       |                       | ername": "TwitterDev" |
-|                       |                       | :::                   |
-|                       |                       | :::                   |
-+-----------------------+-----------------------+-----------------------+
-| location              | object                | **\"location\": {**   |
-|                       |                       |                       |
-|                       |                       | **\"objectType\":**   |
-|                       |                       | \"place\" **,**       |
-|                       |                       |                       |
-|                       |                       | **\"displayName\":**  |
-|                       |                       | \"127.0.0.1\"         |
-|                       |                       |                       |
-|                       |                       | **}**                 |
-+-----------------------+-----------------------+-----------------------+
-| links                 | array                 | *Nullable* . A URL    |
-|                       |                       | provided by the user  |
-|                       |                       | in association with   |
-|                       |                       | their profile.        |
-|                       |                       | Example:              |
-|                       |                       |                       |
-|                       |                       | ::: {                 |
-|                       |                       | .code .javascript .la |
-|                       |                       | st .highlight-python} |
-|                       |                       | ::: highlight         |
-|                       |                       |                       |
-|                       |                       |            "links": [ |
-|                       |                       |                       |
-|                       |                       | **{**                 |
-|                       |                       |                       |
-|                       |                       | **\"href\":**         |
-|                       |                       | \"ht                  |
-|                       |                       | tps://developer.twitt |
-|                       |                       | er.com/en/community\" |
-|                       |                       | **,**                 |
-|                       |                       |                       |
-|                       |                       | **\"rel\":** \"me\"   |
-|                       |                       |                       |
-|                       |                       | **}**                 |
-|                       |                       |                       |
-|                       |                       | **\]**                |
-|                       |                       | :::                   |
-|                       |                       | :::                   |
-+-----------------------+-----------------------+-----------------------+
-| summary               | string                | *Nullable* . The      |
-|                       |                       | user-defined UTF-8    |
-|                       |                       | string describing     |
-|                       |                       | their account.        |
-|                       |                       | Example:              |
-|                       |                       |                       |
-|                       |                       | ::: {                 |
-|                       |                       | .code .javascript .la |
-|                       |                       | st .highlight-python} |
-|                       |                       | ::: highlight         |
-|                       |                       |                       |
-|                       |                       |     "summar           |
-|                       |                       | y": "The voice of the |
-|                       |                       |  #TwitterDev team..." |
-|                       |                       | :::                   |
-|                       |                       | :::                   |
-+-----------------------+-----------------------+-----------------------+
-| protected             | Boolean               | When true, indicates  |
-|                       |                       | that this user has    |
-|                       |                       | chosen to protect     |
-|                       |                       | their Tweets. See     |
-|                       |                       | [About Public and     |
-|                       |                       | Protected             |
-|                       |                       | Tweets](http          |
-|                       |                       | s://support.twitter.c |
-|                       |                       | om/articles/14016-abo |
-|                       |                       | ut-public-and-protect |
-|                       |                       | ed-tweets){.reference |
-|                       |                       | .external} . Example: |
-+-----------------------+-----------------------+-----------------------+
-| verified              | Boolean               | When true, indicates  |
-|                       |                       | that the user has a   |
-|                       |                       | verified account. See |
-|                       |                       | [Verified             |
-|                       |                       | Accounts](            |
-|                       |                       | https://support.twitt |
-|                       |                       | er.com/articles/11913 |
-|                       |                       | 5-faqs-about-verified |
-|                       |                       | -accounts){.reference |
-|                       |                       | .external} . Example: |
-+-----------------------+-----------------------+-----------------------+
-| followersCount        | Int                   | The number of         |
-|                       |                       | followers this        |
-|                       |                       | account currently     |
-|                       |                       | has. Under certain    |
-|                       |                       | conditions of duress, |
-|                       |                       | this field will       |
-|                       |                       | temporarily indicate  |
-|                       |                       | "0". Example:         |
-+-----------------------+-----------------------+-----------------------+
-| friendsCount          | Int                   | The number of users   |
-|                       |                       | this account is       |
-|                       |                       | following (AKA their  |
-|                       |                       | "followings"). Under  |
-|                       |                       | certain conditions of |
-|                       |                       | duress, this field    |
-|                       |                       | will temporarily      |
-|                       |                       | indicate "0".         |
-|                       |                       | Example:              |
-+-----------------------+-----------------------+-----------------------+
-| listedCount           | Int                   | The number of public  |
-|                       |                       | lists that this user  |
-|                       |                       | is a member of.       |
-|                       |                       | Example:              |
-+-----------------------+-----------------------+-----------------------+
-| favoritesCount        | Int                   | The number of Tweets  |
-|                       |                       | this user has liked   |
-|                       |                       | in the account's      |
-|                       |                       | lifetime. British     |
-|                       |                       | spelling used in the  |
-|                       |                       | field name for        |
-|                       |                       | historical reasons.   |
-|                       |                       | Example:              |
-+-----------------------+-----------------------+-----------------------+
-| statusesCount         | Int                   | The number of Tweets  |
-|                       |                       | (including retweets)  |
-|                       |                       | issued by the user.   |
-|                       |                       | Example:              |
-+-----------------------+-----------------------+-----------------------+
-| postedTime            | date                  | The UTC datetime that |
-|                       |                       | the user account was  |
-|                       |                       | created on Twitter.   |
-|                       |                       | Example:              |
-|                       |                       |                       |
-|                       |                       | ::: {                 |
-|                       |                       | .code .javascript .la |
-|                       |                       | st .highlight-python} |
-|                       |                       | ::: highlight         |
-|                       |                       |                       |
-|                       |                       |                       |
-|                       |                       |   "postedTime": "2013 |
-|                       |                       | -12-14T04:35:55.036Z" |
-|                       |                       | :::                   |
-|                       |                       | :::                   |
-+-----------------------+-----------------------+-----------------------+
-| image                 | string                | A HTTPS-based URL     |
-|                       |                       | pointing to the       |
-|                       |                       | user's profile image. |
-|                       |                       | Example:              |
-|                       |                       |                       |
-|                       |                       | ::: {                 |
-|                       |                       | .code .javascript .la |
-|                       |                       | st .highlight-python} |
-|                       |                       | ::: highlight         |
-|                       |                       |                       |
-|                       |                       |     "im               |
-|                       |                       | age": "https://pbs.tw |
-|                       |                       | img.com/profile_image |
-|                       |                       | s/1283786620521652229 |
-|                       |                       | /lEODkLTh_normal.jpg" |
-|                       |                       | :::                   |
-|                       |                       | :::                   |
-+-----------------------+-----------------------+-----------------------+
 
-###  No longer supported (deprecated) attributes
 
-###  []{#author-object-examples} Examples:
-:::
-:::
+Activity Streams actor object | Docs | Twitter Developer Platform 
 
-::: {.b19-code-snippet .twtr-component-space--md}
-::: {.b19-snippet .b19__theme--light}
-::: t05-inline-code-snippet
-``` {.line-numbers .t05__pre--with-button}
-       "actor": {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Actor object
+
+
+
+Actor object
+------------
+
+
+The actor object contains Twitter User account metadata that describes the Twitter User which created the activity.
+
+
+ 
+
+
+### Data Dictionary
+
+
+
+
+| Attribute | Type | Description |
+| --- | --- | --- |
+| objectType | string | **"objectType":** "person" |
+| id | string | The string representation of the unique identifier for this author. Example:
+
+```
+
+"id:twitter.com:2244994945"
+
+```
+
+
+ |
+| link |  | "http://www.twitter.com/TwitterDev |
+| displayName | String | The name of the user, as they’ve defined it. Not necessarily a person’s name. Typically capped at 50 characters, but subject to change. Example:
+
+```
+
+
+**"displayName":** "Twitter Dev"
+
+```
+
+
+ |
+| preferredUsername | string | The screen name, handle, or alias that this user identifies themselves with. Unique but subject to change. Use `id` as a user identifier whenever possible. Typically a maximum of 15 characters long, but some historical accounts may exist with longer names. Example:
+
+```
+
+
+**"preferredUsername":** "TwitterDev"
+
+```
+
+
+ |
+| location | object | **"location": {**
+**"objectType":** "place"**,**
+**"displayName":** "127.0.0.1"
+**}** |
+| links | array | *Nullable* . A URL provided by the user in association with their profile. Example:
+
+```
+
+
+**"links": [**
+
+```
+
+**{**
+**"href":** "https://developer.twitter.com/en/community"**,**
+**"rel":** "me"
+**}**
+**]**
+
+ |
+| summary | string | *Nullable* . The user-defined UTF-8 string describing their account. Example:
+
+```
+
+
+**"summary":** "The voice of the #TwitterDev team..."
+
+```
+
+
+ |
+| protected | Boolean | When true, indicates that this user has chosen to protect their Tweets. See About Public and Protected Tweets . Example:
+
+```
+
+"protected": true
+
+```
+
+
+ |
+| verified | Boolean | When true, indicates that the user has a verified account. See Verified Accounts . Example:
+
+```
+
+"verified": false
+
+```
+
+
+ |
+| followersCount | Int | The number of followers this account currently has. Under certain conditions of duress, this field will temporarily indicate “0”. Example:
+
+```
+
+"followers_count": 21
+
+```
+
+
+ |
+| friendsCount | Int | The number of users this account is following (AKA their “followings”). Under certain conditions of duress, this field will temporarily indicate “0”. Example:
+
+```
+
+"friends_count": 32
+
+```
+
+
+ |
+| listedCount | Int | The number of public lists that this user is a member of. Example:
+
+```
+
+"listed_count": 9274
+
+```
+
+
+ |
+| favoritesCount | Int | The number of Tweets this user has liked in the account’s lifetime. British spelling used in the field name for historical reasons. Example:
+
+```
+
+"favourites_count": 13
+
+```
+
+
+ |
+| statusesCount | Int | The number of Tweets (including retweets) issued by the user. Example:
+
+```
+
+"statuses_count": 42
+
+```
+
+
+ |
+| postedTime | date | The UTC datetime that the user account was created on Twitter. Example:
+
+```
+
+
+**"postedTime":** "2013-12-14T04:35:55.036Z"
+
+```
+
+
+ |
+| image | string | A HTTPS-based URL pointing to the user’s profile image. Example:
+
+```
+
+
+**"image":** "https://pbs.twimg.com/profile_images/1283786620521652229/lEODkLTh_normal.jpg"
+
+```
+
+
+ |
+
+
+### 
+No longer supported (deprecated) attributes
+
+
+
+
+| Field | Type | Description |
+| --- | --- | --- |
+| utcOffset | null | Value will be set to null. Still available via GET account/settings |
+| twitterTimeZone | null | Value will be set to null. Still available via GET account/settings as tzinfo\_name |
+| languages | null | Value will be set to null. Still available via GET account/settings as language |
+
+
+### 
+Examples:
+
+
+
+
+
+
+
+
+
+
+
+
+```
+
+            "actor": {
         "objectType": "person",
         "id": "id:twitter.com:2244994945",
         "link": "http://www.twitter.com/TwitterDev",
@@ -278,15 +344,29 @@ the Twitter User which created the activity.
       }
     
 ```
-:::
-:::
-:::
 
-::: {.b19-code-snippet .twtr-component-space--md}
-::: {.b19-snippet .b19__theme--light}
-::: t05-inline-code-snippet
-``` {.line-numbers .t05__pre--with-button}
- "actor": {
+
+
+
+
+Code copied to clipboard
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+```
+
+      "actor": {
     "objectType": "person",
     "id": "id:twitter.com:6253282",
     "link": "http://www.twitter.com/TwitterAPI",
@@ -315,12 +395,209 @@ the Twitter User which created the activity.
   }
     
 ```
-:::
-:::
-:::
-:::
-:::
-:::
-:::
-:::
-:::
+
+
+
+
+
+Code copied to clipboard
+
+
+
+
+
+
+
+
+### Next Steps
+
+
+Explore the other sub-objects that a Tweet contains:
+
+
+* Tweet object and data dictionary
+* Entities object and data dictionary
+* Extended Entities object and data dictionary
+* Tweet geo objects and data dictionaries
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Developer policy and terms
+
+
+Follow @XDevelopers
+
+
+Subscribe to developer news
+
+
+
+
+
+
+
+
+
+
+
+
+#### 
+ X platform
+
+
+* X.com
+* Status
+* Accessibility
+* Embed a post
+* Privacy Center
+* Transparency Center
+* Download the X app
+
+
+
+
+#### 
+ X Corp.
+
+
+* About the company
+* Company news
+* Brand toolkit
+* Jobs and internships
+* Investors
+
+
+
+
+#### 
+ Help
+
+
+* Help Center
+* Using X
+* X for creators
+* Ads Help Center
+* Managing your account
+* Email Preference Center
+* Rules and policies
+* Contact us
+
+
+
+
+#### 
+ Developer resources
+
+
+* Developer home
+* Documentation
+* Forums
+* Communities
+* Developer blog
+* Engineering blog
+* Developer terms
+
+
+
+
+#### 
+ Business resources
+
+
+* Advertise
+* X for business
+* Resources and guides
+* X for marketers
+* Marketing insights
+* Brand inspiration
+* X Ads Academy
+
+
+
+
+
+
+
+
+
+ © 2024 X Corp.
+ 
+
+
+Cookies
+
+
+Privacy
+
+
+Terms and conditions
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+**Did someone say … cookies?**  
+  
+
+
+ X and its partners use cookies to provide you with a better, safer and
+ faster service and to support our business. Some cookies are necessary to use
+ our services, improve our services, and make sure they work properly.
+ Show more about your choices.
+
+
+ 
+
+
+
+
+* Accept all cookies
+* Refuse non-essential cookies
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

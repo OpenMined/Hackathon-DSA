@@ -1,301 +1,271 @@
-::: main-content__wrapper
-::: c01-rich-text-editor
-::: is-table-default
-The user object contains Twitter user account metadata describing the
-referenced user. The user object is the primary object returned in the
-[users lookup](/en/docs/twitter-api/users/lookup/introduction.html)
-endpoint. When requesting additional user fields on this endpoint,
-simply use the fields parameter ` user.fields ` .
 
-The user object can also be found as a child object and expanded in the
-Tweet object. The object is available for expansion with
-` ?expansions=author_id ` or ` ?expansions=in_reply_to_user_id ` to get
-the condensed object with only default fields. Use the expansion with
-the field parameter: ` user.fields ` when requesting additional fields
-to complete the object.\
 
-+-----------------+-----------------+-----------------+-----------------+
-| Field value     | Type            | Description     | How it can be   |
-|                 |                 |                 | used            |
-+-----------------+-----------------+-----------------+-----------------+
-| id (default)    | string          | The unique      | Use this to     |
-|                 |                 | identifier of   | p               |
-|                 |                 | this user.      | rogrammatically |
-|                 |                 |                 | retrieve        |
-|                 |                 | ` "id":         | information     |
-|                 |                 |  "2244994945" ` | about a         |
-|                 |                 |                 | specific        |
-|                 |                 |                 | Twitter user.   |
-+-----------------+-----------------+-----------------+-----------------+
-| name (default)  | string          | The name of the |                 |
-|                 |                 | user, as        |                 |
-|                 |                 | they've defined |                 |
-|                 |                 | it on their     |                 |
-|                 |                 | profile. Not    |                 |
-|                 |                 | necessarily a   |                 |
-|                 |                 | person's name.  |                 |
-|                 |                 | Typically       |                 |
-|                 |                 | capped at 50    |                 |
-|                 |                 | characters, but |                 |
-|                 |                 | subject to      |                 |
-|                 |                 | change.         |                 |
-|                 |                 |                 |                 |
-|                 |                 | ` "name":       |                 |
-|                 |                 | "Twitter Dev" ` |                 |
-+-----------------+-----------------+-----------------+-----------------+
-| username        | string          | The Twitter     |                 |
-| (default)       |                 | screen name,    |                 |
-|                 |                 | handle, or      |                 |
-|                 |                 | alias that this |                 |
-|                 |                 | user identifies |                 |
-|                 |                 | themselves      |                 |
-|                 |                 | with. Usernames |                 |
-|                 |                 | are unique but  |                 |
-|                 |                 | subject to      |                 |
-|                 |                 | change.         |                 |
-|                 |                 | Typically a     |                 |
-|                 |                 | maximum of 15   |                 |
-|                 |                 | characters      |                 |
-|                 |                 | long, but some  |                 |
-|                 |                 | historical      |                 |
-|                 |                 | accounts may    |                 |
-|                 |                 | exist with      |                 |
-|                 |                 | longer names.   |                 |
-|                 |                 |                 |                 |
-|                 |                 | ` "username":   |                 |
-|                 |                 |  "TwitterDev" ` |                 |
-+-----------------+-----------------+-----------------+-----------------+
-| created_at      | date (ISO 8601) | The UTC         | Can be used to  |
-|                 |                 | datetime that   | determine how   |
-|                 |                 | the user        | long a someone  |
-|                 |                 | account was     | has been using  |
-|                 |                 | created on      | Twitter         |
-|                 |                 | Twitter.        |                 |
-|                 |                 |                 |                 |
-|                 |                 | ` "created_at"  |                 |
-|                 |                 | : "2013-12-14T0 |                 |
-|                 |                 | 4:35:55.000Z" ` |                 |
-+-----------------+-----------------+-----------------+-----------------+
-| description     | string          | The text of     |                 |
-|                 |                 | this user\'s    |                 |
-|                 |                 | profile         |                 |
-|                 |                 | description     |                 |
-|                 |                 | (also known as  |                 |
-|                 |                 | bio), if the    |                 |
-|                 |                 | user provided   |                 |
-|                 |                 | one.            |                 |
-|                 |                 |                 |                 |
-|                 |                 | ` "             |                 |
-|                 |                 | description": " |                 |
-|                 |                 | The voice of Tw |                 |
-|                 |                 | itter's #DevRel |                 |
-|                 |                 |  team, and your |                 |
-|                 |                 |  official sourc |                 |
-|                 |                 | e for updates,  |                 |
-|                 |                 | news, & events  |                 |
-|                 |                 | about Twitter's |                 |
-|                 |                 |  API. \n\n#Blac |                 |
-|                 |                 | kLivesMatter" ` |                 |
-+-----------------+-----------------+-----------------+-----------------+
-| entities        | object          | Contains        | Entities are    |
-|                 |                 | details about   | JSON objects    |
-|                 |                 | text that has a | that provide    |
-|                 |                 | special meaning | additional      |
-|                 |                 | in the user\'s  | information     |
-|                 |                 | description.    | about hashtags, |
-|                 |                 |                 | urls, user      |
-|                 |                 | ` "ent          | mentions, and   |
-|                 |                 | ities": { "url" | cashtags        |
-|                 |                 | : { "urls": [ { | associated with |
-|                 |                 |  "start": 0, "e | the             |
-|                 |                 | nd": 23, "url": | description.    |
-|                 |                 |  "https://t.co/ | Reference each  |
-|                 |                 | 3ZX3TNiZCY", "e | respective      |
-|                 |                 | xpanded_url": " | entity for      |
-|                 |                 | /content/develo | further         |
-|                 |                 | per-twitter/en/ | details.        |
-|                 |                 | community", "di |                 |
-|                 |                 | splay_url": "de | All user [      |
-|                 |                 | veloper.twitter | start           |
-|                 |                 | .com/en/communi | ]{.code-inline} |
-|                 |                 | ty" } ] }, "des | indices are     |
-|                 |                 | cription": { "u | inclusive,      |
-|                 |                 | rls": [ { "star | while all user  |
-|                 |                 | t": 0, "end": 2 | [ end           |
-|                 |                 | 3, "url": "http | ]{.code-inline} |
-|                 |                 | s://t.co/3ZX3TN | indices are     |
-|                 |                 | iZCY", "expande | exclusive.      |
-|                 |                 | d_url": "/conte |                 |
-|                 |                 | nt/developer-tw |                 |
-|                 |                 | itter/en/commun |                 |
-|                 |                 | ity", "display_ |                 |
-|                 |                 | url": "develope |                 |
-|                 |                 | r.twitter.com/e |                 |
-|                 |                 | n/community" }, |                 |
-|                 |                 |  "hashtags": [  |                 |
-|                 |                 | { "start": 23,  |                 |
-|                 |                 | "end": 30, "tag |                 |
-|                 |                 | ": "DevRel" },  |                 |
-|                 |                 | { "start": 113, |                 |
-|                 |                 |  "end": 130, "t |                 |
-|                 |                 | ag": "BlackLive |                 |
-|                 |                 | sMatter" }, "me |                 |
-|                 |                 | ntions": [ { "s |                 |
-|                 |                 | tart": 0, "end" |                 |
-|                 |                 | : 10, "tag": "T |                 |
-|                 |                 | witterDev" }, " |                 |
-|                 |                 | cashtags": [ {  |                 |
-|                 |                 | "start": 12, "e |                 |
-|                 |                 | nd": 16, "tag": |                 |
-|                 |                 |  "twtr" } ] } ` |                 |
-|                 |                 |                 |                 |
-|                 |                 | }               |                 |
-+-----------------+-----------------+-----------------+-----------------+
-| location        | string          | The location    |                 |
-|                 |                 | specified in    |                 |
-|                 |                 | the user\'s     |                 |
-|                 |                 | profile, if the |                 |
-|                 |                 | user provided   |                 |
-|                 |                 | one. As this is |                 |
-|                 |                 | a freeform      |                 |
-|                 |                 | value, it may   |                 |
-|                 |                 | not indicate a  |                 |
-|                 |                 | valid location, |                 |
-|                 |                 | but it may be   |                 |
-|                 |                 | fuzzily         |                 |
-|                 |                 | evaluated when  |                 |
-|                 |                 | performing      |                 |
-|                 |                 | searches with   |                 |
-|                 |                 | location        |                 |
-|                 |                 | queries.        |                 |
-|                 |                 |                 |                 |
-|                 |                 | ` "location"    |                 |
-|                 |                 | : "127.0.0.1" ` |                 |
-+-----------------+-----------------+-----------------+-----------------+
-| pinned_tweet_id | string          | Unique          | Determine the   |
-|                 |                 | identifier of   | Tweet pinned to |
-|                 |                 | this user\'s    | the top of the  |
-|                 |                 | pinned Tweet.   | user's profile. |
-|                 |                 |                 | Can potentially |
-|                 |                 | ` "pinned_twee  | be used to      |
-|                 |                 | t_id": "1255542 | determine the   |
-|                 |                 | 774432063488" ` | user's          |
-|                 |                 |                 | language.       |
-+-----------------+-----------------+-----------------+-----------------+
-| pr              | string          | The URL to the  | Can be used to  |
-| ofile_image_url |                 | profile image   | download this   |
-|                 |                 | for this user,  | user\'s profile |
-|                 |                 | as shown on the | image.          |
-|                 |                 | user\'s         |                 |
-|                 |                 | profile.        |                 |
-|                 |                 |                 |                 |
-|                 |                 | ` "profile_im   |                 |
-|                 |                 | age_url": "http |                 |
-|                 |                 | s://pbs.twimg.c |                 |
-|                 |                 | om/profile_imag |                 |
-|                 |                 | es/126717536400 |                 |
-|                 |                 | 3901441/tBZNFAg |                 |
-|                 |                 | A_normal.jpg" ` |                 |
-+-----------------+-----------------+-----------------+-----------------+
-| protected       | boolean         | Indicates if    |                 |
-|                 |                 | this user has   |                 |
-|                 |                 | chosen to       |                 |
-|                 |                 | protect their   |                 |
-|                 |                 | Tweets (in      |                 |
-|                 |                 | other words, if |                 |
-|                 |                 | this user\'s    |                 |
-|                 |                 | Tweets are      |                 |
-|                 |                 | private).       |                 |
-|                 |                 |                 |                 |
-|                 |                 | ` "prot         |                 |
-|                 |                 | ected": false ` |                 |
-+-----------------+-----------------+-----------------+-----------------+
-| public_metrics  | object          | Contains        | Can potentially |
-|                 |                 | details about   | be used to      |
-|                 |                 | activity for    | determine a     |
-|                 |                 | this user.      | Twitter user's  |
-|                 |                 |                 | reach or        |
-|                 |                 | ` "public_      | influence,      |
-|                 |                 | metrics": {     | quantify the    |
-|                 |                 |          "follo | user's range of |
-|                 |                 | wers_count": 50 | interests, and  |
-|                 |                 | 7902,           | the user's      |
-|                 |                 |    "following_c | level of        |
-|                 |                 | ount": 1863,    | engagement on   |
-|                 |                 |           "twee | Twitter.        |
-|                 |                 | t_count": 3561, |                 |
-|                 |                 |              "l |                 |
-|                 |                 | isted_count": 1 |                 |
-|                 |                 | 550         } ` |                 |
-+-----------------+-----------------+-----------------+-----------------+
-| url             | string          | The URL         | A URL provided  |
-|                 |                 | specified in    | by a Twitter    |
-|                 |                 | the user\'s     | user in their   |
-|                 |                 | profile, if     | profile. This   |
-|                 |                 | present.        | could be a      |
-|                 |                 |                 | homepage, but   |
-|                 |                 | ` "url          | is not always   |
-|                 |                 | ": "https://t.c | the case.       |
-|                 |                 | o/3ZX3TNiZCY" ` |                 |
-+-----------------+-----------------+-----------------+-----------------+
-| verified        | boolean         | Indicates if    | Indicates       |
-|                 |                 | this user is a  | whether or not  |
-|                 |                 | verified        | this Twitter    |
-|                 |                 | Twitter User.   | user has a      |
-|                 |                 |                 | verified        |
-|                 |                 | ` "ve           | account. A      |
-|                 |                 | rified": true ` | verified        |
-|                 |                 |                 | account lets    |
-|                 |                 |                 | people know     |
-|                 |                 |                 | that an account |
-|                 |                 |                 | of public       |
-|                 |                 |                 | interest is     |
-|                 |                 |                 | authentic.      |
-+-----------------+-----------------+-----------------+-----------------+
-| withheld        | object          | Contains        |                 |
-|                 |                 | withholding     |                 |
-|                 |                 | details for     |                 |
-|                 |                 | [withheld       |                 |
-|                 |                 | content         |                 |
-|                 |                 | ](https://help. |                 |
-|                 |                 | twitter.com/en/ |                 |
-|                 |                 | rules-and-polic |                 |
-|                 |                 | ies/tweet-withh |                 |
-|                 |                 | eld-by-country) |                 |
-|                 |                 | , if            |                 |
-|                 |                 | applicable.     |                 |
-|                 |                 |                 |                 |
-|                 |                 | \               |                 |
-+-----------------+-----------------+-----------------+-----------------+
-:::
-:::
 
-::: c01-rich-text-editor
-::: is-table-default
-In the following request, we are requesting fields for the user on the
-[users lookup](/en/docs/twitter-api/users/lookup/introduction.html)
-endpoint. Be sure to replace ` $BEARER_TOKEN ` with your own generated
-[Bearer Token](/en/docs/authentication/oauth-2-0/bearer-tokens) .\
-:::
-:::
 
-::: {.b19-code-snippet .twtr-component-space--md}
-::: {.b19-snippet .b19__theme--light}
-::: t05-inline-code-snippet
-``` {.line-numbers .t05__pre--with-button .t05__pre--wrap-text}
- curl --request GET 'https://api.twitter.com/2/users?ids=2244994945&user.fields=created_at,description,entities,id,location,name,pinned_tweet_id,profile_image_url,protected,url,username,verified,withheld&expansions=pinned_tweet_id' --header 'Authorization: Bearer $BEARER_TOKEN'
+User object | Docs | Twitter Developer Platform 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+User object
+
+
+
+User
+----
+
+
+The user object contains Twitter user account metadata describing the referenced user. The user object is the primary object returned in the users lookup endpoint. When requesting additional user fields on this endpoint, simply use the fields parameter `user.fields`.
+
+
+The user object can also be found as a child object and expanded in the Tweet object. The object is available for expansion with `?expansions=author_id` or `?expansions=in_reply_to_user_id` to get the condensed object with only default fields. Use the expansion with the field parameter: `user.fields` when requesting additional fields to complete the object.  
+
+ 
+
+
+
+
+| Field value | Type | Description | How it can be used |
+| --- | --- | --- | --- |
+| id (default) | string | The unique identifier of this user.
+`"id": "2244994945"` | Use this to programmatically retrieve information about a specific Twitter user. |
+| name (default) | string | The name of the user, as they’ve defined it on their profile. Not necessarily a person’s name. Typically capped at 50 characters, but subject to change.
+`"name": "Twitter Dev"` |  |
+| username (default) | string | The Twitter screen name, handle, or alias that this user identifies themselves with. Usernames are unique but subject to change. Typically a maximum of 15 characters long, but some historical accounts may exist with longer names.
+`"username": "TwitterDev"` |  |
+| created\_at | date (ISO 8601) | The UTC datetime that the user account was created on Twitter.
+`"created_at": "2013-12-14T04:35:55.000Z"` | Can be used to determine how long a someone has been using Twitter |
+| description | string | The text of this user's profile description (also known as bio), if the user provided one.
+`"description": "The voice of Twitter's #DevRel team, and your official source for updates, news, & events about Twitter's API. \n\n#BlackLivesMatter"` |  |
+| entities | object | Contains details about text that has a special meaning in the user's description.
+`"entities": {
+        "url": {
+            "urls": [
+                {
+                    "start": 0,
+                    "end": 23,
+                    "url": "https://t.co/3ZX3TNiZCY",
+                    "expanded_url": "/content/developer-twitter/en/community",
+                    "display_url": "developer.twitter.com/en/community"
+                }
+            ]
+        },
+        "description": {
+            "urls": [
+                {
+                    "start": 0,
+                    "end": 23,
+                    "url": "https://t.co/3ZX3TNiZCY",
+                    "expanded_url": "/content/developer-twitter/en/community",
+                    "display_url": "developer.twitter.com/en/community"
+                },
+            "hashtags": [
+                {
+                    "start": 23,
+                    "end": 30,
+                    "tag": "DevRel"
+                },
+                {
+                    "start": 113,
+                    "end": 130,
+                    "tag": "BlackLivesMatter"
+                },
+            "mentions": [
+                {
+                    "start": 0,
+                    "end": 10,
+                    "tag": "TwitterDev"
+                },
+            "cashtags": [
+                {
+                    "start": 12,
+                    "end": 16,
+                    "tag": "twtr"
+                }
+            ]
+        }
+    }` | Entities are JSON objects that provide additional information about hashtags, urls, user mentions, and cashtags associated with the description. Reference each respective entity for further details.
+All user start indices are inclusive, while all user end indices are exclusive. |
+| location | string | The location specified in the user's profile, if the user provided one. As this is a freeform value, it may not indicate a valid location, but it may be fuzzily evaluated when performing searches with location queries.
+`"location": "127.0.0.1"` |  |
+| pinned\_tweet\_id | string | Unique identifier of this user's pinned Tweet.
+`"pinned_tweet_id": "1255542774432063488"` | Determine the Tweet pinned to the top of the user’s profile. Can potentially be used to determine the user’s language. |
+| profile\_image\_url | string | The URL to the profile image for this user, as shown on the user's profile.
+`"profile_image_url": "https://pbs.twimg.com/profile_images/1267175364003901441/tBZNFAgA_normal.jpg"` | Can be used to download this user's profile image. |
+| protected | boolean | Indicates if this user has chosen to protect their Tweets (in other words, if this user's Tweets are private).
+`"protected": false` |  |
+| public\_metrics | object | Contains details about activity for this user.
+`"public_metrics": {             "followers_count": 507902,             "following_count": 1863,             "tweet_count": 3561,             "listed_count": 1550         }` | Can potentially be used to determine a Twitter user’s reach or influence, quantify the user’s range of interests, and the user’s level of engagement on Twitter. |
+| url | string | The URL specified in the user's profile, if present.
+`"url": "https://t.co/3ZX3TNiZCY"` | A URL provided by a Twitter user in their profile. This could be a homepage, but is not always the case. |
+| verified | boolean | Indicates if this user is a verified Twitter User.
+`"verified": true` | Indicates whether or not this Twitter user has a verified account. A verified account lets people know that an account of public interest is authentic. |
+| withheld | object | Contains withholding details for withheld content, if applicable.
+ |  |
+
+
+
+
+
+
+### 
+
+
+### Retrieving a user object
+
+
+#### Sample Request
+
+
+In the following request, we are requesting fields for the user on the users lookup endpoint. Be sure to replace `$BEARER_TOKEN` with your own generated Bearer Token.  
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+```
+
+      curl --request GET 'https://api.twitter.com/2/users?ids=2244994945&user.fields=created_at,description,entities,id,location,name,pinned_tweet_id,profile_image_url,protected,url,username,verified,withheld&expansions=pinned_tweet_id' --header 'Authorization: Bearer $BEARER_TOKEN'
 
     
 ```
-:::
-:::
-:::
 
-::: {.b19-code-snippet .twtr-component-space--md}
-::: {.b19-snippet .b19__theme--light}
-::: t05-inline-code-snippet
-``` line-numbers
- {
+
+
+
+
+Code copied to clipboard
+
+
+
+
+
+
+
+
+#### 
+Sample Response
+
+
+
+
+
+
+
+
+
+
+
+
+```
+
+      {
     "data": [
         {
             "id": "2244994945",
@@ -349,7 +319,185 @@ endpoint. Be sure to replace ` $BEARER_TOKEN ` with your own generated
 }
     
 ```
-:::
-:::
-:::
-:::
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Developer policy and terms
+
+
+Follow @XDevelopers
+
+
+Subscribe to developer news
+
+
+
+
+
+
+
+
+
+
+
+
+#### 
+ X platform
+
+
+* X.com
+* Status
+* Accessibility
+* Embed a post
+* Privacy Center
+* Transparency Center
+* Download the X app
+
+
+
+
+#### 
+ X Corp.
+
+
+* About the company
+* Company news
+* Brand toolkit
+* Jobs and internships
+* Investors
+
+
+
+
+#### 
+ Help
+
+
+* Help Center
+* Using X
+* X for creators
+* Ads Help Center
+* Managing your account
+* Email Preference Center
+* Rules and policies
+* Contact us
+
+
+
+
+#### 
+ Developer resources
+
+
+* Developer home
+* Documentation
+* Forums
+* Communities
+* Developer blog
+* Engineering blog
+* Developer terms
+
+
+
+
+#### 
+ Business resources
+
+
+* Advertise
+* X for business
+* Resources and guides
+* X for marketers
+* Marketing insights
+* Brand inspiration
+* X Ads Academy
+
+
+
+
+
+
+
+
+
+ © 2024 X Corp.
+ 
+
+
+Cookies
+
+
+Privacy
+
+
+Terms and conditions
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+**Did someone say … cookies?**  
+  
+
+
+ X and its partners use cookies to provide you with a better, safer and
+ faster service and to support our business. Some cookies are necessary to use
+ our services, improve our services, and make sure they work properly.
+ Show more about your choices.
+
+
+ 
+
+
+
+
+* Accept all cookies
+* Refuse non-essential cookies
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

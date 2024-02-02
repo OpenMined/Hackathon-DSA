@@ -1,181 +1,303 @@
-::: main-content__wrapper
-::: c01-rich-text-editor
-::: is-table-default
-This quick start guide will help you make your first request to the
-Retweets lookup endpoint using
-[Postman](https://developer.twitter.com/en/docs/tools-and-libraries/using-postman)
-. If you would like to see sample code in different languages, please
-visit our [Twitter API v2 sample
-code](https://github.com/twitterdev/Twitter-API-v2-sample-code) GitHub
-repository. \
-:::
-:::
 
-::: dtc09-callout-text
-::: dtc09-callout-text
-::: dtc09__item
-::: dtc09__text
-::: c01-rich-text-editor
-::: is-table-default
-To complete this guide, you will need to have a set of [keys and
-tokens](/en/docs/authentication) to authenticate your request. You can
-generate these keys and tokens by following these steps:
 
--   [Sign up for a developer account](/en/apply-for-access) and receive
-    approval.
--   Create a [Project](/en/docs/projects) and an associated [developer
-    App](/en/docs/apps) in the developer portal.
--   Navigate to your App\'s "Keys and tokens" page to generate the
-    required credentials. Make sure to save all credentials in a secure
-    location.
-:::
-:::
-:::
-:::
-:::
-:::
 
-::: c01-rich-text-editor
-::: is-table-default
-There are several different tools, code examples, and libraries that you
-can use to make a request to this endpoint, but we will use the Postman
-tool here to simplify the process.
 
-To load the Twitter API v2 Postman collection into your environment,
-please click on the following button:
-:::
-:::
+Retweets lookup quick start guide | Docs | Twitter Developer Platform 
 
-::: b03-button-v3
-[](https://t.co/twitter-api-postman){.chirp-btn .twtr-spacing--mb-500
-.chirp-btn--primary .chirp-btn--icon .chirp-btn--icon-end
-.twtr-scribe-clicks}
 
-::: chirp-btn__icon
-![](https://cdn.cms-twdigitalassets.com/content/dam/developer-twitter/m1_vnext/carat.svg){.chirp-btn__icon--img}
-:::
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Retweets lookup quick start
+
+
+
+Getting started with the Retweets lookup endpoint
+-------------------------------------------------
+
+
+This quick start guide will help you make your first request to the Retweets lookup endpoint using Postman. If you would like to see sample code in different languages, please visit our Twitter API v2 sample code GitHub repository.  
+
+
+
+
+
+
+
+
+
+
+
+
+
+### Prerequisites
+
+
+To complete this guide, you will need to have a set of keys and tokens to authenticate your request. You can generate these keys and tokens by following these steps:
+
+
+* Sign up for a developer account and receive approval.
+* Create a Project and an associated developer App in the developer portal.
+* Navigate to your App's “Keys and tokens” page to generate the required credentials. Make sure to save all credentials in a secure location.
+
+
+
+
+
+
+
+
+
+ 
+### Steps to build a Retweets lookup request
+
+
+#### Step one: Start with a tool or library
+
+
+There are several different tools, code examples, and libraries that you can use to make a request to this endpoint, but we will use the Postman tool here to simplify the process.
+
+
+To load the Twitter API v2 Postman collection into your environment, please click on the following button:
+
+
+
+
 
 Add Twitter API v2 to Postman
-:::
 
-::: c01-rich-text-editor
-::: is-table-default
-Once you have the Twitter API v2 collection loaded in Postman, navigate
-to the \"Retweets\" folder and select \"Retweeted by."
+
+
+
+
+
+Once you have the Twitter API v2 collection loaded in Postman, navigate to the "Retweets" folder and select "Retweeted by.” 
+
 
 #### Step two: Authenticate your request
 
-To properly make a request to the Twitter API, you need to verify that
-you have permission. To do so, this endpoint requires you to
-authenticate your request with either [OAuth 2.0
-App-Only](/en/docs/authentication/oauth-2-0/application-only) , [OAuth
-2.0 Authorization Code with
-PKCE](/en/docs/authentication/oauth-2-0/authorization-code) , or [OAuth
-1.0a User Context](/en/docs/authentication/oauth-1-0a) authentication
-methods.
 
-For simplicity\'s sake, we will utilize OAuth 2.0 App-Only with this
-request, but you will need to use one of the other authentication
-methods if you\'d like to request private
-[metrics](/en/docs/twitter-api/metrics) or Retweets.
+To properly make a request to the Twitter API, you need to verify that you have permission. To do so, this endpoint requires you to authenticate your request with either OAuth 2.0 App-Only, OAuth 2.0 Authorization Code with PKCE, or OAuth 1.0a User Context authentication methods.
 
-To utilize OAuth 2.0 App-Only, you must add your keys and tokens,
-specifically the [App Access
-Token](/en/docs/authentication/oauth-2-0/bearer-tokens) (also known as
-the App-only Bearer Token) to Postman. You can do this by selecting the
-environment named "Twitter API v2" in the top-right corner of Postman
-and adding your keys and tokens to the \"initial value\" and \"current
-value\" fields (by clicking the eye icon next to the environment
-dropdown).
 
-These variables will automatically be pulled into the request\'s
-authorization tab if you\'ve done this correctly.\
+For simplicity's sake, we will utilize OAuth 2.0 App-Only with this request, but you will need to use one of the other authentication methods if you'd like to request private metrics or Retweets. 
+
+
+To utilize OAuth 2.0 App-Only, you must add your keys and tokens, specifically theApp Access Token (also known as the App-only Bearer Token) to Postman. You can do this by selecting the environment named “Twitter API v2” in the top-right corner of Postman and adding your keys and tokens to the "initial value" and "current value" fields (by clicking the eye icon next to the environment dropdown).
+
+
+These variables will automatically be pulled into the request's authorization tab if you've done this correctly.  
+
+ 
+
 
 #### Step three: Specify a Tweet
 
-With this endpoint, you must specify the Tweet ID that you want to get
-Retweeting users of.  You can find the ID of a Tweet by navigating to
-that Tweet on Twitter and pulling the numerical code at the end of the
-URL. For example, the following URL\'s Tweet ID is 1354143047324299264.
 
-[ https://twitter.com/TwitterDev/status/1354143047324299264
-]{.code-inline}
+With this endpoint, you must specify the Tweet ID that you want to get Retweeting users of.  You can find the ID of a Tweet by navigating to that Tweet on Twitter and pulling the numerical code at the end of the URL. For example, the following URL's Tweet ID is 1354143047324299264.
 
-In Postman, navigate to the \"Params\" tab and enter this username into
-the \"Value\" column of the [ id ]{.code-inline} path variable (at the
-bottom of the section), making sure to not include any spaces before or
-after usernames.
 
-  -------------------------- -----------------------------------------------------
-  **Key**                    **Value**
-  [ ` id ` ]{.code-inline}   The Tweet ID you want to get the Reweeting users of
-  -------------------------- -----------------------------------------------------
+https://twitter.com/TwitterDev/status/1354143047324299264
 
-####  Step four: Identify and specify which fields you would like to retrieve
 
-If you click the \"Send\" button after step three, you will receive the
-default [user
-object](/en/docs/twitter-api/data-dictionary/object-model/user) fields
-in your response: [ id ]{.code-inline} , [ name ]{.code-inline} , and [
-username ]{.code-inline} .
+In Postman, navigate to the "Params" tab and enter this username into the "Value" column of the id path variable (at the bottom of the section), making sure to not include any spaces before or after usernames. 
 
-If you would like to receive additional fields beyond id, name, and
-username, you will have to specify those fields in your request with the
-[[ fields
-]{.code-inline}](https://developer.twitter.com/content/developer-twitter/en/docs/twitter-api/data-dictionary/introduction/fields)
-and/or [[ expansions
-]{.code-inline}](https://developer.twitter.com/en/docs/twitter-api/data-dictionary/introduction/expansions)
-parameters.
 
-For this exercise, we will request three additional sets of fields from
-different objects:
 
-1.  The additional [ user.created_at ]{.code-inline} field in the
-    primary user objects.
-2.  The associated pinned Tweets' object's default fields for the
-    returned users: [ id ]{.code-inline} and [ text ]{.code-inline} .
-3.  The additional [ tweet.created_at ]{.code-inline} field in the
-    associated Tweet objects.
 
-In Postman, navigate to the \"Params\" tab and add the following
-key:value pair to the \"Query Params\" table:
+|  |  |
+| --- | --- |
+| **Key** | **Value** |
+| `id` | The Tweet ID you want to get the Reweeting users of |
 
-  -------------------------------- ----------------------------------- ----------------------------------------
-  **Key**                          **Value**                           **Returned fields**
-  [ user.fields ]{.code-inline}    [ created_at ]{.code-inline}        [ user.created_at ]{.code-inline}
-  [ expansions ]{.code-inline}     [ pinned_tweet_id ]{.code-inline}   [ tweet.id, tweet.text ]{.code-inline}
-  [ tweet.fields ]{.code-inline}   [ created_at ]{.code-inline}        [ tweet.created_at ]{.code-inline}
-  -------------------------------- ----------------------------------- ----------------------------------------
 
-You should now see the following URL next to the \"Send\" button:
-:::
-:::
+#### 
+Step four: Identify and specify which fields you would like to retrieve
 
-::: {.b19-code-snippet .twtr-component-space--md}
-::: {.b19-snippet .b19__theme--light}
-::: t05-inline-code-snippet
-``` {.t05__pre--with-button .t05__pre--wrap-text}
- https://api.twitter.com/2/tweets/1354143047324299264/retweeted_by?user.fields=created_at&expansions=pinned_tweet_id&tweet.fields=created_at
+
+If you click the "Send" button after step three, you will receive the default user object fields in your response: id, name, and username.
+
+
+If you would like to receive additional fields beyond id, name, and username, you will have to specify those fields in your request with the fields and/or expansions parameters.
+
+
+For this exercise, we will request three additional sets of fields from different objects:
+
+
+1. The additional user.created\_at field in the primary user objects.
+2. The associated pinned Tweets’ object’s default fields for the returned users: id and text.
+3. The additional  tweet.created\_at field in the associated Tweet objects.
+
+
+In Postman, navigate to the "Params" tab and add the following key:value pair to the "Query Params" table:
+
+
+ 
+
+
+
+
+|  |  |  |
+| --- | --- | --- |
+| **Key** | **Value** | **Returned fields** |
+| user.fields | created\_at |  user.created\_at |
+| expansions | pinned\_tweet\_id | tweet.id, tweet.text |
+| tweet.fields | created\_at | tweet.created\_at |
+
+
+You should now see the following URL next to the "Send" button:
+
+
+
+
+
+
+
+
+
+
+
+
+```
+
+      https://api.twitter.com/2/tweets/1354143047324299264/retweeted_by?user.fields=created_at&expansions=pinned_tweet_id&tweet.fields=created_at
     
 ```
-:::
-:::
-:::
 
-::: c01-rich-text-editor
-::: is-table-default
+
+
+
+
+Code copied to clipboard
+
+
+
+
+
+
+
+
+ 
+
+
 #### Step five: Make your request and review your response
 
-Once you have everything set up, hit the \"Send\" button and you will
-receive a similar response to the following example response:
-:::
-:::
 
-::: {.b19-code-snippet .twtr-component-space--md}
-::: {.b19-snippet .b19__theme--light}
-::: t05-inline-code-snippet
-``` {.line-numbers .t05__pre--with-button}
- {
+Once you have everything set up, hit the "Send" button and you will receive a similar response to the following example response:
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+```
+
+      {
   "data": [
     {
       "created_at": "2008-12-04T18:51:57.000Z",
@@ -221,7 +343,215 @@ receive a similar response to the following example response:
 }
     
 ```
-:::
-:::
-:::
-:::
+
+
+
+
+
+Code copied to clipboard
+
+
+
+
+
+
+
+
+
+
+
+
+Next steps
+----------
+
+
+
+
+
+
+Customize your request using the API Reference
+
+
+Reach out to the community for help
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Developer policy and terms
+
+
+Follow @XDevelopers
+
+
+Subscribe to developer news
+
+
+
+
+
+
+
+
+
+
+
+
+#### 
+ X platform
+
+
+* X.com
+* Status
+* Accessibility
+* Embed a post
+* Privacy Center
+* Transparency Center
+* Download the X app
+
+
+
+
+#### 
+ X Corp.
+
+
+* About the company
+* Company news
+* Brand toolkit
+* Jobs and internships
+* Investors
+
+
+
+
+#### 
+ Help
+
+
+* Help Center
+* Using X
+* X for creators
+* Ads Help Center
+* Managing your account
+* Email Preference Center
+* Rules and policies
+* Contact us
+
+
+
+
+#### 
+ Developer resources
+
+
+* Developer home
+* Documentation
+* Forums
+* Communities
+* Developer blog
+* Engineering blog
+* Developer terms
+
+
+
+
+#### 
+ Business resources
+
+
+* Advertise
+* X for business
+* Resources and guides
+* X for marketers
+* Marketing insights
+* Brand inspiration
+* X Ads Academy
+
+
+
+
+
+
+
+
+
+ © 2024 X Corp.
+ 
+
+
+Cookies
+
+
+Privacy
+
+
+Terms and conditions
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+**Did someone say … cookies?**  
+  
+
+
+ X and its partners use cookies to provide you with a better, safer and
+ faster service and to support our business. Some cookies are necessary to use
+ our services, improve our services, and make sure they work properly.
+ Show more about your choices.
+
+
+ 
+
+
+
+
+* Accept all cookies
+* Refuse non-essential cookies
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

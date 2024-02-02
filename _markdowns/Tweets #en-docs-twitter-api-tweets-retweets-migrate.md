@@ -1,169 +1,393 @@
-::: {#twtr-dtc-main .dtc-rebrand-flag-on}
-::: {#twtr-main .twtr-color-bg--white-neutral role="main"}
-::: {.page-wrapper .documentation-page .twtr-color-bg--white-neutral}
-::: {.page-content .twtr-container-wide .left-rail-container}
-::: {.main-content .twtr-col-lg-6}
-::: main-content__wrapper
-::: c01-rich-text-editor
-::: is-table-default
-[]{#manage} Retweets lookup \
 
-The v2 Retweets lookup endpoint will replace the standard [v1.1 GET
-statuses/retweets/:id](https://developer.twitter.com/en/docs/twitter-api/v1/tweets/post-and-engage/api-reference/get-statuses-retweets-id)
-and [v1.1 GET
-statuses/retweets/:ids](https://developer.twitter.com/en/docs/twitter-api/v1/tweets/post-and-engage/api-reference/get-statuses-retweeters-ids)
-endpoints.
 
-The following tables compare the standard v1.1 and Twitter API v2
-Retweets endpoints:
 
-+-----------------------+-----------------------+-----------------------+
-| Description           | Standard v1.1         | Twitter API v2        |
-+=======================+=======================+=======================+
-| HTTP methods          | [ GET ]{.code-inline} | [ GET ]{.code-inline} |
-| supported             |                       |                       |
-+-----------------------+-----------------------+-----------------------+
-| Host domain           | [                     | [                     |
-|                       | ht                    | ht                    |
-|                       | tps://api.twitter.com | tps://api.twitter.com |
-|                       | ]{.code-inline}       | ]{.code-inline}       |
-+-----------------------+-----------------------+-----------------------+
-| Endpoint path         | [                     | [                     |
-|                       | /1                    | /2/u                  |
-|                       | .1/retweeters/id.json | sers/:id/retweeted_by |
-|                       | ]{.code-inline}       | ]{.code-inline}       |
-|                       |                       |                       |
-|                       | ` /1.                 |                       |
-|                       | 1/retweets/ids.json ` |                       |
-+-----------------------+-----------------------+-----------------------+
-| [Aut                  | OAuth 1.0a User       | OAuth 2.0 Bearer      |
-| hentication](/content | Context               | Token                 |
-| /developer-twitter/en |                       |                       |
-| /docs/authentication) |                       | OAuth 1.0a User       |
-|                       |                       | Context               |
-+-----------------------+-----------------------+-----------------------+
-| Default request [rate | 75 requests per 15    | 75 requests per 15    |
-| limits](/cont         | min                   | min (per App)         |
-| ent/developer-twitter |                       |                       |
-| /en/docs/rate-limits) |                       | 75 requests per 15    |
-|                       |                       | min (per user)        |
-+-----------------------+-----------------------+-----------------------+
-| Data format           | Standard v1.1 format  | [Twitter API v2       |
-|                       |                       | format](              |
-|                       |                       | /content/developer-tw |
-|                       |                       | itter/en/docs/twitter |
-|                       |                       | -api/data-dictionary) |
-|                       |                       | (determined by [      |
-|                       |                       | fields                |
-|                       |                       | ]{.code-inline} and [ |
-|                       |                       | expansions            |
-|                       |                       | ]{.code-inline}       |
-|                       |                       | request parameters,   |
-|                       |                       | not                   |
-|                       |                       | backward-compatible   |
-|                       |                       | with v1.1 formats)    |
-|                       |                       |                       |
-|                       |                       | To learn more about   |
-|                       |                       | how to migrate from   |
-|                       |                       | the Standard v1.1     |
-|                       |                       | format to the Twitter |
-|                       |                       | API v2 format, please |
-|                       |                       | visit our [data       |
-|                       |                       | formats migration     |
-|                       |                       | guide](               |
-|                       |                       | /en/docs/twitter-api/ |
-|                       |                       | migrate/data-formats) |
-|                       |                       | .                     |
-+-----------------------+-----------------------+-----------------------+
-| Requires the use of   |                       | ✔️                    |
-| credentials from a    |                       |                       |
-| [developer            |                       |                       |
-| App](/en/docs/apps)   |                       |                       |
-| that is associated    |                       |                       |
-| with a                |                       |                       |
-| [Projec               |                       |                       |
-| t](/en/docs/projects) |                       |                       |
-+-----------------------+-----------------------+-----------------------+
 
-###  
+Retweets comparison guide | Docs | Twitter Developer Platform 
 
-### []{#manage} Manage Retweets 
 
-The following tables compare the standard v1.1 and Twitter API v2 undo
-Retweet endpoint:
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Migrate
+
+
+
+Comparing Twitter API’s Retweets endpoints
+------------------------------------------
+
+
+Retweets lookup  
+
+
+
+
+The v2 Retweets lookup endpoint will replace the standard v1.1 GET statuses/retweets/:id and v1.1 GET statuses/retweets/:ids endpoints.
+
+
+The following tables compare the standard v1.1 and Twitter API v2 Retweets endpoints:
+
+
+
+
+| Description | Standard v1.1 | Twitter API v2 |
+| --- | --- | --- |
+| HTTP methods supported | GET | GET |
+| Host domain | https://api.twitter.com | https://api.twitter.com |
+| Endpoint path | /1.1/retweeters/id.json
+`/1.1/retweets/ids.json` | /2/users/:id/retweeted\_by |
+| Authentication | OAuth 1.0a User Context | OAuth 2.0 Bearer Token
+OAuth 1.0a User Context |
+| Default request rate limits | 75 requests per 15 min | 75 requests per 15 min (per App)
+75 requests per 15 min (per user) |
+| Data format | Standard v1.1 format | Twitter API v2 format (determined by fields and expansions request parameters, not backward-compatible with v1.1 formats)
+To learn more about how to migrate from the Standard v1.1 format to the Twitter API v2 format, please visit our data formats migration guide. |
+| Requires the use of credentials from a developer App that is associated with a Project |  | ✔️ |
+
+
+### 
+
+
+### Manage Retweets
+
+
+The following tables compare the standard v1.1 and Twitter API v2 undo Retweet endpoint:
+
 
 **Retweet a Tweet**
 
-+-----------------------+-----------------------+-----------------------+
-| Description           | Standard v1.1         | Twitter API v2        |
-+=======================+=======================+=======================+
-| HTTP methods          | [ POST                | [ POST                |
-| supported             | ]{.code-inline}       | ]{.code-inline}       |
-+-----------------------+-----------------------+-----------------------+
-| Host domain           | [                     | [                     |
-|                       | ht                    | ht                    |
-|                       | tps://api.twitter.com | tps://api.twitter.com |
-|                       | ]{.code-inline}       | ]{.code-inline}       |
-+-----------------------+-----------------------+-----------------------+
-| Endpoint path         | [                     | [                     |
-|                       | /1.1/stat             | /2/users/:id/retweets |
-|                       | uses/retweet/:id.json | ]{.code-inline}       |
-|                       | ]{.code-inline}       |                       |
-+-----------------------+-----------------------+-----------------------+
-| [Aut                  | OAuth 1.0a User       | OAuth 1.0a User       |
-| hentication](/content | Context               | Context               |
-| /developer-twitter/en |                       |                       |
-| /docs/authentication) |                       |                       |
-+-----------------------+-----------------------+-----------------------+
-| Default request [rate | None                  | 50 requests per 15    |
-| limits](/cont         |                       | min (per user)        |
-| ent/developer-twitter | 300 requests per      |                       |
-| /en/docs/rate-limits) | 3-hour window (per    | 300 requests per      |
-|                       | user, per app). This  | 3-hour window (per    |
-|                       | is shared with the    | user, per app). This  |
-|                       | POST Tweet endpoint   | is shared with the    |
-|                       |                       | POST Tweet endpoint   |
-|                       |                       | for manage Tweets.    |
-+-----------------------+-----------------------+-----------------------+
-| Requires the use of   |                       | ✔️                    |
-| credentials from a    |                       |                       |
-| [developer            |                       |                       |
-| App](/en/docs/apps)   |                       |                       |
-| that is associated    |                       |                       |
-| with a                |                       |                       |
-| [Projec               |                       |                       |
-| t](/en/docs/projects) |                       |                       |
-+-----------------------+-----------------------+-----------------------+
 
-####  Undo a Retweet
 
-The following tables compare the standard v1.1 and Twitter API v2 undo
-Retweet endpoint:
 
-  -------------------------------------------------------------------------------------------------------------------------------------------------
-  Description                                                           Standard v1.1                      Twitter API v2
-  --------------------------------------------------------------------- ---------------------------------- ----------------------------------------
-  HTTP methods supported                                                [ POST ]{.code-inline}             [ DELETE ]{.code-inline}
+| Description | Standard v1.1 | Twitter API v2 |
+| --- | --- | --- |
+| HTTP methods supported | POST | POST |
+| Host domain | https://api.twitter.com | https://api.twitter.com |
+| Endpoint path | /1.1/statuses/retweet/:id.json | /2/users/:id/retweets |
+| Authentication | OAuth 1.0a User Context | OAuth 1.0a User Context |
+| Default request rate limits | None
+300 requests per 3-hour window (per user, per app). This is shared with the POST Tweet endpoint | 50 requests per 15 min (per user)
+300 requests per 3-hour window (per user, per app). This is shared with the POST Tweet endpoint for manage Tweets.
+  |
+| Requires the use of credentials from a developer App that is associated with a Project |  | ✔️ |
 
-  Host domain                                                           [ https://api.twitter.com          [ https://api.twitter.com
-                                                                        ]{.code-inline}                    ]{.code-inline}
 
-  Endpoint path                                                         [ /1.1/statuses/unretweet/:id.json [ /2/users/:id/retweets/:source_tweet_id
-                                                                        ]{.code-inline}                    ]{.code-inline}
+#### 
+Undo a Retweet
 
-  [Authentication](/content/developer-twitter/en/docs/authentication)   OAuth 1.0a User Context            OAuth 1.0a User Context
 
-  Default request [rate                                                 None\                              50 requests per 15 min (per user)
-  limits](/content/developer-twitter/en/docs/rate-limits)                                                  
+The following tables compare the standard v1.1 and Twitter API v2 undo Retweet endpoint:
 
-  Requires the use of credentials from a [developer App](/en/docs/apps)                                    ✔️
-  that is associated with a [Project](/en/docs/projects)                                                   
-  -------------------------------------------------------------------------------------------------------------------------------------------------
-:::
-:::
-:::
-:::
-:::
-:::
-:::
-:::
+
+
+
+| Description | Standard v1.1 | Twitter API v2 |
+| --- | --- | --- |
+| HTTP methods supported | POST | DELETE |
+| Host domain | https://api.twitter.com | https://api.twitter.com |
+| Endpoint path | /1.1/statuses/unretweet/:id.json | /2/users/:id/retweets/:source\_tweet\_id |
+| Authentication | OAuth 1.0a User Context | OAuth 1.0a User Context |
+| Default request rate limits | None | 50 requests per 15 min (per user) |
+| Requires the use of credentials from a developer App that is associated with a Project |  | ✔️ |
+
+
+
+
+
+
+
+
+
+
+Other migration resources
+-------------------------
+
+
+
+
+
+
+Retweets lookup: Standard v1.1 to Twitter API v2
+
+
+Manage Retweets: Standard v1.1 to Twitter API v2
+
+
+Twitter API migration hub
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Developer policy and terms
+
+
+Follow @XDevelopers
+
+
+Subscribe to developer news
+
+
+
+
+
+
+
+
+
+
+
+
+#### 
+ X platform
+
+
+* X.com
+* Status
+* Accessibility
+* Embed a post
+* Privacy Center
+* Transparency Center
+* Download the X app
+
+
+
+
+#### 
+ X Corp.
+
+
+* About the company
+* Company news
+* Brand toolkit
+* Jobs and internships
+* Investors
+
+
+
+
+#### 
+ Help
+
+
+* Help Center
+* Using X
+* X for creators
+* Ads Help Center
+* Managing your account
+* Email Preference Center
+* Rules and policies
+* Contact us
+
+
+
+
+#### 
+ Developer resources
+
+
+* Developer home
+* Documentation
+* Forums
+* Communities
+* Developer blog
+* Engineering blog
+* Developer terms
+
+
+
+
+#### 
+ Business resources
+
+
+* Advertise
+* X for business
+* Resources and guides
+* X for marketers
+* Marketing insights
+* Brand inspiration
+* X Ads Academy
+
+
+
+
+
+
+
+
+
+ © 2024 X Corp.
+ 
+
+
+Cookies
+
+
+Privacy
+
+
+Terms and conditions
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+**Did someone say … cookies?**  
+  
+
+
+ X and its partners use cookies to provide you with a better, safer and
+ faster service and to support our business. Some cookies are necessary to use
+ our services, improve our services, and make sure they work properly.
+ Show more about your choices.
+
+
+ 
+
+
+
+
+* Accept all cookies
+* Refuse non-essential cookies
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

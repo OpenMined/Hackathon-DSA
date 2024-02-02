@@ -1,58 +1,856 @@
-::: markdown-body
-Welcome to the CrowdTangle API! You can use the CrowdTangle API to
-access posts, the leaderboard and the link-checker. Please contact your
-CrowdTangle representative for access. If you have access to the API,
-you can locate your API token via your dashboard under Settings \> API
-Access.
 
-#### [![](data:image/svg+xml;base64,PHN2ZyBjbGFzcz0ib2N0aWNvbiBvY3RpY29uLWxpbmsiIGhlaWdodD0iMTYiIHdpZHRoPSIxNiI+IDxwYXRoPiA8L3BhdGg+IDwvc3ZnPg==){.octicon .octicon-link}](#authentication){#user-content-authentication .anchor} Authentication
 
-The CrowdTangle API expects the API token to be included either as a
-custom header with the name ` x-api-token ` or as a ` token ` query
-parameter.
 
-::: {.snippet-clipboard-content .notranslate .position-relative .overflow-auto}
-``` notranslate
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Home · CrowdTangle/API Wiki · GitHub
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Skip to content
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Toggle navigation
+
+
+
+
+
+Sign in
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+* Product
+ 
+
+
+
+
+
+
+	+ Actions
+	 Automate any workflow
+	+ Packages
+	 Host and manage packages
+	+ Security
+	 Find and fix vulnerabilities
+	+ Codespaces
+	 Instant dev environments
+	+ Copilot
+	 Write better code with AI
+	+ Code review
+	 Manage code changes
+	+ Issues
+	 Plan and track work
+	+ Discussions
+	 Collaborate outside of code
+
+
+Explore
+
+	+ All features
+	+ Documentation
+	+ GitHub Skills
+	+ Blog
+* Solutions
+ 
+
+
+
+
+
+For
+
+	+ Enterprise
+	+ Teams
+	+ Startups
+	+ Education
+
+
+By Solution
+
+	+ CI/CD & Automation
+	+ DevOps
+	+ DevSecOps
+
+
+Resources
+
+	+ Learning Pathways
+	+ White papers, Ebooks, Webinars
+	+ Customer Stories
+	+ Partners
+* Open Source
+ 
+
+
+
+
+
+
+	+ GitHub Sponsors
+	 Fund open source developers
+
+
+
+	+ The ReadME Project
+	 GitHub community articles
+
+
+Repositories
+
+	+ Topics
+	+ Trending
+	+ Collections
+* Pricing
+
+
+
+
+
+
+
+
+
+
+
+
+Search or jump to...
+
+
+
+
+
+
+
+Search code, repositories, users, issues, pull requests...
+==========================================================
+
+
+
+ 
+
+
+
+
+ Search
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+Clear
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+Search syntax tips 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ Provide feedback
+==================
+
+
+
+
+
+
+
+
+
+
+
+ 
+We read every piece of feedback, and take your input very seriously.
+
+
+
+
+Include my email address so I can be contacted
+
+
+  Cancel
+
+ Submit feedback
+
+
+
+
+
+
+
+
+
+
+ Saved searches
+================
+
+
+Use saved searches to filter your results more quickly
+------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+Name
+
+
+
+
+
+
+Query
+
+
+
+ To see all available qualifiers, see our documentation.
+ 
+
+
+ 
+
+
+
+
+
+  Cancel
+
+ Create saved search
+
+
+
+
+
+
+
+Sign in
+
+Sign up
+
+
+
+
+
+
+
+
+
+You signed in with another tab or window. Reload to refresh your session.
+You signed out in another tab or window. Reload to refresh your session.
+You switched accounts on another tab or window. Reload to refresh your session.
+ 
+
+
+Dismiss alert
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{{ message }}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+CrowdTangle 
+/
+**API**
+Public
+
+
+
+* Notifications
+* Fork
+ 18
+* Star
+ 126
+
+
+
+
+
+
+
+* Code
+* Issues
+6
+* Pull requests
+0
+* Actions
+* Projects
+0
+* Wiki
+* Security
+* Insights
+
+
+ 
+
+ 
+
+
+Additional navigation options
+
+
+ 
+* Code
+* Issues
+* Pull requests
+* Actions
+* Projects
+* Wiki
+* Security
+* Insights
+
+
+
+
+ 
+
+
+
+
+
+
+
+Home
+====
+
+
+
+Jump to bottom
+
+
+
+ nshiffman edited this page Dec 15, 2020
+ ·
+ 28 revisions
+
+
+
+ 
+
+
+
+### 
+
+
+
+
+
+
+ Pages 15
+
+
+
+
+
+
+
+* Home
+ 
+
+
+	+ Getting Started
+	+ Authentication
+	+ Making a Request
+	+ GET /posts
+	+ GET /post
+	+ GET /posts/search
+	+ GET /leaderboard
+	+ GET /links
+	+ GET /lists
+	+ Postman Template
+* Account
+* AccountStatistics
+* Errors
+* Formats
+* Leaderboard
+* Links
+* List
+* List Accounts
+* Lists
+* Pagination
+* Post
+* Posts
+* Search
+* Terms and Policy
+
+
+
+
+
+
+
+
+* Getting Started
+
+
+### Endpoints
+
+
+* /post/:id
+* /posts
+* /posts/search
+* /leaderboard
+* /links
+* /lists
+* /lists/:listId/accounts
+
+
+### Objects
+
+
+* Account
+* Post
+* List
+* AccountStatistics
+
+
+### Additional Information
+
+
+* Pagination
+* Errors
+* Formats
+* Policy
+
+
+
+
+
+##### Clone this wiki locally
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+### Getting Started
+
+
+Welcome to the CrowdTangle API! You can use the CrowdTangle API to access posts, the leaderboard and the link-checker. Please contact your CrowdTangle representative for access. If you have access to the API, you can locate your API token via your dashboard under Settings > API Access.
+
+
+#### Authentication
+
+
+The CrowdTangle API expects the API token to be included either as a custom header with the name `x-api-token` or as a `token` query parameter.
+
+
+
+```
 // as a custom header
 curl "https://api.crowdtangle.com/posts"
   -H "x-api-token: your-api-token"
 
 // as a query parameter 
 curl "https://api.crowdtangle.com/posts?token=your-api-token"
+
 ```
-:::
 
-#### [![](data:image/svg+xml;base64,PHN2ZyBjbGFzcz0ib2N0aWNvbiBvY3RpY29uLWxpbmsiIGhlaWdodD0iMTYiIHdpZHRoPSIxNiI+IDxwYXRoPiA8L3BhdGg+IDwvc3ZnPg==){.octicon .octicon-link}](#making-a-request){#user-content-making-a-request .anchor} Making a Request
+#### Making a Request
 
-All requests to the CrowdTangle API are made via GET to
-` https://api.crowdtangle.com/ ` . You must use https. Please visit the
-[API Cheat
-Sheet](https://help.crowdtangle.com/en/articles/3443476-api-cheat-sheet)
-to understand how pagination works with our API.
+
+All requests to the CrowdTangle API are made via GET to `https://api.crowdtangle.com/`. You must use https. Please visit the API Cheat Sheet to understand how pagination works with our API.
+
 
 Below are the available endpoints:
 
-##### [![](data:image/svg+xml;base64,PHN2ZyBjbGFzcz0ib2N0aWNvbiBvY3RpY29uLWxpbmsiIGhlaWdodD0iMTYiIHdpZHRoPSIxNiI+IDxwYXRoPiA8L3BhdGg+IDwvc3ZnPg==){.octicon .octicon-link}](#get-posts){#user-content-get-posts .anchor} [GET /posts](https://github.com/CrowdTangle/API/wiki/Posts)
 
-##### [![](data:image/svg+xml;base64,PHN2ZyBjbGFzcz0ib2N0aWNvbiBvY3RpY29uLWxpbmsiIGhlaWdodD0iMTYiIHdpZHRoPSIxNiI+IDxwYXRoPiA8L3BhdGg+IDwvc3ZnPg==){.octicon .octicon-link}](#get-post){#user-content-get-post .anchor} [GET /post](https://github.com/CrowdTangle/API/wiki/Posts#get-postid)
+##### GET /posts
 
-##### [![](data:image/svg+xml;base64,PHN2ZyBjbGFzcz0ib2N0aWNvbiBvY3RpY29uLWxpbmsiIGhlaWdodD0iMTYiIHdpZHRoPSIxNiI+IDxwYXRoPiA8L3BhdGg+IDwvc3ZnPg==){.octicon .octicon-link}](#get-postssearch){#user-content-get-postssearch .anchor} [GET /posts/search](https://github.com/CrowdTangle/API/wiki/Search)
 
-##### [![](data:image/svg+xml;base64,PHN2ZyBjbGFzcz0ib2N0aWNvbiBvY3RpY29uLWxpbmsiIGhlaWdodD0iMTYiIHdpZHRoPSIxNiI+IDxwYXRoPiA8L3BhdGg+IDwvc3ZnPg==){.octicon .octicon-link}](#get-leaderboard){#user-content-get-leaderboard .anchor} [GET /leaderboard](https://github.com/CrowdTangle/API/wiki/Leaderboard)
+##### GET /post
 
-##### [![](data:image/svg+xml;base64,PHN2ZyBjbGFzcz0ib2N0aWNvbiBvY3RpY29uLWxpbmsiIGhlaWdodD0iMTYiIHdpZHRoPSIxNiI+IDxwYXRoPiA8L3BhdGg+IDwvc3ZnPg==){.octicon .octicon-link}](#get-links){#user-content-get-links .anchor} [GET /links](https://github.com/CrowdTangle/API/wiki/Links)
 
-##### [![](data:image/svg+xml;base64,PHN2ZyBjbGFzcz0ib2N0aWNvbiBvY3RpY29uLWxpbmsiIGhlaWdodD0iMTYiIHdpZHRoPSIxNiI+IDxwYXRoPiA8L3BhdGg+IDwvc3ZnPg==){.octicon .octicon-link}](#get-lists){#user-content-get-lists .anchor} [GET /lists](https://github.com/CrowdTangle/API/wiki/Lists)
+##### GET /posts/search
 
-##### [![](data:image/svg+xml;base64,PHN2ZyBjbGFzcz0ib2N0aWNvbiBvY3RpY29uLWxpbmsiIGhlaWdodD0iMTYiIHdpZHRoPSIxNiI+IDxwYXRoPiA8L3BhdGg+IDwvc3ZnPg==){.octicon .octicon-link}](#postman-template){#user-content-postman-template .anchor} Postman Template
 
-[Postman](https://www.getpostman.com/) is a free API management
-software. [Click here to download a JSON file that you can import into
-Postman (unzip the file to
-access)](https://www.crowdtangle.com/assets/API-Demo.postman_collection.json.zip)
-, and get a template for each endpoint. Please note that all parameters
-may not be present in the template; please view the Github API
-documentation to explore all parameter options.
+##### GET /leaderboard
+
+
+##### GET /links
+
+
+##### GET /lists
+
+
+##### Postman Template
+
+
+Postman is a free API management software. Click here to download a JSON file that you can import into Postman (unzip the file to access), and get a template for each endpoint. Please note that all parameters may not be present in the template; please view the Github API documentation to explore all parameter options.
+
 
 Happy coding!
-:::
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+Footer
+------
+
+
+
+
+
+
+ © 2024 GitHub, Inc.
+ 
+
+
+### Footer navigation
+
+
+* Terms
+* Privacy
+* Security
+* Status
+* Docs
+* Contact
+* Manage cookies
+* Do not share my personal information
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ You can’t perform that action at this time.
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

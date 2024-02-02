@@ -1,25 +1,63 @@
-::: {._4-u3 ._588p}
-The following query parameters are available (bold parameters are
-required):
 
--   **` access_token `** - The key for authenticating to the API.
+/threat\_tags - ThreatExchange - Documentation - Meta for Developers
 
--   **` text `** - Freeform text field with a value to search for. This
-    value should describe a broader type or class of attack you are
-    interested in.
 
--   ` fields ` - A list of fields to return in the response
 
--   ` subscribed ` - when POSTing to a specific tag, will subscribe you
-    to a tag for Webhooks
 
-Example query for all tags which start with ` malware ` :
 
-``` {._5s-8 .prettyprint .lang-code}
-https://graph.facebook.com/v18.0/threat_tags?access_token=555|aSdF123GhK&text=malware
+
+
+
+
+
+
+
+ThreatExchange* Get Started
+* Get Access
+* Best Practices
+* UI Overview
+* UI Reference
+* API Overview
+* API Examples
+* API Structure
+* API Reference
+* Privacy Controls
+* Submitting Data
+* Editing Existing Data
+* Delete Data
+* Re-sharing
+* React to Data
+* Submit Connections
+* Integrations
+* Webhooks
+* FAQ
+* Webinar
+* Changelog
+Graph API Versionv18.0/threat\_tags
+=============
+
+This API call enables searching for tags in ThreatExchange. With this call you can search for ThreatTag objects by text.
+
+Parameters
+----------
+
+The following query parameters are available (bold parameters are required):
+
+* **`access_token`** - The key for authenticating to the API.
+* **`text`** - Freeform text field with a value to search for. This value should describe a broader type or class of attack you are interested in.
+* `fields` - A list of fields to return in the response
+* `subscribed` - when POSTing to a specific tag, will subscribe you to a tag for Webhooks
+
+Example query for all tags which start with `malware`:
+
+
 ```
 
-``` {._5s-8 .prettyprint .lang-code}
+https://graph.facebook.com/v18.0/threat_tags?access_token=555|aSdF123GhK&text=malware
+
+```
+
+```
 {
   "data": [
     {
@@ -33,17 +71,17 @@ https://graph.facebook.com/v18.0/threat_tags?access_token=555|aSdF123GhK&text=ma
     ...
 }
 ```
-
 The same query using a cURL:
 
-``` {._5s-8 .prettyprint .lang-code}
+
+```
 curl -i -X GET \
  "https://graph.facebook.com/v14.0/threat_tags?access_token=555|7C1234&amp;text=malware"
 ```
-
 The same query in Python:
 
-``` {._5s-8 .prettyprint .lang-code}
+
+```
 import requests
 import json
 import ast
@@ -62,17 +100,18 @@ r = requests.get('https://graph.facebook.com/v14.0/threat_tags?' + query_params)
 
 print json.dumps(ast.literal_eval(r.text), sort_keys=True,indent=4,separators=(',', ': '))
 ```
+Example query for tags which start with `ducks` and fetching the tagged objects.
 
-Example query for tags which start with ` ducks ` and fetching the
-tagged objects.
 
-``` {._5s-8 .prettyprint .lang-code}
-https://graph.facebook.com/v18.0/threat_tags/?access_token=555|aSdF123GhK&text=ducks&fields=id,text,tagged_objects
 ```
 
+https://graph.facebook.com/v18.0/threat_tags/?access_token=555|aSdF123GhK&text=ducks&fields=id,text,tagged_objects
+
+```
 Data returned:
 
-``` {._5s-8 .prettyprint .lang-code}
+
+```
 {
   "data": [
     {
@@ -92,4 +131,37 @@ Data returned:
   ]
 }
 ```
-:::
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

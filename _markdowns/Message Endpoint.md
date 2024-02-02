@@ -1,35 +1,46 @@
-<div>
 
-<div>
+Message - Graph API - Documentation - Meta for Developers
 
-::: {._4-u2 ._57mb ._1u44 ._3fw6 ._4-u8}
-::: {._4-u3 ._588p}
-An individual message in a Messenger or Instagram Messaging
-conversation.
 
-To get the message ID use the [conversation
-endpoint](/docs/graph-api/reference/conversation) or
-[Webhooks](https://developers.facebook.com/docs/graph-api/webhooks/) to
-retrieve the individual message IDs.
-:::
-:::
 
-::: {._4-u2 ._57mb ._1u44 ._3fw6 ._4-u8}
-::: {._4-u3 ._588p}
-::: _5z09
-::: {#u_0_5_/Z ._51xa ._5gt2 ._51xb}
-[Graph API Explorer
-](/tools/explorer/?method=GET&path=%7Bmessage-id%7D&version=v19.0){._42ft
-._51tl .selected}
-:::
 
-::: _xmu
-``` {#u_0_b_hr ._5gt1 .prettyprint}
+
+
+
+
+
+
+
+
+Graph API* Overview
+* Get Started
+* Batch Requests
+* Debug Requests
+* Handle Errors
+* Field Expansion
+* Secure Requests
+* Resumable Upload API
+* Changelog
+* Features Reference
+* Permissions Reference
+* Reference
+This document refers to an outdated version of Graph API. Please use the latest version.Graph API Versionv18.0Message
+=======
+
+An individual message in a Messenger or Instagram Messaging conversation.
+
+To get the message ID use the conversation endpoint or Webhooks to retrieve the individual message IDs.
+
+Reading
+-------
+
+HTTPPHP SDKJavaScript SDKAndroid SDKiOS SDKGraph API Explorer
+```
 GET /v19.0/{message-id} HTTP/1.1
 Host: graph.facebook.com
 ```
 
-``` {#u_0_c_ar ._5gt1 .prettyprint}
+```
 /* PHP SDK v5.0.0 */
 /* make the API call */
 try {
@@ -49,7 +60,7 @@ $graphNode = $response->getGraphNode();
 /* handle the result */
 ```
 
-``` {#u_0_d_w1 ._5gt1 .prettyprint}
+```
 /* make the API call */
 FB.api(
     "/{message-id}",
@@ -61,7 +72,7 @@ FB.api(
 );
 ```
 
-``` {#u_0_e_PC ._5gt1 .prettyprint}
+```
 /* make the API call */
 new GraphRequest(
     AccessToken.getCurrentAccessToken(),
@@ -76,7 +87,7 @@ new GraphRequest(
 ).executeAsync();
 ```
 
-``` {#u_0_f_YA ._5gt1 .prettyprint}
+```
 /* make the API call */
 FBSDKGraphRequest *request = [[FBSDKGraphRequest alloc]
                                initWithGraphPath:@"/{message-id}"
@@ -88,187 +99,80 @@ FBSDKGraphRequest *request = [[FBSDKGraphRequest alloc]
     // Handle the result
 }];
 ```
-:::
-:::
+### Requirements
 
-### Requirements {#readperms}
+
+
+ Type | Description || App Review | Required to access data for people who do not have a role on your app, such as a developer, tester or admin |
+| Features | Not applicable |
+| Tokens |  A Page access token from a person who can perform the `MODERATE` or `MESSAGING` task on the Page being queried or linked to the Instagram Professional account. |
+| Permissions | The `pages_messaging` and `pages_manage_metadata` permissionsThe `instagram_basic` and `instagram_manage_messaging` permissions are also required for Instagram Messaging |
 
 ### Limitations
 
+
 **For Instagram Messaging**
 
--   Only Instagram Professional accounts with a linked Facebook Page can
-    access this endpoint.
 
--   When querying this endpoint, all messages for this conversation will
-    be returned. However, you will only be able to query data for the 20
-    most recent messages in the conversation. If a message is not within
-    the 20 most recent, an error will be returned stating that the
-    message has been deleted.
+* Only Instagram Professional accounts with a linked Facebook Page can access this endpoint.
+* When querying this endpoint, all messages for this conversation will be returned. However, you will only be able to query data for the 20 most recent messages in the conversation. If a message is not within the 20 most recent, an error will be returned stating that the message has been deleted.
 
-### Fields {#readfields}
+### Fields
 
 If a field has no data, it will not be returned in the JSON response.
 
-::: _57-c
-Name
-:::
-:::
-:::
 
-</div>
 
-</div>
 
-Description
+ Name | Description || `attachments.data`
+*array*`file_url` `generic_template``id``image_data` `name` `video_data`  | Media, such as an image, video, or file CDN URL, attached to the message.
+The URL for the file attached to the messageThe URL for the image attached to the message. Can include the following key:value pairs:
 
-` attachments.data `
+|  |  |
+| --- | --- |
+| * `cta`: object with `title`, `type`, `url`
+* `medial_url`: string, URL for the image
+ | * `subtitle`: string, in pixels
+* `title`: string,
+ |
 
-*array*
+ The ID for the attachmentThe URL for the image attached to the message. Can include the following key:value pairs:
 
-` file_url `
+|  |  |
+| --- | --- |
+| * `animated_gif_preview_url`: string, URL for preview for the GIF
+* `animated_gif_url`: string, URL for the GIF
+* `height`: int, in pixels
+* `max_height`: int, in pixels
+* `max_width`: int, in pixels
+ | * `preview_url`: string, Preview for the URL
+* `render_as_sticker`: bool, true or false
+* `url`: string, URL for the image
+* `width`: int, in pixels
+ |
 
-` generic_template `
-
-` id `
-
-` image_data `
-
-` name `
-
-` video_data `
-
-Media, such as an image, video, or file CDN URL, attached to the
-message.
-
-\
-
-The URL for the file attached to the message
-
-The URL for the image attached to the message. Can include the following
-key:value pairs:
-
-+-----------------------------------+-----------------------------------+
-| -   ` cta ` : object with         | -   ` subtitle ` : string, in     |
-|     ` title ` , ` type ` ,        |     pixels                        |
-|     ` url `                       | -   ` title ` : string,           |
-| -   ` medial_url ` : string, URL  |                                   |
-|     for the image                 |                                   |
-+-----------------------------------+-----------------------------------+
-
-The ID for the attachment
-
-The URL for the image attached to the message. Can include the following
-key:value pairs:
-
-+-----------------------------------+-----------------------------------+
-| -   ` animated_gif_preview_url `  | -   ` preview_url ` : string,     |
-|     : string, URL for preview for |     Preview for the URL           |
-|     the GIF                       | -   ` render_as_sticker ` : bool, |
-| -   ` animated_gif_url ` :        |     true or false                 |
-|     string, URL for the GIF       | -   ` url ` : string, URL for the |
-| -   ` height ` : int, in pixels   |     image                         |
-| -   ` max_height ` : int, in      | -   ` width ` : int, in pixels    |
-|     pixels                        |                                   |
-| -   ` max_width ` : int, in       |                                   |
-|     pixels                        |                                   |
-+-----------------------------------+-----------------------------------+
-
-The name for the attachement
-
-The URL for the video attached to the message
-
-` created_time `
-
-*datetime*
-
-The time the message was created
-
-` from `
-
-*object*
-
-` id `
-
-` email `
-
-` name `
-
-` username `
-
-Information about who sent the message. Can be a person, Page, or
-Instagram Professional account
-
-The ID can be an Instagram-scoped ID or Page-scoped ID for a person or
-Page ID or Instagram Professional account ID for your business.
-
-The email for a person or Facebook Page. *Page messaging only*
-
-The name for a person or Facebook Page. *Page messaging only*
-
-The username for a person on Instagram or your Instagram Professional
-account. *Instagram Messaging only*
-
-``` {._5s-8 .prettyprint .lang-json}
+The name for the attachementThe URL for the video attached to the message |
+| `created_time`
+*datetime* | The time the message was created |
+| `from`
+*object*`id``email` `name` `username`  | Information about who sent the message. Can be a person, Page, or Instagram Professional account
+ The ID can be an Instagram-scoped ID or Page-scoped ID for a person or Page ID or Instagram Professional account ID for your business.The email for a person or Facebook Page. *Page messaging only*The name for a person or Facebook Page. *Page messaging only*The username for a person on Instagram or your Instagram Professional account. *Instagram Messaging only*
+```
 "from": {
     "username": "INSTAGRAM-USERNAME",
     "id": "ID"
   }
 ```
-
-` id `
-
-*string*
-
-The ID for a message
-
-` is_unsupported `
-
-*boolean*
-
-Only returned when ` true ` ; a message contains unsupported content.
-
-` message `
-
-*string*
-
-Text content for the message. If no text is part of the message, this
-will be empty.
-
-` reactions `
-
-*array*
-
-` data ` *array*
-
-` reaction ` *emoji*
-
-` users ` *array of objects*
-
-` id `
-
-\
-
-` username `
-
-The types of reactions the message has received with a list of all the
-people who reacted with that reaction type.
-
-An array of reaction objects
-
-The reaction emoji type
-
-A list of people who have reacted to the message
-
-\
-
-The ID can be an Instagram-scoped ID for a person on Instagram or
-Instagram Professional account ID for your business.
-
-The username for a person on Instagram or your Instagram Professional
-account. *Instagram Messaging only*
-
-``` {._5s-8 .prettyprint .lang-json}
+ |
+| `id`
+*string* | The ID for a message |
+| `is_unsupported`
+*boolean* | Only returned when `true`; a message contains unsupported content. |
+| `message`
+*string* | Text content for the message. If no text is part of the message, this will be empty. |
+| `reactions`
+*array*`data` *array*`reaction` *emoji*`users` *array of objects*`id` `username`  | The types of reactions the message has received with a list of all the people who reacted with that reaction type.An array of reaction objectsThe reaction emoji typeA list of people who have reacted to the message The ID can be an Instagram-scoped ID for a person on Instagram or Instagram Professional account ID for your business.The username for a person on Instagram or your Instagram Professional account. *Instagram Messaging only*
+```
 "reactions":
   {
     "reaction": "❤️",
@@ -280,16 +184,11 @@ account. *Instagram Messaging only*
     ]
   }
 ```
+ |
+| `shares`
+*array* | Media shares, such as a post or product template, included in the message. Please note, for the shares object you need to request the sub-fields also in order to retrieve the data.
 
-` shares `
-
-*array*
-
-Media shares, such as a post or product template, included in the
-message. Please note, for the shares object you need to request the
-sub-fields also in order to retrieve the data.
-
-``` {._5s-8 .prettyprint .lang-json}
+```
 "shares": {
   "data": [{
     "template": {
@@ -312,14 +211,11 @@ sub-fields also in order to retrieve the data.
   }]
 }   
 ```
+ |
+| `story`
+*array* | The link and ID for a story. Only mentions and replyies are supported.
 
-` story `
-
-*array*
-
-The link and ID for a story. Only mentions and replyies are supported.
-
-``` {._5s-8 .prettyprint .lang-json}
+```
 StoryReply: 
 {
     "link": "CDN-URL",
@@ -332,44 +228,14 @@ StoryMention:
     "id": "STORY-ID"
 }
 ```
-
-` tags `
-
-*object*
-
-A ` data ` array containing names for tags indicating the message folder
-and source of the message.
-
--   For Facebook Pages, ` name ` can be ` inbox ` , ` read ` ,
-    ` source:chat ` ,
-
-` to `
-
-*object*
-
-` data ` *array*
-
-` id `
-
-` email `
-
-` name `
-
-` username `
-
-Information about who received the message
-
-The ID can be an Instagram-scoped ID or Page-scoped ID for a person or
-Page ID or Instagram Professional account ID for your business.
-
-The email for a person or Facebook Page. *Page messaging only*
-
-The name for a person or Facebook Page. *Page messaging only*
-
-The username for a person on Instagram or your Instagram Professional
-account. *Instagram Messaging only*
-
-``` {._5s-8 .prettyprint .lang-json}
+ |
+| `tags`
+*object* | A `data` array containing names for tags indicating the message folder and source of the message.* For Facebook Pages, `name` can be `inbox`, `read`, `source:chat`,
+ |
+| `to`
+*object*`data` *array*`id``email` `name` `username`  | Information about who received the message
+ The ID can be an Instagram-scoped ID or Page-scoped ID for a person or Page ID or Instagram Professional account ID for your business.The email for a person or Facebook Page. *Page messaging only*The name for a person or Facebook Page. *Page messaging only*The username for a person on Instagram or your Instagram Professional account. *Instagram Messaging only*
+```
 "to": {
   "data": [
     { 
@@ -379,39 +245,74 @@ account. *Instagram Messaging only*
   ]
 }
 ```
+ |
 
-::: {._4-u2 ._57mb ._1u44 ._3fw6 ._4-u8}
-::: {._4-u3 ._588p}
-::: _57-c
+Edges
+-----
+
+
+
+ 
 Name
-:::
-:::
-:::
-
+ | 
 Description
+ || `/attachments` | Files attached to a message. |
+| `/shares` | Shared items, including links, photos, videos, stickers and products. |
 
-[` /attachments `](/docs/graph-api/reference/message/attachments)
+Create
+------
 
-Files attached to a message.
 
-[` /shares `](/docs/graph-api/reference/message/shares/)
+You can't perform this operation on this endpoint.
 
-Shared items, including links, photos, videos, stickers and products.
 
-::: {._4-u2 ._57mb ._1u44 ._3fw6 ._4-u8}
-::: {._4-u3 ._588p}
-You can\'t perform this operation on this endpoint.
-:::
-:::
+Update
+------
 
-::: {._4-u2 ._57mb ._1u44 ._3fw6 ._4-u8}
-::: {._4-u3 ._588p}
-You can\'t perform this operation on this endpoint.
-:::
-:::
 
-::: {._4-u2 ._57mb ._1u44 ._3fw6 ._4-u8}
-::: {._4-u3 ._588p}
-You can\'t perform this operation on this endpoint.
-:::
-:::
+You can't perform this operation on this endpoint.
+
+
+Delete
+------
+
+
+You can't perform this operation on this endpoint.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 

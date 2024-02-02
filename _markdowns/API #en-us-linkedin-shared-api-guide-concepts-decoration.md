@@ -1,63 +1,279 @@
-::: content
-::: {.display-flex .justify-content-space-between .align-items-center .flex-wrap-wrap .page-metadata-container}
-:::
 
-::: WARNING
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+LinkedIn API Response Decoration - LinkedIn | Microsoft Learn
+
+
+
+
+
+
+
+
+
+
+
+
+
+Skip to main content
+
+
+
+This browser is no longer supported.
+
+
+Upgrade to Microsoft Edge to take advantage of the latest features, security updates, and technical support.
+
+
+
+Download Microsoft Edge
+More info about Internet Explorer and Microsoft Edge
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Table of contents 
+
+
+
+Exit focus mode
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Read in English
+
+
+
+
+Save
+
+
+
+
+
+
+
+
+
+
+
+
+
+Table of contents
+
+Read in English
+
+
+
+
+Save
+
+Edit
+
+
+
+
+Print
+
+
+Twitter
+LinkedIn
+Facebook
+Email
+
+
+
+
+
+
+
+
+
+
+
+Table of contents
+
+
+
+
+Response Decoration
+===================
+
+
+
+
+* Article
+* 09/14/2023
+* 4 contributors
+
+
+
+
+
+
+
+
+Feedback
+
+
+
+
+
+In this article
+---------------
+
+
+
+
+
 Warning
 
-**Deprecation Notice**\
-The use of Response Decoration is deprecated in some versions of LMS
-APIs. Please refer the [Recent
-Changes](../../../marketing/integrations/recent-changes) page for
-information on the specific API versions that are affected by this
-deprecation.
-:::
 
-When you call an API, the response may contain
-[URNs](urns?context=linkedin/context) referencing the different types of
-objects provided by LinkedIn\'s services. These URNs are valuable on
-their own; however, there may be instances when you want to expand a URN
-and access the values associated with the entity.
+**Deprecation Notice**   
 
-Decoration is a mechanism in LinkedIn\'s APIs to fetch data belonging to
-a URN object without having to make an extra call to that object\'s API.
-Decoration uses a syntax very similar to LinkedIn\'s [Field
-Projections](projections?context=linkedin/context) .
+The use of Response Decoration is deprecated in some versions of LMS APIs. Please refer the Recent Changes page for information on the specific API versions that are affected by this deprecation.
 
-See the following example of a service that returns URN references to
-another type of entity:
+
+
+When you call an API, the response may contain URNs referencing the different types of objects provided by LinkedIn's services. These URNs are valuable on their own; however, there may be instances when you want to expand a URN and access the values associated with the entity.
+
+
+Decoration is a mechanism in LinkedIn's APIs to fetch data belonging to a URN object without having to make an extra call to that object's API. Decoration uses a syntax very similar to LinkedIn's Field Projections.
+
+
+See the following example of a service that returns URN references to another type of entity:
+
 
 #### Sample Request
 
-``` lang-https
+
+
+```
 GET https://api.linkedin.com/v2/{service}/1234
+
 ```
 
 #### Sample Response
 
-``` lang-json
+
+
+```
 {
     "id": 1234,
     "relatedEntity": "urn:li:relatedEntity:6789"
 }
+
 ```
 
-Rather than taking the ` relatedEntity ` URN value and making a second
-GET call to its parent service, you can use decoration to define how
-you\'d like the ` relatedEntity ` object to be expanded within the
-original API request. To do this, append the ` ~ ` character to
-the entity you wish to expand, and then provide the field projection in
-parentheses afterwards. For example:
+Rather than taking the `relatedEntity` URN value and making a second GET call to its parent service, you can use decoration to define how you'd like the `relatedEntity` object to be expanded within the original API request. To do this, append the `~` character to the entity you wish to expand, and then provide the field projection in parentheses afterwards. For example:
+
 
 #### Sample Request
 
-``` lang-https
+
+
+```
 GET https://api.linkedin.com/v2/{service}/1234&projection=(id,relatedEntity~($URN,foo,bar))
+
 ```
 
 #### Sample Response
 
-``` lang-json
+
+
+```
 {
     "id": 1234,
     "relatedEntity": {
@@ -66,25 +282,30 @@ GET https://api.linkedin.com/v2/{service}/1234&projection=(id,relatedEntity~($UR
         "foo": "bleep"
     }
 }
+
 ```
 
-## Decorating within Arrays/Lists
+Decorating within Arrays/Lists
+------------------------------
 
-In some circumstances, a service might return a collection of URNs that
-are not all of the same type. In this case, provide multiple decoration
-instructions to tell the service how to deal with any potential URN type
-that is returned. See the following sample request and the list of
-different URN types that it returns within entities:
+
+In some circumstances, a service might return a collection of URNs that are not all of the same type. In this case, provide multiple decoration instructions to tell the service how to deal with any potential URN type that is returned. See the following sample request and the list of different URN types that it returns within entities:
+
 
 #### Sample Request
 
-``` lang-https
+
+
+```
 GET https://api.linkedin.com/v2/{service}/1234
+
 ```
 
 #### Sample Data
 
-``` lang-json
+
+
+```
 {
     "entities": [
         "urn:li:foo:123",
@@ -93,20 +314,26 @@ GET https://api.linkedin.com/v2/{service}/1234
     ],
     "id": 1234
 }
+
 ```
 
-To decorate each of the ` foo ` , ` bar ` , and ` baz ` URN types in
-this response, use the following projection syntax in your request:
+To decorate each of the `foo`, `bar`, and `baz` URN types in this response, use the following projection syntax in your request:
+
 
 #### Sample Request
 
-``` lang-https
+
+
+```
 GET https://api.linkedin.com/v2/{service}/1234?projection=entities*~foo(a,b)~bar(c,d)~baz(e,f))
+
 ```
 
 #### Sample Response
 
-``` lang-json
+
+
+```
 {
     "entities": [
         {
@@ -124,15 +351,18 @@ GET https://api.linkedin.com/v2/{service}/1234?projection=entities*~foo(a,b)~bar
     ],
     "id": 1234
 }
+
 ```
 
-## Sample Projections
+Sample Projections
+------------------
 
-Consider the following data model of a sample resource and review the
-below samples showing how to access various parts of this data in order
-to decorate.
 
-``` lang-json
+Consider the following data model of a sample resource and review the below samples showing how to access various parts of this data in order to decorate.
+
+
+
+```
 {
     "person": {
         "current_position": {
@@ -181,13 +411,18 @@ to decorate.
         ]
     }
 }
+
 ```
 
-## Accessing URN within a child object
+Accessing URN within a child object
+-----------------------------------
 
-**` (person(current_position(company))) `**
 
-``` lang-json
+**`(person(current_position(company)))`**
+
+
+
+```
 {
     "person": {
         "current_position": {
@@ -195,13 +430,18 @@ to decorate.
         }
     }
 }
+
 ```
 
-## Accessing URNs within an array of child objects
+Accessing URNs within an array of child objects
+-----------------------------------------------
 
-**` (person(position_history(*(company)))) `**
 
-``` lang-json
+**`(person(position_history(*(company))))`**
+
+
+
+```
 {
     "person": {
         "position_history": [
@@ -214,13 +454,18 @@ to decorate.
         ]
     }
 }
+
 ```
 
-## Accessing URNs within an array of URNs
+Accessing URNs within an array of URNs
+--------------------------------------
 
-**` (person(following_companies(*))) `**
 
-``` lang-json
+**`(person(following_companies(*)))`**
+
+
+
+```
 {
     "person": {
         "following_companies": [
@@ -229,13 +474,18 @@ to decorate.
         ]
     }
 }
+
 ```
 
-## Selecting a single child field with a URN and expanding the URN
+Selecting a single child field with a URN and expanding the URN
+---------------------------------------------------------------
 
-**` (person(current_position(company~))) `**
 
-``` lang-json
+**`(person(current_position(company~)))`**
+
+
+
+```
 {
     "person": {
         "current_position": {
@@ -322,13 +572,18 @@ to decorate.
         }
     }
 }
+
 ```
 
-## Selecting all child fields and fully expanding a child field containing a URN
+Selecting all child fields and fully expanding a child field containing a URN
+-----------------------------------------------------------------------------
 
-**` (person(current_position(*,company~))) `**
 
-``` lang-json
+**`(person(current_position(*,company~)))`**
+
+
+
+```
 {
     "person": {
         "current_position": {
@@ -417,13 +672,18 @@ to decorate.
         }
     }
 }
+
 ```
 
-## Selecting all child fields and expanding child field with a URN for a single value
+Selecting all child fields and expanding child field with a URN for a single value
+----------------------------------------------------------------------------------
 
-**` (person(current_position(*,company~(vanityName)))) `**
 
-``` lang-json
+**`(person(current_position(*,company~(vanityName))))`**
+
+
+
+```
 {
     "person": {
         "current_position": {
@@ -434,21 +694,21 @@ to decorate.
         }
     }
 }
+
 ```
 
-## Accessing complex type object
+Accessing complex type object
+-----------------------------
 
-When a URN is a field's key and the value is an object, it is called a
-complex type object. In the following example, the ` messages ` field
-maps to an object with 2 fields that are ` MessageUrns ` . These 2
-` MessageUrns ` are keys that map to objects containing data such as
-` bcc ` , ` count ` , and ` content ` . To access the ` bcc ` values for
-each ` MessageUrn ` , use the decoration
-` (person(messages()))(person(messages(*(from,bcc(*))))) ` .
 
-**` (person(messages())) `**
+When a URN is a field’s key and the value is an object, it is called a complex type object. In the following example, the `messages` field maps to an object with 2 fields that are `MessageUrns`. These 2 `MessageUrns` are keys that map to objects containing data such as `bcc`,`count`, and `content`. To access the `bcc` values for each `MessageUrn`, use the decoration `(person(messages()))(person(messages(*(from,bcc(*)))))`.
 
-``` lang-json
+
+**`(person(messages()))`**
+
+
+
+```
 {
     "person": {
         "messages": {
@@ -471,11 +731,14 @@ each ` MessageUrn ` , use the decoration
         }
     }
 }
+
 ```
 
-**` (person(messages(*(from,bcc(*))))) `**
+**`(person(messages(*(from,bcc(*)))))`**
 
-``` lang-json
+
+
+```
 {
     "person": {
         "messages": {
@@ -495,17 +758,24 @@ each ` MessageUrn ` , use the decoration
         }
     }
 }
+
 ```
 
-## Accessing all URNs within any array from a BATCH_GET call
+Accessing all URNs within any array from a BATCH\_GET call
+----------------------------------------------------------
 
-Note that a BATCH_GET call returns a ` results ` field by default.
 
-**` (results(*(person(following_companies(*))))) `**
+Note that a BATCH\_GET call returns a `results` field by default.
+
+
+**`(results(*(person(following_companies(*)))))`**
+
 
 #### Sample Data
 
-``` lang-json
+
+
+```
 {
     "results": {
         "123123": {
@@ -558,11 +828,14 @@ Note that a BATCH_GET call returns a ` results ` field by default.
         }
     }
 }
+
 ```
 
-**` (results(*(person(following_companies(*))))) `**
+**`(results(*(person(following_companies(*)))))`**
 
-``` lang-json
+
+
+```
 {
     "results": {
         "123123": {
@@ -575,34 +848,35 @@ Note that a BATCH_GET call returns a ` results ` field by default.
         }
     }
 }
+
 ```
 
-::: NOTE
+
 Note
 
-Always use ` entity~ ` in the projection parameter to make the expansion
-request. If the ` entity ` is expanded, the response returns ` entity~ `
-. If for some reason the ` entity ` cannot be expanded, the response
-returns ` entity! ` .
-:::
 
-## Rate Limiting
+Always use `entity~` in the projection parameter to make the expansion request. If the `entity` is expanded, the response returns `entity~`. If for some reason the `entity` cannot be expanded, the response returns `entity!`.
 
-Response decoration makes calls to other services in order to resolve
-the requested, decorated entity. These calls are subject to rate
-limiting. It is possible for calls to return a 200 while the decoration
-call is rate limited.
 
-The following example makes a request to the ` /me ` endpoint and uses
-response decoration to resolve the ` digitalMediaAsset ` URN in the
-` displayImage ` field. The call to the ` /me ` endpoint is successful,
-but the decoration call to resolve ` displayImage ` is rate limited.
 
-``` lang-http
+Rate Limiting
+-------------
+
+
+Response decoration makes calls to other services in order to resolve the requested, decorated entity. These calls are subject to rate limiting. It is possible for calls to return a 200 while the decoration call is rate limited.
+
+
+The following example makes a request to the `/me` endpoint and uses response decoration to resolve the `digitalMediaAsset` URN in the `displayImage` field. The call to the `/me` endpoint is successful, but the decoration call to resolve `displayImage` is rate limited.
+
+
+
+```
 GET https://api.linkedin.com/v2/me?projection=(id,profilePicture(displayImage~(*)))
+
 ```
 
-``` lang-json
+
+```
 {
     "profilePicture": {
         "displayImage!": {
@@ -614,5 +888,209 @@ GET https://api.linkedin.com/v2/me?projection=(id,profilePicture(displayImage~(*
     },
     "id": "z6_nnTIGu-"
 }
+
 ```
-:::
+
+
+
+
+
+
+
+
+
+
+
+
+---
+
+
+Feedback
+--------
+
+
+
+Was this page helpful?
+
+
+
+
+
+
+
+Yes
+
+
+
+
+
+No
+
+
+
+
+
+Provide product feedback
+
+
+
+
+Feedback
+--------
+
+
+
+Submit and view feedback for
+
+
+
+This product
+This page
+
+
+
+View all page feedback
+
+
+
+
+
+
+
+
+---
+
+
+Additional resources
+--------------------
+
+
+
+
+
+
+
+
+
+
+
+
+California Consumer Privacy Act (CCPA) Opt-Out Icon
+
+
+
+
+
+Your Privacy Choices
+
+
+
+
+
+
+
+Theme
+
+
+
+
+
+* Light
+* Dark
+* High contrast
+
+
+
+
+
+
+* 
+* Previous Versions
+* Blog
+* Contribute
+* Privacy
+* Terms of Use
+* Trademarks
+* © Microsoft 2023
+
+
+
+
+
+
+
+Additional resources
+--------------------
+
+
+
+
+
+
+### In this article
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+California Consumer Privacy Act (CCPA) Opt-Out Icon
+
+
+
+
+
+Your Privacy Choices
+
+
+
+
+
+
+
+Theme
+
+
+
+
+
+* Light
+* Dark
+* High contrast
+
+
+
+
+
+
+* 
+* Previous Versions
+* Blog
+* Contribute
+* Privacy
+* Terms of Use
+* Trademarks
+* © Microsoft 2023
+
+
+
+
+
+
+

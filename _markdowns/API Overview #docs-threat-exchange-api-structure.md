@@ -1,54 +1,109 @@
-::: {._4-u3 ._588p}
-ThreatExchange is a subset of API endpoints within the larger ecosystem
-of Facebook Graph APIs. It is recommended to review the [Graph API
-documentation](/docs/graph-api) , as it covers key concepts: usage of
-access tokens for authentication, result pagination, and batching.
 
-The ThreatExchange APIs are made up of various
-[objects](/docs/threat-exchange/reference/apis) and each object can have
-connections to other objects. For instance, a threat indicator is an
-object that can be connected to other threat indicators.
+API Structure - ThreatExchange - Documentation - Meta for Developers
 
-ThreatExchange also allows for multiple members to share the same threat
-indicator. Because there is the potential for a collision, we separate
-each member\'s submission into distinct
-[ThreatDescriptor](/docs/threat-exchange/reference/apis/threat-descriptor)
-objects, which are connected to their respective
-[ThreatIndicator](/docs/threat-exchange/reference/apis/threat-indicator)
 
-## Viewing Individual Objects {#individual_objects}
 
-You can access a Graph object's properties with its unique ID, e.g. for
-a
-[ThreatIndicator](/docs/threat-exchange/reference/apis/threat-indicator)
-object:
+
+
+
+
+
+
+
+ThreatExchange* Get Started
+* Get Access
+* Best Practices
+* UI Overview
+* UI Reference
+* API Overview
+* API Examples
+* API Structure
+* API Reference
+* Privacy Controls
+* Submitting Data
+* Editing Existing Data
+* Delete Data
+* Re-sharing
+* React to Data
+* Submit Connections
+* Integrations
+* Webhooks
+* FAQ
+* Webinar
+* Changelog
+API Structure for ThreatExchange
+================================
+
+ThreatExchange is a subset of API endpoints within the larger ecosystem of Facebook Graph APIs. It is recommended to review the Graph API documentation, as it covers key concepts: usage of access tokens for authentication, result pagination, and batching.
+
+The ThreatExchange APIs are made up of various objects and each object can have connections to other objects. For instance, a threat indicator is an object that can be connected to other threat indicators.
+
+ThreatExchange also allows for multiple members to share the same threat indicator. Because there is the potential for a collision, we separate each member's submission into distinct ThreatDescriptor objects, which are connected to their respective ThreatIndicator
+
+Viewing Individual Objects
+--------------------------
+
+You can access a Graph object’s properties with its unique ID, e.g. for a ThreatIndicator object:
+
+* /{threat\_indicator\_id}
 
 You can do the same for all other objects type within ThreatExchange:
 
-## Queries For Multiple Objects {#multiple_objects}
+* /{threat\_descriptor\_id}
 
-Queries into ThreatExchange are HTTP GET requests to one of the
-following URLs:
+Queries For Multiple Objects
+----------------------------
 
-**All Graph API objects work in a similar way. After you have
-[authenticated](/docs/threat-exchange/getting-started) , try some calls
-with the
-[` threat_indicator `](/docs/threat-exchange/reference/apis/threat-indicator)
-object.**
+Queries into ThreatExchange are HTTP GET requests to one of the following URLs:
 
-To ensure consistency, the ThreatExchange APIs and its consumers use
-JSON objects as their default currency. Using these APIs gives you a lot
-of things for free:
+* /threat\_descriptors
+* /threat\_indicators
+* /threat\_exchange\_members
+* /threat\_privacy\_groups
+* /{privacy\_group\_id}/threat\_updates
 
--   Field validation
+**All Graph API objects work in a similar way. After you have authenticated, try some calls with the `threat_indicator` object.**
 
--   Type checking
+To ensure consistency, the ThreatExchange APIs and its consumers use JSON objects as their default currency. Using these APIs gives you a lot of things for free:
 
--   Persistence to Facebook\'s Graph
+* Field validation
+* Type checking
+* Persistence to Facebook's Graph
+* Everyone else can use what you share and be better protected!
 
--   Everyone else can use what you share and be better protected!
+All objects are formatted as maps using a predefined set of field names, with expected value types. They can be of arbitrary size and field order in the map is, generally, not important.
 
-All objects are formatted as maps using a predefined set of field names,
-with expected value types. They can be of arbitrary size and field order
-in the map is, generally, not important.
-:::
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
