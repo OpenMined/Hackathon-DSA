@@ -1,0 +1,9 @@
+Facebook_api-Ad/API Meta Ad Library.md
+
+Thse may not be parsed as separate headings
+
+1.An example query and response
+2. section An example query and response
+3. Data fields you can include in your search results
+
+
