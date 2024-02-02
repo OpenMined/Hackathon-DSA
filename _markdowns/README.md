@@ -1,0 +1,2 @@
+# TRA³ TRAnsparency TRAcing TRAck : Fichiers HTML automatiquement collectés
+Ce dépôt contient les fichiers HTML automatiquement collectés à l'aide des modules de collecte développés à l'adresse suivante : https://code.peren.fr/hackathon-2024/retrieval-modules/platforms-doc-declarations.
