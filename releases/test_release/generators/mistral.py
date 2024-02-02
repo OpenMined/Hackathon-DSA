@@ -1,4 +1,6 @@
-from ctransformers import AutoModelForCausalLM, AutoConfig
+# from ctransformers import AutoModelForCausalLM, AutoConfig
+from transformers import AutoModelForCausalLM, AutoConfig
+
 from transformers import AutoTokenizer
 from typing import List, Dict, Optional
 
@@ -26,21 +28,21 @@ RULES
 class MistralRAGGenerator:
     def __init__(self, gpu_layers: int = 0):
         self.model = AutoModelForCausalLM.from_pretrained(
-            "TheBloke/OpenHermes-2.5-Mistral-7B-16k-GGUF",
-            model_file="openhermes-2.5-mistral-7b-16k.Q4_K_M.gguf",
-            model_type="mistral",
-            gpu_layers=gpu_layers,
-            max_new_tokens=4000,
-            context_length=16_000,
+            "/gpfsdswork/dataset/HuggingFace_Models/NurtureAI/OpenHermes-2.5-Mistral-7B-16k/",
+            # model_file="openhermes-2.5-mistral-7b-16k.Q4_K_M.gguf",
+            # model_type="mistral",
+            # gpu_layers=gpu_layers,
+            # max_new_tokens=4000,
+            # context_length=16_000,
         )
 
         self.tokenizer = AutoTokenizer.from_pretrained(
-            "NurtureAI/OpenHermes-2.5-Mistral-7B-16k"
+            "/gpfsdswork/dataset/HuggingFace_Models/NurtureAI/OpenHermes-2.5-Mistral-7B-16k/"
         )
 
     def format_prompt(self, messages: List[Dict[str, str]]) -> str:
         return self.tokenizer.apply_chat_template(
-            messages, tokenize=False, add_generation_prompt=True
+            messages, add_generation_prompt=True, return_tensors="pt"
         )
 
     def format_context(self, context: List[str]) -> str:
@@ -66,7 +68,8 @@ class MistralRAGGenerator:
             raise ValueError("query required")
 
         prompt = self.format_prompt(chat_log)
-        output = self.model(prompt, stop=["|im_end|"])
+        # output = self.model(prompt, stop=["|im_end|"])
+        output = self.model(prompt)
         chat_log.append({"role": "assistant", "content": output})
         return chat_log
 
@@ -75,10 +78,10 @@ class MistralRAGGenerator:
         return self.chat(chat_log, query=query)
 
     def generate_batch(self, contexts: List[List[str]], queries: List[str]) -> List:
-        from tqdm.notebook import tqdm
+        # from tqdm.notebook import tqdm
 
         res = []
-        for context, query in tqdm(list(zip(contexts, queries))):
+        for context, query in list(zip(contexts, queries)):
             res.append(self.generate_answer(context, query))
 
         return res

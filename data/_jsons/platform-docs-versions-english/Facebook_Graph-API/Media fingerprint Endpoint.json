@@ -1,0 +1,74 @@
+{
+    "0": {
+        "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Media fingerprint Endpoint.md\nParagraph location: \n\tMedia Fingerprint\n\tReading\n\nContent: \n# Media Fingerprint  \n## Reading  \nMedia fingerprint\n",
+        "line_start": 0,
+        "line_end": 3,
+        "url": "https://developers.facebook.com/docs/pages/new-pages-experience/)."
+    },
+    "1": {
+        "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Media fingerprint Endpoint.md\nParagraph location: \n\tMedia Fingerprint\n\tReading\n\tNew Page Experience\n\nContent: \n### New Page Experience  \nThis endpoint is supported for [New Page Experience](https://developers.facebook.com/docs/pages/new-pages-experience/).\n",
+        "line_start": 6,
+        "line_end": 8,
+        "url": "https://developers.facebook.com/docs/pages/new-pages-experience/)."
+    },
+    "2": {
+        "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Media fingerprint Endpoint.md\nParagraph location: \n\tMedia Fingerprint\n\tReading\n\tExample\n\nContent: \n### Example  \nHTTPPHP SDKJavaScript SDKAndroid SDKiOS SDK[Graph API Explorer](https://developers.facebook.com/tools/explorer/?method=GET&path=%7Bmedia-fingerprint-id%7D&version=v19.0)  \nGET /v19.0/{media-fingerprint-id} HTTP/1.1\nHost: graph.facebook.com  \n/* PHP SDK v5.0.0 */\n/* make the API call */\ntry {\n// Returns a `Facebook\\FacebookResponse` object\n$response = $fb->get(\n'/{media-fingerprint-id}',\n'{access-token}'\n);\n} catch(Facebook\\Exceptions\\FacebookResponseException $e) {\necho 'Graph returned an error: ' . $e->getMessage();\nexit;\n} catch(Facebook\\Exceptions\\FacebookSDKException $e) {\necho 'Facebook SDK returned an error: ' . $e->getMessage();\nexit;\n}\n$graphNode = $response->getGraphNode();\n/* handle the result */  \n/* make the API call */\nFB.api(\n\"/{media-fingerprint-id}\",\nfunction (response) {\nif (response && !response.error) {\n/* handle the result */\n}\n}\n);  \n/* make the API call */\nnew GraphRequest(\nAccessToken.getCurrentAccessToken(),\n\"/{media-fingerprint-id}\",\nnull,\nHttpMethod.GET,\nnew GraphRequest.Callback() {\npublic void onCompleted(GraphResponse response) {\n/* handle the result */\n}\n}\n).executeAsync();  \n/* make the API call */\nFBSDKGraphRequest *request = [[FBSDKGraphRequest alloc]\ninitWithGraphPath:@\"/{media-fingerprint-id}\"\nparameters:params\nHTTPMethod:@\"GET\"];\n[request startWithCompletionHandler:^(FBSDKGraphRequestConnection *connection,\nid result,\nNSError *error) {\n// Handle the result\n}];  \nIf you want to learn how to use the Graph API, read our [Using Graph API guide](https://developers.facebook.com/docs/graph-api/using-graph-api/).\n",
+        "line_start": 10,
+        "line_end": 63,
+        "url": "https://developers.facebook.com/docs/pages/new-pages-experience/)."
+    },
+    "3": {
+        "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Media fingerprint Endpoint.md\nParagraph location: \n\tMedia Fingerprint\n\tReading\n\tParameters\n\nContent: \n### Parameters  \nThis endpoint doesn't have any parameters.\n",
+        "line_start": 71,
+        "line_end": 73,
+        "url": "https://developers.facebook.com/docs/pages/new-pages-experience/)."
+    },
+    "4": {
+        "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Media fingerprint Endpoint.md\nParagraph location: \n\tMedia Fingerprint\n\tReading\n\tFields\n\nContent: \n### Fields  \n| Field | Description |\n| --- | --- |\n| `id`<br><br>numeric string | Media fingerprint ID<br><br>[Default](https://developers.facebook.com/docs/graph-api/using-graph-api/#fields) |\n| `duration_in_sec`<br><br>float | The length of the fingerprinted content, in seconds<br><br>[Default](https://developers.facebook.com/docs/graph-api/using-graph-api/#fields) |\n| `fingerprint_content_type`<br><br>enum | Media fingerprint content type<br><br>[Default](https://developers.facebook.com/docs/graph-api/using-graph-api/#fields) |\n| `metadata`<br><br>FingerprintMetadata | The metadata associated with the fingerprinted content |\n| `title`<br><br>string | The title of the fingerprinted content |\n| `universal_content_id`<br><br>string | A unique code user can use to manage fingerprint. For example: International Standard Recording Code for songtracks. This is for your own use; Facebook will not use this data. |\n",
+        "line_start": 75,
+        "line_end": 84,
+        "url": "https://developers.facebook.com/docs/pages/new-pages-experience/)."
+    },
+    "5": {
+        "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Media fingerprint Endpoint.md\nParagraph location: \n\tMedia Fingerprint\n\tReading\n\tError Codes\n\nContent: \n### Error Codes  \n| Error | Description |\n| --- | --- |\n| 100 | Invalid parameter |\n",
+        "line_start": 86,
+        "line_end": 90,
+        "url": "https://developers.facebook.com/docs/pages/new-pages-experience/)."
+    },
+    "6": {
+        "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Media fingerprint Endpoint.md\nParagraph location: \n\tMedia Fingerprint\n\tCreating\n\nContent: \n## Creating  \nYou can't perform this operation on this endpoint.\n",
+        "line_start": 92,
+        "line_end": 94,
+        "url": "https://developers.facebook.com/docs/pages/new-pages-experience/)."
+    },
+    "7": {
+        "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Media fingerprint Endpoint.md\nParagraph location: \n\tMedia Fingerprint\n\tUpdating\n\nContent: \n## Updating  \nYou can update a\u00a0[MediaFingerprint](https://developers.facebook.com/docs/graph-api/reference/media-fingerprint/) by making a POST request to [`/{media_fingerprint_id}`](https://developers.facebook.com/docs/graph-api/reference/media-fingerprint/).\n",
+        "line_start": 96,
+        "line_end": 98,
+        "url": "https://developers.facebook.com/docs/pages/new-pages-experience/)."
+    },
+    "8": {
+        "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Media fingerprint Endpoint.md\nParagraph location: \n\tMedia Fingerprint\n\tUpdating\n\tParameters\n\nContent: \n### Parameters  \n| Parameter | Description |\n| --- | --- |\n| `metadata`<br><br>array | The fingerprint metadata, for example: metadata={'episode':'newEpisodeVal','season':'newSeasonVal'} |\n| `album`<br><br>string | Album name of a songtrack. This is a required metadata field for SONGTRACK content type. |\n| `artist`<br><br>string | Artist name of a songtrack. This is a required metadata field for SONGTRACK content type. |\n| `episode`<br><br>string | Episode name of an episode. This is a required metadata field for EPISODE content type. |\n| `season`<br><br>string | Season name of an episode. This is a required metadata field for EPISODE content type. |\n| `description`<br><br>string | Description of fingerprint. This is a required metadata field for MOVIE and OTHER content type. |\n| `source`<br><br>file | The source of the new fingerprint file to update. Example: @myDirectory/myFile.mp4.rdm |\n| `title`<br><br>string | The title of the media content |\n| `universal_content_id`<br><br>string | A unique code user can use to manage fingerprint. For example: International Standard Recording Code for songtracks. This is for your own use; Facebook will not use this data. |\n",
+        "line_start": 71,
+        "line_end": 83,
+        "url": "https://developers.facebook.com/docs/pages/new-pages-experience/)."
+    },
+    "9": {
+        "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Media fingerprint Endpoint.md\nParagraph location: \n\tMedia Fingerprint\n\tUpdating\n\tReturn Type\n\nContent: \n### Return Type  \nThis endpoint supports [read-after-write](https://developers.facebook.com/docs/graph-api/advanced/#read-after-write) and will read the node to which you POSTed.  \nStruct {  \n`success`: bool,  \n}\n",
+        "line_start": 114,
+        "line_end": 119,
+        "url": "https://developers.facebook.com/docs/pages/new-pages-experience/)."
+    },
+    "10": {
+        "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Media fingerprint Endpoint.md\nParagraph location: \n\tMedia Fingerprint\n\tUpdating\n\tError Codes\n\nContent: \n### Error Codes  \n| Error | Description |\n| --- | --- |\n| 100 | Invalid parameter |\n",
+        "line_start": 86,
+        "line_end": 90,
+        "url": "https://developers.facebook.com/docs/pages/new-pages-experience/)."
+    },
+    "11": {
+        "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Media fingerprint Endpoint.md\nParagraph location: \n\tMedia Fingerprint\n\tDeleting\n\nContent: \n## Deleting  \nYou can't perform this operation on this endpoint.  \n![](https://www.facebook.com/tr?id=675141479195042&ev=PageView&noscript=1)  \n![](https://www.facebook.com/tr?id=574561515946252&ev=PageView&noscript=1)  \n![](https://www.facebook.com/tr?id=1754628768090156&ev=PageView&noscript=1)\n",
+        "line_start": 130,
+        "line_end": 135,
+        "url": "https://developers.facebook.com/docs/pages/new-pages-experience/)."
+    }
+}

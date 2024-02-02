@@ -1,0 +1,44 @@
+{
+    "0": {
+        "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Debug token Endpoint.md\nParagraph location: \n\nContent: \nThis document refers to an outdated version of Graph API.\u00a0Please [use the latest version.](https://developers.facebook.com/docs/graph-api/reference/v19.0/debug_token)\n",
+        "line_start": 0,
+        "line_end": 1,
+        "url": "https://developers.facebook.com/docs/graph-api/reference/v19.0/debug_token)"
+    },
+    "1": {
+        "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Debug token Endpoint.md\nParagraph location: \n\tDebug-Token `/debug_token`\n\nContent: \n# Debug-Token `/debug_token`  \nThis endpoint returns metadata about a given access token. This includes data such as the user for which the token was issued, whether the token is still valid, when it expires, and what permissions the app has for the given user.  \nThis may be used to programatically debug issues with large sets of access tokens.\n",
+        "line_start": 2,
+        "line_end": 5,
+        "url": "https://developers.facebook.com/docs/graph-api/reference/v19.0/debug_token)"
+    },
+    "2": {
+        "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Debug token Endpoint.md\nParagraph location: \n\tDebug-Token `/debug_token`\n\tReading\n\nContent: \n## Reading  \nHTTPPHP SDKJavaScript SDKAndroid SDKiOS SDK[Graph API Explorer](https://developers.facebook.com/tools/explorer/?method=GET&path=debug_token%3Finput_token%3D%257Binput-token%257D&version=v19.0)  \nGET /v19.0/debug_token?input_token={input-token} HTTP/1.1\nHost: graph.facebook.com  \n/* PHP SDK v5.0.0 */\n/* make the API call */\ntry {\n// Returns a `Facebook\\FacebookResponse` object\n$response = $fb->get(\n'/debug_token?input_token={input-token}',\n'{access-token}'\n);\n} catch(Facebook\\Exceptions\\FacebookResponseException $e) {\necho 'Graph returned an error: ' . $e->getMessage();\nexit;\n} catch(Facebook\\Exceptions\\FacebookSDKException $e) {\necho 'Facebook SDK returned an error: ' . $e->getMessage();\nexit;\n}\n$graphNode = $response->getGraphNode();\n/* handle the result */  \n/* make the API call */\nFB.api(\n\"/debug_token?input_token={input-token}\",\nfunction (response) {\nif (response && !response.error) {\n/* handle the result */\n}\n}\n);  \n/* make the API call */\nnew GraphRequest(\nAccessToken.getCurrentAccessToken(),\n\"/debug_token?input_token={input-token}\",\nnull,\nHttpMethod.GET,\nnew GraphRequest.Callback() {\npublic void onCompleted(GraphResponse response) {\n/* handle the result */\n}\n}\n).executeAsync();  \n/* make the API call */\nFBSDKGraphRequest *request = [[FBSDKGraphRequest alloc]\ninitWithGraphPath:@\"/debug_token?input_token={input-token}\"\nparameters:params\nHTTPMethod:@\"GET\"];\n[request startWithCompletionHandler:^(FBSDKGraphRequestConnection *connection,\nid result,\nNSError *error) {\n// Handle the result\n}];\n",
+        "line_start": 8,
+        "line_end": 60,
+        "url": "https://developers.facebook.com/docs/graph-api/reference/v19.0/debug_token)"
+    },
+    "3": {
+        "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Debug token Endpoint.md\nParagraph location: \n\tDebug-Token `/debug_token`\n\tReading\n\tPermissions\n\nContent: \n### Permissions  \n* An [app access token](https://developers.facebook.com/docs/facebook-login/guides/access-tokens/#apptokens) or an app developer's [user access token](https://developers.facebook.com/docs/facebook-login/guides/access-tokens/#usertokens) for the app associated with the `input_token` beiing inspected is required to access this endpoint.\n",
+        "line_start": 67,
+        "line_end": 69,
+        "url": "https://developers.facebook.com/docs/graph-api/reference/v19.0/debug_token)"
+    },
+    "4": {
+        "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Debug token Endpoint.md\nParagraph location: \n\tDebug-Token `/debug_token`\n\tReading\n\tParameters\n\nContent: \n### Parameters  \n| Name | Description | Type |\n| --- | --- | --- |\n| `input_token` | The Access Token that is being inspected. This parameter must be specified. | `string` |\n",
+        "line_start": 72,
+        "line_end": 76,
+        "url": "https://developers.facebook.com/docs/graph-api/reference/v19.0/debug_token)"
+    },
+    "5": {
+        "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Debug token Endpoint.md\nParagraph location: \n\tDebug-Token `/debug_token`\n\tReading\n\tFields\n\nContent: \n### Fields  \n| Name | Description | Type |\n| --- | --- | --- |\n| `data` | Data wrapper around the result. | `object` |\n| `app_id` | The ID of the application this access token is for. | `string` |\n| `application` | Name of the application this access token is for. | `string` |\n| `error` | Any error that a request to the graph api would return due to the access token. | `object` |\n| `code` | The error code for the error. | `int` |\n| `message` | The error message for the error. | `string` |\n| `subcode` | The error subcode for the error. | `int` |\n| `expires_at` | Timestamp when this access token expires. | `unixtime` |\n| `data_access_expires_at` | Timestamp when app's access to user data expires. | `unixtime` |\n| `is_valid` | Whether the access token is still valid or not. | `bool` |\n| `issued_at` | Timestamp when this access token was issued. | `unixtime` |\n| `metadata` | General metadata associated with the access token. Can contain data like 'sso', 'auth\\_type', 'auth\\_nonce' | `object` |\n| `profile_id` | For impersonated access tokens, the ID of the page this token contains. | `string` |\n| `scopes` | List of permissions that the user has granted for the app in this access token. | `string[]` |\n| `granular_scopes` | List of granular permissions that the user has granted for the app in this access token. If permission applies to all, targets will not be shown. | `shape('scope' => string,'target_ids' => ?int[],)[]` |\n| `user_id` | The ID of the user this access token is for. | `string` |\n",
+        "line_start": 78,
+        "line_end": 97,
+        "url": "https://developers.facebook.com/docs/graph-api/reference/v19.0/debug_token)"
+    },
+    "6": {
+        "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Debug token Endpoint.md\nParagraph location: \n\tDebug-Token `/debug_token`\n\tPublishing and Deleting\n\nContent: \n## Publishing and Deleting  \nYou cannot perform these actions on this edge.  \n![](https://www.facebook.com/tr?id=675141479195042&ev=PageView&noscript=1)  \n![](https://www.facebook.com/tr?id=574561515946252&ev=PageView&noscript=1)  \n![](https://www.facebook.com/tr?id=1754628768090156&ev=PageView&noscript=1)\n",
+        "line_start": 99,
+        "line_end": 104,
+        "url": "https://developers.facebook.com/docs/graph-api/reference/v19.0/debug_token)"
+    }
+}

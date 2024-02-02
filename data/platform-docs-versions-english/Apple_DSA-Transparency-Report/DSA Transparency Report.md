@@ -1,3 +1,4 @@
+# Resource URL: https://www.apple.com/legal/dsa/transparency/eu/app-store/2310/
 DSA Transparency Report
 =======================
 

@@ -1,0 +1,110 @@
+{
+    "0": {
+        "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Video list Endpoint.md\nParagraph location: \n\tVideo List\n\tReading\n\tNew Page Experience\n\nContent: \n### New Page Experience  \nThis endpoint is supported for [New Page Experience](https://developers.facebook.com/docs/pages/new-pages-experience/).\n",
+        "line_start": 6,
+        "line_end": 8,
+        "url": "https://developers.facebook.com/docs/pages/new-pages-experience/)."
+    },
+    "1": {
+        "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Video list Endpoint.md\nParagraph location: \n\tVideo List\n\tReading\n\tFeature Permissions\n\nContent: \n### Feature Permissions  \n| Name | Description |\n| --- | --- |\n| Page Public Content Access | This [feature permission](https://developers.facebook.com/docs/apps/review/feature/) may be required. |\n",
+        "line_start": 10,
+        "line_end": 14,
+        "url": "https://developers.facebook.com/docs/pages/new-pages-experience/)."
+    },
+    "2": {
+        "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Video list Endpoint.md\nParagraph location: \n\tVideo List\n\tReading\n\tExample\n\nContent: \n### Example  \nHTTPPHP SDKJavaScript SDKAndroid SDKiOS SDK[Graph API Explorer](https://developers.facebook.com/tools/explorer/?method=GET&path=%7Bvideo-list-id%7D&version=v19.0)  \nGET /v19.0/{video-list-id} HTTP/1.1\nHost: graph.facebook.com  \n/* PHP SDK v5.0.0 */\n/* make the API call */\ntry {\n// Returns a `Facebook\\FacebookResponse` object\n$response = $fb->get(\n'/{video-list-id}',\n'{access-token}'\n);\n} catch(Facebook\\Exceptions\\FacebookResponseException $e) {\necho 'Graph returned an error: ' . $e->getMessage();\nexit;\n} catch(Facebook\\Exceptions\\FacebookSDKException $e) {\necho 'Facebook SDK returned an error: ' . $e->getMessage();\nexit;\n}\n$graphNode = $response->getGraphNode();\n/* handle the result */  \n/* make the API call */\nFB.api(\n\"/{video-list-id}\",\nfunction (response) {\nif (response && !response.error) {\n/* handle the result */\n}\n}\n);  \n/* make the API call */\nnew GraphRequest(\nAccessToken.getCurrentAccessToken(),\n\"/{video-list-id}\",\nnull,\nHttpMethod.GET,\nnew GraphRequest.Callback() {\npublic void onCompleted(GraphResponse response) {\n/* handle the result */\n}\n}\n).executeAsync();  \n/* make the API call */\nFBSDKGraphRequest *request = [[FBSDKGraphRequest alloc]\ninitWithGraphPath:@\"/{video-list-id}\"\nparameters:params\nHTTPMethod:@\"GET\"];\n[request startWithCompletionHandler:^(FBSDKGraphRequestConnection *connection,\nid result,\nNSError *error) {\n// Handle the result\n}];  \nIf you want to learn how to use the Graph API, read our [Using Graph API guide](https://developers.facebook.com/docs/graph-api/using-graph-api/).\n",
+        "line_start": 16,
+        "line_end": 69,
+        "url": "https://developers.facebook.com/docs/pages/new-pages-experience/)."
+    },
+    "3": {
+        "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Video list Endpoint.md\nParagraph location: \n\tVideo List\n\tReading\n\tParameters\n\nContent: \n### Parameters  \nThis endpoint doesn't have any parameters.\n",
+        "line_start": 77,
+        "line_end": 79,
+        "url": "https://developers.facebook.com/docs/pages/new-pages-experience/)."
+    },
+    "4": {
+        "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Video list Endpoint.md\nParagraph location: \n\tVideo List\n\tReading\n\tFields\n\nContent: \n### Fields  \n| Field | Description |\n| --- | --- |\n| `id`<br><br>numeric string | Video playlist ID<br><br>[Default](https://developers.facebook.com/docs/graph-api/using-graph-api/#fields) |\n| `creation_time`<br><br>datetime | The time when the playlist was created |\n| `description`<br><br>string | Description of the playlist |\n| `last_modified`<br><br>datetime | The time when the contents of the playlist was last changed |\n| `owner`<br><br>User\\|Page | Owner of the playlist |\n| `season_number`<br><br>int32 | Number of Season which this episode belongs to |\n| `thumbnail`<br><br>string | Thumbnail of the playlist |\n| `title`<br><br>string | Title of the playlist<br><br>[Default](https://developers.facebook.com/docs/graph-api/using-graph-api/#fields) |\n| `videos_count`<br><br>int32 | Number of Videos in the playlist |\n",
+        "line_start": 81,
+        "line_end": 93,
+        "url": "https://developers.facebook.com/docs/pages/new-pages-experience/)."
+    },
+    "5": {
+        "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Video list Endpoint.md\nParagraph location: \n\tVideo List\n\tReading\n\tEdges\n\nContent: \n### Edges  \n| Edge | Description |\n| --- | --- |\n| [`videos`](https://developers.facebook.com/docs/graph-api/reference/video-list/videos/)[](#) | Videos in the playlist |\n",
+        "line_start": 95,
+        "line_end": 99,
+        "url": "https://developers.facebook.com/docs/pages/new-pages-experience/)."
+    },
+    "6": {
+        "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Video list Endpoint.md\nParagraph location: \n\tVideo List\n\tReading\n\tError Codes\n\nContent: \n### Error Codes  \n| Error | Description |\n| --- | --- |\n| 100 | Invalid parameter |\n",
+        "line_start": 101,
+        "line_end": 105,
+        "url": "https://developers.facebook.com/docs/pages/new-pages-experience/)."
+    },
+    "7": {
+        "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Video list Endpoint.md\nParagraph location: \n\tVideo List\n\tCreating\n\nContent: \n## Creating  \nYou can't perform this operation on this endpoint.\n",
+        "line_start": 107,
+        "line_end": 109,
+        "url": "https://developers.facebook.com/docs/pages/new-pages-experience/)."
+    },
+    "8": {
+        "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Video list Endpoint.md\nParagraph location: \n\tVideo List\n\tUpdating\n\nContent: \n## Updating  \nYou can't perform this operation on this endpoint.\n",
+        "line_start": 111,
+        "line_end": 113,
+        "url": "https://developers.facebook.com/docs/pages/new-pages-experience/)."
+    },
+    "9": {
+        "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Video list Endpoint.md\nParagraph location: \n\tVideo List\n\tDeleting\n\nContent: \n## Deleting  \nYou can't perform this operation on this endpoint.  \n![](https://www.facebook.com/tr?id=675141479195042&ev=PageView&noscript=1)  \n![](https://www.facebook.com/tr?id=574561515946252&ev=PageView&noscript=1)  \n![](https://www.facebook.com/tr?id=1754628768090156&ev=PageView&noscript=1)\n",
+        "line_start": 115,
+        "line_end": 120,
+        "url": "https://developers.facebook.com/docs/pages/new-pages-experience/)."
+    },
+    "10": {
+        "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Video list Endpoint.md\nParagraph location: \n\tVideo List Videos\n\tReading\n\tNew Page Experience\n\nContent: \n### New Page Experience  \nThis endpoint is supported for [New Page Experience](https://developers.facebook.com/docs/pages/new-pages-experience/).\n",
+        "line_start": 6,
+        "line_end": 8,
+        "url": "https://developers.facebook.com/docs/pages/new-pages-experience/)."
+    },
+    "11": {
+        "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Video list Endpoint.md\nParagraph location: \n\tVideo List Videos\n\tReading\n\tExample\n\nContent: \n### Example  \nHTTPPHP SDKJavaScript SDKAndroid SDKiOS SDK[Graph API Explorer](https://developers.facebook.com/tools/explorer/?method=GET&path=%7Bvideo-list-id%7D%2Fvideos&version=v19.0)  \nGET /v19.0/{video-list-id}/videos HTTP/1.1\nHost: graph.facebook.com  \n/* PHP SDK v5.0.0 */\n/* make the API call */\ntry {\n// Returns a `Facebook\\FacebookResponse` object\n$response = $fb->get(\n'/{video-list-id}/videos',\n'{access-token}'\n);\n} catch(Facebook\\Exceptions\\FacebookResponseException $e) {\necho 'Graph returned an error: ' . $e->getMessage();\nexit;\n} catch(Facebook\\Exceptions\\FacebookSDKException $e) {\necho 'Facebook SDK returned an error: ' . $e->getMessage();\nexit;\n}\n$graphNode = $response->getGraphNode();\n/* handle the result */  \n/* make the API call */\nFB.api(\n\"/{video-list-id}/videos\",\nfunction (response) {\nif (response && !response.error) {\n/* handle the result */\n}\n}\n);  \n/* make the API call */\nnew GraphRequest(\nAccessToken.getCurrentAccessToken(),\n\"/{video-list-id}/videos\",\nnull,\nHttpMethod.GET,\nnew GraphRequest.Callback() {\npublic void onCompleted(GraphResponse response) {\n/* handle the result */\n}\n}\n).executeAsync();  \n/* make the API call */\nFBSDKGraphRequest *request = [[FBSDKGraphRequest alloc]\ninitWithGraphPath:@\"/{video-list-id}/videos\"\nparameters:params\nHTTPMethod:@\"GET\"];\n[request startWithCompletionHandler:^(FBSDKGraphRequestConnection *connection,\nid result,\nNSError *error) {\n// Handle the result\n}];  \nIf you want to learn how to use the Graph API, read our [Using Graph API guide](https://developers.facebook.com/docs/graph-api/using-graph-api/).\n",
+        "line_start": 16,
+        "line_end": 69,
+        "url": "https://developers.facebook.com/docs/pages/new-pages-experience/)."
+    },
+    "12": {
+        "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Video list Endpoint.md\nParagraph location: \n\tVideo List Videos\n\tReading\n\tParameters\n\nContent: \n### Parameters  \nThis endpoint doesn't have any parameters.\n",
+        "line_start": 77,
+        "line_end": 79,
+        "url": "https://developers.facebook.com/docs/pages/new-pages-experience/)."
+    },
+    "13": {
+        "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Video list Endpoint.md\nParagraph location: \n\tVideo List Videos\n\tReading\n\tFields\n\nContent: \n### Fields  \nReading from this edge will return a JSON formatted result:  \n{\n\"`data`\": \\[\\],\n\"`paging`\": {}\n}  \n#### `data`  \nA list of [Video](https://developers.facebook.com/docs/graph-api/reference/video/) nodes.  \n#### `paging`  \nFor more details about pagination, see the [Graph API guide](https://developers.facebook.com/docs/graph-api/using-graph-api/#paging).\n",
+        "line_start": 81,
+        "line_end": 91,
+        "url": "https://developers.facebook.com/docs/pages/new-pages-experience/)."
+    },
+    "14": {
+        "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Video list Endpoint.md\nParagraph location: \n\tVideo List Videos\n\tReading\n\tError Codes\n\nContent: \n### Error Codes  \n| Error | Description |\n| --- | --- |\n| 200 | Permissions error |\n| 100 | Invalid parameter |\n",
+        "line_start": 101,
+        "line_end": 106,
+        "url": "https://developers.facebook.com/docs/pages/new-pages-experience/)."
+    },
+    "15": {
+        "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Video list Endpoint.md\nParagraph location: \n\tVideo List Videos\n\tCreating\n\nContent: \n## Creating  \nYou can't perform this operation on this endpoint.\n",
+        "line_start": 107,
+        "line_end": 109,
+        "url": "https://developers.facebook.com/docs/pages/new-pages-experience/)."
+    },
+    "16": {
+        "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Video list Endpoint.md\nParagraph location: \n\tVideo List Videos\n\tUpdating\n\nContent: \n## Updating  \nYou can't perform this operation on this endpoint.\n",
+        "line_start": 111,
+        "line_end": 113,
+        "url": "https://developers.facebook.com/docs/pages/new-pages-experience/)."
+    },
+    "17": {
+        "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Video list Endpoint.md\nParagraph location: \n\tVideo List Videos\n\tDeleting\n\nContent: \n## Deleting  \nYou can't perform this operation on this endpoint.  \n![](https://www.facebook.com/tr?id=675141479195042&ev=PageView&noscript=1)  \n![](https://www.facebook.com/tr?id=574561515946252&ev=PageView&noscript=1)  \n![](https://www.facebook.com/tr?id=1754628768090156&ev=PageView&noscript=1)\n",
+        "line_start": 115,
+        "line_end": 120,
+        "url": "https://developers.facebook.com/docs/pages/new-pages-experience/)."
+    }
+}

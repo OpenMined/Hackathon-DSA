@@ -1,0 +1,20 @@
+{
+    "0": {
+        "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Profile Endpoint.md\nParagraph location: \n\nContent: \nThis document refers to an outdated version of Graph API.\u00a0Please [use the latest version.](https://developers.facebook.com/docs/graph-api/reference/v19.0/profile)\n",
+        "line_start": 0,
+        "line_end": 1,
+        "url": "https://developers.facebook.com/docs/graph-api/reference/v19.0/profile)"
+    },
+    "1": {
+        "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Profile Endpoint.md\nParagraph location: \n\tProfile `/{profile-id}`\n\nContent: \n# Profile `/{profile-id}`  \nA profile can be a:  \n* [User](https://developers.facebook.com/docs/graph-api/reference/user)  \n* [Page](https://developers.facebook.com/docs/graph-api/reference/page)  \n* [Group](https://developers.facebook.com/docs/graph-api/reference/group)  \n* [Event](https://developers.facebook.com/docs/graph-api/reference/event)  \n* [Application](https://developers.facebook.com/docs/graph-api/reference/app)  \nThe profile object is used within the Graph API to refer to the generic type that includes all of these other objects.  \nThe individual reference docs for each profile type should be used instead.\n",
+        "line_start": 2,
+        "line_end": 11,
+        "url": "https://developers.facebook.com/docs/graph-api/reference/v19.0/profile)"
+    },
+    "2": {
+        "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Profile Endpoint.md\nParagraph location: \n\tProfile `/{profile-id}`\n\tFields\n\nContent: \n## Fields  \nWhen something has a profile, Graph API returns the fields for that object.  \n![](https://www.facebook.com/tr?id=675141479195042&ev=PageView&noscript=1)  \n![](https://www.facebook.com/tr?id=574561515946252&ev=PageView&noscript=1)  \n![](https://www.facebook.com/tr?id=1754628768090156&ev=PageView&noscript=1)\n",
+        "line_start": 21,
+        "line_end": 26,
+        "url": "https://developers.facebook.com/docs/graph-api/reference/v19.0/profile)"
+    }
+}

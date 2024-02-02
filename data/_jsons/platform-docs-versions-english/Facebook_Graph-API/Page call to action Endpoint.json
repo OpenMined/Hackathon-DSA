@@ -1,0 +1,104 @@
+{
+    "0": {
+        "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Page call to action Endpoint.md\nParagraph location: \n\tPage Call To Action\n\tReading\n\nContent: \n# Page Call To Action  \n## Reading  \nReturns data on PageCallToAction node.\n",
+        "line_start": 0,
+        "line_end": 3,
+        "url": "https://developers.facebook.com/docs/pages/new-pages-experience/)."
+    },
+    "1": {
+        "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Page call to action Endpoint.md\nParagraph location: \n\tPage Call To Action\n\tReading\n\tNew Page Experience\n\nContent: \n### New Page Experience  \nThis endpoint is supported for [New Page Experience](https://developers.facebook.com/docs/pages/new-pages-experience/).\n",
+        "line_start": 6,
+        "line_end": 8,
+        "url": "https://developers.facebook.com/docs/pages/new-pages-experience/)."
+    },
+    "2": {
+        "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Page call to action Endpoint.md\nParagraph location: \n\tPage Call To Action\n\tReading\n\tExample\n\nContent: \n### Example  \nHTTPPHP SDKJavaScript SDKAndroid SDKiOS SDK[Graph API Explorer](https://developers.facebook.com/tools/explorer/?method=GET&path=%7Bpage-call-to-action-id%7D&version=v19.0)  \nGET /v19.0/{page-call-to-action-id} HTTP/1.1\nHost: graph.facebook.com  \n/* PHP SDK v5.0.0 */\n/* make the API call */\ntry {\n// Returns a `Facebook\\FacebookResponse` object\n$response = $fb->get(\n'/{page-call-to-action-id}',\n'{access-token}'\n);\n} catch(Facebook\\Exceptions\\FacebookResponseException $e) {\necho 'Graph returned an error: ' . $e->getMessage();\nexit;\n} catch(Facebook\\Exceptions\\FacebookSDKException $e) {\necho 'Facebook SDK returned an error: ' . $e->getMessage();\nexit;\n}\n$graphNode = $response->getGraphNode();\n/* handle the result */  \n/* make the API call */\nFB.api(\n\"/{page-call-to-action-id}\",\nfunction (response) {\nif (response && !response.error) {\n/* handle the result */\n}\n}\n);  \n/* make the API call */\nnew GraphRequest(\nAccessToken.getCurrentAccessToken(),\n\"/{page-call-to-action-id}\",\nnull,\nHttpMethod.GET,\nnew GraphRequest.Callback() {\npublic void onCompleted(GraphResponse response) {\n/* handle the result */\n}\n}\n).executeAsync();  \n/* make the API call */\nFBSDKGraphRequest *request = [[FBSDKGraphRequest alloc]\ninitWithGraphPath:@\"/{page-call-to-action-id}\"\nparameters:params\nHTTPMethod:@\"GET\"];\n[request startWithCompletionHandler:^(FBSDKGraphRequestConnection *connection,\nid result,\nNSError *error) {\n// Handle the result\n}];  \nIf you want to learn how to use the Graph API, read our [Using Graph API guide](https://developers.facebook.com/docs/graph-api/using-graph-api/).\n",
+        "line_start": 10,
+        "line_end": 63,
+        "url": "https://developers.facebook.com/docs/pages/new-pages-experience/)."
+    },
+    "3": {
+        "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Page call to action Endpoint.md\nParagraph location: \n\tPage Call To Action\n\tReading\n\tRequirements\n\nContent: \n### Requirements  \n| Type | Description |\n| --- | --- |\n| [App Review](https://developers.facebook.com/docs/apps/review) | Your app must be be approved for the following login permissions and features. |\n| [Login permissions](https://developers.facebook.com/docs/facebook-login/permissions) | None |\n| [Features](https://developers.facebook.com/docs/apps/review/feature) | [Page Public Content Access](https://developers.facebook.com/docs/apps/review/feature#reference-PAGES_ACCESS) |\n| [Tokens](https://developers.facebook.com/docs/facebook-login/access-tokens) | A User access token for a User who has a role on the Page |\n| [Permissions](https://developers.facebook.com/docs/facebook-login/permissions) | None |\n",
+        "line_start": 71,
+        "line_end": 79,
+        "url": "https://developers.facebook.com/docs/pages/new-pages-experience/)."
+    },
+    "4": {
+        "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Page call to action Endpoint.md\nParagraph location: \n\tPage Call To Action\n\tReading\n\tParameters\n\nContent: \n### Parameters  \nThis endpoint doesn't have any parameters.\n",
+        "line_start": 81,
+        "line_end": 83,
+        "url": "https://developers.facebook.com/docs/pages/new-pages-experience/)."
+    },
+    "5": {
+        "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Page call to action Endpoint.md\nParagraph location: \n\tPage Call To Action\n\tReading\n\tFields\n\nContent: \n### Fields  \n| Field | Description |\n| --- | --- |\n| `id`<br><br>numeric string | ID of the call-to-action<br><br>[Default](https://developers.facebook.com/docs/graph-api/using-graph-api/#fields) |\n| `android_app`<br><br>[Application](https://developers.facebook.com/docs/graph-api/reference/application/) | App that stores the destination info on Android |\n| `android_deeplink`<br><br>string | Destination deeplink for the call-to-action on Android |\n| `android_destination_type`<br><br>enum | Destination type for the call-to-action on Android |\n| `android_package_name`<br><br>string | Destination app for the call-to-action on Android |\n| `android_url`<br><br>string | Destination url for the call-to-action on Android |\n| `created_time`<br><br>datetime | Time when the call-to-action was created |\n| `email_address`<br><br>string | Email address that can be contacted by a user |\n| `from`<br><br>[Page](https://developers.facebook.com/docs/graph-api/reference/page/) | Page that owns the call-to-action |\n| `intl_number_with_plus`<br><br>string | International phone number with plus that can be called by a phone |\n| `iphone_app`<br><br>[Application](https://developers.facebook.com/docs/graph-api/reference/application/) | App that stores the destination info on iPhone |\n| `iphone_deeplink`<br><br>string | Destination deeplink for the call-to-action on iPhone |\n| `iphone_destination_type`<br><br>enum | Destination type for the call-to-action on iPhone |\n| `iphone_url`<br><br>string | Destination url for the call-to-action on iPhone |\n| `status`<br><br>enum | Current running status of this action<br><br>[Default](https://developers.facebook.com/docs/graph-api/using-graph-api/#fields) |\n| `type`<br><br>enum | The type of action<br><br>[Default](https://developers.facebook.com/docs/graph-api/using-graph-api/#fields) |\n| `updated_time`<br><br>datetime | Time when the call-to-action was last updated |\n| `web_destination_type`<br><br>enum | Destination type for the call-to-action on desktop |\n| `web_url`<br><br>string | Destination url for the call-to-action on desktop |\n",
+        "line_start": 85,
+        "line_end": 107,
+        "url": "https://developers.facebook.com/docs/pages/new-pages-experience/)."
+    },
+    "6": {
+        "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Page call to action Endpoint.md\nParagraph location: \n\tPage Call To Action\n\tReading\n\tError Codes\n\nContent: \n### Error Codes  \n| Error | Description |\n| --- | --- |\n| 100 | Invalid parameter |\n",
+        "line_start": 109,
+        "line_end": 113,
+        "url": "https://developers.facebook.com/docs/pages/new-pages-experience/)."
+    },
+    "7": {
+        "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Page call to action Endpoint.md\nParagraph location: \n\tPage Call To Action\n\tCreating\n\nContent: \n## Creating  \nYou can't perform this operation on this endpoint.\n",
+        "line_start": 115,
+        "line_end": 117,
+        "url": "https://developers.facebook.com/docs/pages/new-pages-experience/)."
+    },
+    "8": {
+        "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Page call to action Endpoint.md\nParagraph location: \n\tPage Call To Action\n\tUpdating\n\nContent: \n## Updating  \nYou can update a\u00a0[PageCallToAction](https://developers.facebook.com/docs/graph-api/reference/page-call-to-action/) by making a POST request to [`/{page_call_to_action_id}`](https://developers.facebook.com/docs/graph-api/reference/page-call-to-action/).\n",
+        "line_start": 119,
+        "line_end": 121,
+        "url": "https://developers.facebook.com/docs/pages/new-pages-experience/)."
+    },
+    "9": {
+        "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Page call to action Endpoint.md\nParagraph location: \n\tPage Call To Action\n\tUpdating\n\tRequirements\n\nContent: \n### Requirements  \n| Type | Description |\n| --- | --- |\n| [App Review](https://developers.facebook.com/docs/apps/review) | Your app must be be approved for the following login permissions and features. |\n| [Login permissions](https://developers.facebook.com/docs/facebook-login/permissions) | [`pages_manage_cta`](https://developers.facebook.com/docs/facebook-login/permissions#reference-pages_manage_cta) |\n| [Features](https://developers.facebook.com/docs/apps/review/feature) | None |\n| [Tokens](https://developers.facebook.com/docs/facebook-login/access-tokens) | A Page access token for an admin of the Page |\n| [Permissions](https://developers.facebook.com/docs/facebook-login/permissions) | [`pages_manage_cta`](https://developers.facebook.com/docs/facebook-login/permissions#reference-pages_manage_cta) |\n",
+        "line_start": 71,
+        "line_end": 79,
+        "url": "https://developers.facebook.com/docs/pages/new-pages-experience/)."
+    },
+    "10": {
+        "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Page call to action Endpoint.md\nParagraph location: \n\tPage Call To Action\n\tUpdating\n\tParameters\n\nContent: \n### Parameters  \n| Parameter | Description |\n| --- | --- |\n| `android_app_id`<br><br>int | ID of the App that stores the destination info on Android |\n| `android_destination_type`<br><br>enum {WEBSITE, APP\\_DEEPLINK, FACEBOOK\\_APP, PHONE\\_CALL, MESSENGER, EMAIL, SHOP\\_ON\\_FACEBOOK, NONE, BECOME\\_A\\_VOLUNTEER, FOLLOW, MINI\\_SHOP, MARKETPLACE\\_INVENTORY\\_PAGE, MOBILE\\_CENTER, MENU\\_ON\\_FACEBOOK} | Destination type for the call-to-action on Android |\n| `android_package_name`<br><br>string | Destination app for the call-to-action on Android |\n| `android_url`<br><br>URL | Destination url for the call-to-action on Android |\n| `email_address`<br><br>string | Email address that can be contacted by a user |\n| `intl_number_with_plus`<br><br>string | International phone number with plus that can be called through a phone |\n| `iphone_app_id`<br><br>int | ID fo the App that stores the destination info on iPhone |\n| `iphone_destination_type`<br><br>enum {WEBSITE, APP\\_DEEPLINK, FACEBOOK\\_APP, PHONE\\_CALL, MESSENGER, EMAIL, SHOP\\_ON\\_FACEBOOK, NONE, BECOME\\_A\\_VOLUNTEER, FOLLOW, MINI\\_SHOP, MARKETPLACE\\_INVENTORY\\_PAGE, MENU\\_ON\\_FACEBOOK} | Destination type for the call-to-action on iPhone |\n| `iphone_url`<br><br>URL | Destination url for the call-to-action on iPhone |\n| `type`<br><br>enum {BOOK\\_NOW, REQUEST\\_QUOTE, CALL\\_NOW, CHARITY\\_DONATE, CONTACT\\_US, DONATE\\_NOW, MESSAGE, OPEN\\_APP, PLAY\\_NOW, SHOP\\_NOW, SIGN\\_UP, WATCH\\_NOW, GET\\_OFFER, GET\\_OFFER\\_VIEW, BOOK\\_APPOINTMENT, LISTEN, EMAIL, LEARN\\_MORE, REQUEST\\_APPOINTMENT, GET\\_DIRECTIONS, BUY\\_TICKETS, PLAY\\_MUSIC, VISIT\\_GROUP, SHOP\\_ON\\_FACEBOOK, LOCAL\\_DEV\\_PLATFORM, INTERESTED, WOODHENGE\\_SUPPORT, BECOME\\_A\\_VOLUNTEER, VIEW\\_SHOP, PURCHASE\\_GIFT\\_CARDS, FOLLOW\\_PAGE, ORDER\\_FOOD, VIEW\\_INVENTORY, MOBILE\\_CENTER, VIEW\\_MENU} | The type of action |\n| `web_destination_type`<br><br>enum {EMAIL, MESSENGER, NONE, WEBSITE, SHOP\\_ON\\_FACEBOOK, BECOME\\_SUPPORTER, BECOME\\_A\\_VOLUNTEER, FOLLOW, MOBILE\\_CENTER} | Destination type for the call-to-action on desktop |\n| `web_url`<br><br>URL | Destination url for the call-to-action on desktop |\n",
+        "line_start": 81,
+        "line_end": 96,
+        "url": "https://developers.facebook.com/docs/pages/new-pages-experience/)."
+    },
+    "11": {
+        "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Page call to action Endpoint.md\nParagraph location: \n\tPage Call To Action\n\tUpdating\n\tReturn Type\n\nContent: \n### Return Type  \nThis endpoint supports [read-after-write](https://developers.facebook.com/docs/graph-api/advanced/#read-after-write) and will read the node to which you POSTed.  \nStruct {  \n`success`: bool,  \n}\n",
+        "line_start": 150,
+        "line_end": 155,
+        "url": "https://developers.facebook.com/docs/pages/new-pages-experience/)."
+    },
+    "12": {
+        "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Page call to action Endpoint.md\nParagraph location: \n\tPage Call To Action\n\tUpdating\n\tError Codes\n\nContent: \n### Error Codes  \n| Error | Description |\n| --- | --- |\n| 200 | Permissions error |\n| 100 | Invalid parameter |\n",
+        "line_start": 109,
+        "line_end": 114,
+        "url": "https://developers.facebook.com/docs/pages/new-pages-experience/)."
+    },
+    "13": {
+        "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Page call to action Endpoint.md\nParagraph location: \n\tPage Call To Action\n\tDeleting\n\nContent: \n## Deleting  \nYou can delete a\u00a0[PageCallToAction](https://developers.facebook.com/docs/graph-api/reference/page-call-to-action/) by making a DELETE request to [`/{page_call_to_action_id}`](https://developers.facebook.com/docs/graph-api/reference/page-call-to-action/).\n",
+        "line_start": 167,
+        "line_end": 169,
+        "url": "https://developers.facebook.com/docs/pages/new-pages-experience/)."
+    },
+    "14": {
+        "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Page call to action Endpoint.md\nParagraph location: \n\tPage Call To Action\n\tDeleting\n\tRequirements\n\nContent: \n### Requirements  \n| Type | Description |\n| --- | --- |\n| [App Review](https://developers.facebook.com/docs/apps/review) | Your app must be be approved for the following login permissions and features. |\n| [Login permissions](https://developers.facebook.com/docs/facebook-login/permissions) | [`pages_manage_cta`](https://developers.facebook.com/docs/facebook-login/permissions#reference-pages_manage_cta) |\n| [Features](https://developers.facebook.com/docs/apps/review/feature) | None |\n| [Tokens](https://developers.facebook.com/docs/facebook-login/access-tokens) | A Page access token for an admin of the Page |\n| [Permissions](https://developers.facebook.com/docs/facebook-login/permissions) | [`pages_manage_cta`](https://developers.facebook.com/docs/facebook-login/permissions#reference-pages_manage_cta) |\n",
+        "line_start": 71,
+        "line_end": 79,
+        "url": "https://developers.facebook.com/docs/pages/new-pages-experience/)."
+    },
+    "15": {
+        "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Page call to action Endpoint.md\nParagraph location: \n\tPage Call To Action\n\tDeleting\n\tParameters\n\nContent: \n### Parameters  \nThis endpoint doesn't have any parameters.\n",
+        "line_start": 81,
+        "line_end": 83,
+        "url": "https://developers.facebook.com/docs/pages/new-pages-experience/)."
+    },
+    "16": {
+        "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Page call to action Endpoint.md\nParagraph location: \n\tPage Call To Action\n\tDeleting\n\tError Codes\n\nContent: \n### Error Codes  \n| Error | Description |\n| --- | --- |\n| 200 | Permissions error |  \n![](https://www.facebook.com/tr?id=675141479195042&ev=PageView&noscript=1)  \n![](https://www.facebook.com/tr?id=574561515946252&ev=PageView&noscript=1)  \n![](https://www.facebook.com/tr?id=1754628768090156&ev=PageView&noscript=1)\n",
+        "line_start": 109,
+        "line_end": 116,
+        "url": "https://developers.facebook.com/docs/pages/new-pages-experience/)."
+    }
+}

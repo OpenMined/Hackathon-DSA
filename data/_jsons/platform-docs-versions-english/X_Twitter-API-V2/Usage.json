@@ -1,0 +1,68 @@
+{
+    "0": {
+        "content": "Source document: data/platform-docs-versions-english/X_Twitter-API-V2/Usage.md\nParagraph location: \n\tIntroduction\n\nContent: \n## Introduction  \nThe Usage API in the Twitter API v2 allows developers to programmatically retrieve their project usage. Using thie endpoint, developers can keep a track and monitor of the number of Tweets they have pulled for a given billing cycle.  \nDevelopers can use the GET endpoint to get the daily project usage for upto the last 90 days. The usage can also be aggregated per client app connected to your peoject.  \nThere is a app rate limit of 50 requests per 15 minutes for this GET endpoint.\n",
+        "line_start": 2,
+        "line_end": 6,
+        "url": "https://developer.twitter.com/en/docs/authentication/oauth-2-0/application-only)"
+    },
+    "1": {
+        "content": "Source document: data/platform-docs-versions-english/X_Twitter-API-V2/Usage.md\nParagraph location: \n\tIntroduction\n\tGetting started\n\nContent: \n### Getting started  \nTo use this endpoint, you need a\u00a0[bearer token](https://developer.twitter.com/en/docs/authentication/oauth-2-0/application-only)\u00a0from the\u00a0[developer portal](https://developer.twitter.com/en/portal/dashboard). Once you have the bearer token,\u00a0 you can call the usage API as shown below:  \n`curl 'https://api.twitter.com/2/usage/tweets' --header 'Authorization: Bearer XXXXX'`  \nIf the request is successful, you should see the JSON response as shown below:  \n`{     \"data\": {         \"cap_reset_day\": 10,         \"project_cap\": \"5000000000\",         \"project_id\": \"1369785403853424\",         \"project_usage\": \"43435\"     } }`  \n**Account setup**  \nTo access these endpoints, you will need:  \n* An approved\u00a0[developer account](https://developer.twitter.com/en/portal/petition/essential/basic-info).\n* To authenticate using the keys and tokens from a\u00a0[developer App](https://developer.twitter.com/en/docs/apps)\u00a0that is located within a\u00a0[Project](https://developer.twitter.com/en/docs/projects).  \nLearn more about getting access to the Twitter API v2 endpoints in our\u00a0[getting started guide](https://developer.twitter.com/en/docs/twitter-api/getting-started/getting-access-to-the-twitter-api).  \n[Sample code](https://github.com/twitterdev/Twitter-API-v2-sample-code)  \n[Run in Postman](https://t.co/twitter-api-postman)\n",
+        "line_start": 10,
+        "line_end": 22,
+        "url": "https://developer.twitter.com/en/docs/authentication/oauth-2-0/application-only)"
+    },
+    "2": {
+        "content": "Source document: data/platform-docs-versions-english/X_Twitter-API-V2/Usage.md\nParagraph location: \n\tSupporting resources\n\nContent: \n## Supporting resources  \n[Learn how to use Postman](https://developer.twitter.com/en/docs/tutorials/postman-getting-started \"Learn how to use Postman\")  \n[Troubleshoot an error](https://developer.twitter.com/en/support/twitter-api \"Troubleshoot an error\")  \n[API Reference](https://developer.twitter.com/en/docs/twitter-api/tweets/manage-tweets/api-reference \"API Reference\")  \nAPI reference\n",
+        "line_start": 35,
+        "line_end": 40,
+        "url": "https://developer.twitter.com/en/docs/authentication/oauth-2-0/application-only)"
+    },
+    "3": {
+        "content": "Source document: data/platform-docs-versions-english/X_Twitter-API-V2/Usage.md\nParagraph location: \n\tAPI reference index\n\tTweets\n\nContent: \n## API reference index  \n### Tweets  \n|     |     |\n| --- | --- |\n| Get Tweets Usage | [GET /2/usage/tweets](https://developer.twitter.com/en/docs/twitter-api/usage/tweets/api-reference/get-usage-tweets) |  \nGET /2/usage/tweets\n",
+        "line_start": 45,
+        "line_end": 51,
+        "url": "https://developer.twitter.com/en/docs/authentication/oauth-2-0/application-only)"
+    },
+    "4": {
+        "content": "Source document: data/platform-docs-versions-english/X_Twitter-API-V2/Usage.md\nParagraph location: \n\tGET /2/usage/tweets\n\nContent: \n# GET /2/usage/tweets  \nGet the Tweet usage within the context of a project\n",
+        "line_start": 55,
+        "line_end": 57,
+        "url": "https://developer.twitter.com/en/docs/authentication/oauth-2-0/application-only)"
+    },
+    "5": {
+        "content": "Source document: data/platform-docs-versions-english/X_Twitter-API-V2/Usage.md\nParagraph location: \n\tGET /2/usage/tweets\n\tEndpoint URL\n\nContent: \n### Endpoint URL  \n`https://api.twitter.com/2/usage/tweets`\n",
+        "line_start": 59,
+        "line_end": 61,
+        "url": "https://developer.twitter.com/en/docs/authentication/oauth-2-0/application-only)"
+    },
+    "6": {
+        "content": "Source document: data/platform-docs-versions-english/X_Twitter-API-V2/Usage.md\nParagraph location: \n\tGET /2/usage/tweets\n\tAuthentication and rate limits\n\nContent: \n### Authentication and rate limits  \n|     |     |\n| --- | --- |\n| Authentication methods  <br>supported by this endpoint | [OAuth 2.0 App-only](https://developer.twitter.com/en/docs/authentication/oauth-2-0/application-only \"Use this method to obtain information in the context of an unauthenticated public user. This method is for developers that just need read-only access to public information. Click to learn how to obtain an OAuth 2.0 App Access Token.\") |\n| [Rate limit](https://developer.twitter.com/en/docs/rate-limits) | App rate limit (Application-only): 50 requests per 15-minute window shared among all users of your app |\n",
+        "line_start": 64,
+        "line_end": 69,
+        "url": "https://developer.twitter.com/en/docs/authentication/oauth-2-0/application-only)"
+    },
+    "7": {
+        "content": "Source document: data/platform-docs-versions-english/X_Twitter-API-V2/Usage.md\nParagraph location: \n\tGET /2/usage/tweets\n\tQuery parameters\n\nContent: \n### Query parameters  \n| Name | Type | Description |\n| --- | --- | --- |\n| `days`  <br>\u00a0Optional | number | The number of days for which you need the Tweet usage for. You can get usage for upto 90 days. |\n| `usage.fields`  <br>\u00a0Optional | enum (`daily_client_app_usage`, `daily_project_usage`) | This parameter is used to specify if you want the daily usage returned and at a client app level. |\n",
+        "line_start": 71,
+        "line_end": 76,
+        "url": "https://developer.twitter.com/en/docs/authentication/oauth-2-0/application-only)"
+    },
+    "8": {
+        "content": "Source document: data/platform-docs-versions-english/X_Twitter-API-V2/Usage.md\nParagraph location: \n\tGET /2/usage/tweets\n\tExample code with offical [SDKs](https://developer.twitter.com/en/docs/twitter-api/tools-and-libraries/sdks/overview)\n\nContent: \n### Example code with offical [SDKs](https://developer.twitter.com/en/docs/twitter-api/tools-and-libraries/sdks/overview)  \n* [TypeScript](#tab0)\n* [Java](#tab1)  \nTypeScript  \nJava  \n`(async () => {   try {     const getUsage =       await twitterClient.usage.getUsage();     console.dir(getUsage, {       depth: null,     });   } catch (error) {     console.log(error);   } })();`  \n`try {     UsageResponse result = apiInstance.usage().getUsage();     System.out.println(result); } catch (ApiException e) {     System.err.println(\"Exception when calling UsageApi#getUsage\");     System.err.println(\"Status code: \" + e.getCode());     System.err.println(\"Reason: \" + e.getResponseBody());     System.err.println(\"Response headers: \" + e.getResponseHeaders());     e.printStackTrace(); }`\n",
+        "line_start": 81,
+        "line_end": 88,
+        "url": "https://developer.twitter.com/en/docs/authentication/oauth-2-0/application-only)"
+    },
+    "9": {
+        "content": "Source document: data/platform-docs-versions-english/X_Twitter-API-V2/Usage.md\nParagraph location: \n\tGET /2/usage/tweets\n\tExample responses\n\nContent: \n### Example responses  \n* [Default Fields](#tab0)\n* [Optional Fields](#tab1)  \nDefault Fields  \nOptional Fields  \n`{   \"data\": {     \"cap_reset_day\": 10,     \"project_cap\": \"2000000\",     \"project_id\": \"1281043626347900822499\",     \"project_usage\": \"2007\"   } }`  \n`{   \"data\": {     \"daily_client_app_usage\": [       {         \"usage\": [           {             \"date\": \"2023-11-01T00:00:00.000Z\",             \"usage\": \"200\"           }         ],         \"client_app_id\": \"101111140\",         \"usage_result_count\": 1       }     ],     \"project_cap\": \"2000000\",     \"daily_project_usage\": {       \"project_id\": \"1281043626347900822499\",       \"usage\": [         {           \"date\": \"2023-11-01T00:00:00.000Z\",           \"usage\": \"200\"         }       ]     },     \"project_usage\": \"200\",     \"cap_reset_day\": 5,     \"project_id\": \"1281043626347900822499\"   } }`\n",
+        "line_start": 96,
+        "line_end": 103,
+        "url": "https://developer.twitter.com/en/docs/authentication/oauth-2-0/application-only)"
+    },
+    "10": {
+        "content": "Source document: data/platform-docs-versions-english/X_Twitter-API-V2/Usage.md\nParagraph location: \n\tGET /2/usage/tweets\n\tResponse fields\n\nContent: \n### Response fields  \n| Name | Type | Description |\n| --- | --- | --- |\n| `project_id` | string | The unique identifier for this project. |\n| `project_cap` | string | The total number of Tweets that can be read with this project per month. |\n| `project_usage` | string | The total number of Tweets that have been read with this project in the current billing cycle. |\n| `cap_reset_day` | integer | The day of the month when the Tweet cap is reset. |\n| `daily_project_usage` | object | This object and its fields contain daily usage breakdown for a project. |\n| `daily_project_usage.project_id` | string | The unique identifier for this project. |\n| `daily_project_usage.usage` | array | This array contains the usage information. |\n| `daily_project_usage.usage.date` | date (ISO 8601) | The date for which the usage is returned. |\n| `daily_project_usage.usage.usage` | string | The project usage for a day. |\n| `daily_client_app_usage` | array | This object and its fields contain daily usage breakdown per client app. |\n| `daily_client_app_usage.usage` | array | This array contains the usage information. |\n| `daily_client_app_usage.usage.date` | date (ISO 8601) | The date for which the usage is returned. |\n| `daily_client_app_usage.usage.usage` | string | The project usage for a day. |\n",
+        "line_start": 111,
+        "line_end": 127,
+        "url": "https://developer.twitter.com/en/docs/authentication/oauth-2-0/application-only)"
+    }
+}

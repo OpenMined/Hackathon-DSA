@@ -1,0 +1,404 @@
+{
+    "0": {
+        "content": "Source document: data/platform-docs-versions-english/X_Twitter-API-V1/Media.md\nParagraph location: \n\nContent: \nOverview  \nA media object represents a single photo, video or animated GIF. Media objects are used by many endpoints within the Twitter API, and may be included in Tweets, Direct Messages, user profiles, advertising creatives and elsewhere. Each media object may have multiple display or playback variants, with different resolutions or formats.\n",
+        "line_start": 0,
+        "line_end": 2,
+        "url": "https://developer.twitter.com/en/docs/tweets/post-and-engage/api-reference/post-statuses-update.html))"
+    },
+    "1": {
+        "content": "Source document: data/platform-docs-versions-english/X_Twitter-API-V1/Media.md\nParagraph location: \n\tMedia types & size restrictions\n\nContent: \n## Media types & size restrictions  \nSize restrictions for uploading via API  \n* Image 5 MB\n* GIF 15 MB\n* Video 512 MB (when using media\\_category=amplify)\n",
+        "line_start": 5,
+        "line_end": 10,
+        "url": "https://developer.twitter.com/en/docs/tweets/post-and-engage/api-reference/post-statuses-update.html))"
+    },
+    "2": {
+        "content": "Source document: data/platform-docs-versions-english/X_Twitter-API-V1/Media.md\nParagraph location: \n\tCreation\n\nContent: \n## Creation  \nObjects such as Tweets, Direct Messages, user profile pictures, hosted Ads cards, etc. can contain one or more media objects. These top-level objects are collectively known as entities. The relevant entity creation API (e.g.\u00a0[POST statuses/update](https://developer.twitter.com/en/docs/tweets/post-and-engage/api-reference/post-statuses-update.html)) can be passed one or more media objects using a unique\u00a0media\\_id.  \nAn entity which contains media object(s) can be created by following these steps:  \n1. Upload the media file(s) using either the recommended\u00a0[chunked](https://developer.twitter.com/content/developer-twitter/en/docs/media/upload-media/uploading-media/chunked-media-upload)\u00a0upload (images/GIF/video), or the older\u00a0[simple](https://developer.twitter.com/en/docs/media/upload-media/api-reference/post-media-upload.html)\u00a0upload (images only).\n2. Receive a\u00a0media\\_id from step 1. This step may be repeated multiple times with different media if the entity allows multiple\u00a0media\\_id\u00a0parameters to be passed in.\n3. Create the entity by calling the appropriate endpoint, including the\u00a0media\\_id\u00a0and other required parameters. For example, attach a\u00a0media\\_id\u00a0to a Tweet using the\u00a0[POST statuses/update](https://developer.twitter.com/en/docs/tweets/post-and-engage/api-reference/post-statuses-update.html)\u00a0endpoint.\n",
+        "line_start": 13,
+        "line_end": 19,
+        "url": "https://developer.twitter.com/en/docs/tweets/post-and-engage/api-reference/post-statuses-update.html))"
+    },
+    "3": {
+        "content": "Source document: data/platform-docs-versions-english/X_Twitter-API-V1/Media.md\nParagraph location: \n\tRetrieving\n\nContent: \n## Retrieving  \nPlease refer to the [Media Object](https://developer.twitter.com/content/developer-twitter/en/docs/tweets/data-dictionary/overview/entities-object#media) in the Tweet data dictionary.  \nMedia Best Practices  \nThere are a few important concepts to understand when using the [POST media/upload](https://developer.twitter.com/en/docs/media/upload-media/uploading-media/media-best-practices) endpoint. Uploading media with OAuth can be a bit tricky, so we\u2019ve outlined some things to keep in mind as well as a working sample of how to use this endpoint here.\n",
+        "line_start": 23,
+        "line_end": 27,
+        "url": "https://developer.twitter.com/en/docs/tweets/post-and-engage/api-reference/post-statuses-update.html))"
+    },
+    "4": {
+        "content": "Source document: data/platform-docs-versions-english/X_Twitter-API-V1/Media.md\nParagraph location: \n\tKeep in mind\n\nContent: \n## Keep in mind  \n* Because the method uses multipart POST, [OAuth](https://developer.twitter.com/en/docs/basics/authentication/guides/creating-a-signature) is handled differently. POST or query string parameters are not used when calculating an OAuth signature basestring or signature. Only the `oauth_*` parameters are used.\n* You may attach up to 4 photos, 1 animated GIF or 1 video in a Tweet.\n* The image passed should be the raw binary of the image or binary base64 encoded, no need to otherwise encode or escape the contents as long as the Content-Type is set appropriately (when in doubt: `application/octet-stream`).\n* When posting base64 encoded images, be sure to set the \u201cContent-Transfer-Encoding: base64\u201d on the image part of the message.\n* Multi-part message boundaries must be on their own line and terminated by a CRLF.\n* For working examples of how to POST using this endpoint, we recommend testing with [twurl](https://github.com/twitter/twurl). Also, take a look at the [Twitter Libraries](https://developer.twitter.com/en/docs/developer-utilities/twitter-libraries.html) available, including the [large-video-upload-python](https://github.com/twitterdev/large-video-upload-python) library.\n* Use the `media_id_string` provided in the API response for Javascript and any other languages that cannot accurately represent a long integer.\n",
+        "line_start": 31,
+        "line_end": 39,
+        "url": "https://developer.twitter.com/en/docs/tweets/post-and-engage/api-reference/post-statuses-update.html))"
+    },
+    "5": {
+        "content": "Source document: data/platform-docs-versions-english/X_Twitter-API-V1/Media.md\nParagraph location: \n\tMedia Categories\n\nContent: \n## Media Categories  \nThe Media Category parameter defines the use case of the media file to be uploaded, and can affect file size limits or other constraints enforced for media uploads. It\u2019s important to use the correct media category when uploading media to avoid problems when trying to use the media. It is an optional value passed in the INIT request as part of the upload flow. If media category is not specified, the uploaded media is assumed to be a Tweet media (image, video, or GIF), depending on the content type.  \nThe most common media categories are as follows:  \n* `tweet_image`\n* `tweet_video`\n* `tweet_gif`\n* `dm_image`\n* `dm_video`\n* `dm_gif`\n* `subtitles`  \nIf you are an Ads API partner please refer to [these docs](https://developer.twitter.com/en/docs/ads/creatives/overview/promoted-video-overview) for more information on recommended media category for promoted video.\n",
+        "line_start": 42,
+        "line_end": 53,
+        "url": "https://developer.twitter.com/en/docs/tweets/post-and-engage/api-reference/post-statuses-update.html))"
+    },
+    "6": {
+        "content": "Source document: data/platform-docs-versions-english/X_Twitter-API-V1/Media.md\nParagraph location: \n\tImage specifications and recommendations\n\nContent: \n## Image specifications and recommendations  \nImage files must meet all of the following criteria:  \n* Supported image media types: JPG, PNG, GIF, WEBP\n* Image size <= 5 MB, animated GIF size <= 15 MB  \nThe file size limit above is enforced by the media upload endpoint. In addition, there is a separate product entity specific file size limit which is applied when calling the Tweet creation (or similar) endpoints with `media_id`. The file size limit and other constraints may vary depending on the `media_category` parameter.\n",
+        "line_start": 59,
+        "line_end": 64,
+        "url": "https://developer.twitter.com/en/docs/tweets/post-and-engage/api-reference/post-statuses-update.html))"
+    },
+    "7": {
+        "content": "Source document: data/platform-docs-versions-english/X_Twitter-API-V1/Media.md\nParagraph location: \n\tAnimated GIF recommendations\n\nContent: \n## Animated GIF recommendations  \nA GIF may fail during Tweet creation even if it is within the file size limit. Adhere to the following constraints to improve success rates.  \n* Resolution should be <= 1280x1080 (width x height)\n* Number of frames <= 350\n* Number of pixels (width \\* height \\* num\\_frames) <= 300 million\n* File size <= 15Mb  \nIn order to process larger GIFs, use the [chunked upload endpoint](https://developer.twitter.com/en/docs/media/upload-media/api-reference/post-media-upload-init.html) with the `media_category` parameter. This allows the server to process the GIF file asynchronously, which is a requirement for processing larger files. Pass `media_category=tweet_gif` to enable async upload behavior for Tweets with an animated GIF.\n",
+        "line_start": 69,
+        "line_end": 76,
+        "url": "https://developer.twitter.com/en/docs/tweets/post-and-engage/api-reference/post-statuses-update.html))"
+    },
+    "8": {
+        "content": "Source document: data/platform-docs-versions-english/X_Twitter-API-V1/Media.md\nParagraph location: \n\tVideo specifications and recommendations\n\nContent: \n## Video specifications and recommendations  \nPlease use the [Async Path](https://developer.twitter.com/en/docs/media/upload-media/uploading-media/chunked-media-upload) for media uploads.  \n**Recommended:**  \n* Recommended Video Codec: H264 High Profile\n* Recommended Frame Rates: 30 FPS, 60 FPS\n* Recommended Video Resolution: 1280x720 (landscape), 720x1280 (portrait), 720x720 (square)\n* Recommended Minimum Video Bitrate: 5,000 kbps\n* Recommended Minimum Audio Bitrate: 128 kbps\n* Recommended Audio Codec: AAC LC\n* Recommended Aspect Ratio: 16:9 (landscape or portrait), 1:1 (square)  \n**Advanced:**  \n* Frame rate must be 60 FPS or less\n* Dimensions must be between 32x32 and 1280x1024\n* File size must not exceed 512 mb\n* Duration must be between 0.5 seconds and 140 seconds\n* Aspect ratio must be between 1:3 and 3:1\n* Must have 1:1 [pixel aspect ratio](https://en.wikipedia.org/wiki/Pixel_aspect_ratio)\n* Only [YUV](https://en.wikipedia.org/wiki/YUV) 4:2:0 pixel format is supported\n* Audio must be [AAC with Low Complexity profile](https://en.wikipedia.org/wiki/Advanced_Audio_Coding#Modular_encoding). High-Efficiency AAC is not supported\n* Audio must be mono or stereo, not 5.1 or greater\n* Must not have [open GOP](https://en.wikipedia.org/wiki/Group_of_pictures)\n* Must use [progressive scan](https://en.wikipedia.org/wiki/Progressive_scan)  \n**Additional Information:**  \nIn the table below each row represents an upload recommendation, but is not a requirement. All uploads are processed for optimization across multiple platforms.  \n|     |     |     |     |     |\n| --- | --- | --- | --- | --- |\n| **Orientation** | **Width** | **Height** | **Video Bitrate** | **Audio Bitrate** |\n| Landscape | 1280 | 720 | 2048K | 128K |\n| Landscape | 640 | 360 | 768K | 64K |\n| Landscape | 320 | 180 | 256K | 64K |\n| Portrait | 720 | 1280 | 2048K | 128K |\n| Portrait | 360 | 640 | 768K | 64K |\n| Portrait | 180 | 320 | 256K | 64K |\n| Square | 720 | 720 | 2048K | 128K |\n| Square | 480 | 480 | 768K | 64K |\n| Square | 240 | 240 | 256K | 32K |  \nFor an example of how to upload media, please see the [chunked media upload documentation](https://developer.twitter.com/content/developer-twitter/en/docs/media/upload-media/uploading-media/chunked-media-upload).\n",
+        "line_start": 81,
+        "line_end": 118,
+        "url": "https://developer.twitter.com/en/docs/tweets/post-and-engage/api-reference/post-statuses-update.html))"
+    },
+    "9": {
+        "content": "Source document: data/platform-docs-versions-english/X_Twitter-API-V1/Media.md\nParagraph location: \n\tTroubleshooting\n\nContent: \n## Troubleshooting  \nFor issues with the Media APIs, browse the\u00a0[Media API category](https://twittercommunity.com/c/twitter-api/media-apis/34) in the developer forums for an answer.  \nChunked media upload  \nExample of chunked video media/upload  \n----------------------------------------  \nUsing the\u00a0[chunked POST media/upload](https://developer.twitter.com/en/docs/media/upload-media/api-reference/post-media-upload-init.html)\u00a0endpoints requires an adjusted workflow from single image uploads. For video or chunked uploads, you must:  \n* Initialize the upload using the\u00a0INIT\u00a0command\n* Upload each chunk of bytes using the\u00a0APPEND\u00a0command\n* Complete the upload using the\u00a0FINALIZE\u00a0command  \nSee the\u00a0[large video upload sample](https://github.com/twitterdev/large-video-upload-python/)\u00a0for an example written in Python.  \nBelow is a working example using the command-line\u00a0[twurl](https://github.com/twitter/twurl)\u00a0utility. To see full headers of the requests and responses when using\u00a0twurl, use the\u00a0-t\u00a0option to enable trace mode.  \n**INIT**  \n`twurl -H upload.twitter.com \"/1.1/media/upload.json\" -d \"command=INIT&media_type=video/mp4&total_bytes=4430752\"`  \n`{   \"media_id\": 601413451156586496,   \"media_id_string\": \"601413451156586496\",   \"expires_after_secs\": 3599 }`  \n**APPEND**  \n`twurl -H upload.twitter.com \"/1.1/media/upload.json\" -d \"command=APPEND&media_id=601413451156586496&segment_index=0\" --file /path/to/video.mp4 --file-field \"media\"`  \nHTTP 2XX will be returned with an empty response body on successful upload.  \n**FINALIZE**  \n`twurl -H upload.twitter.com \"/1.1/media/upload.json\" -d \"command=FINALIZE&media_id=601413451156586496\"`  \n`{   \"media_id\": 601413451156586496,   \"media_id_string\": \"601413451156586496\",   \"size\": 4430752,   \"expires_after_secs\": 3600,   \"video\": {     \"video_type\": \"video/mp4\"   } }`  \nTroubleshooting  \n------------------  \nFor issues with the Media APIs:  \n* Browse the\u00a0[Media API category](https://twittercommunity.com/c/twitter-api/media-apis/)\u00a0in the developer forums.  \nPOST media/upload (INIT)  \npost-media-upload-init\n",
+        "line_start": 130,
+        "line_end": 156,
+        "url": "https://developer.twitter.com/en/docs/tweets/post-and-engage/api-reference/post-statuses-update.html))"
+    },
+    "10": {
+        "content": "Source document: data/platform-docs-versions-english/X_Twitter-API-V1/Media.md\nParagraph location: \n\tPOST media/upload (INIT)\n\tOverview[\u00b6](#overview \"Permalink to this headline\")\n\nContent: \n# POST media/upload (INIT)  \n## Overview[\u00b6](#overview \"Permalink to this headline\")  \nThe `INIT` command request is used to initiate a file upload session. It returns a `media_id` which should be used to execute all subsequent requests. The next step after a successful return from INIT command is the [APPEND command](https://developer.twitter.com/en/docs/media/upload-media/api-reference/post-media-upload-append).  \nSee the [Uploading media guide](https://developer.twitter.com/en/docs/media/upload-media/uploading-media/media-best-practices) for constraints and requirements on media files.\n",
+        "line_start": 185,
+        "line_end": 189,
+        "url": "https://developer.twitter.com/en/docs/tweets/post-and-engage/api-reference/post-statuses-update.html))"
+    },
+    "11": {
+        "content": "Source document: data/platform-docs-versions-english/X_Twitter-API-V1/Media.md\nParagraph location: \n\tPOST media/upload (INIT)\n\tRequest[\u00b6](#request \"Permalink to this headline\")\n\nContent: \n## Request[\u00b6](#request \"Permalink to this headline\")  \nRequests should be either `multipart/form-data` or `application/x-www-form-urlencoded` POST formats.  \n**Note:** The domain for this endpoint is **upload.twitter.com**\n",
+        "line_start": 193,
+        "line_end": 196,
+        "url": "https://developer.twitter.com/en/docs/tweets/post-and-engage/api-reference/post-statuses-update.html))"
+    },
+    "12": {
+        "content": "Source document: data/platform-docs-versions-english/X_Twitter-API-V1/Media.md\nParagraph location: \n\tPOST media/upload (INIT)\n\tResponse[\u00b6](#response \"Permalink to this headline\")\n\nContent: \n## Response[\u00b6](#response \"Permalink to this headline\")  \nThe response provides a media identifier in the `media_id` (64-bit integer) and `media_id_string` (string) fields. Use the `media_id_string` provided in the API response from JavaScript and other languages that cannot accurately represent a long integer.  \nThe entire file must be uploaded before `expires_after_secs` seconds.  \nThe `additional_owners` field enables media to be uploaded media as user A and then used to create Tweets as user B.\n",
+        "line_start": 199,
+        "line_end": 203,
+        "url": "https://developer.twitter.com/en/docs/tweets/post-and-engage/api-reference/post-statuses-update.html))"
+    },
+    "13": {
+        "content": "Source document: data/platform-docs-versions-english/X_Twitter-API-V1/Media.md\nParagraph location: \n\tPOST media/upload (INIT)\n\tResource URL[\u00b6](#resource-url \"Permalink to this headline\")\n\nContent: \n## Resource URL[\u00b6](#resource-url \"Permalink to this headline\")  \n`https://upload.twitter.com/1.1/media/upload.json`\n",
+        "line_start": 207,
+        "line_end": 209,
+        "url": "https://developer.twitter.com/en/docs/tweets/post-and-engage/api-reference/post-statuses-update.html))"
+    },
+    "14": {
+        "content": "Source document: data/platform-docs-versions-english/X_Twitter-API-V1/Media.md\nParagraph location: \n\tPOST media/upload (INIT)\n\tResource Information[\u00b6](#resource-information \"Permalink to this headline\")\n\nContent: \n## Resource Information[\u00b6](#resource-information \"Permalink to this headline\")  \n|     |     |\n| --- | --- |\n| Response formats | JSON |\n| Requires authentication? | Yes (user context only) |\n| Rate limited? | Yes |\n",
+        "line_start": 211,
+        "line_end": 217,
+        "url": "https://developer.twitter.com/en/docs/tweets/post-and-engage/api-reference/post-statuses-update.html))"
+    },
+    "15": {
+        "content": "Source document: data/platform-docs-versions-english/X_Twitter-API-V1/Media.md\nParagraph location: \n\tPOST media/upload (INIT)\n\tParameters[\u00b6](#parameters \"Permalink to this headline\")\n\nContent: \n## Parameters[\u00b6](#parameters \"Permalink to this headline\")  \n|     |     |     |     |     |\n| --- | --- | --- | --- | --- |\n| Name | Required | Description | Default Value | Example |\n| command | required | Must be set to `INIT` (case sensitive). |     |     |\n| total\\_bytes | required | The size of the media being uploaded in bytes. |     |     |\n| media\\_type | required | The MIME type of the media being uploaded. |     | `video/mp4` |\n| media\\_category | sometimes | A string enum value which identifies a media usecase. This identifier is used to enforce usecase specific constraints (e.g. file size, video duration) and enable advanced features. |     |     |\n| additional\\_owners | optional | A comma-separated list of user IDs to set as additional owners allowed to use the returned `media_id` in Tweets or Cards. Up to 100 additional owners may be specified. |     |     |\n",
+        "line_start": 219,
+        "line_end": 228,
+        "url": "https://developer.twitter.com/en/docs/tweets/post-and-engage/api-reference/post-statuses-update.html))"
+    },
+    "16": {
+        "content": "Source document: data/platform-docs-versions-english/X_Twitter-API-V1/Media.md\nParagraph location: \n\tPOST media/upload (INIT)\n\tExample Request[\u00b6](#example-request \"Permalink to this headline\")\n\nContent: \n## Example Request[\u00b6](#example-request \"Permalink to this headline\")  \n`POST https://upload.twitter.com/1.1/media/upload.json?command=INIT&total_bytes=10240&media_type=image/jpeg`\n",
+        "line_start": 230,
+        "line_end": 232,
+        "url": "https://developer.twitter.com/en/docs/tweets/post-and-engage/api-reference/post-statuses-update.html))"
+    },
+    "17": {
+        "content": "Source document: data/platform-docs-versions-english/X_Twitter-API-V1/Media.md\nParagraph location: \n\tPOST media/upload (INIT)\n\tExample Result[\u00b6](#example-result \"Permalink to this headline\")\n\nContent: \n## Example Result[\u00b6](#example-result \"Permalink to this headline\")  \n{\n\"media_id\": 710511363345354753,\n\"media_id_string\": \"710511363345354753\",\n\"size\": 11065,\n\"expires_after_secs\": 86400,\n\"image\": {\n\"image_type\": \"image/jpeg\",\n\"w\": 800,\n\"h\": 320\n}\n}  \nPOST media/upload (APPEND)  \npost-media-upload-append\n",
+        "line_start": 234,
+        "line_end": 248,
+        "url": "https://developer.twitter.com/en/docs/tweets/post-and-engage/api-reference/post-statuses-update.html))"
+    },
+    "18": {
+        "content": "Source document: data/platform-docs-versions-english/X_Twitter-API-V1/Media.md\nParagraph location: \n\tPOST media/upload (APPEND)\n\tOverview[\u00b6](#overview \"Permalink to this headline\")\n\nContent: \n# POST media/upload (APPEND)  \n## Overview[\u00b6](#overview \"Permalink to this headline\")  \nThe `APPEND` command is used to upload a chunk (consecutive byte range) of the media file. For example, a 3 MB file could be split into 3 chunks of size 1 MB, and uploaded using 3 `APPEND` command requests. After the entire file is uploaded, the next step is to call the [FINALIZE command](https://developer.twitter.com/en/docs/media/upload-media/api-reference/post-media-upload-finalize).  \nThere are a number of advantages of uploading a media file in small chunks:  \n* Improved reliability and success rates under low bandwidth network conditions\n* Uploads can be paused and resumed\n* File chunks can be retried individually\n* Ability to tune chunk sizes to match changing network conditions e.g on cellular clients\n",
+        "line_start": 252,
+        "line_end": 260,
+        "url": "https://developer.twitter.com/en/docs/tweets/post-and-engage/api-reference/post-statuses-update.html))"
+    },
+    "19": {
+        "content": "Source document: data/platform-docs-versions-english/X_Twitter-API-V1/Media.md\nParagraph location: \n\tPOST media/upload (APPEND)\n\tRequest[\u00b6](#request \"Permalink to this headline\")\n\nContent: \n## Request[\u00b6](#request \"Permalink to this headline\")  \nRequests should be `multipart/form-data` POST format.  \n**Note:** The domain for this endpoint is **upload.twitter.com**\n",
+        "line_start": 193,
+        "line_end": 196,
+        "url": "https://developer.twitter.com/en/docs/tweets/post-and-engage/api-reference/post-statuses-update.html))"
+    },
+    "20": {
+        "content": "Source document: data/platform-docs-versions-english/X_Twitter-API-V1/Media.md\nParagraph location: \n\tPOST media/upload (APPEND)\n\tResponse[\u00b6](#response \"Permalink to this headline\")\n\nContent: \n## Response[\u00b6](#response \"Permalink to this headline\")  \nA successful response returns HTTP 2xx.\n",
+        "line_start": 199,
+        "line_end": 201,
+        "url": "https://developer.twitter.com/en/docs/tweets/post-and-engage/api-reference/post-statuses-update.html))"
+    },
+    "21": {
+        "content": "Source document: data/platform-docs-versions-english/X_Twitter-API-V1/Media.md\nParagraph location: \n\tPOST media/upload (APPEND)\n\tResource URL[\u00b6](#resource-url \"Permalink to this headline\")\n\nContent: \n## Resource URL[\u00b6](#resource-url \"Permalink to this headline\")  \n`https://upload.twitter.com/1.1/media/upload.json`\n",
+        "line_start": 207,
+        "line_end": 209,
+        "url": "https://developer.twitter.com/en/docs/tweets/post-and-engage/api-reference/post-statuses-update.html))"
+    },
+    "22": {
+        "content": "Source document: data/platform-docs-versions-english/X_Twitter-API-V1/Media.md\nParagraph location: \n\tPOST media/upload (APPEND)\n\tResource Information[\u00b6](#resource-information \"Permalink to this headline\")\n\nContent: \n## Resource Information[\u00b6](#resource-information \"Permalink to this headline\")  \n|     |     |\n| --- | --- |\n| Response formats | JSON |\n| Requires authentication? | Yes (user context only) |\n| Rate limited? | Yes |\n",
+        "line_start": 211,
+        "line_end": 217,
+        "url": "https://developer.twitter.com/en/docs/tweets/post-and-engage/api-reference/post-statuses-update.html))"
+    },
+    "23": {
+        "content": "Source document: data/platform-docs-versions-english/X_Twitter-API-V1/Media.md\nParagraph location: \n\tPOST media/upload (APPEND)\n\tParameters[\u00b6](#parameters \"Permalink to this headline\")\n\nContent: \n## Parameters[\u00b6](#parameters \"Permalink to this headline\")  \n|     |     |     |     |     |\n| --- | --- | --- | --- | --- |\n| Name | Required | Description | Default Value | Example |\n| command | required | Must be set to `APPEND` (case sensitive). |     |     |\n| media\\_id | required | The `media_id` returned from the `INIT` command. |     |     |\n| media | required | The raw binary file content being uploaded. It must be <= 5 MB, and cannot be used with `media_data`. |     |     |\n| media\\_data | required | The base64-encoded chunk of media file. It must be <= 5 MB and cannot be used with `media`. Use raw binary (media parameter) when possible. |     |     |\n| segment\\_index | required | An ordered index of file chunk. It must be between 0-999 inclusive. The first segment has index 0, second segment has index 1, and so on. |     |     |\n",
+        "line_start": 219,
+        "line_end": 228,
+        "url": "https://developer.twitter.com/en/docs/tweets/post-and-engage/api-reference/post-statuses-update.html))"
+    },
+    "24": {
+        "content": "Source document: data/platform-docs-versions-english/X_Twitter-API-V1/Media.md\nParagraph location: \n\tPOST media/upload (APPEND)\n\tExample Request[\u00b6](#example-request \"Permalink to this headline\")\n\nContent: \n## Example Request[\u00b6](#example-request \"Permalink to this headline\")  \n`POST https://upload.twitter.com/1.1/media/upload.json?command=APPEND&media_id=123&segment_index=2&media_data=123`\n",
+        "line_start": 230,
+        "line_end": 232,
+        "url": "https://developer.twitter.com/en/docs/tweets/post-and-engage/api-reference/post-statuses-update.html))"
+    },
+    "25": {
+        "content": "Source document: data/platform-docs-versions-english/X_Twitter-API-V1/Media.md\nParagraph location: \n\tPOST media/upload (APPEND)\n\tExample Result[\u00b6](#example-result \"Permalink to this headline\")\n\nContent: \n## Example Result[\u00b6](#example-result \"Permalink to this headline\")  \n// Successful response returns HTTP 2XX code without any content body.  \nGET media/upload (STATUS)  \nget-media-upload-status\n",
+        "line_start": 234,
+        "line_end": 238,
+        "url": "https://developer.twitter.com/en/docs/tweets/post-and-engage/api-reference/post-statuses-update.html))"
+    },
+    "26": {
+        "content": "Source document: data/platform-docs-versions-english/X_Twitter-API-V1/Media.md\nParagraph location: \n\tGET media/upload (STATUS)\n\tOverview[\u00b6](#overview \"Permalink to this headline\")\n\nContent: \n# GET media/upload (STATUS)  \n## Overview[\u00b6](#overview \"Permalink to this headline\")  \nThe `STATUS` command is used to periodically poll for updates of media processing operation. After the `STATUS` command response returns `succeeded`, you can move on to the next step which is usually create Tweet with media\\_id.\n",
+        "line_start": 310,
+        "line_end": 313,
+        "url": "https://developer.twitter.com/en/docs/tweets/post-and-engage/api-reference/post-statuses-update.html))"
+    },
+    "27": {
+        "content": "Source document: data/platform-docs-versions-english/X_Twitter-API-V1/Media.md\nParagraph location: \n\tGET media/upload (STATUS)\n\tRequest[\u00b6](#request \"Permalink to this headline\")\n\nContent: \n## Request[\u00b6](#request \"Permalink to this headline\")  \nIt should be a HTTP GET request with url params.  \n**Note:** The domain for this endpoint is **upload.twitter.com**\n",
+        "line_start": 193,
+        "line_end": 196,
+        "url": "https://developer.twitter.com/en/docs/tweets/post-and-engage/api-reference/post-statuses-update.html))"
+    },
+    "28": {
+        "content": "Source document: data/platform-docs-versions-english/X_Twitter-API-V1/Media.md\nParagraph location: \n\tGET media/upload (STATUS)\n\tResponse[\u00b6](#response \"Permalink to this headline\")\n\nContent: \n## Response[\u00b6](#response \"Permalink to this headline\")  \nThe response body contains `processing_info` field which provides information about current state of media processing operation. It contains a `state` field which has transition flow: \u201cpending\u201d -> \u201cin\\_progress\u201d -> \\[\u201cfailed\u201d | \u201csucceeded\u201d\\]. You can not use the media\\_id to create Tweet or other entities before the state field is set to \u201csucceeded\u201d.\n",
+        "line_start": 199,
+        "line_end": 201,
+        "url": "https://developer.twitter.com/en/docs/tweets/post-and-engage/api-reference/post-statuses-update.html))"
+    },
+    "29": {
+        "content": "Source document: data/platform-docs-versions-english/X_Twitter-API-V1/Media.md\nParagraph location: \n\tGET media/upload (STATUS)\n\tResource Information[\u00b6](#resource-information \"Permalink to this headline\")\n\nContent: \n## Resource Information[\u00b6](#resource-information \"Permalink to this headline\")  \n|     |     |\n| --- | --- |\n| Response formats | JSON |\n| Requires authentication? | Yes (user context only) |\n| Rate limited? | Yes |\n",
+        "line_start": 211,
+        "line_end": 217,
+        "url": "https://developer.twitter.com/en/docs/tweets/post-and-engage/api-reference/post-statuses-update.html))"
+    },
+    "30": {
+        "content": "Source document: data/platform-docs-versions-english/X_Twitter-API-V1/Media.md\nParagraph location: \n\tGET media/upload (STATUS)\n\tParameters[\u00b6](#parameters \"Permalink to this headline\")\n\nContent: \n## Parameters[\u00b6](#parameters \"Permalink to this headline\")  \n|     |     |     |     |     |\n| --- | --- | --- | --- | --- |\n| Name | Required | Description | Default Value | Example |\n| command | required | Must be set to `STATUS` (case sensitive). |     |     |\n| media\\_id | required | The `media_id` returned from the `INIT` command. |     |     |\n",
+        "line_start": 219,
+        "line_end": 225,
+        "url": "https://developer.twitter.com/en/docs/tweets/post-and-engage/api-reference/post-statuses-update.html))"
+    },
+    "31": {
+        "content": "Source document: data/platform-docs-versions-english/X_Twitter-API-V1/Media.md\nParagraph location: \n\tGET media/upload (STATUS)\n\tExample request[\u00b6](#example-request \"Permalink to this headline\")\n\nContent: \n## Example request[\u00b6](#example-request \"Permalink to this headline\")  \n`GET https://upload.twitter.com/1.1/media/upload.json?command=STATUS&media_id=710511363345354753`\n",
+        "line_start": 342,
+        "line_end": 344,
+        "url": "https://developer.twitter.com/en/docs/tweets/post-and-engage/api-reference/post-statuses-update.html))"
+    },
+    "32": {
+        "content": "Source document: data/platform-docs-versions-english/X_Twitter-API-V1/Media.md\nParagraph location: \n\tGET media/upload (STATUS)\n\tExample Result[\u00b6](#example-result \"Permalink to this headline\")\n\nContent: \n## Example Result[\u00b6](#example-result \"Permalink to this headline\")  \n// Example of an in_progress response:  \n{\n\"media_id\":710511363345354753,\n\"media_id_string\":\"710511363345354753\",\n\"expires_after_secs\":3595,\n\"processing_info\":{\n\"state\":\"in_progress\", // state transition flow is pending -> in_progress -> [failed|succeeded]\n\"check_after_secs\":10, // check for the update after 10 seconds\n\"progress_percent\":8 // Optional [0-100] int value. Please don't use it as a replacement of \"state\" field.\n}\n}  \n// Example of a failed response:  \n{\n\"media_id\":710511363345354753,\n\"media_id_string\":\"710511363345354753\",\n\"processing_info\":{\n\"state\":\"failed\",\n\"progress_percent\":12,\n\"error\":{\n\"code\":1,\n\"name\":\"InvalidMedia\",\n\"message\":\"Unsupported video format\"\n}\n}\n}  \n// Example of a succeeded response:  \n{\n\"media_id\":710511363345354753,\n\"media_id_string\":\"710511363345354753\",\n\"expires_after_secs\":3593,\n\"video\":{\n\"video_type\":\"video/mp4\"\n},\n\"processing_info\":{\n\"state\":\"succeeded\",\n\"progress_percent\":100,\n}\n}  \nPOST media/upload (FINALIZE)  \npost-media-upload-finalize\n",
+        "line_start": 234,
+        "line_end": 275,
+        "url": "https://developer.twitter.com/en/docs/tweets/post-and-engage/api-reference/post-statuses-update.html))"
+    },
+    "33": {
+        "content": "Source document: data/platform-docs-versions-english/X_Twitter-API-V1/Media.md\nParagraph location: \n\tPOST media/upload (FINALIZE)\n\tOverview[\u00b6](#overview \"Permalink to this headline\")\n\nContent: \n# POST media/upload (FINALIZE)  \n## Overview[\u00b6](#overview \"Permalink to this headline\")  \nThe `FINALIZE` command should be called after the entire media file is uploaded using `APPEND` commands. If and (only if) the response of the `FINALIZE` command contains a `processing_info` field, it may also be necessary to use a [STATUS command](https://developer.twitter.com/en/docs/media/upload-media/api-reference/get-media-upload-status) and wait for it to return success before proceeding to Tweet creation.\n",
+        "line_start": 396,
+        "line_end": 399,
+        "url": "https://developer.twitter.com/en/docs/tweets/post-and-engage/api-reference/post-statuses-update.html))"
+    },
+    "34": {
+        "content": "Source document: data/platform-docs-versions-english/X_Twitter-API-V1/Media.md\nParagraph location: \n\tPOST media/upload (FINALIZE)\n\tRequest[\u00b6](#request \"Permalink to this headline\")\n\nContent: \n## Request[\u00b6](#request \"Permalink to this headline\")  \nRequests should be either `multipart/form-data` or `application/x-www-form-urlencoded` POST formats.  \n**Note:** The domain for this endpoint is **upload.twitter.com**\n",
+        "line_start": 193,
+        "line_end": 196,
+        "url": "https://developer.twitter.com/en/docs/tweets/post-and-engage/api-reference/post-statuses-update.html))"
+    },
+    "35": {
+        "content": "Source document: data/platform-docs-versions-english/X_Twitter-API-V1/Media.md\nParagraph location: \n\tPOST media/upload (FINALIZE)\n\tResponse[\u00b6](#response \"Permalink to this headline\")\n\nContent: \n## Response[\u00b6](#response \"Permalink to this headline\")  \nThe response provides a media identifier in the `media_id` (64-bit integer) and `media_id_string` (string) fields. Use the `media_id_string` provided in the API response from JavaScript and other languages that cannot accurately represent a long integer.  \nThe returned mediaId is only valid for `expires_after_secs` seconds. Any attempt to use mediaId after this time period in other API calls will result in a Bad Request (HTTP 4xx) response.  \nIf the response contains a `processing_info` field, then use the `STATUS` command to poll for the status of the `FINALIZE` operation. The async finalize approach is used for cases where media processing requires more time. In future, all video and animated GIF processing will only be supported using async finalize. This behavior is enabled if an upload session was [initialized](https://developer.twitter.com/en/docs/media/upload-media/api-reference/post-media-upload-init) with a media\\_category parameter, and when then media type is either video or animated GIF.  \nIf a `processing_info` field is NOT returned in the response, then `media_id` is ready for use in other API endpoints.\n",
+        "line_start": 199,
+        "line_end": 204,
+        "url": "https://developer.twitter.com/en/docs/tweets/post-and-engage/api-reference/post-statuses-update.html))"
+    },
+    "36": {
+        "content": "Source document: data/platform-docs-versions-english/X_Twitter-API-V1/Media.md\nParagraph location: \n\tPOST media/upload (FINALIZE)\n\tResource Information[\u00b6](#resource-information \"Permalink to this headline\")\n\nContent: \n## Resource Information[\u00b6](#resource-information \"Permalink to this headline\")  \n|     |     |\n| --- | --- |\n| Response formats | JSON |\n| Requires authentication? | Yes (user context only) |\n| Rate limited? | Yes |\n",
+        "line_start": 211,
+        "line_end": 217,
+        "url": "https://developer.twitter.com/en/docs/tweets/post-and-engage/api-reference/post-statuses-update.html))"
+    },
+    "37": {
+        "content": "Source document: data/platform-docs-versions-english/X_Twitter-API-V1/Media.md\nParagraph location: \n\tPOST media/upload (FINALIZE)\n\tParameters[\u00b6](#parameters \"Permalink to this headline\")\n\nContent: \n## Parameters[\u00b6](#parameters \"Permalink to this headline\")  \n|     |     |     |     |     |\n| --- | --- | --- | --- | --- |\n| Name | Required | Description | Default Value | Example |\n| command | required | Must be set to `FINALIZE` (case sensitive). |     |     |\n| media\\_id | required | The `media_id` returned from the `INIT` command. |     |     |\n",
+        "line_start": 219,
+        "line_end": 225,
+        "url": "https://developer.twitter.com/en/docs/tweets/post-and-engage/api-reference/post-statuses-update.html))"
+    },
+    "38": {
+        "content": "Source document: data/platform-docs-versions-english/X_Twitter-API-V1/Media.md\nParagraph location: \n\tPOST media/upload (FINALIZE)\n\tExample request[\u00b6](#example-request \"Permalink to this headline\")\n\nContent: \n## Example request[\u00b6](#example-request \"Permalink to this headline\")  \n`POST https://upload.twitter.com/1.1/media/upload.json?command=FINALIZE&media_id=710511363345354753`\n",
+        "line_start": 342,
+        "line_end": 344,
+        "url": "https://developer.twitter.com/en/docs/tweets/post-and-engage/api-reference/post-statuses-update.html))"
+    },
+    "39": {
+        "content": "Source document: data/platform-docs-versions-english/X_Twitter-API-V1/Media.md\nParagraph location: \n\tPOST media/upload (FINALIZE)\n\tExample Result[\u00b6](#example-result \"Permalink to this headline\")\n\nContent: \n## Example Result[\u00b6](#example-result \"Permalink to this headline\")  \n// Example of sync FINALIZE response\n{\n\"media_id\": 710511363345354753,\n\"media_id_string\": \"710511363345354753\",\n\"size\": 11065,\n\"expires_after_secs\": 86400,\n\"video\": {\n\"video_type\": \"video/mp4\"\n}\n}  \n// Example of async FINALIZE response which requires further STATUS command call(s)\n{\n\"media_id\": 710511363345354753,\n\"media_id_string\": \"710511363345354753\",\n\"expires_after_secs\": 86400,\n\"size\": 10240,\n\"processing_info\": {\n\"state\": \"pending\",\n\"check_after_secs\": 5 // check after 5 seconds for update using STATUS command\n}\n}  \nPOST media/upload  \npost-media-upload\n",
+        "line_start": 234,
+        "line_end": 258,
+        "url": "https://developer.twitter.com/en/docs/tweets/post-and-engage/api-reference/post-statuses-update.html))"
+    },
+    "40": {
+        "content": "Source document: data/platform-docs-versions-english/X_Twitter-API-V1/Media.md\nParagraph location: \n\tPOST media/upload\n\tOverview[\u00b6](#overview \"Permalink to this headline\")\n\nContent: \n# POST media/upload  \n## Overview[\u00b6](#overview \"Permalink to this headline\")  \nUse this endpoint to upload images to Twitter.  \nThis endpoint returns a `media_id` by default and can optionally return a `media_key` when a `media_category` is specified. These values are used by Twitter endpoints that accept images.  \nFor example, a `media_id` value can be used to create a Tweet with an attached photo using the [POST statuses/update](https://developer.twitter.com/en/docs/tweets/post-and-engage/api-reference/post-statuses-update#post-statuses-update) endpoint.  \nAll [Ads API endpoints](https://developer.twitter.com/en/docs/ads/) require a `media_key`. For example, a `media_key` value can be used to create a Draft Tweet with a photo using the [POST accounts/:account\\_id/draft\\_tweets](https://developer.twitter.com/en/docs/ads/creatives/api-reference/draft-tweets) endpoint.\n",
+        "line_start": 467,
+        "line_end": 473,
+        "url": "https://developer.twitter.com/en/docs/tweets/post-and-engage/api-reference/post-statuses-update.html))"
+    },
+    "41": {
+        "content": "Source document: data/platform-docs-versions-english/X_Twitter-API-V1/Media.md\nParagraph location: \n\tPOST media/upload\n\tUsage[\u00b6](#usage \"Permalink to this headline\")\n\nContent: \n## Usage[\u00b6](#usage \"Permalink to this headline\")  \nThis is a simple image upload endpoint with a limited set of features. The preferred alternative is the chunked upload endpoint which supports both images and videos, provides better reliability, allows resumption of file uploads, and other important features. In the future, new features will only be supported for the chunked upload endpoint.  \n* See the [Uploading media guide](https://developer.twitter.com/en/docs/media/upload-media/uploading-media/media-best-practices) for constraints and requirements on media files.\n* See the [Uploading Media tutorial](https://developer.twitter.com/en/docs/tutorials/uploading-media) for step-by-step instructions on uploading an image.\n* Use the [media metadata endpoint](https://developer.twitter.com/en/docs/media/upload-media/api-reference/post-media-metadata-create) to provide image alt text information.\n* Ensure the POST is a `multipart/form-data` request. Either upload the raw binary (`media` parameter) of the file, or its base64-encoded contents (`media_data` parameter). Use raw binary when possible, because base64 encoding results in larger file sizes\n* The response provides a media identifier in the `media_id` (64-bit integer) and `media_id_string` (string) fields. Use the `media_id_string` provided in the API response from JavaScript and other languages that cannot accurately represent a long integer.\n* The returned `media_id` and `media_key` are only valid for `expires_after_secs` seconds. Any attempt to use either after this time period in other endpoints will result in an HTTP 4xx Bad Request.\n* The `additional_owners` field enables media to be uploaded as user A and then used to create Tweets as user B.\n* Please note that to upload videos or GIFs (`tweet_video`, `amplify_video`, and `tweet_gif`), you need to use the [chunked upload end-point](https://developer.twitter.com/en/docs/media/upload-media/api-reference/post-media-upload-init).\n",
+        "line_start": 479,
+        "line_end": 489,
+        "url": "https://developer.twitter.com/en/docs/tweets/post-and-engage/api-reference/post-statuses-update.html))"
+    },
+    "42": {
+        "content": "Source document: data/platform-docs-versions-english/X_Twitter-API-V1/Media.md\nParagraph location: \n\tPOST media/upload\n\tRequest[\u00b6](#request \"Permalink to this headline\")\n\nContent: \n## Request[\u00b6](#request \"Permalink to this headline\")  \nRequests should be either `multipart/form-data` or `application/x-www-form-urlencoded` POST formats.  \n**Note:** The domain for this endpoint is **upload.twitter.com**\n",
+        "line_start": 193,
+        "line_end": 196,
+        "url": "https://developer.twitter.com/en/docs/tweets/post-and-engage/api-reference/post-statuses-update.html))"
+    },
+    "43": {
+        "content": "Source document: data/platform-docs-versions-english/X_Twitter-API-V1/Media.md\nParagraph location: \n\tPOST media/upload\n\tResource URL[\u00b6](#resource-url \"Permalink to this headline\")\n\nContent: \n## Resource URL[\u00b6](#resource-url \"Permalink to this headline\")  \n`https://upload.twitter.com/1.1/media/upload.json`\n",
+        "line_start": 207,
+        "line_end": 209,
+        "url": "https://developer.twitter.com/en/docs/tweets/post-and-engage/api-reference/post-statuses-update.html))"
+    },
+    "44": {
+        "content": "Source document: data/platform-docs-versions-english/X_Twitter-API-V1/Media.md\nParagraph location: \n\tPOST media/upload\n\tResource Information[\u00b6](#resource-information \"Permalink to this headline\")\n\nContent: \n## Resource Information[\u00b6](#resource-information \"Permalink to this headline\")  \n|     |     |\n| --- | --- |\n| Response formats | JSON |\n| Requires authentication? | Yes (user context only) |\n| Rate limited? | Yes |\n",
+        "line_start": 211,
+        "line_end": 217,
+        "url": "https://developer.twitter.com/en/docs/tweets/post-and-engage/api-reference/post-statuses-update.html))"
+    },
+    "45": {
+        "content": "Source document: data/platform-docs-versions-english/X_Twitter-API-V1/Media.md\nParagraph location: \n\tPOST media/upload\n\tParameters[\u00b6](#parameters \"Permalink to this headline\")\n\nContent: \n## Parameters[\u00b6](#parameters \"Permalink to this headline\")  \n| Name | Required | Description | Default Value | Example |\n| --- | --- | --- | --- | --- |\n| media | required | The raw binary file content being uploaded. Cannot be used with `media_data`. |     |     |\n| media\\_category | optional | The category that represents how the media will be used. This field is required when using the media with the Ads APIPossible values: `amplify_video`, `tweet_gif`, `tweet_image`, and `tweet_video` |     |     |\n| media\\_data | required | The base64-encoded file content being uploaded. Cannot be used with `media`. |     |     |\n| additional\\_owners | optional | A comma-separated list of user IDs to set as additional owners allowed to use the returned `media_id` in Tweets or Cards. Up to 100 additional owners may be specified. |     |     |\n",
+        "line_start": 219,
+        "line_end": 226,
+        "url": "https://developer.twitter.com/en/docs/tweets/post-and-engage/api-reference/post-statuses-update.html))"
+    },
+    "46": {
+        "content": "Source document: data/platform-docs-versions-english/X_Twitter-API-V1/Media.md\nParagraph location: \n\tPOST media/upload\n\tExample Request[\u00b6](#example-request \"Permalink to this headline\")\n\nContent: \n## Example Request[\u00b6](#example-request \"Permalink to this headline\")  \n`POST https://upload.twitter.com/1.1/media/upload.json?media_category=tweet_image`\n",
+        "line_start": 230,
+        "line_end": 232,
+        "url": "https://developer.twitter.com/en/docs/tweets/post-and-engage/api-reference/post-statuses-update.html))"
+    },
+    "47": {
+        "content": "Source document: data/platform-docs-versions-english/X_Twitter-API-V1/Media.md\nParagraph location: \n\tPOST media/upload\n\tExample Response[\u00b6](#example-response \"Permalink to this headline\")\n\nContent: \n## Example Response[\u00b6](#example-response \"Permalink to this headline\")  \n{\n\"media_id\": 710511363345354753,\n\"media_id_string\": \"710511363345354753\",\n\"media_key\": \"3_710511363345354753\",\n\"size\": 11065,\n\"expires_after_secs\": 86400,\n\"image\": {\n\"image_type\": \"image/jpeg\",\n\"w\": 800,\n\"h\": 320\n}\n}  \nPOST media/metadata/create  \npost-media-metadata-create\n",
+        "line_start": 523,
+        "line_end": 538,
+        "url": "https://developer.twitter.com/en/docs/tweets/post-and-engage/api-reference/post-statuses-update.html))"
+    },
+    "48": {
+        "content": "Source document: data/platform-docs-versions-english/X_Twitter-API-V1/Media.md\nParagraph location: \n\tPOST media/metadata/create\n\tOverview[\u00b6](#overview \"Permalink to this headline\")\n\nContent: \n# POST media/metadata/create  \n## Overview[\u00b6](#overview \"Permalink to this headline\")  \nThis endpoint can be used to provide additional information about the uploaded `media_id`. This feature is currently only supported for images and GIFs.  \nThe request flow should be:  \n1. Upload media using either the [simple upload endpoint](https://developer.twitter.com/en/docs/media/upload-media/api-reference/post-media-upload) or the (preferred) [chunked upload endpoint](https://developer.twitter.com/en/docs/media/upload-media/api-reference/post-media-upload-init).\n2. Call this endpoint to attach additional metadata such as image alt text.\n3. Create Tweet with `media_id(s)` attached.\n",
+        "line_start": 542,
+        "line_end": 549,
+        "url": "https://developer.twitter.com/en/docs/tweets/post-and-engage/api-reference/post-statuses-update.html))"
+    },
+    "49": {
+        "content": "Source document: data/platform-docs-versions-english/X_Twitter-API-V1/Media.md\nParagraph location: \n\tPOST media/metadata/create\n\tRequest[\u00b6](#request \"Permalink to this headline\")\n\nContent: \n## Request[\u00b6](#request \"Permalink to this headline\")  \nRequests should be HTTP POST with a JSON content body, and Content-Type `application/json; charset=UTF-8` or `text/plain; charset=UTF-8`.  \n**Note:** The domain for this endpoint is **upload.twitter.com**\n",
+        "line_start": 193,
+        "line_end": 196,
+        "url": "https://developer.twitter.com/en/docs/tweets/post-and-engage/api-reference/post-statuses-update.html))"
+    },
+    "50": {
+        "content": "Source document: data/platform-docs-versions-english/X_Twitter-API-V1/Media.md\nParagraph location: \n\tPOST media/metadata/create\n\tResponse[\u00b6](#response \"Permalink to this headline\")\n\nContent: \n## Response[\u00b6](#response \"Permalink to this headline\")  \nA successful response returns HTTP 2xx.\n",
+        "line_start": 199,
+        "line_end": 201,
+        "url": "https://developer.twitter.com/en/docs/tweets/post-and-engage/api-reference/post-statuses-update.html))"
+    },
+    "51": {
+        "content": "Source document: data/platform-docs-versions-english/X_Twitter-API-V1/Media.md\nParagraph location: \n\tPOST media/metadata/create\n\tResource URL[\u00b6](#resource-url \"Permalink to this headline\")\n\nContent: \n## Resource URL[\u00b6](#resource-url \"Permalink to this headline\")  \n`https://upload.twitter.com/1.1/media/metadata/create.json`\n",
+        "line_start": 207,
+        "line_end": 209,
+        "url": "https://developer.twitter.com/en/docs/tweets/post-and-engage/api-reference/post-statuses-update.html))"
+    },
+    "52": {
+        "content": "Source document: data/platform-docs-versions-english/X_Twitter-API-V1/Media.md\nParagraph location: \n\tPOST media/metadata/create\n\tResource Information[\u00b6](#resource-information \"Permalink to this headline\")\n\nContent: \n## Resource Information[\u00b6](#resource-information \"Permalink to this headline\")  \n|     |     |\n| --- | --- |\n| Response formats | JSON |\n| Requires authentication? | Yes (user context only) |\n| Rate limited? | Yes |\n",
+        "line_start": 211,
+        "line_end": 217,
+        "url": "https://developer.twitter.com/en/docs/tweets/post-and-engage/api-reference/post-statuses-update.html))"
+    },
+    "53": {
+        "content": "Source document: data/platform-docs-versions-english/X_Twitter-API-V1/Media.md\nParagraph location: \n\tPOST media/metadata/create\n\tExample Request[\u00b6](#example-request \"Permalink to this headline\")\n\nContent: \n## Example Request[\u00b6](#example-request \"Permalink to this headline\")  \n`POST https://upload.twitter.com/1.1/media/metadata/create.json`  \n{\n\"media_id\":\"692797692624265216\",\n// image alt text metadata\n\"alt_text\": {\n\"text\":\"dancing cat\" // Must be <= 1000 chars\n}\n}  \nPOST media/subtitles/delete  \npost-media-subtitles-delete\n",
+        "line_start": 230,
+        "line_end": 241,
+        "url": "https://developer.twitter.com/en/docs/tweets/post-and-engage/api-reference/post-statuses-update.html))"
+    },
+    "54": {
+        "content": "Source document: data/platform-docs-versions-english/X_Twitter-API-V1/Media.md\nParagraph location: \n\tOverview\n\nContent: \n# Overview  \nUse this endpoint to dissociate subtitles from a video and delete the subtitles. You can dissociate subtitles from a video before or after Tweeting.\n",
+        "line_start": 594,
+        "line_end": 596,
+        "url": "https://developer.twitter.com/en/docs/tweets/post-and-engage/api-reference/post-statuses-update.html))"
+    },
+    "55": {
+        "content": "Source document: data/platform-docs-versions-english/X_Twitter-API-V1/Media.md\nParagraph location: \n\tRequest\n\nContent: \n# Request  \nRequests should be HTTP POST with a JSON content body, and Content-Type `application/json; charset=UTF-8`  \n**Note:** The domain for this endpoint is **upload.twitter.com**\n",
+        "line_start": 598,
+        "line_end": 601,
+        "url": "https://developer.twitter.com/en/docs/tweets/post-and-engage/api-reference/post-statuses-update.html))"
+    },
+    "56": {
+        "content": "Source document: data/platform-docs-versions-english/X_Twitter-API-V1/Media.md\nParagraph location: \n\tResponse Codes\n\nContent: \n# Response Codes  \nThis endpoint returns the following HTTP responses:  \n|     |     |     |\n| --- | --- | --- |\n| Status | Text | Description |\n| 200 | OK  | The request to create the subtitle was successful. |\n| 400 | Bad Request | Generally, this response occurs due to the presence of invalid JSON in the request, or where the request failed to send any JSON payload. In this case this error could indicate an invalid subtitle file. |\n| 403 | Unauthorized | HTTP authentication failed due to invalid credentials. Check your OAuth keys and tokens. |\n| 404 | Not Found | The resource was not found at the URL to which the request was sent, likely because an incorrect media\\_id |\n| 500 | Internal Server Error | There was an error on Twitter's side. Retry your request using an exponential backoff pattern. |\n| 503 | Service Unavailable | There was an error on Twitter's side. Retry your request using an exponential backoff pattern. |\n",
+        "line_start": 604,
+        "line_end": 615,
+        "url": "https://developer.twitter.com/en/docs/tweets/post-and-engage/api-reference/post-statuses-update.html))"
+    },
+    "57": {
+        "content": "Source document: data/platform-docs-versions-english/X_Twitter-API-V1/Media.md\nParagraph location: \n\tResource URL\n\nContent: \n# Resource URL  \n`https://upload.twitter.com/1.1/media/subtitles/delete.json`\n",
+        "line_start": 618,
+        "line_end": 620,
+        "url": "https://developer.twitter.com/en/docs/tweets/post-and-engage/api-reference/post-statuses-update.html))"
+    },
+    "58": {
+        "content": "Source document: data/platform-docs-versions-english/X_Twitter-API-V1/Media.md\nParagraph location: \n\tResource Information\n\nContent: \n# Resource Information  \n|     |     |\n| --- | --- |\n| Response formats | JSON |\n| Requires authentication? | Yes (user context only) |\n| Rate limited? | Yes |\n",
+        "line_start": 622,
+        "line_end": 628,
+        "url": "https://developer.twitter.com/en/docs/tweets/post-and-engage/api-reference/post-statuses-update.html))"
+    },
+    "59": {
+        "content": "Source document: data/platform-docs-versions-english/X_Twitter-API-V1/Media.md\nParagraph location: \n\tExample Request\n\nContent: \n# Example Request  \nPOST https://upload.twitter.com/1.1/media/subtitles/delete.json  \n{\n\"media_id\":\"692797692624265216\",\n\"media_category\":\"TweetVideo\",\n\"subtitle_info\": {\n\"subtitles\": [\n\"language_code\":\"EN\", //The language code should be a BCP47 code (e.g. 'en\", \"sp\")\n]\n}\n}  \nPOST media/subtitles/create  \npost-media-subtitles-create\n",
+        "line_start": 630,
+        "line_end": 643,
+        "url": "https://developer.twitter.com/en/docs/tweets/post-and-engage/api-reference/post-statuses-update.html))"
+    },
+    "60": {
+        "content": "Source document: data/platform-docs-versions-english/X_Twitter-API-V1/Media.md\nParagraph location: \n\tOverview\n\nContent: \n# Overview  \nUse this endpoint to associate uploaded subtitles to an uploaded video. You can associate subtitles to video before or after Tweeting.  \nRequest flow for associating subtitle to video before the video is Tweeted : 1. Upload video using the chunked upload endpoint and get the video media\\_id. 2. Upload subtitle using the chunked upload endpoint with media category set to \u201cSubtitles\u201d and get the subtitle media\\_id. 3. Call this endpoint to associate the subtitle to the video. 4. Create Tweet with the video media\\_id.  \nRequest flow for associating subtitle to video after the video is Tweeted : 1. Upload video using the chunked upload endpoint and get the video media\\_id. 2. Create Tweet with the video media\\_id. 3. Upload subtitle using the chunked upload endpoint with media category set to SUBTITLES and get the subtitle media\\_id. 4. Call this endpoint to associate the subtitle to the video.\n",
+        "line_start": 594,
+        "line_end": 598,
+        "url": "https://developer.twitter.com/en/docs/tweets/post-and-engage/api-reference/post-statuses-update.html))"
+    },
+    "61": {
+        "content": "Source document: data/platform-docs-versions-english/X_Twitter-API-V1/Media.md\nParagraph location: \n\tRequest\n\nContent: \n# Request  \nRequests should be HTTP POST with a JSON content body, and Content-Type `application/json; charset=UTF-8`  \n**Note:** The domain for this endpoint is **upload.twitter.com**\n",
+        "line_start": 598,
+        "line_end": 601,
+        "url": "https://developer.twitter.com/en/docs/tweets/post-and-engage/api-reference/post-statuses-update.html))"
+    },
+    "62": {
+        "content": "Source document: data/platform-docs-versions-english/X_Twitter-API-V1/Media.md\nParagraph location: \n\tResponse\n\nContent: \n# Response  \nThis endpoint returns the following HTTP responses:  \n|     |     |     |\n| --- | --- | --- |\n| Status | Text | Description |\n| 200 | OK  | The request to create the subtitle was successful. |\n| 400 | Bad Request | Generally, this response occurs due to the presence of invalid JSON in the request, or where the request failed to send any JSON payload. In this case this error could indicate an invalid subtitle file. |\n| 403 | Unauthorized | HTTP authentication failed due to invalid credentials. Check your OAuth keys and tokens. |\n| 404 | Not Found | The resource was not found at the URL to which the request was sent, likely because an incorrect media\\_id |\n| 500 | Internal Server Error | There was an error on Twitter's side. Retry your request using an exponential backoff pattern. |\n| 503 | Service Unavailable | There was an error on Twitter's side. Retry your request using an exponential backoff pattern. |\n",
+        "line_start": 664,
+        "line_end": 675,
+        "url": "https://developer.twitter.com/en/docs/tweets/post-and-engage/api-reference/post-statuses-update.html))"
+    },
+    "63": {
+        "content": "Source document: data/platform-docs-versions-english/X_Twitter-API-V1/Media.md\nParagraph location: \n\tResource URL\n\nContent: \n# Resource URL  \n`https://upload.twitter.com/1.1/media/subtitles/create.json`\n",
+        "line_start": 618,
+        "line_end": 620,
+        "url": "https://developer.twitter.com/en/docs/tweets/post-and-engage/api-reference/post-statuses-update.html))"
+    },
+    "64": {
+        "content": "Source document: data/platform-docs-versions-english/X_Twitter-API-V1/Media.md\nParagraph location: \n\tResource Information\n\nContent: \n# Resource Information  \n|     |     |\n| --- | --- |\n| Response formats | JSON |\n| Requires authentication? | Yes (user context only) |\n| Rate limited? | Yes |\n",
+        "line_start": 622,
+        "line_end": 628,
+        "url": "https://developer.twitter.com/en/docs/tweets/post-and-engage/api-reference/post-statuses-update.html))"
+    },
+    "65": {
+        "content": "Source document: data/platform-docs-versions-english/X_Twitter-API-V1/Media.md\nParagraph location: \n\tExample Request\n\nContent: \n# Example Request  \nPOST https://upload.twitter.com/1.1/media/subtitles/create.json  \n{\n\"media_id\":\"692797692624265216\",\n\"media_category\":\"TweetVideo\",\n\"subtitle_info\": {\n\"subtitles\": [\n\"media_id\":\"105195515189863968\",\n\"language_code\":\"EN\", //The language code should be a BCP47 code (e.g. 'en\", \"sp\"),\n\"display_name\":\"English\"\n]\n}\n}\n",
+        "line_start": 630,
+        "line_end": 643,
+        "url": "https://developer.twitter.com/en/docs/tweets/post-and-engage/api-reference/post-statuses-update.html))"
+    },
+    "66": {
+        "content": "Source document: data/platform-docs-versions-english/X_Twitter-API-V1/Media.md\nParagraph location: \n\tExample Result\n\nContent: \n# Example Result  \n// Successful response returns HTTP 2XX code without any content body.\n",
+        "line_start": 706,
+        "line_end": 708,
+        "url": "https://developer.twitter.com/en/docs/tweets/post-and-engage/api-reference/post-statuses-update.html))"
+    }
+}

@@ -1,0 +1,104 @@
+{
+    "0": {
+        "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Comment Endpoint.md\nParagraph location: \n\nContent: \nThis document refers to an outdated version of Graph API.\u00a0Please [use the latest version.](https://developers.facebook.com/docs/graph-api/reference/v19.0/comment)\n",
+        "line_start": 0,
+        "line_end": 1,
+        "url": "https://developers.facebook.com/docs/graph-api/reference/v19.0/comment)"
+    },
+    "1": {
+        "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Comment Endpoint.md\nParagraph location: \n\tComment `/{comment-id}`\n\nContent: \n# Comment `/{comment-id}`  \nA `comment` can be made on various types of content on Facebook. Most Graph API nodes have a `/comments` edge that lists all the comments on that object. The `/{comment-id}` node returns a single `comment`.\n",
+        "line_start": 2,
+        "line_end": 4,
+        "url": "https://developers.facebook.com/docs/graph-api/reference/v19.0/comment)"
+    },
+    "2": {
+        "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Comment Endpoint.md\nParagraph location: \n\tComment `/{comment-id}`\n\tReading\n\tNew Page Experience\n\nContent: \n## Reading  \n### New Page Experience  \nThis API is supported for New Page Experience.\n",
+        "line_start": 6,
+        "line_end": 9,
+        "url": "https://developers.facebook.com/docs/graph-api/reference/v19.0/comment)"
+    },
+    "3": {
+        "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Comment Endpoint.md\nParagraph location: \n\tComment `/{comment-id}`\n\tReading\n\tPermissions\n\nContent: \n### Permissions  \n* **General** - To read a comment, you generally need the same permissions as required for viewing the object that the comment was added to.  \n* **Replies** - If this is a comment that is a reply to another comment, the permissions required apply to the object that the parent comment was added to.  \n* **Page owned Comments and Replies** \u2014 For any comments or replies owned by (on) a Page, you must use a Page access token if you want User information to be included in the response.  \nThe Page Post comment ID format, `{page-id}_{post_id}_{comment-id}`, has been deprecated. Use the `{pagepost-id}_{comment-id}` format instead.  \nHTTPPHP SDKJavaScript SDKAndroid SDKiOS SDK[Graph API Explorer](https://developers.facebook.com/tools/explorer/?method=GET&path=%7Bcomment-id%7D&version=v19.0)  \nGET /v19.0/{comment-id} HTTP/1.1\nHost: graph.facebook.com  \n/* PHP SDK v5.0.0 */\n/* make the API call */\ntry {\n// Returns a `Facebook\\FacebookResponse` object\n$response = $fb->get(\n'/{comment-id}',\n'{access-token}'\n);\n} catch(Facebook\\Exceptions\\FacebookResponseException $e) {\necho 'Graph returned an error: ' . $e->getMessage();\nexit;\n} catch(Facebook\\Exceptions\\FacebookSDKException $e) {\necho 'Facebook SDK returned an error: ' . $e->getMessage();\nexit;\n}\n$graphNode = $response->getGraphNode();\n/* handle the result */  \n/* make the API call */\nFB.api(\n\"/{comment-id}\",\nfunction (response) {\nif (response && !response.error) {\n/* handle the result */\n}\n}\n);  \n/* make the API call */\nnew GraphRequest(\nAccessToken.getCurrentAccessToken(),\n\"/{comment-id}\",\nnull,\nHttpMethod.GET,\nnew GraphRequest.Callback() {\npublic void onCompleted(GraphResponse response) {\n/* handle the result */\n}\n}\n).executeAsync();  \n/* make the API call */\nFBSDKGraphRequest *request = [[FBSDKGraphRequest alloc]\ninitWithGraphPath:@\"/{comment-id}\"\nparameters:params\nHTTPMethod:@\"GET\"];\n[request startWithCompletionHandler:^(FBSDKGraphRequestConnection *connection,\nid result,\nNSError *error) {\n// Handle the result\n}];\n",
+        "line_start": 12,
+        "line_end": 68,
+        "url": "https://developers.facebook.com/docs/graph-api/reference/v19.0/comment)"
+    },
+    "4": {
+        "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Comment Endpoint.md\nParagraph location: \n\tComment `/{comment-id}`\n\tReading\n\tFields\n\nContent: \n### Fields  \n| Property Name | Description | Type |\n| --- | --- | --- |\n| `id` | The comment ID | `string` |\n| `attachment` | Link, video, sticker, or photo attached to the comment | [`StoryAttachment`](https://developers.facebook.com/docs/graph-api/reference/story-attachment/) |\n| `can_comment` | Whether the viewer can reply to this comment | `bool` |\n| `can_remove` | Whether the viewer can remove this comment | `bool` |\n| `can_hide` | Whether the viewer can hide this comment. Only visible to a page admin | `boolean` |\n| `can_like` | Whether the viewer can like this comment | `boolean` |\n| `can_reply_privately` | Whether the viewer can send a private reply to this comment (Page viewers only) | `boolean` |\n| `comment_count` | Number of replies to this comment | `int32` |\n| `created_time` | The time this comment was made | `datetime` |\n| `from` | The person that made this comment | [`User`](https://developers.facebook.com/docs/graph-api/reference/user/) |\n| `like_count` | Number of times this comment was liked | `int32` |\n| `message` | The comment text | `string` |\n| `message_tags` | An array of Profiles tagged in `message`. | `object[]` |\n| `id` | ID of the profile that was tagged. | `string` |\n| `name` | The text used in the tag. | `string` |\n| `type` | Indicates which type of profile is tagged. | `enum{user, page, group}` |\n| `offset` | Where the first character of the tagged text is in the `message`, measured in [unicode code points](https://l.facebook.com/l.php?u=https%3A%2F%2Fen.wikipedia.org%2Fwiki%2FCode_point&h=AT2i8B_IOTq8ETraR8BzN2rp1fTWAe9ir3N3-dtmpqbi-0L4USxjZq6UUEV4z6ARsn4ziBFfQOSRp1wzV_MwYCeS-0TujP3nBMOwnETl4tJS11G-gGiZL_iqxQc5uqf2L-_AnQXrLDvHFQgA). | `integer` |\n| `length` | How many [unicode code points](https://l.facebook.com/l.php?u=https%3A%2F%2Fen.wikipedia.org%2Fwiki%2FCode_point&h=AT3MqiYezls_pJ-vHYozYSAK9XAVwr7dI0nffhmpAMou_IBkpaCkH-pNp99-BXf1E5cQAZRWRvvFDEYhEGrcaRAuL6hk4-eATYt7-sRCY34ml2khGei5yLhoSzeGqAjBMsn0o2XxrOi2h7OC) this tag consists of, after the offset. | `integer` |\n| `object` | The comment on a post that contains a photo or video, including those in dynamic posts. Otherwise, this is empty. | `Object` |\n| `parent` | For comment replies, this the comment that this is a reply to. | [`Comment`](https://developers.facebook.com/docs/graph-api/reference/comment) |\n| `private_reply_conversation` | For comments with private replies, gets conversation between the Page and author of the comment (Page viewers only) | [`Conversation`](https://developers.facebook.com/docs/graph-api/reference/conversation) |\n| `user_likes` | Whether the viewer has liked this comment. | `bool` |\n",
+        "line_start": 80,
+        "line_end": 105,
+        "url": "https://developers.facebook.com/docs/graph-api/reference/v19.0/comment)"
+    },
+    "5": {
+        "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Comment Endpoint.md\nParagraph location: \n\tComment `/{comment-id}`\n\tPublishing\n\nContent: \n## Publishing  \nYou can publish comments by using the [`/comments`](https://developers.facebook.com/docs/graph-api/reference/object/comments/) edge when it is present on a node.\n",
+        "line_start": 107,
+        "line_end": 109,
+        "url": "https://developers.facebook.com/docs/graph-api/reference/v19.0/comment)"
+    },
+    "6": {
+        "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Comment Endpoint.md\nParagraph location: \n\tComment `/{comment-id}`\n\tDeleting\n\nContent: \n## Deleting  \nYou can delete a comment by using the following endpoint:  \nHTTPPHP SDKJavaScript SDKAndroid SDKiOS SDK  \nDELETE /v19.0/{comment-id} HTTP/1.1\nHost: graph.facebook.com  \n/* PHP SDK v5.0.0 */\n/* make the API call */\ntry {\n// Returns a `Facebook\\FacebookResponse` object\n$response = $fb->delete(\n'/{comment-id}',\narray (),\n'{access-token}'\n);\n} catch(Facebook\\Exceptions\\FacebookResponseException $e) {\necho 'Graph returned an error: ' . $e->getMessage();\nexit;\n} catch(Facebook\\Exceptions\\FacebookSDKException $e) {\necho 'Facebook SDK returned an error: ' . $e->getMessage();\nexit;\n}\n$graphNode = $response->getGraphNode();\n/* handle the result */  \n/* make the API call */\nFB.api(\n\"/{comment-id}\",\n\"DELETE\",\nfunction (response) {\nif (response && !response.error) {\n/* handle the result */\n}\n}\n);  \n/* make the API call */\nnew GraphRequest(\nAccessToken.getCurrentAccessToken(),\n\"/{comment-id}\",\nnull,\nHttpMethod.DELETE,\nnew GraphRequest.Callback() {\npublic void onCompleted(GraphResponse response) {\n/* handle the result */\n}\n}\n).executeAsync();  \n/* make the API call */\nFBSDKGraphRequest *request = [[FBSDKGraphRequest alloc]\ninitWithGraphPath:@\"/{comment-id}\"\nparameters:params\nHTTPMethod:@\"DELETE\"];\n[request startWithCompletionHandler:^(FBSDKGraphRequestConnection *connection,\nid result,\nNSError *error) {\n// Handle the result\n}];\n",
+        "line_start": 111,
+        "line_end": 166,
+        "url": "https://developers.facebook.com/docs/graph-api/reference/v19.0/comment)"
+    },
+    "7": {
+        "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Comment Endpoint.md\nParagraph location: \n\tComment `/{comment-id}`\n\tDeleting\n\tNew Page Experience\n\nContent: \n### New Page Experience  \nThis API is supported for New Page Experience.\n",
+        "line_start": 8,
+        "line_end": 10,
+        "url": "https://developers.facebook.com/docs/graph-api/reference/v19.0/comment)"
+    },
+    "8": {
+        "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Comment Endpoint.md\nParagraph location: \n\tComment `/{comment-id}`\n\tDeleting\n\tRequirements\n\nContent: \n### Requirements  \nTo delete a comment posted by a Page, you will need:  \n* A Page access token requested by a person who can perform the \\`MODERATE\\` task on the Page  \n* The `pages_read_engagement` permission  \n* The `pages_manage_engagement` permission  \nTo delete a comment posted by a User or another Page, you will need:  \n* A Page access token requested by a person who can perform the \\`MODERATE\\` task on the Page  \n* The `pages_manage_engagement` permission  \n* The `pages_read_user_content` permission  \n#### Limitations  \nReviews are not Page posts, so comments on reviews can not be removed by a Page.\n",
+        "line_start": 178,
+        "line_end": 189,
+        "url": "https://developers.facebook.com/docs/graph-api/reference/v19.0/comment)"
+    },
+    "9": {
+        "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Comment Endpoint.md\nParagraph location: \n\tComment `/{comment-id}`\n\tDeleting\n\tResponse\n\nContent: \n### Response  \nIf successful:  \n{\n\"success\": true\n}  \nOtherwise a relevant error message will be returned.\n",
+        "line_start": 202,
+        "line_end": 208,
+        "url": "https://developers.facebook.com/docs/graph-api/reference/v19.0/comment)"
+    },
+    "10": {
+        "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Comment Endpoint.md\nParagraph location: \n\tComment `/{comment-id}`\n\tUpdating\n\nContent: \n## Updating  \nYou can edit a comment by using the following endpoint:  \nHTTPPHP SDKJavaScript SDKAndroid SDKiOS SDK  \nPOST /v19.0/{comment-id} HTTP/1.1\nHost: graph.facebook.com  \nmessage=This+is+a+test+comment  \n/* PHP SDK v5.0.0 */\n/* make the API call */\ntry {\n// Returns a `Facebook\\FacebookResponse` object\n$response = $fb->post(\n'/{comment-id}',\narray (\n'message' => 'This is a test comment',\n),\n'{access-token}'\n);\n} catch(Facebook\\Exceptions\\FacebookResponseException $e) {\necho 'Graph returned an error: ' . $e->getMessage();\nexit;\n} catch(Facebook\\Exceptions\\FacebookSDKException $e) {\necho 'Facebook SDK returned an error: ' . $e->getMessage();\nexit;\n}\n$graphNode = $response->getGraphNode();\n/* handle the result */  \n/* make the API call */\nFB.api(\n\"/{comment-id}\",\n\"POST\",\n{\n\"message\": \"This is a test comment\"\n},\nfunction (response) {\nif (response && !response.error) {\n/* handle the result */\n}\n}\n);  \nBundle params = new Bundle();\nparams.putString(\"message\", \"This is a test comment\");\n/* make the API call */\nnew GraphRequest(\nAccessToken.getCurrentAccessToken(),\n\"/{comment-id}\",\nparams,\nHttpMethod.POST,\nnew GraphRequest.Callback() {\npublic void onCompleted(GraphResponse response) {\n/* handle the result */\n}\n}\n).executeAsync();  \nNSDictionary *params = @{\n@\"message\": @\"This is a test comment\",\n};\n/* make the API call */\nFBSDKGraphRequest *request = [[FBSDKGraphRequest alloc]\ninitWithGraphPath:@\"/{comment-id}\"\nparameters:params\nHTTPMethod:@\"POST\"];\n[request startWithCompletionHandler:^(FBSDKGraphRequestConnection *connection,\nid result,\nNSError *error) {\n// Handle the result\n}];\n",
+        "line_start": 212,
+        "line_end": 278,
+        "url": "https://developers.facebook.com/docs/graph-api/reference/v19.0/comment)"
+    },
+    "11": {
+        "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Comment Endpoint.md\nParagraph location: \n\tComment `/{comment-id}`\n\tUpdating\n\tNew Page Experience\n\nContent: \n### New Page Experience  \nThis API is supported for New Page Experience.\n",
+        "line_start": 8,
+        "line_end": 10,
+        "url": "https://developers.facebook.com/docs/graph-api/reference/v19.0/comment)"
+    },
+    "12": {
+        "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Comment Endpoint.md\nParagraph location: \n\tComment `/{comment-id}`\n\tUpdating\n\tPermissions\n\nContent: \n### Permissions  \n* A Page access token requested by a person who can perform the \\`MODERATE\\` task on the Page  \n* The `pages_read_engagement` permission  \n* The `pages_manage_engagement` permission\n",
+        "line_start": 12,
+        "line_end": 16,
+        "url": "https://developers.facebook.com/docs/graph-api/reference/v19.0/comment)"
+    },
+    "13": {
+        "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Comment Endpoint.md\nParagraph location: \n\tComment `/{comment-id}`\n\tUpdating\n\tHiding Comments\n\nContent: \n### Hiding Comments  \nYou can hide most comments on Posts with the following exceptions:  \n* comments made by the Page\n* comments made by the Page's admins\n* comments made by the Page on a User's Post. The Post is owned by the User.\n* comments made by any User on another User's Post to the Page. The Post is owned by the User.\n* comments made by an Event creator. The Post is owned by the Event creator.\n* comments made by a Facebook Group. The Post is owned by the Group.\n* comments made by anyone on a review\n",
+        "line_start": 300,
+        "line_end": 309,
+        "url": "https://developers.facebook.com/docs/graph-api/reference/v19.0/comment)"
+    },
+    "14": {
+        "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Comment Endpoint.md\nParagraph location: \n\tComment `/{comment-id}`\n\tUpdating\n\tFields\n\nContent: \n### Fields  \nOne of `attachment_url`, `attachment_id`, `message`, or `attachment_share_url` must be provided when updating.  \nYou must include either a message or an attachment. An attachment can be either a `url`, an `attachment_id`, or an `attachment_share_url`. You may include an `id` and a `url` together. If you include an `attachment_share_url`, you must not include the others.  \nWhen updating you must include any values that were on the original content. If you do not include one of them it will be removed from the content after the update. For example, if you update a comment that has an image that was specified via `attachment_url` and you don't include it in the update the image will be removed.  \nUpdating supports the fields listed on the [publishing section of the `/object/comments`](https://developers.facebook.com/docs/graph-api/reference/object/comments#publish). This includes the `attachment_url`, `attachment_id`, `message` and `source`. Please see that document for details on those fields.  \nUpdating also supports the `is_hidden` field, documented here.  \n| Name | Description | Type |\n| --- | --- | --- |\n| `is_hidden` | Whether this comment is hidden or visible. The original poster can still see the comment, along with the page admin and anyone else tagged in the comment | `boolean` |\n",
+        "line_start": 80,
+        "line_end": 89,
+        "url": "https://developers.facebook.com/docs/graph-api/reference/v19.0/comment)"
+    },
+    "15": {
+        "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Comment Endpoint.md\nParagraph location: \n\tComment `/{comment-id}`\n\tUpdating\n\tResponse\n\nContent: \n### Response  \nIf successful, you will receive a response with the following information. In addition, this endpoint supports [read-after-write](https://developers.facebook.com/docs/graph-api/using-graph-api#read-after-write) and can immediately return any fields returned by [read](https://developers.facebook.com/docs/graph-api/reference/comment#read) operations.  \n{\n\"success\": true\n}  \nIf unsuccessful, a relevant error message will be returned.\n",
+        "line_start": 202,
+        "line_end": 208,
+        "url": "https://developers.facebook.com/docs/graph-api/reference/v19.0/comment)"
+    },
+    "16": {
+        "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Comment Endpoint.md\nParagraph location: \n\tComment `/{comment-id}`\n\tEdges\n\nContent: \n## Edges  \n| Property Name | Description | Type |\n| --- | --- | --- |\n| [`/comments`](https://developers.facebook.com/docs/graph-api/reference/object/comments) | Comments that reply to this comment. | `Edge<Comment>` |\n| [`/likes`](https://developers.facebook.com/docs/graph-api/reference/object/likes) | People who like this comment. | `Edge<Profile>` |\n| [`/reactions`](https://developers.facebook.com/docs/graph-api/reference/object/reactions) | People who have reacted to this post. | `Edge<Reaction>` |\n| [`/private_replies`](https://developers.facebook.com/docs/graph-api/reference/object/private_replies) | Used to send private message reply to this comment (Page viewers only). | `Edge<Message>` |  \n![](https://www.facebook.com/tr?id=675141479195042&ev=PageView&noscript=1)  \n![](https://www.facebook.com/tr?id=574561515946252&ev=PageView&noscript=1)  \n![](https://www.facebook.com/tr?id=1754628768090156&ev=PageView&noscript=1)\n",
+        "line_start": 338,
+        "line_end": 348,
+        "url": "https://developers.facebook.com/docs/graph-api/reference/v19.0/comment)"
+    }
+}

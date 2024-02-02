@@ -1,0 +1,44 @@
+{
+    "0": {
+        "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Branded Content Search Endpoint.md\nParagraph location: \n\tBranded Content Search\n\tReading\n\nContent: \n# Branded Content Search  \n## Reading  \nReturns branded content based on your search. By default we only return content that is currently available on Facebook or Instagram, and content that was created on or after August 17, 2023.\n",
+        "line_start": 0,
+        "line_end": 3,
+        "url": "https://developers.facebook.com/tools/explorer/?method=GET&path=branded_content_search&version=v19.0)"
+    },
+    "1": {
+        "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Branded Content Search Endpoint.md\nParagraph location: \n\tBranded Content Search\n\tReading\n\tExample\n\nContent: \n### Example  \nHTTPPHP SDKJavaScript SDKAndroid SDKiOS SDK[Graph API Explorer](https://developers.facebook.com/tools/explorer/?method=GET&path=branded_content_search&version=v19.0)  \nGET /v19.0/branded_content_search HTTP/1.1\nHost: graph.facebook.com  \n/* PHP SDK v5.0.0 */\n/* make the API call */\ntry {\n// Returns a `Facebook\\FacebookResponse` object\n$response = $fb->get(\n'/branded_content_search',\n'{access-token}'\n);\n} catch(Facebook\\Exceptions\\FacebookResponseException $e) {\necho 'Graph returned an error: ' . $e->getMessage();\nexit;\n} catch(Facebook\\Exceptions\\FacebookSDKException $e) {\necho 'Facebook SDK returned an error: ' . $e->getMessage();\nexit;\n}\n$graphNode = $response->getGraphNode();\n/* handle the result */  \n/* make the API call */\nFB.api(\n\"/branded_content_search\",\nfunction (response) {\nif (response && !response.error) {\n/* handle the result */\n}\n}\n);  \n/* make the API call */\nnew GraphRequest(\nAccessToken.getCurrentAccessToken(),\n\"/branded_content_search\",\nnull,\nHttpMethod.GET,\nnew GraphRequest.Callback() {\npublic void onCompleted(GraphResponse response) {\n/* handle the result */\n}\n}\n).executeAsync();  \n/* make the API call */\nFBSDKGraphRequest *request = [[FBSDKGraphRequest alloc]\ninitWithGraphPath:@\"/branded_content_search\"\nparameters:params\nHTTPMethod:@\"GET\"];\n[request startWithCompletionHandler:^(FBSDKGraphRequestConnection *connection,\nid result,\nNSError *error) {\n// Handle the result\n}];  \nIf you want to learn how to use the Graph API, read our [Using Graph API guide](https://developers.facebook.com/docs/graph-api/using-graph-api/).\n",
+        "line_start": 6,
+        "line_end": 59,
+        "url": "https://developers.facebook.com/tools/explorer/?method=GET&path=branded_content_search&version=v19.0)"
+    },
+    "2": {
+        "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Branded Content Search Endpoint.md\nParagraph location: \n\tBranded Content Search\n\tReading\n\tParameters\n\nContent: \n### Parameters  \n| Parameter | Description |\n| --- | --- |\n| `creation_date_max`<br><br>string | Search for branded content posted after the date (inclusive) you provide. The date format should be YYYY-mm-dd.<br><br>Required |\n| `creation_date_min`<br><br>string | Search for branded content posted before the date (inclusive) you provide. The date format should be YYYY-mm-dd.<br><br>Required |\n| `ig_username`<br><br>string | Search for an Instagram account that posted branded content or was a brand partner. Your search must include this parameter or page\\_url. |\n| `page_url`<br><br>URI | Search for a Facebook Page that posted branded content or was a brand partner. Your search must include this parameter or ig\\_username. |\n",
+        "line_start": 67,
+        "line_end": 74,
+        "url": "https://developers.facebook.com/tools/explorer/?method=GET&path=branded_content_search&version=v19.0)"
+    },
+    "3": {
+        "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Branded Content Search Endpoint.md\nParagraph location: \n\tBranded Content Search\n\tReading\n\tFields\n\nContent: \n### Fields  \nReading from this edge will return a JSON formatted result:  \n{\n\"`data`\": \\[\\],\n\"`paging`\": {}\n}  \n#### `data`  \nA list of [BrandedContentSearch](https://developers.facebook.com/docs/graph-api/reference/branded-content-search/) nodes.  \n#### `paging`  \nFor more details about pagination, see the [Graph API guide](https://developers.facebook.com/docs/graph-api/using-graph-api/#paging).\n",
+        "line_start": 76,
+        "line_end": 86,
+        "url": "https://developers.facebook.com/tools/explorer/?method=GET&path=branded_content_search&version=v19.0)"
+    },
+    "4": {
+        "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Branded Content Search Endpoint.md\nParagraph location: \n\tBranded Content Search\n\tCreating\n\nContent: \n## Creating  \nYou can't perform this operation on this endpoint.\n",
+        "line_start": 93,
+        "line_end": 95,
+        "url": "https://developers.facebook.com/tools/explorer/?method=GET&path=branded_content_search&version=v19.0)"
+    },
+    "5": {
+        "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Branded Content Search Endpoint.md\nParagraph location: \n\tBranded Content Search\n\tUpdating\n\nContent: \n## Updating  \nYou can't perform this operation on this endpoint.\n",
+        "line_start": 97,
+        "line_end": 99,
+        "url": "https://developers.facebook.com/tools/explorer/?method=GET&path=branded_content_search&version=v19.0)"
+    },
+    "6": {
+        "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Branded Content Search Endpoint.md\nParagraph location: \n\tBranded Content Search\n\tDeleting\n\nContent: \n## Deleting  \nYou can't perform this operation on this endpoint.  \n![](https://www.facebook.com/tr?id=675141479195042&ev=PageView&noscript=1)  \n![](https://www.facebook.com/tr?id=574561515946252&ev=PageView&noscript=1)  \n![](https://www.facebook.com/tr?id=1754628768090156&ev=PageView&noscript=1)\n",
+        "line_start": 101,
+        "line_end": 106,
+        "url": "https://developers.facebook.com/tools/explorer/?method=GET&path=branded_content_search&version=v19.0)"
+    }
+}

@@ -1,0 +1,50 @@
+{
+    "0": {
+        "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Collaborative ads directory Endpoint.md\nParagraph location: \n\tCollaborative Ads Directory\n\tReading\n\nContent: \n# Collaborative Ads Directory  \n## Reading  \nDirectory of businesses that use collaborative ads\n",
+        "line_start": 0,
+        "line_end": 3,
+        "url": "https://developers.facebook.com/tools/explorer/?method=GET&path=collaborative_ads_directory&version=v19.0)"
+    },
+    "1": {
+        "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Collaborative ads directory Endpoint.md\nParagraph location: \n\tCollaborative Ads Directory\n\tReading\n\tExample\n\nContent: \n### Example  \nHTTPPHP SDKJavaScript SDKAndroid SDKiOS SDK[Graph API Explorer](https://developers.facebook.com/tools/explorer/?method=GET&path=collaborative_ads_directory&version=v19.0)  \nGET /v19.0/collaborative_ads_directory HTTP/1.1\nHost: graph.facebook.com  \n/* PHP SDK v5.0.0 */\n/* make the API call */\ntry {\n// Returns a `Facebook\\FacebookResponse` object\n$response = $fb->get(\n'/collaborative_ads_directory',\n'{access-token}'\n);\n} catch(Facebook\\Exceptions\\FacebookResponseException $e) {\necho 'Graph returned an error: ' . $e->getMessage();\nexit;\n} catch(Facebook\\Exceptions\\FacebookSDKException $e) {\necho 'Facebook SDK returned an error: ' . $e->getMessage();\nexit;\n}\n$graphNode = $response->getGraphNode();\n/* handle the result */  \n/* make the API call */\nFB.api(\n\"/collaborative_ads_directory\",\nfunction (response) {\nif (response && !response.error) {\n/* handle the result */\n}\n}\n);  \n/* make the API call */\nnew GraphRequest(\nAccessToken.getCurrentAccessToken(),\n\"/collaborative_ads_directory\",\nnull,\nHttpMethod.GET,\nnew GraphRequest.Callback() {\npublic void onCompleted(GraphResponse response) {\n/* handle the result */\n}\n}\n).executeAsync();  \n/* make the API call */\nFBSDKGraphRequest *request = [[FBSDKGraphRequest alloc]\ninitWithGraphPath:@\"/collaborative_ads_directory\"\nparameters:params\nHTTPMethod:@\"GET\"];\n[request startWithCompletionHandler:^(FBSDKGraphRequestConnection *connection,\nid result,\nNSError *error) {\n// Handle the result\n}];  \nIf you want to learn how to use the Graph API, read our [Using Graph API guide](https://developers.facebook.com/docs/graph-api/using-graph-api/).\n",
+        "line_start": 6,
+        "line_end": 59,
+        "url": "https://developers.facebook.com/tools/explorer/?method=GET&path=collaborative_ads_directory&version=v19.0)"
+    },
+    "2": {
+        "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Collaborative ads directory Endpoint.md\nParagraph location: \n\tCollaborative Ads Directory\n\tReading\n\tParameters\n\nContent: \n### Parameters  \nThis endpoint doesn't have any parameters.\n",
+        "line_start": 67,
+        "line_end": 69,
+        "url": "https://developers.facebook.com/tools/explorer/?method=GET&path=collaborative_ads_directory&version=v19.0)"
+    },
+    "3": {
+        "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Collaborative ads directory Endpoint.md\nParagraph location: \n\tCollaborative Ads Directory\n\tReading\n\tFields\n\nContent: \n### Fields  \n| Field | Description |\n| --- | --- |\n| `collaborative_ads_merchants`<br><br>[list<Business>](https://developers.facebook.com/docs/marketing-api/reference/business/) | List of publicly viewable merchants that use collaborative ads |\n",
+        "line_start": 71,
+        "line_end": 75,
+        "url": "https://developers.facebook.com/tools/explorer/?method=GET&path=collaborative_ads_directory&version=v19.0)"
+    },
+    "4": {
+        "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Collaborative ads directory Endpoint.md\nParagraph location: \n\tCollaborative Ads Directory\n\tReading\n\tError Codes\n\nContent: \n### Error Codes  \n| Error | Description |\n| --- | --- |\n| 100 | Invalid parameter |\n",
+        "line_start": 77,
+        "line_end": 81,
+        "url": "https://developers.facebook.com/tools/explorer/?method=GET&path=collaborative_ads_directory&version=v19.0)"
+    },
+    "5": {
+        "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Collaborative ads directory Endpoint.md\nParagraph location: \n\tCollaborative Ads Directory\n\tCreating\n\nContent: \n## Creating  \nYou can't perform this operation on this endpoint.\n",
+        "line_start": 83,
+        "line_end": 85,
+        "url": "https://developers.facebook.com/tools/explorer/?method=GET&path=collaborative_ads_directory&version=v19.0)"
+    },
+    "6": {
+        "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Collaborative ads directory Endpoint.md\nParagraph location: \n\tCollaborative Ads Directory\n\tUpdating\n\nContent: \n## Updating  \nYou can't perform this operation on this endpoint.\n",
+        "line_start": 87,
+        "line_end": 89,
+        "url": "https://developers.facebook.com/tools/explorer/?method=GET&path=collaborative_ads_directory&version=v19.0)"
+    },
+    "7": {
+        "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Collaborative ads directory Endpoint.md\nParagraph location: \n\tCollaborative Ads Directory\n\tDeleting\n\nContent: \n## Deleting  \nYou can't perform this operation on this endpoint.  \n![](https://www.facebook.com/tr?id=675141479195042&ev=PageView&noscript=1)  \n![](https://www.facebook.com/tr?id=574561515946252&ev=PageView&noscript=1)  \n![](https://www.facebook.com/tr?id=1754628768090156&ev=PageView&noscript=1)\n",
+        "line_start": 91,
+        "line_end": 96,
+        "url": "https://developers.facebook.com/tools/explorer/?method=GET&path=collaborative_ads_directory&version=v19.0)"
+    }
+}

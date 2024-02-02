@@ -1,0 +1,338 @@
+{
+    "0": {
+        "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Object Endpoint.md\nParagraph location: \n\t`/{object-id}/comments`\n\nContent: \n# `/{object-id}/comments`  \nThis reference describes the `/comments` edge that is common to multiple Graph API nodes. The structure and operations are the same for each node. The following objects have a `/comments` edge:  \n|     |     |     |\n| --- | --- | --- |\n| * [Album](https://developers.facebook.com/docs/graph-api/reference/album/)<br>    <br>* [Comment](https://developers.facebook.com/docs/graph-api/reference/comment/)<br>    <br>* [Event](https://developers.facebook.com/docs/graph-api/reference/event/)<br>    <br>* [Link](https://developers.facebook.com/docs/graph-api/reference/link/) | * [Live Video](https://developers.facebook.com/docs/graph-api/reference/live-video/)<br>    <br>* [Photo](https://developers.facebook.com/docs/graph-api/reference/photo/)<br>    <br>* [Post](https://developers.facebook.com/docs/graph-api/reference/post/) | * [Thread](https://developers.facebook.com/docs/graph-api/reference/thread/)<br>    <br>* [User](https://developers.facebook.com/docs/graph-api/reference/user/)<br>    <br>* [Video](https://developers.facebook.com/docs/graph-api/reference/video/) |  \nIt is possible for comment objects to have a `/comments` edge, which is called _comment replies_. The structure is the same for these, but attention should be paid to the [modifiers](#readmodifiers) for these edges.  \n[](#)\n",
+        "line_start": 0,
+        "line_end": 7,
+        "url": "https://developers.facebook.com/docs/graph-api/reference/album/)<br>"
+    },
+    "1": {
+        "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Object Endpoint.md\nParagraph location: \n\t`/{object-id}/comments`\n\tReading\n\nContent: \n## Reading  \nReturns a comment on an object.  \nThe `id` field for the `/PAGEPOST-ID/comments` endpoint will no longer be returned for apps using the [Page Public Content Access feature](https://developers.facebook.com/docs/pages/overview/permissions-features#features). To access the comment IDs for a Page post you must be able to perform the [MODERATE task](https://developers.facebook.com/docs/pages/overview/permissions-features#tasks) on the Page being queried. This change is in effect for v11.0+ and will be implement for all versions on September, 7, 2021.\n",
+        "line_start": 12,
+        "line_end": 15,
+        "url": "https://developers.facebook.com/docs/graph-api/reference/album/)<br>"
+    },
+    "2": {
+        "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Object Endpoint.md\nParagraph location: \n\t`/{object-id}/comments`\n\tReading\n\tNew Page Experience\n\nContent: \n### New Page Experience  \nThe following objects `/comments` endpoint are supported for New Page Experience:  \n|     |     |\n| --- | --- |\n| * Album<br>* Comment<br>* Link<br>* Page | * PagePost<br>* Photo<br>* Post<br>* PostComment |\n",
+        "line_start": 18,
+        "line_end": 23,
+        "url": "https://developers.facebook.com/docs/graph-api/reference/album/)<br>"
+    },
+    "3": {
+        "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Object Endpoint.md\nParagraph location: \n\t`/{object-id}/comments`\n\tReading\n\tPermissions\n\nContent: \n### Permissions  \n* The same permissions required to view the parent object are required to view comments on that object.\n",
+        "line_start": 26,
+        "line_end": 28,
+        "url": "https://developers.facebook.com/docs/graph-api/reference/album/)<br>"
+    },
+    "4": {
+        "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Object Endpoint.md\nParagraph location: \n\t`/{object-id}/comments`\n\tReading\n\tLimitations\n\nContent: \n### Limitations  \n* Other users' profile information and comments will not be returned when accessing user posts, photos, albums, videos, likes, and reactions unless authorized by those users.  \n* Comments returned in a query are based on default filtering. To get all comments that can be returned depending on your permissions, set the `filter` parameter to `stream` or use the `order` field.  \n* A [new Page](https://www.facebook.com/business/help/2752670058165459?id=418112142508425) can comment as the Page on new Pages or classic Pages. However, a classic Page can not comment on a new Page.  \n* For the following nodes, the `/comments` endpoint returns empty data if you read it with a [User access token](https://developers.facebook.com/docs/facebook-login/access-tokens):  \n* [Album](https://developers.facebook.com/docs/graph-api/reference/album/)  \n* [Photo](https://developers.facebook.com/docs/graph-api/reference/photo/)  \n* [Post](https://developers.facebook.com/docs/graph-api/reference/post/)  \n* [Video](https://developers.facebook.com/docs/graph-api/reference/video/)  \n* The `id` field for the [`/PAGEPOST-ID/comments` endpoint](https://developers.facebook.com/docs/graph-api/reference/pagepost/) will no longer be returned for apps using the [Page Public Content Access feature](https://developers.facebook.com/docs/pages/overview/permissions-features#features). To access the comment IDs for a Page post you must be able to perform the [MODERATE task](https://developers.facebook.com/docs/pages/overview/permissions-features#tasks) on the Page being queried.  \n* For objects that have tens of thousands of comments, you may encounter limits while [paging](https://developers.facebook.com/docs/graph-api/using-graph-api#paging). Learn more about paging in our [Using the Graph API Guide](https://developers.facebook.com/docs/graph-api/using-graph-api).\n",
+        "line_start": 30,
+        "line_end": 41,
+        "url": "https://developers.facebook.com/docs/graph-api/reference/album/)<br>"
+    },
+    "5": {
+        "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Object Endpoint.md\nParagraph location: \n\t`/{object-id}/comments`\n\tReading\n\tExample\n\nContent: \n### Example  \nHTTPPHP SDKJavaScript SDKAndroid SDKiOS SDK[Graph API Explorer](https://developers.facebook.com/tools/explorer/?method=GET&path=%7Bobject-id%7D%2Fcomments&version=v18.0)  \nGET /v18.0/{object-id}/comments HTTP/1.1\nHost: graph.facebook.com  \n/* PHP SDK v5.0.0 */\n/* make the API call */\ntry {\n// Returns a `Facebook\\FacebookResponse` object\n$response = $fb->get(\n'/{object-id}/comments',\n'{access-token}'\n);\n} catch(Facebook\\Exceptions\\FacebookResponseException $e) {\necho 'Graph returned an error: ' . $e->getMessage();\nexit;\n} catch(Facebook\\Exceptions\\FacebookSDKException $e) {\necho 'Facebook SDK returned an error: ' . $e->getMessage();\nexit;\n}\n$graphNode = $response->getGraphNode();\n/* handle the result */  \n/* make the API call */\nFB.api(\n\"/{object-id}/comments\",\nfunction (response) {\nif (response && !response.error) {\n/* handle the result */\n}\n}\n);  \n/* make the API call */\nnew GraphRequest(\nAccessToken.getCurrentAccessToken(),\n\"/{object-id}/comments\",\nnull,\nHttpMethod.GET,\nnew GraphRequest.Callback() {\npublic void onCompleted(GraphResponse response) {\n/* handle the result */\n}\n}\n).executeAsync();  \n/* make the API call */\nFBSDKGraphRequest *request = [[FBSDKGraphRequest alloc]\ninitWithGraphPath:@\"/{object-id}/comments\"\nparameters:params\nHTTPMethod:@\"GET\"];\n[request startWithCompletionHandler:^(FBSDKGraphRequestConnection *connection,\nid result,\nNSError *error) {\n// Handle the result\n}];\n",
+        "line_start": 54,
+        "line_end": 106,
+        "url": "https://developers.facebook.com/docs/graph-api/reference/album/)<br>"
+    },
+    "6": {
+        "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Object Endpoint.md\nParagraph location: \n\t`/{object-id}/comments`\n\tReading\n\tParameters\n\nContent: \n### Parameters  \nHTTPPHP SDKJavaScript SDKAndroid SDKiOS SDK  \nGET /v18.0/{object-id}/comments?summary=1&filter=toplevel HTTP/1.1\nHost: graph.facebook.com  \n/* PHP SDK v5.0.0 */\n/* make the API call */\ntry {\n// Returns a `Facebook\\FacebookResponse` object\n$response = $fb->get(\n'/{object-id}/comments?summary=1&filter=toplevel',\n'{access-token}'\n);\n} catch(Facebook\\Exceptions\\FacebookResponseException $e) {\necho 'Graph returned an error: ' . $e->getMessage();\nexit;\n} catch(Facebook\\Exceptions\\FacebookSDKException $e) {\necho 'Facebook SDK returned an error: ' . $e->getMessage();\nexit;\n}\n$graphNode = $response->getGraphNode();\n/* handle the result */  \n/* make the API call */\nFB.api(\n\"/{object-id}/comments\",\n{\n\"summary\": true,\n\"filter\": \"toplevel\"\n},\nfunction (response) {\nif (response && !response.error) {\n/* handle the result */\n}\n}\n);  \nBundle params = new Bundle();\nparams.putBoolean(\"summary\", true);\nparams.putString(\"filter\", \"toplevel\");\n/* make the API call */\nnew GraphRequest(\nAccessToken.getCurrentAccessToken(),\n\"/{object-id}/comments\",\nparams,\nHttpMethod.GET,\nnew GraphRequest.Callback() {\npublic void onCompleted(GraphResponse response) {\n/* handle the result */\n}\n}\n).executeAsync();  \nNSDictionary *params = @{\n@\"summary\": @YES,\n@\"filter\": @\"toplevel\",\n};\n/* make the API call */\nFBSDKGraphRequest *request = [[FBSDKGraphRequest alloc]\ninitWithGraphPath:@\"/{object-id}/comments\"\nparameters:params\nHTTPMethod:@\"GET\"];\n[request startWithCompletionHandler:^(FBSDKGraphRequestConnection *connection,\nid result,\nNSError *error) {\n// Handle the result\n}];  \n| Parameter | Description |\n| --- | --- |\n| `summary`<br><br>_bool_ | A summary of metadata about the comments on the object. Importantly this metadata includes `order` which indicates how the comments are being sorted. |\n| `filter`<br><br>_enum { toplevel, stream }_ | If a person can reply to a comment, you can filter comments based on top level comments, comments that are made directly on the post, or the chronological order of all comments.<br><br>* `toplevel` - This is the default. It returns all top-level comments in chronological order, as ordered on Facebook. This filter is useful for displaying comments in the same structure as they appear on Facebook.<br>* `stream` - All-level comments in `chronological` order. This filter is useful for comment moderation tools where it is helpful to see a chronological list of all comments. |\n",
+        "line_start": 113,
+        "line_end": 180,
+        "url": "https://developers.facebook.com/docs/graph-api/reference/album/)<br>"
+    },
+    "7": {
+        "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Object Endpoint.md\nParagraph location: \n\t`/{object-id}/comments`\n\tReading\n\tFields\n\nContent: \n### Fields  \nAn array of [Comment objects](https://developers.facebook.com/docs/graph-api/reference/comment/) in addition to the following fields when `summary` is `true` in the request.  \n| Field | Description |\n| --- | --- |\n| `order`<br><br>_enum { chronological, reverse\\_chronological }_ | Order in which comments were returned.<br><br>* `chronological`: Comments sorted by the oldest comments first.<br>* `reverse_chronological`: Comments sorted by the newest comments first. |\n| `total_count`<br><br>_int32_ | The count of comments on this node. It is important to note that this value changes depending on the `filter` being used (where comment replies are available):<br><br>* if `filter` is `stream` then `total_count` will be a count of all comments (including replies) on the node.<br>* if `filter` is `toplevel` then `total_count` will be a count of all top-level comments on the node.<br><br>Note: `total_count` can be greater than or equal to the actual number of comments returned due to comment privacy or deletion. |  \n[](#)\n",
+        "line_start": 188,
+        "line_end": 195,
+        "url": "https://developers.facebook.com/docs/graph-api/reference/album/)<br>"
+    },
+    "8": {
+        "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Object Endpoint.md\nParagraph location: \n\t`/{object-id}/comments`\n\tPublishing\n\nContent: \n## Publishing  \nPublish new comments to any object.\n",
+        "line_start": 199,
+        "line_end": 201,
+        "url": "https://developers.facebook.com/docs/graph-api/reference/album/)<br>"
+    },
+    "9": {
+        "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Object Endpoint.md\nParagraph location: \n\t`/{object-id}/comments`\n\tPublishing\n\tNew Page Experience\n\nContent: \n### New Page Experience  \nThe following objects `/comments` endpoint are supported for New Page Experience:  \n|     |     |\n| --- | --- |\n| * Comments<br>* PagePosts<br>* Photo<br>* Post | * PostComment<br>* Video |\n",
+        "line_start": 18,
+        "line_end": 23,
+        "url": "https://developers.facebook.com/docs/graph-api/reference/album/)<br>"
+    },
+    "10": {
+        "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Object Endpoint.md\nParagraph location: \n\t`/{object-id}/comments`\n\tPublishing\n\tPermissions\n\nContent: \n### Permissions  \n* A Page access token requested by a person who can perform the `MODERATE` task on the Page  \n* The `pages_manage_engagement` permission  \nNote, the `can_comment` field on individual [comment objects](https://developers.facebook.com/docs/graph-api/reference/comment/) indicates whether it is possible to reply to that comment.\n",
+        "line_start": 26,
+        "line_end": 30,
+        "url": "https://developers.facebook.com/docs/graph-api/reference/album/)<br>"
+    },
+    "11": {
+        "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Object Endpoint.md\nParagraph location: \n\t`/{object-id}/comments`\n\tPublishing\n\tExample\n\nContent: \n### Example  \nHTTPPHP SDKJavaScript SDKAndroid SDKiOS SDK  \nPOST /v18.0/{object-id}/comments HTTP/1.1\nHost: graph.facebook.com  \nmessage=This+is+a+test+comment  \n/* PHP SDK v5.0.0 */\n/* make the API call */\ntry {\n// Returns a `Facebook\\FacebookResponse` object\n$response = $fb->post(\n'/{object-id}/comments',\narray (\n'message' => 'This is a test comment',\n),\n'{access-token}'\n);\n} catch(Facebook\\Exceptions\\FacebookResponseException $e) {\necho 'Graph returned an error: ' . $e->getMessage();\nexit;\n} catch(Facebook\\Exceptions\\FacebookSDKException $e) {\necho 'Facebook SDK returned an error: ' . $e->getMessage();\nexit;\n}\n$graphNode = $response->getGraphNode();\n/* handle the result */  \n/* make the API call */\nFB.api(\n\"/{object-id}/comments\",\n\"POST\",\n{\n\"message\": \"This is a test comment\"\n},\nfunction (response) {\nif (response && !response.error) {\n/* handle the result */\n}\n}\n);  \nBundle params = new Bundle();\nparams.putString(\"message\", \"This is a test comment\");\n/* make the API call */\nnew GraphRequest(\nAccessToken.getCurrentAccessToken(),\n\"/{object-id}/comments\",\nparams,\nHttpMethod.POST,\nnew GraphRequest.Callback() {\npublic void onCompleted(GraphResponse response) {\n/* handle the result */\n}\n}\n).executeAsync();  \nNSDictionary *params = @{\n@\"message\": @\"This is a test comment\",\n};\n/* make the API call */\nFBSDKGraphRequest *request = [[FBSDKGraphRequest alloc]\ninitWithGraphPath:@\"/{object-id}/comments\"\nparameters:params\nHTTPMethod:@\"POST\"];\n[request startWithCompletionHandler:^(FBSDKGraphRequestConnection *connection,\nid result,\nNSError *error) {\n// Handle the result\n}];\n",
+        "line_start": 54,
+        "line_end": 119,
+        "url": "https://developers.facebook.com/docs/graph-api/reference/album/)<br>"
+    },
+    "12": {
+        "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Object Endpoint.md\nParagraph location: \n\t`/{object-id}/comments`\n\tPublishing\n\tFields\n\nContent: \n### Fields  \n| Name | Description |\n| --- | --- |\n| `attachment_id`<br><br>_string_ | An optional ID of a unpublished photo (see `no_story` field in [`/{user-id}/photos`](https://developers.facebook.com/docs/graph-api/reference/user/photos/#publish)) uploaded to Facebook to include as a photo comment. One of `attachment_id`, `attachment_share_url`, `attachment_url`, `message`, or `source` must be provided when publishing. |\n| `attachment_share_url`<br><br>_string_ | The URL of a GIF to include as a animated GIF comment. One of `attachment_id`, `attachment_share_url`, `attachment_url`, `message`, or `source` must be provided when publishing. |\n| `attachment_url`<br><br>_string_ | The URL of an image to include as a photo comment. One of `attachment_id`, `attachment_share_url`, `attachment_url`, `message`, or `source` must be provided when publishing. |\n| `source`<br><br>_[multipart/form-data](https://l.facebook.com/l.php?u=https%3A%2F%2Fwww.w3.org%2FTR%2Fhtml401%2Finteract%2Fforms.html%23h-17.13.4.2&h=AT1B_welIoHVZ_yCIjRGO_mTq55r0_1w5ocMHXx4ZpCyULkGJXrC7qP3EeIktScqVbnInKiftqSwhHkpipWPNurdpUqlPoRuQPkaRbL5rkcVomRXSP_7drlzDgWPKihGHOOe34mg9IaAGPTCYpyVBEXMYaDM0w6S5u8)_ | A photo, encoded as form data, to use as a photo comment. One of `attachment_id`, `attachment_share_url`, `attachment_url`, `message`, or `source` must be provided when publishing. |\n| `message`<br><br>_string_ | The comment text. One of `attachment_id`, `attachment_share_url`, `attachment_url`, `message`, or `source` must be provided when publishing.<br><br>Mention other Facebook Pages in your `message` text using the following syntax:<br><br>`@[page-id]`<br><br>Usage of [this feature is subject to review](https://developers.facebook.com/docs/apps/review/feature#reference-MENTIONING). |\n",
+        "line_start": 188,
+        "line_end": 196,
+        "url": "https://developers.facebook.com/docs/graph-api/reference/album/)<br>"
+    },
+    "13": {
+        "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Object Endpoint.md\nParagraph location: \n\t`/{object-id}/comments`\n\tPublishing\n\tReturn Type\n\nContent: \n### Return Type  \nIf successful, you will receive a JSON response with the newly created comment ID. In addition, this endpoint supports [read-after-write](https://developers.facebook.com/docs/graph-api/using-graph-api#read-after-write) and can immediately return any fields returned by [read](https://developers.facebook.com/docs/graph-api/reference/object/comments#read) operations.  \n{\n\"id\": \"{comment-id}\"\n}  \n[](#)\n",
+        "line_start": 303,
+        "line_end": 309,
+        "url": "https://developers.facebook.com/docs/graph-api/reference/album/)<br>"
+    },
+    "14": {
+        "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Object Endpoint.md\nParagraph location: \n\t`/{object-id}/comments`\n\tUpdating\n\nContent: \n## Updating  \nYou can't update using this edge.  \n[](#)\n",
+        "line_start": 313,
+        "line_end": 316,
+        "url": "https://developers.facebook.com/docs/graph-api/reference/album/)<br>"
+    },
+    "15": {
+        "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Object Endpoint.md\nParagraph location: \n\t`/{object-id}/comments`\n\tDeleting\n\nContent: \n## Deleting  \nYou can't delete using this edge.  \nDelete individual comments using the [/comment-id endpoint](https://developers.facebook.com/docs/graph-api/reference/comment/).  \n[](#)  \n[](#)\n",
+        "line_start": 319,
+        "line_end": 324,
+        "url": "https://developers.facebook.com/docs/graph-api/reference/album/)<br>"
+    },
+    "16": {
+        "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Object Endpoint.md\nParagraph location: \n\t`/{object-id}/likes`\n\nContent: \n# `/{object-id}/likes`  \nThis reference describes the `/likes` edge that is common to multiple Graph API nodes. The structure and operations are the same for each node. The following objects have a `/likes` edge:  \n|     |     |\n| --- | --- |\n| * [Album](https://developers.facebook.com/docs/graph-api/reference/album)<br>* [Comment](https://developers.facebook.com/docs/graph-api/reference/comment)<br>* [Page](https://developers.facebook.com/docs/graph-api/reference/page)<br>* [Photo](https://developers.facebook.com/docs/graph-api/reference/photo)<br>* [User](https://developers.facebook.com/docs/graph-api/reference/user)<br>* [Video](https://developers.facebook.com/docs/graph-api/reference/video) |     |  \n[](#)\n",
+        "line_start": 329,
+        "line_end": 335,
+        "url": "https://developers.facebook.com/docs/graph-api/reference/album/)<br>"
+    },
+    "17": {
+        "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Object Endpoint.md\nParagraph location: \n\t`/{object-id}/likes`\n\tReading\n\nContent: \n## Reading  \nReturns the list of people who liked this object. When reading likes on a Page or User object, this endpoint returns a list of pages liked by that Page or User.  \nUse the `likes` field of an object to get the number of likes.  \nWe recommended that you use the [`/object/reactions` endpoint](https://developers.facebook.com/docs/graph-api/reference/object/reactions) to get like counts, if available.\n",
+        "line_start": 12,
+        "line_end": 16,
+        "url": "https://developers.facebook.com/docs/graph-api/reference/album/)<br>"
+    },
+    "18": {
+        "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Object Endpoint.md\nParagraph location: \n\t`/{object-id}/likes`\n\tReading\n\tNew Page Experience\n\nContent: \n### New Page Experience  \nThe following objects `/likes` endpoint are supported for New Page Experience:  \n|     |     |\n| --- | --- |\n| * [Album](https://developers.facebook.com/docs/graph-api/reference/album)<br>* [Comment](https://developers.facebook.com/docs/graph-api/reference/comment)<br>* [Photo](https://developers.facebook.com/docs/graph-api/reference/photo)<br>* [PagePost](https://developers.facebook.com/docs/graph-api/reference/pagepost) | * User |\n",
+        "line_start": 18,
+        "line_end": 23,
+        "url": "https://developers.facebook.com/docs/graph-api/reference/album/)<br>"
+    },
+    "19": {
+        "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Object Endpoint.md\nParagraph location: \n\t`/{object-id}/likes`\n\tReading\n\tRequirements\n\nContent: \n### Requirements  \n* The same requirements required to view the object are required to view likes on that object.\n",
+        "line_start": 355,
+        "line_end": 357,
+        "url": "https://developers.facebook.com/docs/graph-api/reference/album/)<br>"
+    },
+    "20": {
+        "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Object Endpoint.md\nParagraph location: \n\t`/{object-id}/likes`\n\tReading\n\tLimitations\n\nContent: \n### Limitations  \n* Only aggregated counts using `total_count` with the `summary` parameter are available for Post likes.  \n* The `like` reaction counts include both \"like\" and \"care\" reactions.  \n* `total_count` represents the approximate number of likes, however, the actual number returned might be different depending on privacy settings.  \n* The `GET /{group-post-id}/likes` and `GET /{post-id}/likes` endpoints are deprecated in v8.0+ and deprecated in all versions on Nov. 2, 2020.\n",
+        "line_start": 30,
+        "line_end": 35,
+        "url": "https://developers.facebook.com/docs/graph-api/reference/album/)<br>"
+    },
+    "21": {
+        "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Object Endpoint.md\nParagraph location: \n\t`/{object-id}/likes`\n\tReading\n\tFields\n\nContent: \n### Fields  \n| Property Name | Description | Type |\n| --- | --- | --- |\n| `total_count` | Total number of User and Page likes on the object. To have this field returned, you must include the `summary=true` parameter and value in your request. | `int32` |\n",
+        "line_start": 188,
+        "line_end": 192,
+        "url": "https://developers.facebook.com/docs/graph-api/reference/album/)<br>"
+    },
+    "22": {
+        "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Object Endpoint.md\nParagraph location: \n\t`/{object-id}/likes`\n\tReading\n\tExample Usage\n\nContent: \n### Example Usage  \n**Sample Request**  \ncurl \\-i \\-X GET \"https://graph.facebook.com/{object-id}\n?fields=likes.summary(true)\n&access\\_token={access-token}\"  \n#### Sample Response  \n{\n\"likes\": {\n\"data\": \\[\n{\n\"name\": \"Bill the Cat\",\n\"id\": \"155111347875779\",\n\"created\\_time\": \"2017-06-18T18:21:04+0000\"\n},\n{\n\"name\": \"Calvin and Hobbes\",\n\"id\": \"257573197608192\",\n\"created\\_time\": \"2017-06-18T18:21:02+0000\"\n},\n{\n\"name\": \"Berkeley Breathed's Bloom County\",\n\"id\": \"108793262484769\",\n\"created\\_time\": \"2017-06-18T18:20:58+0000\"\n}\n\\],\n\"paging\": {\n\"cursors\": {\n\"before\": \"Nzc0Njg0MTQ3OAZDZD\",\n\"after\": \"NTcxODc1ODk2NgZDZD\"\n},\n\"next\": \"https://graph.facebook.com/vX.X/me/likes?access\\_token=user-access-token&pretty=0&summary=true&limit=25&after=NTcxODc1ODk2NgZDZD\"\n},\n\"summary\": {\n\"total\\_count\": 136\n}\n},\n\"id\": \"user-id\"\n}  \n[](#)\n",
+        "line_start": 376,
+        "line_end": 415,
+        "url": "https://developers.facebook.com/docs/graph-api/reference/album/)<br>"
+    },
+    "23": {
+        "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Object Endpoint.md\nParagraph location: \n\t`/{object-id}/likes`\n\tPublish\n\tNew Page Experience\n\nContent: \n### New Page Experience  \nThe following objects `/likes` endpoint are supported for New Page Experience:  \n|     |     |\n| --- | --- |\n| * [Album](https://developers.facebook.com/docs/graph-api/reference/album)<br>* [Comment](https://developers.facebook.com/docs/graph-api/reference/comment)<br>* PagePost |     |  \nHTTPPHP SDKJavaScript SDKAndroid SDKiOS SDK  \nPOST /v18.0/{object-id}/likes HTTP/1.1\nHost: graph.facebook.com  \n/* PHP SDK v5.0.0 */\n/* make the API call */\ntry {\n// Returns a `Facebook\\FacebookResponse` object\n$response = $fb->post(\n'/{object-id}/likes',\narray (),\n'{access-token}'\n);\n} catch(Facebook\\Exceptions\\FacebookResponseException $e) {\necho 'Graph returned an error: ' . $e->getMessage();\nexit;\n} catch(Facebook\\Exceptions\\FacebookSDKException $e) {\necho 'Facebook SDK returned an error: ' . $e->getMessage();\nexit;\n}\n$graphNode = $response->getGraphNode();\n/* handle the result */  \n/* make the API call */\nFB.api(\n\"/{object-id}/likes\",\n\"POST\",\nfunction (response) {\nif (response && !response.error) {\n/* handle the result */\n}\n}\n);  \n/* make the API call */\nnew GraphRequest(\nAccessToken.getCurrentAccessToken(),\n\"/{object-id}/likes\",\nnull,\nHttpMethod.POST,\nnew GraphRequest.Callback() {\npublic void onCompleted(GraphResponse response) {\n/* handle the result */\n}\n}\n).executeAsync();  \n/* make the API call */\nFBSDKGraphRequest *request = [[FBSDKGraphRequest alloc]\ninitWithGraphPath:@\"/{object-id}/likes\"\nparameters:params\nHTTPMethod:@\"POST\"];\n[request startWithCompletionHandler:^(FBSDKGraphRequestConnection *connection,\nid result,\nNSError *error) {\n// Handle the result\n}];\n",
+        "line_start": 18,
+        "line_end": 76,
+        "url": "https://developers.facebook.com/docs/graph-api/reference/album/)<br>"
+    },
+    "24": {
+        "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Object Endpoint.md\nParagraph location: \n\t`/{object-id}/likes`\n\tPublish\n\tPermissions\n\nContent: \n### Permissions  \n* A Page access token requested by a person who can perform the [`CREATE_CONTENT` task](https://developers.facebook.com/docs/pages/overview-1#tasks) on the Page  \n* The `pages_manage_engagement` permission\n",
+        "line_start": 26,
+        "line_end": 29,
+        "url": "https://developers.facebook.com/docs/graph-api/reference/album/)<br>"
+    },
+    "25": {
+        "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Object Endpoint.md\nParagraph location: \n\t`/{object-id}/likes`\n\tPublish\n\tLimitations\n\nContent: \n### Limitations  \n* The Page must also be able to like the object (whether via API or on Facebook.com).  \n* The object must not have already been liked by the Page.  \n* If the Page has already reacted to an object (wow, sad) then a like will succeed, but the reaction will not change.  \n* Liking a Page review is not supported.\n",
+        "line_start": 30,
+        "line_end": 35,
+        "url": "https://developers.facebook.com/docs/graph-api/reference/album/)<br>"
+    },
+    "26": {
+        "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Object Endpoint.md\nParagraph location: \n\t`/{object-id}/likes`\n\tPublish\n\tResponse\n\nContent: \n### Response  \nOn success, your app will receive the following response:  \n{\n\"success\": true\n}  \n[](#)\n",
+        "line_start": 514,
+        "line_end": 520,
+        "url": "https://developers.facebook.com/docs/graph-api/reference/album/)<br>"
+    },
+    "27": {
+        "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Object Endpoint.md\nParagraph location: \n\t`/{object-id}/likes`\n\tUpdating\n\nContent: \n## Updating  \nYou can't perform this operation on this endpoint.  \n[](#)\n",
+        "line_start": 313,
+        "line_end": 316,
+        "url": "https://developers.facebook.com/docs/graph-api/reference/album/)<br>"
+    },
+    "28": {
+        "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Object Endpoint.md\nParagraph location: \n\t`/{object-id}/likes`\n\tDelete\n\nContent: \n## Delete  \nDelete likes on Page objects using this endpoint.  \nHTTPPHP SDKJavaScript SDKAndroid SDKiOS SDK  \nDELETE /v18.0/{object-id}/likes HTTP/1.1\nHost: graph.facebook.com  \n/* PHP SDK v5.0.0 */\n/* make the API call */\ntry {\n// Returns a `Facebook\\FacebookResponse` object\n$response = $fb->delete(\n'/{object-id}/likes',\narray (),\n'{access-token}'\n);\n} catch(Facebook\\Exceptions\\FacebookResponseException $e) {\necho 'Graph returned an error: ' . $e->getMessage();\nexit;\n} catch(Facebook\\Exceptions\\FacebookSDKException $e) {\necho 'Facebook SDK returned an error: ' . $e->getMessage();\nexit;\n}\n$graphNode = $response->getGraphNode();\n/* handle the result */  \n/* make the API call */\nFB.api(\n\"/{object-id}/likes\",\n\"DELETE\",\nfunction (response) {\nif (response && !response.error) {\n/* handle the result */\n}\n}\n);  \n/* make the API call */\nnew GraphRequest(\nAccessToken.getCurrentAccessToken(),\n\"/{object-id}/likes\",\nnull,\nHttpMethod.DELETE,\nnew GraphRequest.Callback() {\npublic void onCompleted(GraphResponse response) {\n/* handle the result */\n}\n}\n).executeAsync();  \n/* make the API call */\nFBSDKGraphRequest *request = [[FBSDKGraphRequest alloc]\ninitWithGraphPath:@\"/{object-id}/likes\"\nparameters:params\nHTTPMethod:@\"DELETE\"];\n[request startWithCompletionHandler:^(FBSDKGraphRequestConnection *connection,\nid result,\nNSError *error) {\n// Handle the result\n}];\n",
+        "line_start": 530,
+        "line_end": 585,
+        "url": "https://developers.facebook.com/docs/graph-api/reference/album/)<br>"
+    },
+    "29": {
+        "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Object Endpoint.md\nParagraph location: \n\t`/{object-id}/likes`\n\tDelete\n\tPermissions\n\nContent: \n### Permissions  \n* A Page access token requested by a person who can perform the [`MODERATE` task](https://developers.facebook.com/docs/pages/overview-1#tasks) on the Page  \n* The `pages_manage_engagement` permission\n",
+        "line_start": 26,
+        "line_end": 29,
+        "url": "https://developers.facebook.com/docs/graph-api/reference/album/)<br>"
+    },
+    "30": {
+        "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Object Endpoint.md\nParagraph location: \n\t`/{object-id}/likes`\n\tDelete\n\tLimitations\n\nContent: \n### Limitations  \n* A User or Page can only delete their own `likes`.  \n* The object must have already been liked.  \n* Deleting a Page review like is not supported.\n",
+        "line_start": 30,
+        "line_end": 34,
+        "url": "https://developers.facebook.com/docs/graph-api/reference/album/)<br>"
+    },
+    "31": {
+        "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Object Endpoint.md\nParagraph location: \n\t`/{object-id}/likes`\n\tDelete\n\tFields\n\nContent: \n### Fields  \nThere are no fields for this endpoint.\n",
+        "line_start": 188,
+        "line_end": 190,
+        "url": "https://developers.facebook.com/docs/graph-api/reference/album/)<br>"
+    },
+    "32": {
+        "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Object Endpoint.md\nParagraph location: \n\t`/{object-id}/likes`\n\tDelete\n\tResponse\n\nContent: \n### Response  \nOn success, your app will receive the following response:  \n{\n\"success\": true\n}  \n[](#)  \n[](#)\n",
+        "line_start": 514,
+        "line_end": 521,
+        "url": "https://developers.facebook.com/docs/graph-api/reference/album/)<br>"
+    },
+    "33": {
+        "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Object Endpoint.md\nParagraph location: \n\t`/{object-id}/private_replies`\n\nContent: \n# `/{object-id}/private_replies`  \n#### Legacy Private Replies are deprecated for v5.0+  \nOn October 29, 2019 we announced that this endpoint is now deprecated. Please use the new [Private Replies](https://developers.facebook.com/docs/messenger-platform/discovery/private-replies)  \nAs part of the V3.3 changes the `read_page_mailboxes` permission was deprecated. Use `pages_messaging` permission to access this endpoint. The `read_page_mailboxes` permission will stop working after June 30 2020  \nThis edge is the **Legacy Private Replies** allows Pages to reply to Post Comments and Visitor Posts with a plain text only message. It can be used with the following nodes:  \n* [`Comment`](https://developers.facebook.com/docs/graph-api/reference/comment)  \n* [`Post`](https://developers.facebook.com/docs/graph-api/reference/post)  \nPlease note that a comment or post may only be replied to once.  \n[](#)\n",
+        "line_start": 625,
+        "line_end": 634,
+        "url": "https://developers.facebook.com/docs/graph-api/reference/album/)<br>"
+    },
+    "34": {
+        "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Object Endpoint.md\nParagraph location: \n\t`/{object-id}/private_replies`\n\tReading\n\nContent: \n## Reading  \nYou can't read using this edge.  \n[](#)\n",
+        "line_start": 12,
+        "line_end": 15,
+        "url": "https://developers.facebook.com/docs/graph-api/reference/album/)<br>"
+    },
+    "35": {
+        "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Object Endpoint.md\nParagraph location: \n\t`/{object-id}/private_replies`\n\tPublishing\n\nContent: \n## Publishing  \nTo reply with a private Message:  \nHTTPPHP SDKJavaScript SDKAndroid SDKiOS SDK  \nPOST /v18.0/{object-id}/private_replies HTTP/1.1\nHost: graph.facebook.com  \n/* PHP SDK v5.0.0 */\n/* make the API call */\ntry {\n// Returns a `Facebook\\FacebookResponse` object\n$response = $fb->post(\n'/{object-id}/private_replies',\narray (),\n'{access-token}'\n);\n} catch(Facebook\\Exceptions\\FacebookResponseException $e) {\necho 'Graph returned an error: ' . $e->getMessage();\nexit;\n} catch(Facebook\\Exceptions\\FacebookSDKException $e) {\necho 'Facebook SDK returned an error: ' . $e->getMessage();\nexit;\n}\n$graphNode = $response->getGraphNode();\n/* handle the result */  \n/* make the API call */\nFB.api(\n\"/{object-id}/private_replies\",\n\"POST\",\nfunction (response) {\nif (response && !response.error) {\n/* handle the result */\n}\n}\n);  \n/* make the API call */\nnew GraphRequest(\nAccessToken.getCurrentAccessToken(),\n\"/{object-id}/private_replies\",\nnull,\nHttpMethod.POST,\nnew GraphRequest.Callback() {\npublic void onCompleted(GraphResponse response) {\n/* handle the result */\n}\n}\n).executeAsync();  \n/* make the API call */\nFBSDKGraphRequest *request = [[FBSDKGraphRequest alloc]\ninitWithGraphPath:@\"/{object-id}/private_replies\"\nparameters:params\nHTTPMethod:@\"POST\"];\n[request startWithCompletionHandler:^(FBSDKGraphRequestConnection *connection,\nid result,\nNSError *error) {\n// Handle the result\n}];  \nPrivate replies to posts or comments are allowed within 7 days of the creation date of the user post or comment.\n",
+        "line_start": 199,
+        "line_end": 255,
+        "url": "https://developers.facebook.com/docs/graph-api/reference/album/)<br>"
+    },
+    "36": {
+        "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Object Endpoint.md\nParagraph location: \n\t`/{object-id}/private_replies`\n\tPermissions\n\nContent: \n## Permissions  \nThis edge requires a Page access token with the following permissions:  \n* `pages_messaging`  \nApps with Standard Access can only send and receive messages from people who have a role on your app. Additionally Pages in `unpublished` status will only be allowed to message people with a role on the Page.\n",
+        "line_start": 715,
+        "line_end": 719,
+        "url": "https://developers.facebook.com/docs/graph-api/reference/album/)<br>"
+    },
+    "37": {
+        "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Object Endpoint.md\nParagraph location: \n\t`/{object-id}/private_replies`\n\tPermissions\n\tFields\n\nContent: \n### Fields  \n| Parameter | Description | Type |\n| --- | --- | --- |\n| `id` | The ID of the Page Comment or Visitor Post that you are replying to. | `string` |\n| `message` | The text of the reply. **This field is required**. | `string` |\n",
+        "line_start": 188,
+        "line_end": 193,
+        "url": "https://developers.facebook.com/docs/graph-api/reference/album/)<br>"
+    },
+    "38": {
+        "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Object Endpoint.md\nParagraph location: \n\t`/{object-id}/private_replies`\n\tPermissions\n\tResponse\n\nContent: \n### Response  \nIf successful, you will receive a response with the following fields. In addition, this endpoint supports [read-after-write](https://developers.facebook.com/docs/graph-api/using-graph-api#read-after-write) and can immediately read the node represented by `id` in the return type.  \n| Field | Description | Type |\n| --- | --- | --- |\n| id  | The ID of the newly created Message. | `string` |  \n[](#)\n",
+        "line_start": 514,
+        "line_end": 520,
+        "url": "https://developers.facebook.com/docs/graph-api/reference/album/)<br>"
+    },
+    "39": {
+        "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Object Endpoint.md\nParagraph location: \n\t`/{object-id}/private_replies`\n\tDeleting\n\nContent: \n## Deleting  \nYou can't delete using this edge.  \n[](#)\n",
+        "line_start": 319,
+        "line_end": 322,
+        "url": "https://developers.facebook.com/docs/graph-api/reference/album/)<br>"
+    },
+    "40": {
+        "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Object Endpoint.md\nParagraph location: \n\t`/{object-id}/private_replies`\n\tUpdating\n\nContent: \n## Updating  \nYou can't update using this edge.  \n[](#)  \n[](#)\n",
+        "line_start": 313,
+        "line_end": 317,
+        "url": "https://developers.facebook.com/docs/graph-api/reference/album/)<br>"
+    },
+    "41": {
+        "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Object Endpoint.md\nParagraph location: \n\tObject Reactions\n\nContent: \n# Object Reactions  \nThis reference describes the `/reactions` edge that is common to multiple Graph API nodes. The structure and operations are the same for each node. The following objects have a `/reactions` edge:  \n|     |     |\n| --- | --- |\n| * [Comment](https://developers.facebook.com/docs/graph-api/reference/comment)<br>* [PagePost](https://developers.facebook.com/docs/graph-api/reference/pagepost)<br>* [Post](https://developers.facebook.com/docs/graph-api/reference/post) |     |  \n[](#)\n",
+        "line_start": 754,
+        "line_end": 760,
+        "url": "https://developers.facebook.com/docs/graph-api/reference/album/)<br>"
+    },
+    "42": {
+        "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Object Endpoint.md\nParagraph location: \n\tObject Reactions\n\tReading\n\nContent: \n## Reading  \nGet reactions on an object.  \nView [Insights](https://developers.facebook.com/docs/graph-api/reference/insights#availmetrics) for more information on Page and Post reactions.\n",
+        "line_start": 12,
+        "line_end": 15,
+        "url": "https://developers.facebook.com/docs/graph-api/reference/album/)<br>"
+    },
+    "43": {
+        "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Object Endpoint.md\nParagraph location: \n\tObject Reactions\n\tReading\n\tNew Page Experience\n\nContent: \n### New Page Experience  \nThis endpoint is supported for New Page Experience.\n",
+        "line_start": 18,
+        "line_end": 20,
+        "url": "https://developers.facebook.com/docs/graph-api/reference/album/)<br>"
+    },
+    "44": {
+        "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Object Endpoint.md\nParagraph location: \n\tObject Reactions\n\tReading\n\tRequirements\n\nContent: \n### Requirements  \n**Marketing Apps**  \n* `ads_management`\n* `pages_read_engagement`\n* `pages_show_list`  \n**Page Management Apps**  \n* `pages_show_list`\n",
+        "line_start": 355,
+        "line_end": 362,
+        "url": "https://developers.facebook.com/docs/graph-api/reference/album/)<br>"
+    },
+    "45": {
+        "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Object Endpoint.md\nParagraph location: \n\tObject Reactions\n\tReading\n\tSample Request\n\nContent: \n### Sample Request  \nThe following example is a `GET` request made by a User who has reacted to their own object.  \ncURLAndroid SDKObjective-CJava SDKPHP SDK  \ncurl -i -X GET \\\n\"https://graph.facebook.com/your-post-id/reactions?access_token=your-user-access-token\"  \nGraphRequest request = GraphRequest.newGraphPathRequest(\naccessToken,\n\"/your-post-id/reactions\",\nnew GraphRequest.Callback() {\n@Override\npublic void onCompleted(GraphResponse response) {\n// Insert your code here\n}\n});  \nrequest.executeAsync();  \nFBSDKGraphRequest *request = [[FBSDKGraphRequest alloc]\ninitWithGraphPath:@\"/your-post-id/reactions\"\nparameters:nil\nHTTPMethod:@\"GET\"];\n[request startWithCompletionHandler:^(FBSDKGraphRequestConnection *connection, id result, NSError *error) {\n// Insert your code here\n}];  \nFB.api(\n'/your-post-id/reactions',\n'GET',\n{},\nfunction(response) {\n// Insert your code here\n}\n);  \ntry {\n// Returns a `FacebookFacebookResponse` object\n$response = $fb->get(\n'/your-post-id/reactions',\n'{access-token}'\n);\n} catch(FacebookExceptionsFacebookResponseException $e) {\necho 'Graph returned an error: ' . $e->getMessage();\nexit;\n} catch(FacebookExceptionsFacebookSDKException $e) {\necho 'Facebook SDK returned an error: ' . $e->getMessage();\nexit;\n}\n$graphNode = $response->getGraphNode();  \n#### The JSON Response  \n{\n\"data\": \\[\n{\n\"id\": \"your-user-id\",\n\"name\": \"Your Name\",\n\"type\": \"HAHA\"\n}\n\\],\n\"paging\": {\n\"cursors\": {\n\"before\": \"QVFIUk5YbXFFbG8yVWVOa2w0ZAGhmSUNKMkZAZAOXZARbzJOMHM0TUFtZAnhJbWdPdkF4OURUTHJrQjFqQ2RQZAVN1UGxSVU5FWURENnE4OUFPeXFreU1jV09pdFJR\",\n\"after\": \"QVFIUkpsWVRkcVl6SlhsdWlrcGdudl8xVEhwVEJ5ZA3FXdG90bTRxam13NmJDUGpQVnB5ZA29lMG9FVmFaeU1BLW1hc2oZD\"\n}\n}\n}  \nIf the User or Page has not reacted to the object being queried, `data` will be empty.  \nThe following example is a `GET` request for the total reactions to an object.  \ncURLAndroid SDKObjective-CJava SDKPHP SDK  \ncurl -i -X GET \\\n\"https://graph.facebook.com/your-post-id\n?fields=reactions.summary(total_count)\n&access_token=your-access-token\"  \nGraphRequest request = GraphRequest.newGraphPathRequest(\naccessToken,\n\"/your-post-id\",\nnew GraphRequest.Callback() {\n@Override\npublic void onCompleted(GraphResponse response) {\n// Insert your code here\n}\n});  \nBundle parameters = new Bundle();\nparameters.putString(\"fields\", \"reactions.summary(total_count)\");\nrequest.setParameters(parameters);\nrequest.executeAsync();  \nFBSDKGraphRequest *request = [[FBSDKGraphRequest alloc]\ninitWithGraphPath:@\"/your-post-id\"\nparameters:@{ @\"fields\": @\"reactions.summary(total_count)\",}\nHTTPMethod:@\"GET\"];\n[request startWithCompletionHandler:^(FBSDKGraphRequestConnection *connection, id result, NSError *error) {\n// Insert your code here\n}];  \nFB.api(\n'/your-post-id',\n'GET',\n{\"fields\":\"reactions.summary(total_count)\"},\nfunction(response) {\n// Insert your code here\n}\n);  \ntry {\n// Returns a `FacebookFacebookResponse` object\n$response = $fb->get(\n'/your-post-id',\n'{access-token}'\n);\n} catch(FacebookExceptionsFacebookResponseException $e) {\necho 'Graph returned an error: ' . $e->getMessage();\nexit;\n} catch(FacebookExceptionsFacebookSDKException $e) {\necho 'Facebook SDK returned an error: ' . $e->getMessage();\nexit;\n}\n$graphNode = $response->getGraphNode();  \nThe JSON Response if the User or Page has reacted to their own object.  \n{\n\"reactions\": {\n\"data\": \\[\n{\n\"id\": \"your-user-id\",\n\"name\": \"Your Name\",\n\"type\": \"HAHA\"\n}\n\\],\n\"paging\": {\n\"cursors\": {\n\"before\": \"QVFIUk5YbXFFbG8yVWVOa2w0ZAGhmSUNKMkZAZAOXZARbzJOMHM0TUFtZAnhJbWdPdkF4OURUTHJrQjFqQ2RQZAVN1UGxSVU5FWURENnE4OUFPeXFreU1jV09pdFJR\",\n\"after\": \"QVFIUkpsWVRkcVl6SlhsdWlrcGdudl8xVEhwVEJ5ZA3FXdG90bTRxam13NmJDUGpQVnB5ZA29lMG9FVmFaeU1BLW1hc2oZD\"\n}\n},\n\"summary\": {\n\"total\\_count\": 28\n}\n},\n\"id\": \"your-post-id\"\n}  \nThe JSON Response if the User or Page has **not** reacted to their own object.  \n{\n\"reactions\": {\n\"data\": \\[\n\\],\n\"paging\": {\n\"cursors\": {\n\"before\": \"QVFIUk5YbXFFbG8yVWVOa2w0ZAGhmSUNKMkZAZAOXZARbzJOMHM0TUFtZAnhJbWdPdkF4OURUTHJrQjFqQ2RQZAVN1UGxSVU5FWURENnE4OUFPeXFreU1jV09pdFJR\",\n\"after\": \"QVFIUkpsWVRkcVl6SlhsdWlrcGdudl8xVEhwVEJ5ZA3FXdG90bTRxam13NmJDUGpQVnB5ZA29lMG9FVmFaeU1BLW1hc2oZD\"\n}\n},\n\"summary\": {\n\"total\\_count\": 28\n}\n},\n\"id\": \"your-post-id\"\n}  \nA User or Page can only query their own reactions. Other Users' or Pages' reactions are unavailable due to privacy concerns.  \nThe \"like\" reaction counts include both \"like\" and \"care\" reactions.\n",
+        "line_start": 786,
+        "line_end": 936,
+        "url": "https://developers.facebook.com/docs/graph-api/reference/album/)<br>"
+    },
+    "46": {
+        "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Object Endpoint.md\nParagraph location: \n\tObject Reactions\n\tReading\n\tParameters\n\nContent: \n### Parameters  \n| Name | Description |\n| --- | --- |\n| `type`<br><br>enum {NONE, LIKE, LOVE, WOW, HAHA, SORRY, ANGRY} | The type of reaction a Page or User marked an object. |\n",
+        "line_start": 113,
+        "line_end": 117,
+        "url": "https://developers.facebook.com/docs/graph-api/reference/album/)<br>"
+    },
+    "47": {
+        "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Object Endpoint.md\nParagraph location: \n\tObject Reactions\n\tReading\n\tFields\n\nContent: \n### Fields  \nReading from this edge will return a JSON formatted result  \n{\n\"data\": \\[\\],\n\"paging\": {},\n\"summary\": {}\n}  \n`data`  \nThe [Profile](https://developers.facebook.com/docs/graph-api/reference/profile/) of the Page or User running the query, if the object being queried was reacted to by the Page or User, and a list of reaction types:  \n| Field | Description |\n| --- | --- |\n| `type`<br><br>enum {NONE, LIKE, LOVE, WOW, HAHA, SORRY, ANGRY} | The type of reaction a Page or User marked an object. |  \nFor reactions on Posts, this edge does not return a Profile except for the current user, if read with a user access token.  \n#### View the count of an individual reaction  \ncURLAndroid SDKObjective-CJava SDKPHP SDK  \ncurl -i -X GET \\\n\"https://graph.facebook.com/your-object-id\n?fields=reactions.type(LOVE).limit(0).summary(total_count)\n&access_token=your-access-token\"  \nGraphRequest request = GraphRequest.newGraphPathRequest(\naccessToken,\n\"/your-object-id\",\nnew GraphRequest.Callback() {\n@Override\npublic void onCompleted(GraphResponse response) {\n// Insert your code here\n}\n});  \nBundle parameters = new Bundle();\nparameters.putString(\"fields\", \"reactions.type(LOVE).limit(0).summary(total_count)\");\nrequest.setParameters(parameters);\nrequest.executeAsync();  \nFBSDKGraphRequest *request = [[FBSDKGraphRequest alloc]\ninitWithGraphPath:@\"/your-object-id\"\nparameters:@{ @\"fields\": @\"reactions.type(LOVE).limit(0).summary(total_count)\",}\nHTTPMethod:@\"GET\"];\n[request startWithCompletionHandler:^(FBSDKGraphRequestConnection *connection, id result, NSError *error) {\n// Insert your code here\n}];  \nFB.api(\n'/your-object-id',\n'GET',\n{\"fields\":\"reactions.type(LOVE).limit(0).summary(total_count)\"},\nfunction(response) {\n// Insert your code here\n}\n);  \ntry {\n// Returns a `FacebookFacebookResponse` object\n$response = $fb->get(\n'/your-object-id',\n'{access-token}'\n);\n} catch(FacebookExceptionsFacebookResponseException $e) {\necho 'Graph returned an error: ' . $e->getMessage();\nexit;\n} catch(FacebookExceptionsFacebookSDKException $e) {\necho 'Facebook SDK returned an error: ' . $e->getMessage();\nexit;\n}\n$graphNode = $response->getGraphNode();  \n#### Example JSON Returned  \n{\n\"reactions\": {\n\"data\": \\[\n\\],\n\"summary\": {\n\"total\\_count\": 3498\n}\n},\n\"id\": \"your-object-id\"\n}  \n`paging`  \nFor more details about pagination, see the Graph API's [paging documentation](https://developers.facebook.com/docs/graph-api/using-graph-api/#paging). Adding `limit(0)` to `reactions` will remove `paging` from the output.  \n`summary`  \nAggregated information about the edge, such as counts. Specify the fields to fetch in the summary param (like `summary=total_count`).  \n| Field | Description |\n| --- | --- |\n| `total_count`<br><br>unsigned int32 | Total number of reactions |\n| `viewer_reaction`<br><br>enum {NONE, LIKE, LOVE, WOW, HAHA, SORRY, ANGRY} | The type of reaction a Page or User marked an object. |\n",
+        "line_start": 188,
+        "line_end": 268,
+        "url": "https://developers.facebook.com/docs/graph-api/reference/album/)<br>"
+    },
+    "48": {
+        "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Object Endpoint.md\nParagraph location: \n\tObject Reactions\n\tReading\n\tError Codes\n\nContent: \n### Error Codes  \n| Error | Description |\n| --- | --- |\n| 100 | Invalid parameter |  \n[](#)\n",
+        "line_start": 1070,
+        "line_end": 1075,
+        "url": "https://developers.facebook.com/docs/graph-api/reference/album/)<br>"
+    },
+    "49": {
+        "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Object Endpoint.md\nParagraph location: \n\tObject Reactions\n\tCreating\n\nContent: \n## Creating  \nThis operation is not supported.  \n[](#)\n",
+        "line_start": 1078,
+        "line_end": 1081,
+        "url": "https://developers.facebook.com/docs/graph-api/reference/album/)<br>"
+    },
+    "50": {
+        "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Object Endpoint.md\nParagraph location: \n\tObject Reactions\n\tUpdating\n\nContent: \n## Updating  \nThis operation is not supported.  \n[](#)\n",
+        "line_start": 313,
+        "line_end": 316,
+        "url": "https://developers.facebook.com/docs/graph-api/reference/album/)<br>"
+    },
+    "51": {
+        "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Object Endpoint.md\nParagraph location: \n\tObject Reactions\n\tDeleting\n\nContent: \n## Deleting  \nThis operation is not supported.  \n[](#)  \n[](#)\n",
+        "line_start": 319,
+        "line_end": 323,
+        "url": "https://developers.facebook.com/docs/graph-api/reference/album/)<br>"
+    },
+    "52": {
+        "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Object Endpoint.md\nParagraph location: \n\t`/{object-id}/sharedposts`\n\nContent: \n# `/{object-id}/sharedposts`  \nThis reference describes the `/sharedposts` edge that is common to multiple Graph API nodes. The structure and operations are the same for each node. The following objects have a `sharedposts` edge:  \n* PagePost  \n* Post  \n* User  \n[](#)\n",
+        "line_start": 1098,
+        "line_end": 1104,
+        "url": "https://developers.facebook.com/docs/graph-api/reference/album/)<br>"
+    },
+    "53": {
+        "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Object Endpoint.md\nParagraph location: \n\t`/{object-id}/sharedposts`\n\tReading\n\nContent: \n## Reading  \n#### Permissions  \n* A user access token with `user_posts` permission, for someone who is able to view the post after privacy settings are taken into account. A post will be returned if either (a) the app created the post or (b) the creator of the post has granted `user_posts` permission to the app.  \n#### Feature Permissions  \n| Name | Description |\n| --- | --- |\n| Page Public Content Access | This is a required [feature permission](https://developers.facebook.com/docs/apps/review/feature/#reference-PAGES_ACCESS). |  \n#### Limitations  \n* The `/{album-id}/sharedposts` is not available.\n* The `GET /{photo-id}/sharedposts` endpoint is deprecated in v8.0+.  \n#### Example  \nHTTPPHP SDKJavaScript SDKAndroid SDKiOS SDK[Graph API Explorer](https://developers.facebook.com/tools/explorer/?method=GET&path=%7Bobject-id%7D%2Fsharedposts&version=v18.0)  \nGET /v18.0/{object-id}/sharedposts HTTP/1.1\nHost: graph.facebook.com  \n/* PHP SDK v5.0.0 */\n/* make the API call */\ntry {\n// Returns a `Facebook\\FacebookResponse` object\n$response = $fb->get(\n'/{object-id}/sharedposts',\n'{access-token}'\n);\n} catch(Facebook\\Exceptions\\FacebookResponseException $e) {\necho 'Graph returned an error: ' . $e->getMessage();\nexit;\n} catch(Facebook\\Exceptions\\FacebookSDKException $e) {\necho 'Facebook SDK returned an error: ' . $e->getMessage();\nexit;\n}\n$graphNode = $response->getGraphNode();\n/* handle the result */  \n/* make the API call */\nFB.api(\n\"/{object-id}/sharedposts\",\nfunction (response) {\nif (response && !response.error) {\n/* handle the result */\n}\n}\n);  \n/* make the API call */\nnew GraphRequest(\nAccessToken.getCurrentAccessToken(),\n\"/{object-id}/sharedposts\",\nnull,\nHttpMethod.GET,\nnew GraphRequest.Callback() {\npublic void onCompleted(GraphResponse response) {\n/* handle the result */\n}\n}\n).executeAsync();  \n/* make the API call */\nFBSDKGraphRequest *request = [[FBSDKGraphRequest alloc]\ninitWithGraphPath:@\"/{object-id}/sharedposts\"\nparameters:params\nHTTPMethod:@\"GET\"];\n[request startWithCompletionHandler:^(FBSDKGraphRequestConnection *connection,\nid result,\nNSError *error) {\n// Handle the result\n}];  \n#### Fields  \nA list of [Post objects](https://developers.facebook.com/docs/graph-api/reference/post) representing each of the shares.  \n[](#)\n",
+        "line_start": 12,
+        "line_end": 77,
+        "url": "https://developers.facebook.com/docs/graph-api/reference/album/)<br>"
+    },
+    "54": {
+        "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Object Endpoint.md\nParagraph location: \n\t`/{object-id}/sharedposts`\n\tPublishing\n\nContent: \n## Publishing  \nYou cannot publish shares of an object using the Graph API.  \n[](#)\n",
+        "line_start": 199,
+        "line_end": 202,
+        "url": "https://developers.facebook.com/docs/graph-api/reference/album/)<br>"
+    },
+    "55": {
+        "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Object Endpoint.md\nParagraph location: \n\t`/{object-id}/sharedposts`\n\tDeleting\n\nContent: \n## Deleting  \nYou cannot delete shares of an object using the Graph API.  \n[](#)  \n[](#)\n",
+        "line_start": 319,
+        "line_end": 323,
+        "url": "https://developers.facebook.com/docs/graph-api/reference/album/)<br>"
+    }
+}
