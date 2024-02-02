@@ -5,3 +5,4 @@ sentence_transformers
 ctransformers
 ragatouille
 langdetect
+easynmt
