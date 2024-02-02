@@ -1,0 +1,43 @@
+::: highlight
+
+     { "user": {
+        "id": 6253282,
+        "id_str": "6253282",
+        "name": "Twitter API",
+        "screen_name": "TwitterAPI",
+        "location": "San Francisco, CA",
+        "url": "https://developer.twitter.com",
+        "description": "The Real Twitter API. Tweets about API changes, service issues and our Developer Platform. Don't get an answer? It's on my website.",
+        "verified": true,
+        "followers_count": 6129794,
+        "friends_count": 12,
+        "listed_count": 12899,
+        "favourites_count": 31,
+        "statuses_count": 3658,
+        "created_at": "Wed May 23 06:01:13 +0000 2007",
+        "utc_offset": null,
+        "time_zone": null,
+        "geo_enabled": false,
+        "lang": "en",
+        "contributors_enabled": false,
+        "is_translator": false,
+        "profile_background_color": "null",
+        "profile_background_image_url": "null",
+        "profile_background_image_url_https": "null",
+        "profile_background_tile": null,
+        "profile_link_color": "null",
+        "profile_sidebar_border_color": "null",
+        "profile_sidebar_fill_color": "null",
+        "profile_text_color": "null",
+        "profile_use_background_image": null,
+        "profile_image_url": "null",
+        "profile_image_url_https": "https://pbs.twimg.com/profile_images/942858479592554497/BbazLO9L_normal.jpg",
+        "profile_banner_url": "https://pbs.twimg.com/profile_banners/6253282/1497491515",
+        "default_profile": false,
+        "default_profile_image": false,
+        "following": null,
+        "follow_request_sent": null,
+        "notifications": null
+      }
+    }
+:::
