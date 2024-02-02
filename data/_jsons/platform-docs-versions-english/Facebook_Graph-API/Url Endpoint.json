@@ -1,0 +1,67 @@
+{
+    "0": {
+        "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Url Endpoint.md\nParagraph location: \n\nContent: \nThis document refers to an outdated version of Graph API.\u00a0Please [use the latest version.](https://developers.facebook.com/docs/graph-api/reference/v19.0/url)\n",
+        "line_start": 0,
+        "line_end": 1
+    },
+    "1": {
+        "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Url Endpoint.md\nParagraph location: \n\tURL `/?id={url}`\n\nContent: \n# URL `/?id={url}`  \nRepresents a URL shared in a Post or in a Comment on a Post.  \nRefer to our [News Tab Indexing API](https://developers.facebook.com/docs/news-tab-indexing) documentation for additional information.\n",
+        "line_start": 2,
+        "line_end": 5
+    },
+    "2": {
+        "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Url Endpoint.md\nParagraph location: \n\tURL `/?id={url}`\n\tReading\n\nContent: \n## Reading  \nGet information about a URL that was shared in a Post or a Comment on a Post.\n",
+        "line_start": 8,
+        "line_end": 10
+    },
+    "3": {
+        "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Url Endpoint.md\nParagraph location: \n\tURL `/?id={url}`\n\tReading\n\tRequirements\n\nContent: \n### Requirements  \n| Type | Description |\n| --- | --- |\n| [Access Tokens](#) | Any access token can be used to make this request. |\n| [Features](#) | Not applicable. |\n| [Page Tasks](#) | Not applicable. |\n| [Permissions](#) | Not applicable. |\n",
+        "line_start": 12,
+        "line_end": 19
+    },
+    "4": {
+        "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Url Endpoint.md\nParagraph location: \n\tURL `/?id={url}`\n\tReading\n\tLimitations\n\nContent: \n### Limitations  \n* Engagement values returned are not precise but do reflect user engagement with a URL.\n* You are limited to 10 GET requests per URL, per app, per hour.\n",
+        "line_start": 21,
+        "line_end": 24
+    },
+    "5": {
+        "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Url Endpoint.md\nParagraph location: \n\tURL `/?id={url}`\n\tReading\n\tParameters\n\nContent: \n### Parameters  \nInclude the following query string parameters to augment the request.  \n| Parameter | Description |\n| --- | --- |\n| `access_token`<br><br>Required<br><br>_string_ | An [access token](#). |\n| `fields`<br><br>_string_ | A comma-separated list of fields you want to request. |\n| `id`<br><br>_string_ | The url to be shared. |\n| `scopes`<br><br>_string_ | A comma-separated list of scopes. |\n",
+        "line_start": 26,
+        "line_end": 34
+    },
+    "6": {
+        "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Url Endpoint.md\nParagraph location: \n\tURL `/?id={url}`\n\tReading\n\tFields\n\nContent: \n### Fields  \n| Property Name | Description | Type |\n| --- | --- | --- |\n| `app_links` | AppLinks data associated with this URL, if available. | `AppLinks` |\n| `id` | The URL itself. | `string` |\n| `engagement` | Counts of different ways people interacted with the URL Note that engagement values are intentionally not precise, but you can be confident they accurately reflect user engagement with a URL. | `object` |\n| `comment_count` | Number of comments on the URL. | `int` |\n| `comment_plugin_count` | Number of comments on the plugin gathered using the [Comments Plugin](https://developers.facebook.com/docs/plugins/comments/) on your site. | `int` |\n| `reaction_count` | Number of reactions to the URL. | `int` |\n| `share_count` | Number of times the URL was shared. | `int` |\n| `og_object` | The [Open Graph object](https://developers.facebook.com/docs/opengraph/using-objects#selfhosted-canonical) that is canonically associated with this URL. | `OGObject` |\n| `id` | ID of object. | `string` |\n| `description` | The description of the object, if available. | `string` |\n| `title` | The title of the object, if available. | `string` |\n| `type` | The object type. | [`og:type`](https://developers.facebook.com/docs/opengraph/creating-custom-stories#objecttypes) |\n| `updated_time` | When the object was last updated. | `datetime` |\n",
+        "line_start": 37,
+        "line_end": 53
+    },
+    "7": {
+        "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Url Endpoint.md\nParagraph location: \n\tURL `/?id={url}`\n\tReading\n\tExamples\n\nContent: \n### Examples  \nTo get information about a URL published in a Post or Comment, send a `GET` request to `https://graph.facebook.com` with the `id` parameter set to the URL, any fields about the URL, and an access token requested from the User or Page who published the Post or Comment.  \nThe follow example shows the engagement for the URL, https://www.facebook.com, that was shared by the User represented by the User access token.  \n_Formatted for readability._  \ncurl -i -X GET \\\\\n\"https://graph.facebook.com/{latest-graph-api-version}/\n?id=https://www.facebook.com\n&fields=engagement\n&access\\_token={user-access-token}\"  \nOn success your app receives the following engagement counts for the URL that was shared:  \n{\n\"engagement\": {\n\"reaction\\_count\": 514919172,\n\"comment\\_count\": 68687082,\n\"share\\_count\": 975739682,\n\"comment\\_plugin\\_count\": 1641\n},\n\"id\": \"https://www.facebook.com\"\n}\n",
+        "line_start": 55,
+        "line_end": 74
+    },
+    "8": {
+        "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Url Endpoint.md\nParagraph location: \n\tURL `/?id={url}`\n\tCreating\n\nContent: \n## Creating  \nYou can't perform this operation on this endpoint.\n",
+        "line_start": 81,
+        "line_end": 83
+    },
+    "9": {
+        "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Url Endpoint.md\nParagraph location: \n\tURL `/?id={url}`\n\tUpdating\n\tRequirements\n\nContent: \n### Requirements  \n| Type | Description |\n| --- | --- |\n| [Access Tokens](#) | Any access token can be used to make this request. |\n| [Features](#) | Not applicable. |\n| [Page Tasks](#) | Not applicable. |\n| [Permissions](#) | Not applicable. |\n",
+        "line_start": 12,
+        "line_end": 19
+    },
+    "10": {
+        "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Url Endpoint.md\nParagraph location: \n\tURL `/?id={url}`\n\tUpdating\n\tExamples\n\nContent: \n### Examples  \nTo update information about a URL published in a Post or Comment, send a `POST` request to `https://graph.facebook.com` with the `id` parameter set to the URL, the `scrape` parameter set to `true`, any `fields` about the URL, and an access token requested from the User or Page who published the Post or Comment.  \nThe follow example updates the URL, https://www.facebook.com/my-update, that was shared by the User represented by the User access token.  \n_Formatted for readability._  \ncurl -i -X POST \\\\\n\"https://graph.facebook.com/{latest-graph-api-version}/\n?id=https://www.facebook.com/my-update\n&scrape=true\n&access\\_token={user-access-token}\"  \nOn success your app receives the following engagement counts for the URL that was shared:  \n{\n\"success\": true\n}\n",
+        "line_start": 55,
+        "line_end": 68
+    },
+    "11": {
+        "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Url Endpoint.md\nParagraph location: \n\tURL `/?id={url}`\n\tUpdating\n\tQuery String Parameters\n\nContent: \n### Query String Parameters  \nInclude the following query string parameters to augment the request.  \n| Parameter | Description |\n| --- | --- |\n| `access_token`<br><br>Required<br><br>_string_ | An [access token](#). |\n| `fields`<br><br>_string_ | A comma-separated list of fields you want to request. |\n| `id`<br><br>Required<br><br>_string_ | The url to be updated. The url must be [encoded](https://l.facebook.com/l.php?u=https%3A%2F%2Fen.wikipedia.org%2Fwiki%2FPercent-encoding&h=AT1gY4BblbIBuCB3dip-SeD_C-_61lJJG2vzlzcv3kcLes15aVBxnxKposQncImqGkirzgOyk1DHhESM_MU3AXVeKTtE0mUpcc67xvcQBk6DRIdxEMak2weeOGtaiUgHUmIKvOeoYvphCQJP) so that it does not interfere with the `scrape` parameter. |\n| `scrape`<br><br>Required<br><br>_boolean_ | Value must be `true`. |  \n#### Example Request  \nPOST /{version}/?id={url}&scrape=true\nHost: graph.facebook.com  \n#### Example Response  \n{\n\"success\": true\n}\n",
+        "line_start": 118,
+        "line_end": 133
+    },
+    "12": {
+        "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Url Endpoint.md\nParagraph location: \n\tURL `/?id={url}`\n\tDeleting\n\nContent: \n## Deleting  \nYou can't perform this operation on this endpoint.  \n![](https://www.facebook.com/tr?id=675141479195042&ev=PageView&noscript=1)  \n![](https://www.facebook.com/tr?id=574561515946252&ev=PageView&noscript=1)  \n![](https://www.facebook.com/tr?id=1754628768090156&ev=PageView&noscript=1)\n",
+        "line_start": 140,
+        "line_end": 145
+    }
+}

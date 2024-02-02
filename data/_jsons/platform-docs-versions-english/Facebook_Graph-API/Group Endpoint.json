@@ -1,0 +1,397 @@
+{
+    "0": {
+        "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Group Endpoint.md\nParagraph location: \n\tGroup\n\nContent: \n# Group  \nA Facebook [Group](https://www.facebook.com/help/1629740080681586).  \n[](#)\n",
+        "line_start": 0,
+        "line_end": 3
+    },
+    "1": {
+        "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Group Endpoint.md\nParagraph location: \n\tGroup\n\tReading\n\nContent: \n## Reading  \nReturns information about a single Group object. To get a list of Groups a User administers, use the [`/user/groups`](https://developers.facebook.com/docs/graph-api/reference/user/groups/) edge instead.  \nHTTPPHP SDKJavaScript SDKAndroid SDKiOS SDK[Graph API Explorer](https://developers.facebook.com/tools/explorer/?method=GET&path=%7Bgroup-id%7D&version=v18.0)  \nGET /v18.0/{group-id} HTTP/1.1\nHost: graph.facebook.com  \n/* PHP SDK v5.0.0 */\n/* make the API call */\ntry {\n// Returns a `Facebook\\FacebookResponse` object\n$response = $fb->get(\n'/{group-id}',\n'{access-token}'\n);\n} catch(Facebook\\Exceptions\\FacebookResponseException $e) {\necho 'Graph returned an error: ' . $e->getMessage();\nexit;\n} catch(Facebook\\Exceptions\\FacebookSDKException $e) {\necho 'Facebook SDK returned an error: ' . $e->getMessage();\nexit;\n}\n$graphNode = $response->getGraphNode();\n/* handle the result */  \n/* make the API call */\nFB.api(\n\"/{group-id}\",\nfunction (response) {\nif (response && !response.error) {\n/* handle the result */\n}\n}\n);  \n/* make the API call */\nnew GraphRequest(\nAccessToken.getCurrentAccessToken(),\n\"/{group-id}\",\nnull,\nHttpMethod.GET,\nnew GraphRequest.Callback() {\npublic void onCompleted(GraphResponse response) {\n/* handle the result */\n}\n}\n).executeAsync();  \n/* make the API call */\nFBSDKGraphRequest *request = [[FBSDKGraphRequest alloc]\ninitWithGraphPath:@\"/{group-id}\"\nparameters:params\nHTTPMethod:@\"GET\"];\n[request startWithCompletionHandler:^(FBSDKGraphRequestConnection *connection,\nid result,\nNSError *error) {\n// Handle the result\n}];\n",
+        "line_start": 6,
+        "line_end": 59
+    },
+    "2": {
+        "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Group Endpoint.md\nParagraph location: \n\tGroup\n\tReading\n\tPermissions\n\nContent: \n### Permissions  \n* `groups_access_member_info` \u2014 Enables your app to receive member-related data on group content.\n* `publish_to_groups` \u2014 Enables your app to post content into a group on behalf of a user.  \n**For Public and Closed Groups**  \nA User access token  \n**For Secret Groups**  \nA User access token for an Admin of the Group  \n**Caveats**  \n* Fields that return User information will not be included in any responses unless the request is made using an access token of an Admin of the Group.\n",
+        "line_start": 67,
+        "line_end": 76
+    },
+    "3": {
+        "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Group Endpoint.md\nParagraph location: \n\tGroup\n\tReading\n\tFields\n\nContent: \n### Fields  \n| Property Name | Description | Type |\n| --- | --- | --- |\n| `id` | The Group ID | `string` |\n| `cover` | Information about the Group's cover photo. | `CoverPhoto` |\n| `id` | ID of the [Photo](https://developers.facebook.com/docs/reference/api/photo/) that represents this cover photo. | `string` |\n| `source` | URL to the [Photo](https://developers.facebook.com/docs/reference/api/photo/) that represents this cover photo. | `string` |\n| `offset_y` | The vertical offset in pixels of the photo from the bottom. | `int` |\n| `offset_x` | The horizontal offset in pixels of the photo from the left. | `int` |\n| `description` | A brief description of the Group. | `string` |\n| `email` | The email address to upload content to the Group. Only current members of the Group can use this. | `string` |\n| `icon` | The URL for the Group's icon. | `string` |\n| `member_count` | The number of members in the Group. | `int` |\n| `member_request_count` | The number of pending member requests. Requires an access token of an Admin of the Group.we The count is only returned when the number of pending member requests is over 50. | `int` |\n| `name` | The name of the Group. | `string` |\n| `owner` | _Deprecated in v9.0+. Will be deprecated in all versions February 9, 2021._ | `User` \\| `Page` |\n| `parent` | The parent of this Group, if it exists. | `Group` \\| `Page` |\n| `permissions` | The permissions a User has granted for an app installed in the Group. | `string` |\n| `privacy` | The privacy setting of the Group. Possible values are `CLOSED`, `OPEN`, and `SECRET`. Requires an access token of an Admin of the Group. | `string` |\n| `updated_time` | The last time the Group was updated (includes changes Group properties, Posts, and Comments). Requires an access token of an Admin of the Group. | `datetime` |  \n[](#)\n",
+        "line_start": 85,
+        "line_end": 106
+    },
+    "4": {
+        "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Group Endpoint.md\nParagraph location: \n\tGroup\n\tCreating\n\nContent: \n## Creating  \nThis operation is not supported.  \n[](#)\n",
+        "line_start": 109,
+        "line_end": 112
+    },
+    "5": {
+        "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Group Endpoint.md\nParagraph location: \n\tGroup\n\tUpdating\n\nContent: \n## Updating  \nThis operation is not supported.  \n[](#)\n",
+        "line_start": 115,
+        "line_end": 118
+    },
+    "6": {
+        "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Group Endpoint.md\nParagraph location: \n\tGroup\n\tDeleting\n\nContent: \n## Deleting  \nThis operation is not supported.  \n[](#)\n",
+        "line_start": 121,
+        "line_end": 124
+    },
+    "7": {
+        "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Group Endpoint.md\nParagraph location: \n\tGroup\n\tEdges\n\nContent: \n## Edges  \n| Name | Description |\n| --- | --- |\n| [`/admins`](https://developers.facebook.com/docs/graph-api/reference/group/admins) | _This edge was deprecated on April 4th, 2018._ |\n| [`/albums`](https://developers.facebook.com/docs/graph-api/reference/group/albums) | Photo albums owned by the Group. |\n| [`/docs`](https://developers.facebook.com/docs/graph-api/reference/group/docs) | Documents owned by the Group. |\n| [`/events`](https://developers.facebook.com/docs/graph-api/reference/group/events) | Events owned by the Group. |\n| [`/feed`](https://developers.facebook.com/docs/graph-api/reference/group/feed) | Feed of Posts owned by the Group. |\n| [`/files`](https://developers.facebook.com/docs/graph-api/reference/group/files) | Files owned by the Group. |\n| [`/live_videos`](https://developers.facebook.com/docs/graph-api/reference/live-video/) | Live Videos owned by the Group. |\n| [`/members`](https://developers.facebook.com/docs/graph-api/reference/group/members/) | _This edge was deprecated on April 4th, 2018._ |\n| [`/photos`](https://developers.facebook.com/docs/graph-api/reference/group/photos) | Photos owned by the Group. |\n| [`/videos`](https://developers.facebook.com/docs/graph-api/reference/group/videos) | Videos owned by the Group. |  \n[](#)  \n[](#)  \nThis edge was deprecated on April 4th, 2018, and can no longer be used.\n",
+        "line_start": 127,
+        "line_end": 143
+    },
+    "8": {
+        "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Group Endpoint.md\nParagraph location: \n\tAdmins\n\tReading\n\nContent: \n## Reading  \nAn Admin of the Group can get a list of other Group Admins.  \nHTTPPHP SDKAndroid SDKiOS SDK  \nGET /v18.0/{group-id}/admins HTTP/1.1\nHost: graph.facebook.com  \n/* PHP SDK v5.0.0 */\n/* make the API call */\ntry {\n// Returns a `Facebook\\FacebookResponse` object\n$response = $fb->get(\n'/{group-id}/admins',\n'{access-token}'\n);\n} catch(Facebook\\Exceptions\\FacebookResponseException $e) {\necho 'Graph returned an error: ' . $e->getMessage();\nexit;\n} catch(Facebook\\Exceptions\\FacebookSDKException $e) {\necho 'Facebook SDK returned an error: ' . $e->getMessage();\nexit;\n}\n$graphNode = $response->getGraphNode();\n/* handle the result */  \n/* make the API call */\nnew GraphRequest(\nAccessToken.getCurrentAccessToken(),\n\"/{group-id}/admins\",\nnull,\nHttpMethod.GET,\nnew GraphRequest.Callback() {\npublic void onCompleted(GraphResponse response) {\n/* handle the result */\n}\n}\n).executeAsync();  \n/* make the API call */\nFBSDKGraphRequest *request = [[FBSDKGraphRequest alloc]\ninitWithGraphPath:@\"/{group-id}/admins\"\nparameters:params\nHTTPMethod:@\"GET\"];\n[request startWithCompletionHandler:^(FBSDKGraphRequestConnection *connection,\nid result,\nNSError *error) {\n// Handle the result\n}];\n",
+        "line_start": 6,
+        "line_end": 50
+    },
+    "9": {
+        "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Group Endpoint.md\nParagraph location: \n\tAdmins\n\tReading\n\tPermissions\n\nContent: \n### Permissions  \nA User access token of an Admin of the Group.  \n[](#)\n",
+        "line_start": 67,
+        "line_end": 70
+    },
+    "10": {
+        "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Group Endpoint.md\nParagraph location: \n\tAdmins\n\tCreating\n\nContent: \n## Creating  \nThis operation is not supported.  \n[](#)\n",
+        "line_start": 109,
+        "line_end": 112
+    },
+    "11": {
+        "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Group Endpoint.md\nParagraph location: \n\tAdmins\n\tDeleting\n\nContent: \n## Deleting  \nThis operation is not supported.  \n[](#)\n",
+        "line_start": 121,
+        "line_end": 124
+    },
+    "12": {
+        "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Group Endpoint.md\nParagraph location: \n\tAdmins\n\tUpdating\n\nContent: \n## Updating  \nThis operation is not supported.  \n[](#)  \n[](#)\n",
+        "line_start": 115,
+        "line_end": 119
+    },
+    "13": {
+        "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Group Endpoint.md\nParagraph location: \n\tGroup Albums\n\nContent: \n# Group Albums  \nThe photo albums created for a Group.  \n[](#)\n",
+        "line_start": 231,
+        "line_end": 234
+    },
+    "14": {
+        "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Group Endpoint.md\nParagraph location: \n\tGroup Albums\n\tReading\n\nContent: \n## Reading  \nReturns an array of [Albums](https://developers.facebook.com/docs/reference/api/album/) on the Group.  \nHTTPPHP SDKJavaScript SDKAndroid SDKiOS SDK[Graph API Explorer](https://developers.facebook.com/tools/explorer/?method=GET&path=%7Bgroup-id%7D%2Falbums&version=v18.0)  \nGET /v18.0/{group-id}/albums HTTP/1.1\nHost: graph.facebook.com  \n/* PHP SDK v5.0.0 */\n/* make the API call */\ntry {\n// Returns a `Facebook\\FacebookResponse` object\n$response = $fb->get(\n'/{group-id}/albums',\n'{access-token}'\n);\n} catch(Facebook\\Exceptions\\FacebookResponseException $e) {\necho 'Graph returned an error: ' . $e->getMessage();\nexit;\n} catch(Facebook\\Exceptions\\FacebookSDKException $e) {\necho 'Facebook SDK returned an error: ' . $e->getMessage();\nexit;\n}\n$graphNode = $response->getGraphNode();\n/* handle the result */  \n/* make the API call */\nFB.api(\n\"/{group-id}/albums\",\nfunction (response) {\nif (response && !response.error) {\n/* handle the result */\n}\n}\n);  \n/* make the API call */\nnew GraphRequest(\nAccessToken.getCurrentAccessToken(),\n\"/{group-id}/albums\",\nnull,\nHttpMethod.GET,\nnew GraphRequest.Callback() {\npublic void onCompleted(GraphResponse response) {\n/* handle the result */\n}\n}\n).executeAsync();  \n/* make the API call */\nFBSDKGraphRequest *request = [[FBSDKGraphRequest alloc]\ninitWithGraphPath:@\"/{group-id}/albums\"\nparameters:params\nHTTPMethod:@\"GET\"];\n[request startWithCompletionHandler:^(FBSDKGraphRequestConnection *connection,\nid result,\nNSError *error) {\n// Handle the result\n}];\n",
+        "line_start": 6,
+        "line_end": 59
+    },
+    "15": {
+        "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Group Endpoint.md\nParagraph location: \n\tGroup Albums\n\tReading\n\tRequirements\n\nContent: \n### Requirements  \n| Requirement | Description |\n| --- | --- |\n| [App Review](https://developers.facebook.com/docs/apps/review) | Your app must be approved for the [Groups API](https://developers.facebook.com/docs/groups-api/) feature. |\n| [App Installation](https://developers.facebook.com/docs/groups-api#app-installation) | The app must be installed on the Group. |\n| [Tokens](https://developers.facebook.com/docs/facebook-login/access-tokens) | A User access token. |\n",
+        "line_start": 298,
+        "line_end": 304
+    },
+    "16": {
+        "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Group Endpoint.md\nParagraph location: \n\tGroup Albums\n\tReading\n\tFields\n\nContent: \n### Fields  \nWhen requesting the following Album fields through field expansion, only Users who granted your app the `groups_access_member_info` permission will be included:  \n* `from`\n* `likes`\n* `reaction`  \n[](#)\n",
+        "line_start": 85,
+        "line_end": 91
+    },
+    "17": {
+        "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Group Endpoint.md\nParagraph location: \n\tGroup Albums\n\tPublishing\n\nContent: \n## Publishing  \nHTTPPHP SDKJavaScript SDKAndroid SDKiOS SDK  \nPOST /v18.0/{group-id}/albums HTTP/1.1\nHost: graph.facebook.com  \nname=%7Balbum-name%7D&message=%7Balbum-description%7D&privacy=%7Bprivacy-settings%7D  \n/* PHP SDK v5.0.0 */\n/* make the API call */\ntry {\n// Returns a `Facebook\\FacebookResponse` object\n$response = $fb->post(\n'/{group-id}/albums',\narray (\n'name' => '{album-name}',\n'message' => '{album-description}',\n'privacy' => '{privacy-settings}',\n),\n'{access-token}'\n);\n} catch(Facebook\\Exceptions\\FacebookResponseException $e) {\necho 'Graph returned an error: ' . $e->getMessage();\nexit;\n} catch(Facebook\\Exceptions\\FacebookSDKException $e) {\necho 'Facebook SDK returned an error: ' . $e->getMessage();\nexit;\n}\n$graphNode = $response->getGraphNode();\n/* handle the result */  \n/* make the API call */\nFB.api(\n\"/{group-id}/albums\",\n\"POST\",\n{\n\"name\": \"{album-name}\",\n\"message\": \"{album-description}\",\n\"privacy\": \"{privacy-settings}\"\n},\nfunction (response) {\nif (response && !response.error) {\n/* handle the result */\n}\n}\n);  \nBundle params = new Bundle();\nparams.putString(\"name\", \"{album-name}\");\nparams.putString(\"message\", \"{album-description}\");\nparams.putString(\"privacy\", \"{privacy-settings}\");\n/* make the API call */\nnew GraphRequest(\nAccessToken.getCurrentAccessToken(),\n\"/{group-id}/albums\",\nparams,\nHttpMethod.POST,\nnew GraphRequest.Callback() {\npublic void onCompleted(GraphResponse response) {\n/* handle the result */\n}\n}\n).executeAsync();  \nNSDictionary *params = @{\n@\"name\": @\"{album-name}\",\n@\"message\": @\"{album-description}\",\n@\"privacy\": @\"{privacy-settings}\",\n};\n/* make the API call */\nFBSDKGraphRequest *request = [[FBSDKGraphRequest alloc]\ninitWithGraphPath:@\"/{group-id}/albums\"\nparameters:params\nHTTPMethod:@\"POST\"];\n[request startWithCompletionHandler:^(FBSDKGraphRequestConnection *connection,\nid result,\nNSError *error) {\n// Handle the result\n}];\n",
+        "line_start": 316,
+        "line_end": 389
+    },
+    "18": {
+        "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Group Endpoint.md\nParagraph location: \n\tGroup Albums\n\tPublishing\n\tRequirements\n\nContent: \n### Requirements  \n| Type of Requirement | Description |\n| --- | --- |\n| [App Review](https://developers.facebook.com/docs/apps/review) | Your app must be approved for the following login permissions and features: (Click to expand) |\n| Login permissions | `publish_to_groups` |\n| Features | [Groups API](https://developers.facebook.com/docs/groups-api/) |\n| [App Installation](https://developers.facebook.com/docs/groups-api#app-installation) | The app must be installed on the Group. |\n| [Tokens](https://developers.facebook.com/docs/facebook-login/access-tokens) | A User access token for a user who is a member of the Group where the app is installed. |\n| [Permissions](https://developers.facebook.com/docs/facebook-login/permissions/) | The user must grant your app this permission:<br><br>`publish_to_groups` |\n",
+        "line_start": 298,
+        "line_end": 307
+    },
+    "19": {
+        "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Group Endpoint.md\nParagraph location: \n\tGroup Albums\n\tPublishing\n\tFields\n\nContent: \n### Fields  \n| Parameter | Description | Type |\n| --- | --- | --- |\n| `name` | The name given to the album. This field is required. | `string` |\n| `message` | The description of the album, which will show up in Feed as the status message. | `string` |  \n#### Response  \n| Name | Description | Type |\n| --- | --- | --- |\n| id  | The ID of the newly created album. | `string` |  \n[](#)\n",
+        "line_start": 85,
+        "line_end": 95
+    },
+    "20": {
+        "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Group Endpoint.md\nParagraph location: \n\tGroup Albums\n\tDeleting\n\nContent: \n## Deleting  \nThis operation is not supported.  \n[](#)\n",
+        "line_start": 121,
+        "line_end": 124
+    },
+    "21": {
+        "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Group Endpoint.md\nParagraph location: \n\tGroup Albums\n\tUpdating\n\nContent: \n## Updating  \nThis operation is not supported.  \n[](#)  \n[](#)\n",
+        "line_start": 115,
+        "line_end": 119
+    },
+    "22": {
+        "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Group Endpoint.md\nParagraph location: \n\tGroup Docs\n\nContent: \n# Group Docs  \nThe documents owned by a Group.  \n[](#)\n",
+        "line_start": 437,
+        "line_end": 440
+    },
+    "23": {
+        "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Group Endpoint.md\nParagraph location: \n\tGroup Docs\n\tReading\n\nContent: \n## Reading  \nReturns a list of [Group Docs](https://developers.facebook.com/docs/graph-api/reference/groupdoc).  \nHTTPPHP SDKJavaScript SDKAndroid SDKiOS SDK[Graph API Explorer](https://developers.facebook.com/tools/explorer/?method=GET&path=%7Bgroup-id%7D%2Fdocs&version=v18.0)  \nGET /v18.0/{group-id}/docs HTTP/1.1\nHost: graph.facebook.com  \n/* PHP SDK v5.0.0 */\n/* make the API call */\ntry {\n// Returns a `Facebook\\FacebookResponse` object\n$response = $fb->get(\n'/{group-id}/docs',\n'{access-token}'\n);\n} catch(Facebook\\Exceptions\\FacebookResponseException $e) {\necho 'Graph returned an error: ' . $e->getMessage();\nexit;\n} catch(Facebook\\Exceptions\\FacebookSDKException $e) {\necho 'Facebook SDK returned an error: ' . $e->getMessage();\nexit;\n}\n$graphNode = $response->getGraphNode();\n/* handle the result */  \n/* make the API call */\nFB.api(\n\"/{group-id}/docs\",\nfunction (response) {\nif (response && !response.error) {\n/* handle the result */\n}\n}\n);  \n/* make the API call */\nnew GraphRequest(\nAccessToken.getCurrentAccessToken(),\n\"/{group-id}/docs\",\nnull,\nHttpMethod.GET,\nnew GraphRequest.Callback() {\npublic void onCompleted(GraphResponse response) {\n/* handle the result */\n}\n}\n).executeAsync();  \n/* make the API call */\nFBSDKGraphRequest *request = [[FBSDKGraphRequest alloc]\ninitWithGraphPath:@\"/{group-id}/docs\"\nparameters:params\nHTTPMethod:@\"GET\"];\n[request startWithCompletionHandler:^(FBSDKGraphRequestConnection *connection,\nid result,\nNSError *error) {\n// Handle the result\n}];\n",
+        "line_start": 6,
+        "line_end": 59
+    },
+    "24": {
+        "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Group Endpoint.md\nParagraph location: \n\tGroup Docs\n\tReading\n\tRequirements\n\nContent: \n### Requirements  \n| Type | Description |\n| --- | --- |\n| [App Review](https://developers.facebook.com/docs/apps/review) | Your app must be approved for the [Groups API](https://developers.facebook.com/docs/groups-api/) feature. |\n| [App Installation](https://developers.facebook.com/docs/groups-api#app-installation) | The app must be installed on the Group. |\n| [Tokens](https://developers.facebook.com/docs/facebook-login/access-tokens) | A User access token. |  \n[](#)\n",
+        "line_start": 298,
+        "line_end": 305
+    },
+    "25": {
+        "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Group Endpoint.md\nParagraph location: \n\tGroup Docs\n\tCreating\n\nContent: \n## Creating  \nThis operation is not supported.  \n[](#)\n",
+        "line_start": 109,
+        "line_end": 112
+    },
+    "26": {
+        "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Group Endpoint.md\nParagraph location: \n\tGroup Docs\n\tUpdating\n\nContent: \n## Updating  \nThis operation is not supported.  \n[](#)\n",
+        "line_start": 115,
+        "line_end": 118
+    },
+    "27": {
+        "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Group Endpoint.md\nParagraph location: \n\tGroup Docs\n\tDeleting\n\nContent: \n## Deleting  \nThis operation is not supported.  \n[](#)  \n[](#)\n",
+        "line_start": 121,
+        "line_end": 125
+    },
+    "28": {
+        "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Group Endpoint.md\nParagraph location: \n\tGroup Feed\n\nContent: \n# Group Feed  \nPosts owned by a Group, including status updates and links.  \n[](#)\n",
+        "line_start": 534,
+        "line_end": 537
+    },
+    "29": {
+        "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Group Endpoint.md\nParagraph location: \n\tGroup Feed\n\tReading\n\nContent: \n## Reading  \nReturns an array of [Posts](https://developers.facebook.com/docs/reference/api/post) on the Group.  \nHTTPPHP SDKJavaScript SDKAndroid SDKiOS SDK[Graph API Explorer](https://developers.facebook.com/tools/explorer/?method=GET&path=%7Bgroup-id%7D%2Ffeed&version=v18.0)  \nGET /v18.0/{group-id}/feed HTTP/1.1\nHost: graph.facebook.com  \n/* PHP SDK v5.0.0 */\n/* make the API call */\ntry {\n// Returns a `Facebook\\FacebookResponse` object\n$response = $fb->get(\n'/{group-id}/feed',\n'{access-token}'\n);\n} catch(Facebook\\Exceptions\\FacebookResponseException $e) {\necho 'Graph returned an error: ' . $e->getMessage();\nexit;\n} catch(Facebook\\Exceptions\\FacebookSDKException $e) {\necho 'Facebook SDK returned an error: ' . $e->getMessage();\nexit;\n}\n$graphNode = $response->getGraphNode();\n/* handle the result */  \n/* make the API call */\nFB.api(\n\"/{group-id}/feed\",\nfunction (response) {\nif (response && !response.error) {\n/* handle the result */\n}\n}\n);  \n/* make the API call */\nnew GraphRequest(\nAccessToken.getCurrentAccessToken(),\n\"/{group-id}/feed\",\nnull,\nHttpMethod.GET,\nnew GraphRequest.Callback() {\npublic void onCompleted(GraphResponse response) {\n/* handle the result */\n}\n}\n).executeAsync();  \n/* make the API call */\nFBSDKGraphRequest *request = [[FBSDKGraphRequest alloc]\ninitWithGraphPath:@\"/{group-id}/feed\"\nparameters:params\nHTTPMethod:@\"GET\"];\n[request startWithCompletionHandler:^(FBSDKGraphRequestConnection *connection,\nid result,\nNSError *error) {\n// Handle the result\n}];\n",
+        "line_start": 6,
+        "line_end": 59
+    },
+    "30": {
+        "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Group Endpoint.md\nParagraph location: \n\tGroup Feed\n\tReading\n\tRequirements\n\nContent: \n### Requirements  \n| Type of Requirement | Description |\n| --- | --- |\n| [App Review](https://developers.facebook.com/docs/apps/review) | Your app must be approved for the [Groups API](https://developers.facebook.com/docs/groups-api/) feature. |\n| [App Installation](https://developers.facebook.com/docs/groups-api#app-installation) | The app must be installed on the Group. |\n| [Tokens](https://developers.facebook.com/docs/facebook-login/access-tokens) | A User access token or a Page access token. |\n",
+        "line_start": 298,
+        "line_end": 304
+    },
+    "31": {
+        "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Group Endpoint.md\nParagraph location: \n\tGroup Feed\n\tReading\n\tNotes\n\nContent: \n### Notes  \n* The `since` and `until` params apply on the `updated_time` field.  \n[](#)\n",
+        "line_start": 609,
+        "line_end": 612
+    },
+    "32": {
+        "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Group Endpoint.md\nParagraph location: \n\tGroup Feed\n\tPublishing\n\nContent: \n## Publishing  \nHTTPPHP SDKJavaScript SDKAndroid SDKiOS SDK  \nPOST /v18.0/{group-id}/feed HTTP/1.1\nHost: graph.facebook.com  \nmessage=This+is+a+test+message  \n/* PHP SDK v5.0.0 */\n/* make the API call */\ntry {\n// Returns a `Facebook\\FacebookResponse` object\n$response = $fb->post(\n'/{group-id}/feed',\narray (\n'message' => 'This is a test message',\n),\n'{access-token}'\n);\n} catch(Facebook\\Exceptions\\FacebookResponseException $e) {\necho 'Graph returned an error: ' . $e->getMessage();\nexit;\n} catch(Facebook\\Exceptions\\FacebookSDKException $e) {\necho 'Facebook SDK returned an error: ' . $e->getMessage();\nexit;\n}\n$graphNode = $response->getGraphNode();\n/* handle the result */  \n/* make the API call */\nFB.api(\n\"/{group-id}/feed\",\n\"POST\",\n{\n\"message\": \"This is a test message\"\n},\nfunction (response) {\nif (response && !response.error) {\n/* handle the result */\n}\n}\n);  \nBundle params = new Bundle();\nparams.putString(\"message\", \"This is a test message\");\n/* make the API call */\nnew GraphRequest(\nAccessToken.getCurrentAccessToken(),\n\"/{group-id}/feed\",\nparams,\nHttpMethod.POST,\nnew GraphRequest.Callback() {\npublic void onCompleted(GraphResponse response) {\n/* handle the result */\n}\n}\n).executeAsync();  \nNSDictionary *params = @{\n@\"message\": @\"This is a test message\",\n};\n/* make the API call */\nFBSDKGraphRequest *request = [[FBSDKGraphRequest alloc]\ninitWithGraphPath:@\"/{group-id}/feed\"\nparameters:params\nHTTPMethod:@\"POST\"];\n[request startWithCompletionHandler:^(FBSDKGraphRequestConnection *connection,\nid result,\nNSError *error) {\n// Handle the result\n}];\n",
+        "line_start": 316,
+        "line_end": 381
+    },
+    "33": {
+        "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Group Endpoint.md\nParagraph location: \n\tGroup Feed\n\tPublishing\n\tRequirements\n\nContent: \n### Requirements  \n| Type of Requirement | Description |\n| --- | --- |\n| [App Review](https://developers.facebook.com/docs/apps/review) | Your app must be approved for the following login permissions and features: (Click to expand) |\n| Login permissions | `publish_to_groups` |\n| Features | [Groups API](https://developers.facebook.com/docs/groups-api/) |\n| [App Installation](https://developers.facebook.com/docs/groups-api#app-installation) | The app must be installed on the Group. |\n| [Tokens](https://developers.facebook.com/docs/facebook-login/access-tokens) | A User access token of a member of the Group. |\n| [Permissions](https://developers.facebook.com/docs/facebook-login/permissions/) | The user must grant your app the following permissions:<br><br>`publish_to_groups` |\n",
+        "line_start": 298,
+        "line_end": 307
+    },
+    "34": {
+        "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Group Endpoint.md\nParagraph location: \n\tGroup Feed\n\tPublishing\n\tFields\n\nContent: \n### Fields  \n| Name | Type | Description |\n| --- | --- | --- |\n| `message` | `string` | The main body of the post, otherwise called the status message. Either `link` or `message` must be supplied. |\n| `link` | `string` | The URL of a link to attach to the post. Either `link` or `message` must be supplied. Additional fields associated with `link` are shown below. |\n",
+        "line_start": 85,
+        "line_end": 90
+    },
+    "35": {
+        "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Group Endpoint.md\nParagraph location: \n\tGroup Feed\n\tPublishing\n\tResponse\n\nContent: \n### Response  \nIf successful, you will receive a response with the following information. In addition, this endpoint supports [read-after-write](https://developers.facebook.com/docs/graph-api/overview#read-after-write) and can immediately return any fields returned by [read](https://developers.facebook.com/docs/graph-api/reference/group/feed#read) operations.  \n| Name | Description | Type |\n| --- | --- | --- |\n| `id` | The newly created post ID | `string` |  \n[](#)\n",
+        "line_start": 707,
+        "line_end": 713
+    },
+    "36": {
+        "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Group Endpoint.md\nParagraph location: \n\tGroup Feed\n\tUpdating\n\nContent: \n## Updating  \nThis operation is not supported.  \n[](#)\n",
+        "line_start": 115,
+        "line_end": 118
+    },
+    "37": {
+        "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Group Endpoint.md\nParagraph location: \n\tGroup Feed\n\tDeleting\n\nContent: \n## Deleting  \nThis operation is not supported.  \n[](#)  \n[](#)\n",
+        "line_start": 121,
+        "line_end": 125
+    },
+    "38": {
+        "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Group Endpoint.md\nParagraph location: \n\tGroup Events\n\nContent: \n# Group Events  \nAll events that belong to a group.  \n[](#)\n",
+        "line_start": 731,
+        "line_end": 734
+    },
+    "39": {
+        "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Group Endpoint.md\nParagraph location: \n\tGroup Events\n\tReading\n\nContent: \n## Reading  \nReturns a list of [Facebook Events](https://developers.facebook.com/docs/graph-api/reference/event).  \nHTTPPHP SDKJavaScript SDKAndroid SDKiOS SDK[Graph API Explorer](https://developers.facebook.com/tools/explorer/?method=GET&path=%7Bgroup-id%7D%2Fevents&version=v18.0)  \nGET /v18.0/{group-id}/events HTTP/1.1\nHost: graph.facebook.com  \n/* PHP SDK v5.0.0 */\n/* make the API call */\ntry {\n// Returns a `Facebook\\FacebookResponse` object\n$response = $fb->get(\n'/{group-id}/events',\n'{access-token}'\n);\n} catch(Facebook\\Exceptions\\FacebookResponseException $e) {\necho 'Graph returned an error: ' . $e->getMessage();\nexit;\n} catch(Facebook\\Exceptions\\FacebookSDKException $e) {\necho 'Facebook SDK returned an error: ' . $e->getMessage();\nexit;\n}\n$graphNode = $response->getGraphNode();\n/* handle the result */  \n/* make the API call */\nFB.api(\n\"/{group-id}/events\",\nfunction (response) {\nif (response && !response.error) {\n/* handle the result */\n}\n}\n);  \n/* make the API call */\nnew GraphRequest(\nAccessToken.getCurrentAccessToken(),\n\"/{group-id}/events\",\nnull,\nHttpMethod.GET,\nnew GraphRequest.Callback() {\npublic void onCompleted(GraphResponse response) {\n/* handle the result */\n}\n}\n).executeAsync();  \n/* make the API call */\nFBSDKGraphRequest *request = [[FBSDKGraphRequest alloc]\ninitWithGraphPath:@\"/{group-id}/events\"\nparameters:params\nHTTPMethod:@\"GET\"];\n[request startWithCompletionHandler:^(FBSDKGraphRequestConnection *connection,\nid result,\nNSError *error) {\n// Handle the result\n}];\n",
+        "line_start": 6,
+        "line_end": 59
+    },
+    "40": {
+        "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Group Endpoint.md\nParagraph location: \n\tGroup Events\n\tReading\n\tRequirements\n\nContent: \n### Requirements  \n| Type of Requirement | Description |\n| --- | --- |\n| [App Review](https://developers.facebook.com/docs/apps/review) | Your app must be approved for the [Groups API](https://developers.facebook.com/docs/groups-api/) feature. |\n| [App Installation](https://developers.facebook.com/docs/groups-api#app-installation) | The app must be installed on the Group. |\n| [Tokens](https://developers.facebook.com/docs/facebook-login/access-tokens) | A User access token. |\n",
+        "line_start": 298,
+        "line_end": 304
+    },
+    "41": {
+        "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Group Endpoint.md\nParagraph location: \n\tGroup Events\n\tReading\n\tFields\n\nContent: \n### Fields  \nBy default, this will only return events within the last two weeks. Use the [`until` or `since` parameters](https://developers.facebook.com/docs/graph-api/using-graph-api#paging) to modify this range.  \n[](#)\n",
+        "line_start": 85,
+        "line_end": 88
+    },
+    "42": {
+        "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Group Endpoint.md\nParagraph location: \n\tGroup Events\n\tPublishing\n\nContent: \n## Publishing  \nThis operation is not supported.  \n[](#)\n",
+        "line_start": 316,
+        "line_end": 319
+    },
+    "43": {
+        "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Group Endpoint.md\nParagraph location: \n\tGroup Events\n\tDeleting\n\nContent: \n## Deleting  \nThis operation is not supported.  \n[](#)\n",
+        "line_start": 121,
+        "line_end": 124
+    },
+    "44": {
+        "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Group Endpoint.md\nParagraph location: \n\tGroup Events\n\tUpdating\n\nContent: \n## Updating  \nThis operation is not supported.  \n[](#)  \n[](#)\n",
+        "line_start": 115,
+        "line_end": 119
+    },
+    "45": {
+        "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Group Endpoint.md\nParagraph location: \n\tGroup Files\n\nContent: \n# Group Files  \nThe files uploaded to this group.  \n[](#)\n",
+        "line_start": 832,
+        "line_end": 835
+    },
+    "46": {
+        "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Group Endpoint.md\nParagraph location: \n\tGroup Files\n\tReading\n\nContent: \n## Reading  \nHTTPPHP SDKJavaScript SDKAndroid SDKiOS SDK[Graph API Explorer](https://developers.facebook.com/tools/explorer/?method=GET&path=%7Bgroup-id%7D%2Ffiles&version=v18.0)  \nGET /v18.0/{group-id}/files HTTP/1.1\nHost: graph.facebook.com  \n/* PHP SDK v5.0.0 */\n/* make the API call */\ntry {\n// Returns a `Facebook\\FacebookResponse` object\n$response = $fb->get(\n'/{group-id}/files',\n'{access-token}'\n);\n} catch(Facebook\\Exceptions\\FacebookResponseException $e) {\necho 'Graph returned an error: ' . $e->getMessage();\nexit;\n} catch(Facebook\\Exceptions\\FacebookSDKException $e) {\necho 'Facebook SDK returned an error: ' . $e->getMessage();\nexit;\n}\n$graphNode = $response->getGraphNode();\n/* handle the result */  \n/* make the API call */\nFB.api(\n\"/{group-id}/files\",\nfunction (response) {\nif (response && !response.error) {\n/* handle the result */\n}\n}\n);  \n/* make the API call */\nnew GraphRequest(\nAccessToken.getCurrentAccessToken(),\n\"/{group-id}/files\",\nnull,\nHttpMethod.GET,\nnew GraphRequest.Callback() {\npublic void onCompleted(GraphResponse response) {\n/* handle the result */\n}\n}\n).executeAsync();  \n/* make the API call */\nFBSDKGraphRequest *request = [[FBSDKGraphRequest alloc]\ninitWithGraphPath:@\"/{group-id}/files\"\nparameters:params\nHTTPMethod:@\"GET\"];\n[request startWithCompletionHandler:^(FBSDKGraphRequestConnection *connection,\nid result,\nNSError *error) {\n// Handle the result\n}];\n",
+        "line_start": 6,
+        "line_end": 58
+    },
+    "47": {
+        "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Group Endpoint.md\nParagraph location: \n\tGroup Files\n\tReading\n\tRequirements\n\nContent: \n### Requirements  \n| Type of Requirement | Description |\n| --- | --- |\n| [App Review](https://developers.facebook.com/docs/apps/review) | Your app must be approved for the [Groups API](https://developers.facebook.com/docs/groups-api/) feature. |\n| [App Installation](https://developers.facebook.com/docs/groups-api#app-installation) | The app must be installed on the Group. |\n| [Tokens](https://developers.facebook.com/docs/facebook-login/access-tokens) | A User access token. |\n",
+        "line_start": 298,
+        "line_end": 304
+    },
+    "48": {
+        "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Group Endpoint.md\nParagraph location: \n\tGroup Files\n\tReading\n\tFields\n\nContent: \n### Fields  \n| Name | Description | Type |\n| --- | --- | --- |\n| `download_link` | URL to download the file. | `string` |\n| `group` | The Group the file is uploaded to (the same Group as in the request). | [`Group`](https://developers.facebook.com/docs/graph-api/reference/group) |\n| `id` | The ID of the file. Note that you cannot request each file individually by its ID, only through this edge. | `string` |\n| `message` | The text included with the file post. | `string` |\n| `updated_time` | The last time the file was changed. | `datetime` |  \n[](#)\n",
+        "line_start": 85,
+        "line_end": 94
+    },
+    "49": {
+        "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Group Endpoint.md\nParagraph location: \n\tGroup Files\n\tPublishing\n\nContent: \n## Publishing  \nThis operation is not supported.  \n[](#)\n",
+        "line_start": 316,
+        "line_end": 319
+    },
+    "50": {
+        "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Group Endpoint.md\nParagraph location: \n\tGroup Files\n\tDeleting\n\nContent: \n## Deleting  \nThis operation is not supported.  \n[](#)\n",
+        "line_start": 121,
+        "line_end": 124
+    },
+    "51": {
+        "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Group Endpoint.md\nParagraph location: \n\tGroup Files\n\tUpdating\n\nContent: \n## Updating  \nThis operation is not supported.  \n[](#)  \n[](#)  \nThis edge was deprecated on April 4th, 2018, and can no longer be used.\n",
+        "line_start": 115,
+        "line_end": 120
+    },
+    "52": {
+        "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Group Endpoint.md\nParagraph location: \n\tMembers\n\tReading\n\nContent: \n## Reading  \nHTTPPHP SDKJavaScript SDKAndroid SDKiOS SDK[Graph API Explorer](https://developers.facebook.com/tools/explorer/?method=GET&path=%7Bgroup-id%7D%2Fmembers&version=v18.0)  \nGET /v18.0/{group-id}/members HTTP/1.1\nHost: graph.facebook.com  \n/* PHP SDK v5.0.0 */\n/* make the API call */\ntry {\n// Returns a `Facebook\\FacebookResponse` object\n$response = $fb->get(\n'/{group-id}/members',\n'{access-token}'\n);\n} catch(Facebook\\Exceptions\\FacebookResponseException $e) {\necho 'Graph returned an error: ' . $e->getMessage();\nexit;\n} catch(Facebook\\Exceptions\\FacebookSDKException $e) {\necho 'Facebook SDK returned an error: ' . $e->getMessage();\nexit;\n}\n$graphNode = $response->getGraphNode();\n/* handle the result */  \n/* make the API call */\nFB.api(\n\"/{group-id}/members\",\nfunction (response) {\nif (response && !response.error) {\n/* handle the result */\n}\n}\n);  \n/* make the API call */\nnew GraphRequest(\nAccessToken.getCurrentAccessToken(),\n\"/{group-id}/members\",\nnull,\nHttpMethod.GET,\nnew GraphRequest.Callback() {\npublic void onCompleted(GraphResponse response) {\n/* handle the result */\n}\n}\n).executeAsync();  \n/* make the API call */\nFBSDKGraphRequest *request = [[FBSDKGraphRequest alloc]\ninitWithGraphPath:@\"/{group-id}/members\"\nparameters:params\nHTTPMethod:@\"GET\"];\n[request startWithCompletionHandler:^(FBSDKGraphRequestConnection *connection,\nid result,\nNSError *error) {\n// Handle the result\n}];\n",
+        "line_start": 6,
+        "line_end": 58
+    },
+    "53": {
+        "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Group Endpoint.md\nParagraph location: \n\tMembers\n\tReading\n\tPermissions\n\nContent: \n### Permissions  \nA User access token of an Admin of the Group with the following permissions:  \n* `user_managed_groups`\n",
+        "line_start": 67,
+        "line_end": 70
+    },
+    "54": {
+        "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Group Endpoint.md\nParagraph location: \n\tMembers\n\tReading\n\tFields\n\nContent: \n### Fields  \nA list of [User objects](https://developers.facebook.com/docs/graph-api/reference/user/) and one additional field:  \n| Name | Description | Type |\n| --- | --- | --- |\n| `administrator` | Whether or not the person is a group admin. | `boolean` |  \n[](#)\n",
+        "line_start": 85,
+        "line_end": 91
+    },
+    "55": {
+        "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Group Endpoint.md\nParagraph location: \n\tMembers\n\tCreating\n\nContent: \n## Creating  \nThis operation is not supported.  \n[](#)\n",
+        "line_start": 109,
+        "line_end": 112
+    },
+    "56": {
+        "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Group Endpoint.md\nParagraph location: \n\tMembers\n\tUpdating\n\nContent: \n## Updating  \nThis operation is not supported.  \n[](#)\n",
+        "line_start": 115,
+        "line_end": 118
+    },
+    "57": {
+        "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Group Endpoint.md\nParagraph location: \n\tMembers\n\tDeleting\n\nContent: \n## Deleting  \nThis operation is not supported.  \n[](#)  \n[](#)\n",
+        "line_start": 121,
+        "line_end": 125
+    },
+    "58": {
+        "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Group Endpoint.md\nParagraph location: \n\t[`/{group-id}`](https://developers.facebook.com/docs/graph-api/reference/group/)`/opted_in_members`\n\nContent: \n# [`/{group-id}`](https://developers.facebook.com/docs/graph-api/reference/group/)`/opted_in_members`  \nThis edge allows you to get a list of Users on the Group who have chosen to share their publicly available profile information with apps installed on the Group.  \n[](#)\n",
+        "line_start": 1041,
+        "line_end": 1044
+    },
+    "59": {
+        "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Group Endpoint.md\nParagraph location: \n\t[`/{group-id}`](https://developers.facebook.com/docs/graph-api/reference/group/)`/opted_in_members`\n\tCreating\n\nContent: \n## Creating  \nThis operation is not supported.  \n[](#)\n",
+        "line_start": 109,
+        "line_end": 112
+    },
+    "60": {
+        "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Group Endpoint.md\nParagraph location: \n\t[`/{group-id}`](https://developers.facebook.com/docs/graph-api/reference/group/)`/opted_in_members`\n\tReading\n\nContent: \n## Reading  \nReturns a list of Users. These are the Group members who have granted the app permission to access their public information.  \nHTTPPHP SDKJavaScript SDKAndroid SDKiOS SDK[Graph API Explorer](https://developers.facebook.com/tools/explorer/?method=GET&path=%7Bgroup-id%7D%2Fopted_in_members&version=v18.0)  \nGET /v18.0/{group-id}/opted_in_members HTTP/1.1\nHost: graph.facebook.com  \n/* PHP SDK v5.0.0 */\n/* make the API call */\ntry {\n// Returns a `Facebook\\FacebookResponse` object\n$response = $fb->get(\n'/{group-id}/opted_in_members',\n'{access-token}'\n);\n} catch(Facebook\\Exceptions\\FacebookResponseException $e) {\necho 'Graph returned an error: ' . $e->getMessage();\nexit;\n} catch(Facebook\\Exceptions\\FacebookSDKException $e) {\necho 'Facebook SDK returned an error: ' . $e->getMessage();\nexit;\n}\n$graphNode = $response->getGraphNode();\n/* handle the result */  \n/* make the API call */\nFB.api(\n\"/{group-id}/opted_in_members\",\nfunction (response) {\nif (response && !response.error) {\n/* handle the result */\n}\n}\n);  \n/* make the API call */\nnew GraphRequest(\nAccessToken.getCurrentAccessToken(),\n\"/{group-id}/opted_in_members\",\nnull,\nHttpMethod.GET,\nnew GraphRequest.Callback() {\npublic void onCompleted(GraphResponse response) {\n/* handle the result */\n}\n}\n).executeAsync();  \n/* make the API call */\nFBSDKGraphRequest *request = [[FBSDKGraphRequest alloc]\ninitWithGraphPath:@\"/{group-id}/opted_in_members\"\nparameters:params\nHTTPMethod:@\"GET\"];\n[request startWithCompletionHandler:^(FBSDKGraphRequestConnection *connection,\nid result,\nNSError *error) {\n// Handle the result\n}];\n",
+        "line_start": 6,
+        "line_end": 59
+    },
+    "61": {
+        "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Group Endpoint.md\nParagraph location: \n\t[`/{group-id}`](https://developers.facebook.com/docs/graph-api/reference/group/)`/opted_in_members`\n\tReading\n\tPermissions\n\nContent: \n### Permissions  \n* A User or a Page access token of an admin of the Group.  \n* The app must be installed in the Group.\n",
+        "line_start": 67,
+        "line_end": 70
+    },
+    "62": {
+        "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Group Endpoint.md\nParagraph location: \n\t[`/{group-id}`](https://developers.facebook.com/docs/graph-api/reference/group/)`/opted_in_members`\n\tReading\n\tFields\n\nContent: \n### Fields  \nReturns a list of [User](https://developers.facebook.com/docs/graph-api/reference/user/) nodes.  \n[](#)\n",
+        "line_start": 85,
+        "line_end": 88
+    },
+    "63": {
+        "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Group Endpoint.md\nParagraph location: \n\t[`/{group-id}`](https://developers.facebook.com/docs/graph-api/reference/group/)`/opted_in_members`\n\tPublishing\n\nContent: \n## Publishing  \nThis operation is not supported.  \n[](#)\n",
+        "line_start": 316,
+        "line_end": 319
+    },
+    "64": {
+        "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Group Endpoint.md\nParagraph location: \n\t[`/{group-id}`](https://developers.facebook.com/docs/graph-api/reference/group/)`/opted_in_members`\n\tDeleting\n\nContent: \n## Deleting  \nThis operation is not supported.  \n[](#)\n",
+        "line_start": 121,
+        "line_end": 124
+    },
+    "65": {
+        "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Group Endpoint.md\nParagraph location: \n\t[`/{group-id}`](https://developers.facebook.com/docs/graph-api/reference/group/)`/opted_in_members`\n\tUpdating\n\nContent: \n## Updating  \nThis operation is not supported.  \n[](#)  \n[](#)\n",
+        "line_start": 115,
+        "line_end": 119
+    },
+    "66": {
+        "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Group Endpoint.md\nParagraph location: \n\tGroup Photos\n\tReading\n\nContent: \n## Reading  \nYou can't perform this operation on this endpoint.  \n[](#)\n",
+        "line_start": 6,
+        "line_end": 9
+    },
+    "67": {
+        "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Group Endpoint.md\nParagraph location: \n\tGroup Photos\n\tCreating\n\nContent: \n## Creating  \nAnimated photos are not supported, and a photo must be less than 10MB in size.  \nYou can make a POST request to `photos` edge from the following paths:  \n* [`/{group_id}/photos`](https://developers.facebook.com/docs/graph-api/reference/group/photos/)  \nWhen posting to this edge, a\u00a0[Photo](https://developers.facebook.com/docs/graph-api/reference/photo/) will be created.\n",
+        "line_start": 109,
+        "line_end": 114
+    },
+    "68": {
+        "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Group Endpoint.md\nParagraph location: \n\tGroup Photos\n\tCreating\n\tParameters\n\nContent: \n### Parameters  \n| Parameter | Description |\n| --- | --- |\n| `aid`<br><br>string | Legacy album ID. Deprecated<br><br>Deprecated |\n| `allow_spherical_photo`<br><br>boolean | Default value: `false`<br><br>Indicates that we should allow this photo to be treated as a spherical photo. This will not change the behavior unless the server is able to interpret the photo as spherical, such as via Photosphere XMP metadata. Regular non-spherical photos will still be treated as regular photos even if this parameter is true. |\n| `alt_text_custom`<br><br>string | Accessible alternative description for an image |\n| `android_key_hash`<br><br>string | Android key hash |\n| `application_id`<br><br>non-empty string | iTunes App ID. This is used by the native Share dialog that's part of iOS |\n| `attempt`<br><br>int64 | Default value: `0`<br><br>Number of attempts that have been made to upload this photo |\n| `audience_exp`<br><br>boolean | Default value: `false`<br><br>Audience exp |\n| `backdated_time`<br><br>datetime | A user-specified creation time for this photo |\n| `backdated_time_granularity`<br><br>enum{year, month, day, hour, min, none} | Default value: `none`<br><br>Use only the part of the `backdated_time` parameter to the specified granularity |\n| `caption`<br><br>UTF-8 string | The description of the photo<br><br>Supports Emoji |\n| `composer_session_id`<br><br>string | Composer session ID |\n| `direct_share_status`<br><br>int64 | The status to allow sponsor directly boost the post |\n| `feed_targeting`<br><br>feed target | Object that controls [Feed targeting](https://www.facebook.com/help/352402648173466) for this post. Anyone in these groups will be more likely to see this post. People not in these groups will be less likely to see this post, but may still see it anyway. Any of the targeting fields shown here can be used, but none are required. `feed_targeting` applies to Pages only |\n| `geo_locations`<br><br>Object |     |\n| `countries`<br><br>list<string> |     |\n| `regions`<br><br>list<Object> |     |\n| `key`<br><br>int64 |     |\n| `cities`<br><br>list<Object> |     |\n| `key`<br><br>int64 |     |\n| `zips`<br><br>list<Object> |     |\n| `key`<br><br>string |     |\n| `locales`<br><br>list<string> | Values for targeted locales. Use `type` of `adlocale` to [find Targeting Options](https://developers.facebook.com/docs/marketing-api/targeting-search) and use the returned key to specify. |\n| `age_min`<br><br>int64 | Must be `13` or higher. Default is 0. |\n| `age_max`<br><br>int64 | Maximum age. |\n| `genders`<br><br>list<int64> | Target specific genders. `1` targets all male viewers and `2` females. Default is to target both. |\n| `college_years`<br><br>list<int64> | Array of integers. Represent graduation years from college. |\n| `education_statuses`<br><br>list<int64> | Array of integers which represent current educational status. Use `1` for high school, `2` for undergraduate, and `3` for alum (or localized equivalents). |\n| `interested_in`<br><br>list<int64> | Deprecated. Please see the [Graph API Changelog](https://developers.facebook.com/docs/graph-api/changelog/breaking-changes#2-7-2018) for more information.<br><br>Deprecated |\n| `relationship_statuses`<br><br>list<int64> | Array of integers for targeting based on relationship status. Use `1` for single, `2` for 'in a relationship', `3` for married, and `4` for engaged. Default is all types. |\n| `interests`<br><br>list<int64> | One or more IDs of pages to target fans of pages.Use `type` of `page` to get possible IDs as [find Targeting Options](https://developers.facebook.com/docs/marketing-api/targeting-search) and use the returned id to specify. |\n| `filter_type`<br><br>int64 | Default value: `-1`<br><br>Filter type |\n| `full_res_is_coming_later`<br><br>boolean | Default value: `false`<br><br>Full res is coming later |\n| `initial_view_heading_override_degrees`<br><br>int64 | Manually specify the initial view heading in degrees from 0 to 360. This overrides any value present in the photo embedded metadata or provided in the spherical\\_metadata parameter |\n| `initial_view_pitch_override_degrees`<br><br>int64 | Manually specify the initial view pitch in degrees from -90 to 90. This overrides any value present in the photo embedded metadata or provided in the spherical\\_metadata parameter |\n| `initial_view_vertical_fov_override_degrees`<br><br>int64 | Manually specify the initial view vertical FOV in degrees from 60 to 120. This overrides any value present in the photo embedded metadata or provided in the spherical\\_metadata parameter |\n| `ios_bundle_id`<br><br>string | iOS Bundle ID |\n| `is_explicit_location`<br><br>boolean | Is an explicit location |\n| `is_explicit_place`<br><br>boolean | If set to `true`, the tag is a place, not a person |\n| `manual_privacy`<br><br>boolean | Default value: `false`<br><br>Manual privacy |\n| `message`<br><br>UTF-8 string | Deprecated. Please use the caption param instead<br><br>DeprecatedSupports Emoji |\n| `name`<br><br>UTF-8 string | Deprecated. Please use the caption param instead<br><br>DeprecatedSupports Emoji |\n| `no_story`<br><br>boolean | If set to `true`, this will suppress the Feed story that is automatically generated on a profile when people upload a photo using your app. Useful for adding old photos where you may not want to generate a story |\n| `offline_id`<br><br>int64 | Default value: `0`<br><br>Offline ID |\n| `og_action_type_id`<br><br>numeric string or integer | The Open Graph action type |\n| `og_icon_id`<br><br>numeric string or integer | The Open Graph icon |\n| `og_object_id`<br><br>OG object ID or URL string | The Open Graph object ID |\n| `og_phrase`<br><br>string | The Open Graph phrase |\n| `og_set_profile_badge`<br><br>boolean | Default value: `false`<br><br>Flag to set if the post should create a profile badge |\n| `og_suggestion_mechanism`<br><br>string | The Open Graph suggestion |\n| `place`<br><br>place tag | Page ID of a place associated with the photo |\n| `privacy`<br><br>Privacy Parameter | Determines the privacy settings of the photo. If not supplied, this defaults to the privacy level granted to the app in the Login dialog. This field cannot be used to set a more open privacy setting than the one granted |\n| `profile_id`<br><br>int | Deprecated. Use `target_id` instead<br><br>Deprecated |\n| `proxied_app_id`<br><br>numeric string or integer | Proxied app ID |\n| `published`<br><br>boolean | Default value: `true`<br><br>Set to `false` if you don't want the photo to be published immediately |\n| `qn`<br><br>string | Photos waterfall ID |\n| `scheduled_publish_time`<br><br>int64 | Time at which an unpublished post should be published (Unix ISO-8601 format). Applies to Pages only |\n| `spherical_metadata`<br><br>JSON object | A set of params describing an uploaded spherical photo. This field is not required; if it is not present we will try to generate spherical metadata from the metadata embedded in the image. If it is present, it takes precedence over any embedded metadata. Please click to the left to expand this list and see more information on each parameter. See also the Google Photo Sphere spec for more info on the meaning of the params: https://developers.google.com/streetview/spherical-metadata |\n| `ProjectionType`<br><br>string | Accepted values include equirectangular (full spherical photo), cylindrical (panorama), and cubestrip (also known as cubemap, e.g. for synthetic or rendered content; stacked vertically with 6 faces).<br><br>Required |\n| `CroppedAreaImageWidthPixels`<br><br>int64 | \\--- In equirectangular projection: As described in Google Photo Sphere XMP Metadata spec.<br><br>\\--- In cylindrical projection: Very similar to equirectangular. This value should be equal to the actual width of the image, and together with FullPanoWidthPixels, it describes the horizontal FOV of content of the image: HorizontalFOV = 360 \\* CroppedAreaImageWidthPixels / FullPanoWidthPixels.<br><br>\\--- In cubestrip projection: This has no relationship to the pixel dimensions of the image. It is simply a representation of the horizontal FOV of the content of the image. HorizontalFOV = CroppedAreaImageWidthPixels / PixelsPerDegree, where PixelsPerDegree is defined by FullPanoWidthPixels.<br><br>Required |\n| `CroppedAreaImageHeightPixels`<br><br>int64 | \\--- In equirectangular projection: As described in Google Photo Sphere XMP Metadata spec.<br><br>\\--- In cylindrical projection: This value will NOT be equal to the actual height of the image. Instead, together with FullPanoHeightPixels, it describes the vertical FOV of the image: VerticalFOV = 180 \\* CroppedAreaImageHeightPixels / FullPanoHeightPixels. In other words, this value is equal to the CroppedAreaImageHeightPixels value that this image would have, if it were projected into equirectangular format while maintaining the same FullPanoWidthPixels.<br><br>\\--- In cubestrip projection: This has no relationship to the pixel dimensions of the image. It is simply a representation of the vertical FOV of the content of the image. VerticalFOV = CroppedAreaImageHeightPixels / PixelsPerDegree, where PixelsPerDegree is defined by FullPanoWidthPixels.<br><br>Required |\n| `FullPanoWidthPixels`<br><br>int64 | \\--- In equirectangular projection: As described in Google Photo Sphere XMP Metadata spec.<br><br>\\--- In cylindrical projection: Very similar to equirectangular. This value defines a ratio of horizontal pixels to degrees in the space of the image, and in general the pixel to degree ratio in the scope of the metadata object. Concretely, PixelsPerDegree = FullPanoWidthPixels / 360. This is also equivalent to the circumference of the cylinder used to model this projection.<br><br>\\--- In cubestrip projection: This value has no relationship to the pixel dimensions of the image. It only defines the pixel to degree ratio in the scope of the metadata object. It represents the number of pixels in 360 degrees, so pixels per degree is then given by: PixelsPerDegree = FullPanoWidthPixels / 360. As an example, if FullPanoWidthPixels were chosen to be 3600, we would have PixelsPerDegree = 3600 / 360 = 10. An image with a vertical field of view of 65 degrees would then have a CroppedAreaImageHeightPixels value of 65 \\* 10 = 650.<br><br>Required |\n| `FullPanoHeightPixels`<br><br>int64 | \\--- In equirectangular projection: As described in Google Photo Sphere XMP Metadata spec.<br><br>\\--- In cylindrical projection: This value is equal to the FullPanoHeightPixels value that this image would have, if it were projected into equirectangular format while maintaining the same FullPanoWidthPixels. It is always equal to FullPanoWidthPixels / 2.<br><br>\\--- In cubestrip projection: This value has no relationship to the pixel dimensions of the image. It is a second, redundant representation of PixelsPerDegree. FullPanoHeightPixels = 180 \\* PixelsPerDegree. It must be consistent with FullPanoWidthPixels: FullPanoHeightPixels = FullPanoWidthPixels / 2.<br><br>Required |\n| `CroppedAreaLeftPixels`<br><br>int64 | Default value: `0`<br><br>\\--- In equirectangular projection: As described in Google Photo Sphere XMP Metadata spec.<br><br>\\--- In cylindrical projection: This value is equal to the CroppedAreaLeftPixels value that this image would have, if it were projected into equirectangular format while maintaining the same FullPanoWidthPixels. It is just a representation of the same angular offset that it represents in equirectangular projection in the Google Photo Sphere spec. Concretely, AngularOffsetFromLeftDegrees = CroppedAreaLeftPixels / PixelsPerDegree, where PixelsPerDegree is defined by FullPanoWidthPixels.<br><br>\\--- In cubestrip projection: This value has no relationship to the pixel dimensions of the image. It is just a representation of the same angular offset that it represents in equirectangular projection in the Google Photo Sphere spec. AngularOffsetFromLeftDegrees = CroppedAreaLeftPixels / PixelsPerDegree, where PixelsPerDegree is defined by FullPanoWidthPixels. |\n| `CroppedAreaTopPixels`<br><br>int64 | Default value: `0`<br><br>\\--- In equirectangular projection: As described in Google Photo Sphere XMP Metadata spec.<br><br>\\--- In cylindrical projection: This value is equal to the CroppedAreaTopPixels value that this image would have, if it were projected into equirectangular format while maintaining the same FullPanoWidthPixels. It is just a representation of the same angular offset that it represents in equirectangular projection in the Google Photo Sphere spec. Concretely, AngularOffsetFromTopDegrees = CroppedAreaTopPixels / PixelsPerDegree, where PixelsPerDegree is defined by FullPanoWidthPixels.<br><br>\\--- In cubestrip projection: This value has no relationship to the pixel dimensions of the image. It is just a representation of the same angular offset that it represents in equirectangular projection in the Google Photo Sphere spec. AngularOffsetFromTopDegrees = CroppedAreaTopPixels / PixelsPerDegree, where PixelsPerDegree is defined by FullPanoWidthPixels. |\n| `PoseHeadingDegrees`<br><br>float |     |\n| `PosePitchDegrees`<br><br>float |     |\n| `PoseRollDegrees`<br><br>float |     |\n| `InitialViewHeadingDegrees`<br><br>float |     |\n| `InitialViewPitchDegrees`<br><br>float |     |\n| `InitialViewRollDegrees`<br><br>float | This is not currently supported |\n| `InitialViewVerticalFOVDegrees`<br><br>float | This is deprecated. Please use InitialVerticalFOVDegrees. |\n| `InitialVerticalFOVDegrees`<br><br>float | You can set the intial vertical FOV of the image. You can set either this field or InitialHorizontalFOVDegrees. |\n| `InitialHorizontalFOVDegrees`<br><br>float | You can set the intial horizontal FOV of the image. You can set either this field or InitialVerticalFOVDegrees. |\n| `PreProcessCropLeftPixels`<br><br>int64 |     |\n| `PreProcessCropRightPixels`<br><br>int64 |     |\n| `sponsor_id`<br><br>numeric string or integer | Facebook Page id that is tagged as sponsor in the photo post |\n| `sponsor_relationship`<br><br>int64 | Sponsor Relationship, such as Presented By or Paid PartnershipWith |\n| `tags`<br><br>list<Object> | Tags on this photo |\n| `x`<br><br>float | The x-axis offset for the tag |\n| `y`<br><br>float | The y-axis offset for the tag |\n| `tag_uid`<br><br>int | The user\\_id of the tagged person |\n| `tag_text`<br><br>string | Text associated with the tag |\n| `target_id`<br><br>int | Do not use. Specifying a `target_id` allows you to post the photo to an object that's not the user in the access token. It only works when posting directly to the `/photos` endpoint. Instead of using this parameter you should be using the edge on an object directly, like `/page/photos` |\n| `targeting`<br><br>target | Allows you to target posts to specific audiences. Applies to Pages only |\n| `geo_locations`<br><br>Object |     |\n| `countries`<br><br>list<string> |     |\n| `regions`<br><br>list<Object> |     |\n| `key`<br><br>int64 |     |\n| `cities`<br><br>list<Object> |     |\n| `key`<br><br>int64 |     |\n| `zips`<br><br>list<Object> |     |\n| `key`<br><br>string |     |\n| `locales`<br><br>list<string> |     |\n| `excluded_countries`[](#)<br><br>list<string> |     |\n| `excluded_regions`[](#)<br><br>list<int64> |     |\n| `excluded_cities`[](#)<br><br>list<int64> |     |\n| `excluded_zipcodes`[](#)<br><br>list<string> |     |\n| `timezones`[](#)<br><br>list<int64> |     |\n| `age_min`<br><br>enum {13, 15, 18, 21, 25} |     |\n| `time_since_original_post`<br><br>int64 | Same as `backdated_time` but with a time delta instead of absolute time |\n| `uid`<br><br>int | Deprecated |\n| `unpublished_content_type`<br><br>enum {SCHEDULED, SCHEDULED\\_RECURRING, DRAFT, ADS\\_POST, INLINE\\_CREATED, PUBLISHED, REVIEWABLE\\_BRANDED\\_CONTENT} | Content type of the unpublished content type |\n| `url`<br><br>string | The URL of a photo that is already uploaded to the Internet. You must specify this or a file attachment |\n| `user_selected_tags`<br><br>boolean | Default value: `false`<br><br>User selected tags |\n| `vault_image_id`<br><br>numeric string or integer | A vault image ID to use for a photo. You can use only one of `url`, a file attachment, `vault_image_id`, or `sync_object_uuid` |\n",
+        "line_start": 1167,
+        "line_end": 1275
+    },
+    "69": {
+        "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Group Endpoint.md\nParagraph location: \n\tGroup Photos\n\tCreating\n\tReturn Type\n\nContent: \n### Return Type  \nThis endpoint supports [read-after-write](https://developers.facebook.com/docs/graph-api/advanced/#read-after-write) and will read the node represented by `id` in the return type.  \nStruct {  \n`id`: numeric string,  \n`post_id`: token with structure: Post ID,  \n}\n",
+        "line_start": 1277,
+        "line_end": 1283
+    },
+    "70": {
+        "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Group Endpoint.md\nParagraph location: \n\tGroup Photos\n\tCreating\n\tError Codes\n\nContent: \n### Error Codes  \n| Error | Description |\n| --- | --- |\n| 200 | Permissions error |\n| 100 | Invalid parameter |\n| 368 | The action attempted has been deemed abusive or is otherwise disallowed |\n| 190 | Invalid OAuth 2.0 Access Token |\n| 120 | Invalid album id |\n| 324 | Missing or invalid image file |  \n[](#)\n",
+        "line_start": 1289,
+        "line_end": 1299
+    },
+    "71": {
+        "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Group Endpoint.md\nParagraph location: \n\tGroup Photos\n\tUpdating\n\nContent: \n## Updating  \nYou can't perform this operation on this endpoint.  \n[](#)\n",
+        "line_start": 115,
+        "line_end": 118
+    },
+    "72": {
+        "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Group Endpoint.md\nParagraph location: \n\tGroup Photos\n\tDeleting\n\nContent: \n## Deleting  \nYou can't perform this operation on this endpoint.  \n[](#)\n",
+        "line_start": 121,
+        "line_end": 124
+    },
+    "73": {
+        "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Group Endpoint.md\nParagraph location: \n\tGroup Videos\n\nContent: \n# Group Videos  \n[Videos](https://developers.facebook.com/docs/reference/api/video/) owned by a Facebook Group.  \n[](#)\n",
+        "line_start": 1314,
+        "line_end": 1317
+    },
+    "74": {
+        "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Group Endpoint.md\nParagraph location: \n\tGroup Videos\n\tReading\n\nContent: \n## Reading  \nReturns an array of [Video](https://developers.facebook.com/docs/reference/api/video/) objects.  \nHTTPPHP SDKJavaScript SDKAndroid SDKiOS SDK[Graph API Explorer](https://developers.facebook.com/tools/explorer/?method=GET&path=%7Bgroup-id%7D%2Fvideos&version=v18.0)  \nGET /v18.0/{group-id}/videos HTTP/1.1\nHost: graph.facebook.com  \n/* PHP SDK v5.0.0 */\n/* make the API call */\ntry {\n// Returns a `Facebook\\FacebookResponse` object\n$response = $fb->get(\n'/{group-id}/videos',\n'{access-token}'\n);\n} catch(Facebook\\Exceptions\\FacebookResponseException $e) {\necho 'Graph returned an error: ' . $e->getMessage();\nexit;\n} catch(Facebook\\Exceptions\\FacebookSDKException $e) {\necho 'Facebook SDK returned an error: ' . $e->getMessage();\nexit;\n}\n$graphNode = $response->getGraphNode();\n/* handle the result */  \n/* make the API call */\nFB.api(\n\"/{group-id}/videos\",\nfunction (response) {\nif (response && !response.error) {\n/* handle the result */\n}\n}\n);  \n/* make the API call */\nnew GraphRequest(\nAccessToken.getCurrentAccessToken(),\n\"/{group-id}/videos\",\nnull,\nHttpMethod.GET,\nnew GraphRequest.Callback() {\npublic void onCompleted(GraphResponse response) {\n/* handle the result */\n}\n}\n).executeAsync();  \n/* make the API call */\nFBSDKGraphRequest *request = [[FBSDKGraphRequest alloc]\ninitWithGraphPath:@\"/{group-id}/videos\"\nparameters:params\nHTTPMethod:@\"GET\"];\n[request startWithCompletionHandler:^(FBSDKGraphRequestConnection *connection,\nid result,\nNSError *error) {\n// Handle the result\n}];\n",
+        "line_start": 6,
+        "line_end": 59
+    },
+    "75": {
+        "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Group Endpoint.md\nParagraph location: \n\tGroup Videos\n\tReading\n\tRequirements\n\nContent: \n### Requirements  \n| Type of Requirement | Description |\n| --- | --- |\n| [App Review](https://developers.facebook.com/docs/apps/review) | Your app must be approved for the [Groups API](https://developers.facebook.com/docs/groups-api/) feature. |\n| [App Installation](https://developers.facebook.com/docs/groups-api#app-installation) | The app must be installed on the Group. |\n| [Tokens](https://developers.facebook.com/docs/facebook-login/access-tokens) | A User access token. |  \n[](#)\n",
+        "line_start": 298,
+        "line_end": 305
+    },
+    "76": {
+        "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Group Endpoint.md\nParagraph location: \n\tGroup Videos\n\tCreating\n\nContent: \n## Creating  \nThis operation is not supported.  \nTo publish videos to User timelines, Groups, or Pages, please use the [Sharing Dialog](https://developers.facebook.com/docs/sharing).  \n[](#)\n",
+        "line_start": 109,
+        "line_end": 113
+    },
+    "77": {
+        "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Group Endpoint.md\nParagraph location: \n\tGroup Videos\n\tUpdating\n\nContent: \n## Updating  \nThis operation is not supported.  \n[](#)\n",
+        "line_start": 115,
+        "line_end": 118
+    },
+    "78": {
+        "content": "Source document: data/platform-docs-versions-english/Facebook_Graph-API/Group Endpoint.md\nParagraph location: \n\tGroup Videos\n\tDeleting\n\nContent: \n## Deleting  \nThis operation is not supported.  \n[](#)  \n[](#)\n",
+        "line_start": 121,
+        "line_end": 125
+    }
+}

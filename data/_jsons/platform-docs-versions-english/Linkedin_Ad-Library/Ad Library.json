@@ -1,0 +1,67 @@
+{
+    "0": {
+        "content": "Source document: data/platform-docs-versions-english/Linkedin_Ad-Library/Ad Library.md\nParagraph location: \n\tAd Library\n\nContent: \n# Ad Library  \nLinkedIn\u2019s Ad Library offers transparency in advertising by providing a searchable collection of ads.\n",
+        "line_start": 0,
+        "line_end": 2
+    },
+    "1": {
+        "content": "Source document: data/platform-docs-versions-english/Linkedin_Ad-Library/Ad Library.md\nParagraph location: \n\tAd Library\n\tFrequently asked questions\n\tWhat is the Ad Library and how do I use it?\n\nContent: \n## Frequently asked questions  \n### What is the Ad Library and how do I use it?  \nThe Ad Library is a place where you can search for ads that have run on LinkedIn. Ads remain in the Ad Library for one year after their last impression on LinkedIn.\n",
+        "line_start": 4,
+        "line_end": 7
+    },
+    "2": {
+        "content": "Source document: data/platform-docs-versions-english/Linkedin_Ad-Library/Ad Library.md\nParagraph location: \n\tAd Library\n\tFrequently asked questions\n\tDo I need a LinkedIn account to use the Ad Library?\n\nContent: \n### Do I need a LinkedIn account to use the Ad Library?  \nAnyone can explore the Ad Library, with or without a LinkedIn account.\n",
+        "line_start": 10,
+        "line_end": 12
+    },
+    "3": {
+        "content": "Source document: data/platform-docs-versions-english/Linkedin_Ad-Library/Ad Library.md\nParagraph location: \n\tAd Library\n\tFrequently asked questions\n\tWhat information is shown in the Ad Library?\n\nContent: \n### What information is shown in the Ad Library?  \nAs part of our commitment to creating a safe and trusted ad experience, the Ad Library includes basic information about ads served on LinkedIn, including the advertiser, ad format and ad creative. For ads targeted to the EU, the Ad Library includes additional information, including information about ad impressions, ad targeting and dates the ad ran.\n",
+        "line_start": 14,
+        "line_end": 16
+    },
+    "4": {
+        "content": "Source document: data/platform-docs-versions-english/Linkedin_Ad-Library/Ad Library.md\nParagraph location: \n\tAd Library\n\tFrequently asked questions\n\tWhat are all the ad formats supported by LinkedIn?\n\nContent: \n### What are all the ad formats supported by LinkedIn?  \nTo learn more about the ad formats available on LinkedIn, see the [LinkedIn Ads Guide](https://business.linkedin.com/marketing-solutions/success/ads-guide).\n",
+        "line_start": 18,
+        "line_end": 20
+    },
+    "5": {
+        "content": "Source document: data/platform-docs-versions-english/Linkedin_Ad-Library/Ad Library.md\nParagraph location: \n\tAd Library\n\tFrequently asked questions\n\tHow long does it take for an ad to be available on the Ad Library?\n\nContent: \n### How long does it take for an ad to be available on the Ad Library?  \nAn ad will typically appear in the Ad Library results within 24-48 hours from the time it gets its first impression. Any changes or updates made to an ad will also typically be reflected within 24-48 hours.\n",
+        "line_start": 22,
+        "line_end": 24
+    },
+    "6": {
+        "content": "Source document: data/platform-docs-versions-english/Linkedin_Ad-Library/Ad Library.md\nParagraph location: \n\tAd Library\n\tFrequently asked questions\n\tHow far back can I search ads?\n\nContent: \n### How far back can I search ads?  \nThe Ad Library allows users to search ads that were created on or after June 1, 2023.\n",
+        "line_start": 26,
+        "line_end": 28
+    },
+    "7": {
+        "content": "Source document: data/platform-docs-versions-english/Linkedin_Ad-Library/Ad Library.md\nParagraph location: \n\tAd Library\n\tFrequently asked questions\n\tHow are dates and times recorded in the Ad Library?\n\nContent: \n### How are dates and times recorded in the Ad Library?  \nAll dates and timestamps are recorded in Coordinated Universal Time (UTC).\n",
+        "line_start": 30,
+        "line_end": 32
+    },
+    "8": {
+        "content": "Source document: data/platform-docs-versions-english/Linkedin_Ad-Library/Ad Library.md\nParagraph location: \n\tAd Library\n\tFrequently asked questions\n\tHow are ad start dates and end dates determined in the Ad Library?\n\nContent: \n### How are ad start dates and end dates determined in the Ad Library?  \nThe ad start date is determined when the first impression is delivered, while the ad end date is determined when the last impression is delivered.\n",
+        "line_start": 34,
+        "line_end": 36
+    },
+    "9": {
+        "content": "Source document: data/platform-docs-versions-english/Linkedin_Ad-Library/Ad Library.md\nParagraph location: \n\tAd Library\n\tFrequently asked questions\n\tHow is ad targeting in the Ad Library determined?\n\nContent: \n### How is ad targeting in the Ad Library determined?  \nFor ads targeted to the EU, the Ad Library shows the top three targeting parameters selected by the advertiser in when targeting their ad. [Learn more](https://www.linkedin.com/help/lms/answer/a1517918).\n",
+        "line_start": 38,
+        "line_end": 40
+    },
+    "10": {
+        "content": "Source document: data/platform-docs-versions-english/Linkedin_Ad-Library/Ad Library.md\nParagraph location: \n\tAd Library\n\tFrequently asked questions\n\tCan I opt out from my ads showing up in the Ad Library?\n\nContent: \n### Can I opt out from my ads showing up in the Ad Library?  \nAs part of our commitment to creating a safe and trusted ad experience, the Ad Library includes basic information about ads that have run on LinkedIn. Advertisers are not able to opt out of ads showing in the Ad Library.\n",
+        "line_start": 42,
+        "line_end": 44
+    },
+    "11": {
+        "content": "Source document: data/platform-docs-versions-english/Linkedin_Ad-Library/Ad Library.md\nParagraph location: \n\tAd Library\n\tFrequently asked questions\n\tWhat are brand partnerships and where can I search them?\n\nContent: \n### What are brand partnerships and where can I search them?  \nLinkedIn creators can label when their organic posts contain brand partnerships, to signal they have a relationship with the brand. You can search organic posts creators have marked as brand partnerships [here](https://www.linkedin.com/ad-library/brand-partnership-search). These posts are organic member posts labeled by the creator, not LinkedIn ads.\n",
+        "line_start": 46,
+        "line_end": 48
+    },
+    "12": {
+        "content": "Source document: data/platform-docs-versions-english/Linkedin_Ad-Library/Ad Library.md\nParagraph location: \n\tAd Library\n\tFrequently asked questions\n\tI have a question not answered here. Where can I find help?\n\nContent: \n### I have a question not answered here. Where can I find help?  \nYou can reach out to our support team [here](https://www.linkedin.com/help/lms/ask).\n",
+        "line_start": 50,
+        "line_end": 52
+    }
+}
