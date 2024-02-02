@@ -1,0 +1,2 @@
+platform-docs-declarations/platforms.md
+### LinkedIn 
