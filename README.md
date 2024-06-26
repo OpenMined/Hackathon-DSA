@@ -8,7 +8,3 @@ git -C ./data clone https://code.peren.fr/hackathon-2024/retrieval-modules/platf
 git -C ./data clone https://code.peren.fr/hackathon-2024/challenge-2-dataset-and-documentation.git
 git -C ./data clone https://code.peren.fr/hackathon-2024/retrieval-modules/platforms-doc-declarations.git
 ```
-
-# Notes
-
-Moved to https://docs.google.com/document/d/1KshtJpkDH-E3_EvxlKbbdMkFFjlKxUyp_5clVFrO2Xw/edit#heading=h.rbuyn6sm3lvd
